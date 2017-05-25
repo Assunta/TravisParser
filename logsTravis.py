@@ -6,6 +6,10 @@ import sys
 # es python logsTavis.py Assunta/example > example.txt
 
 # N.B c'e' un problema se nel log ci sono carateri unicode fallisce la scrittura su file
+# per risolverlo stackoverflow suggerisce questo...
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 f = open('token.config', 'r')
 token=f.readline()
 t = TravisPy.github_auth(str(token))
