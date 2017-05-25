@@ -12,9 +12,9 @@ t = TravisPy.github_auth(str(token))
 
 listaTask=[]
 listaMessErrore=[]
-repo = t.repo("mockito/mockito")
-build = t.build(repo.last_build_id)
-print build.state
+# repo = t.repo("mockito/mockito")
+# build = t.build(repo.last_build_id)
+# print build.state
 f = open('logs\\mockito.txt', 'r')
 
 # qui va la parte comune dove prendiamo
