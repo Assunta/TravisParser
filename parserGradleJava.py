@@ -12,10 +12,12 @@ t = TravisPy.github_auth(str(token))
 
 listaTask=[]
 listaMessErrore=[]
+listaTaskSkippati=[]
+listaErroriPrecedentiAiTask=[]
 # repo = t.repo("mockito/mockito")
 # build = t.build(repo.last_build_id)
 # print build.state
-f = open('logs\\mockito.txt', 'r')
+f = open('logs\\AndroidOrm.txt', 'r')
 
 # qui va la parte comune dove prendiamo
 #  nome progetto, il commit, la build, il tempo, quanti job, chi ha fatto il commit e tutte le informazioni che vogliamo
@@ -31,9 +33,19 @@ for line in f:
         print line
         listaTask.append(line)
     # espressione regolare per matchare il motivo di un failure
-    if re.match("\A>|   >", line) : # and la build sappiamo che e' fallita
+    elif re.match("\A( )*>", line) : # and la build sappiamo che e' fallita
         print line
         listaMessErrore.append(line)
+    # espressioni del tipo Skipping task xxxxx per questo motivo
+    elif re.match("\ASkipping task", line):
+        print line
+        listaTaskSkippati.append(line)
+    #a volte la build fallisce ancor prima che iniziano i task con messaggi di errore del tipo
+    #    Error: Invalid - -abiarmeabi - v7a for the selected target.
+    # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
+    elif re.match("\AError", line):
+        print line
+        listaErroriPrecedentiAiTask.append(line)
 
 #nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
 #sul buon esito della build. Esempio
@@ -47,3 +59,10 @@ for task in listaTask:
     if re.match("(.)*UP-TO-DATE", task):
         print task
 
+
+# N.B in lista task ci possono essere anche dei duplicati perche' alcuni task sono del tipo:
+# :sample:compileDebugUnitTestSources (Thread[Daemon worker,5,main]) started.
+# :sample:compileDebugUnitTestSources
+# Skipping task ':sample:compileDebugUnitTestSources' as it has no actions.
+# :sample:compileDebugUnitTestSources UP-TO-DATE
+# :sample:compileDebugUnitTestSources (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
