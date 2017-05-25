@@ -5,9 +5,10 @@ import sys
 # reindirizando l'output su un file
 # es python logsTavis.py Assunta/example > example.txt
 
-# N.B c'è un problema se nel log ci sono carateri unicode fallisce la scrittura su file
-
-t = TravisPy.github_auth("8d3479c909b4c1398b8841fac2c3dcf0bd6f19bd")
+# N.B c'e' un problema se nel log ci sono carateri unicode fallisce la scrittura su file
+f = open('token.config', 'r')
+token=f.readline()
+t = TravisPy.github_auth(str(token))
 if len(sys.argv)>1:
     repo = t.repo(str(sys.argv[1]))
     build = t.build(repo.last_build_id)
