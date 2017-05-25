@@ -1,0 +1,2441 @@
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: production-5-worker-org-c-6-gce:e9c54b9c-6b50-4621-b896-65f08c9e0cd2
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-406c2313-b140-4cee-a815-d105af5e7f1f:travis-ci-jvm-precise-1491941442
+startup: 22.305514228s
+travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: java
+Build group: stable
+Build dist: precise
+Build id: 235015715
+Job id: 235015717
+travis-build version: 97c7efd0c
+[34m[1mBuild image provisioning date and time[0m
+Tue Apr 11 20:22:39 UTC 2017
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+[34m[1mLinux Version[0m
+3.13.0-115-generic
+[34m[1mCookbooks Version[0m
+cc4eb5e https://github.com/travis-ci/travis-cookbooks/tree/cc4eb5e
+[34m[1mGit version[0m
+git version 1.8.5.6
+[34m[1mbash version[0m
+GNU bash, version 4.2.25(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+[34m[1mGCC version[0m
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mLLVM version[0m
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.2.6
+[34m[1mPre-installed Node.js versions[0m
+v0.10.36
+[34m[1mPre-installed Go versions[0m
+1.7.4
+[34m[1mmysql --version[0m
+mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.2
+[34m[1mPre-installed PostgreSQL versions[0m
+9.1.24
+9.2.20
+9.3.16
+9.4.11
+9.5.6
+[34m[1mRedis version[0m
+redis-server 3.0.7
+[34m[1mriak version[0m
+2.0.2
+[34m[1mmemcached version[0m
+1.4.13
+[34m[1mMongoDB version[0m
+MongoDB 2.4.14
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mInstalled Sphinx versions[0m
+2.0.10
+2.1.9
+2.2.6
+[34m[1mDefault Sphinx version[0m
+2.2.6
+[34m[1mInstalled Firefox version[0m
+firefox 38.4.0esr
+[34m[1mPhantomJS version[0m
+1.9.8
+[34m[1mant -version[0m
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+[34m[1mmvn -version[0m
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.8.0_121, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-115-generic", arch: "amd64", family: "unix"
+[34m[1mgradle -version[0m
+
+------------------------------------------------------------
+Gradle 2.2.1
+------------------------------------------------------------
+
+Build time:   2014-11-24 09:45:35 UTC
+Build number: none
+Revision:     6fcb59c06f43a4e6b1bcb401f7686a8601a1fb4a
+
+Groovy:       2.3.6
+Ant:          Apache Ant(TM) version 1.9.3 compiled on December 23 2013
+JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)
+OS:           Linux 3.13.0-115-generic amd64
+
+[34m[1mlein1 version[0m
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Downloading Leiningen now...
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Using JLine for console I/O; install rlwrap for optimum experience.
+Leiningen 1.7.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein2 version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+travis_fold:end:system_info[0K
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+travis_fold:start:fix.CVE-2015-7547[0K$ export DEBIAN_FRONTEND=noninteractive
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libc6 is already the newest version (2.15-0ubuntu10.18).
+0 upgraded, 0 newly installed, 0 to remove and 43 not upgraded.
+travis_fold:end:fix.CVE-2015-7547[0K$ jdk_switcher use oraclejdk7
+Switching to Oracle JDK7 (java-7-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-7-oracle
+travis_fold:start:git.checkout[0Ktravis_time:start:243e3537[0K$ git clone --depth=50 --branch=release/2.x https://github.com/mockito/mockito.git mockito/mockito
+Cloning into 'mockito/mockito'...
+remote: Counting objects: 1807, done.[K
+remote: Compressing objects:   0% (1/1273)   [Kremote: Compressing objects:   1% (13/1273)   [Kremote: Compressing objects:   2% (26/1273)   [Kremote: Compressing objects:   3% (39/1273)   [Kremote: Compressing objects:   4% (51/1273)   [Kremote: Compressing objects:   5% (64/1273)   [Kremote: Compressing objects:   6% (77/1273)   [Kremote: Compressing objects:   7% (90/1273)   [Kremote: Compressing objects:   8% (102/1273)   [Kremote: Compressing objects:   9% (115/1273)   [Kremote: Compressing objects:  10% (128/1273)   [Kremote: Compressing objects:  11% (141/1273)   [Kremote: Compressing objects:  12% (153/1273)   [Kremote: Compressing objects:  13% (166/1273)   [Kremote: Compressing objects:  14% (179/1273)   [Kremote: Compressing objects:  15% (191/1273)   [Kremote: Compressing objects:  16% (204/1273)   [Kremote: Compressing objects:  17% (217/1273)   [Kremote: Compressing objects:  18% (230/1273)   [Kremote: Compressing objects:  19% (242/1273)   [Kremote: Compressing objects:  20% (255/1273)   [Kremote: Compressing objects:  21% (268/1273)   [Kremote: Compressing objects:  22% (281/1273)   [Kremote: Compressing objects:  23% (293/1273)   [Kremote: Compressing objects:  24% (306/1273)   [Kremote: Compressing objects:  25% (319/1273)   [Kremote: Compressing objects:  26% (331/1273)   [Kremote: Compressing objects:  27% (344/1273)   [Kremote: Compressing objects:  28% (357/1273)   [Kremote: Compressing objects:  29% (370/1273)   [Kremote: Compressing objects:  30% (382/1273)   [Kremote: Compressing objects:  31% (395/1273)   [Kremote: Compressing objects:  32% (408/1273)   [Kremote: Compressing objects:  33% (421/1273)   [Kremote: Compressing objects:  34% (433/1273)   [Kremote: Compressing objects:  35% (446/1273)   [Kremote: Compressing objects:  36% (459/1273)   [Kremote: Compressing objects:  37% (472/1273)   [Kremote: Compressing objects:  38% (484/1273)   [Kremote: Compressing objects:  39% (497/1273)   [Kremote: Compressing objects:  40% (510/1273)   [Kremote: Compressing objects:  41% (522/1273)   [Kremote: Compressing objects:  42% (535/1273)   [Kremote: Compressing objects:  43% (548/1273)   [Kremote: Compressing objects:  44% (561/1273)   [Kremote: Compressing objects:  45% (573/1273)   [Kremote: Compressing objects:  46% (586/1273)   [Kremote: Compressing objects:  47% (599/1273)   [Kremote: Compressing objects:  48% (612/1273)   [Kremote: Compressing objects:  49% (624/1273)   [Kremote: Compressing objects:  50% (637/1273)   [Kremote: Compressing objects:  51% (650/1273)   [Kremote: Compressing objects:  52% (662/1273)   [Kremote: Compressing objects:  53% (675/1273)   [Kremote: Compressing objects:  54% (688/1273)   [Kremote: Compressing objects:  55% (701/1273)   [Kremote: Compressing objects:  56% (713/1273)   [Kremote: Compressing objects:  57% (726/1273)   [Kremote: Compressing objects:  58% (739/1273)   [Kremote: Compressing objects:  59% (752/1273)   [Kremote: Compressing objects:  60% (764/1273)   [Kremote: Compressing objects:  61% (777/1273)   [Kremote: Compressing objects:  62% (790/1273)   [Kremote: Compressing objects:  63% (802/1273)   [Kremote: Compressing objects:  64% (815/1273)   [Kremote: Compressing objects:  65% (828/1273)   [Kremote: Compressing objects:  66% (841/1273)   [Kremote: Compressing objects:  67% (853/1273)   [Kremote: Compressing objects:  68% (866/1273)   [Kremote: Compressing objects:  69% (879/1273)   [Kremote: Compressing objects:  70% (892/1273)   [Kremote: Compressing objects:  71% (904/1273)   [Kremote: Compressing objects:  72% (917/1273)   [Kremote: Compressing objects:  73% (930/1273)   [Kremote: Compressing objects:  74% (943/1273)   [Kremote: Compressing objects:  75% (955/1273)   [Kremote: Compressing objects:  76% (968/1273)   [Kremote: Compressing objects:  77% (981/1273)   [Kremote: Compressing objects:  78% (993/1273)   [Kremote: Compressing objects:  79% (1006/1273)   [Kremote: Compressing objects:  80% (1019/1273)   [Kremote: Compressing objects:  81% (1032/1273)   [Kremote: Compressing objects:  82% (1044/1273)   [Kremote: Compressing objects:  83% (1057/1273)   [Kremote: Compressing objects:  84% (1070/1273)   [Kremote: Compressing objects:  85% (1083/1273)   [Kremote: Compressing objects:  86% (1095/1273)   [Kremote: Compressing objects:  87% (1108/1273)   [Kremote: Compressing objects:  88% (1121/1273)   [Kremote: Compressing objects:  89% (1133/1273)   [Kremote: Compressing objects:  90% (1146/1273)   [Kremote: Compressing objects:  91% (1159/1273)   [Kremote: Compressing objects:  92% (1172/1273)   [Kremote: Compressing objects:  93% (1184/1273)   [Kremote: Compressing objects:  94% (1197/1273)   [Kremote: Compressing objects:  95% (1210/1273)   [Kremote: Compressing objects:  96% (1223/1273)   [Kremote: Compressing objects:  97% (1235/1273)   [Kremote: Compressing objects:  98% (1248/1273)   [Kremote: Compressing objects:  99% (1261/1273)   [Kremote: Compressing objects: 100% (1273/1273)   [Kremote: Compressing objects: 100% (1273/1273), done.[K
+Receiving objects:   0% (1/1807)   Receiving objects:   1% (19/1807)   Receiving objects:   2% (37/1807)   Receiving objects:   3% (55/1807)   Receiving objects:   4% (73/1807)   Receiving objects:   5% (91/1807)   Receiving objects:   6% (109/1807)   Receiving objects:   7% (127/1807)   Receiving objects:   8% (145/1807)   Receiving objects:   9% (163/1807)   Receiving objects:  10% (181/1807)   Receiving objects:  11% (199/1807)   Receiving objects:  12% (217/1807)   Receiving objects:  13% (235/1807)   Receiving objects:  14% (253/1807)   Receiving objects:  15% (272/1807)   Receiving objects:  16% (290/1807)   Receiving objects:  17% (308/1807)   Receiving objects:  18% (326/1807)   Receiving objects:  19% (344/1807)   Receiving objects:  20% (362/1807)   Receiving objects:  21% (380/1807)   Receiving objects:  22% (398/1807)   Receiving objects:  23% (416/1807)   Receiving objects:  24% (434/1807)   Receiving objects:  25% (452/1807)   Receiving objects:  26% (470/1807)   Receiving objects:  27% (488/1807)   Receiving objects:  28% (506/1807)   Receiving objects:  29% (525/1807)   Receiving objects:  30% (543/1807)   Receiving objects:  31% (561/1807)   Receiving objects:  32% (579/1807)   Receiving objects:  33% (597/1807)   Receiving objects:  34% (615/1807)   Receiving objects:  35% (633/1807)   Receiving objects:  36% (651/1807)   Receiving objects:  37% (669/1807)   Receiving objects:  38% (687/1807)   Receiving objects:  39% (705/1807)   Receiving objects:  40% (723/1807)   Receiving objects:  41% (741/1807)   Receiving objects:  42% (759/1807)   Receiving objects:  43% (778/1807)   Receiving objects:  44% (796/1807)   Receiving objects:  45% (814/1807)   Receiving objects:  46% (832/1807)   Receiving objects:  47% (850/1807)   Receiving objects:  48% (868/1807)   Receiving objects:  49% (886/1807)   Receiving objects:  50% (904/1807)   Receiving objects:  51% (922/1807)   Receiving objects:  52% (940/1807)   Receiving objects:  53% (958/1807)   Receiving objects:  54% (976/1807)   Receiving objects:  55% (994/1807)   Receiving objects:  56% (1012/1807)   Receiving objects:  57% (1030/1807)   Receiving objects:  58% (1049/1807)   Receiving objects:  59% (1067/1807)   Receiving objects:  60% (1085/1807)   Receiving objects:  61% (1103/1807)   Receiving objects:  62% (1121/1807)   Receiving objects:  63% (1139/1807)   Receiving objects:  64% (1157/1807)   Receiving objects:  65% (1175/1807)   Receiving objects:  66% (1193/1807)   Receiving objects:  67% (1211/1807)   Receiving objects:  68% (1229/1807)   Receiving objects:  69% (1247/1807)   Receiving objects:  70% (1265/1807)   Receiving objects:  71% (1283/1807)   Receiving objects:  72% (1302/1807)   Receiving objects:  73% (1320/1807)   Receiving objects:  74% (1338/1807)   Receiving objects:  75% (1356/1807)   Receiving objects:  76% (1374/1807)   Receiving objects:  77% (1392/1807)   Receiving objects:  78% (1410/1807)   Receiving objects:  79% (1428/1807)   Receiving objects:  80% (1446/1807)   Receiving objects:  81% (1464/1807)   Receiving objects:  82% (1482/1807)   Receiving objects:  83% (1500/1807)   Receiving objects:  84% (1518/1807)   Receiving objects:  85% (1536/1807)   Receiving objects:  86% (1555/1807)   Receiving objects:  87% (1573/1807)   Receiving objects:  88% (1591/1807)   Receiving objects:  89% (1609/1807)   Receiving objects:  90% (1627/1807)   Receiving objects:  91% (1645/1807)   Receiving objects:  92% (1663/1807)   Receiving objects:  93% (1681/1807)   remote: Total 1807 (delta 631), reused 889 (delta 427), pack-reused 0[K
+Receiving objects:  94% (1699/1807)   Receiving objects:  95% (1717/1807)   Receiving objects:  96% (1735/1807)   Receiving objects:  97% (1753/1807)   Receiving objects:  98% (1771/1807)   Receiving objects:  99% (1789/1807)   Receiving objects: 100% (1807/1807)   Receiving objects: 100% (1807/1807), 1.06 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/631)   Resolving deltas:   3% (20/631)   Resolving deltas:   4% (28/631)   Resolving deltas:   6% (38/631)   Resolving deltas:   7% (45/631)   Resolving deltas:   8% (53/631)   Resolving deltas:  21% (138/631)   Resolving deltas:  27% (176/631)   Resolving deltas:  28% (179/631)   Resolving deltas:  30% (193/631)   Resolving deltas:  31% (196/631)   Resolving deltas:  32% (204/631)   Resolving deltas:  33% (211/631)   Resolving deltas:  34% (215/631)   Resolving deltas:  35% (222/631)   Resolving deltas:  36% (228/631)   Resolving deltas:  37% (235/631)   Resolving deltas:  38% (244/631)   Resolving deltas:  39% (247/631)   Resolving deltas:  40% (254/631)   Resolving deltas:  41% (259/631)   Resolving deltas:  42% (267/631)   Resolving deltas:  43% (272/631)   Resolving deltas:  44% (278/631)   Resolving deltas:  46% (291/631)   Resolving deltas:  47% (300/631)   Resolving deltas:  49% (311/631)   Resolving deltas:  54% (347/631)   Resolving deltas:  55% (351/631)   Resolving deltas:  56% (355/631)   Resolving deltas:  58% (372/631)   Resolving deltas:  63% (402/631)   Resolving deltas:  65% (413/631)   Resolving deltas:  67% (423/631)   Resolving deltas:  68% (430/631)   Resolving deltas:  69% (436/631)   Resolving deltas:  70% (443/631)   Resolving deltas:  71% (449/631)   Resolving deltas:  72% (455/631)   Resolving deltas:  73% (464/631)   Resolving deltas:  74% (469/631)   Resolving deltas:  75% (476/631)   Resolving deltas:  76% (480/631)   Resolving deltas:  77% (487/631)   Resolving deltas:  78% (493/631)   Resolving deltas:  79% (499/631)   Resolving deltas:  80% (506/631)   Resolving deltas:  81% (515/631)   Resolving deltas:  82% (518/631)   Resolving deltas:  83% (525/631)   Resolving deltas:  84% (531/631)   Resolving deltas:  85% (537/631)   Resolving deltas:  86% (544/631)   Resolving deltas:  87% (550/631)   Resolving deltas:  88% (557/631)   Resolving deltas:  89% (562/631)   Resolving deltas:  90% (571/631)   Resolving deltas:  91% (575/631)   Resolving deltas:  92% (581/631)   Resolving deltas:  93% (587/631)   Resolving deltas:  94% (594/631)   Resolving deltas: 100% (631/631)   Resolving deltas: 100% (631/631), done.
+Checking connectivity... done.
+
+travis_time:end:243e3537:start=1495493150936561942,finish=1495493152267194341,duration=1330632399[0K$ cd mockito/mockito
+$ git checkout -qf db7dbc3d5f7d97d0625683b4e41f282818f9b87c
+travis_fold:end:git.checkout[0K[33;1mSet hostname to mockito-cd[0m
+$ sudo hostname mockito-cd
+travis_fold:start:hosts.before[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant 
+travis_fold:end:hosts.before[0Ktravis_fold:start:hosts[0Ksudo: unable to resolve host mockito-cd
+travis_fold:end:hosts[0Ktravis_fold:start:hosts.after[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant  mockito-cd
+travis_fold:end:hosts.after[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export NEXUS_TOKEN_USER=[secure]
+$ export NEXUS_TOKEN_PWD=[secure]
+$ export TEST_ENV_VAR=[secure]
+$ export BINTRAY_API_KEY=[secure]
+$ export GH_WRITE_TOKEN=[secure]
+
+[33;1mSetting environment variables from .travis.yml[0m
+$ export TERM=dumb
+$ export GRADLE_OPTS="-XX:+UseCompressedOops -Djava.awt.headless=true"
+
+$ export TERM=dumb
+travis_fold:start:cache.1[0KSetting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:01d42ded[0K$ Installing caching utilities
+
+travis_time:end:01d42ded:start=1495493152972276317,finish=1495493153134300742,duration=162024425[0Ktravis_time:start:0547eaa5[0K
+travis_time:end:0547eaa5:start=1495493153170253684,finish=1495493153199977108,duration=29723424[0Ktravis_time:start:0bc0bdc8[0K[32;1mattempting to download cache archive[0m
+[32;1mfetching release2.x/cache-linux-precise-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--jdk-oraclejdk7.tgz[0m
+[32;1mfound cache[0m
+
+travis_time:end:0bc0bdc8:start=1495493153205062942,finish=1495493154527872581,duration=1322809639[0Ktravis_time:start:00005f60[0K
+travis_time:end:00005f60:start=1495493154534362353,finish=1495493154538912861,duration=4550508[0Ktravis_time:start:0d9b5adc[0K[32;1madding /home/travis/.gradle/caches to cache[0m
+[32;1mcreating directory /home/travis/.gradle/caches[0m
+[32;1madding /home/travis/.gradle/wrapper to cache[0m
+[32;1mcreating directory /home/travis/.gradle/wrapper[0m
+
+travis_time:end:0d9b5adc:start=1495493154543973115,finish=1495493157604908534,duration=3060935419[0Ktravis_fold:end:cache.1[0K$ java -Xmx32m -version
+java version "1.7.0_80"
+Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.7.0_80
+travis_fold:start:before_install.1[0Ktravis_time:start:0c33fc80[0K$ export TRAVIS_COMMIT_MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+
+travis_time:end:0c33fc80:start=1495493158315396304,finish=1495493158322893951,duration=7497647[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:02c5a421[0K$ echo "$TRAVIS_COMMIT_MESSAGE"
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+
+travis_time:end:02c5a421:start=1495493158328983336,finish=1495493158333880060,duration=4896724[0Ktravis_fold:end:before_install.2[0Ktravis_fold:start:install[0Ktravis_time:start:0871c548[0K$ true
+
+travis_time:end:0871c548:start=1495493158341546946,finish=1495493158346481732,duration=4934786[0Ktravis_fold:end:install[0Ktravis_time:start:071eb86d[0K$ ./gradlew build idea -s -PcheckJava6Compatibility
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava
+:android:processResources
+:android:sourcesJar
+:android:processTestResources UP-TO-DATE
+:extTest:compileJava UP-TO-DATE
+:extTest:processResources UP-TO-DATE
+:extTest:classes UP-TO-DATE
+:extTest:jar
+:extTest:assemble
+:extTest:animalsnifferMain UP-TO-DATE
+:extTest:processTestResources
+:extTest:checkstyleMain UP-TO-DATE
+:inline:processResources
+:inline:sourcesJar
+:inline:processTestResources UP-TO-DATE
+:kotlinTest:compileKotlin UP-TO-DATE
+:kotlinTest:compileJava UP-TO-DATE
+:kotlinTest:copyMainKotlinClasses
+:kotlinTest:processResources UP-TO-DATE
+:kotlinTest:classes UP-TO-DATE
+:kotlinTest:jar
+:kotlinTest:assemble
+:kotlinTest:animalsnifferMain UP-TO-DATE
+:kotlinTest:processTestResources UP-TO-DATE
+:kotlinTest:checkstyleMain UP-TO-DATE
+:testng:processResources UP-TO-DATE
+:testng:processTestResources
+:android:ideaModule
+:android:idea
+:inline:ideaModule
+:inline:idea
+:kotlinTest:ideaModule
+:kotlinTest:idea
+:testng:ideaModule
+:testng:idea
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:copyMockMethodDispatcher
+:processResources UP-TO-DATE
+:classes
+:jar
+:javadoc
+:android:compileJava
+:android:classes
+:android:jar
+:android:animalsnifferMain
+:android:compileTestJava UP-TO-DATE
+:android:testClasses UP-TO-DATE
+:android:animalsnifferTest UP-TO-DATE
+:android:checkstyleMain/home/travis/build/mockito/mockito/src/main/java/org/mockito/configuration/AnnotationEngine.java:27: warning - Tag @link: reference not found: org.mockito.plugins plugin
+
+:android:checkstyleTest UP-TO-DATE
+:android:test UP-TO-DATE
+:android:check
+:inline:compileJava UP-TO-DATE
+:inline:classes
+:inline:jar
+:inline:animalsnifferMain/home/travis/build/mockito/mockito/src/main/java/org/mockito/AdditionalAnswers.java:38: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs.class
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/MockitoSession.java:90: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs
+
+:inline:compileTestJava
+:inline:testClasses
+:inline:animalsnifferTest/home/travis/build/mockito/mockito/src/main/java/org/mockito/exceptions/misusing/UnnecessaryStubbingException.java:54: warning - Tag @link: reference not found: MockitoJUnitRunner.Silent
+
+:inline:checkstyleMain UP-TO-DATE
+:inline:checkstyleTest
+:inline:test
+6 warnings
+Installing sw-precache globally
+:inline:check
+:kotlinTest:compileTestKotlinnpm WARN engine pretty-bytes@4.0.2: wanted: {"node":">=4"} (current: {"node":"0.10.36","npm":"1.4.28"})
+
+Using kotlin incremental compilation
+w: Running the Kotlin compiler under Java 6 or 7 is unsupported and will no longer be possible in a future update.
+npm WARN engine deep-extend@0.4.2: wanted: {"node":">=0.12.0","iojs":">=1.0.0"} (current: {"node":"0.10.36","npm":"1.4.28"})
+npm WARN engine deep-extend@0.4.2: wanted: {"node":">=0.12.0","iojs":">=1.0.0"} (current: {"node":"0.10.36","npm":"1.4.28"})
+/home/travis/.nvm/v0.10.36/bin/sw-precache -> /home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/cli.js
+sw-precache@5.1.1 /home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache
+├── pretty-bytes@4.0.2
+├── lodash.defaults@4.2.0
+├── lodash.template@4.4.0 (lodash._reinterpolate@3.0.0, lodash.templatesettings@4.1.0)
+├── mkdirp@0.5.1 (minimist@0.0.8)
+├── glob@7.1.2 (path-is-absolute@1.0.1, inherits@2.0.3, fs.realpath@1.0.0, inflight@1.0.6, once@1.4.0, minimatch@3.0.4)
+├── dom-urls@1.1.0 (urijs@1.18.10)
+├── es6-promise@4.1.0
+├── sw-toolbox@3.6.0 (serviceworker-cache-polyfill@4.0.0, path-to-regexp@1.7.0)
+├── meow@3.7.0 (decamelize@1.2.0, map-obj@1.0.1, trim-newlines@1.0.0, object-assign@4.1.1, camelcase-keys@2.1.0, minimist@1.2.0, loud-rejection@1.6.0, redent@1.0.0, normalize-package-data@2.3.8, read-pkg-up@1.0.1)
+└── update-notifier@1.0.3 (is-npm@1.0.0, lazy-req@1.1.0, xdg-basedir@2.0.0, semver-diff@2.1.0, configstore@2.1.0, chalk@1.1.3, boxen@0.6.0, latest-version@2.0.0)
+
+/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/node_modules/pretty-bytes/index.js:2
+const UNITS = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+^^^^^
+SyntaxError: Use of const in strict mode.
+    at Module._compile (module.js:439:25)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/lib/sw-precache.js:27:19)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+NPM is not installed. Aborting generating service-worker
+:javadocJar
+:sourcesJar
+:assemble
+:animalsnifferMain
+:createTestResources
+:compileTestJava
+w: The '-d' option with a directory destination is ignored because '-module' is specified
+:android:javadoc SKIPPED
+:android:javadocJar
+:android:assemble
+:inline:javadoc SKIPPED
+:inline:javadocJar
+:inline:assemble
+:kotlinTest:compileTestJava UP-TO-DATE
+:kotlinTest:copyTestKotlinClasses
+:kotlinTest:testClasses UP-TO-DATE
+:kotlinTest:animalsnifferTest
+:kotlinTest:checkstyleTest UP-TO-DATE
+:kotlinTest:test
+:kotlinTest:check
+:kotlinTest:build
+:testng:compileJava
+:testng:classes
+:testng:jar
+:testng:sourcesJar
+:testng:assemble
+:testng:animalsnifferMain
+:testng:compileTestJavaNote: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+:testng:testClasses
+:testng:animalsnifferTest
+:testng:checkstyleMain
+:testng:checkstyleTestNote: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+:testng:test
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses
+:animalsnifferTest
+:checkstyleMain
+:testng:check
+:testng:build
+:checkstyleTest
+:licenseMain
+Missing header in: src/main/java/org/mockito/internal/creation/SuspendMethod.java
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/LICENSE
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/README.md
+:licenseTest
+Missing header in: src/test/java/org/mockitousage/bugs/EnabledMockingInterfaceCloneMethodTest.java
+:license
+:test
+:check
+:fetchAllContributors
+  Fetching all contributors for project
+  Querying GitHub API for all contributors for project
+GET https://api.github.com/repos/mockito/mockito/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100
+GET https://api.github.com/users/szczepiq?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bric3?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/continuous-delivery-drone?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/raphw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/TimvdLippe?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/PascalSchumacher?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/iczechowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bbankowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/szpak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ChristianSchwarz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mureinik?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lukasz-szewc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/marcingrzejszczak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Dawud-xx?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidkarlsen?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/pimterry?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lpandzic?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/wernight?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alberskib?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jerzykrlk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tmurakami?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/josephw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/epeee?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dmac100?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ffbit?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/guw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hansjoachim?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hughwphamill?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ianparkinson?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/kamilszymanski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mkordas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/carlosaguayo?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brewerc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/AFnRFCb7?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tarnowskijan?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JeffreyFalgout?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lucascs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SourcePond?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SeriyBg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Stephan202?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/UrsMetz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thesnowgoose?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/yyvess?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Jazzepi?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vanta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MariusVolkhart?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/michalborek?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alb-i986?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/asolntsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andreyrmg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Ariel-Isaacm?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/BartoszMiller?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brunokrebs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Saser?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dgageot?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidxia?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dhruvarora?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/divyansh-gupta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/DmitriyZaitsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eamelink?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eugene-ivakhno?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/astafev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/FWDekker?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MGaetan89?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/geoffschoeman?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/isanych?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vershinin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jpenglert?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/izeye?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JosePaumard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mileszk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tradingreason?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/L-KID?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LiamClark?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ludochane?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MeddahJ?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/markuswustenberg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thatJavaNerd?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Nirvanall?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/olivergierke?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/philipa?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/phjardas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/radimk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ra4king?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/elizarov?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/smarkwell?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SimenB?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/stuartblair?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tokuhirom?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tomball?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Vp3n?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andrerigon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ashleyfrieze?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bruceeddy?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jrrickard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lloydjm77?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LudoMeurillon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mgrafl?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/paulduffin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repositories/6207167/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100&page=2
+GET https://api.github.com/users/wuwen5?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repos/mockito/mockito/commits?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&since=2017-05-21T22:48:35+0000&page=1&per_page=100
+  Serialized all contributors into: build/release-tools/all-contributors.json
+:configureContributors
+  Configuring 101 contributors into 'releasing.team.contributors' setting.
+:generatePomFileForJavaLibraryPublication
+:android:generatePomFileForJavaLibraryPublication
+:android:publishJavaLibraryPublicationToMavenLocal
+:publishJavaLibraryPublicationToMavenLocal
+:android:publishToMavenLocal
+:android:build
+:inline:generatePomFileForJavaLibraryPublication
+:inline:publishJavaLibraryPublicationToMavenLocal
+:publishToMavenLocal
+:build
+:extTest:compileTestJava
+:inline:publishToMavenLocal
+:inline:build
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
+:extTest:testClasses
+:extTest:animalsnifferTest
+:extTest:checkstyleTest
+:extTest:test
+:extTest:check
+:extTest:build
+:extTest:ideaModule
+:extTest:idea
+
+BUILD SUCCESSFUL
+
+Total time: 2 mins 43.308 secs
+
+travis_time:end:071eb86d:start=1495493158352240045,finish=1495493322753508255,duration=164401268210[0K
+[32;1mThe command "./gradlew build idea -s -PcheckJava6Compatibility" exited with 0.[0m
+travis_fold:start:before_cache[0Ktravis_time:start:18462096[0K$ rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+travis_time:end:18462096:start=1495493322759840380,finish=1495493322765144134,duration=5303754[0Ktravis_fold:end:before_cache[0Ktravis_fold:start:cache.2[0Kstore build cache
+travis_time:start:189c2bb6[0K
+travis_time:end:189c2bb6:start=1495493322770917049,finish=1495493322775365029,duration=4447980[0Ktravis_time:start:16cec0f2[0K[32;1mchange detected (content changed, file is created, or file is deleted):
+/home/travis/.gradle/caches/2.14.1/plugin-resolution/cache.properties.lock
+/home/travis/.gradle/caches/modules-2/metadata-2.16/module-metadata.bin
+
+[0m
+[32;1mchanges detected, packing new archive[0m
+.
+[32;1muploading archive[0m
+
+travis_time:end:16cec0f2:start=1495493322780703584,finish=1495493333419909947,duration=10639206363[0Ktravis_fold:end:cache.2[0Ktravis_fold:start:after_success.1[0Ktravis_time:start:0ee281af[0K$ ./gradlew assertReleaseNeeded && ./gradlew ciReleasePrepare && ./gradlew performRelease -Preleasing.dryRun=false
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:assertReleaseNeeded
+  Environment variable SKIP_RELEASE present: false
+  Commit message to inspect for keyword '[ci skip-release]': 
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+  Current branch 'release/2.x' matches 'release/.+': true
+:assertReleaseNeeded FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':assertReleaseNeeded'.
+>   Release is needed: false
+      - skip by env variable: false
+      - skip by commit message: true
+      - is pull request build:  false
+      - is releasable branch:  true
+      - anything changed in publications since the previous release:  true
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 1.922 secs
+
+travis_time:end:0ee281af:start=1495493333442197711,finish=1495493335904639459,duration=2462441748[0Ktravis_fold:end:after_success.1[0Ktravis_fold:start:after_success.2[0Ktravis_time:start:0af89698[0K$ ./gradlew --stacktrace coverageReport && cp build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml jacoco.xml || echo "Code coverage failed"
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava UP-TO-DATE
+:copyMockMethodDispatcher UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:createTestResources
+:compileTestJava UP-TO-DATE
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:mockitoCoverage
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-parent/5.0.4/asm-parent-5.0.4.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.jar
+Jacoco report for client created: file:///home/travis/build/mockito/mockito/build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml
+:coverageReport
+
+BUILD SUCCESSFUL
+
+Total time: 7.367 secs
+
+travis_time:end:0af89698:start=1495493335910231223,finish=1495493343727929646,duration=7817698423[0Ktravis_fold:end:after_success.2[0Ktravis_fold:start:after_success.3[0Ktravis_time:start:01696d82[0K$ bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+  _____          _
+ / ____|        | |
+| |     ___   __| | ___  ___ _____   __
+| |    / _ \ / _` |/ _ \/ __/ _ \ \ / /
+| |___| (_) | (_| |  __/ (_| (_) \ V /
+ \_____\___/ \__,_|\___|\___\___/ \_/
+                              Bash-8fda091
+
+
+[0;90m==>[0m Travis CI detected.
+    [0;90mproject root:[0m .
+    [0;32mYaml not found, that's ok! Learn more at[0m [0;36mhttp://docs.codecov.io/docs/codecov-yaml[0m
+[0;90m==>[0m Running gcov in . [0;90m(disable via -X gcov)[0m
+[0;90m==>[0m Python coveragepy not found
+[0;90m==>[0m Searching for coverage reports in:
+    [0;32m+[0m .
+    [0;90m->[0m Found 1 reports
+[0;90m==>[0m Detecting git/mercurial file structure
+[0;90m==>[0m Appending build variables
+    [0;32m+[0m TRAVIS_OS_NAME
+    [0;32m+[0m TRAVIS_JDK_VERSION
+[0;90m==>[0m Reading reports
+    [0;32m+[0m ./jacoco.xml [0;90mbytes=1068016[0m
+[0;90m==>[0m Appending adjustments
+    [0;36mhttp://docs.codecov.io/docs/fixing-reports[0m
+    [0;32m+[0m Found adjustments
+[0;90m==>[0m Uploading reports
+    [0;90murl:[0m https://codecov.io
+    [0;90mquery:[0m branch=release%2F2.x&commit=db7dbc3d5f7d97d0625683b4e41f282818f9b87c&build=2672.1&build_url=&name=&tag=&slug=mockito%2Fmockito&yaml=&service=travis&flags=&pr=false&job=235015717
+    [0;90m->[0m Pinging Codecov
+    [0;90m->[0m Uploading to S3 https://codecov.s3.amazonaws.com
+    [0;32m->[0m View reports at [0;36mhttps://codecov.io/github/mockito/mockito/commit/db7dbc3d5f7d97d0625683b4e41f282818f9b87c[0m
+
+travis_time:end:01696d82:start=1495493343734219976,finish=1495493345421861817,duration=1687641841[0Ktravis_fold:end:after_success.3[0K
+Done. Your build exited with 0.
+
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: production-5-worker-org-b-2-gce:c6050af3-9cf4-44f9-9fa8-91157404f49d
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-4e46de4a-03d7-42fe-ad62-290e39e820f9:travis-ci-jvm-precise-1491941442
+startup: 21.658272112s
+travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: java
+Build group: stable
+Build dist: precise
+Build id: 235015715
+Job id: 235015720
+travis-build version: 97c7efd0c
+[34m[1mBuild image provisioning date and time[0m
+Tue Apr 11 20:22:39 UTC 2017
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+[34m[1mLinux Version[0m
+3.13.0-115-generic
+[34m[1mCookbooks Version[0m
+cc4eb5e https://github.com/travis-ci/travis-cookbooks/tree/cc4eb5e
+[34m[1mGit version[0m
+git version 1.8.5.6
+[34m[1mbash version[0m
+GNU bash, version 4.2.25(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+[34m[1mGCC version[0m
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mLLVM version[0m
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.2.6
+[34m[1mPre-installed Node.js versions[0m
+v0.10.36
+[34m[1mPre-installed Go versions[0m
+1.7.4
+[34m[1mmysql --version[0m
+mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.2
+[34m[1mPre-installed PostgreSQL versions[0m
+9.1.24
+9.2.20
+9.3.16
+9.4.11
+9.5.6
+[34m[1mRedis version[0m
+redis-server 3.0.7
+[34m[1mriak version[0m
+2.0.2
+[34m[1mmemcached version[0m
+1.4.13
+[34m[1mMongoDB version[0m
+MongoDB 2.4.14
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mInstalled Sphinx versions[0m
+2.0.10
+2.1.9
+2.2.6
+[34m[1mDefault Sphinx version[0m
+2.2.6
+[34m[1mInstalled Firefox version[0m
+firefox 38.4.0esr
+[34m[1mPhantomJS version[0m
+1.9.8
+[34m[1mant -version[0m
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+[34m[1mmvn -version[0m
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.8.0_121, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-115-generic", arch: "amd64", family: "unix"
+[34m[1mgradle -version[0m
+
+------------------------------------------------------------
+Gradle 2.2.1
+------------------------------------------------------------
+
+Build time:   2014-11-24 09:45:35 UTC
+Build number: none
+Revision:     6fcb59c06f43a4e6b1bcb401f7686a8601a1fb4a
+
+Groovy:       2.3.6
+Ant:          Apache Ant(TM) version 1.9.3 compiled on December 23 2013
+JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)
+OS:           Linux 3.13.0-115-generic amd64
+
+[34m[1mlein1 version[0m
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Downloading Leiningen now...
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Using JLine for console I/O; install rlwrap for optimum experience.
+Leiningen 1.7.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein2 version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+travis_fold:end:system_info[0K
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+travis_fold:start:fix.CVE-2015-7547[0K$ export DEBIAN_FRONTEND=noninteractive
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libc6 is already the newest version (2.15-0ubuntu10.18).
+0 upgraded, 0 newly installed, 0 to remove and 43 not upgraded.
+travis_fold:end:fix.CVE-2015-7547[0K$ jdk_switcher use oraclejdk7
+Switching to Oracle JDK7 (java-7-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-7-oracle
+travis_fold:start:git.checkout[0Ktravis_time:start:1951998e[0K$ git clone --depth=50 --branch=release/2.x https://github.com/mockito/mockito.git mockito/mockito
+Cloning into 'mockito/mockito'...
+remote: Counting objects: 1807, done.[K
+remote: Compressing objects:   0% (1/1273)   [Kremote: Compressing objects:   1% (13/1273)   [Kremote: Compressing objects:   2% (26/1273)   [Kremote: Compressing objects:   3% (39/1273)   [Kremote: Compressing objects:   4% (51/1273)   [Kremote: Compressing objects:   5% (64/1273)   [Kremote: Compressing objects:   6% (77/1273)   [Kremote: Compressing objects:   7% (90/1273)   [Kremote: Compressing objects:   8% (102/1273)   [Kremote: Compressing objects:   9% (115/1273)   [Kremote: Compressing objects:  10% (128/1273)   [Kremote: Compressing objects:  11% (141/1273)   [Kremote: Compressing objects:  12% (153/1273)   [Kremote: Compressing objects:  13% (166/1273)   [Kremote: Compressing objects:  14% (179/1273)   [Kremote: Compressing objects:  15% (191/1273)   [Kremote: Compressing objects:  16% (204/1273)   [Kremote: Compressing objects:  17% (217/1273)   [Kremote: Compressing objects:  18% (230/1273)   [Kremote: Compressing objects:  19% (242/1273)   [Kremote: Compressing objects:  20% (255/1273)   [Kremote: Compressing objects:  21% (268/1273)   [Kremote: Compressing objects:  22% (281/1273)   [Kremote: Compressing objects:  23% (293/1273)   [Kremote: Compressing objects:  24% (306/1273)   [Kremote: Compressing objects:  25% (319/1273)   [Kremote: Compressing objects:  26% (331/1273)   [Kremote: Compressing objects:  27% (344/1273)   [Kremote: Compressing objects:  28% (357/1273)   [Kremote: Compressing objects:  29% (370/1273)   [Kremote: Compressing objects:  30% (382/1273)   [Kremote: Compressing objects:  31% (395/1273)   [Kremote: Compressing objects:  32% (408/1273)   [Kremote: Compressing objects:  33% (421/1273)   [Kremote: Compressing objects:  34% (433/1273)   [Kremote: Compressing objects:  35% (446/1273)   [Kremote: Compressing objects:  36% (459/1273)   [Kremote: Compressing objects:  37% (472/1273)   [Kremote: Compressing objects:  38% (484/1273)   [Kremote: Compressing objects:  39% (497/1273)   [Kremote: Compressing objects:  40% (510/1273)   [Kremote: Compressing objects:  41% (522/1273)   [Kremote: Compressing objects:  42% (535/1273)   [Kremote: Compressing objects:  43% (548/1273)   [Kremote: Compressing objects:  44% (561/1273)   [Kremote: Compressing objects:  45% (573/1273)   [Kremote: Compressing objects:  46% (586/1273)   [Kremote: Compressing objects:  47% (599/1273)   [Kremote: Compressing objects:  48% (612/1273)   [Kremote: Compressing objects:  49% (624/1273)   [Kremote: Compressing objects:  50% (637/1273)   [Kremote: Compressing objects:  51% (650/1273)   [Kremote: Compressing objects:  52% (662/1273)   [Kremote: Compressing objects:  53% (675/1273)   [Kremote: Compressing objects:  54% (688/1273)   [Kremote: Compressing objects:  55% (701/1273)   [Kremote: Compressing objects:  56% (713/1273)   [Kremote: Compressing objects:  57% (726/1273)   [Kremote: Compressing objects:  58% (739/1273)   [Kremote: Compressing objects:  59% (752/1273)   [Kremote: Compressing objects:  60% (764/1273)   [Kremote: Compressing objects:  61% (777/1273)   [Kremote: Compressing objects:  62% (790/1273)   [Kremote: Compressing objects:  63% (802/1273)   [Kremote: Compressing objects:  64% (815/1273)   [Kremote: Compressing objects:  65% (828/1273)   [Kremote: Compressing objects:  66% (841/1273)   [Kremote: Compressing objects:  67% (853/1273)   [Kremote: Compressing objects:  68% (866/1273)   [Kremote: Compressing objects:  69% (879/1273)   [Kremote: Compressing objects:  70% (892/1273)   [Kremote: Compressing objects:  71% (904/1273)   [Kremote: Compressing objects:  72% (917/1273)   [Kremote: Compressing objects:  73% (930/1273)   [Kremote: Compressing objects:  74% (943/1273)   [Kremote: Compressing objects:  75% (955/1273)   [Kremote: Compressing objects:  76% (968/1273)   [Kremote: Compressing objects:  77% (981/1273)   [Kremote: Compressing objects:  78% (993/1273)   [Kremote: Compressing objects:  79% (1006/1273)   [Kremote: Compressing objects:  80% (1019/1273)   [Kremote: Compressing objects:  81% (1032/1273)   [Kremote: Compressing objects:  82% (1044/1273)   [Kremote: Compressing objects:  83% (1057/1273)   [Kremote: Compressing objects:  84% (1070/1273)   [Kremote: Compressing objects:  85% (1083/1273)   [Kremote: Compressing objects:  86% (1095/1273)   [Kremote: Compressing objects:  87% (1108/1273)   [Kremote: Compressing objects:  88% (1121/1273)   [Kremote: Compressing objects:  89% (1133/1273)   [Kremote: Compressing objects:  90% (1146/1273)   [Kremote: Compressing objects:  91% (1159/1273)   [Kremote: Compressing objects:  92% (1172/1273)   [Kremote: Compressing objects:  93% (1184/1273)   [Kremote: Compressing objects:  94% (1197/1273)   [Kremote: Compressing objects:  95% (1210/1273)   [Kremote: Compressing objects:  96% (1223/1273)   [Kremote: Compressing objects:  97% (1235/1273)   [Kremote: Compressing objects:  98% (1248/1273)   [Kremote: Compressing objects:  99% (1261/1273)   [Kremote: Compressing objects: 100% (1273/1273)   [Kremote: Compressing objects: 100% (1273/1273), done.[K
+Receiving objects:   0% (1/1807)   Receiving objects:   1% (19/1807)   Receiving objects:   2% (37/1807)   Receiving objects:   3% (55/1807)   Receiving objects:   4% (73/1807)   Receiving objects:   5% (91/1807)   Receiving objects:   6% (109/1807)   Receiving objects:   7% (127/1807)   Receiving objects:   8% (145/1807)   Receiving objects:   9% (163/1807)   Receiving objects:  10% (181/1807)   Receiving objects:  11% (199/1807)   Receiving objects:  12% (217/1807)   Receiving objects:  13% (235/1807)   Receiving objects:  14% (253/1807)   Receiving objects:  15% (272/1807)   Receiving objects:  16% (290/1807)   Receiving objects:  17% (308/1807)   Receiving objects:  18% (326/1807)   Receiving objects:  19% (344/1807)   Receiving objects:  20% (362/1807)   Receiving objects:  21% (380/1807)   Receiving objects:  22% (398/1807)   Receiving objects:  23% (416/1807)   Receiving objects:  24% (434/1807)   Receiving objects:  25% (452/1807)   Receiving objects:  26% (470/1807)   Receiving objects:  27% (488/1807)   Receiving objects:  28% (506/1807)   Receiving objects:  29% (525/1807)   Receiving objects:  30% (543/1807)   Receiving objects:  31% (561/1807)   Receiving objects:  32% (579/1807)   Receiving objects:  33% (597/1807)   Receiving objects:  34% (615/1807)   Receiving objects:  35% (633/1807)   Receiving objects:  36% (651/1807)   Receiving objects:  37% (669/1807)   Receiving objects:  38% (687/1807)   Receiving objects:  39% (705/1807)   Receiving objects:  40% (723/1807)   Receiving objects:  41% (741/1807)   Receiving objects:  42% (759/1807)   Receiving objects:  43% (778/1807)   Receiving objects:  44% (796/1807)   Receiving objects:  45% (814/1807)   Receiving objects:  46% (832/1807)   Receiving objects:  47% (850/1807)   Receiving objects:  48% (868/1807)   Receiving objects:  49% (886/1807)   Receiving objects:  50% (904/1807)   Receiving objects:  51% (922/1807)   Receiving objects:  52% (940/1807)   Receiving objects:  53% (958/1807)   Receiving objects:  54% (976/1807)   Receiving objects:  55% (994/1807)   Receiving objects:  56% (1012/1807)   Receiving objects:  57% (1030/1807)   Receiving objects:  58% (1049/1807)   Receiving objects:  59% (1067/1807)   Receiving objects:  60% (1085/1807)   Receiving objects:  61% (1103/1807)   Receiving objects:  62% (1121/1807)   Receiving objects:  63% (1139/1807)   Receiving objects:  64% (1157/1807)   Receiving objects:  65% (1175/1807)   Receiving objects:  66% (1193/1807)   Receiving objects:  67% (1211/1807)   Receiving objects:  68% (1229/1807)   Receiving objects:  69% (1247/1807)   Receiving objects:  70% (1265/1807)   Receiving objects:  71% (1283/1807)   Receiving objects:  72% (1302/1807)   Receiving objects:  73% (1320/1807)   Receiving objects:  74% (1338/1807)   Receiving objects:  75% (1356/1807)   Receiving objects:  76% (1374/1807)   Receiving objects:  77% (1392/1807)   Receiving objects:  78% (1410/1807)   Receiving objects:  79% (1428/1807)   Receiving objects:  80% (1446/1807)   Receiving objects:  81% (1464/1807)   Receiving objects:  82% (1482/1807)   Receiving objects:  83% (1500/1807)   Receiving objects:  84% (1518/1807)   Receiving objects:  85% (1536/1807)   Receiving objects:  86% (1555/1807)   Receiving objects:  87% (1573/1807)   Receiving objects:  88% (1591/1807)   Receiving objects:  89% (1609/1807)   Receiving objects:  90% (1627/1807)   Receiving objects:  91% (1645/1807)   Receiving objects:  92% (1663/1807)   Receiving objects:  93% (1681/1807)   Receiving objects:  94% (1699/1807)   Receiving objects:  95% (1717/1807)   remote: Total 1807 (delta 631), reused 889 (delta 427), pack-reused 0[K
+Receiving objects:  96% (1735/1807)   Receiving objects:  97% (1753/1807)   Receiving objects:  98% (1771/1807)   Receiving objects:  99% (1789/1807)   Receiving objects: 100% (1807/1807)   Receiving objects: 100% (1807/1807), 1.06 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/631)   Resolving deltas:   3% (20/631)   Resolving deltas:   4% (28/631)   Resolving deltas:   6% (38/631)   Resolving deltas:   7% (45/631)   Resolving deltas:   8% (53/631)   Resolving deltas:  21% (138/631)   Resolving deltas:  23% (149/631)   Resolving deltas:  24% (152/631)   Resolving deltas:  26% (166/631)   Resolving deltas:  28% (177/631)   Resolving deltas:  29% (184/631)   Resolving deltas:  30% (192/631)   Resolving deltas:  31% (196/631)   Resolving deltas:  32% (202/631)   Resolving deltas:  34% (215/631)   Resolving deltas:  35% (221/631)   Resolving deltas:  36% (229/631)   Resolving deltas:  37% (234/631)   Resolving deltas:  38% (240/631)   Resolving deltas:  39% (249/631)   Resolving deltas:  40% (253/631)   Resolving deltas:  41% (260/631)   Resolving deltas:  43% (275/631)   Resolving deltas:  44% (278/631)   Resolving deltas:  46% (294/631)   Resolving deltas:  48% (303/631)   Resolving deltas:  49% (312/631)   Resolving deltas:  54% (343/631)   Resolving deltas:  55% (348/631)   Resolving deltas:  56% (354/631)   Resolving deltas:  57% (361/631)   Resolving deltas:  62% (392/631)   Resolving deltas:  64% (404/631)   Resolving deltas:  65% (414/631)   Resolving deltas:  66% (418/631)   Resolving deltas:  67% (423/631)   Resolving deltas:  68% (430/631)   Resolving deltas:  69% (436/631)   Resolving deltas:  70% (442/631)   Resolving deltas:  71% (449/631)   Resolving deltas:  72% (455/631)   Resolving deltas:  73% (461/631)   Resolving deltas:  74% (467/631)   Resolving deltas:  75% (475/631)   Resolving deltas:  76% (480/631)   Resolving deltas:  77% (488/631)   Resolving deltas:  79% (502/631)   Resolving deltas:  80% (505/631)   Resolving deltas:  81% (513/631)   Resolving deltas:  82% (520/631)   Resolving deltas:  83% (524/631)   Resolving deltas:  84% (532/631)   Resolving deltas:  85% (537/631)   Resolving deltas:  86% (544/631)   Resolving deltas:  87% (549/631)   Resolving deltas:  88% (556/631)   Resolving deltas:  89% (562/631)   Resolving deltas:  90% (571/631)   Resolving deltas:  91% (577/631)   Resolving deltas:  92% (582/631)   Resolving deltas:  93% (587/631)   Resolving deltas:  94% (594/631)   Resolving deltas:  98% (619/631)   Resolving deltas: 100% (631/631)   Resolving deltas: 100% (631/631), done.
+Checking connectivity... done.
+
+travis_time:end:1951998e:start=1495493182377525602,finish=1495493183570384916,duration=1192859314[0K$ cd mockito/mockito
+$ git checkout -qf db7dbc3d5f7d97d0625683b4e41f282818f9b87c
+travis_fold:end:git.checkout[0K[33;1mSet hostname to mockito-cd[0m
+$ sudo hostname mockito-cd
+travis_fold:start:hosts.before[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant 
+travis_fold:end:hosts.before[0Ktravis_fold:start:hosts[0Ksudo: unable to resolve host mockito-cd
+travis_fold:end:hosts[0Ktravis_fold:start:hosts.after[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant  mockito-cd
+travis_fold:end:hosts.after[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export NEXUS_TOKEN_USER=[secure]
+$ export NEXUS_TOKEN_PWD=[secure]
+$ export TEST_ENV_VAR=[secure]
+$ export BINTRAY_API_KEY=[secure]
+$ export GH_WRITE_TOKEN=[secure]
+
+[33;1mSetting environment variables from .travis.yml[0m
+$ export TERM=dumb
+$ export GRADLE_OPTS="-XX:+UseCompressedOops -Djava.awt.headless=true"
+$ export SKIP_RELEASE=true
+$ export MOCK_MAKER=mock-maker-inline
+
+$ export TERM=dumb
+travis_fold:start:cache.1[0KSetting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:204f4058[0K$ Installing caching utilities
+
+travis_time:end:204f4058:start=1495493184232952738,finish=1495493184371576332,duration=138623594[0Ktravis_time:start:0b4bce08[0K
+travis_time:end:0b4bce08:start=1495493184377622413,finish=1495493184381723415,duration=4101002[0Ktravis_time:start:1696b8a0[0K[32;1mattempting to download cache archive[0m
+[32;1mfetching release2.x/cache-linux-precise-2d3e518e315c39ae08e3087e3a99d7416757ca2390f2289582808bb1aec85917--jdk-oraclejdk7.tgz[0m
+[32;1mfound cache[0m
+
+travis_time:end:1696b8a0:start=1495493184386868584,finish=1495493186409814777,duration=2022946193[0Ktravis_time:start:005fa521[0K
+travis_time:end:005fa521:start=1495493186414789770,finish=1495493186418676787,duration=3887017[0Ktravis_time:start:019988d5[0K[32;1madding /home/travis/.gradle/caches to cache[0m
+[32;1mcreating directory /home/travis/.gradle/caches[0m
+[32;1madding /home/travis/.gradle/wrapper to cache[0m
+[32;1mcreating directory /home/travis/.gradle/wrapper[0m
+
+travis_time:end:019988d5:start=1495493186424624575,finish=1495493197031790676,duration=10607166101[0Ktravis_fold:end:cache.1[0K$ java -Xmx32m -version
+java version "1.7.0_80"
+Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.7.0_80
+travis_fold:start:before_install.1[0Ktravis_time:start:25b1f894[0K$ export TRAVIS_COMMIT_MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+
+travis_time:end:25b1f894:start=1495493197941222927,finish=1495493197947936062,duration=6713135[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:003bf7e0[0K$ echo "$TRAVIS_COMMIT_MESSAGE"
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+
+travis_time:end:003bf7e0:start=1495493197953208534,finish=1495493197957242855,duration=4034321[0Ktravis_fold:end:before_install.2[0Ktravis_fold:start:install[0Ktravis_time:start:12ee1088[0K$ true
+
+travis_time:end:12ee1088:start=1495493197962858165,finish=1495493197966897370,duration=4039205[0Ktravis_fold:end:install[0Ktravis_time:start:1310f9d8[0K$ ./gradlew build idea -s -PcheckJava6Compatibility
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava
+:android:processResources
+:android:sourcesJar
+:android:processTestResources UP-TO-DATE
+:extTest:compileJava UP-TO-DATE
+:extTest:processResources UP-TO-DATE
+:extTest:classes UP-TO-DATE
+:extTest:jar
+:extTest:assemble
+:extTest:checkstyleMain UP-TO-DATE
+:extTest:processTestResources
+:inline:processResources
+:inline:sourcesJar
+:inline:processTestResources UP-TO-DATE
+:kotlinTest:compileKotlin UP-TO-DATE
+:kotlinTest:compileJava UP-TO-DATE
+:kotlinTest:copyMainKotlinClasses
+:kotlinTest:processResources UP-TO-DATE
+:kotlinTest:classes UP-TO-DATE
+:kotlinTest:jar
+:kotlinTest:assemble
+:kotlinTest:checkstyleMain UP-TO-DATE
+:kotlinTest:processTestResources UP-TO-DATE
+:testng:processResources UP-TO-DATE
+:testng:processTestResources
+:android:ideaModule
+:android:idea
+:inline:ideaModule
+:inline:idea
+:kotlinTest:ideaModule
+:kotlinTest:idea
+:testng:ideaModule
+:testng:idea
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:copyMockMethodDispatcher
+:processResources UP-TO-DATE
+:classes
+:jar
+:javadoc
+:android:compileJava
+:android:classes
+:android:jar
+:android:checkstyleMain
+:android:compileTestJava UP-TO-DATE
+:android:testClasses UP-TO-DATE
+:android:checkstyleTest UP-TO-DATE
+:android:test UP-TO-DATE
+:android:check
+:inline:compileJava UP-TO-DATE
+:inline:classes
+:inline:jar
+:inline:checkstyleMain UP-TO-DATE
+:inline:compileTestJava
+:inline:testClasses
+:inline:checkstyleTest
+:inline:test/home/travis/build/mockito/mockito/src/main/java/org/mockito/configuration/AnnotationEngine.java:27: warning - Tag @link: reference not found: org.mockito.plugins plugin
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/AdditionalAnswers.java:38: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs.class
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/MockitoSession.java:90: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/exceptions/misusing/UnnecessaryStubbingException.java:54: warning - Tag @link: reference not found: MockitoJUnitRunner.Silent
+
+:inline:check
+:kotlinTest:compileTestKotlin
+Using kotlin incremental compilation
+6 warnings
+Installing sw-precache globally
+w: Running the Kotlin compiler under Java 6 or 7 is unsupported and will no longer be possible in a future update.
+w: The '-d' option with a directory destination is ignored because '-module' is specified
+:kotlinTest:compileTestJava UP-TO-DATE
+:kotlinTest:copyTestKotlinClasses
+/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/node_modules/pretty-bytes/index.js:2
+const UNITS = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+^^^^^
+SyntaxError: Use of const in strict mode.
+    at Module._compile (module.js:439:25)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/lib/sw-precache.js:27:19)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+
+NPM is not installed. Aborting generating service-worker
+:kotlinTest:testClasses UP-TO-DATE
+:kotlinTest:checkstyleTest UP-TO-DATE
+:kotlinTest:test
+:javadocJar
+:sourcesJar
+:assemble
+:checkstyleMain
+:android:javadoc SKIPPED
+:android:javadocJar
+:android:assemble
+:inline:javadoc SKIPPED
+:inline:javadocJar
+:inline:assemble
+:kotlinTest:check
+:kotlinTest:build
+:testng:compileJava
+:testng:classes
+:testng:jar
+:testng:sourcesJar
+:testng:assemble
+:testng:checkstyleMain
+:testng:compileTestJavaNote: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+:testng:testClasses
+:testng:checkstyleTest
+:testng:test
+:createTestResources
+:compileTestJava
+:testng:check
+:testng:build
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses
+:checkstyleTest
+:licenseMain
+Missing header in: src/main/java/org/mockito/internal/creation/SuspendMethod.java
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/LICENSE
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/README.md
+:licenseTest
+Missing header in: src/test/java/org/mockitousage/bugs/EnabledMockingInterfaceCloneMethodTest.java
+:license
+:test
+:check
+:fetchAllContributors
+  Fetching all contributors for project
+  Querying GitHub API for all contributors for project
+GET https://api.github.com/repos/mockito/mockito/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100
+GET https://api.github.com/users/szczepiq?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bric3?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/continuous-delivery-drone?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/raphw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/TimvdLippe?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/PascalSchumacher?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/iczechowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bbankowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/szpak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ChristianSchwarz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mureinik?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lukasz-szewc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/marcingrzejszczak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Dawud-xx?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidkarlsen?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/pimterry?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lpandzic?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/wernight?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alberskib?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jerzykrlk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tmurakami?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/josephw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/epeee?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dmac100?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ffbit?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/guw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hansjoachim?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hughwphamill?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ianparkinson?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/kamilszymanski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mkordas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/carlosaguayo?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brewerc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/AFnRFCb7?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tarnowskijan?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JeffreyFalgout?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lucascs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SourcePond?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SeriyBg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Stephan202?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/UrsMetz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thesnowgoose?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/yyvess?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Jazzepi?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vanta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MariusVolkhart?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/michalborek?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alb-i986?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/asolntsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andreyrmg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Ariel-Isaacm?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/BartoszMiller?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brunokrebs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Saser?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dgageot?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidxia?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dhruvarora?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/divyansh-gupta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/DmitriyZaitsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eamelink?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eugene-ivakhno?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/astafev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/FWDekker?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MGaetan89?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/geoffschoeman?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/isanych?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vershinin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jpenglert?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/izeye?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JosePaumard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mileszk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tradingreason?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/L-KID?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LiamClark?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ludochane?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MeddahJ?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/markuswustenberg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thatJavaNerd?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Nirvanall?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/olivergierke?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/philipa?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/phjardas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/radimk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ra4king?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/elizarov?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/smarkwell?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SimenB?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/stuartblair?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tokuhirom?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tomball?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Vp3n?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andrerigon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ashleyfrieze?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bruceeddy?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jrrickard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lloydjm77?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LudoMeurillon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mgrafl?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/paulduffin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repositories/6207167/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100&page=2
+GET https://api.github.com/users/wuwen5?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repos/mockito/mockito/commits?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&since=2017-05-21T22:49:06+0000&page=1&per_page=100
+  Serialized all contributors into: build/release-tools/all-contributors.json
+:configureContributors
+  Configuring 101 contributors into 'releasing.team.contributors' setting.
+:generatePomFileForJavaLibraryPublication
+:android:generatePomFileForJavaLibraryPublication
+:publishJavaLibraryPublicationToMavenLocal
+:android:publishJavaLibraryPublicationToMavenLocal
+:publishToMavenLocal
+:build
+:extTest:compileTestJava
+:android:publishToMavenLocal
+:android:build
+:inline:generatePomFileForJavaLibraryPublication
+:inline:publishJavaLibraryPublicationToMavenLocal
+:inline:publishToMavenLocal
+:inline:build
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
+:extTest:testClasses
+:extTest:checkstyleTest
+:extTest:test
+:extTest:check
+:extTest:build
+:extTest:ideaModule
+:extTest:idea
+
+BUILD SUCCESSFUL
+
+Total time: 2 mins 33.721 secs
+
+travis_time:end:1310f9d8:start=1495493197971986135,finish=1495493352806000672,duration=154834014537[0K
+[32;1mThe command "./gradlew build idea -s -PcheckJava6Compatibility" exited with 0.[0m
+travis_fold:start:before_cache[0Ktravis_time:start:087b055c[0K$ rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+travis_time:end:087b055c:start=1495493352811998443,finish=1495493352817277614,duration=5279171[0Ktravis_fold:end:before_cache[0Ktravis_fold:start:cache.2[0Kstore build cache
+travis_time:start:070c574d[0K
+travis_time:end:070c574d:start=1495493352822853393,finish=1495493352828016559,duration=5163166[0Ktravis_time:start:136cc528[0K[32;1mchange detected (content changed, file is created, or file is deleted):
+/home/travis/.gradle/caches/2.14.1/plugin-resolution/cache.properties.lock
+/home/travis/.gradle/caches/modules-2/metadata-2.16/module-metadata.bin
+
+[0m
+[32;1mchanges detected, packing new archive[0m
+.
+.
+.
+.
+[32;1muploading archive[0m
+
+travis_time:end:136cc528:start=1495493352833352829,finish=1495493382245586648,duration=29412233819[0Ktravis_fold:end:cache.2[0Ktravis_fold:start:after_success.1[0Ktravis_time:start:11097d3c[0K$ ./gradlew assertReleaseNeeded && ./gradlew ciReleasePrepare && ./gradlew performRelease -Preleasing.dryRun=false
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:assertReleaseNeeded
+  Environment variable SKIP_RELEASE present: true
+  Commit message to inspect for keyword '[ci skip-release]': 
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+  Current branch 'release/2.x' matches 'release/.+': true
+:assertReleaseNeeded FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':assertReleaseNeeded'.
+>   Release is needed: false
+      - skip by env variable: true
+      - skip by commit message: true
+      - is pull request build:  false
+      - is releasable branch:  true
+      - anything changed in publications since the previous release:  true
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 1.98 secs
+
+travis_time:end:11097d3c:start=1495493382250897895,finish=1495493384726435419,duration=2475537524[0Ktravis_fold:end:after_success.1[0Ktravis_fold:start:after_success.2[0Ktravis_time:start:0f10d332[0K$ ./gradlew --stacktrace coverageReport && cp build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml jacoco.xml || echo "Code coverage failed"
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava UP-TO-DATE
+:copyMockMethodDispatcher UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:createTestResources
+:compileTestJava UP-TO-DATE
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:mockitoCoverage
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.jar
+Jacoco report for client created: file:///home/travis/build/mockito/mockito/build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml
+:coverageReport
+
+BUILD SUCCESSFUL
+
+Total time: 6.246 secs
+
+travis_time:end:0f10d332:start=1495493384755631448,finish=1495493392545705718,duration=7790074270[0Ktravis_fold:end:after_success.2[0Ktravis_fold:start:after_success.3[0Ktravis_time:start:00cad963[0K$ bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+  _____          _
+ / ____|        | |
+| |     ___   __| | ___  ___ _____   __
+| |    / _ \ / _` |/ _ \/ __/ _ \ \ / /
+| |___| (_) | (_| |  __/ (_| (_) \ V /
+ \_____\___/ \__,_|\___|\___\___/ \_/
+                              Bash-8fda091
+
+
+[0;90m==>[0m Travis CI detected.
+    [0;90mproject root:[0m .
+    [0;32mYaml not found, that's ok! Learn more at[0m [0;36mhttp://docs.codecov.io/docs/codecov-yaml[0m
+[0;90m==>[0m Running gcov in . [0;90m(disable via -X gcov)[0m
+[0;90m==>[0m Python coveragepy not found
+[0;90m==>[0m Searching for coverage reports in:
+    [0;32m+[0m .
+    [0;90m->[0m Found 1 reports
+[0;90m==>[0m Detecting git/mercurial file structure
+[0;90m==>[0m Appending build variables
+    [0;32m+[0m TRAVIS_OS_NAME
+    [0;32m+[0m TRAVIS_JDK_VERSION
+[0;90m==>[0m Reading reports
+    [0;32m+[0m ./jacoco.xml [0;90mbytes=1068016[0m
+[0;90m==>[0m Appending adjustments
+    [0;36mhttp://docs.codecov.io/docs/fixing-reports[0m
+    [0;32m+[0m Found adjustments
+[0;90m==>[0m Uploading reports
+    [0;90murl:[0m https://codecov.io
+    [0;90mquery:[0m branch=release%2F2.x&commit=db7dbc3d5f7d97d0625683b4e41f282818f9b87c&build=2672.2&build_url=&name=&tag=&slug=mockito%2Fmockito&yaml=&service=travis&flags=&pr=false&job=235015720
+    [0;90m->[0m Pinging Codecov
+    [0;90m->[0m Uploading to S3 https://codecov.s3.amazonaws.com
+    [0;32m->[0m View reports at [0;36mhttps://codecov.io/github/mockito/mockito/commit/db7dbc3d5f7d97d0625683b4e41f282818f9b87c[0m
+
+travis_time:end:00cad963:start=1495493392551239673,finish=1495493394202477161,duration=1651237488[0Ktravis_fold:end:after_success.3[0K
+Done. Your build exited with 0.
+
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: production-2-worker-org-b-1-gce:a842cec3-9a2a-46e4-91d3-d0042af62c82
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-0a63fce5-f1b4-4c62-89e3-1278dad3f57a:travis-ci-jvm-precise-1491941442
+startup: 21.445062445s
+travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: java
+Build group: stable
+Build dist: precise
+Build id: 235015715
+Job id: 235015722
+travis-build version: 97c7efd0c
+[34m[1mBuild image provisioning date and time[0m
+Tue Apr 11 20:22:39 UTC 2017
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+[34m[1mLinux Version[0m
+3.13.0-115-generic
+[34m[1mCookbooks Version[0m
+cc4eb5e https://github.com/travis-ci/travis-cookbooks/tree/cc4eb5e
+[34m[1mGit version[0m
+git version 1.8.5.6
+[34m[1mbash version[0m
+GNU bash, version 4.2.25(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+[34m[1mGCC version[0m
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mLLVM version[0m
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.2.6
+[34m[1mPre-installed Node.js versions[0m
+v0.10.36
+[34m[1mPre-installed Go versions[0m
+1.7.4
+[34m[1mmysql --version[0m
+mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.2
+[34m[1mPre-installed PostgreSQL versions[0m
+9.1.24
+9.2.20
+9.3.16
+9.4.11
+9.5.6
+[34m[1mRedis version[0m
+redis-server 3.0.7
+[34m[1mriak version[0m
+2.0.2
+[34m[1mmemcached version[0m
+1.4.13
+[34m[1mMongoDB version[0m
+MongoDB 2.4.14
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mInstalled Sphinx versions[0m
+2.0.10
+2.1.9
+2.2.6
+[34m[1mDefault Sphinx version[0m
+2.2.6
+[34m[1mInstalled Firefox version[0m
+firefox 38.4.0esr
+[34m[1mPhantomJS version[0m
+1.9.8
+[34m[1mant -version[0m
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+[34m[1mmvn -version[0m
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.8.0_121, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-115-generic", arch: "amd64", family: "unix"
+[34m[1mgradle -version[0m
+
+------------------------------------------------------------
+Gradle 2.2.1
+------------------------------------------------------------
+
+Build time:   2014-11-24 09:45:35 UTC
+Build number: none
+Revision:     6fcb59c06f43a4e6b1bcb401f7686a8601a1fb4a
+
+Groovy:       2.3.6
+Ant:          Apache Ant(TM) version 1.9.3 compiled on December 23 2013
+JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)
+OS:           Linux 3.13.0-115-generic amd64
+
+[34m[1mlein1 version[0m
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Downloading Leiningen now...
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Using JLine for console I/O; install rlwrap for optimum experience.
+Leiningen 1.7.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein2 version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+travis_fold:end:system_info[0K
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+travis_fold:start:fix.CVE-2015-7547[0K$ export DEBIAN_FRONTEND=noninteractive
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libc6 is already the newest version (2.15-0ubuntu10.18).
+0 upgraded, 0 newly installed, 0 to remove and 43 not upgraded.
+travis_fold:end:fix.CVE-2015-7547[0K$ jdk_switcher use oraclejdk8
+Switching to Oracle JDK8 (java-8-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-8-oracle
+travis_fold:start:git.checkout[0Ktravis_time:start:3c869188[0K$ git clone --depth=50 --branch=release/2.x https://github.com/mockito/mockito.git mockito/mockito
+Cloning into 'mockito/mockito'...
+remote: Counting objects: 1807, done.[K
+remote: Compressing objects:   0% (1/1273)   [Kremote: Compressing objects:   1% (13/1273)   [Kremote: Compressing objects:   2% (26/1273)   [Kremote: Compressing objects:   3% (39/1273)   [Kremote: Compressing objects:   4% (51/1273)   [Kremote: Compressing objects:   5% (64/1273)   [Kremote: Compressing objects:   6% (77/1273)   [Kremote: Compressing objects:   7% (90/1273)   [Kremote: Compressing objects:   8% (102/1273)   [Kremote: Compressing objects:   9% (115/1273)   [Kremote: Compressing objects:  10% (128/1273)   [Kremote: Compressing objects:  11% (141/1273)   [Kremote: Compressing objects:  12% (153/1273)   [Kremote: Compressing objects:  13% (166/1273)   [Kremote: Compressing objects:  14% (179/1273)   [Kremote: Compressing objects:  15% (191/1273)   [Kremote: Compressing objects:  16% (204/1273)   [Kremote: Compressing objects:  17% (217/1273)   [Kremote: Compressing objects:  18% (230/1273)   [Kremote: Compressing objects:  19% (242/1273)   [Kremote: Compressing objects:  20% (255/1273)   [Kremote: Compressing objects:  21% (268/1273)   [Kremote: Compressing objects:  22% (281/1273)   [Kremote: Compressing objects:  23% (293/1273)   [Kremote: Compressing objects:  24% (306/1273)   [Kremote: Compressing objects:  25% (319/1273)   [Kremote: Compressing objects:  26% (331/1273)   [Kremote: Compressing objects:  27% (344/1273)   [Kremote: Compressing objects:  28% (357/1273)   [Kremote: Compressing objects:  29% (370/1273)   [Kremote: Compressing objects:  30% (382/1273)   [Kremote: Compressing objects:  31% (395/1273)   [Kremote: Compressing objects:  32% (408/1273)   [Kremote: Compressing objects:  33% (421/1273)   [Kremote: Compressing objects:  34% (433/1273)   [Kremote: Compressing objects:  35% (446/1273)   [Kremote: Compressing objects:  36% (459/1273)   [Kremote: Compressing objects:  37% (472/1273)   [Kremote: Compressing objects:  38% (484/1273)   [Kremote: Compressing objects:  39% (497/1273)   [Kremote: Compressing objects:  40% (510/1273)   [Kremote: Compressing objects:  41% (522/1273)   [Kremote: Compressing objects:  42% (535/1273)   [Kremote: Compressing objects:  43% (548/1273)   [Kremote: Compressing objects:  44% (561/1273)   [Kremote: Compressing objects:  45% (573/1273)   [Kremote: Compressing objects:  46% (586/1273)   [Kremote: Compressing objects:  47% (599/1273)   [Kremote: Compressing objects:  48% (612/1273)   [Kremote: Compressing objects:  49% (624/1273)   [Kremote: Compressing objects:  50% (637/1273)   [Kremote: Compressing objects:  51% (650/1273)   [Kremote: Compressing objects:  52% (662/1273)   [Kremote: Compressing objects:  53% (675/1273)   [Kremote: Compressing objects:  54% (688/1273)   [Kremote: Compressing objects:  55% (701/1273)   [Kremote: Compressing objects:  56% (713/1273)   [Kremote: Compressing objects:  57% (726/1273)   [Kremote: Compressing objects:  58% (739/1273)   [Kremote: Compressing objects:  59% (752/1273)   [Kremote: Compressing objects:  60% (764/1273)   [Kremote: Compressing objects:  61% (777/1273)   [Kremote: Compressing objects:  62% (790/1273)   [Kremote: Compressing objects:  63% (802/1273)   [Kremote: Compressing objects:  64% (815/1273)   [Kremote: Compressing objects:  65% (828/1273)   [Kremote: Compressing objects:  66% (841/1273)   [Kremote: Compressing objects:  67% (853/1273)   [Kremote: Compressing objects:  68% (866/1273)   [Kremote: Compressing objects:  69% (879/1273)   [Kremote: Compressing objects:  70% (892/1273)   [Kremote: Compressing objects:  71% (904/1273)   [Kremote: Compressing objects:  72% (917/1273)   [Kremote: Compressing objects:  73% (930/1273)   [Kremote: Compressing objects:  74% (943/1273)   [Kremote: Compressing objects:  75% (955/1273)   [Kremote: Compressing objects:  76% (968/1273)   [Kremote: Compressing objects:  77% (981/1273)   [Kremote: Compressing objects:  78% (993/1273)   [Kremote: Compressing objects:  79% (1006/1273)   [Kremote: Compressing objects:  80% (1019/1273)   [Kremote: Compressing objects:  81% (1032/1273)   [Kremote: Compressing objects:  82% (1044/1273)   [Kremote: Compressing objects:  83% (1057/1273)   [Kremote: Compressing objects:  84% (1070/1273)   [Kremote: Compressing objects:  85% (1083/1273)   [Kremote: Compressing objects:  86% (1095/1273)   [Kremote: Compressing objects:  87% (1108/1273)   [Kremote: Compressing objects:  88% (1121/1273)   [Kremote: Compressing objects:  89% (1133/1273)   [Kremote: Compressing objects:  90% (1146/1273)   [Kremote: Compressing objects:  91% (1159/1273)   [Kremote: Compressing objects:  92% (1172/1273)   [Kremote: Compressing objects:  93% (1184/1273)   [Kremote: Compressing objects:  94% (1197/1273)   [Kremote: Compressing objects:  95% (1210/1273)   [Kremote: Compressing objects:  96% (1223/1273)   [Kremote: Compressing objects:  97% (1235/1273)   [Kremote: Compressing objects:  98% (1248/1273)   [Kremote: Compressing objects:  99% (1261/1273)   [Kremote: Compressing objects: 100% (1273/1273)   [Kremote: Compressing objects: 100% (1273/1273), done.[K
+Receiving objects:   0% (1/1807)   Receiving objects:   1% (19/1807)   Receiving objects:   2% (37/1807)   Receiving objects:   3% (55/1807)   Receiving objects:   4% (73/1807)   Receiving objects:   5% (91/1807)   Receiving objects:   6% (109/1807)   Receiving objects:   7% (127/1807)   Receiving objects:   8% (145/1807)   Receiving objects:   9% (163/1807)   Receiving objects:  10% (181/1807)   Receiving objects:  11% (199/1807)   Receiving objects:  12% (217/1807)   Receiving objects:  13% (235/1807)   Receiving objects:  14% (253/1807)   Receiving objects:  15% (272/1807)   Receiving objects:  16% (290/1807)   Receiving objects:  17% (308/1807)   Receiving objects:  18% (326/1807)   Receiving objects:  19% (344/1807)   Receiving objects:  20% (362/1807)   Receiving objects:  21% (380/1807)   Receiving objects:  22% (398/1807)   Receiving objects:  23% (416/1807)   Receiving objects:  24% (434/1807)   Receiving objects:  25% (452/1807)   Receiving objects:  26% (470/1807)   Receiving objects:  27% (488/1807)   Receiving objects:  28% (506/1807)   Receiving objects:  29% (525/1807)   Receiving objects:  30% (543/1807)   Receiving objects:  31% (561/1807)   Receiving objects:  32% (579/1807)   Receiving objects:  33% (597/1807)   Receiving objects:  34% (615/1807)   Receiving objects:  35% (633/1807)   Receiving objects:  36% (651/1807)   Receiving objects:  37% (669/1807)   Receiving objects:  38% (687/1807)   Receiving objects:  39% (705/1807)   Receiving objects:  40% (723/1807)   Receiving objects:  41% (741/1807)   Receiving objects:  42% (759/1807)   Receiving objects:  43% (778/1807)   Receiving objects:  44% (796/1807)   Receiving objects:  45% (814/1807)   Receiving objects:  46% (832/1807)   Receiving objects:  47% (850/1807)   Receiving objects:  48% (868/1807)   Receiving objects:  49% (886/1807)   Receiving objects:  50% (904/1807)   Receiving objects:  51% (922/1807)   Receiving objects:  52% (940/1807)   Receiving objects:  53% (958/1807)   Receiving objects:  54% (976/1807)   Receiving objects:  55% (994/1807)   Receiving objects:  56% (1012/1807)   Receiving objects:  57% (1030/1807)   Receiving objects:  58% (1049/1807)   Receiving objects:  59% (1067/1807)   Receiving objects:  60% (1085/1807)   Receiving objects:  61% (1103/1807)   Receiving objects:  62% (1121/1807)   Receiving objects:  63% (1139/1807)   Receiving objects:  64% (1157/1807)   Receiving objects:  65% (1175/1807)   Receiving objects:  66% (1193/1807)   Receiving objects:  67% (1211/1807)   Receiving objects:  68% (1229/1807)   Receiving objects:  69% (1247/1807)   Receiving objects:  70% (1265/1807)   Receiving objects:  71% (1283/1807)   Receiving objects:  72% (1302/1807)   Receiving objects:  73% (1320/1807)   Receiving objects:  74% (1338/1807)   Receiving objects:  75% (1356/1807)   Receiving objects:  76% (1374/1807)   Receiving objects:  77% (1392/1807)   Receiving objects:  78% (1410/1807)   Receiving objects:  79% (1428/1807)   Receiving objects:  80% (1446/1807)   Receiving objects:  81% (1464/1807)   Receiving objects:  82% (1482/1807)   Receiving objects:  83% (1500/1807)   Receiving objects:  84% (1518/1807)   Receiving objects:  85% (1536/1807)   Receiving objects:  86% (1555/1807)   Receiving objects:  87% (1573/1807)   Receiving objects:  88% (1591/1807)   Receiving objects:  89% (1609/1807)   Receiving objects:  90% (1627/1807)   remote: Total 1807 (delta 631), reused 889 (delta 427), pack-reused 0[K
+Receiving objects:  91% (1645/1807)   Receiving objects:  92% (1663/1807)   Receiving objects:  93% (1681/1807)   Receiving objects:  94% (1699/1807)   Receiving objects:  95% (1717/1807)   Receiving objects:  96% (1735/1807)   Receiving objects:  97% (1753/1807)   Receiving objects:  98% (1771/1807)   Receiving objects:  99% (1789/1807)   Receiving objects: 100% (1807/1807)   Receiving objects: 100% (1807/1807), 1.06 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/631)   Resolving deltas:   3% (20/631)   Resolving deltas:   4% (28/631)   Resolving deltas:   6% (38/631)   Resolving deltas:   7% (45/631)   Resolving deltas:   8% (53/631)   Resolving deltas:  14% (92/631)   Resolving deltas:  24% (154/631)   Resolving deltas:  25% (160/631)   Resolving deltas:  27% (171/631)   Resolving deltas:  30% (193/631)   Resolving deltas:  32% (203/631)   Resolving deltas:  33% (209/631)   Resolving deltas:  34% (217/631)   Resolving deltas:  35% (221/631)   Resolving deltas:  36% (228/631)   Resolving deltas:  37% (234/631)   Resolving deltas:  38% (243/631)   Resolving deltas:  39% (247/631)   Resolving deltas:  40% (253/631)   Resolving deltas:  41% (259/631)   Resolving deltas:  42% (267/631)   Resolving deltas:  43% (275/631)   Resolving deltas:  44% (279/631)   Resolving deltas:  46% (291/631)   Resolving deltas:  47% (300/631)   Resolving deltas:  52% (331/631)   Resolving deltas:  53% (335/631)   Resolving deltas:  54% (341/631)   Resolving deltas:  55% (350/631)   Resolving deltas:  60% (382/631)   Resolving deltas:  62% (393/631)   Resolving deltas:  64% (404/631)   Resolving deltas:  65% (412/631)   Resolving deltas:  66% (417/631)   Resolving deltas:  67% (424/631)   Resolving deltas:  68% (431/631)   Resolving deltas:  69% (436/631)   Resolving deltas:  70% (442/631)   Resolving deltas:  71% (449/631)   Resolving deltas:  72% (457/631)   Resolving deltas:  73% (461/631)   Resolving deltas:  74% (467/631)   Resolving deltas:  75% (474/631)   Resolving deltas:  76% (480/631)   Resolving deltas:  77% (486/631)   Resolving deltas:  79% (500/631)   Resolving deltas:  80% (506/631)   Resolving deltas:  81% (513/631)   Resolving deltas:  82% (518/631)   Resolving deltas:  83% (525/631)   Resolving deltas:  84% (535/631)   Resolving deltas:  85% (537/631)   Resolving deltas:  86% (544/631)   Resolving deltas:  87% (549/631)   Resolving deltas:  88% (556/631)   Resolving deltas:  90% (568/631)   Resolving deltas:  91% (576/631)   Resolving deltas:  92% (581/631)   Resolving deltas:  93% (587/631)   Resolving deltas:  94% (594/631)   Resolving deltas: 100% (631/631)   Resolving deltas: 100% (631/631), done.
+Checking connectivity... done.
+
+travis_time:end:3c869188:start=1495493181554329492,finish=1495493182749561352,duration=1195231860[0K$ cd mockito/mockito
+$ git checkout -qf db7dbc3d5f7d97d0625683b4e41f282818f9b87c
+travis_fold:end:git.checkout[0K[33;1mSet hostname to mockito-cd[0m
+$ sudo hostname mockito-cd
+travis_fold:start:hosts.before[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant 
+travis_fold:end:hosts.before[0Ktravis_fold:start:hosts[0Ksudo: unable to resolve host mockito-cd
+travis_fold:end:hosts[0Ktravis_fold:start:hosts.after[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant  mockito-cd
+travis_fold:end:hosts.after[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export NEXUS_TOKEN_USER=[secure]
+$ export NEXUS_TOKEN_PWD=[secure]
+$ export TEST_ENV_VAR=[secure]
+$ export BINTRAY_API_KEY=[secure]
+$ export GH_WRITE_TOKEN=[secure]
+
+[33;1mSetting environment variables from .travis.yml[0m
+$ export TERM=dumb
+$ export GRADLE_OPTS="-XX:+UseCompressedOops -Djava.awt.headless=true"
+$ export SKIP_RELEASE=true
+
+$ export TERM=dumb
+travis_fold:start:cache.1[0KSetting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:001236a8[0K$ Installing caching utilities
+
+travis_time:end:001236a8:start=1495493183339253638,finish=1495493183468259923,duration=129006285[0Ktravis_time:start:0ba381d8[0K
+travis_time:end:0ba381d8:start=1495493183473429479,finish=1495493183477030585,duration=3601106[0Ktravis_time:start:00a38e6a[0K[32;1mattempting to download cache archive[0m
+[32;1mfetching release2.x/cache-linux-precise-563ba4f5bd5fbb493d67c8637868701125fcea3cca16a504fb0410e840220166--jdk-oraclejdk8.tgz[0m
+[32;1mfound cache[0m
+
+travis_time:end:00a38e6a:start=1495493183481456642,finish=1495493185834938502,duration=2353481860[0Ktravis_time:start:09f7e3aa[0K
+travis_time:end:09f7e3aa:start=1495493185839371012,finish=1495493185843193236,duration=3822224[0Ktravis_time:start:1a5ef7b3[0K[32;1madding /home/travis/.gradle/caches to cache[0m
+[32;1mcreating directory /home/travis/.gradle/caches[0m
+[32;1madding /home/travis/.gradle/wrapper to cache[0m
+[32;1mcreating directory /home/travis/.gradle/wrapper[0m
+
+travis_time:end:1a5ef7b3:start=1495493185847670880,finish=1495493196764734724,duration=10917063844[0Ktravis_fold:end:cache.1[0K$ java -Xmx32m -version
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.8.0_121
+travis_fold:start:before_install.1[0Ktravis_time:start:0c6d0d52[0K$ export TRAVIS_COMMIT_MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+
+travis_time:end:0c6d0d52:start=1495493197511107969,finish=1495493197517461082,duration=6353113[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:030c5367[0K$ echo "$TRAVIS_COMMIT_MESSAGE"
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+
+travis_time:end:030c5367:start=1495493197522649441,finish=1495493197526924940,duration=4275499[0Ktravis_fold:end:before_install.2[0Ktravis_fold:start:install[0Ktravis_time:start:210e2314[0K$ true
+
+travis_time:end:210e2314:start=1495493197532015800,finish=1495493197535642863,duration=3627063[0Ktravis_fold:end:install[0Ktravis_time:start:2d4b6e10[0K$ ./gradlew build idea -s -PcheckJava6Compatibility
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava
+:android:processResources
+:android:sourcesJar
+:android:processTestResources UP-TO-DATE
+:extTest:compileJava UP-TO-DATE
+:extTest:processResources UP-TO-DATE
+:extTest:classes UP-TO-DATE
+:extTest:jar
+:extTest:assemble
+:extTest:checkstyleMain UP-TO-DATE
+:extTest:processTestResources
+:inline:processResources
+:inline:sourcesJar
+:inline:processTestResources UP-TO-DATE
+:kotlinTest:compileKotlin UP-TO-DATE
+:kotlinTest:compileJava UP-TO-DATE
+:kotlinTest:copyMainKotlinClasses
+:kotlinTest:processResources UP-TO-DATE
+:kotlinTest:classes UP-TO-DATE
+:kotlinTest:jar
+:kotlinTest:assemble
+:kotlinTest:checkstyleMain UP-TO-DATE
+:kotlinTest:processTestResources UP-TO-DATE
+:testng:processResources UP-TO-DATE
+:testng:processTestResources
+:android:ideaModule
+:android:idea
+:inline:ideaModule
+:inline:idea
+:kotlinTest:ideaModule
+:kotlinTest:idea
+:testng:ideaModule
+:testng:idea
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:copyMockMethodDispatcher
+:processResources UP-TO-DATE
+:classes
+:jar
+:javadoc
+:android:compileJava
+:android:classes
+:android:jar
+:android:checkstyleMain
+:android:compileTestJava UP-TO-DATE
+:android:testClasses UP-TO-DATE
+:android:checkstyleTest UP-TO-DATE
+:android:test UP-TO-DATE
+:android:check
+:inline:compileJava UP-TO-DATE
+:inline:classes
+:inline:jar
+:inline:checkstyleMain UP-TO-DATE
+:inline:compileTestJava
+:inline:testClasses
+:inline:checkstyleTest
+:inline:test/home/travis/build/mockito/mockito/src/main/java/org/mockito/AdditionalAnswers.java:38: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs.class
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/MockitoSession.java:90: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/configuration/AnnotationEngine.java:27: warning - Tag @link: reference not found: org.mockito.plugins plugin
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/exceptions/misusing/UnnecessaryStubbingException.java:54: warning - Tag @link: reference not found: MockitoJUnitRunner.Silent
+
+:inline:check
+:kotlinTest:compileTestKotlin
+Using kotlin incremental compilation
+6 warnings
+Installing sw-precache globally
+w: The '-d' option with a directory destination is ignored because '-module' is specified
+:kotlinTest:compileTestJava UP-TO-DATE
+:kotlinTest:copyTestKotlinClasses
+:kotlinTest:testClasses UP-TO-DATE
+:kotlinTest:checkstyleTest UP-TO-DATE
+:kotlinTest:test
+/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/node_modules/pretty-bytes/index.js:2
+const UNITS = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+^^^^^
+SyntaxError: Use of const in strict mode.
+    at Module._compile (module.js:439:25)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/lib/sw-precache.js:27:19)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+
+NPM is not installed. Aborting generating service-worker
+:javadocJar
+:sourcesJar
+:assemble
+:checkstyleMain
+:android:javadoc SKIPPED
+:android:javadocJar
+:android:assemble
+:inline:javadoc SKIPPED
+:inline:javadocJar
+:inline:assemble
+:kotlinTest:check
+:kotlinTest:build
+:testng:compileJava
+:testng:classes
+:testng:jar
+:testng:sourcesJar
+:testng:assemble
+:testng:checkstyleMain
+:testng:compileTestJavaNote: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+:testng:testClasses
+:testng:checkstyleTest
+:testng:test
+:createTestResources
+:compileTestJava
+:testng:check
+:testng:build
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses
+:checkstyleTest
+:licenseMain
+Missing header in: src/main/java/org/mockito/internal/creation/SuspendMethod.java
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/LICENSE
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/README.md
+:licenseTest
+Missing header in: src/test/java/org/mockitousage/bugs/EnabledMockingInterfaceCloneMethodTest.java
+:license
+:test
+:check
+:fetchAllContributors
+  Fetching all contributors for project
+  Querying GitHub API for all contributors for project
+GET https://api.github.com/repos/mockito/mockito/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100
+GET https://api.github.com/users/szczepiq?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bric3?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/continuous-delivery-drone?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/raphw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/TimvdLippe?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/PascalSchumacher?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/iczechowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bbankowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/szpak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ChristianSchwarz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mureinik?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lukasz-szewc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/marcingrzejszczak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Dawud-xx?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidkarlsen?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/pimterry?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lpandzic?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/wernight?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alberskib?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jerzykrlk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tmurakami?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/josephw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/epeee?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dmac100?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ffbit?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/guw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hansjoachim?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hughwphamill?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ianparkinson?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/kamilszymanski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mkordas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/carlosaguayo?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brewerc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/AFnRFCb7?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tarnowskijan?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JeffreyFalgout?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lucascs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SourcePond?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SeriyBg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Stephan202?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/UrsMetz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thesnowgoose?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/yyvess?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Jazzepi?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vanta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MariusVolkhart?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/michalborek?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alb-i986?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/asolntsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andreyrmg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Ariel-Isaacm?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/BartoszMiller?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brunokrebs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Saser?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dgageot?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidxia?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dhruvarora?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/divyansh-gupta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/DmitriyZaitsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eamelink?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eugene-ivakhno?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/astafev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/FWDekker?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MGaetan89?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/geoffschoeman?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/isanych?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vershinin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jpenglert?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/izeye?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JosePaumard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mileszk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tradingreason?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/L-KID?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LiamClark?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ludochane?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MeddahJ?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/markuswustenberg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thatJavaNerd?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Nirvanall?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/olivergierke?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/philipa?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/phjardas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/radimk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ra4king?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/elizarov?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/smarkwell?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SimenB?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/stuartblair?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tokuhirom?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tomball?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Vp3n?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andrerigon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ashleyfrieze?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bruceeddy?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jrrickard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lloydjm77?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LudoMeurillon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mgrafl?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/paulduffin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repositories/6207167/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100&page=2
+GET https://api.github.com/users/wuwen5?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repos/mockito/mockito/commits?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&since=2017-05-21T22:48:29+0000&page=1&per_page=100
+  Serialized all contributors into: build/release-tools/all-contributors.json
+:configureContributors
+  Configuring 101 contributors into 'releasing.team.contributors' setting.
+:generatePomFileForJavaLibraryPublication
+:android:generatePomFileForJavaLibraryPublication
+:android:publishJavaLibraryPublicationToMavenLocal
+:publishJavaLibraryPublicationToMavenLocal
+:android:publishToMavenLocal
+:android:build
+:inline:generatePomFileForJavaLibraryPublication
+:inline:publishJavaLibraryPublicationToMavenLocal
+:publishToMavenLocal
+:build
+:extTest:compileTestJava
+:inline:publishToMavenLocal
+:inline:build
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
+:extTest:testClasses
+:extTest:checkstyleTest
+:extTest:test
+:extTest:check
+:extTest:build
+:extTest:ideaModule
+:extTest:idea
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 56.713 secs
+
+travis_time:end:2d4b6e10:start=1495493197540614544,finish=1495493315285105547,duration=117744491003[0K
+[32;1mThe command "./gradlew build idea -s -PcheckJava6Compatibility" exited with 0.[0m
+travis_fold:start:before_cache[0Ktravis_time:start:2e41a8ab[0K$ rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+travis_time:end:2e41a8ab:start=1495493315317246943,finish=1495493315337428714,duration=20181771[0Ktravis_fold:end:before_cache[0Ktravis_fold:start:cache.2[0Kstore build cache
+travis_time:start:1c34ac2b[0K
+travis_time:end:1c34ac2b:start=1495493315346472193,finish=1495493315350402493,duration=3930300[0Ktravis_time:start:088f8e1b[0K[32;1mchange detected (content changed, file is created, or file is deleted):
+/home/travis/.gradle/caches/2.14.1/plugin-resolution/cache.properties.lock
+/home/travis/.gradle/caches/modules-2/metadata-2.16/module-metadata.bin
+
+[0m
+[32;1mchanges detected, packing new archive[0m
+.
+.
+.
+.
+[32;1muploading archive[0m
+
+travis_time:end:088f8e1b:start=1495493315355046795,finish=1495493344029717086,duration=28674670291[0Ktravis_fold:end:cache.2[0Ktravis_fold:start:after_success.1[0Ktravis_time:start:0b7c2358[0K$ ./gradlew assertReleaseNeeded && ./gradlew ciReleasePrepare && ./gradlew performRelease -Preleasing.dryRun=false
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:assertReleaseNeeded
+  Environment variable SKIP_RELEASE present: true
+  Commit message to inspect for keyword '[ci skip-release]': 
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+  Current branch 'release/2.x' matches 'release/.+': true
+:assertReleaseNeeded FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':assertReleaseNeeded'.
+>   Release is needed: false
+      - skip by env variable: true
+      - skip by commit message: true
+      - is pull request build:  false
+      - is releasable branch:  true
+      - anything changed in publications since the previous release:  true
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 1.644 secs
+
+travis_time:end:0b7c2358:start=1495493344036020318,finish=1495493346165624715,duration=2129604397[0Ktravis_fold:end:after_success.1[0Ktravis_fold:start:after_success.2[0Ktravis_time:start:24373cf8[0K$ ./gradlew --stacktrace coverageReport && cp build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml jacoco.xml || echo "Code coverage failed"
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava UP-TO-DATE
+:copyMockMethodDispatcher UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:createTestResources
+:compileTestJava UP-TO-DATE
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:mockitoCoverage
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-parent/5.0.4/asm-parent-5.0.4.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.jar
+Jacoco report for client created: file:///home/travis/build/mockito/mockito/build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml
+:coverageReport
+
+BUILD SUCCESSFUL
+
+Total time: 4.677 secs
+
+travis_time:end:24373cf8:start=1495493346170957481,finish=1495493351334164445,duration=5163206964[0Ktravis_fold:end:after_success.2[0Ktravis_fold:start:after_success.3[0Ktravis_time:start:2057469c[0K$ bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+  _____          _
+ / ____|        | |
+| |     ___   __| | ___  ___ _____   __
+| |    / _ \ / _` |/ _ \/ __/ _ \ \ / /
+| |___| (_) | (_| |  __/ (_| (_) \ V /
+ \_____\___/ \__,_|\___|\___\___/ \_/
+                              Bash-8fda091
+
+
+[0;90m==>[0m Travis CI detected.
+    [0;90mproject root:[0m .
+    [0;32mYaml not found, that's ok! Learn more at[0m [0;36mhttp://docs.codecov.io/docs/codecov-yaml[0m
+[0;90m==>[0m Running gcov in . [0;90m(disable via -X gcov)[0m
+[0;90m==>[0m Python coveragepy not found
+[0;90m==>[0m Searching for coverage reports in:
+    [0;32m+[0m .
+    [0;90m->[0m Found 1 reports
+[0;90m==>[0m Detecting git/mercurial file structure
+[0;90m==>[0m Appending build variables
+    [0;32m+[0m TRAVIS_OS_NAME
+    [0;32m+[0m TRAVIS_JDK_VERSION
+[0;90m==>[0m Reading reports
+    [0;32m+[0m ./jacoco.xml [0;90mbytes=1079888[0m
+[0;90m==>[0m Appending adjustments
+    [0;36mhttp://docs.codecov.io/docs/fixing-reports[0m
+    [0;32m+[0m Found adjustments
+[0;90m==>[0m Uploading reports
+    [0;90murl:[0m https://codecov.io
+    [0;90mquery:[0m branch=release%2F2.x&commit=db7dbc3d5f7d97d0625683b4e41f282818f9b87c&build=2672.3&build_url=&name=&tag=&slug=mockito%2Fmockito&yaml=&service=travis&flags=&pr=false&job=235015722
+    [0;90m->[0m Pinging Codecov
+    [0;90m->[0m Uploading to S3 https://codecov.s3.amazonaws.com
+    [0;32m->[0m View reports at [0;36mhttps://codecov.io/github/mockito/mockito/commit/db7dbc3d5f7d97d0625683b4e41f282818f9b87c[0m
+
+travis_time:end:2057469c:start=1495493351355447433,finish=1495493353072743433,duration=1717296000[0Ktravis_fold:end:after_success.3[0K
+Done. Your build exited with 0.
+
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: production-3-worker-org-b-2-gce:b642c322-879d-46db-b538-f66a27aac83e
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-641ab208-5882-4656-a4cd-6c5c999c0d42:travis-ci-jvm-precise-1491941442
+startup: 22.623156547s
+travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: java
+Build group: stable
+Build dist: precise
+Build id: 235015715
+Job id: 235015724
+travis-build version: 97c7efd0c
+[34m[1mBuild image provisioning date and time[0m
+Tue Apr 11 20:22:39 UTC 2017
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+[34m[1mLinux Version[0m
+3.13.0-115-generic
+[34m[1mCookbooks Version[0m
+cc4eb5e https://github.com/travis-ci/travis-cookbooks/tree/cc4eb5e
+[34m[1mGit version[0m
+git version 1.8.5.6
+[34m[1mbash version[0m
+GNU bash, version 4.2.25(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+[34m[1mGCC version[0m
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mLLVM version[0m
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.2.6
+[34m[1mPre-installed Node.js versions[0m
+v0.10.36
+[34m[1mPre-installed Go versions[0m
+1.7.4
+[34m[1mmysql --version[0m
+mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.2
+[34m[1mPre-installed PostgreSQL versions[0m
+9.1.24
+9.2.20
+9.3.16
+9.4.11
+9.5.6
+[34m[1mRedis version[0m
+redis-server 3.0.7
+[34m[1mriak version[0m
+2.0.2
+[34m[1mmemcached version[0m
+1.4.13
+[34m[1mMongoDB version[0m
+MongoDB 2.4.14
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mInstalled Sphinx versions[0m
+2.0.10
+2.1.9
+2.2.6
+[34m[1mDefault Sphinx version[0m
+2.2.6
+[34m[1mInstalled Firefox version[0m
+firefox 38.4.0esr
+[34m[1mPhantomJS version[0m
+1.9.8
+[34m[1mant -version[0m
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+[34m[1mmvn -version[0m
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.8.0_121, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-115-generic", arch: "amd64", family: "unix"
+[34m[1mgradle -version[0m
+
+------------------------------------------------------------
+Gradle 2.2.1
+------------------------------------------------------------
+
+Build time:   2014-11-24 09:45:35 UTC
+Build number: none
+Revision:     6fcb59c06f43a4e6b1bcb401f7686a8601a1fb4a
+
+Groovy:       2.3.6
+Ant:          Apache Ant(TM) version 1.9.3 compiled on December 23 2013
+JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)
+OS:           Linux 3.13.0-115-generic amd64
+
+[34m[1mlein1 version[0m
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Downloading Leiningen now...
+WARNING: Clojure jar failed to download from http://build.clojure.org/releases/org/clojure/clojure/1.2.1/clojure-1.2.1.jar
+Using JLine for console I/O; install rlwrap for optimum experience.
+Leiningen 1.7.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein2 version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mlein version[0m
+Downloading Leiningen to /home/travis/.lein/self-installs/home/travis/.lein/leiningen-2.5.1-standalone.jar now...
+Leiningen 2.5.1 on Java 1.7.0_80 Java HotSpot(TM) 64-Bit Server VM
+travis_fold:end:system_info[0K
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+travis_fold:start:fix.CVE-2015-7547[0K$ export DEBIAN_FRONTEND=noninteractive
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-updates/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise-backports/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://us-central1.gce.archive.ubuntu.com/ubuntu/dists/precise/Release.gpg: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://downloads-distro.mongodb.org/repo/debian-sysvinit/dists/dist/Release.gpg: Signature by key 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10 uses weak digest algorithm (SHA1)
+W: http://security.ubuntu.com/ubuntu/dists/precise-security/InRelease: Signature by key 630239CC130E1A7FD81A27B140976EAF437D05B5 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/precise/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
+W: http://ppa.launchpad.net/git-core/v1.8/ubuntu/dists/precise/Release.gpg: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak digest algorithm (SHA1)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libc6 is already the newest version (2.15-0ubuntu10.18).
+0 upgraded, 0 newly installed, 0 to remove and 43 not upgraded.
+travis_fold:end:fix.CVE-2015-7547[0K$ jdk_switcher use oraclejdk8
+Switching to Oracle JDK8 (java-8-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-8-oracle
+travis_fold:start:git.checkout[0Ktravis_time:start:003c9fa4[0K$ git clone --depth=50 --branch=release/2.x https://github.com/mockito/mockito.git mockito/mockito
+Cloning into 'mockito/mockito'...
+remote: Counting objects: 1807, done.[K
+remote: Compressing objects:   0% (1/1273)   [Kremote: Compressing objects:   1% (13/1273)   [Kremote: Compressing objects:   2% (26/1273)   [Kremote: Compressing objects:   3% (39/1273)   [Kremote: Compressing objects:   4% (51/1273)   [Kremote: Compressing objects:   5% (64/1273)   [Kremote: Compressing objects:   6% (77/1273)   [Kremote: Compressing objects:   7% (90/1273)   [Kremote: Compressing objects:   8% (102/1273)   [Kremote: Compressing objects:   9% (115/1273)   [Kremote: Compressing objects:  10% (128/1273)   [Kremote: Compressing objects:  11% (141/1273)   [Kremote: Compressing objects:  12% (153/1273)   [Kremote: Compressing objects:  13% (166/1273)   [Kremote: Compressing objects:  14% (179/1273)   [Kremote: Compressing objects:  15% (191/1273)   [Kremote: Compressing objects:  16% (204/1273)   [Kremote: Compressing objects:  17% (217/1273)   [Kremote: Compressing objects:  18% (230/1273)   [Kremote: Compressing objects:  19% (242/1273)   [Kremote: Compressing objects:  20% (255/1273)   [Kremote: Compressing objects:  21% (268/1273)   [Kremote: Compressing objects:  22% (281/1273)   [Kremote: Compressing objects:  23% (293/1273)   [Kremote: Compressing objects:  24% (306/1273)   [Kremote: Compressing objects:  25% (319/1273)   [Kremote: Compressing objects:  26% (331/1273)   [Kremote: Compressing objects:  27% (344/1273)   [Kremote: Compressing objects:  28% (357/1273)   [Kremote: Compressing objects:  29% (370/1273)   [Kremote: Compressing objects:  30% (382/1273)   [Kremote: Compressing objects:  31% (395/1273)   [Kremote: Compressing objects:  32% (408/1273)   [Kremote: Compressing objects:  33% (421/1273)   [Kremote: Compressing objects:  34% (433/1273)   [Kremote: Compressing objects:  35% (446/1273)   [Kremote: Compressing objects:  36% (459/1273)   [Kremote: Compressing objects:  37% (472/1273)   [Kremote: Compressing objects:  38% (484/1273)   [Kremote: Compressing objects:  39% (497/1273)   [Kremote: Compressing objects:  40% (510/1273)   [Kremote: Compressing objects:  41% (522/1273)   [Kremote: Compressing objects:  42% (535/1273)   [Kremote: Compressing objects:  43% (548/1273)   [Kremote: Compressing objects:  44% (561/1273)   [Kremote: Compressing objects:  45% (573/1273)   [Kremote: Compressing objects:  46% (586/1273)   [Kremote: Compressing objects:  47% (599/1273)   [Kremote: Compressing objects:  48% (612/1273)   [Kremote: Compressing objects:  49% (624/1273)   [Kremote: Compressing objects:  50% (637/1273)   [Kremote: Compressing objects:  51% (650/1273)   [Kremote: Compressing objects:  52% (662/1273)   [Kremote: Compressing objects:  53% (675/1273)   [Kremote: Compressing objects:  54% (688/1273)   [Kremote: Compressing objects:  55% (701/1273)   [Kremote: Compressing objects:  56% (713/1273)   [Kremote: Compressing objects:  57% (726/1273)   [Kremote: Compressing objects:  58% (739/1273)   [Kremote: Compressing objects:  59% (752/1273)   [Kremote: Compressing objects:  60% (764/1273)   [Kremote: Compressing objects:  61% (777/1273)   [Kremote: Compressing objects:  62% (790/1273)   [Kremote: Compressing objects:  63% (802/1273)   [Kremote: Compressing objects:  64% (815/1273)   [Kremote: Compressing objects:  65% (828/1273)   [Kremote: Compressing objects:  66% (841/1273)   [Kremote: Compressing objects:  67% (853/1273)   [Kremote: Compressing objects:  68% (866/1273)   [Kremote: Compressing objects:  69% (879/1273)   [Kremote: Compressing objects:  70% (892/1273)   [Kremote: Compressing objects:  71% (904/1273)   [Kremote: Compressing objects:  72% (917/1273)   [Kremote: Compressing objects:  73% (930/1273)   [Kremote: Compressing objects:  74% (943/1273)   [Kremote: Compressing objects:  75% (955/1273)   [Kremote: Compressing objects:  76% (968/1273)   [Kremote: Compressing objects:  77% (981/1273)   [Kremote: Compressing objects:  78% (993/1273)   [Kremote: Compressing objects:  79% (1006/1273)   [Kremote: Compressing objects:  80% (1019/1273)   [Kremote: Compressing objects:  81% (1032/1273)   [Kremote: Compressing objects:  82% (1044/1273)   [Kremote: Compressing objects:  83% (1057/1273)   [Kremote: Compressing objects:  84% (1070/1273)   [Kremote: Compressing objects:  85% (1083/1273)   [Kremote: Compressing objects:  86% (1095/1273)   [Kremote: Compressing objects:  87% (1108/1273)   [Kremote: Compressing objects:  88% (1121/1273)   [Kremote: Compressing objects:  89% (1133/1273)   [Kremote: Compressing objects:  90% (1146/1273)   [Kremote: Compressing objects:  91% (1159/1273)   [Kremote: Compressing objects:  92% (1172/1273)   [Kremote: Compressing objects:  93% (1184/1273)   [Kremote: Compressing objects:  94% (1197/1273)   [Kremote: Compressing objects:  95% (1210/1273)   [Kremote: Compressing objects:  96% (1223/1273)   [Kremote: Compressing objects:  97% (1235/1273)   [Kremote: Compressing objects:  98% (1248/1273)   [Kremote: Compressing objects:  99% (1261/1273)   [Kremote: Compressing objects: 100% (1273/1273)   [Kremote: Compressing objects: 100% (1273/1273), done.[K
+Receiving objects:   0% (1/1807)   Receiving objects:   1% (19/1807)   Receiving objects:   2% (37/1807)   Receiving objects:   3% (55/1807)   Receiving objects:   4% (73/1807)   Receiving objects:   5% (91/1807)   Receiving objects:   6% (109/1807)   Receiving objects:   7% (127/1807)   Receiving objects:   8% (145/1807)   Receiving objects:   9% (163/1807)   Receiving objects:  10% (181/1807)   Receiving objects:  11% (199/1807)   Receiving objects:  12% (217/1807)   Receiving objects:  13% (235/1807)   Receiving objects:  14% (253/1807)   Receiving objects:  15% (272/1807)   Receiving objects:  16% (290/1807)   Receiving objects:  17% (308/1807)   Receiving objects:  18% (326/1807)   Receiving objects:  19% (344/1807)   Receiving objects:  20% (362/1807)   Receiving objects:  21% (380/1807)   Receiving objects:  22% (398/1807)   Receiving objects:  23% (416/1807)   Receiving objects:  24% (434/1807)   Receiving objects:  25% (452/1807)   Receiving objects:  26% (470/1807)   Receiving objects:  27% (488/1807)   Receiving objects:  28% (506/1807)   Receiving objects:  29% (525/1807)   Receiving objects:  30% (543/1807)   Receiving objects:  31% (561/1807)   Receiving objects:  32% (579/1807)   Receiving objects:  33% (597/1807)   Receiving objects:  34% (615/1807)   Receiving objects:  35% (633/1807)   Receiving objects:  36% (651/1807)   Receiving objects:  37% (669/1807)   Receiving objects:  38% (687/1807)   Receiving objects:  39% (705/1807)   Receiving objects:  40% (723/1807)   Receiving objects:  41% (741/1807)   Receiving objects:  42% (759/1807)   Receiving objects:  43% (778/1807)   Receiving objects:  44% (796/1807)   Receiving objects:  45% (814/1807)   Receiving objects:  46% (832/1807)   Receiving objects:  47% (850/1807)   Receiving objects:  48% (868/1807)   Receiving objects:  49% (886/1807)   Receiving objects:  50% (904/1807)   Receiving objects:  51% (922/1807)   Receiving objects:  52% (940/1807)   Receiving objects:  53% (958/1807)   Receiving objects:  54% (976/1807)   Receiving objects:  55% (994/1807)   Receiving objects:  56% (1012/1807)   Receiving objects:  57% (1030/1807)   Receiving objects:  58% (1049/1807)   Receiving objects:  59% (1067/1807)   Receiving objects:  60% (1085/1807)   Receiving objects:  61% (1103/1807)   Receiving objects:  62% (1121/1807)   Receiving objects:  63% (1139/1807)   Receiving objects:  64% (1157/1807)   Receiving objects:  65% (1175/1807)   Receiving objects:  66% (1193/1807)   Receiving objects:  67% (1211/1807)   Receiving objects:  68% (1229/1807)   Receiving objects:  69% (1247/1807)   Receiving objects:  70% (1265/1807)   Receiving objects:  71% (1283/1807)   Receiving objects:  72% (1302/1807)   Receiving objects:  73% (1320/1807)   Receiving objects:  74% (1338/1807)   Receiving objects:  75% (1356/1807)   Receiving objects:  76% (1374/1807)   Receiving objects:  77% (1392/1807)   Receiving objects:  78% (1410/1807)   Receiving objects:  79% (1428/1807)   Receiving objects:  80% (1446/1807)   Receiving objects:  81% (1464/1807)   Receiving objects:  82% (1482/1807)   Receiving objects:  83% (1500/1807)   Receiving objects:  84% (1518/1807)   Receiving objects:  85% (1536/1807)   Receiving objects:  86% (1555/1807)   Receiving objects:  87% (1573/1807)   Receiving objects:  88% (1591/1807)   Receiving objects:  89% (1609/1807)   Receiving objects:  90% (1627/1807)   remote: Total 1807 (delta 631), reused 889 (delta 427), pack-reused 0[K
+Receiving objects:  91% (1645/1807)   Receiving objects:  92% (1663/1807)   Receiving objects:  93% (1681/1807)   Receiving objects:  94% (1699/1807)   Receiving objects:  95% (1717/1807)   Receiving objects:  96% (1735/1807)   Receiving objects:  97% (1753/1807)   Receiving objects:  98% (1771/1807)   Receiving objects:  99% (1789/1807)   Receiving objects: 100% (1807/1807)   Receiving objects: 100% (1807/1807), 1.06 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/631)   Resolving deltas:   3% (20/631)   Resolving deltas:   4% (28/631)   Resolving deltas:   6% (38/631)   Resolving deltas:   7% (45/631)   Resolving deltas:   8% (53/631)   Resolving deltas:  21% (138/631)   Resolving deltas:  27% (176/631)   Resolving deltas:  28% (179/631)   Resolving deltas:  30% (193/631)   Resolving deltas:  31% (196/631)   Resolving deltas:  32% (204/631)   Resolving deltas:  33% (211/631)   Resolving deltas:  34% (215/631)   Resolving deltas:  35% (222/631)   Resolving deltas:  36% (228/631)   Resolving deltas:  37% (235/631)   Resolving deltas:  38% (244/631)   Resolving deltas:  39% (247/631)   Resolving deltas:  40% (254/631)   Resolving deltas:  41% (259/631)   Resolving deltas:  42% (267/631)   Resolving deltas:  43% (272/631)   Resolving deltas:  44% (278/631)   Resolving deltas:  46% (291/631)   Resolving deltas:  47% (300/631)   Resolving deltas:  52% (329/631)   Resolving deltas:  53% (337/631)   Resolving deltas:  54% (341/631)   Resolving deltas:  55% (352/631)   Resolving deltas:  60% (382/631)   Resolving deltas:  62% (393/631)   Resolving deltas:  63% (403/631)   Resolving deltas:  64% (405/631)   Resolving deltas:  65% (411/631)   Resolving deltas:  66% (417/631)   Resolving deltas:  67% (423/631)   Resolving deltas:  69% (439/631)   Resolving deltas:  70% (442/631)   Resolving deltas:  71% (449/631)   Resolving deltas:  72% (455/631)   Resolving deltas:  73% (461/631)   Resolving deltas:  74% (467/631)   Resolving deltas:  75% (474/631)   Resolving deltas:  76% (480/631)   Resolving deltas:  79% (501/631)   Resolving deltas:  80% (510/631)   Resolving deltas:  81% (513/631)   Resolving deltas:  82% (518/631)   Resolving deltas:  83% (524/631)   Resolving deltas:  84% (531/631)   Resolving deltas:  85% (539/631)   Resolving deltas:  86% (543/631)   Resolving deltas:  87% (549/631)   Resolving deltas:  88% (557/631)   Resolving deltas:  90% (568/631)   Resolving deltas:  91% (579/631)   Resolving deltas:  92% (581/631)   Resolving deltas:  93% (587/631)   Resolving deltas:  94% (594/631)   Resolving deltas:  99% (630/631)   Resolving deltas: 100% (631/631)   Resolving deltas: 100% (631/631), done.
+Checking connectivity... done.
+
+travis_time:end:003c9fa4:start=1495493188113116917,finish=1495493189303608525,duration=1190491608[0K$ cd mockito/mockito
+$ git checkout -qf db7dbc3d5f7d97d0625683b4e41f282818f9b87c
+travis_fold:end:git.checkout[0K[33;1mSet hostname to mockito-cd[0m
+$ sudo hostname mockito-cd
+travis_fold:start:hosts.before[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant 
+travis_fold:end:hosts.before[0Ktravis_fold:start:hosts[0Ksudo: unable to resolve host mockito-cd
+travis_fold:end:hosts[0Ktravis_fold:start:hosts.after[0K
+## Managed by Chef on packer-58ed3843-8935-63b2-85d5-21ea41f2dc87.c.eco-emissary-99515.internal :heart_eyes_cat:
+## cookbook:: travis_build_environment
+##     file:: templates/default/etc/cloud/templates/hosts.tmpl.erb
+
+127.0.1.1 ip4-loopback precise64
+
+127.0.0.1 localhost nettuno travis vagrant  mockito-cd
+travis_fold:end:hosts.after[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export NEXUS_TOKEN_USER=[secure]
+$ export NEXUS_TOKEN_PWD=[secure]
+$ export TEST_ENV_VAR=[secure]
+$ export BINTRAY_API_KEY=[secure]
+$ export GH_WRITE_TOKEN=[secure]
+
+[33;1mSetting environment variables from .travis.yml[0m
+$ export TERM=dumb
+$ export GRADLE_OPTS="-XX:+UseCompressedOops -Djava.awt.headless=true"
+$ export SKIP_RELEASE=true
+$ export MOCK_MAKER=mock-maker-inline
+
+$ export TERM=dumb
+travis_fold:start:cache.1[0KSetting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:20b9b186[0K$ Installing caching utilities
+
+travis_time:end:20b9b186:start=1495493189940814850,finish=1495493190090745477,duration=149930627[0Ktravis_time:start:15cafa84[0K
+travis_time:end:15cafa84:start=1495493190096551337,finish=1495493190100755065,duration=4203728[0Ktravis_time:start:07f72af8[0K[32;1mattempting to download cache archive[0m
+[32;1mfetching release2.x/cache-linux-precise-2d3e518e315c39ae08e3087e3a99d7416757ca2390f2289582808bb1aec85917--jdk-oraclejdk8.tgz[0m
+[32;1mfound cache[0m
+
+travis_time:end:07f72af8:start=1495493190105403344,finish=1495493192398034960,duration=2292631616[0Ktravis_time:start:2754e828[0K
+travis_time:end:2754e828:start=1495493192402796569,finish=1495493192406726800,duration=3930231[0Ktravis_time:start:01772e12[0K[32;1madding /home/travis/.gradle/caches to cache[0m
+[32;1mcreating directory /home/travis/.gradle/caches[0m
+[32;1madding /home/travis/.gradle/wrapper to cache[0m
+[32;1mcreating directory /home/travis/.gradle/wrapper[0m
+
+travis_time:end:01772e12:start=1495493192411585711,finish=1495493199174483176,duration=6762897465[0Ktravis_fold:end:cache.1[0K$ java -Xmx32m -version
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.8.0_121
+travis_fold:start:before_install.1[0Ktravis_time:start:04cbaf8f[0K$ export TRAVIS_COMMIT_MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+
+travis_time:end:04cbaf8f:start=1495493200919776347,finish=1495493200964157893,duration=44381546[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:10a86eeb[0K$ echo "$TRAVIS_COMMIT_MESSAGE"
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+
+travis_time:end:10a86eeb:start=1495493200980711401,finish=1495493200997031767,duration=16320366[0Ktravis_fold:end:before_install.2[0Ktravis_fold:start:install[0Ktravis_time:start:1d4cf5c3[0K$ true
+
+travis_time:end:1d4cf5c3:start=1495493201002667755,finish=1495493201006916304,duration=4248549[0Ktravis_fold:end:install[0Ktravis_time:start:0da90c5b[0K$ ./gradlew build idea -s -PcheckJava6Compatibility
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava
+:android:processResources
+:android:sourcesJar
+:android:processTestResources UP-TO-DATE
+:extTest:compileJava UP-TO-DATE
+:extTest:processResources UP-TO-DATE
+:extTest:classes UP-TO-DATE
+:extTest:jar
+:extTest:assemble
+:extTest:checkstyleMain UP-TO-DATE
+:extTest:processTestResources
+:inline:processResources
+:inline:sourcesJar
+:inline:processTestResources UP-TO-DATE
+:kotlinTest:compileKotlin UP-TO-DATE
+:kotlinTest:compileJava UP-TO-DATE
+:kotlinTest:copyMainKotlinClasses
+:kotlinTest:processResources UP-TO-DATE
+:kotlinTest:classes UP-TO-DATE
+:kotlinTest:jar
+:kotlinTest:assemble
+:kotlinTest:checkstyleMain UP-TO-DATE
+:kotlinTest:processTestResources UP-TO-DATE
+:testng:processResources UP-TO-DATE
+:testng:processTestResources
+:android:ideaModule
+:android:idea
+:inline:ideaModule
+:inline:idea
+:kotlinTest:ideaModule
+:kotlinTest:idea
+:testng:ideaModule
+:testng:idea
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:copyMockMethodDispatcher
+:processResources UP-TO-DATE
+:classes
+:jar
+:javadoc
+:android:compileJava
+:android:classes
+:android:jar
+:android:checkstyleMain
+:android:compileTestJava UP-TO-DATE
+:android:testClasses UP-TO-DATE
+:android:checkstyleTest UP-TO-DATE
+:android:test UP-TO-DATE
+:android:check
+:inline:compileJava UP-TO-DATE
+:inline:classes
+:inline:jar
+:inline:checkstyleMain UP-TO-DATE
+:inline:compileTestJava
+:inline:testClasses
+:inline:checkstyleTest
+:inline:test/home/travis/build/mockito/mockito/src/main/java/org/mockito/AdditionalAnswers.java:38: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: org.mockito.stubbing
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/Mockito.java:1380: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs.class
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/MockitoSession.java:90: warning - Tag @link: reference not found: MockitoJUnitRunner.StrictStubs
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/configuration/AnnotationEngine.java:27: warning - Tag @link: reference not found: org.mockito.plugins plugin
+/home/travis/build/mockito/mockito/src/main/java/org/mockito/exceptions/misusing/UnnecessaryStubbingException.java:54: warning - Tag @link: reference not found: MockitoJUnitRunner.Silent
+
+:inline:check
+:kotlinTest:compileTestKotlin
+Using kotlin incremental compilation
+6 warnings
+Installing sw-precache globally
+w: The '-d' option with a directory destination is ignored because '-module' is specified
+:kotlinTest:compileTestJava UP-TO-DATE
+:kotlinTest:copyTestKotlinClasses
+:kotlinTest:testClasses UP-TO-DATE
+:kotlinTest:checkstyleTest UP-TO-DATE
+:kotlinTest:test
+/home/travis/.nvm/v0.10.36/bin/sw-precache -> /home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/cli.js
+sw-precache@5.1.1 /home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache
+├── pretty-bytes@4.0.2
+├── lodash.defaults@4.2.0
+├── lodash.template@4.4.0 (lodash._reinterpolate@3.0.0, lodash.templatesettings@4.1.0)
+├── mkdirp@0.5.1 (minimist@0.0.8)
+├── glob@7.1.2 (path-is-absolute@1.0.1, inherits@2.0.3, fs.realpath@1.0.0, inflight@1.0.6, once@1.4.0, minimatch@3.0.4)
+├── dom-urls@1.1.0 (urijs@1.18.10)
+├── es6-promise@4.1.0
+├── sw-toolbox@3.6.0 (serviceworker-cache-polyfill@4.0.0, path-to-regexp@1.7.0)
+├── meow@3.7.0 (decamelize@1.2.0, map-obj@1.0.1, trim-newlines@1.0.0, object-assign@4.1.1, camelcase-keys@2.1.0, minimist@1.2.0, loud-rejection@1.6.0, redent@1.0.0, normalize-package-data@2.3.8, read-pkg-up@1.0.1)
+└── update-notifier@1.0.3 (is-npm@1.0.0, lazy-req@1.1.0, xdg-basedir@2.0.0, semver-diff@2.1.0, configstore@2.1.0, chalk@1.1.3, boxen@0.6.0, latest-version@2.0.0)
+
+/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/node_modules/pretty-bytes/index.js:2
+const UNITS = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+^^^^^
+SyntaxError: Use of const in strict mode.
+    at Module._compile (module.js:439:25)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/travis/.nvm/v0.10.36/lib/node_modules/sw-precache/lib/sw-precache.js:27:19)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+NPM is not installed. Aborting generating service-worker
+:kotlinTest:check
+:kotlinTest:build
+:testng:compileJava
+:testng:classes
+:testng:jar
+:javadocJar
+:sourcesJar
+:assemble
+:checkstyleMain
+:android:javadoc SKIPPED
+:android:javadocJar
+:android:assemble
+:inline:javadoc SKIPPED
+:inline:javadocJar
+:inline:assemble
+:testng:sourcesJar
+:testng:assemble
+:testng:checkstyleMain
+:testng:compileTestJavaNote: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+:testng:testClasses
+:testng:checkstyleTest
+:testng:test
+:createTestResources
+:compileTestJava
+:testng:check
+:testng:build
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses
+:checkstyleTest
+:licenseMain
+Missing header in: src/main/java/org/mockito/internal/creation/SuspendMethod.java
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/LICENSE
+Unknown file extension: src/main/java/org/mockito/internal/util/concurrent/README.md
+:licenseTest
+Missing header in: src/test/java/org/mockitousage/bugs/EnabledMockingInterfaceCloneMethodTest.java
+:license
+:test
+:check
+:fetchAllContributors
+  Fetching all contributors for project
+  Querying GitHub API for all contributors for project
+GET https://api.github.com/repos/mockito/mockito/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100
+GET https://api.github.com/users/szczepiq?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bric3?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/continuous-delivery-drone?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/raphw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/TimvdLippe?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/PascalSchumacher?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/iczechowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bbankowski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/szpak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ChristianSchwarz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mureinik?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lukasz-szewc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/marcingrzejszczak?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Dawud-xx?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidkarlsen?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/pimterry?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lpandzic?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/wernight?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alberskib?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jerzykrlk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tmurakami?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/josephw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/epeee?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dmac100?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ffbit?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/guw?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hansjoachim?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/hughwphamill?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ianparkinson?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/kamilszymanski?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mkordas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/carlosaguayo?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brewerc?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/AFnRFCb7?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tarnowskijan?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JeffreyFalgout?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lucascs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SourcePond?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SeriyBg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Stephan202?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/UrsMetz?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thesnowgoose?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/yyvess?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Jazzepi?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vanta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MariusVolkhart?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/michalborek?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/alb-i986?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/asolntsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andreyrmg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Ariel-Isaacm?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/BartoszMiller?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/brunokrebs?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Saser?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dgageot?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/davidxia?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/dhruvarora?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/divyansh-gupta?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/DmitriyZaitsev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eamelink?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/eugene-ivakhno?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/astafev?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/FWDekker?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MGaetan89?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/geoffschoeman?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/isanych?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/vershinin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jpenglert?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/izeye?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/JosePaumard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mileszk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tradingreason?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/L-KID?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LiamClark?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ludochane?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/MeddahJ?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/markuswustenberg?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/thatJavaNerd?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Nirvanall?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/olivergierke?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/philipa?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/phjardas?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/radimk?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ra4king?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/elizarov?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/smarkwell?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/SimenB?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/stuartblair?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tokuhirom?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/tomball?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/Vp3n?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/andrerigon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/ashleyfrieze?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/bruceeddy?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/jrrickard?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/lloydjm77?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/LudoMeurillon?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/mgrafl?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/users/paulduffin?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repositories/6207167/contributors?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&per_page=100&page=2
+GET https://api.github.com/users/wuwen5?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17
+GET https://api.github.com/repos/mockito/mockito/commits?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&since=2017-05-21T22:48:38+0000&page=1&per_page=100
+  Serialized all contributors into: build/release-tools/all-contributors.json
+:configureContributors
+  Configuring 101 contributors into 'releasing.team.contributors' setting.
+:generatePomFileForJavaLibraryPublication
+:android:generatePomFileForJavaLibraryPublication
+:android:publishJavaLibraryPublicationToMavenLocal
+:publishJavaLibraryPublicationToMavenLocal
+:publishToMavenLocal
+:build
+:extTest:compileTestJava
+:android:publishToMavenLocal
+:android:build
+:inline:generatePomFileForJavaLibraryPublication
+:inline:publishJavaLibraryPublicationToMavenLocal
+:inline:publishToMavenLocal
+:inline:build
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
+:extTest:testClasses
+:extTest:checkstyleTest
+:extTest:test
+:extTest:check
+:extTest:build
+:extTest:ideaModule
+:extTest:idea
+
+BUILD SUCCESSFUL
+
+Total time: 2 mins 1.296 secs
+
+travis_time:end:0da90c5b:start=1495493201037967577,finish=1495493323429619147,duration=122391651570[0K
+[32;1mThe command "./gradlew build idea -s -PcheckJava6Compatibility" exited with 0.[0m
+travis_fold:start:before_cache[0Ktravis_time:start:08b3bdb0[0K$ rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+travis_time:end:08b3bdb0:start=1495493323435238680,finish=1495493323440234236,duration=4995556[0Ktravis_fold:end:before_cache[0Ktravis_fold:start:cache.2[0Kstore build cache
+travis_time:start:07125671[0K
+travis_time:end:07125671:start=1495493323445938900,finish=1495493323450463465,duration=4524565[0Ktravis_time:start:05a12798[0K[32;1mchange detected (content changed, file is created, or file is deleted):
+/home/travis/.gradle/caches/2.14.1/plugin-resolution/cache.properties.lock
+/home/travis/.gradle/caches/modules-2/metadata-2.16/module-metadata.bin
+
+[0m
+[32;1mchanges detected, packing new archive[0m
+.
+.
+.
+[32;1muploading archive[0m
+
+travis_time:end:05a12798:start=1495493323455247745,finish=1495493344391821149,duration=20936573404[0Ktravis_fold:end:cache.2[0Ktravis_fold:start:after_success.1[0Ktravis_time:start:19bc04b6[0K$ ./gradlew assertReleaseNeeded && ./gradlew ciReleasePrepare && ./gradlew performRelease -Preleasing.dryRun=false
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:assertReleaseNeeded
+  Environment variable SKIP_RELEASE present: true
+  Commit message to inspect for keyword '[ci skip-release]': 
+Bumped version and updated release notes by CI build 2671 [ci skip-release]
+  Current branch 'release/2.x' matches 'release/.+': true
+:assertReleaseNeeded FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':assertReleaseNeeded'.
+>   Release is needed: false
+      - skip by env variable: true
+      - skip by commit message: true
+      - is pull request build:  false
+      - is releasable branch:  true
+      - anything changed in publications since the previous release:  true
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 1.511 secs
+
+travis_time:end:19bc04b6:start=1495493344398407442,finish=1495493346437778195,duration=2039370753[0Ktravis_fold:end:after_success.1[0Ktravis_fold:start:after_success.2[0Ktravis_time:start:0567fca0[0K$ ./gradlew --stacktrace coverageReport && cp build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml jacoco.xml || echo "Code coverage failed"
+Parallel execution is an incubating feature.
+  Building version '2.8.32' (value loaded from 'version.properties' file).
+:compileJava UP-TO-DATE
+:copyMockMethodDispatcher UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:createTestResources
+:compileTestJava UP-TO-DATE
+:removeTestResources
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:mockitoCoverage
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.pom
+Download https://jcenter.bintray.com/org/ow2/asm/asm-parent/5.0.4/asm-parent-5.0.4.pom
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.ant/0.7.6.201602180812/org.jacoco.ant-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.core/0.7.6.201602180812/org.jacoco.core-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/jacoco/org.jacoco.report/0.7.6.201602180812/org.jacoco.report-0.7.6.201602180812.jar
+Download https://jcenter.bintray.com/org/ow2/asm/asm-debug-all/5.0.4/asm-debug-all-5.0.4.jar
+Jacoco report for client created: file:///home/travis/build/mockito/mockito/build/reports/jacoco/mockitoCoverage/mockitoCoverage.xml
+:coverageReport
+
+BUILD SUCCESSFUL
+
+Total time: 5.366 secs
+
+travis_time:end:0567fca0:start=1495493346443606732,finish=1495493352261055938,duration=5817449206[0Ktravis_fold:end:after_success.2[0Ktravis_fold:start:after_success.3[0Ktravis_time:start:1a5287c0[0K$ bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+  _____          _
+ / ____|        | |
+| |     ___   __| | ___  ___ _____   __
+| |    / _ \ / _` |/ _ \/ __/ _ \ \ / /
+| |___| (_) | (_| |  __/ (_| (_) \ V /
+ \_____\___/ \__,_|\___|\___\___/ \_/
+                              Bash-8fda091
+
+
+[0;90m==>[0m Travis CI detected.
+    [0;90mproject root:[0m .
+    [0;32mYaml not found, that's ok! Learn more at[0m [0;36mhttp://docs.codecov.io/docs/codecov-yaml[0m
+[0;90m==>[0m Running gcov in . [0;90m(disable via -X gcov)[0m
+[0;90m==>[0m Python coveragepy not found
+[0;90m==>[0m Searching for coverage reports in:
+    [0;32m+[0m .
+    [0;90m->[0m Found 1 reports
+[0;90m==>[0m Detecting git/mercurial file structure
+[0;90m==>[0m Appending build variables
+    [0;32m+[0m TRAVIS_OS_NAME
+    [0;32m+[0m TRAVIS_JDK_VERSION
+[0;90m==>[0m Reading reports
+    [0;32m+[0m ./jacoco.xml [0;90mbytes=1079888[0m
+[0;90m==>[0m Appending adjustments
+    [0;36mhttp://docs.codecov.io/docs/fixing-reports[0m
+    [0;32m+[0m Found adjustments
+[0;90m==>[0m Uploading reports
+    [0;90murl:[0m https://codecov.io
+    [0;90mquery:[0m branch=release%2F2.x&commit=db7dbc3d5f7d97d0625683b4e41f282818f9b87c&build=2672.4&build_url=&name=&tag=&slug=mockito%2Fmockito&yaml=&service=travis&flags=&pr=false&job=235015724
+    [0;90m->[0m Pinging Codecov
+    [0;90m->[0m Uploading to S3 https://codecov.s3.amazonaws.com
+    [0;32m->[0m View reports at [0;36mhttps://codecov.io/github/mockito/mockito/commit/db7dbc3d5f7d97d0625683b4e41f282818f9b87c[0m
+
+travis_time:end:1a5287c0:start=1495493352266569589,finish=1495493353814978108,duration=1548408519[0Ktravis_fold:end:after_success.3[0K
+Done. Your build exited with 0.
+
