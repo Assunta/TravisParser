@@ -1,3 +1,5 @@
+import re
+
 from travispy import TravisPy
 import sys
 
@@ -10,14 +12,22 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
 f = open('token.config', 'r')
 token=f.readline()
 t = TravisPy.github_auth(str(token))
 if len(sys.argv)>1:
     repo = t.repo(str(sys.argv[1]))
-    build = t.build(repo.last_build_id)
-    for job in build.jobs:
-        print t.log(job.log_id).body
+    builds = t.builds(slug=repo.slug)
+    for build in builds:
+        job_ids=build.job_ids
+        for job in t.jobs(ids=job_ids):
+            fOut = open('logs/' + sys.argv[1].split('/')[-1] + '-' + build.number + '-'+str(job.log_id)+'.txt', 'w+')
+
+            text=t.log(job.log_id).body
+            text=ansi_escape.sub('', text)
+            print (text)
+            fOut.write(text)
 else:
-    print "Inserire il parametro a riga di comando con il nome del repository di cui vuoi avere la build"
+    print ("Inserire il parametro a riga di comando con il nome del repository di cui vuoi avere la build")
 
