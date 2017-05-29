@@ -12,6 +12,10 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+
+maxnumberbuilds=10
+
+
 ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
 f = open('token.config', 'r')
 token=f.readline()
@@ -19,7 +23,8 @@ t = TravisPy.github_auth(str(token))
 if len(sys.argv)>1:
     repo = t.repo(str(sys.argv[1]))
     builds = t.builds(slug=repo.slug)
-    for build in builds:
+    for count in range(0,min(maxnumberbuilds,len(builds))):
+        build=builds[count]
         job_ids=build.job_ids
         for job in t.jobs(ids=job_ids):
             fOut = open('logs/' + sys.argv[1].split('/')[-1] + '-' + build.number + '-'+str(job.log_id)+'.txt', 'w+')
