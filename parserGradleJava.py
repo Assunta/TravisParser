@@ -14,10 +14,11 @@ listaTask=[]
 listaMessErrore=[]
 listaTaskSkippati=[]
 listaErroriPrecedentiAiTask=[]
+listNote=[]
 # repo = t.repo("mockito/mockito")
 # build = t.build(repo.last_build_id)
 # print build.state
-f = open('logs\\AndroidOrm.txt', 'r')
+f = open('logs\\oneBusWay.txt', 'r')
 
 # qui va la parte comune dove prendiamo
 #  nome progetto, il commit, la build, il tempo, quanti job, chi ha fatto il commit e tutte le informazioni che vogliamo
@@ -40,6 +41,11 @@ for line in f:
     elif re.match("\ASkipping task", line):
         print line
         listaTaskSkippati.append(line)
+    #espressione regolare per matchare messaggi del tipo Note: /example/picasso/PicassoSampleAdapter.java uses or overrides a deprecated API.
+    #che cmq potrebbero essere informazioni interessanti
+    elif re.match("Note: ", line):
+        print line
+        listNote.append(line)
     #a volte la build fallisce ancor prima che iniziano i task con messaggi di errore del tipo
     #    Error: Invalid - -abiarmeabi - v7a for the selected target.
     # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
@@ -59,6 +65,18 @@ for task in listaTask:
     if re.match("(.)*UP-TO-DATE", task):
         print task
 
+#nella lista dei task possiamo distinguere anche tra task che appartengono a progetti diversi
+        # (es in un progetto android ci potrebbe essere un modulo app, e un modulo library )
+modules= set([])
+for task in listaTask:
+   if task.count(":")==2:
+        module_name=task.split(":")[1]
+        modules.add(module_name)
+   else:
+        modules.add(" ") # nel caso in cui non sia specificato il nome del modulo
+
+for m in modules:
+    print m
 
 # N.B in lista task ci possono essere anche dei duplicati perche' alcuni task sono del tipo:
 # :sample:compileDebugUnitTestSources (Thread[Daemon worker,5,main]) started.
