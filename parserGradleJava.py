@@ -1,12 +1,13 @@
 from travispy import TravisPy
 import sys
 import re
+import mmap
 # N.B c'e' un problema se nel log ci sono carateri unicode fallisce la scrittura su file
 # per risolverlo stackoverflow suggerisce questo...
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-reponame="OneBusAway/onebusaway-android"
+
 f = open('token.config', 'r')
 token=f.readline()
 t = TravisPy.github_auth(str(token))
@@ -19,12 +20,24 @@ listNote=[]
 # repo = t.repo("mockito/mockito")
 # build = t.build(repo.last_build_id)
 # print build.state
-f = open('logs\\oneBusWay.txt', 'r')
+
+
+
+#check gradle o maven
+# you can alleviate the possible memory problems by using mmap.mmap()
+# to create a "string-like" object that uses the underlying file
+# (instead of reading the whole file in memory):
+def checkGradleMaven():
+    s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
+    if s.find ('[INFO] Scanning for projects') != -1:
+        return "maven"
+    else:
+        return "gradle"
 
 
 
 #dopo di che se identigfichiamo che si usa gradle si esegue quanto di seguito
-def gradle_parse():
+def gradle_parse(f):
     # questo ciclo for lo dovremmo fare per tutti i logs associati ai jobs di una certa build
     # per ora leggiamo un file, ma poi dovremmo iterare su una stringa qulla che ritorna da t.log(job.log_id).body
     for line in f:
@@ -89,7 +102,7 @@ def gradle_parse():
 #  nome progetto, il commit, la build, il tempo, quanti job, chi ha fatto il commit e tutte le informazioni che vogliamo
 #  anche dai file di configurazione ecc ecc
 #  Di norma avremo gia l'oggetto build su cui lavorare
-def common_parse():
+def common_parse(reponame):
     repo= t.repo(reponame)
     build=repo.last_build
     commit=build.commit
@@ -103,6 +116,7 @@ def common_parse():
         print "Numero pull request: "+str(build.pull_request_number)
     print "Iniziato a: "+str(build.started_at)
     print "Finito a: "+str(build.finished_at)
+    print "Durata: "+'%02d:%02d' % ((build.duration/60),build.duration%60) # build.duration da isecondi
 
     print "Commit SHA: " + commit.sha
     print "Branch: "+commit.branch
@@ -111,9 +125,9 @@ def common_parse():
     print "Autore commit: "+ commit.author_name
     print "Email Autore commit: "+ commit.author_email
 
+    #informazioni file travis.yml
+    # potremmo estrarre qualche informazione da qui
+    print build.config
 
     pass
 
-
-common_parse()
-gradle_parse()
