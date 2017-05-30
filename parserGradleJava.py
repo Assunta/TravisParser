@@ -1,3 +1,4 @@
+# coding=utf-8
 from travispy import TravisPy
 import sys
 import re
@@ -7,20 +8,22 @@ import mmap
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-
 f = open('token.config', 'r')
 token=f.readline()
 t = TravisPy.github_auth(str(token))
 
-listaTask=[]
-listaMessErrore=[]
-listaTaskSkippati=[]
-listaErroriPrecedentiAiTask=[]
-listNote=[]
+listaDipendenze=list()
+listaTask=list()
+listaMavenWarning=list()
+listaMessErrore=list()
+listaTaskSkippati=list()
+listaErroriPrecedentiAiTask=list()
+listNote=list()
 # repo = t.repo("mockito/mockito")
 # build = t.build(repo.last_build_id)
 # print build.state
 
+f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
 
 
 #check gradle o maven
@@ -37,7 +40,7 @@ def checkGradleMaven():
 
 
 #dopo di che se identigfichiamo che si usa gradle si esegue quanto di seguito
-def gradle_parse(f):
+def gradle_parse():
     # questo ciclo for lo dovremmo fare per tutti i logs associati ai jobs di una certa build
     # per ora leggiamo un file, ma poi dovremmo iterare su una stringa qulla che ritorna da t.log(job.log_id).body
     for line in f:
@@ -106,6 +109,7 @@ def common_parse(reponame):
     repo= t.repo(reponame)
     build=repo.last_build
     commit=build.commit
+    #TODO aggiungere linguaggio
     print "Nome : "+repo.slug
     print "Descrizione: " +repo.description
     print "Build number: " + build.number
@@ -131,3 +135,37 @@ def common_parse(reponame):
 
     pass
 
+
+
+#se invece si usa maven
+def maven_parse():
+    # Leggo tutto il log
+    for line in f:
+        # Task gradle. i task sono rappresentati nella forma \r\r\rnomeTask\r\r\r:
+        # è probabilmente sucfficienete individuare solo lo \r prima e dopo il task per essere sicuri che sia un task
+        if re.match("\A\w+:$",line):
+            print line
+            listaTask.append(line)
+        # espressione regolare per matchare gli errori che hanno portato al fallimento
+        elif re.match("\A\[ERROR\]", line):
+            print line
+            listaMessErrore.append(line)
+        # espressione regolare per matchere i warning di maven. potrebbero esserci informazioni utili
+        elif re.match("\A\[WARNING\]", line):
+            print line
+            listaMavenWarning.append(line)
+        #espressione regolare per matchare la lista delle dipendenze scaricate
+        elif re.match("\[INFO\] Downloaded:", line):
+            str=line.split(" ")[2].split('/')[-1][:-4]
+            print str
+            listaDipendenze.append(str)
+
+
+
+common_parse("pulse00/Twig-Eclipse-Plugin")
+tool=checkGradleMaven()
+if(tool=="maven"):
+    maven_parse()
+elif(tool=="gradle"):
+    gradle_parse()
+print ("PARSE END")
