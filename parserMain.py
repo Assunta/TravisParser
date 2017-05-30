@@ -1,8 +1,8 @@
 from parserGradleJava import *
 
 
-reponame="square/picasso"
-f = open('logs\\picasso.txt', 'r')
+reponame="wasabeef/recyclerview-animators"
+f = open('logs\\wasabeef.txt', 'r')
 
 
 common_parse(reponame)

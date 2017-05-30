@@ -31,7 +31,8 @@ if len(sys.argv)>1:
 
             text=t.log(job.log_id).body
             text=ansi_escape.sub('', text)
-            print (text)
+            print fOut.name
+            #print (text)
             fOut.write(text)
 else:
     print ("Inserire il parametro a riga di comando con il nome del repository di cui vuoi avere la build")
