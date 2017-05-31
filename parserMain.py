@@ -1,13 +1,17 @@
 from parserGradleJava import *
+from parserGradle import *
 
 
-reponame="wasabeef/recyclerview-animators"
-f = open('logs\\wasabeef.txt', 'r')
+
+reponame="passy/Android-DirectoryChooser"
+f = open('logs\\AndroidDirChooser.txt', 'r')
+
 
 
 common_parse(reponame)
-check=checkGradleMaven()
-if check== "maven":
-    print "parser maven"
-else:
-    gradle_parse(f)
+tool=checkGradleMaven()
+if(tool=="maven"):
+    maven_parse(f)
+elif(tool=="gradle"):
+    gradle_parser(f)
+print ("PARSE END")

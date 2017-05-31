@@ -23,7 +23,7 @@ listNote=list()
 # build = t.build(repo.last_build_id)
 # print build.state
 
-f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
+
 
 
 #check gradle o maven
@@ -39,8 +39,8 @@ def checkGradleMaven():
 
 
 
-#dopo di che se identigfichiamo che si usa gradle si esegue quanto di seguito
-def gradle_parse():
+#dopo di che se identifichiamo che si usa gradle si esegue quanto di seguito
+def gradle_parse(f):
     # questo ciclo for lo dovremmo fare per tutti i logs associati ai jobs di una certa build
     # per ora leggiamo un file, ma poi dovremmo iterare su una stringa qulla che ritorna da t.log(job.log_id).body
     for line in f:
@@ -100,7 +100,6 @@ def gradle_parse():
         # :sample:compileDebugUnitTestSources (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
 
 
-
 # qui va la parte comune dove prendiamo
 #  nome progetto, il commit, la build, il tempo, quanti job, chi ha fatto il commit e tutte le informazioni che vogliamo
 #  anche dai file di configurazione ecc ecc
@@ -138,7 +137,7 @@ def common_parse(reponame):
 
 
 #se invece si usa maven
-def maven_parse():
+def maven_parse(f):
     # Leggo tutto il log
     for line in f:
         # Task gradle. i task sono rappresentati nella forma \r\r\rnomeTask\r\r\r:
@@ -160,12 +159,3 @@ def maven_parse():
             print str
             listaDipendenze.append(str)
 
-
-
-common_parse("pulse00/Twig-Eclipse-Plugin")
-tool=checkGradleMaven()
-if(tool=="maven"):
-    maven_parse()
-elif(tool=="gradle"):
-    gradle_parse()
-print ("PARSE END")
