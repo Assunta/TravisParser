@@ -8,6 +8,7 @@ def gradle_parser(f):
     listaTaskSkippati = list()
     listaErroriPrecedentiAiTask = list()
     listNote =list()
+    listaDipendenze=list()
     # questo ciclo for lo dovremmo fare per tutti i logs associati ai jobs di una certa build
     # per ora leggiamo un file, ma poi dovremmo iterare su una stringa qulla che ritorna da t.log(job.log_id).body
     for line in f:
@@ -17,7 +18,7 @@ def gradle_parser(f):
             listaTask.append(task)
             if re.match("(.)*UP-TO-DATE", line):
                 listaTaskUPDATE.append(line)
-            elif re.match("(.)*FAILED", line):
+            elif re.match("(.)*FAILED", line) or re.match("(.)*EXCEPTION", line):
                 listaTaskFailed.append(line)
             # espressione regolare per matchare messaggi del tipo Note: /example/picasso/PicassoSampleAdapter.java uses or overrides a deprecated API.
             # che cmq potrebbero essere informazioni interessanti
@@ -30,7 +31,10 @@ def gradle_parser(f):
         elif re.match("\A( )*>", line):  # and la build sappiamo che e' fallita
             print line
             listaMessErrore.append(listaTask[-1]+"\t"+line)
-
+        # nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
+        # sul buon esito della build. Esempio
+        #:assertReleaseNeeded FAILED
+        # >   Release is needed: false
 
         # a volte la build fallisce ancor prima che iniziano i task con messaggi di errore del tipo
         #    Error: Invalid - -abiarmeabi - v7a for the selected target.
@@ -38,6 +42,9 @@ def gradle_parser(f):
         elif re.match("\AError", line):
             print line
             listaErroriPrecedentiAiTask.append(line)
+        elif re.match("\ADownload", line):
+            listaDipendenze.append(line)
+
 
            # nella lista dei task possiamo distinguere anche tra task che appartengono a progetti diversi
             # (es in un progetto android ci potrebbe essere un modulo app, e un modulo library )
@@ -67,10 +74,10 @@ def gradle_parser(f):
     print "Progetti a cui appartengono i task\n"
     for m in modules:
         print m
-    # nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
-    # sul buon esito della build. Esempio
-    #:assertReleaseNeeded FAILED
-    # >   Release is needed: false
+    print "Dipendenze"
+    for d in listaDipendenze:
+        print d
+
 
 
 
