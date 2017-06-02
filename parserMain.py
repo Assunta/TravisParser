@@ -1,14 +1,15 @@
 from parserGeneral import *
 from parserGradle import *
+from parserMaven import maven_parser
 
-
-
-reponame="jakenjarvis/Android-OrmLiteContentProvider"
-f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
+# reponame="jakenjarvis/Android-OrmLiteContentProvider"
+# f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
 
 # reponame="pulse00/Twig-Eclipse-Plugin"
 # f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
 
+reponame="Assunta/example2"
+f = open('logs\\example2-6-173560799.txt', 'r')
 #
 # reponame="codecov/example-android"
 # f = open('logs\\example-android-48-67063849.txt', 'r')
@@ -33,7 +34,7 @@ def getBuildId(f):
 common_parse(reponame, getBuildId(f))
 tool=checkGradleMaven(f)
 if(tool=="maven"):
-    maven_parse(f)
+    maven_parser(f)
 elif(tool=="gradle"):
     gradle_parser(f)
 print ("PARSE END")

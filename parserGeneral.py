@@ -48,7 +48,6 @@ def checkGradleMaven(f):
 def common_parse(reponame, build_id):
     repo= t.repo(reponame)
     #TODO settare la giusta build, non la last
-    #TODO aggiungere lo stato della build
     # build= t.build(build_id)
     build=repo.last_build
     commit=build.commit
