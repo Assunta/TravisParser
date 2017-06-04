@@ -18,15 +18,27 @@ def maven_parser(f):
         #     print line
         #     listaTask.append(line)
         # espressione regolare per matchare le snapshot
-        if re.match("\A\[INFO\] Building ([^:])*SNAPSHOT", line) :
-            print line
-            listaSnapshot.append(Snapshot(line))
+        if re.match("\A\[INFO\] Building([^//])*SNAPSHOT", line):
+            # print line
+            listaSnapshot.append(Snapshot((line.split("[INFO] Building",1)[1]).strip()))
         elif re.match("\A\[INFO\] --- ",line):
-            print line
+            # in teoria questo controllo non dovrebbe servire perche' non si dovrebbe poter realizzare una situazione del genere in cui si eseguono goal senza aver dichiarato snapshot
+            # if len(listaSnapshot)==0:
+            #     listaSnapshot.append(Snapshot("no SNAPSHOT"))
             listaSnapshot[-1].addGoal(line.split("---")[1])
+        #espressione regolare per matchare il running di un test es # Running test ExampleTest
+        elif re.match("\ARunning (.)*Test(.*)", line):
+            # print line
+            listaSnapshot[-1].addTest(line)
+            #espressione per matchare il risultato di un test
+        elif re.match("\ATests run:", line):
+            # print line
+            if not re.match("(.)*Time elapsed:", line):
+                listaSnapshot[-1].addTest("Total Tests: \t")
+            listaSnapshot[-1].addTest(line)
         # espressione regolare per matchare gli errori che hanno portato al fallimento
         elif re.match("\A\[ERROR\]", line):
-            print line
+            # print line
             listaMessErrore.append(line)
         # espressione regolare per matchere i warning di maven. potrebbero esserci informazioni utili
         elif re.match("\A\[WARNING\]", line):
@@ -41,6 +53,17 @@ def maven_parser(f):
                 #print "***"+line
                 listaDipendenze.append(str)
 
-    #print str(len(listaSnapshot))
+    # nei log le snapshot appaiono duplicate, non ho capito perche'..
+    # quindi sono duplicate anche qui, pero' nella seconda replica fa anche i test, nella prima no
+
+    print("\n\n SNAPSHOT:")
     for s in listaSnapshot:
+        print s
+
+    print("\n\n DIPENDENZE:")
+    for s in listaDipendenze:
+        print s
+
+    print("\n\n ERROR:")
+    for s in listaMessErrore:
         print s

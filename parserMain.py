@@ -2,15 +2,19 @@ from parserGeneral import *
 from parserGradle import *
 from parserMaven import maven_parser
 
+
+
+#maven
+# reponame="springside/springside4"
+# f = open('logs\\springside4-442-153294230.txt', 'r')
+reponame="pulse00/Twig-Eclipse-Plugin"
+f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
+# reponame="Assunta/example2"
+# f = open('logs\\example2-6-173560799.txt', 'r')
+#
+#gradle
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
-
-# reponame="pulse00/Twig-Eclipse-Plugin"
-# f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
-
-reponame="Assunta/example2"
-f = open('logs\\example2-6-173560799.txt', 'r')
-#
 # reponame="codecov/example-android"
 # f = open('logs\\example-android-48-67063849.txt', 'r')
 

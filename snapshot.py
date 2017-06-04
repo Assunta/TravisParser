@@ -26,3 +26,6 @@ class Snapshot:
             str+="\n" +g
         str+="\n"+ self.test
         return str
+
+    def __eq__(self, other):
+        return self.nome==other.getNome()
