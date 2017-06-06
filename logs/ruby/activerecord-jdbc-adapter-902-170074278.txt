@@ -1,0 +1,414 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-0e94f8c-precise-production-2-worker-org-docker.travisci.net:afd460eb-a4bf-4b93-8416-1826197124f0
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 6e98417:travis:ruby
+startup: 665.014113ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 232334613
+Job id: 232334758
+travis-build version: 3f760567e
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (31.4 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 43%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 82%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             60% [2 libssl1.0.0 7,099 B/1,054 kB 1%]                                       100% [Working]              Fetched 2,634 kB in 0s (17.3 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0$ jdk_switcher use oraclejdk8
+Switching to Oracle JDK8 (java-8-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-8-oracle
+travis_fold:start:git.checkouttravis_time:start:0dd9fee4$ git clone --depth=50 --branch=1-3-stable https://github.com/jruby/activerecord-jdbc-adapter.git jruby/activerecord-jdbc-adapter
+Cloning into 'jruby/activerecord-jdbc-adapter'...
+remote: Counting objects: 946, done.[K
+remote: Compressing objects:   0% (1/698)   [Kremote: Compressing objects:   1% (7/698)   [Kremote: Compressing objects:   2% (14/698)   [Kremote: Compressing objects:   3% (21/698)   [Kremote: Compressing objects:   4% (28/698)   [Kremote: Compressing objects:   5% (35/698)   [Kremote: Compressing objects:   6% (42/698)   [Kremote: Compressing objects:   7% (49/698)   [Kremote: Compressing objects:   8% (56/698)   [Kremote: Compressing objects:   9% (63/698)   [Kremote: Compressing objects:  10% (70/698)   [Kremote: Compressing objects:  11% (77/698)   [Kremote: Compressing objects:  12% (84/698)   [Kremote: Compressing objects:  13% (91/698)   [Kremote: Compressing objects:  14% (98/698)   [Kremote: Compressing objects:  15% (105/698)   [Kremote: Compressing objects:  16% (112/698)   [Kremote: Compressing objects:  17% (119/698)   [Kremote: Compressing objects:  18% (126/698)   [Kremote: Compressing objects:  19% (133/698)   [Kremote: Compressing objects:  20% (140/698)   [Kremote: Compressing objects:  21% (147/698)   [Kremote: Compressing objects:  22% (154/698)   [Kremote: Compressing objects:  23% (161/698)   [Kremote: Compressing objects:  24% (168/698)   [Kremote: Compressing objects:  25% (175/698)   [Kremote: Compressing objects:  26% (182/698)   [Kremote: Compressing objects:  27% (189/698)   [Kremote: Compressing objects:  28% (196/698)   [Kremote: Compressing objects:  29% (203/698)   [Kremote: Compressing objects:  30% (210/698)   [Kremote: Compressing objects:  31% (217/698)   [Kremote: Compressing objects:  32% (224/698)   [Kremote: Compressing objects:  33% (231/698)   [Kremote: Compressing objects:  34% (238/698)   [Kremote: Compressing objects:  35% (245/698)   [Kremote: Compressing objects:  36% (252/698)   [Kremote: Compressing objects:  37% (259/698)   [Kremote: Compressing objects:  38% (266/698)   [Kremote: Compressing objects:  39% (273/698)   [Kremote: Compressing objects:  40% (280/698)   [Kremote: Compressing objects:  41% (287/698)   [Kremote: Compressing objects:  42% (294/698)   [Kremote: Compressing objects:  43% (301/698)   [Kremote: Compressing objects:  44% (308/698)   [Kremote: Compressing objects:  45% (315/698)   [Kremote: Compressing objects:  46% (322/698)   [Kremote: Compressing objects:  47% (329/698)   [Kremote: Compressing objects:  48% (336/698)   [Kremote: Compressing objects:  49% (343/698)   [Kremote: Compressing objects:  50% (349/698)   [Kremote: Compressing objects:  51% (356/698)   [Kremote: Compressing objects:  52% (363/698)   [Kremote: Compressing objects:  53% (370/698)   [Kremote: Compressing objects:  54% (377/698)   [Kremote: Compressing objects:  55% (384/698)   [Kremote: Compressing objects:  56% (391/698)   [Kremote: Compressing objects:  57% (398/698)   [Kremote: Compressing objects:  58% (405/698)   [Kremote: Compressing objects:  59% (412/698)   [Kremote: Compressing objects:  60% (419/698)   [Kremote: Compressing objects:  61% (426/698)   [Kremote: Compressing objects:  62% (433/698)   [Kremote: Compressing objects:  63% (440/698)   [Kremote: Compressing objects:  64% (447/698)   [Kremote: Compressing objects:  65% (454/698)   [Kremote: Compressing objects:  66% (461/698)   [Kremote: Compressing objects:  67% (468/698)   [Kremote: Compressing objects:  68% (475/698)   [Kremote: Compressing objects:  69% (482/698)   [Kremote: Compressing objects:  70% (489/698)   [Kremote: Compressing objects:  71% (496/698)   [Kremote: Compressing objects:  72% (503/698)   [Kremote: Compressing objects:  73% (510/698)   [Kremote: Compressing objects:  74% (517/698)   [Kremote: Compressing objects:  75% (524/698)   [Kremote: Compressing objects:  76% (531/698)   [Kremote: Compressing objects:  77% (538/698)   [Kremote: Compressing objects:  78% (545/698)   [Kremote: Compressing objects:  79% (552/698)   [Kremote: Compressing objects:  80% (559/698)   [Kremote: Compressing objects:  81% (566/698)   [Kremote: Compressing objects:  82% (573/698)   [Kremote: Compressing objects:  83% (580/698)   [Kremote: Compressing objects:  84% (587/698)   [Kremote: Compressing objects:  85% (594/698)   [Kremote: Compressing objects:  86% (601/698)   [Kremote: Compressing objects:  87% (608/698)   [Kremote: Compressing objects:  88% (615/698)   [Kremote: Compressing objects:  89% (622/698)   [Kremote: Compressing objects:  90% (629/698)   [Kremote: Compressing objects:  91% (636/698)   [Kremote: Compressing objects:  92% (643/698)   [Kremote: Compressing objects:  93% (650/698)   [Kremote: Compressing objects:  94% (657/698)   [Kremote: Compressing objects:  95% (664/698)   [Kremote: Compressing objects:  96% (671/698)   [Kremote: Compressing objects:  97% (678/698)   [Kremote: Compressing objects:  98% (685/698)   [Kremote: Compressing objects:  99% (692/698)   [Kremote: Compressing objects: 100% (698/698)   [Kremote: Compressing objects: 100% (698/698), done.[K
+Receiving objects:   0% (1/946)   Receiving objects:   1% (10/946)   Receiving objects:   2% (19/946)   Receiving objects:   3% (29/946)   Receiving objects:   4% (38/946)   Receiving objects:   5% (48/946)   Receiving objects:   6% (57/946)   Receiving objects:   7% (67/946)   Receiving objects:   8% (76/946)   Receiving objects:   9% (86/946)   Receiving objects:  10% (95/946)   Receiving objects:  11% (105/946)   Receiving objects:  12% (114/946)   Receiving objects:  13% (123/946)   Receiving objects:  14% (133/946)   Receiving objects:  15% (142/946)   Receiving objects:  16% (152/946)   Receiving objects:  17% (161/946)   Receiving objects:  18% (171/946)   Receiving objects:  19% (180/946)   Receiving objects:  20% (190/946)   Receiving objects:  21% (199/946)   Receiving objects:  22% (209/946)   Receiving objects:  23% (218/946)   Receiving objects:  24% (228/946)   Receiving objects:  25% (237/946)   Receiving objects:  26% (246/946)   Receiving objects:  27% (256/946)   Receiving objects:  28% (265/946)   Receiving objects:  29% (275/946)   Receiving objects:  30% (284/946)   Receiving objects:  31% (294/946)   Receiving objects:  32% (303/946)   Receiving objects:  33% (313/946)   Receiving objects:  34% (322/946)   Receiving objects:  35% (332/946)   Receiving objects:  36% (341/946)   Receiving objects:  37% (351/946)   Receiving objects:  38% (360/946)   Receiving objects:  39% (369/946)   Receiving objects:  40% (379/946)   Receiving objects:  41% (388/946)   Receiving objects:  42% (398/946)   Receiving objects:  43% (407/946)   Receiving objects:  44% (417/946)   Receiving objects:  45% (426/946)   Receiving objects:  46% (436/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  47% (445/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  48% (455/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  49% (464/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  50% (473/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  51% (483/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  52% (492/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  53% (502/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  54% (511/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  55% (521/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  56% (530/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  57% (540/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  58% (549/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  59% (559/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  60% (568/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  61% (578/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  62% (587/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  63% (596/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  64% (606/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  65% (615/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  66% (625/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  67% (634/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  68% (644/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  69% (653/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  70% (663/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  71% (672/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  72% (682/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  73% (691/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  74% (701/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  75% (710/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  76% (719/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  77% (729/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  78% (738/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  79% (748/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  80% (757/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  81% (767/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  82% (776/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  83% (786/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  84% (795/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  85% (805/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  86% (814/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  87% (824/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  88% (833/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  89% (842/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  90% (852/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  91% (861/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  92% (871/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  93% (880/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  94% (890/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  95% (899/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  96% (909/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  97% (918/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  98% (928/946), 5.61 MiB | 11.20 MiB/s   Receiving objects:  99% (937/946), 5.61 MiB | 11.20 MiB/s   remote: Total 946 (delta 322), reused 548 (delta 183), pack-reused 0[K
+Receiving objects: 100% (946/946), 5.61 MiB | 11.20 MiB/s   Receiving objects: 100% (946/946), 12.58 MiB | 11.20 MiB/s, done.
+Resolving deltas:   0% (0/322)   Resolving deltas:   1% (4/322)   Resolving deltas:   3% (10/322)   Resolving deltas:  12% (40/322)   Resolving deltas:  13% (42/322)   Resolving deltas:  15% (49/322)   Resolving deltas:  26% (85/322)   Resolving deltas:  30% (97/322)   Resolving deltas:  35% (113/322)   Resolving deltas:  37% (122/322)   Resolving deltas:  38% (124/322)   Resolving deltas:  39% (126/322)   Resolving deltas:  42% (136/322)   Resolving deltas:  43% (139/322)   Resolving deltas:  44% (142/322)   Resolving deltas:  45% (145/322)   Resolving deltas:  46% (151/322)   Resolving deltas:  47% (154/322)   Resolving deltas:  49% (159/322)   Resolving deltas:  53% (171/322)   Resolving deltas:  54% (174/322)   Resolving deltas:  57% (184/322)   Resolving deltas:  58% (188/322)   Resolving deltas:  59% (190/322)   Resolving deltas:  61% (198/322)   Resolving deltas:  65% (212/322)   Resolving deltas:  66% (213/322)   Resolving deltas:  68% (221/322)   Resolving deltas:  69% (224/322)   Resolving deltas:  70% (226/322)   Resolving deltas:  71% (229/322)   Resolving deltas:  72% (232/322)   Resolving deltas:  73% (236/322)   Resolving deltas:  74% (239/322)   Resolving deltas:  75% (242/322)   Resolving deltas:  76% (245/322)   Resolving deltas:  77% (249/322)   Resolving deltas:  78% (253/322)   Resolving deltas:  79% (256/322)   Resolving deltas:  81% (263/322)   Resolving deltas:  86% (278/322)   Resolving deltas:  88% (284/322)   Resolving deltas:  89% (287/322)   Resolving deltas:  90% (290/322)   Resolving deltas:  91% (296/322)   Resolving deltas:  92% (298/322)   Resolving deltas:  93% (301/322)   Resolving deltas:  94% (304/322)   Resolving deltas:  95% (308/322)   Resolving deltas:  96% (310/322)   Resolving deltas:  97% (314/322)   Resolving deltas:  99% (320/322)   Resolving deltas: 100% (322/322)   Resolving deltas: 100% (322/322), done.
+Checking connectivity... done.
+
+travis_time:end:0dd9fee4:start=1494845558051981930,finish=1494845560082545935,duration=2030564005$ cd jruby/activerecord-jdbc-adapter
+$ git checkout -qf f8bdf1d29385d13f4ee569975307f3e18392bf67
+travis_fold:end:git.checkouttravis_fold:start:mariadbInstalling MariaDB version 10.1
+mysql stop/waiting
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.BfgrW71PET --trustdb-name /etc/apt/trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d//apt.postgresql.org.gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+gpg: requesting key 1BB943DB from hkp server keyserver.ubuntu.com
+gpg: key 1BB943DB: public key "MariaDB Package Signing Key <package-signing-key@mariadb.org>" imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 1
+gpg:               imported: 1
+travis_time:start:013ece1a$ sudo apt-get install -y -o Dpkg::Options::='--force-confnew' mariadb-server mariadb-server-10.1 libmariadbclient-dev
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 66%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  galera-3 libaio1 libjemalloc1 libmariadbclient18 libmysqlclient18
+  mariadb-client-10.1 mariadb-client-core-10.1 mariadb-common
+  mariadb-server-core-10.1 mysql-common socat
+Suggested packages:
+  mailx mariadb-test tinyca
+The following packages will be REMOVED:
+  libmysqlclient-dev mysql-client-5.5 mysql-client-core-5.5 mysql-server
+  mysql-server-5.5 mysql-server-core-5.5
+The following NEW packages will be installed:
+  galera-3 libaio1 libjemalloc1 libmariadbclient-dev libmariadbclient18
+  mariadb-client-10.1 mariadb-client-core-10.1 mariadb-common mariadb-server
+  mariadb-server-10.1 mariadb-server-core-10.1 socat
+The following packages will be upgraded:
+  libmysqlclient18 mysql-common
+2 upgraded, 12 newly installed, 6 to remove and 267 not upgraded.
+Need to get 53.4 MB of archives.
+After this operation, 92.5 MB of additional disk space will be used.
+0% [Working]            Get:1 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mysql-common all 10.1.23+maria-1~precise [8,908 B]
+            0% [Waiting for headers] [1 mysql-common 8,440 B/8,908 B 95%]                                                             0% [Waiting for headers]                        Get:2 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mariadb-common all 10.1.23+maria-1~precise [3,292 B]
+                        0% [Waiting for headers] [2 mariadb-common 3,292 B/3,292 B 100%]                                                                0% [Waiting for headers]                        Get:3 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main galera-3 amd64 25.3.20-precise [10.7 MB]
+                        0% [Waiting for headers] [3 galera-3 0 B/10.7 MB 0%]                                                    Get:4 http://us.archive.ubuntu.com/ubuntu/ precise/main libaio1 amd64 0.3.109-2ubuntu1 [6,396 B]
+                                                    0% [4 libaio1 6,396 B/6,396 B 100%] [3 galera-3 10.2 kB/10.7 MB 0%]                                                                   0% [3 galera-3 10.2 kB/10.7 MB 0%]                                  Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/universe socat amd64 1.7.1.3-1.2 [366 kB]
+                                  0% [5 socat 6,902 B/366 kB 2%] [3 galera-3 10.2 kB/10.7 MB 0%]                                                              1% [3 galera-3 169 kB/10.7 MB 2%]                                 13% [3 galera-3 6,535 kB/10.7 MB 61%]                                     21% [Waiting for headers]                         Get:6 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main libmysqlclient18 amd64 10.1.23+maria-1~precise [2,964 B]
+                         21% [6 libmysqlclient18 2,964 B/2,964 B 100%]                                             21% [Waiting for headers]                         Get:7 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main libmariadbclient18 amd64 10.1.23+maria-1~precise [938 kB]
+                         21% [7 libmariadbclient18 9,017 B/938 kB 1%]                                            23% [Working]             Get:8 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mariadb-client-core-10.1 amd64 10.1.23+maria-1~precise [1,910 kB]
+             23% [8 mariadb-client-core-10.1 7,502 B/1,910 kB 0%]                                                    26% [Working]             Get:9 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mariadb-client-10.1 amd64 10.1.23+maria-1~precise [6,516 kB]
+             26% [9 mariadb-client-10.1 0 B/6,516 kB 0%]                                           38% [Working]             Get:10 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main libjemalloc1 amd64 3.6.0-3~precise [94.8 kB]
+             38% [10 libjemalloc1 17.5 kB/94.8 kB 18%]                                         38% [Working]             Get:11 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mariadb-server-core-10.1 amd64 10.1.23+maria-1~precise [6,366 kB]
+             38% [11 mariadb-server-core-10.1 4,988 B/6,366 kB 0%]                                                     50% [Working]             Get:12 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mariadb-server-10.1 amd64 10.1.23+maria-1~precise [24.4 MB]
+             50% [12 mariadb-server-10.1 0 B/24.4 MB 0%]                                           72% [12 mariadb-server-10.1 11.3 MB/24.4 MB 47%]88% [12 mariadb-server-10.1 19.9 MB/24.4 MB 82%]                                                96% [Working]             Get:13 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main libmariadbclient-dev amd64 10.1.23+maria-1~precise [2,157 kB]
+             96% [13 libmariadbclient-dev 19.9 kB/2,157 kB 1%]                                                 100% [Working]              Get:14 http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/ precise/main mariadb-server all 10.1.23+maria-1~precise [2,998 B]
+100% [Working]              Fetched 53.4 MB in 2s (19.0 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Removing mysql-server ...
+Removing mysql-server-5.5 ...
+Removing mysql-server-core-5.5 ...
+dpkg: mysql-client-core-5.5: dependency problems, but removing anyway as you requested:
+ mysql-client-5.5 depends on mysql-client-core-5.5.
+Removing mysql-client-core-5.5 ...
+dpkg: libmysqlclient-dev: dependency problems, but removing anyway as you requested:
+ libmysql++-dev depends on libmysqlclient-dev.
+Removing libmysqlclient-dev ...
+dpkg: mysql-client-5.5: dependency problems, but removing anyway as you requested:
+ mysql-client depends on mysql-client-5.5.
+Removing mysql-client-5.5 ...
+Processing triggers for man-db ...
+Selecting previously unselected package libaio1.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71131 files and directories currently installed.)
+Unpacking libaio1 (from .../libaio1_0.3.109-2ubuntu1_amd64.deb) ...
+Preparing to replace mysql-common 5.5.41-0ubuntu0.12.04.1 (using .../mysql-common_10.1.23+maria-1~precise_all.deb) ...
+Unpacking replacement mysql-common ...
+Selecting previously unselected package mariadb-common.
+Unpacking mariadb-common (from .../mariadb-common_10.1.23+maria-1~precise_all.deb) ...
+Selecting previously unselected package galera-3.
+Unpacking galera-3 (from .../galera-3_25.3.20-precise_amd64.deb) ...
+Preparing to replace libmysqlclient18 5.5.41-0ubuntu0.12.04.1 (using .../libmysqlclient18_10.1.23+maria-1~precise_amd64.deb) ...
+Unpacking replacement libmysqlclient18 ...
+Selecting previously unselected package libmariadbclient18.
+Unpacking libmariadbclient18 (from .../libmariadbclient18_10.1.23+maria-1~precise_amd64.deb) ...
+Selecting previously unselected package mariadb-client-core-10.1.
+Unpacking mariadb-client-core-10.1 (from .../mariadb-client-core-10.1_10.1.23+maria-1~precise_amd64.deb) ...
+Selecting previously unselected package mariadb-client-10.1.
+Unpacking mariadb-client-10.1 (from .../mariadb-client-10.1_10.1.23+maria-1~precise_amd64.deb) ...
+Selecting previously unselected package libjemalloc1.
+Unpacking libjemalloc1 (from .../libjemalloc1_3.6.0-3~precise_amd64.deb) ...
+Selecting previously unselected package mariadb-server-core-10.1.
+Unpacking mariadb-server-core-10.1 (from .../mariadb-server-core-10.1_10.1.23+maria-1~precise_amd64.deb) ...
+Selecting previously unselected package socat.
+Unpacking socat (from .../socat_1.7.1.3-1.2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up mysql-common (10.1.23+maria-1~precise) ...
+
+Configuration file `/etc/mysql/my.cnf'
+ ==> Modified (by you or by a script) since installation.
+ ==> Package distributor has shipped an updated version.
+ ==> Using new file as you requested.
+Installing new version of config file /etc/mysql/my.cnf ...
+Setting up mariadb-common (10.1.23+maria-1~precise) ...
+Selecting previously unselected package mariadb-server-10.1.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71332 files and directories currently installed.)
+Unpacking mariadb-server-10.1 (from .../mariadb-server-10.1_10.1.23+maria-1~precise_amd64.deb) ...
+Selecting previously unselected package libmariadbclient-dev.
+Unpacking libmariadbclient-dev (from .../libmariadbclient-dev_10.1.23+maria-1~precise_amd64.deb) ...
+Selecting previously unselected package mariadb-server.
+Unpacking mariadb-server (from .../mariadb-server_10.1.23+maria-1~precise_all.deb) ...
+Processing triggers for man-db ...
+Setting up libaio1 (0.3.109-2ubuntu1) ...
+Setting up galera-3 (25.3.20-precise) ...
+Setting up libjemalloc1 (3.6.0-3~precise) ...
+Setting up socat (1.7.1.3-1.2) ...
+Setting up libmysqlclient18 (10.1.23+maria-1~precise) ...
+Setting up libmariadbclient18 (10.1.23+maria-1~precise) ...
+Setting up mariadb-client-core-10.1 (10.1.23+maria-1~precise) ...
+Setting up mariadb-client-10.1 (10.1.23+maria-1~precise) ...
+Setting up mariadb-server-core-10.1 (10.1.23+maria-1~precise) ...
+Setting up mariadb-server-10.1 (10.1.23+maria-1~precise) ...
+Installing new version of config file /etc/logrotate.d/mysql-server ...
+Installing new version of config file /etc/mysql/conf.d/mysqld_safe_syslog.cnf ...
+Installing new version of config file /etc/mysql/debian-start ...
+Installing new version of config file /etc/apparmor.d/usr.sbin.mysqld ...
+ * Stopping MariaDB database server mysqld       G G[ OK ]
+ * Starting MariaDB database server mysqld       G G[ OK ]
+ * Checking for corrupt, not cleanly closed and upgrade needing tables.
+Setting up libmariadbclient-dev (10.1.23+maria-1~precise) ...
+Setting up mariadb-server (10.1.23+maria-1~precise) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+
+travis_time:end:013ece1a:start=1494845566182971783,finish=1494845585269346552,duration=19086374769Starting MariaDB v10.1
+travis_time:start:177e12ab$ sudo service mysql start
+mysql start/running, process 2850
+
+travis_time:end:177e12ab:start=1494845585276206029,finish=1494845585348154216,duration=71948187$ mysql --version
+mysql  Ver 15.1 Distrib 10.1.23-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+travis_fold:end:mariadb
+Setting environment variables from .travis.yml
+$ export DB=mariadb
+$ export PREPARED_STATEMENTS=true
+
+travis_fold:start:rvmtravis_time:start:04983480$ rvm use jruby-1.7.24 --install --binary --fuzzy
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+jruby-1.7.24 is not installed - installing.
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+Searching for binary rubies, this might take some time.
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+Found remote file https://s3.amazonaws.com/jruby.org/downloads/1.7.24/jruby-bin-1.7.24.tar.gz
+Checking requirements for ubuntu.
+Requirements installation successful.
+jruby-1.7.24 - #configure
+Unknown ruby string (do not know how to handle): jruby-1.7.24.
+jruby-1.7.24 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 46 20.6M   46 9777k    0     0  52.8M      0 --:--:-- --:--:-- --:--:-- 53.0M100 20.6M  100 20.6M    0     0  64.3M      0 --:--:-- --:--:-- --:--:-- 64.5M
+No checksum for downloaded archive, recording checksum in user configuration.
+jruby-1.7.24 - #validate archive
+jruby-1.7.24 - #extract
+jruby-1.7.24 - #validate binary
+jruby-1.7.24 - #setup
+jruby-1.7.24 - #gemset created /home/travis/.rvm/gems/jruby-1.7.24@global
+jruby-1.7.24 - #importing gemset /home/travis/.rvm/gemsets/jruby/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-.
+jruby-1.7.24 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+jruby-1.7.24 - #uninstalling gem rubygems-bundler-1.4.4|/.
+jruby-1.7.24 - #gemset created /home/travis/.rvm/gems/jruby-1.7.24
+jruby-1.7.24 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+jruby-1.7.24 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/jruby-1.7.24
+
+travis_time:end:04983480:start=1494845592254354668,finish=1494845682268583800,duration=90014229132travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/gemfiles/rails41.gemfile
+$ java -Xmx32m -version
+java version "1.8.0_31"
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.8.0_31
+$ ruby --version
+jruby 1.7.24 (1.9.3p551) 2016-01-20 bd68d85 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_31-b13 +jit [linux-amd64]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.14.6
+$ gem --version
+2.4.8
+travis_fold:start:before_installtravis_time:start:18c0895d$ ((jruby -v | grep 1.8.7) && jruby --1.9 -S gem update --system 2.1.11) || true
+
+travis_time:end:18c0895d:start=1494845689019572879,finish=1494845689180532511,duration=160959632travis_fold:end:before_installtravis_fold:start:install.bundlertravis_time:start:01902e07$ bundle install --without development
+Fetching gem metadata from https://rubygems.org/........
+Fetching version metadata from https://rubygems.org/.
+Installing rake 10.4.2
+Installing i18n 0.8.1
+Installing json 1.8.6 (java)
+Installing minitest 5.10.1
+Installing thread_safe 0.3.6 (java)
+Installing builder 3.2.3
+Installing arel 5.0.1.20140414130214
+Using bundler 1.14.6
+Installing bcrypt-ruby 3.0.1 (java)
+Installing docile 1.1.5
+Installing metaclass 0.0.4
+Installing simplecov-html 0.10.0
+Installing test-unit 2.5.5
+Installing tzinfo 1.2.3
+Installing appraisal 0.5.2
+Installing mocha 0.13.3
+Installing simplecov 0.14.1
+Installing test-unit-context 0.5.1
+Installing activesupport 4.1.16
+Installing activemodel 4.1.16
+Installing activerecord 4.1.16
+Bundle complete! 12 Gemfile dependencies, 21 gems now installed.
+Gems in the group development were not installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+travis_time:end:01902e07:start=1494845689186988392,finish=1494845709531431103,duration=20344442711travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:00040888$ export JRUBY_OPTS="--server $JRUBY_OPTS"
+
+travis_time:end:00040888:start=1494845709538664962,finish=1494845709544174905,duration=5509943travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:1be5f97a$ mysql --version
+mysql  Ver 15.1 Distrib 10.1.23-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+
+travis_time:end:1be5f97a:start=1494845709550696543,finish=1494845709560282008,duration=9585465travis_fold:end:before_script.2travis_time:start:24e2e300$ bundle exec rake test_$DB
+Creating MySQL (test) database: arjdbc_test
+Using ActiveRecord::VERSION = 4.1.16
+ActiveRecord::JDBCError: Trying to connect with ssl, but ssl not enabled in the server
+          init_connection at arjdbc/jdbc/RubyJdbcConnection.java:463
+               initialize at /home/travis/build/jruby/activerecord-jdbc-adapter/lib/arjdbc/jdbc/connection.rb:15
+               initialize at /home/travis/build/jruby/activerecord-jdbc-adapter/lib/arjdbc/jdbc/adapter.rb:76
+                      new at /home/travis/build/jruby/activerecord-jdbc-adapter/lib/arjdbc/jdbc/adapter.rb:44
+          jdbc_connection at /home/travis/build/jruby/activerecord-jdbc-adapter/lib/arjdbc/jdbc/connection_methods.rb:12
+         mysql_connection at /home/travis/build/jruby/activerecord-jdbc-adapter/lib/arjdbc/mysql/connection_methods.rb:76
+       mariadb_connection at /home/travis/build/jruby/activerecord-jdbc-adapter/lib/arjdbc/mysql/connection_methods.rb:95
+           new_connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:435
+  checkout_new_connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:445
+       acquire_connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:416
+                 checkout at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:351
+          mon_synchronize at /home/travis/.rvm/rubies/jruby-1.7.24/lib/ruby/1.9/monitor.rb:211
+                 checkout at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:350
+               connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:265
+          mon_synchronize at /home/travis/.rvm/rubies/jruby-1.7.24/lib/ruby/1.9/monitor.rb:211
+               connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:264
+      retrieve_connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_adapters/abstract/connection_pool.rb:541
+      retrieve_connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_handling.rb:113
+               connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/connection_handling.rb:87
+               connection at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/migration.rb:642
+           method_missing at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/migration.rb:655
+            say_with_time at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/migration.rb:628
+                  measure at /home/travis/.rvm/rubies/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:280
+            say_with_time at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/migration.rb:628
+           method_missing at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/migration.rb:648
+      MysqlSchemaDumpTest at /home/travis/build/jruby/activerecord-jdbc-adapter/test/db/mysql/schema_dump_test.rb:47
+            instance_eval at org/jruby/RubyBasicObject.java:1594
+                   define at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/schema.rb:42
+                   define at /home/travis/.rvm/gems/jruby-1.7.24/gems/activerecord-4.1.16/lib/active_record/schema.rb:62
+      MysqlSchemaDumpTest at /home/travis/build/jruby/activerecord-jdbc-adapter/test/db/mysql/schema_dump_test.rb:46
+                   (root) at /home/travis/build/jruby/activerecord-jdbc-adapter/test/db/mysql/schema_dump_test.rb:5
+                  require at org/jruby/RubyKernel.java:1040
+                  require at /home/travis/.rvm/gems/jruby-1.7.24/gems/activesupport-4.1.16/lib/active_support/dependencies.rb:247
+          load_dependency at /home/travis/.rvm/gems/jruby-1.7.24/gems/activesupport-4.1.16/lib/active_support/dependencies.rb:232
+                  require at /home/travis/.rvm/gems/jruby-1.7.24/gems/activesupport-4.1.16/lib/active_support/dependencies.rb:247
+                   (root) at /home/travis/.rvm/gems/jruby-1.7.24/gems/rake-10.4.2/lib/rake/rake_test_loader.rb:15
+                   select at org/jruby/RubyArray.java:2470
+                   (root) at /home/travis/.rvm/gems/jruby-1.7.24/gems/rake-10.4.2/lib/rake/rake_test_loader.rb:4
+rake aborted!
+SignalException: 1
+/home/travis/.rvm/gems/jruby-1.7.24/bin/jruby_executable_hooks:15:in `(root)'
+Tasks: TOP => test_mariadb
+(See full trace by running task with --trace)
+
+travis_time:end:24e2e300:start=1494845709567259927,finish=1494845724564120246,duration=14996860319
+The command "bundle exec rake test_$DB" exited with 1.
+
+Done. Your build exited with 1.

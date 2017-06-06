@@ -1,0 +1,2062 @@
+travis_fold:start:worker_infoWorker information
+hostname: production-1-worker-org-c-2-gce:5072cd8d-f0f5-4690-b1f0-12af5119e91e
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-8875d75c-a4af-4229-ac54-0a1d4d00afd9:travis-ci-sugilite-trusty-1480960799
+startup: 21.332312136s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 239841836
+Job id: 239841843
+travis-build version: 4183c5148
+Build image provisioning date and time
+Mon Dec  5 18:47:20 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-51-generic
+Cookbooks Version
+998099c https://github.com/travis-ci/travis-cookbooks/tree/998099c
+git version
+git version 2.11.0
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.73
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.1.0
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+jruby-9.1.2.0
+ruby-1.9.3-p551
+ruby-2.0.0-p648
+ruby-2.1.10
+ruby-2.2.5
+ruby-2.3.1
+Pre-installed Node.js versions
+iojs-v1.6
+iojs-v1.6.4
+v0.10
+v0.10.40
+v0.11.16
+v0.12.2
+v0.12.7
+v0.6.21
+v0.8.28
+v4.1.2
+v4.6.2
+v6.9.1
+Pre-installed Go versions
+1.2.2
+1.3.3
+1.4.3
+1.5.4
+1.6.3
+1.7
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Pre-installed PostgreSQL versions
+9.2.19
+9.3.15
+9.4.10
+9.5.5
+9.6.1
+Redis version
+redis-server 3.0.6
+MongoDB version
+MongoDB 3.2.11
+RabbitMQ Version
+3.6.6
+Installed Firefox version
+firefox 38.4.0esr
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/maven
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-51-generic", arch: "amd64", family: "unix"
+gradle version
+
+------------------------------------------------------------
+Gradle 2.13
+------------------------------------------------------------
+
+Build time:   2016-04-25 04:10:10 UTC
+Build number: none
+Revision:     3b427b1481e46232107303c90be7b05079b05b1c
+
+Groovy:       2.4.4
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_111 (Oracle Corporation 25.111-b14)
+OS:           Linux 4.4.0-51-generic amd64
+
+kerl list installations
+17.0
+17.1
+17.3
+17.4
+17.5
+18.0
+18.1
+18.2
+18.2.1
+R14B02
+R14B03
+R14B04
+R15B
+R15B01
+R15B02
+R15B03
+R16B
+R16B01
+R16B02
+R16B03
+R16B03-1
+kiex list
+
+kiex elixirs
+
+   elixir-1.0.3
+=* elixir-1.0.4
+
+# => - current
+# =* - current && default
+#  * - default
+
+rebar --version
+rebar 2.6.4 17 20160831_145136 git 2.6.4-dirty
+lein version
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_111 Java HotSpot(TM) 64-Bit Server VM
+perlbrew list
+  5.8 (5.8.8)
+  5.10 (5.10.1)
+  5.12 (5.12.5)
+  5.14 (5.14.4)
+  5.16 (5.16.3)
+  5.18 (5.18.4)
+  5.20 (5.20.3)
+  5.20-extras (5.20.3)
+  5.20-shrplib (5.20.3)
+  5.20.3
+  5.22 (5.22.0)
+  5.22-extras (5.22.0)
+  5.22-shrplib (5.22.0)
+  5.22.0
+phpenv versions
+  system
+  5.4
+  5.4.45
+  5.5.37
+  5.6
+* 5.6.24 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.7
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.2.0 2016-07-19 01:28:52
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:08db45f8$ git clone --depth=5 https://github.com/rapid7/metasploit-framework.git rapid7/metasploit-framework
+Cloning into 'rapid7/metasploit-framework'...
+remote: Counting objects: 9915, done.[K
+remote: Compressing objects:   0% (1/8455)   [Kremote: Compressing objects:   1% (85/8455)   [Kremote: Compressing objects:   2% (170/8455)   [Kremote: Compressing objects:   3% (254/8455)   [Kremote: Compressing objects:   4% (339/8455)   [Kremote: Compressing objects:   5% (423/8455)   [Kremote: Compressing objects:   6% (508/8455)   [Kremote: Compressing objects:   7% (592/8455)   [Kremote: Compressing objects:   8% (677/8455)   [Kremote: Compressing objects:   9% (761/8455)   [Kremote: Compressing objects:  10% (846/8455)   [Kremote: Compressing objects:  11% (931/8455)   [Kremote: Compressing objects:  12% (1015/8455)   [Kremote: Compressing objects:  13% (1100/8455)   [Kremote: Compressing objects:  14% (1184/8455)   [Kremote: Compressing objects:  15% (1269/8455)   [Kremote: Compressing objects:  16% (1353/8455)   [Kremote: Compressing objects:  17% (1438/8455)   [Kremote: Compressing objects:  18% (1522/8455)   [Kremote: Compressing objects:  19% (1607/8455)   [Kremote: Compressing objects:  20% (1691/8455)   [Kremote: Compressing objects:  21% (1776/8455)   [Kremote: Compressing objects:  22% (1861/8455)   [Kremote: Compressing objects:  23% (1945/8455)   [Kremote: Compressing objects:  24% (2030/8455)   [Kremote: Compressing objects:  25% (2114/8455)   [Kremote: Compressing objects:  26% (2199/8455)   [Kremote: Compressing objects:  27% (2283/8455)   [Kremote: Compressing objects:  28% (2368/8455)   [Kremote: Compressing objects:  29% (2452/8455)   [Kremote: Compressing objects:  30% (2537/8455)   [Kremote: Compressing objects:  31% (2622/8455)   [Kremote: Compressing objects:  32% (2706/8455)   [Kremote: Compressing objects:  33% (2791/8455)   [Kremote: Compressing objects:  34% (2875/8455)   [Kremote: Compressing objects:  35% (2960/8455)   [Kremote: Compressing objects:  36% (3044/8455)   [Kremote: Compressing objects:  37% (3129/8455)   [Kremote: Compressing objects:  38% (3213/8455)   [Kremote: Compressing objects:  39% (3298/8455)   [Kremote: Compressing objects:  40% (3382/8455)   [Kremote: Compressing objects:  41% (3467/8455)   [Kremote: Compressing objects:  42% (3552/8455)   [Kremote: Compressing objects:  43% (3636/8455)   [Kremote: Compressing objects:  44% (3721/8455)   [Kremote: Compressing objects:  45% (3805/8455)   [Kremote: Compressing objects:  46% (3890/8455)   [Kremote: Compressing objects:  47% (3974/8455)   [Kremote: Compressing objects:  48% (4059/8455)   [Kremote: Compressing objects:  49% (4143/8455)   [Kremote: Compressing objects:  50% (4228/8455)   [Kremote: Compressing objects:  51% (4313/8455)   [Kremote: Compressing objects:  52% (4397/8455)   [Kremote: Compressing objects:  53% (4482/8455)   [Kremote: Compressing objects:  54% (4566/8455)   [Kremote: Compressing objects:  55% (4651/8455)   [Kremote: Compressing objects:  56% (4735/8455)   [Kremote: Compressing objects:  57% (4820/8455)   [Kremote: Compressing objects:  58% (4904/8455)   [Kremote: Compressing objects:  59% (4989/8455)   [Kremote: Compressing objects:  60% (5073/8455)   [Kremote: Compressing objects:  61% (5158/8455)   [Kremote: Compressing objects:  62% (5243/8455)   [Kremote: Compressing objects:  62% (5250/8455)   [Kremote: Compressing objects:  63% (5327/8455)   [Kremote: Compressing objects:  64% (5412/8455)   [Kremote: Compressing objects:  65% (5496/8455)   [Kremote: Compressing objects:  66% (5581/8455)   [Kremote: Compressing objects:  67% (5665/8455)   [Kremote: Compressing objects:  68% (5750/8455)   [Kremote: Compressing objects:  69% (5834/8455)   [Kremote: Compressing objects:  70% (5919/8455)   [Kremote: Compressing objects:  71% (6004/8455)   [Kremote: Compressing objects:  72% (6088/8455)   [Kremote: Compressing objects:  73% (6173/8455)   [Kremote: Compressing objects:  74% (6257/8455)   [Kremote: Compressing objects:  75% (6342/8455)   [Kremote: Compressing objects:  76% (6426/8455)   [Kremote: Compressing objects:  77% (6511/8455)   [Kremote: Compressing objects:  78% (6595/8455)   [Kremote: Compressing objects:  79% (6680/8455)   [Kremote: Compressing objects:  80% (6764/8455)   [Kremote: Compressing objects:  81% (6849/8455)   [Kremote: Compressing objects:  82% (6934/8455)   [Kremote: Compressing objects:  83% (7018/8455)   [Kremote: Compressing objects:  84% (7103/8455)   [Kremote: Compressing objects:  85% (7187/8455)   [Kremote: Compressing objects:  86% (7272/8455)   [Kremote: Compressing objects:  87% (7356/8455)   [Kremote: Compressing objects:  88% (7441/8455)   [Kremote: Compressing objects:  89% (7525/8455)   [Kremote: Compressing objects:  90% (7610/8455)   [Kremote: Compressing objects:  91% (7695/8455)   [Kremote: Compressing objects:  92% (7779/8455)   [Kremote: Compressing objects:  93% (7864/8455)   [Kremote: Compressing objects:  94% (7948/8455)   [Kremote: Compressing objects:  95% (8033/8455)   [Kremote: Compressing objects:  96% (8117/8455)   [Kremote: Compressing objects:  97% (8202/8455)   [Kremote: Compressing objects:  98% (8286/8455)   [Kremote: Compressing objects:  99% (8371/8455)   [Kremote: Compressing objects: 100% (8455/8455)   [Kremote: Compressing objects: 100% (8455/8455), done.[K
+Receiving objects:   0% (1/9915)   Receiving objects:   1% (100/9915)   Receiving objects:   2% (199/9915)   Receiving objects:   3% (298/9915)   Receiving objects:   4% (397/9915)   Receiving objects:   5% (496/9915)   Receiving objects:   6% (595/9915)   Receiving objects:   7% (695/9915)   Receiving objects:   8% (794/9915)   Receiving objects:   9% (893/9915)   Receiving objects:  10% (992/9915)   Receiving objects:  11% (1091/9915)   Receiving objects:  12% (1190/9915)   Receiving objects:  13% (1289/9915)   Receiving objects:  14% (1389/9915)   Receiving objects:  15% (1488/9915)   Receiving objects:  16% (1587/9915)   Receiving objects:  17% (1686/9915)   Receiving objects:  18% (1785/9915)   Receiving objects:  19% (1884/9915)   Receiving objects:  20% (1983/9915)   Receiving objects:  21% (2083/9915)   Receiving objects:  22% (2182/9915)   Receiving objects:  23% (2281/9915)   Receiving objects:  24% (2380/9915)   Receiving objects:  25% (2479/9915)   Receiving objects:  26% (2578/9915)   Receiving objects:  27% (2678/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  28% (2777/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  29% (2876/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  30% (2975/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  31% (3074/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  32% (3173/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  33% (3272/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  34% (3372/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  35% (3471/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  36% (3570/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  37% (3669/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  38% (3768/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  39% (3867/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  40% (3966/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  41% (4066/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  42% (4165/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  43% (4264/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  44% (4363/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  45% (4462/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  46% (4561/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  47% (4661/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  48% (4760/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  49% (4859/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  50% (4958/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  51% (5057/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  52% (5156/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  53% (5255/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  54% (5355/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  55% (5454/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  56% (5553/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  57% (5652/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  58% (5751/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  59% (5850/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  60% (5949/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  61% (6049/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  62% (6148/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  63% (6247/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  64% (6346/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  65% (6445/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  66% (6544/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  67% (6644/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  67% (6670/9915), 10.71 MiB | 21.42 MiB/s   Receiving objects:  68% (6743/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  69% (6842/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  70% (6941/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  71% (7040/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  72% (7139/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  73% (7238/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  74% (7338/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  75% (7437/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  76% (7536/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  77% (7635/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  78% (7734/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  79% (7833/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  80% (7932/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  81% (8032/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  82% (8131/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  83% (8230/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  84% (8329/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  85% (8428/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  86% (8527/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  87% (8627/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  88% (8726/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  89% (8825/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  90% (8924/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  91% (9023/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  92% (9122/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  93% (9221/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  94% (9321/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  95% (9420/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  96% (9519/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  97% (9618/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  98% (9717/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects:  99% (9816/9915), 20.51 MiB | 20.50 MiB/s   remote: Total 9915 (delta 1574), reused 4221 (delta 897), pack-reused 0[K
+Receiving objects: 100% (9915/9915), 20.51 MiB | 20.50 MiB/s   Receiving objects: 100% (9915/9915), 25.14 MiB | 20.50 MiB/s, done.
+Resolving deltas:   0% (0/1574)   Resolving deltas:   1% (17/1574)   Resolving deltas:   2% (34/1574)   Resolving deltas:   3% (48/1574)   Resolving deltas:   4% (63/1574)   Resolving deltas:   5% (91/1574)   Resolving deltas:   6% (95/1574)   Resolving deltas:   7% (113/1574)   Resolving deltas:   8% (126/1574)   Resolving deltas:   9% (142/1574)   Resolving deltas:  10% (158/1574)   Resolving deltas:  11% (174/1574)   Resolving deltas:  12% (189/1574)   Resolving deltas:  13% (206/1574)   Resolving deltas:  14% (227/1574)   Resolving deltas:  15% (240/1574)   Resolving deltas:  16% (255/1574)   Resolving deltas:  17% (272/1574)   Resolving deltas:  19% (302/1574)   Resolving deltas:  20% (317/1574)   Resolving deltas:  21% (331/1574)   Resolving deltas:  22% (347/1574)   Resolving deltas:  23% (363/1574)   Resolving deltas:  24% (389/1574)   Resolving deltas:  25% (394/1574)   Resolving deltas:  26% (410/1574)   Resolving deltas:  27% (425/1574)   Resolving deltas:  28% (441/1574)   Resolving deltas:  30% (476/1574)   Resolving deltas:  31% (491/1574)   Resolving deltas:  32% (505/1574)   Resolving deltas:  33% (521/1574)   Resolving deltas:  34% (536/1574)   Resolving deltas:  35% (553/1574)   Resolving deltas:  36% (567/1574)   Resolving deltas:  37% (583/1574)   Resolving deltas:  38% (599/1574)   Resolving deltas:  39% (614/1574)   Resolving deltas:  40% (633/1574)   Resolving deltas:  41% (646/1574)   Resolving deltas:  42% (662/1574)   Resolving deltas:  44% (707/1574)   Resolving deltas:  45% (716/1574)   Resolving deltas:  46% (725/1574)   Resolving deltas:  47% (740/1574)   Resolving deltas:  48% (757/1574)   Resolving deltas:  49% (775/1574)   Resolving deltas:  50% (787/1574)   Resolving deltas:  51% (803/1574)   Resolving deltas:  52% (819/1574)   Resolving deltas:  53% (835/1574)   Resolving deltas:  54% (850/1574)   Resolving deltas:  55% (866/1574)   Resolving deltas:  56% (882/1574)   Resolving deltas:  57% (898/1574)   Resolving deltas:  58% (913/1574)   Resolving deltas:  59% (931/1574)   Resolving deltas:  60% (947/1574)   Resolving deltas:  61% (962/1574)   Resolving deltas:  62% (976/1574)   Resolving deltas:  63% (993/1574)   Resolving deltas:  64% (1009/1574)   Resolving deltas:  65% (1024/1574)   Resolving deltas:  66% (1039/1574)   Resolving deltas:  67% (1055/1574)   Resolving deltas:  68% (1071/1574)   Resolving deltas:  69% (1093/1574)   Resolving deltas:  70% (1102/1574)   Resolving deltas:  71% (1118/1574)   Resolving deltas:  72% (1137/1574)   Resolving deltas:  73% (1150/1574)   Resolving deltas:  74% (1165/1574)   Resolving deltas:  75% (1181/1574)   Resolving deltas:  76% (1197/1574)   Resolving deltas:  77% (1212/1574)   Resolving deltas:  78% (1228/1574)   Resolving deltas:  79% (1245/1574)   Resolving deltas:  80% (1262/1574)   Resolving deltas:  81% (1278/1574)   Resolving deltas:  82% (1291/1574)   Resolving deltas:  83% (1307/1574)   Resolving deltas:  84% (1327/1574)   Resolving deltas:  85% (1343/1574)   Resolving deltas:  86% (1357/1574)   Resolving deltas:  87% (1378/1574)   Resolving deltas:  88% (1387/1574)   Resolving deltas:  89% (1402/1574)   Resolving deltas:  90% (1420/1574)   Resolving deltas:  91% (1443/1574)   Resolving deltas:  92% (1450/1574)   Resolving deltas:  93% (1465/1574)   Resolving deltas:  94% (1480/1574)   Resolving deltas:  95% (1497/1574)   Resolving deltas:  96% (1512/1574)   Resolving deltas:  97% (1527/1574)   Resolving deltas:  98% (1543/1574)   Resolving deltas:  99% (1562/1574)   Resolving deltas: 100% (1574/1574)   Resolving deltas: 100% (1574/1574), done.
+
+travis_time:end:08db45f8:start=1496729683077735800,finish=1496729687778889331,duration=4701153531$ cd rapid7/metasploit-framework
+travis_time:start:013f869c$ git fetch origin +refs/pull/8513/merge:
+remote: Counting objects: 63, done.[K
+remote: Compressing objects:   3% (1/28)   [Kremote: Compressing objects:   7% (2/28)   [Kremote: Compressing objects:  10% (3/28)   [Kremote: Compressing objects:  14% (4/28)   [Kremote: Compressing objects:  17% (5/28)   [Kremote: Compressing objects:  21% (6/28)   [Kremote: Compressing objects:  25% (7/28)   [Kremote: Compressing objects:  28% (8/28)   [Kremote: Compressing objects:  32% (9/28)   [Kremote: Compressing objects:  35% (10/28)   [Kremote: Compressing objects:  39% (11/28)   [Kremote: Compressing objects:  42% (12/28)   [Kremote: Compressing objects:  46% (13/28)   [Kremote: Compressing objects:  50% (14/28)   [Kremote: Compressing objects:  53% (15/28)   [Kremote: Compressing objects:  57% (16/28)   [Kremote: Compressing objects:  60% (17/28)   [Kremote: Compressing objects:  64% (18/28)   [Kremote: Compressing objects:  67% (19/28)   [Kremote: Compressing objects:  71% (20/28)   [Kremote: Compressing objects:  75% (21/28)   [Kremote: Compressing objects:  78% (22/28)   [Kremote: Compressing objects:  82% (23/28)   [Kremote: Compressing objects:  85% (24/28)   [Kremote: Compressing objects:  89% (25/28)   [Kremote: Compressing objects:  92% (26/28)   [Kremote: Compressing objects:  96% (27/28)   [Kremote: Compressing objects: 100% (28/28)   [Kremote: Compressing objects: 100% (28/28), done.[K
+remote: Total 63 (delta 49), reused 45 (delta 35), pack-reused 0[K
+Unpacking objects:   1% (1/63)   Unpacking objects:   3% (2/63)   Unpacking objects:   4% (3/63)   Unpacking objects:   6% (4/63)   Unpacking objects:   7% (5/63)   Unpacking objects:   9% (6/63)   Unpacking objects:  11% (7/63)   Unpacking objects:  12% (8/63)   Unpacking objects:  14% (9/63)   Unpacking objects:  15% (10/63)   Unpacking objects:  17% (11/63)   Unpacking objects:  19% (12/63)   Unpacking objects:  20% (13/63)   Unpacking objects:  22% (14/63)   Unpacking objects:  23% (15/63)   Unpacking objects:  25% (16/63)   Unpacking objects:  26% (17/63)   Unpacking objects:  28% (18/63)   Unpacking objects:  30% (19/63)   Unpacking objects:  31% (20/63)   Unpacking objects:  33% (21/63)   Unpacking objects:  34% (22/63)   Unpacking objects:  36% (23/63)   Unpacking objects:  38% (24/63)   Unpacking objects:  39% (25/63)   Unpacking objects:  41% (26/63)   Unpacking objects:  42% (27/63)   Unpacking objects:  44% (28/63)   Unpacking objects:  46% (29/63)   Unpacking objects:  47% (30/63)   Unpacking objects:  49% (31/63)   Unpacking objects:  50% (32/63)   Unpacking objects:  52% (33/63)   Unpacking objects:  53% (34/63)   Unpacking objects:  55% (35/63)   Unpacking objects:  57% (36/63)   Unpacking objects:  58% (37/63)   Unpacking objects:  60% (38/63)   Unpacking objects:  61% (39/63)   Unpacking objects:  63% (40/63)   Unpacking objects:  65% (41/63)   Unpacking objects:  66% (42/63)   Unpacking objects:  68% (43/63)   Unpacking objects:  69% (44/63)   Unpacking objects:  71% (45/63)   Unpacking objects:  73% (46/63)   Unpacking objects:  74% (47/63)   Unpacking objects:  76% (48/63)   Unpacking objects:  77% (49/63)   Unpacking objects:  79% (50/63)   Unpacking objects:  80% (51/63)   Unpacking objects:  82% (52/63)   Unpacking objects:  84% (53/63)   Unpacking objects:  85% (54/63)   Unpacking objects:  87% (55/63)   Unpacking objects:  88% (56/63)   Unpacking objects:  90% (57/63)   Unpacking objects:  92% (58/63)   Unpacking objects:  93% (59/63)   Unpacking objects:  95% (60/63)   Unpacking objects:  96% (61/63)   Unpacking objects:  98% (62/63)   Unpacking objects: 100% (63/63)   Unpacking objects: 100% (63/63), done.
+From https://github.com/rapid7/metasploit-framework
+ * branch            refs/pull/8513/merge -> FETCH_HEAD
+
+travis_time:end:013f869c:start=1496729687784622031,finish=1496729688807775587,duration=1023153556$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:git.submoduletravis_time:start:1bad8170$ git submodule update --init --recursive
+Submodule 'external/source/ReflectiveDLLInjection' (https://github.com/rapid7/ReflectiveDLLInjection.git) registered for path 'external/source/ReflectiveDLLInjection'
+Cloning into '/home/travis/build/rapid7/metasploit-framework/external/source/ReflectiveDLLInjection'...
+Submodule path 'external/source/ReflectiveDLLInjection': checked out '88e8e5f109793f09b35cb17a621f33647d644103'
+
+travis_time:end:1bad8170:start=1496729689576214962,finish=1496729690155854808,duration=579639846travis_fold:end:git.submoduletravis_fold:start:aptInstalling APT Packages (BETA)
+$ export DEBIAN_FRONTEND=noninteractive
+travis_time:start:11af4988$ sudo -E apt-get -yq update &>> ~/apt-get-update.log
+
+travis_time:end:11af4988:start=1496729690162173036,finish=1496729699597186512,duration=9435013476travis_time:start:0d684708$ sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install libpcap-dev graphviz
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libpcap0.8-dev
+Suggested packages:
+  graphviz-doc
+The following NEW packages will be installed:
+  graphviz libpcap-dev libpcap0.8-dev
+0 upgraded, 3 newly installed, 0 to remove and 209 not upgraded.
+Need to get 669 kB of archives.
+After this operation, 2,547 kB of additional disk space will be used.
+Get:1 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty-updates/main graphviz amd64 2.36.0-0ubuntu3.2 [461 kB]
+Get:2 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libpcap0.8-dev amd64 1.5.3-2 [205 kB]
+Get:3 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libpcap-dev all 1.5.3-2 [3,390 B]
+Fetched 669 kB in 0s (27.9 MB/s)
+Selecting previously unselected package graphviz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88286 files and directories currently installed.)
+Preparing to unpack .../graphviz_2.36.0-0ubuntu3.2_amd64.deb ...
+Unpacking graphviz (2.36.0-0ubuntu3.2) ...
+Selecting previously unselected package libpcap0.8-dev.
+Preparing to unpack .../libpcap0.8-dev_1.5.3-2_amd64.deb ...
+Unpacking libpcap0.8-dev (1.5.3-2) ...
+Selecting previously unselected package libpcap-dev.
+Preparing to unpack .../libpcap-dev_1.5.3-2_all.deb ...
+Unpacking libpcap-dev (1.5.3-2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up graphviz (2.36.0-0ubuntu3.2) ...
+Setting up libpcap0.8-dev (1.5.3-2) ...
+Setting up libpcap-dev (1.5.3-2) ...
+
+travis_time:end:0d684708:start=1496729699601455025,finish=1496729705538869234,duration=5937414209travis_fold:end:apttravis_fold:start:servicestravis_time:start:101b21f4$ sudo service docker start
+start: Job is already running: docker
+
+travis_time:end:101b21f4:start=1496729705543255386,finish=1496729705558720255,duration=15464869travis_fold:end:servicestravis_fold:start:postgresqlStarting PostgreSQL v9.6
+travis_time:start:1a6ed15f$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.5 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.6 database server       G G[ OK ]
+
+travis_time:end:1a6ed15f:start=1496729708565356891,finish=1496729709902465979,duration=1337109088travis_time:start:05e9f440$ sudo service postgresql start 9.6
+ * Starting PostgreSQL 9.6 database server       G G[ OK ]
+
+travis_time:end:05e9f440:start=1496729709906778141,finish=1496729712124951932,duration=2218173791travis_time:start:25fb4318$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:25fb4318:start=1496729712129630888,finish=1496729712181368663,duration=51737775travis_time:start:12e8689c$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:12e8689c:start=1496729712185808165,finish=1496729712434861004,duration=249052839travis_time:start:07c96dd0$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:07c96dd0:start=1496729712439310103,finish=1496729712476441213,duration=37131110travis_time:start:1278d614$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:1278d614:start=1496729712480822526,finish=1496729712520630755,duration=39808229travis_fold:end:postgresql
+Setting environment variables from .travis.yml
+$ export CMD="docker-compose -f $TRAVIS_BUILD_DIR/docker-compose.yml build"
+
+travis_fold:start:rvmSetting up latest ruby-head
+$ export ruby_alias=`rvm alias show ruby-head 2>/dev/null`
+travis_time:start:2ef297e6$ rvm alias delete ruby-head
+Deleting alias: ruby-head|/-\|/-\|.-\|/-\|/-.|/.
+
+travis_time:end:2ef297e6:start=1496729712682878568,finish=1496729712851421730,duration=168543162travis_time:start:14a0c6d4$ rvm remove ${ruby_alias:-ruby-head} --gems
+ruby-head - #already gone
+
+travis_time:end:14a0c6d4:start=1496729712856003219,finish=1496729713308434225,duration=452431006travis_time:start:364fe378$ rvm remove ruby-head --gems --fuzzy
+ruby-head - #already gone
+
+travis_time:end:364fe378:start=1496729713313087697,finish=1496729713726255723,duration=413168026travis_time:start:1bddc5b6$ rvm install ruby-head --binary
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-head.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-head - #configure
+ruby-head - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  5 13.7M    5  763k    0     0   662k      0  0:00:21  0:00:01  0:00:20  662k 45 13.7M   45 6390k    0     0  2968k      0  0:00:04  0:00:02  0:00:02 5627k100 13.7M  100 13.7M    0     0  5263k      0  0:00:02  0:00:02 --:--:-- 8735k
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-head - #validate archive
+ruby-head - #extract
+ruby-head - #validate binary
+ruby-head - #setup
+ruby-head - #gemset created /home/travis/.rvm/gems/ruby-head@global
+ruby-head - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-head - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-head - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-head - #gemset created /home/travis/.rvm/gems/ruby-head
+ruby-head - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-head - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+
+travis_time:end:1bddc5b6:start=1496729713731021991,finish=1496729732595899183,duration=18864877192travis_time:start:1f6449c6$ rvm use ruby-head
+Using /home/travis/.rvm/gems/ruby-head
+
+travis_time:end:1f6449c6:start=1496729732600968588,finish=1496729732735636228,duration=134667640travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:08fe00f8$ Installing caching utilities
+
+travis_time:end:08fe00f8:start=1496729732946705141,finish=1496729733097972230,duration=151267089travis_time:start:036e1da8
+travis_time:end:036e1da8:start=1496729733105638202,finish=1496729733111330002,duration=5691800travis_time:start:0a1f388dattempting to download cache archive
+fetching PR.8513/cache-linux-trusty-402e1766aa46d401842827cf26bacd11618a622347bbb090ca0eb6ef46060fcf--rvm-ruby-head--gemfile-Gemfile.tgz
+fetching PR.8513/cache--rvm-ruby-head--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-402e1766aa46d401842827cf26bacd11618a622347bbb090ca0eb6ef46060fcf--rvm-ruby-head--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:0a1f388d:start=1496729733117126516,finish=1496729734552941694,duration=1435815178travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:1a1f884d
+travis_time:end:1a1f884d:start=1496729734558330516,finish=1496729734562704637,duration=4374121travis_time:start:35378daeadding /home/travis/build/rapid7/metasploit-framework/vendor/bundle to cache
+creating directory /home/travis/build/rapid7/metasploit-framework/vendor/bundle
+
+travis_time:end:35378dae:start=1496729734568171308,finish=1496729737814305684,duration=3246134376travis_fold:end:cache.bundler$ ruby --version
+ruby 2.5.0dev (2017-05-26 trunk 58892) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:282d7646$ echo 'gem: --no-ri --no-rdoc' > ~/.gemrc
+
+travis_time:end:282d7646:start=1496729738241797965,finish=1496729738246463404,duration=4665439travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:002994ba$ rake --version
+rake, version 12.0.0
+
+travis_time:end:002994ba:start=1496729738251916588,finish=1496729738347054772,duration=95138184travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:351a1640$ ln -sf ../../tools/dev/pre-commit-hook.rb ./.git/hooks/post-merge
+
+travis_time:end:351a1640:start=1496729738352206841,finish=1496729738357415237,duration=5208396travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:0cb852d6$ ls -la ./.git/hooks
+total 52
+drwxrwxr-x 2 travis travis 4096 Jun  6 06:15 .
+drwxrwxr-x 9 travis travis 4096 Jun  6 06:14 ..
+-rwxrwxr-x 1 travis travis  478 Jun  6 06:14 applypatch-msg.sample
+-rwxrwxr-x 1 travis travis  896 Jun  6 06:14 commit-msg.sample
+lrwxrwxrwx 1 travis travis   34 Jun  6 06:15 post-merge -> ../../tools/dev/pre-commit-hook.rb
+-rwxrwxr-x 1 travis travis  189 Jun  6 06:14 post-update.sample
+-rwxrwxr-x 1 travis travis  424 Jun  6 06:14 pre-applypatch.sample
+-rwxrwxr-x 1 travis travis 1642 Jun  6 06:14 pre-commit.sample
+-rwxrwxr-x 1 travis travis 1239 Jun  6 06:14 prepare-commit-msg.sample
+-rwxrwxr-x 1 travis travis 1348 Jun  6 06:14 pre-push.sample
+-rwxrwxr-x 1 travis travis 4898 Jun  6 06:14 pre-rebase.sample
+-rwxrwxr-x 1 travis travis  544 Jun  6 06:14 pre-receive.sample
+-rwxrwxr-x 1 travis travis 3610 Jun  6 06:14 update.sample
+
+travis_time:end:0cb852d6:start=1496729738362786676,finish=1496729738368930432,duration=6143756travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:0f131310$ ./.git/hooks/post-merge
+[*] Running msftidy.rb in ./.git/hooks/post-merge mode
+--- No Metasploit modules to check ---
+
+travis_time:end:0f131310:start=1496729738374203880,finish=1496729738429510512,duration=55306632travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:032374c4$ gem install bundler
+Fetching: bundler-1.15.1.gemFetching: bundler-1.15.1.gem (  1%)Fetching: bundler-1.15.1.gem (  2%)Fetching: bundler-1.15.1.gem (  3%)Fetching: bundler-1.15.1.gem (  4%)Fetching: bundler-1.15.1.gem (  5%)Fetching: bundler-1.15.1.gem (  6%)Fetching: bundler-1.15.1.gem (  7%)Fetching: bundler-1.15.1.gem (  8%)Fetching: bundler-1.15.1.gem (  9%)Fetching: bundler-1.15.1.gem ( 10%)Fetching: bundler-1.15.1.gem ( 15%)Fetching: bundler-1.15.1.gem ( 20%)Fetching: bundler-1.15.1.gem ( 24%)Fetching: bundler-1.15.1.gem ( 29%)Fetching: bundler-1.15.1.gem ( 34%)Fetching: bundler-1.15.1.gem ( 39%)Fetching: bundler-1.15.1.gem ( 44%)Fetching: bundler-1.15.1.gem ( 49%)Fetching: bundler-1.15.1.gem ( 53%)Fetching: bundler-1.15.1.gem ( 58%)Fetching: bundler-1.15.1.gem ( 63%)Fetching: bundler-1.15.1.gem ( 68%)Fetching: bundler-1.15.1.gem ( 73%)Fetching: bundler-1.15.1.gem ( 78%)Fetching: bundler-1.15.1.gem ( 83%)Fetching: bundler-1.15.1.gem ( 87%)Fetching: bundler-1.15.1.gem ( 92%)Fetching: bundler-1.15.1.gem ( 97%)Fetching: bundler-1.15.1.gem (100%)Fetching: bundler-1.15.1.gem (100%)
+Successfully installed bundler-1.15.1
+1 gem installed
+
+travis_time:end:032374c4:start=1496729738434954001,finish=1496729739014454837,duration=579500836travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:05894c0c$ bundle install --without coverage development pcap --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching gem metadata from https://rubygems.org/...........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Using rake 12.0.0
+Using i18n 0.8.4
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.8
+Using arel 6.0.4
+Using backports 3.8.0
+Using bcrypt 3.1.11
+Using bit-struct 0.16
+Using filesize 0.1.1
+Using rkelly-remix 0.0.7
+Using json 2.1.0
+Using metasm 1.0.3
+Using thor 0.19.4
+Using pg 0.20.0
+Using pg_array_parser 0.0.9
+Using rubyntlm 0.6.2
+Using rubyzip 1.2.1
+Using metasploit-payloads 1.2.32
+Using metasploit_payloads-mettle 0.1.9
+Using msgpack 1.1.0
+Using nessus_rest 0.1.6
+Using net-ssh 4.1.0
+Using network_interface 0.0.1
+Using nexpose 6.0.0
+Using public_suffix 2.0.5
+Using multipart-post 2.0.0
+Using openssl-ccm 1.2.1
+Using openvas-omp 0.0.4
+Using pcaprub 0.12.4
+Using patch_finder 1.0.2
+Using rb-readline 0.5.4
+Using redcarpet 3.4.0
+Using rex-text 0.2.15
+Using rex-core 0.1.10
+Using rex-struct2 0.1.2
+Using rex-java 0.1.5
+Using rex-registry 0.1.3
+Using robots 0.10.1
+Using bindata 2.4.0
+Using windows_error 0.1.2
+Using sqlite3 1.3.13
+Using sshkey 1.9.0
+Using xmlrpc 0.3.0
+Using fivemat 1.3.4
+Using rspec-support 3.6.0
+Using diff-lcs 1.3
+Using ffi 1.9.18
+Using contracts 0.16.0
+Using gherkin 4.1.3
+Using cucumber-wire 0.0.1
+Using multi_json 1.12.1
+Using multi_test 0.1.2
+Using mime-types-data 3.2016.0521
+Using timecop 0.8.1
+Using bundler 1.15.1
+Using tzinfo 1.2.3
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using jsobfu 0.4.2
+Using addressable 2.5.1
+Using faraday 0.12.1
+Using packetfu 1.1.13
+Using rex-arch 0.1.8
+Using rex-mime 0.1.5
+Using rex-ole 0.1.6
+Using rex-random_identifier 0.1.2
+Using rex-zip 0.1.3
+Using rex-rop_builder 0.1.3
+Using rex-socket 0.1.6
+Using ruby_smb 0.0.18
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using childprocess 0.5.9
+Using cucumber-core 1.5.0
+Using mime-types 3.1
+Using activesupport 4.2.8
+Using tzinfo-data 1.2017.2
+Using loofah 2.0.3
+Using recog 2.1.8
+Using xpath 2.1.0
+Using sawyer 0.8.1
+Using rex-bin_tools 0.1.3
+Using rex-encoder 0.1.4
+Using rex-nop 0.1.1
+Using rex-powershell 0.1.72
+Using rex-sslscan 0.1.4
+Using cucumber 2.4.0
+Using rails-deprecated_sanitizer 1.0.3
+Using activemodel 4.2.8
+Using factory_girl 4.8.0
+Using shoulda-matchers 3.1.1
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.14.0
+Using octokit 4.7.0
+Using rex-exploitation 0.1.14
+Using aruba 0.14.2
+Using rails-dom-testing 1.0.8
+Using activerecord 4.2.8
+Using actionview 4.2.8
+Using arel-helpers 2.4.0
+Using postgres_ext 3.0.0
+Using actionpack 4.2.8
+Using railties 4.2.8
+Using metasploit-concern 2.0.4
+Using metasploit-model 2.0.4
+Using factory_girl_rails 4.8.0
+Using rspec-rails 3.6.0
+Using cucumber-rails 1.5.0
+Using metasploit_data_models 2.0.14
+Using metasploit-credential 2.0.9
+Using metasploit-framework 4.14.25 from source at `.`
+Bundle complete! 15 Gemfile dependencies, 116 gems now installed.
+Gems in the groups coverage, development and pcap were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:05894c0c:start=1496729739020213068,finish=1496729742368644914,duration=3348431846travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:0d7a9c40$ cp config/database.yml.travis config/database.yml
+
+travis_time:end:0d7a9c40:start=1496729742374213177,finish=1496729742379640419,duration=5427242travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:1c2d5b5a$ bundle exec rake --version
+rake, version 12.0.0
+
+travis_time:end:1c2d5b5a:start=1496729742384898169,finish=1496729742874832424,duration=489934255travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:04665e22$ bundle exec rake db:create
+YARD not defined, so yard tasks cannot be setup.
+
+travis_time:end:04665e22:start=1496729742880574121,finish=1496729746237419579,duration=3356845458travis_fold:end:before_script.3travis_fold:start:before_script.4travis_time:start:189824a2$ bundle exec rake db:migrate
+YARD not defined, so yard tasks cannot be setup.
+== 0 CreateTables: migrating ==================================================
+-- create_table(:hosts)
+   -> 0.0031s
+-- add_index(:hosts, :address, {:unique=>true})
+   -> 0.0024s
+-- create_table(:clients)
+   -> 0.0020s
+-- create_table(:services)
+   -> 0.0021s
+-- create_table(:vulns)
+   -> 0.0021s
+-- create_table(:refs)
+   -> 0.0019s
+-- create_table(:vulns_refs, {:id=>false})
+   -> 0.0007s
+-- create_table(:notes)
+   -> 0.0019s
+== 0 CreateTables: migrated (0.0169s) =========================================
+
+== 1 AddWmapTables: migrating =================================================
+-- create_table(:wmap_targets)
+   -> 0.0020s
+-- create_table(:wmap_requests)
+   -> 0.0021s
+== 1 AddWmapTables: migrated (0.0043s) ========================================
+
+== 2 AddWorkspaces: migrating =================================================
+-- create_table(:workspaces)
+   -> 0.0018s
+-- change_table(:hosts)
+   -> 0.0007s
+-- remove_index(:hosts, {:column=>:address})
+   -> 0.0019s
+== 2 AddWorkspaces: migrated (0.0048s) ========================================
+
+== 3 MoveNotes: migrating =====================================================
+-- remove_column(:notes, :host_id)
+   -> 0.0007s
+-- change_table(:notes)
+   -> 0.0035s
+== 3 MoveNotes: migrated (0.0042s) ============================================
+
+== 4 AddEventsTable: migrating ================================================
+-- create_table(:events)
+   -> 0.0021s
+== 4 AddEventsTable: migrated (0.0022s) =======================================
+
+== 5 ExpandInfo: migrating ====================================================
+-- remove_column(:events, :info)
+   -> 0.0004s
+-- change_table(:events)
+   -> 0.0007s
+-- remove_column(:notes, :data)
+   -> 0.0007s
+-- change_table(:notes)
+   -> 0.0004s
+-- remove_column(:vulns, :data)
+   -> 0.0006s
+-- change_table(:vulns)
+   -> 0.0004s
+-- remove_column(:hosts, :info)
+   -> 0.0010s
+-- change_table(:hosts)
+   -> 0.0006s
+-- remove_column(:services, :info)
+   -> 0.0004s
+-- change_table(:services)
+   -> 0.0005s
+== 5 ExpandInfo: migrated (0.0064s) ===========================================
+
+== 6 AddTimestamps: migrating =================================================
+-- rename_column(:clients, :created, :created_at)
+   -> 0.0021s
+-- rename_column(:hosts, :created, :created_at)
+   -> 0.0013s
+-- rename_column(:notes, :created, :created_at)
+   -> 0.0012s
+-- rename_column(:refs, :created, :created_at)
+   -> 0.0013s
+-- rename_column(:services, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:vulns, :created, :created_at)
+   -> 0.0013s
+-- rename_column(:wmap_requests, :created, :created_at)
+   -> 0.0013s
+-- add_column(:wmap_targets, :created_at, :datetime)
+   -> 0.0006s
+-- add_column(:clients, :updated_at, :datetime)
+   -> 0.0004s
+-- add_column(:events, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:hosts, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:notes, :updated_at, :datetime)
+   -> 0.0006s
+-- add_column(:refs, :updated_at, :datetime)
+   -> 0.0004s
+-- add_column(:services, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:vulns, :updated_at, :datetime)
+   -> 0.0006s
+-- add_column(:wmap_requests, :updated_at, :datetime)
+   -> 0.0004s
+-- add_column(:wmap_targets, :updated_at, :datetime)
+   -> 0.0009s
+== 6 AddTimestamps: migrated (0.0162s) ========================================
+
+== 7 AddLoots: migrating ======================================================
+-- create_table(:loots)
+   -> 0.0025s
+== 7 AddLoots: migrated (0.0026s) =============================================
+
+== 8 CreateUsers: migrating ===================================================
+-- create_table(:users)
+   -> 0.0020s
+== 8 CreateUsers: migrated (0.0021s) ==========================================
+
+== 9 AddLootsCtype: migrating =================================================
+-- add_column(:loots, :content_type, :string)
+   -> 0.0006s
+== 9 AddLootsCtype: migrated (0.0007s) ========================================
+
+== 10 AddAlertFields: migrating ===============================================
+-- add_column(:notes, :critical, :boolean)
+   -> 0.0007s
+-- add_column(:notes, :seen, :boolean)
+   -> 0.0005s
+-- add_column(:events, :critical, :boolean)
+   -> 0.0004s
+-- add_column(:events, :seen, :boolean)
+   -> 0.0006s
+== 10 AddAlertFields: migrated (0.0026s) ======================================
+
+== 11 AddReports: migrating ===================================================
+-- create_table(:reports)
+   -> 0.0023s
+== 11 AddReports: migrated (0.0024s) ==========================================
+
+== 12 AddTasks: migrating =====================================================
+-- create_table(:tasks)
+   -> 0.0026s
+== 12 AddTasks: migrated (0.0027s) ============================================
+
+== 13 AddTasksResult: migrating ===============================================
+-- add_column(:tasks, :result, :text)
+   -> 0.0007s
+== 13 AddTasksResult: migrated (0.0007s) ======================================
+
+== 14 AddLootsFields: migrating ===============================================
+-- add_column(:loots, :name, :text)
+   -> 0.0005s
+-- add_column(:loots, :info, :text)
+   -> 0.0006s
+== 14 AddLootsFields: migrated (0.0012s) ======================================
+
+== 15 RenameUser: migrating ===================================================
+-- remove_column(:events, :user)
+   -> 0.0005s
+-- change_table(:events)
+   -> 0.0005s
+== 15 RenameUser: migrated (0.0013s) ==========================================
+
+== 16 AddHostPurpose: migrating ===============================================
+-- add_column(:hosts, :purpose, :text)
+   -> 0.0008s
+== 16 AddHostPurpose: migrated (0.0008s) ======================================
+
+== 17 ExpandInfo2: migrating ==================================================
+-- remove_column(:events, :info)
+   -> 0.0005s
+-- change_table(:events)
+   -> 0.0005s
+-- remove_column(:notes, :data)
+   -> 0.0005s
+-- change_table(:notes)
+   -> 0.0005s
+-- remove_column(:vulns, :data)
+   -> 0.0004s
+-- change_table(:vulns)
+   -> 0.0005s
+-- remove_column(:hosts, :info)
+   -> 0.0004s
+-- change_table(:hosts)
+   -> 0.0005s
+-- remove_column(:services, :info)
+   -> 0.0005s
+-- change_table(:services)
+   -> 0.0006s
+== 17 ExpandInfo2: migrated (0.0058s) =========================================
+
+== 18 AddWorkspaceUserInfo: migrating =========================================
+-- change_table(:workspaces)
+   -> 0.0007s
+-- change_table(:users)
+   -> 0.0016s
+== 18 AddWorkspaceUserInfo: migrated (0.0024s) ================================
+
+== 19 AddWorkspaceDesc: migrating =============================================
+-- change_table(:workspaces)
+   -> 0.0007s
+-- change_table(:hosts)
+   -> 0.0005s
+== 19 AddWorkspaceDesc: migrated (0.0014s) ====================================
+
+== 20 AddUserPreferences: migrating ===========================================
+-- add_column(:users, :prefs, :string, {:limit=>524288})
+   -> 0.0006s
+== 20 AddUserPreferences: migrated (0.0006s) ==================================
+
+== 21 StandardizeInfoAndData: migrating =======================================
+-- remove_column(:vulns, :data)
+   -> 0.0004s
+-- change_table(:vulns)
+   -> 0.0006s
+== 21 StandardizeInfoAndData: migrated (0.0012s) ==============================
+
+== 22 EnlargeEventInfo: migrating =============================================
+-- change_column(:events, :info, :text)
+   -> 0.0006s
+== 22 EnlargeEventInfo: migrated (0.0007s) ====================================
+
+== 23 AddReportDownloadedAt: migrating ========================================
+-- add_column(:reports, :downloaded_at, :timestamp)
+   -> 0.0006s
+== 23 AddReportDownloadedAt: migrated (0.0007s) ===============================
+
+== 24 ConvertServiceInfoToText: migrating =====================================
+-- change_column(:services, :info, :text)
+   -> 0.0006s
+== 24 ConvertServiceInfoToText: migrated (0.0006s) ============================
+
+== 25 AddUserAdmin: migrating =================================================
+-- add_column(:users, :admin, :boolean, {:default=>true})
+   -> 0.0026s
+-- create_table(:project_members, {:id=>false})
+   -> 0.0007s
+== 25 AddUserAdmin: migrated (0.0035s) ========================================
+
+== 26 AddCredsTable: migrating ================================================
+-- create_table(:creds)
+   -> 0.0023s
+== 26 AddCredsTable: migrated (0.0024s) =======================================
+
+== 20100819123300 MigrateCredData: migrating ==================================
+-- Migrating 0 credentials.
+-- Migrating 0 notes.
+-- Deleting migrated auth notes.
+== 20100819123300 MigrateCredData: migrated (0.0028s) =========================
+
+== 20100824151500 AddExploitedTable: migrating ================================
+-- create_table(:exploited_hosts)
+   -> 0.0021s
+== 20100824151500 AddExploitedTable: migrated (0.0022s) =======================
+
+== 20100908001428 AddOwnerToWorkspaces: migrating =============================
+-- add_column(:workspaces, :owner_id, :integer)
+   -> 0.0007s
+== 20100908001428 AddOwnerToWorkspaces: migrated (0.0007s) ====================
+
+== 20100911122000 AddReportTemplates: migrating ===============================
+-- create_table(:report_templates)
+   -> 0.0022s
+== 20100911122000 AddReportTemplates: migrated (0.0023s) ======================
+
+== 20100916151530 RequireAdminFlag: migrating =================================
+-- change_column(:users, :admin, :boolean, {:null=>false, :default=>true})
+   -> 0.0035s
+== 20100916151530 RequireAdminFlag: migrated (0.0075s) ========================
+
+== 20100916175000 AddCampaignsAndTemplates: migrating =========================
+-- create_table(:campaigns)
+   -> 0.0024s
+-- create_table(:email_templates)
+   -> 0.0020s
+-- create_table(:attachments)
+   -> 0.0024s
+-- create_table(:attachments_email_templates, {:id=>false})
+   -> 0.0006s
+-- create_table(:email_addresses)
+   -> 0.0022s
+-- create_table(:web_templates)
+   -> 0.0017s
+== 20100916175000 AddCampaignsAndTemplates: migrated (0.0118s) ================
+
+== 20100920012100 AddGenerateExeColumn: migrating =============================
+-- add_column(:email_templates, :generate_exe, :boolean, {:null=>false, :default=>false})
+   -> 0.0037s
+== 20100920012100 AddGenerateExeColumn: migrated (0.0038s) ====================
+
+== 20100926214000 AddTemplatePrefs: migrating =================================
+-- remove_column(:email_templates, :generate_exe)
+   -> 0.0005s
+-- add_column(:email_templates, :prefs, :text)
+   -> 0.0005s
+-- add_column(:web_templates, :prefs, :text)
+   -> 0.0005s
+== 20100926214000 AddTemplatePrefs: migrated (0.0018s) ========================
+
+== 20101001000000 AddWebTables: migrating =====================================
+-- create_table(:web_sites)
+   -> 0.0020s
+-- create_table(:web_pages)
+   -> 0.0021s
+-- create_table(:web_forms)
+   -> 0.0019s
+-- create_table(:web_vulns)
+   -> 0.0022s
+== 20101001000000 AddWebTables: migrated (0.0085s) ============================
+
+== 20101002000000 AddQuery: migrating =========================================
+-- add_column(:web_forms, :query, :text)
+   -> 0.0006s
+-- add_column(:web_vulns, :query, :text)
+   -> 0.0067s
+== 20101002000000 AddQuery: migrated (0.0074s) ================================
+
+== 20101007000000 AddVulnInfo: migrating ======================================
+-- add_column(:web_vulns, :category, :text)
+   -> 0.0005s
+-- add_column(:web_vulns, :confidence, :text)
+   -> 0.0006s
+-- add_column(:web_vulns, :description, :text)
+   -> 0.0004s
+-- add_column(:web_vulns, :blame, :text)
+   -> 0.0005s
+== 20101007000000 AddVulnInfo: migrated (0.0023s) =============================
+
+== 20101008111800 AddClientsToCampaigns: migrating ============================
+-- add_column(:clients, :campaign_id, :integer)
+   -> 0.0007s
+== 20101008111800 AddClientsToCampaigns: migrated (0.0007s) ===================
+
+== 20101009023300 AddCampaignAttachments: migrating ===========================
+-- add_column(:attachments, :campaign_id, :integer)
+   -> 0.0008s
+== 20101009023300 AddCampaignAttachments: migrated (0.0009s) ==================
+
+== 20101104135100 AddImportedCreds: migrating =================================
+-- create_table(:imported_creds)
+   -> 0.0027s
+== 20101104135100 AddImportedCreds: migrated (0.0028s) ========================
+
+== 20101203000000 FixWebTables: migrating =====================================
+-- change_column(:web_pages, :path, :text)
+   -> 0.0006s
+-- change_column(:web_pages, :query, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :cookie, :text)
+   -> 0.0006s
+-- change_column(:web_pages, :auth, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :ctype, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :location, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :path, :text)
+   -> 0.0004s
+-- change_column(:web_vulns, :path, :text)
+   -> 0.0007s
+-- change_column(:web_vulns, :pname, :text)
+   -> 0.0004s
+-- add_column(:web_pages, :request, :text)
+   -> 0.0004s
+-- add_column(:web_vulns, :request, :text)
+   -> 0.0005s
+== 20101203000000 FixWebTables: migrated (0.0061s) ============================
+
+== 20101203000001 ExpandHostComment: migrating ================================
+-- change_column(:hosts, :comments, :text)
+   -> 0.0006s
+== 20101203000001 ExpandHostComment: migrated (0.0007s) =======================
+
+== 20101206212033 AddLimitToNetworkToWorkspaces: migrating ====================
+-- add_column(:workspaces, :limit_to_network, :boolean, {:null=>false, :default=>false})
+   -> 0.0025s
+== 20101206212033 AddLimitToNetworkToWorkspaces: migrated (0.0027s) ===========
+
+== 20110112154300 AddModuleUuidToTasks: migrating =============================
+-- add_column(:tasks, :module_uuid, :string, {:limit=>8})
+   -> 0.0007s
+== 20110112154300 AddModuleUuidToTasks: migrated (0.0008s) ====================
+
+== 20110204112800 AddHostTags: migrating ======================================
+-- create_table(:tags)
+   -> 0.0029s
+-- create_table(:hosts_tags, {:id=>false})
+   -> 0.0007s
+== 20110204112800 AddHostTags: migrated (0.0037s) =============================
+
+== 20110317144932 AddSessionTable: migrating ==================================
+-- create_table(:sessions)
+   -> 0.0020s
+-- create_table(:session_events)
+   -> 0.0020s
+== 20110317144932 AddSessionTable: migrated (0.0070s) =========================
+
+== 20110414180600 AddLocalIdToSessionTable: migrating =========================
+-- add_column(:sessions, :local_id, :integer)
+   -> 0.0008s
+== 20110414180600 AddLocalIdToSessionTable: migrated (0.0008s) ================
+
+== 20110415175705 AddRoutesTable: migrating ===================================
+-- create_table(:routes)
+   -> 0.0019s
+-- remove_column(:sessions, :routes)
+   -> 0.0004s
+== 20110415175705 AddRoutesTable: migrated (0.0025s) ==========================
+
+== 20110422000000 ConvertBinary: migrating ====================================
+-- rename_column(:web_pages, :body, :body_text)
+   -> 0.0013s
+-- rename_column(:web_pages, :request, :request_text)
+   -> 0.0011s
+-- rename_column(:web_vulns, :request, :request_text)
+   -> 0.0011s
+-- rename_column(:web_vulns, :proof, :proof_text)
+   -> 0.0010s
+-- add_column(:web_pages, :body, :binary)
+   -> 0.0005s
+-- add_column(:web_pages, :request, :binary)
+   -> 0.0005s
+-- add_column(:web_vulns, :request, :binary)
+   -> 0.0006s
+-- add_column(:web_vulns, :proof, :binary)
+   -> 0.0005s
+-- remove_column(:web_pages, :body_text)
+   -> 0.0005s
+-- remove_column(:web_pages, :request_text)
+   -> 0.0004s
+-- remove_column(:web_vulns, :request_text)
+   -> 0.0004s
+-- remove_column(:web_vulns, :proof_text)
+   -> 0.0004s
+== 20110422000000 ConvertBinary: migrated (0.0152s) ===========================
+
+== 20110425095900 AddLastSeenToSessions: migrating ============================
+-- add_column(:sessions, :last_seen, :timestamp)
+   -> 0.0006s
+== 20110425095900 AddLastSeenToSessions: migrated (0.0007s) ===================
+
+== 20110513143900 TrackSuccessfulExploits: migrating ==========================
+-- add_column(:vulns, :exploited_at, :timestamp)
+   -> 0.0007s
+== 20110513143900 TrackSuccessfulExploits: migrated (0.0029s) =================
+
+== 20110517160800 RenameAndPruneNessusVulns: migrating ========================
+== 20110517160800 RenameAndPruneNessusVulns: migrated (0.0017s) ===============
+
+== 20110527000000 AddTaskIdToReportsTable: migrating ==========================
+-- add_column(:reports, :task_id, :integer)
+   -> 0.0007s
+== 20110527000000 AddTaskIdToReportsTable: migrated (0.0008s) =================
+
+== 20110527000001 AddApiKeysTable: migrating ==================================
+-- create_table(:api_keys)
+   -> 0.0019s
+== 20110527000001 AddApiKeysTable: migrated (0.0020s) =========================
+
+== 20110606000001 AddMacrosTable: migrating ===================================
+-- create_table(:macros)
+   -> 0.0019s
+== 20110606000001 AddMacrosTable: migrated (0.0020s) ==========================
+
+== 20110622000000 AddSettingsToTasksTable: migrating ==========================
+-- add_column(:tasks, :settings, :binary)
+   -> 0.0006s
+== 20110622000000 AddSettingsToTasksTable: migrated (0.0006s) =================
+
+== 20110624000001 AddListenersTable: migrating ================================
+-- create_table(:listeners)
+   -> 0.0027s
+== 20110624000001 AddListenersTable: migrated (0.0027s) =======================
+
+== 20110625000001 AddMacroToListenersTable: migrating =========================
+-- add_column(:listeners, :macro, :text)
+   -> 0.0006s
+== 20110625000001 AddMacroToListenersTable: migrated (0.0007s) ================
+
+== 20110630000001 AddNexposeConsolesTable: migrating ==========================
+-- create_table(:nexpose_consoles)
+   -> 0.0028s
+== 20110630000001 AddNexposeConsolesTable: migrated (0.0029s) =================
+
+== 20110630000002 AddNameToNexposeConsolesTable: migrating ====================
+-- add_column(:nexpose_consoles, :name, :text)
+   -> 0.0006s
+== 20110630000002 AddNameToNexposeConsolesTable: migrated (0.0007s) ===========
+
+== 20110717000001 AddProfilesTable: migrating =================================
+-- create_table(:profiles)
+   -> 0.0023s
+== 20110717000001 AddProfilesTable: migrated (0.0024s) ========================
+
+== 20110727163801 ExpandCredPtypeColumn: migrating ============================
+-- change_column(:creds, :ptype, :string, {:limit=>256})
+   -> 0.0006s
+== 20110727163801 ExpandCredPtypeColumn: migrated (0.0008s) ===================
+
+== 20110730000001 AddInitialIndexes: migrating ================================
+-- add_index(:hosts, :address)
+   -> 0.0020s
+-- add_index(:hosts, :address6)
+   -> 0.0019s
+-- add_index(:hosts, :name)
+   -> 0.0020s
+-- add_index(:hosts, :state)
+   -> 0.0019s
+-- add_index(:hosts, :os_name)
+   -> 0.0018s
+-- add_index(:hosts, :os_flavor)
+   -> 0.0019s
+-- add_index(:hosts, :purpose)
+   -> 0.0018s
+-- add_index(:services, :port)
+   -> 0.0020s
+-- add_index(:services, :proto)
+   -> 0.0018s
+-- add_index(:services, :state)
+   -> 0.0019s
+-- add_index(:services, :name)
+   -> 0.0020s
+-- add_index(:notes, :ntype)
+   -> 0.0019s
+-- add_index(:vulns, :name)
+   -> 0.0019s
+-- add_index(:refs, :name)
+   -> 0.0022s
+-- add_index(:web_sites, :vhost)
+   -> 0.0023s
+-- add_index(:web_sites, :comments)
+   -> 0.0021s
+-- add_index(:web_sites, :options)
+   -> 0.0019s
+-- add_index(:web_pages, :path)
+   -> 0.0021s
+-- add_index(:web_pages, :query)
+   -> 0.0019s
+-- add_index(:web_forms, :path)
+   -> 0.0021s
+-- add_index(:web_vulns, :path)
+   -> 0.0019s
+-- add_index(:web_vulns, :method)
+   -> 0.0020s
+-- add_index(:web_vulns, :name)
+   -> 0.0019s
+== 20110730000001 AddInitialIndexes: migrated (0.0474s) =======================
+
+== 20110812000001 PruneIndexes: migrating =====================================
+-- indexes(:hosts)
+   -> 0.0035s
+-- indexes(:services)
+   -> 0.0022s
+-- indexes(:vulns)
+   -> 0.0013s
+== 20110812000001 PruneIndexes: migrated (0.0074s) ============================
+
+== 20110922000000 ExpandNotes: migrating ======================================
+-- change_column(:notes, :data, :text)
+   -> 0.0006s
+== 20110922000000 ExpandNotes: migrated (0.0007s) =============================
+
+== 20110928101300 AddModRefTable: migrating ===================================
+-- create_table(:mod_refs)
+   -> 0.0021s
+== 20110928101300 AddModRefTable: migrated (0.0021s) ==========================
+
+== 20111011110000 AddDisplayNameToReportsTable: migrating =====================
+-- add_column(:reports, :name, :string, {:limit=>63})
+   -> 0.0006s
+== 20111011110000 AddDisplayNameToReportsTable: migrated (0.0029s) ============
+
+== 20111203000000 InetColumns: migrating ======================================
+-- change_column(:hosts, :address, "INET using address::INET")
+   -> 0.0033s
+-- remove_column(:hosts, :address6)
+   -> 0.0004s
+== 20111203000000 InetColumns: migrated (0.0040s) =============================
+
+== 20111204000000 MoreInetColumns: migrating ==================================
+-- change_column(:wmap_requests, :address, "INET using address::INET")
+   -> 0.0019s
+-- remove_column(:wmap_requests, :address6)
+   -> 0.0005s
+-- change_column(:wmap_targets, :address, "INET using address::INET")
+   -> 0.0019s
+-- remove_column(:wmap_targets, :address6)
+   -> 0.0004s
+== 20111204000000 MoreInetColumns: migrated (0.0050s) =========================
+
+== 20111210000000 AddScopeToHosts: migrating ==================================
+-- add_column(:hosts, :scope, :text)
+   -> 0.0007s
+== 20111210000000 AddScopeToHosts: migrated (0.0007s) =========================
+
+== 20120126110000 AddVirtualHostToHosts: migrating ============================
+-- add_column(:hosts, :virtual_host, :text)
+   -> 0.0007s
+== 20120126110000 AddVirtualHostToHosts: migrated (0.0008s) ===================
+
+== 20120411173220 RenameWorkspaceMembers: migrating ===========================
+-- rename_table(:project_members, :workspace_members)
+   -> 0.0040s
+== 20120411173220 RenameWorkspaceMembers: migrated (0.0040s) ==================
+
+== 20120601152442 AddCounterCachesToHosts: migrating ==========================
+-- add_column(:hosts, :note_count, :integer, {:default=>0})
+   -> 0.0035s
+-- add_column(:hosts, :vuln_count, :integer, {:default=>0})
+   -> 0.0028s
+-- add_column(:hosts, :service_count, :integer, {:default=>0})
+   -> 0.0029s
+== 20120601152442 AddCounterCachesToHosts: migrated (0.0121s) =================
+
+== 20120625000000 AddVulnDetails: migrating ===================================
+-- create_table(:vuln_details)
+   -> 0.0024s
+== 20120625000000 AddVulnDetails: migrated (0.0025s) ==========================
+
+== 20120625000001 AddHostDetails: migrating ===================================
+-- create_table(:host_details)
+   -> 0.0018s
+== 20120625000001 AddHostDetails: migrated (0.0018s) ==========================
+
+== 20120625000002 ExpandDetails: migrating ====================================
+-- add_column(:vuln_details, :nx_vuln_status, :text)
+   -> 0.0007s
+-- add_column(:vuln_details, :nx_proof_key, :text)
+   -> 0.0004s
+-- add_column(:vuln_details, :src, :string)
+   -> 0.0006s
+-- add_column(:host_details, :src, :string)
+   -> 0.0017s
+== 20120625000002 ExpandDetails: migrated (0.0038s) ===========================
+
+== 20120625000003 ExpandDetails2: migrating ===================================
+-- add_column(:host_details, :nx_site_name, :string)
+   -> 0.0016s
+-- add_column(:host_details, :nx_site_importance, :string)
+   -> 0.0004s
+-- add_column(:host_details, :nx_scan_template, :string)
+   -> 0.0005s
+-- add_column(:host_details, :nx_risk_score, :float)
+   -> 0.0006s
+-- add_column(:vuln_details, :nx_scan_id, :integer)
+   -> 0.0006s
+-- add_column(:vuln_details, :nx_vulnerable_since, :timestamp)
+   -> 0.0004s
+-- add_column(:vuln_details, :nx_pci_compliance_status, :string)
+   -> 0.0006s
+== 20120625000003 ExpandDetails2: migrated (0.0060s) ==========================
+
+== 20120625000004 AddVulnAttempts: migrating ==================================
+-- create_table(:vuln_attempts)
+   -> 0.0020s
+== 20120625000004 AddVulnAttempts: migrated (0.0021s) =========================
+
+== 20120625000005 AddVulnAndHostCounterCaches: migrating ======================
+-- add_column(:hosts, :host_detail_count, :integer, {:default=>0})
+   -> 0.0035s
+-- add_column(:vulns, :vuln_detail_count, :integer, {:default=>0})
+   -> 0.0024s
+-- add_column(:vulns, :vuln_attempt_count, :integer, {:default=>0})
+   -> 0.0031s
+== 20120625000005 AddVulnAndHostCounterCaches: migrated (0.0092s) =============
+
+== 20120625000006 AddModuleDetails: migrating =================================
+-- create_table(:module_details)
+   -> 0.0025s
+-- add_index(:module_details, :refname)
+   -> 0.0019s
+-- add_index(:module_details, :name)
+   -> 0.0022s
+-- add_index(:module_details, :description)
+   -> 0.0018s
+-- add_index(:module_details, :mtype)
+   -> 0.0019s
+-- create_table(:module_authors)
+   -> 0.0019s
+-- add_index(:module_authors, :module_detail_id)
+   -> 0.0020s
+-- create_table(:module_mixins)
+   -> 0.0027s
+-- add_index(:module_mixins, :module_detail_id)
+   -> 0.0018s
+-- create_table(:module_targets)
+   -> 0.0019s
+-- add_index(:module_targets, :module_detail_id)
+   -> 0.0025s
+-- create_table(:module_actions)
+   -> 0.0018s
+-- add_index(:module_actions, :module_detail_id)
+   -> 0.0027s
+-- create_table(:module_refs)
+   -> 0.0017s
+-- add_index(:module_refs, :module_detail_id)
+   -> 0.0018s
+-- add_index(:module_refs, :name)
+   -> 0.0025s
+-- create_table(:module_archs)
+   -> 0.0019s
+-- add_index(:module_archs, :module_detail_id)
+   -> 0.0018s
+-- create_table(:module_platforms)
+   -> 0.0017s
+-- add_index(:module_platforms, :module_detail_id)
+   -> 0.0018s
+== 20120625000006 AddModuleDetails: migrated (0.0436s) ========================
+
+== 20120625000007 AddExploitAttempts: migrating ===============================
+-- create_table(:exploit_attempts)
+   -> 0.0030s
+-- add_column(:hosts, :exploit_attempt_count, :integer, {:default=>0})
+   -> 0.0034s
+== 20120625000007 AddExploitAttempts: migrated (0.0065s) ======================
+
+== 20120625000008 AddFailMessage: migrating ===================================
+-- add_column(:vuln_attempts, :fail_detail, :text)
+   -> 0.0006s
+-- add_column(:exploit_attempts, :fail_detail, :text)
+   -> 0.0005s
+== 20120625000008 AddFailMessage: migrated (0.0013s) ==========================
+
+== 20120718202805 AddOwnerAndPayloadToWebVulns: migrating =====================
+-- add_column(:web_vulns, :owner, :string)
+   -> 0.0006s
+-- add_column(:web_vulns, :payload, :text)
+   -> 0.0013s
+== 20120718202805 AddOwnerAndPayloadToWebVulns: migrated (0.0020s) ============
+
+== 20130228214900 ChangeRequiredColumnsToNullFalseInWebVulns: migrating =======
+-- change_column_null(:web_vulns, :category, false)
+   -> 0.0012s
+-- change_column_null(:web_vulns, :confidence, false)
+   -> 0.0005s
+-- change_column_null(:web_vulns, :method, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :name, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :params, false)
+   -> 0.0005s
+-- change_column_null(:web_vulns, :path, false)
+   -> 0.0004s
+-- change_column_null(:web_vulns, :pname, false)
+   -> 0.0012s
+-- change_column_null(:web_vulns, :proof, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :risk, false)
+   -> 0.0004s
+== 20130228214900 ChangeRequiredColumnsToNullFalseInWebVulns: migrated (0.0059s) 
+
+== 20130412154159 ChangeForeignKeyInModuleActions: migrating ==================
+-- rename_column(:module_actions, :module_detail_id, :detail_id)
+   -> 0.0026s
+== 20130412154159 ChangeForeignKeyInModuleActions: migrated (0.0026s) =========
+
+== 20130412171844 ChangeForeignKeyInModuleArchs: migrating ====================
+-- rename_column(:module_archs, :module_detail_id, :detail_id)
+   -> 0.0025s
+== 20130412171844 ChangeForeignKeyInModuleArchs: migrated (0.0026s) ===========
+
+== 20130412173121 ChangeForeignKeyInModuleAuthors: migrating ==================
+-- rename_column(:module_authors, :module_detail_id, :detail_id)
+   -> 0.0018s
+== 20130412173121 ChangeForeignKeyInModuleAuthors: migrated (0.0026s) =========
+
+== 20130412173640 ChangeForeignKeyInModuleMixins: migrating ===================
+-- rename_column(:module_mixins, :module_detail_id, :detail_id)
+   -> 0.0019s
+== 20130412173640 ChangeForeignKeyInModuleMixins: migrated (0.0020s) ==========
+
+== 20130412174254 ChangeForeignKeyInModulePlatforms: migrating ================
+-- rename_column(:module_platforms, :module_detail_id, :detail_id)
+   -> 0.0023s
+== 20130412174254 ChangeForeignKeyInModulePlatforms: migrated (0.0024s) =======
+
+== 20130412174719 ChangeForeignKeyInModuleRefs: migrating =====================
+-- rename_column(:module_refs, :module_detail_id, :detail_id)
+   -> 0.0026s
+== 20130412174719 ChangeForeignKeyInModuleRefs: migrated (0.0027s) ============
+
+== 20130412175040 ChangeForeignKeyInModuleTargets: migrating ==================
+-- rename_column(:module_targets, :module_detail_id, :detail_id)
+   -> 0.0019s
+== 20130412175040 ChangeForeignKeyInModuleTargets: migrated (0.0020s) =========
+
+== 20130423211152 AddCredsCounterCache: migrating =============================
+-- add_column(:hosts, :cred_count, :integer, {:default=>0})
+   -> 0.0035s
+== 20130423211152 AddCredsCounterCache: migrated (0.0063s) ====================
+
+== 20130430151353 ChangeRequiredColumnsToNullFalseInHosts: migrating ==========
+-- change_column_null(:hosts, :address, false)
+   -> 0.0006s
+-- change_column_null(:hosts, :workspace_id, false)
+   -> 0.0004s
+== 20130430151353 ChangeRequiredColumnsToNullFalseInHosts: migrated (0.0011s) =
+
+== 20130430162145 EnforceAddressUniquenessInWorkspaceInHosts: migrating =======
+-- change_table(:hosts)
+   -> 0.0033s
+== 20130430162145 EnforceAddressUniquenessInWorkspaceInHosts: migrated (0.0045s) 
+
+== 20130510021637 RemoveCampaigns: migrating ==================================
+-- drop_table(:attachments)
+   -> 0.0011s
+-- drop_table(:attachments_email_templates)
+   -> 0.0004s
+-- drop_table(:email_addresses)
+   -> 0.0010s
+-- drop_table(:email_templates)
+   -> 0.0009s
+-- drop_table(:web_templates)
+   -> 0.0009s
+-- drop_table(:campaigns)
+   -> 0.0009s
+== 20130510021637 RemoveCampaigns: migrated (0.0063s) =========================
+
+== 20130515164311 ChangeWebVulnsConfidenceToInteger: migrating ================
+-- execute("ALTER TABLE web_vulns ALTER COLUMN confidence TYPE integer USING confidence::integer")
+   -> 0.0025s
+== 20130515164311 ChangeWebVulnsConfidenceToInteger: migrated (0.0026s) =======
+
+== 20130515172727 ValidMdmWebVulnParams: migrating ============================
+== 20130515172727 ValidMdmWebVulnParams: migrated (0.0073s) ===================
+
+== 20130516204810 MakingVulnsRefsARealArModel: migrating ======================
+-- add_column(:vulns_refs, :id, :primary_key)
+   -> 0.0021s
+== 20130516204810 MakingVulnsRefsARealArModel: migrated (0.0022s) =============
+
+== 20130522001343 CreateTaskCreds: migrating ==================================
+-- create_table(:task_creds)
+   -> 0.0025s
+== 20130522001343 CreateTaskCreds: migrated (0.0025s) =========================
+
+== 20130522032517 CreateTaskHosts: migrating ==================================
+-- create_table(:task_hosts)
+   -> 0.0016s
+== 20130522032517 CreateTaskHosts: migrated (0.0016s) =========================
+
+== 20130522041110 CreateTaskServices: migrating ===============================
+-- create_table(:task_services)
+   -> 0.0016s
+== 20130522041110 CreateTaskServices: migrated (0.0018s) ======================
+
+== 20130525015035 RemoveCampaignIdFromClients: migrating ======================
+-- remove_column(:clients, :campaign_id)
+   -> 0.0004s
+== 20130525015035 RemoveCampaignIdFromClients: migrated (0.0005s) =============
+
+== 20130525212420 DropTableImportedCreds: migrating ===========================
+-- drop_table(:imported_creds)
+   -> 0.0011s
+== 20130525212420 DropTableImportedCreds: migrated (0.0012s) ==================
+
+== 20130531144949 MakingHostTagsARealArModel: migrating =======================
+-- add_column(:hosts_tags, :id, :primary_key)
+   -> 0.0021s
+== 20130531144949 MakingHostTagsARealArModel: migrated (0.0021s) ==============
+
+== 20130604145732 CreateTaskSessions: migrating ===============================
+-- create_table(:task_sessions)
+   -> 0.0024s
+== 20130604145732 CreateTaskSessions: migrated (0.0024s) ======================
+
+== 20130717150737 RemovePnameValidation: migrating ============================
+-- change_column(:web_vulns, :pname, :text, {:null=>true})
+   -> 0.0011s
+== 20130717150737 RemovePnameValidation: migrated (0.0012s) ===================
+
+== 20131002004641 CreateAutomaticExploitationMatches: migrating ===============
+-- create_table(:automatic_exploitation_matches)
+   -> 0.0020s
+-- add_index(:automatic_exploitation_matches, :ref_id)
+   -> 0.0019s
+== 20131002004641 CreateAutomaticExploitationMatches: migrated (0.0041s) ======
+
+== 20131002164449 CreateAutomaticExploitationMatchSets: migrating =============
+-- create_table(:automatic_exploitation_match_sets)
+   -> 0.0024s
+-- add_index(:automatic_exploitation_match_sets, :user_id)
+   -> 0.0027s
+-- add_index(:automatic_exploitation_match_sets, :workspace_id)
+   -> 0.0018s
+== 20131002164449 CreateAutomaticExploitationMatchSets: migrated (0.0072s) ====
+
+== 20131008213344 CreateAutomaticExploitationRuns: migrating ==================
+-- create_table(:automatic_exploitation_runs)
+   -> 0.0022s
+== 20131008213344 CreateAutomaticExploitationRuns: migrated (0.0022s) =========
+
+== 20131011184338 ModuleDetailOnAutomaticExploitationMatch: migrating =========
+-- rename_column(:automatic_exploitation_matches, :ref_id, :module_detail_id)
+   -> 0.0019s
+-- add_column(:automatic_exploitation_matches, :match_set_id, :integer)
+   -> 0.0012s
+== 20131011184338 ModuleDetailOnAutomaticExploitationMatch: migrated (0.0033s) 
+
+== 20131017150735 CreateAutomaticExploitationMatchResults: migrating ==========
+-- create_table(:automatic_exploitation_match_results)
+   -> 0.0022s
+== 20131017150735 CreateAutomaticExploitationMatchResults: migrated (0.0022s) =
+
+== 20131021185657 MakeMatchPolymorphic: migrating =============================
+-- add_column(:automatic_exploitation_matches, :matchable_type, :string)
+   -> 0.0006s
+-- add_column(:automatic_exploitation_matches, :matchable_id, :integer)
+   -> 0.0006s
+== 20131021185657 MakeMatchPolymorphic: migrated (0.0013s) ====================
+
+== 20140331173835 CreateMetasploitCredentialPublics: migrating ================
+-- create_table(:metasploit_credential_publics)
+   -> 0.0020s
+-- change_table(:metasploit_credential_publics)
+   -> 0.0020s
+== 20140331173835 CreateMetasploitCredentialPublics: migrated (0.0042s) =======
+
+== 20140407212345 CreateMetasploitCredentialPrivates: migrating ===============
+-- create_table(:metasploit_credential_privates)
+   -> 0.0020s
+-- change_table(:metasploit_credential_privates)
+   -> 0.0029s
+== 20140407212345 CreateMetasploitCredentialPrivates: migrated (0.0050s) ======
+
+== 20140410132401 CreateMetasploitCredentialRealms: migrating =================
+-- create_table(:metasploit_credential_realms)
+   -> 0.0021s
+== 20140410132401 CreateMetasploitCredentialRealms: migrated (0.0022s) ========
+
+== 20140410161611 UniqueMetasploitCredentialRealms: migrating =================
+-- change_table(:metasploit_credential_realms)
+   -> 0.0030s
+== 20140410161611 UniqueMetasploitCredentialRealms: migrated (0.0030s) ========
+
+== 20140410191213 CreateMetasploitCredentialOriginManuals: migrating ==========
+-- create_table(:metasploit_credential_origin_manuals)
+   -> 0.0016s
+-- add_index(:metasploit_credential_origin_manuals, :user_id)
+   -> 0.0028s
+== 20140410191213 CreateMetasploitCredentialOriginManuals: migrated (0.0045s) =
+
+== 20140410205410 CreateMetasploitCredentialOriginImports: migrating ==========
+-- create_table(:metasploit_credential_origin_imports)
+   -> 0.0021s
+-- add_index(:metasploit_credential_origin_imports, :task_id)
+   -> 0.0020s
+== 20140410205410 CreateMetasploitCredentialOriginImports: migrated (0.0049s) =
+
+== 20140411142102 CreateMetasploitCredentialOriginSessions: migrating =========
+-- create_table(:metasploit_credential_origin_sessions)
+   -> 0.0023s
+-- add_index(:metasploit_credential_origin_sessions, [:session_id, :post_reference_name], {:name=>:unique_metasploit_credential_origin_sessions, :unique=>true})
+   -> 0.0020s
+== 20140411142102 CreateMetasploitCredentialOriginSessions: migrated (0.0044s) 
+
+== 20140411205325 CreateMetasploitCredentialOriginServices: migrating =========
+-- create_table(:metasploit_credential_origin_services)
+   -> 0.0025s
+-- add_index(:metasploit_credential_origin_services, [:service_id, :module_full_name], {:name=>:unique_metasploit_credential_origin_services, :unique=>true})
+   -> 0.0020s
+== 20140411205325 CreateMetasploitCredentialOriginServices: migrated (0.0046s) 
+
+== 20140414192550 CreateMetasploitCredentialCores: migrating ==================
+-- create_table(:metasploit_credential_cores)
+   -> 0.0020s
+-- change_table(:metasploit_credential_cores)
+   -> 0.0095s
+== 20140414192550 CreateMetasploitCredentialCores: migrated (0.0122s) =========
+
+== 20140417140933 CreateMetasploitCredentialLogins: migrating =================
+-- create_table(:metasploit_credential_logins)
+   -> 0.0027s
+-- change_table(:metasploit_credential_logins)
+   -> 0.0110s
+== 20140417140933 CreateMetasploitCredentialLogins: migrated (0.0138s) ========
+
+== 20140520140817 AddLoginsCounterCacheToCores: migrating =====================
+-- add_column(:metasploit_credential_cores, :logins_count, :integer, {:default=>0})
+   -> 0.0030s
+== 20140520140817 AddLoginsCounterCacheToCores: migrated (0.0049s) ============
+
+== 20140603163708 AddJtrFormatToMetasploitCredentialPrivates: migrating =======
+-- add_column(:metasploit_credential_privates, :jtr_format, :string)
+   -> 0.0007s
+== 20140603163708 AddJtrFormatToMetasploitCredentialPrivates: migrated (0.0007s) 
+
+== 20140605173747 CreateMetasploitCredentialOriginCrackedPasswords: migrating =
+-- create_table(:metasploit_credential_origin_cracked_passwords)
+   -> 0.0014s
+-- add_index(:metasploit_credential_origin_cracked_passwords, :metasploit_credential_core_id, {:name=>:originating_credential_cores})
+   -> 0.0020s
+== 20140605173747 CreateMetasploitCredentialOriginCrackedPasswords: migrated (0.0035s) 
+
+== 20140702184622 CreateCredentialCoresTasksJoinTable: migrating ==============
+-- create_table(:credential_cores_tasks, {:force=>true, :id=>false})
+   -> 0.0012s
+== 20140702184622 CreateCredentialCoresTasksJoinTable: migrated (0.0013s) =====
+
+== 20140703144541 CreateCredentialLoginsTasksJoinTable: migrating =============
+-- create_table(:credential_logins_tasks, {:force=>true, :id=>false})
+   -> 0.0013s
+== 20140703144541 CreateCredentialLoginsTasksJoinTable: migrated (0.0014s) ====
+
+== 20140722174919 OldCredsToNewCreds: migrating ===============================
+== 20140722174919 OldCredsToNewCreds: migrated (0.0073s) ======================
+
+== 20140728191933 UniqueMetasploitCredentialCores: migrating ==================
+-- execute("CREATE UNIQUE INDEX unique_complete_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id, public_id) WHERE private_id IS NOT NULL AND public_id IS NOT NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_private_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id) WHERE private_id IS NOT NULL AND public_id IS NULL")
+   -> 0.0006s
+-- execute("CREATE UNIQUE INDEX unique_public_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id) WHERE private_id IS NULL AND public_id IS NOT NULL")
+   -> 0.0006s
+== 20140728191933 UniqueMetasploitCredentialCores: migrated (0.0021s) =========
+
+== 20140801150537 UniqueMetasploitCredentialCoresWithRealmId: migrating =======
+-- execute("DROP INDEX unique_complete_metasploit_credential_cores")
+   -> 0.0005s
+-- execute("DROP INDEX unique_private_metasploit_credential_cores")
+   -> 0.0006s
+-- execute("DROP INDEX unique_public_metasploit_credential_cores")
+   -> 0.0004s
+-- execute("CREATE UNIQUE INDEX unique_private_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id) WHERE realm_id IS NULL AND public_id IS NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_public_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id) WHERE realm_id IS NULL AND public_id IS NOT NULL AND private_id IS NULL")
+   -> 0.0006s
+-- execute("CREATE UNIQUE INDEX unique_realmless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id, private_id) WHERE realm_id IS NULL AND public_id IS NOT NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_publicless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, private_id) WHERE realm_id IS NOT NULL AND public_id IS NULL AND private_id IS NOT NULL")
+   -> 0.0008s
+-- execute("CREATE UNIQUE INDEX unique_privateless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, public_id) WHERE realm_id IS NOT NULL AND public_id IS NOT NULL AND private_id IS NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_complete_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, public_id, private_id) WHERE realm_id IS NOT NULL AND public_id IS NOT NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+== 20140801150537 UniqueMetasploitCredentialCoresWithRealmId: migrated (0.0066s) 
+
+== 20140905031549 AddDetectedArchToHost: migrating ============================
+-- add_column(:hosts, :detected_arch, :string, {:null=>true})
+   -> 0.0006s
+== 20140905031549 AddDetectedArchToHost: migrated (0.0007s) ===================
+
+== 20140922170030 AddTypetoPublic: migrating ==================================
+-- change_table(:metasploit_credential_publics)
+-- execute("UPDATE metasploit_credential_publics SET type = 'Metasploit::Credential::Username'")
+   -> 0.0005s
+-- change_column(:metasploit_credential_publics, :type, :string, {:null=>false})
+   -> 0.0007s
+   -> 0.0019s
+== 20140922170030 AddTypetoPublic: migrated (0.0020s) =========================
+
+== 20150106201450 OldCredsToNewCreds2: migrating ==============================
+== 20150106201450 OldCredsToNewCreds2: migrated (0.0007s) =====================
+
+== 20150112203945 RemoveDuplicateServices: migrating ==========================
+-- add_index(:services, [:host_id, :port, :proto], {:unique=>true})
+   -> 0.0020s
+== 20150112203945 RemoveDuplicateServices: migrated (0.0041s) =================
+
+== 20150205192745 DropServiceUniquenessIndex: migrating =======================
+-- remove_index(:services, :host_id_and_port_and_proto)
+   -> 0.0013s
+== 20150205192745 DropServiceUniquenessIndex: migrated (0.0014s) ==============
+
+== 20150209195939 AddVulnIdToNote: migrating ==================================
+-- add_column(:notes, :vuln_id, :integer)
+   -> 0.0005s
+-- add_index(:notes, :vuln_id)
+   -> 0.0018s
+== 20150209195939 AddVulnIdToNote: migrated (0.0024s) =========================
+
+== 20150212214222 RemoveDuplicateServices2: migrating =========================
+-- add_index(:services, [:host_id, :port, :proto], {:unique=>true})
+   -> 0.0018s
+== 20150212214222 RemoveDuplicateServices2: migrated (0.0026s) ================
+
+== 20150219173821 CreateModuleRuns: migrating =================================
+-- create_table(:module_runs)
+   -> 0.0023s
+-- add_index(:module_runs, :session_id)
+   -> 0.0018s
+-- add_index(:module_runs, :user_id)
+   -> 0.0019s
+== 20150219173821 CreateModuleRuns: migrated (0.0062s) ========================
+
+== 20150219215039 AddModuleRunToSession: migrating ============================
+-- change_table(:sessions)
+   -> 0.0007s
+-- add_index(:sessions, :module_run_id)
+   -> 0.0020s
+== 20150219215039 AddModuleRunToSession: migrated (0.0028s) ===================
+
+== 20150226151459 AddModuleRunFkToLoot: migrating =============================
+-- change_table(:loots)
+   -> 0.0023s
+== 20150226151459 AddModuleRunFkToLoot: migrated (0.0024s) ====================
+
+== 20150312155312 AddModuleFullNameToMatch: migrating =========================
+-- add_column(:automatic_exploitation_matches, :module_fullname, :text)
+   -> 0.0005s
+-- add_index(:automatic_exploitation_matches, :module_fullname)
+   -> 0.0019s
+== 20150312155312 AddModuleFullNameToMatch: migrated (0.0025s) ================
+
+== 20150317145455 RenameModuleIndices: migrating ==============================
+== 20150317145455 RenameModuleIndices: migrated (0.0013s) =====================
+
+== 20150326183742 AddMissingAeIndices: migrating ==============================
+-- add_index(:automatic_exploitation_match_results, :match_id)
+   -> 0.0018s
+-- add_index(:automatic_exploitation_match_results, :run_id)
+   -> 0.0016s
+-- add_index(:automatic_exploitation_runs, :match_set_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_runs, :user_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_runs, :workspace_id)
+   -> 0.0018s
+== 20150326183742 AddMissingAeIndices: migrated (0.0096s) =====================
+
+== 20150421211719 RenameAutomaticExploitationIndex: migrating =================
+-- index_name_exists?(:automatic_exploitation_matches, :index_automatic_exploitation_matches_on_ref_id, false)
+   -> 0.0010s
+== 20150421211719 RenameAutomaticExploitationIndex: migrated (0.0011s) ========
+
+== 20150514182921 AddOriginToMdmVuln: migrating ===============================
+-- add_column(:vulns, :origin_id, :integer)
+   -> 0.0007s
+-- add_column(:vulns, :origin_type, :string)
+   -> 0.0005s
+-- add_index(:vulns, :origin_id)
+   -> 0.0018s
+== 20150514182921 AddOriginToMdmVuln: migrated (0.0032s) ======================
+
+== 20160415153312 RemoveNotNullFromWebVulnPArams: migrating ===================
+-- change_column_null(:web_vulns, :params, true)
+   -> 0.0006s
+== 20160415153312 RemoveNotNullFromWebVulnPArams: migrated (0.0006s) ==========
+
+== 20161004165612 AddFingerprintedToWorkspace: migrating ======================
+-- add_column(:workspaces, :import_fingerprint, :boolean, {:default=>false})
+   -> 0.0023s
+== 20161004165612 AddFingerprintedToWorkspace: migrated (0.0024s) =============
+
+== 20161107153145 RecreateIndexOnPrivateDataAndType: migrating ================
+-- remove_index(:metasploit_credential_privates, [:type, :data])
+   -> 0.0013s
+-- change_table(:metasploit_credential_privates)
+   -> 0.0020s
+== 20161107153145 RecreateIndexOnPrivateDataAndType: migrated (0.0034s) =======
+
+== 20161107203710 CreateIndexOnPrivateDataAndTypeForSshKey: migrating =========
+-- execute("CREATE UNIQUE INDEX \"index_metasploit_credential_privates_on_type_and_data_sshkey\" ON\n\"metasploit_credential_privates\" (\"type\", decode(md5(data), 'hex'))\nWHERE type in ('Metasploit::Credential::SSHKey')\n")
+   -> 0.0011s
+== 20161107203710 CreateIndexOnPrivateDataAndTypeForSshKey: migrated (0.0012s) 
+
+== 20161227212223 AddOsFamilyToHosts: migrating ===============================
+-- add_column(:hosts, :os_family, :string)
+   -> 0.0007s
+== 20161227212223 AddOsFamilyToHosts: migrated (0.0007s) ======================
+
+
+travis_time:end:189824a2:start=1496729746243714776,finish=1496729751158500255,duration=4914785479travis_fold:end:before_script.4travis_fold:start:before_script.5travis_time:start:17144e09$ git diff --exit-code db/schema.rb
+
+travis_time:end:17144e09:start=1496729751164385821,finish=1496729751196056825,duration=31671004travis_fold:end:before_script.5travis_time:start:04e7f8e2$ echo "${CMD}"
+docker-compose -f /home/travis/build/rapid7/metasploit-framework/docker-compose.yml build
+
+travis_time:end:04e7f8e2:start=1496729751201657485,finish=1496729751205676124,duration=4018639
+The command "echo "${CMD}"" exited with 0.
+travis_time:start:12044883$ bash -c "${CMD}"
+db uses an image, skipping
+Building ms
+Step 1 : FROM ruby:2.4.1-alpine
+2.4.1-alpine: Pulling from library/ruby
+
+A486a8e636d62: Pulling fs layerB
+A89eed58f5d2d: Pulling fs layerB
+A4763609efdaa: Pulling fs layerB
+Af5d4b0e25bc2: Pulling fs layerB
+A89931ecfec22: Pulling fs layerBAf5d4b0e25bc2: WaitingBA89931ecfec22: WaitingBA89eed58f5d2d: Downloading [==================================================>]    193 B/193 BBA89eed58f5d2d: Verifying ChecksumBA89eed58f5d2d: Download completeBA486a8e636d62: Downloading [>                                                  ] 32.77 kB/2.383 MBBA486a8e636d62: Downloading [=>                                                 ] 64.64 kB/2.383 MBBA486a8e636d62: Downloading [==>                                                ] 97.41 kB/2.383 MBBA486a8e636d62: Downloading [==>                                                ] 130.2 kB/2.383 MBBA486a8e636d62: Downloading [===>                                               ] 162.9 kB/2.383 MBBA486a8e636d62: Downloading [====>                                              ] 195.7 kB/2.383 MBBA486a8e636d62: Downloading [====>                                              ] 228.5 kB/2.383 MBBA4763609efdaa: Downloading [>                                                  ] 261.2 kB/24.66 MBBA486a8e636d62: Downloading [=====>                                             ] 261.2 kB/2.383 MBBA486a8e636d62: Downloading [======>                                            ]   294 kB/2.383 MBBA486a8e636d62: Downloading [======>                                            ] 326.8 kB/2.383 MBBA486a8e636d62: Downloading [=======>                                           ] 359.6 kB/2.383 MBBA486a8e636d62: Downloading [========>                                          ] 392.3 kB/2.383 MBBA486a8e636d62: Downloading [========>                                          ] 425.1 kB/2.383 MBBA486a8e636d62: Downloading [=========>                                         ] 457.9 kB/2.383 MBBA4763609efdaa: Downloading [=>                                                 ] 510.9 kB/24.66 MBBA486a8e636d62: Downloading [==========>                                        ] 490.6 kB/2.383 MBBA486a8e636d62: Downloading [===========>                                       ] 556.2 kB/2.383 MBBA486a8e636d62: Downloading [============>                                      ] 588.9 kB/2.383 MBBA486a8e636d62: Downloading [=============>                                     ] 621.7 kB/2.383 MBBA486a8e636d62: Downloading [=============>                                     ] 654.5 kB/2.383 MBBA486a8e636d62: Downloading [==============>                                    ] 687.2 kB/2.383 MBBA4763609efdaa: Downloading [=>                                                 ] 766.8 kB/24.66 MBBA486a8e636d62: Downloading [===============>                                   ]   720 kB/2.383 MBBA486a8e636d62: Downloading [===============>                                   ] 752.8 kB/2.383 MBBA486a8e636d62: Downloading [================>                                  ] 785.5 kB/2.383 MBBA486a8e636d62: Downloading [=================>                                 ] 818.3 kB/2.383 MBBA486a8e636d62: Downloading [=================>                                 ] 851.1 kB/2.383 MBBA486a8e636d62: Downloading [==================>                                ] 883.8 kB/2.383 MBBA486a8e636d62: Downloading [===================>                               ] 916.6 kB/2.383 MBBA486a8e636d62: Downloading [===================>                               ] 949.4 kB/2.383 MBBA486a8e636d62: Downloading [====================>                              ] 982.1 kB/2.383 MBBA486a8e636d62: Downloading [=====================>                             ] 1.015 MB/2.383 MBBA486a8e636d62: Downloading [=====================>                             ] 1.048 MB/2.383 MBBA486a8e636d62: Downloading [======================>                            ]  1.08 MB/2.383 MBBA486a8e636d62: Downloading [=======================>                           ] 1.113 MB/2.383 MBBA4763609efdaa: Downloading [==>                                                ] 1.023 MB/24.66 MBBA486a8e636d62: Downloading [========================>                          ] 1.146 MB/2.383 MBBA486a8e636d62: Downloading [========================>                          ] 1.179 MB/2.383 MBBA486a8e636d62: Downloading [=========================>                         ] 1.212 MB/2.383 MBBA486a8e636d62: Downloading [==========================>                        ] 1.244 MB/2.383 MBBA486a8e636d62: Downloading [==========================>                        ] 1.277 MB/2.383 MBBA486a8e636d62: Downloading [===========================>                       ]  1.31 MB/2.383 MBBA486a8e636d62: Downloading [============================>                      ] 1.343 MB/2.383 MBBA486a8e636d62: Downloading [============================>                      ] 1.375 MB/2.383 MBBA486a8e636d62: Downloading [=============================>                     ] 1.408 MB/2.383 MBBA486a8e636d62: Downloading [==============================>                    ] 1.441 MB/2.383 MBBA486a8e636d62: Downloading [==============================>                    ] 1.474 MB/2.383 MBBA486a8e636d62: Downloading [===============================>                   ] 1.506 MB/2.383 MBBA486a8e636d62: Downloading [================================>                  ] 1.539 MB/2.383 MBBA486a8e636d62: Downloading [================================>                  ] 1.572 MB/2.383 MBBA486a8e636d62: Downloading [=================================>                 ] 1.605 MB/2.383 MBBA486a8e636d62: Downloading [==================================>                ] 1.638 MB/2.383 MBBA4763609efdaa: Downloading [==>                                                ] 1.277 MB/24.66 MBBA486a8e636d62: Downloading [===================================>               ]  1.67 MB/2.383 MBBA486a8e636d62: Downloading [===================================>               ] 1.703 MB/2.383 MBBA486a8e636d62: Downloading [====================================>              ] 1.736 MB/2.383 MBBA486a8e636d62: Downloading [=====================================>             ] 1.769 MB/2.383 MBBA486a8e636d62: Downloading [=====================================>             ] 1.801 MB/2.383 MBBA486a8e636d62: Downloading [======================================>            ] 1.834 MB/2.383 MBBA486a8e636d62: Downloading [=======================================>           ] 1.867 MB/2.383 MBBA486a8e636d62: Downloading [=======================================>           ]   1.9 MB/2.383 MBBA486a8e636d62: Downloading [========================================>          ] 1.932 MB/2.383 MBBA486a8e636d62: Downloading [=========================================>         ] 1.965 MB/2.383 MBBA486a8e636d62: Downloading [=========================================>         ] 1.998 MB/2.383 MBBA486a8e636d62: Downloading [==========================================>        ] 2.031 MB/2.383 MBBA4763609efdaa: Downloading [===>                                               ] 1.539 MB/24.66 MBBA486a8e636d62: Downloading [===========================================>       ] 2.063 MB/2.383 MBBA486a8e636d62: Downloading [===========================================>       ] 2.096 MB/2.383 MBBA486a8e636d62: Downloading [============================================>      ] 2.129 MB/2.383 MBBA486a8e636d62: Downloading [=============================================>     ] 2.162 MB/2.383 MBBA486a8e636d62: Downloading [==============================================>    ] 2.195 MB/2.383 MBBA486a8e636d62: Downloading [==============================================>    ] 2.227 MB/2.383 MBBA486a8e636d62: Downloading [===============================================>   ]  2.26 MB/2.383 MBBA486a8e636d62: Downloading [================================================>  ] 2.293 MB/2.383 MBBA486a8e636d62: Downloading [================================================>  ] 2.326 MB/2.383 MBBA486a8e636d62: Downloading [=================================================> ] 2.358 MB/2.383 MBBA486a8e636d62: Downloading [==================================================>] 2.383 MB/2.383 MBBA486a8e636d62: Verifying ChecksumBA486a8e636d62: Download completeBA4763609efdaa: Downloading [===>                                               ] 1.801 MB/24.66 MBBA486a8e636d62: Extracting [>                                                  ] 32.77 kB/2.383 MBBA486a8e636d62: Extracting [=>                                                 ] 65.54 kB/2.383 MBBA4763609efdaa: Downloading [====>                                              ]  2.06 MB/24.66 MBBA4763609efdaa: Downloading [====>                                              ] 2.309 MB/24.66 MBBA4763609efdaa: Downloading [=====>                                             ] 2.571 MB/24.66 MBBA4763609efdaa: Downloading [=====>                                             ] 2.834 MB/24.66 MBBA486a8e636d62: Extracting [==>                                                ]  98.3 kB/2.383 MBBA486a8e636d62: Extracting [==>                                                ] 131.1 kB/2.383 MBBA486a8e636d62: Extracting [===>                                               ] 163.8 kB/2.383 MBBA486a8e636d62: Extracting [====>                                              ] 196.6 kB/2.383 MBBA4763609efdaa: Downloading [======>                                            ] 3.095 MB/24.66 MBBA486a8e636d62: Extracting [====>                                              ] 229.4 kB/2.383 MBBA486a8e636d62: Extracting [=====>                                             ] 262.1 kB/2.383 MBBA486a8e636d62: Extracting [======>                                            ] 294.9 kB/2.383 MBBA4763609efdaa: Downloading [======>                                            ] 3.358 MB/24.66 MBBA486a8e636d62: Extracting [======>                                            ] 327.7 kB/2.383 MBBA486a8e636d62: Extracting [=======>                                           ] 360.4 kB/2.383 MBBA486a8e636d62: Extracting [========>                                          ] 393.2 kB/2.383 MBBA4763609efdaa: Downloading [=======>                                           ] 3.618 MB/24.66 MBBA486a8e636d62: Extracting [=========>                                         ] 458.8 kB/2.383 MBBA486a8e636d62: Extracting [==========>                                        ] 491.5 kB/2.383 MBBA486a8e636d62: Extracting [===========>                                       ] 524.3 kB/2.383 MBBA4763609efdaa: Downloading [=======>                                           ] 3.866 MB/24.66 MBBA486a8e636d62: Extracting [===========>                                       ] 557.1 kB/2.383 MBBA486a8e636d62: Extracting [============>                                      ] 589.8 kB/2.383 MBBA4763609efdaa: Downloading [========>                                          ] 4.128 MB/24.66 MBBA4763609efdaa: Downloading [========>                                          ]  4.39 MB/24.66 MBBA486a8e636d62: Extracting [=============>                                     ] 655.4 kB/2.383 MBBA486a8e636d62: Extracting [===============>                                   ] 720.9 kB/2.383 MBBA486a8e636d62: Extracting [===============>                                   ] 753.7 kB/2.383 MBBA4763609efdaa: Downloading [=========>                                         ] 4.646 MB/24.66 MBBA486a8e636d62: Extracting [================>                                  ] 786.4 kB/2.383 MBBA486a8e636d62: Extracting [=================>                                 ] 819.2 kB/2.383 MBBA486a8e636d62: Extracting [=================>                                 ]   852 kB/2.383 MBBA486a8e636d62: Extracting [==================>                                ] 884.7 kB/2.383 MBBA4763609efdaa: Downloading [=========>                                         ] 4.898 MB/24.66 MBBA486a8e636d62: Extracting [===================>                               ] 917.5 kB/2.383 MBBA486a8e636d62: Extracting [===================>                               ] 950.3 kB/2.383 MBBA486a8e636d62: Extracting [====================>                              ]   983 kB/2.383 MBBA486a8e636d62: Extracting [=====================>                             ] 1.016 MB/2.383 MBBA4763609efdaa: Downloading [==========>                                        ] 5.158 MB/24.66 MBBA486a8e636d62: Extracting [======================>                            ] 1.049 MB/2.383 MBBA486a8e636d62: Extracting [======================>                            ] 1.081 MB/2.383 MBBA4763609efdaa: Downloading [==========>                                        ] 5.406 MB/24.66 MBBA486a8e636d62: Extracting [=======================>                           ] 1.114 MB/2.383 MBBA486a8e636d62: Extracting [========================>                          ] 1.147 MB/2.383 MBBA486a8e636d62: Extracting [========================>                          ]  1.18 MB/2.383 MBBAf5d4b0e25bc2: Downloading [=>                                                 ] 15.88 kB/677.9 kBBA4763609efdaa: Downloading [===========>                                       ] 5.667 MB/24.66 MBBA486a8e636d62: Extracting [=========================>                         ] 1.212 MB/2.383 MBBAf5d4b0e25bc2: Downloading [==>                                                ] 28.96 kB/677.9 kBBA486a8e636d62: Extracting [==========================>                        ] 1.245 MB/2.383 MBBA486a8e636d62: Extracting [==========================>                        ] 1.278 MB/2.383 MBBAf5d4b0e25bc2: Downloading [===>                                               ] 45.34 kB/677.9 kBBA486a8e636d62: Extracting [===========================>                       ] 1.311 MB/2.383 MBBA4763609efdaa: Downloading [===========>                                       ] 5.914 MB/24.66 MBBAf5d4b0e25bc2: Downloading [====>                                              ] 61.73 kB/677.9 kBBA486a8e636d62: Extracting [============================>                      ] 1.343 MB/2.383 MBBAf5d4b0e25bc2: Downloading [=====>                                             ] 81.02 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=======>                                           ] 97.41 kB/677.9 kBBA486a8e636d62: Extracting [============================>                      ] 1.376 MB/2.383 MBBA486a8e636d62: Extracting [=============================>                     ] 1.409 MB/2.383 MBBAf5d4b0e25bc2: Downloading [========>                                          ] 113.8 kB/677.9 kBBA4763609efdaa: Downloading [============>                                      ] 6.176 MB/24.66 MBBAf5d4b0e25bc2: Downloading [=========>                                         ] 130.2 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==========>                                        ] 146.1 kB/677.9 kBBAf5d4b0e25bc2: Downloading [===========>                                       ] 162.5 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=============>                                     ] 178.9 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==============>                                    ] 195.3 kB/677.9 kBBA4763609efdaa: Downloading [=============>                                     ] 6.429 MB/24.66 MBBAf5d4b0e25bc2: Downloading [===============>                                   ] 212.1 kB/677.9 kBBAf5d4b0e25bc2: Downloading [================>                                  ] 228.5 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==================>                                ] 244.9 kB/677.9 kBBA486a8e636d62: Extracting [==============================>                    ] 1.475 MB/2.383 MBBAf5d4b0e25bc2: Downloading [===================>                               ] 261.2 kB/677.9 kBBAf5d4b0e25bc2: Downloading [====================>                              ] 277.6 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=====================>                             ]   294 kB/677.9 kBBAf5d4b0e25bc2: Downloading [======================>                            ] 310.4 kB/677.9 kBBAf5d4b0e25bc2: Downloading [========================>                          ] 326.8 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=========================>                         ] 343.2 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==========================>                        ] 359.6 kB/677.9 kBBAf5d4b0e25bc2: Downloading [===========================>                       ] 375.9 kB/677.9 kBBAf5d4b0e25bc2: Downloading [============================>                      ] 392.3 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==============================>                    ] 408.7 kB/677.9 kBBAf5d4b0e25bc2: Downloading [===============================>                   ] 425.1 kB/677.9 kBBA486a8e636d62: Extracting [================================>                  ]  1.54 MB/2.383 MBBAf5d4b0e25bc2: Downloading [================================>                  ] 441.5 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=================================>                 ] 457.9 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==================================>                ] 474.2 kB/677.9 kBBAf5d4b0e25bc2: Downloading [====================================>              ] 490.6 kB/677.9 kBBA486a8e636d62: Extracting [=================================>                 ] 1.606 MB/2.383 MBBAf5d4b0e25bc2: Downloading [====================================>              ] 498.4 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=====================================>             ] 514.8 kB/677.9 kBBA486a8e636d62: Extracting [===================================>               ] 1.671 MB/2.383 MBBAf5d4b0e25bc2: Downloading [======================================>            ] 523.4 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=======================================>           ] 539.8 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=========================================>         ] 556.2 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==========================================>        ] 572.5 kB/677.9 kBBAf5d4b0e25bc2: Downloading [===========================================>       ] 588.9 kB/677.9 kBBAf5d4b0e25bc2: Downloading [============================================>      ] 605.3 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=============================================>     ] 621.7 kB/677.9 kBBA486a8e636d62: Extracting [====================================>              ] 1.737 MB/2.383 MBBAf5d4b0e25bc2: Downloading [===============================================>   ] 638.1 kB/677.9 kBBAf5d4b0e25bc2: Downloading [================================================>  ] 654.5 kB/677.9 kBBAf5d4b0e25bc2: Downloading [=================================================> ] 670.8 kB/677.9 kBBAf5d4b0e25bc2: Downloading [==================================================>] 677.9 kB/677.9 kBBAf5d4b0e25bc2: Verifying ChecksumBAf5d4b0e25bc2: Download completeBA4763609efdaa: Downloading [=============>                                     ] 6.684 MB/24.66 MBBA486a8e636d62: Extracting [=====================================>             ] 1.802 MB/2.383 MBBA4763609efdaa: Downloading [==============>                                    ] 6.946 MB/24.66 MBBA4763609efdaa: Downloading [==============>                                    ] 7.196 MB/24.66 MBBA486a8e636d62: Extracting [=======================================>           ] 1.868 MB/2.383 MBBA486a8e636d62: Extracting [=======================================>           ] 1.901 MB/2.383 MBBA486a8e636d62: Extracting [========================================>          ] 1.933 MB/2.383 MBBA486a8e636d62: Extracting [=========================================>         ] 1.966 MB/2.383 MBBA486a8e636d62: Extracting [=========================================>         ] 1.999 MB/2.383 MBBA89931ecfec22: Downloading [==================================================>]    153 B/153 BBA89931ecfec22: Verifying ChecksumBA89931ecfec22: Download completeBA4763609efdaa: Downloading [===============>                                   ] 7.454 MB/24.66 MBBA486a8e636d62: Extracting [==========================================>        ] 2.032 MB/2.383 MBBA486a8e636d62: Extracting [===========================================>       ] 2.064 MB/2.383 MBBA486a8e636d62: Extracting [============================================>      ] 2.097 MB/2.383 MBBA4763609efdaa: Downloading [===============>                                   ] 7.707 MB/24.66 MBBA486a8e636d62: Extracting [============================================>      ]  2.13 MB/2.383 MBBA486a8e636d62: Extracting [=============================================>     ] 2.163 MB/2.383 MBBA486a8e636d62: Extracting [==============================================>    ] 2.195 MB/2.383 MBBA4763609efdaa: Downloading [================>                                  ]  7.96 MB/24.66 MBBA486a8e636d62: Extracting [==============================================>    ] 2.228 MB/2.383 MBBA486a8e636d62: Extracting [===============================================>   ] 2.261 MB/2.383 MBBA4763609efdaa: Downloading [================>                                  ] 8.218 MB/24.66 MBBA4763609efdaa: Downloading [=================>                                 ]  8.47 MB/24.66 MBBA4763609efdaa: Downloading [=================>                                 ] 8.732 MB/24.66 MBBA486a8e636d62: Extracting [================================================>  ] 2.327 MB/2.383 MBBA486a8e636d62: Extracting [=================================================> ] 2.359 MB/2.383 MBBA486a8e636d62: Extracting [==================================================>] 2.383 MB/2.383 MBBA4763609efdaa: Downloading [==================>                                ] 8.994 MB/24.66 MBBA4763609efdaa: Downloading [==================>                                ] 9.256 MB/24.66 MBBA4763609efdaa: Downloading [===================>                               ] 9.518 MB/24.66 MBBA4763609efdaa: Downloading [===================>                               ]  9.78 MB/24.66 MBBA486a8e636d62: Pull completeBA4763609efdaa: Downloading [====================>                              ] 10.04 MB/24.66 MBBA4763609efdaa: Downloading [====================>                              ]  10.3 MB/24.66 MBBA89eed58f5d2d: Extracting [==================================================>]    193 B/193 BBA4763609efdaa: Downloading [=====================>                             ] 10.55 MB/24.66 MBBA89eed58f5d2d: Extracting [==================================================>]    193 B/193 BBA4763609efdaa: Downloading [=====================>                             ]  10.8 MB/24.66 MBBA4763609efdaa: Downloading [======================>                            ] 11.05 MB/24.66 MBBA4763609efdaa: Downloading [======================>                            ]  11.3 MB/24.66 MBBA4763609efdaa: Downloading [=======================>                           ] 11.57 MB/24.66 MBBA4763609efdaa: Downloading [=======================>                           ] 11.81 MB/24.66 MBBA4763609efdaa: Downloading [========================>                          ] 12.07 MB/24.66 MBBA4763609efdaa: Downloading [=========================>                         ] 12.34 MB/24.66 MBBA4763609efdaa: Downloading [=========================>                         ]  12.6 MB/24.66 MBBA4763609efdaa: Downloading [==========================>                        ] 12.86 MB/24.66 MBBA4763609efdaa: Downloading [==========================>                        ] 13.12 MB/24.66 MBBA4763609efdaa: Downloading [===========================>                       ] 13.38 MB/24.66 MBBA4763609efdaa: Downloading [===========================>                       ] 13.65 MB/24.66 MBBA89eed58f5d2d: Pull completeBA4763609efdaa: Downloading [============================>                      ] 13.91 MB/24.66 MBBA4763609efdaa: Downloading [============================>                      ] 14.17 MB/24.66 MBBA4763609efdaa: Downloading [=============================>                     ] 14.43 MB/24.66 MBBA4763609efdaa: Downloading [=============================>                     ] 14.68 MB/24.66 MBBA4763609efdaa: Downloading [==============================>                    ] 14.94 MB/24.66 MBBA4763609efdaa: Downloading [==============================>                    ] 15.19 MB/24.66 MBBA4763609efdaa: Downloading [===============================>                   ] 15.45 MB/24.66 MBBA4763609efdaa: Downloading [===============================>                   ] 15.71 MB/24.66 MBBA4763609efdaa: Downloading [================================>                  ] 15.97 MB/24.66 MBBA4763609efdaa: Downloading [================================>                  ] 16.22 MB/24.66 MBBA4763609efdaa: Downloading [=================================>                 ] 16.48 MB/24.66 MBBA4763609efdaa: Downloading [=================================>                 ] 16.74 MB/24.66 MBBA4763609efdaa: Downloading [==================================>                ] 17.01 MB/24.66 MBBA4763609efdaa: Downloading [==================================>                ] 17.25 MB/24.66 MBBA4763609efdaa: Downloading [===================================>               ] 17.51 MB/24.66 MBBA4763609efdaa: Downloading [====================================>              ] 17.78 MB/24.66 MBBA4763609efdaa: Downloading [====================================>              ] 18.04 MB/24.66 MBBA4763609efdaa: Downloading [=====================================>             ]  18.3 MB/24.66 MBBA4763609efdaa: Downloading [=====================================>             ] 18.56 MB/24.66 MBBA4763609efdaa: Downloading [======================================>            ] 18.82 MB/24.66 MBBA4763609efdaa: Downloading [======================================>            ] 19.09 MB/24.66 MBBA4763609efdaa: Downloading [=======================================>           ] 19.35 MB/24.66 MBBA4763609efdaa: Downloading [=======================================>           ] 19.61 MB/24.66 MBBA4763609efdaa: Downloading [========================================>          ] 19.87 MB/24.66 MBBA4763609efdaa: Downloading [========================================>          ] 20.14 MB/24.66 MBBA4763609efdaa: Downloading [=========================================>         ]  20.4 MB/24.66 MBBA4763609efdaa: Downloading [=========================================>         ] 20.66 MB/24.66 MBBA4763609efdaa: Downloading [==========================================>        ] 20.92 MB/24.66 MBBA4763609efdaa: Downloading [==========================================>        ] 21.18 MB/24.66 MBBA4763609efdaa: Downloading [===========================================>       ] 21.45 MB/24.66 MBBA4763609efdaa: Downloading [============================================>      ] 21.71 MB/24.66 MBBA4763609efdaa: Downloading [============================================>      ] 21.97 MB/24.66 MBBA4763609efdaa: Downloading [=============================================>     ] 22.23 MB/24.66 MBBA4763609efdaa: Downloading [=============================================>     ] 22.49 MB/24.66 MBBA4763609efdaa: Downloading [==============================================>    ] 22.74 MB/24.66 MBBA4763609efdaa: Downloading [==============================================>    ] 22.99 MB/24.66 MBBA4763609efdaa: Downloading [===============================================>   ] 23.24 MB/24.66 MBBA4763609efdaa: Downloading [===============================================>   ]  23.5 MB/24.66 MBBA4763609efdaa: Downloading [================================================>  ] 23.76 MB/24.66 MBBA4763609efdaa: Downloading [================================================>  ] 24.02 MB/24.66 MBBA4763609efdaa: Downloading [=================================================> ] 24.27 MB/24.66 MBBA4763609efdaa: Downloading [=================================================> ] 24.53 MB/24.66 MBBA4763609efdaa: Verifying ChecksumBA4763609efdaa: Download completeBA4763609efdaa: Extracting [>                                                  ] 262.1 kB/24.66 MBBA4763609efdaa: Extracting [=>                                                 ] 524.3 kB/24.66 MBBA4763609efdaa: Extracting [=>                                                 ] 786.4 kB/24.66 MBBA4763609efdaa: Extracting [==>                                                ] 1.049 MB/24.66 MBBA4763609efdaa: Extracting [==>                                                ] 1.311 MB/24.66 MBBA4763609efdaa: Extracting [===>                                               ] 1.573 MB/24.66 MBBA4763609efdaa: Extracting [===>                                               ] 1.835 MB/24.66 MBBA4763609efdaa: Extracting [====>                                              ] 2.097 MB/24.66 MBBA4763609efdaa: Extracting [====>                                              ] 2.359 MB/24.66 MBBA4763609efdaa: Extracting [=====>                                             ] 2.621 MB/24.66 MBBA4763609efdaa: Extracting [=====>                                             ] 2.884 MB/24.66 MBBA4763609efdaa: Extracting [======>                                            ] 3.146 MB/24.66 MBBA4763609efdaa: Extracting [======>                                            ] 3.408 MB/24.66 MBBA4763609efdaa: Extracting [=======>                                           ]  3.67 MB/24.66 MBBA4763609efdaa: Extracting [=======>                                           ] 3.932 MB/24.66 MBBA4763609efdaa: Extracting [========>                                          ] 4.194 MB/24.66 MBBA4763609efdaa: Extracting [=========>                                         ] 4.456 MB/24.66 MBBA4763609efdaa: Extracting [=========>                                         ] 4.719 MB/24.66 MBBA4763609efdaa: Extracting [==========>                                        ] 4.981 MB/24.66 MBBA4763609efdaa: Extracting [==========>                                        ] 5.243 MB/24.66 MBBA4763609efdaa: Extracting [===========>                                       ] 5.505 MB/24.66 MBBA4763609efdaa: Extracting [===========>                                       ] 5.767 MB/24.66 MBBA4763609efdaa: Extracting [============>                                      ] 6.029 MB/24.66 MBBA4763609efdaa: Extracting [============>                                      ] 6.291 MB/24.66 MBBA4763609efdaa: Extracting [=============>                                     ] 6.554 MB/24.66 MBBA4763609efdaa: Extracting [=============>                                     ] 6.816 MB/24.66 MBBA4763609efdaa: Extracting [==============>                                    ] 7.078 MB/24.66 MBBA4763609efdaa: Extracting [==============>                                    ]  7.34 MB/24.66 MBBA4763609efdaa: Extracting [===============>                                   ] 7.602 MB/24.66 MBBA4763609efdaa: Extracting [===============>                                   ] 7.864 MB/24.66 MBBA4763609efdaa: Extracting [================>                                  ] 8.126 MB/24.66 MBBA4763609efdaa: Extracting [=================>                                 ] 8.389 MB/24.66 MBBA4763609efdaa: Extracting [=================>                                 ] 8.651 MB/24.66 MBBA4763609efdaa: Extracting [==================>                                ] 8.913 MB/24.66 MBBA4763609efdaa: Extracting [==================>                                ] 9.175 MB/24.66 MBBA4763609efdaa: Extracting [===================>                               ] 9.437 MB/24.66 MBBA4763609efdaa: Extracting [===================>                               ] 9.699 MB/24.66 MBBA4763609efdaa: Extracting [====================>                              ] 9.961 MB/24.66 MBBA4763609efdaa: Extracting [====================>                              ] 10.22 MB/24.66 MBBA4763609efdaa: Extracting [=====================>                             ] 10.49 MB/24.66 MBBA4763609efdaa: Extracting [=====================>                             ] 10.75 MB/24.66 MBBA4763609efdaa: Extracting [======================>                            ] 11.01 MB/24.66 MBBA4763609efdaa: Extracting [======================>                            ] 11.27 MB/24.66 MBBA4763609efdaa: Extracting [=======================>                           ] 11.53 MB/24.66 MBBA4763609efdaa: Extracting [=======================>                           ]  11.8 MB/24.66 MBBA4763609efdaa: Extracting [========================>                          ] 12.06 MB/24.66 MBBA4763609efdaa: Extracting [========================>                          ] 12.32 MB/24.66 MBBA4763609efdaa: Extracting [=========================>                         ] 12.58 MB/24.66 MBBA4763609efdaa: Extracting [==========================>                        ] 12.85 MB/24.66 MBBA4763609efdaa: Extracting [==========================>                        ] 13.11 MB/24.66 MBBA4763609efdaa: Extracting [===========================>                       ] 13.37 MB/24.66 MBBA4763609efdaa: Extracting [===========================>                       ] 13.63 MB/24.66 MBBA4763609efdaa: Extracting [============================>                      ] 13.89 MB/24.66 MBBA4763609efdaa: Extracting [============================>                      ] 14.16 MB/24.66 MBBA4763609efdaa: Extracting [=============================>                     ] 14.42 MB/24.66 MBBA4763609efdaa: Extracting [=============================>                     ] 14.68 MB/24.66 MBBA4763609efdaa: Extracting [==============================>                    ] 14.94 MB/24.66 MBBA4763609efdaa: Extracting [==============================>                    ]  15.2 MB/24.66 MBBA4763609efdaa: Extracting [===============================>                   ] 15.47 MB/24.66 MBBA4763609efdaa: Extracting [===============================>                   ] 15.73 MB/24.66 MBBA4763609efdaa: Extracting [================================>                  ] 15.99 MB/24.66 MBBA4763609efdaa: Extracting [================================>                  ] 16.25 MB/24.66 MBBA4763609efdaa: Extracting [=================================>                 ] 16.52 MB/24.66 MBBA4763609efdaa: Extracting [==================================>                ] 16.78 MB/24.66 MBBA4763609efdaa: Extracting [==================================>                ] 17.04 MB/24.66 MBBA4763609efdaa: Extracting [===================================>               ]  17.3 MB/24.66 MBBA4763609efdaa: Extracting [===================================>               ] 17.56 MB/24.66 MBBA4763609efdaa: Extracting [====================================>              ] 17.83 MB/24.66 MBBA4763609efdaa: Extracting [====================================>              ] 18.09 MB/24.66 MBBA4763609efdaa: Extracting [=====================================>             ] 18.35 MB/24.66 MBBA4763609efdaa: Extracting [=====================================>             ] 18.61 MB/24.66 MBBA4763609efdaa: Extracting [======================================>            ] 18.87 MB/24.66 MBBA4763609efdaa: Extracting [======================================>            ] 19.14 MB/24.66 MBBA4763609efdaa: Extracting [=======================================>           ]  19.4 MB/24.66 MBBA4763609efdaa: Extracting [=======================================>           ] 19.66 MB/24.66 MBBA4763609efdaa: Extracting [========================================>          ] 19.92 MB/24.66 MBBA4763609efdaa: Extracting [========================================>          ] 20.19 MB/24.66 MBBA4763609efdaa: Extracting [=========================================>         ] 20.45 MB/24.66 MBBA4763609efdaa: Extracting [=========================================>         ] 20.71 MB/24.66 MBBA4763609efdaa: Extracting [==========================================>        ] 20.97 MB/24.66 MBBA4763609efdaa: Extracting [===========================================>       ] 21.23 MB/24.66 MBBA4763609efdaa: Extracting [===========================================>       ]  21.5 MB/24.66 MBBA4763609efdaa: Extracting [============================================>      ] 21.76 MB/24.66 MBBA4763609efdaa: Extracting [============================================>      ] 22.02 MB/24.66 MBBA4763609efdaa: Extracting [=============================================>     ] 22.28 MB/24.66 MBBA4763609efdaa: Extracting [=============================================>     ] 22.54 MB/24.66 MBBA4763609efdaa: Extracting [==============================================>    ] 22.81 MB/24.66 MBBA4763609efdaa: Extracting [==============================================>    ] 23.07 MB/24.66 MBBA4763609efdaa: Extracting [===============================================>   ] 23.33 MB/24.66 MBBA4763609efdaa: Extracting [===============================================>   ] 23.59 MB/24.66 MBBA4763609efdaa: Extracting [================================================>  ] 23.86 MB/24.66 MBBA4763609efdaa: Extracting [================================================>  ] 24.12 MB/24.66 MBBA4763609efdaa: Extracting [=================================================> ] 24.38 MB/24.66 MBBA4763609efdaa: Extracting [=================================================> ] 24.64 MB/24.66 MBBA4763609efdaa: Extracting [==================================================>] 24.66 MB/24.66 MBBA4763609efdaa: Pull completeBAf5d4b0e25bc2: Extracting [==>                                                ] 32.77 kB/677.9 kBBAf5d4b0e25bc2: Extracting [====>                                              ] 65.54 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=======>                                           ]  98.3 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=========>                                         ] 131.1 kB/677.9 kBBAf5d4b0e25bc2: Extracting [============>                                      ] 163.8 kB/677.9 kBBAf5d4b0e25bc2: Extracting [================>                                  ] 229.4 kB/677.9 kBBAf5d4b0e25bc2: Extracting [===================>                               ] 262.1 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=====================>                             ] 294.9 kB/677.9 kBBAf5d4b0e25bc2: Extracting [========================>                          ] 327.7 kB/677.9 kBBAf5d4b0e25bc2: Extracting [==========================>                        ] 360.4 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=============================>                     ] 393.2 kB/677.9 kBBAf5d4b0e25bc2: Extracting [===============================>                   ]   426 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=================================>                 ] 458.8 kB/677.9 kBBAf5d4b0e25bc2: Extracting [====================================>              ] 491.5 kB/677.9 kBBAf5d4b0e25bc2: Extracting [======================================>            ] 524.3 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=========================================>         ] 557.1 kB/677.9 kBBAf5d4b0e25bc2: Extracting [===========================================>       ] 589.8 kB/677.9 kBBAf5d4b0e25bc2: Extracting [=============================================>     ] 622.6 kB/677.9 kBBAf5d4b0e25bc2: Extracting [================================================>  ] 655.4 kB/677.9 kBBAf5d4b0e25bc2: Extracting [==================================================>] 677.9 kB/677.9 kBBAf5d4b0e25bc2: Extracting [==================================================>] 677.9 kB/677.9 kBBAf5d4b0e25bc2: Pull completeBA89931ecfec22: Extracting [==================================================>]    153 B/153 BBA89931ecfec22: Extracting [==================================================>]    153 B/153 BBA89931ecfec22: Pull completeBDigest: sha256:6ae25ff64f37401d299c22c6b4792fd0f1f081587af93f3fb5cf2ece04628889
+Status: Downloaded newer image for ruby:2.4.1-alpine
+ ---> 9fd56918d97e
+Step 2 : MAINTAINER Rapid7
+ ---> Running in e6cc4885159e
+ ---> 42c5070e5d7a
+Removing intermediate container e6cc4885159e
+Step 3 : ARG BUNDLER_ARGS="--jobs=8 --without development test coverage"
+ ---> Running in 565d13d8905b
+ ---> 7defadb75a35
+Removing intermediate container 565d13d8905b
+Step 4 : ENV APP_HOME /usr/src/metasploit-framework/
+ ---> Running in ba452352d577
+ ---> 411370eab551
+Removing intermediate container ba452352d577
+Step 5 : ENV MSF_USER msf
+ ---> Running in 2f17bee31916
+ ---> 5a059e9decff
+Removing intermediate container 2f17bee31916
+Step 6 : ENV NMAP_PRIVILEGED ""
+ ---> Running in 157e104891e5
+ ---> 7d05a80eba81
+Removing intermediate container 157e104891e5
+Step 7 : WORKDIR $APP_HOME
+ ---> Running in 14fe8a1ba485
+ ---> eb335d64d6b9
+Removing intermediate container 14fe8a1ba485
+Step 8 : COPY Gemfile* m* Rakefile $APP_HOME
+ ---> 4029363ddb86
+Removing intermediate container 83a042b44a07
+Step 9 : COPY lib $APP_HOME/lib
+ ---> 42804394128a
+Removing intermediate container be4ef4483118
+Step 10 : RUN apk update &&     apk add       sqlite-libs       nmap       nmap-scripts       nmap-nselibs       postgresql-libs       ncurses       libcap     && apk add --virtual .ruby-builddeps       autoconf       bison       build-base       ruby-dev       libffi-dev      openssl-dev       readline-dev       sqlite-dev       postgresql-dev       libpcap-dev       libxml2-dev       libxslt-dev       yaml-dev       zlib-dev       ncurses-dev     && echo "gem: --no-ri --no-rdoc" > /etc/gemrc     && bundle install --system $BUNDLER_ARGS     && apk del .ruby-builddeps     && rm -rf /var/cache/apk/*
+ ---> Running in 766bdbf7eb25
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+v3.4.6-129-g6d398ff [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.6-83-g67e50bc [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+OK: 5973 distinct packages available
+(1/14) Installing libcap (2.25-r0)
+(2/14) Installing ncurses (6.0-r7)
+(3/14) Installing libgcc (5.3.0-r0)
+(4/14) Installing libpcap (1.7.4-r0)
+(5/14) Installing libstdc++ (5.3.0-r0)
+(6/14) Installing nmap (7.12-r0)
+(7/14) Installing nmap-nselibs (7.12-r0)
+(8/14) Installing nmap-scripts (7.12-r0)
+(9/14) Installing db (5.3.28-r0)
+(10/14) Installing libsasl (2.1.26-r7)
+(11/14) Installing libldap (2.4.44-r1)
+(12/14) Installing libpq (9.5.6-r0)
+(13/14) Installing postgresql-libs (9.5.6-r0)
+(14/14) Installing sqlite-libs (3.13.0-r0)
+Executing busybox-1.24.2-r13.trigger
+OK: 47 MiB in 43 packages
+(1/36) Installing m4 (1.4.17-r1)
+(2/36) Installing perl (5.22.2-r0)
+(3/36) Installing autoconf (2.69-r0)
+(4/36) Installing bison (3.0.4-r0)
+(5/36) Installing binutils-libs (2.26-r1)
+(6/36) Installing binutils (2.26-r1)
+(7/36) Installing gmp (6.1.0-r0)
+(8/36) Installing isl (0.14.1-r0)
+(9/36) Installing libgomp (5.3.0-r0)
+(10/36) Installing libatomic (5.3.0-r0)
+(11/36) Installing mpfr3 (3.1.2-r0)
+(12/36) Installing mpc1 (1.0.3-r0)
+(13/36) Installing gcc (5.3.0-r0)
+(14/36) Installing make (4.1-r1)
+(15/36) Installing musl-dev (1.1.14-r14)
+(16/36) Installing libc-dev (0.7-r0)
+(17/36) Installing fortify-headers (0.8-r0)
+(18/36) Installing g++ (5.3.0-r0)
+(19/36) Installing build-base (0.4-r1)
+(20/36) Installing libgmpxx (6.1.0-r0)
+(21/36) Installing gmp-dev (6.1.0-r0)
+(22/36) Installing libedit (20150325.3.1-r3)
+(23/36) Installing ruby-libs (2.3.1-r0)
+(24/36) Installing ruby-dev (2.3.1-r0)
+(25/36) Installing readline-dev (6.3.008-r4)
+(26/36) Installing sqlite-dev (3.13.0-r0)
+(27/36) Installing postgresql-dev (9.5.6-r0)
+(28/36) Installing libpcap-dev (1.7.4-r0)
+(29/36) Installing libxml2 (2.9.4-r2)
+(30/36) Installing libxml2-dev (2.9.4-r2)
+(31/36) Installing libgpg-error (1.23-r0)
+(32/36) Installing libgcrypt (1.7.0-r1)
+(33/36) Installing libxslt (1.1.29-r1)
+(34/36) Installing libxslt-dev (1.1.29-r1)
+(35/36) Installing ncurses-dev (6.0-r7)
+(36/36) Installing .ruby-builddeps (0)
+Executing busybox-1.24.2-r13.trigger
+OK: 276 MiB in 79 packages
+Fetching gem metadata from https://rubygems.org/......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Fetching rake 12.0.0
+Fetching i18n 0.8.4
+Fetching thread_safe 0.3.6
+Fetching builder 3.2.3
+Fetching erubis 2.7.0
+Fetching mini_portile2 2.1.0
+Fetching minitest 5.10.2
+Installing builder 3.2.3
+Installing mini_portile2 2.1.0
+Installing i18n 0.8.4
+Installing minitest 5.10.2
+Installing rake 12.0.0
+Installing thread_safe 0.3.6
+Installing erubis 2.7.0
+Fetching rack 1.6.8
+Fetching arel 6.0.4
+Fetching backports 3.8.0
+Fetching bcrypt 3.1.11
+Fetching bit-struct 0.16
+Fetching filesize 0.1.1
+Installing filesize 0.1.1
+Installing bit-struct 0.16
+Installing arel 6.0.4
+Installing bcrypt 3.1.11 with native extensions
+Fetching rkelly-remix 0.0.7
+Fetching json 2.1.0
+Installing backports 3.8.0
+Installing rack 1.6.8
+Installing rkelly-remix 0.0.7
+Installing json 2.1.0 with native extensions
+Fetching metasm 1.0.3
+Installing metasm 1.0.3
+Fetching thor 0.19.4
+Fetching pg 0.20.0
+Fetching pg_array_parser 0.0.9
+Fetching rubyntlm 0.6.2
+Fetching rubyzip 1.2.1
+Fetching metasploit-payloads 1.2.32
+Installing rubyntlm 0.6.2
+Installing pg_array_parser 0.0.9 with native extensions
+Installing thor 0.19.4
+Installing rubyzip 1.2.1
+Installing pg 0.20.0 with native extensions
+Fetching metasploit_payloads-mettle 0.1.9
+Fetching msgpack 1.1.0
+Fetching nessus_rest 0.1.6
+Installing nessus_rest 0.1.6
+Installing msgpack 1.1.0 with native extensions
+Installing metasploit-payloads 1.2.32
+Installing metasploit_payloads-mettle 0.1.9
+Fetching net-ssh 4.1.0
+Fetching network_interface 0.0.1
+Installing network_interface 0.0.1 with native extensions
+Installing net-ssh 4.1.0
+Fetching nexpose 6.0.0
+Fetching public_suffix 2.0.5
+Fetching multipart-post 2.0.0
+Fetching openssl-ccm 1.2.1
+Installing multipart-post 2.0.0
+Installing public_suffix 2.0.5
+Installing openssl-ccm 1.2.1
+Installing nexpose 6.0.0
+Fetching openvas-omp 0.0.4
+Fetching pcaprub 0.12.4
+Fetching patch_finder 1.0.2
+Fetching rb-readline 0.5.4
+Fetching redcarpet 3.4.0
+Fetching rex-text 0.2.15
+Fetching rex-core 0.1.10
+Installing openvas-omp 0.0.4
+Installing patch_finder 1.0.2
+Fetching rex-struct2 0.1.2
+Installing rex-core 0.1.10
+Installing rex-text 0.2.15
+Installing pcaprub 0.12.4 with native extensions
+Installing redcarpet 3.4.0 with native extensions
+Fetching rex-java 0.1.5
+Installing rb-readline 0.5.4
+Fetching rex-registry 0.1.3
+Installing rex-struct2 0.1.2
+Installing rex-java 0.1.5
+Installing rex-registry 0.1.3
+Fetching robots 0.10.1
+Fetching bindata 2.4.0
+Installing robots 0.10.1
+Installing bindata 2.4.0
+Fetching windows_error 0.1.2
+Fetching sqlite3 1.3.13
+Fetching sshkey 1.9.0
+Fetching xmlrpc 0.3.0
+Using bundler 1.15.1
+Fetching tzinfo 1.2.3
+Fetching nokogiri 1.7.2
+Fetching jsobfu 0.4.2
+Installing sshkey 1.9.0
+Installing xmlrpc 0.3.0
+Installing jsobfu 0.4.2
+Installing sqlite3 1.3.13 with native extensions
+Fetching rack-test 0.6.3
+Fetching faraday 0.12.1
+Installing tzinfo 1.2.3
+Fetching addressable 2.5.1
+Installing windows_error 0.1.2
+Installing rack-test 0.6.3
+Installing faraday 0.12.1
+Installing addressable 2.5.1
+Installing nokogiri 1.7.2 with native extensions
+Fetching rex-socket 0.1.6
+Fetching rex-arch 0.1.8
+Fetching rex-mime 0.1.5
+Fetching rex-ole 0.1.6
+Fetching rex-random_identifier 0.1.2
+Installing rex-mime 0.1.5
+Installing rex-ole 0.1.6
+Installing rex-arch 0.1.8
+Installing rex-socket 0.1.6
+Installing rex-random_identifier 0.1.2
+Fetching rex-rop_builder 0.1.3
+Fetching rex-zip 0.1.3
+Fetching packetfu 1.1.13
+Fetching ruby_smb 0.0.18
+Fetching activesupport 4.2.8
+Fetching tzinfo-data 1.2017.2
+Fetching sawyer 0.8.1
+Installing rex-rop_builder 0.1.3
+Installing rex-zip 0.1.3
+Installing sawyer 0.8.1
+Fetching rex-bin_tools 0.1.3
+Installing ruby_smb 0.0.18
+Fetching rex-encoder 0.1.4
+Fetching rex-nop 0.1.1
+Installing rex-bin_tools 0.1.3
+Installing rex-nop 0.1.1
+Installing rex-encoder 0.1.4
+Installing activesupport 4.2.8
+Installing tzinfo-data 1.2017.2
+Fetching rex-sslscan 0.1.4
+Fetching rex-powershell 0.1.72
+Installing rex-sslscan 0.1.4
+Fetching loofah 2.0.3
+Fetching recog 2.1.8
+Installing rex-powershell 0.1.72
+Installing packetfu 1.1.13
+Installing loofah 2.0.3
+Fetching octokit 4.7.0
+Fetching rex-exploitation 0.1.14
+Fetching rails-html-sanitizer 1.0.3
+Installing recog 2.1.8
+Installing octokit 4.7.0
+Installing rex-exploitation 0.1.14
+Installing rails-html-sanitizer 1.0.3
+Fetching rails-deprecated_sanitizer 1.0.3
+Fetching activemodel 4.2.8
+Installing rails-deprecated_sanitizer 1.0.3
+Installing activemodel 4.2.8
+Fetching rails-dom-testing 1.0.8
+Fetching activerecord 4.2.8
+Installing rails-dom-testing 1.0.8
+Fetching actionview 4.2.8
+Installing activerecord 4.2.8
+Installing actionview 4.2.8
+Fetching actionpack 4.2.8
+Fetching arel-helpers 2.4.0
+Fetching postgres_ext 3.0.0
+Installing actionpack 4.2.8
+Installing arel-helpers 2.4.0
+Installing postgres_ext 3.0.0
+Fetching railties 4.2.8
+Installing railties 4.2.8
+Fetching metasploit-concern 2.0.4
+Fetching metasploit-model 2.0.4
+Installing metasploit-concern 2.0.4
+Installing metasploit-model 2.0.4
+Fetching metasploit_data_models 2.0.14
+Installing metasploit_data_models 2.0.14
+Fetching metasploit-credential 2.0.9
+Installing metasploit-credential 2.0.9
+Using metasploit-framework 4.14.25 from source at `.`
+Bundle complete! 15 Gemfile dependencies, 90 gems now installed.
+Gems in the groups development, test and coverage were not installed.
+Bundled gems are installed into /usr/local/bundle.
+Post-install message from openssl-ccm:
+Thanks for installing!
+(1/36) Purging .ruby-builddeps (0)
+(2/36) Purging autoconf (2.69-r0)
+(3/36) Purging perl (5.22.2-r0)
+(4/36) Purging bison (3.0.4-r0)
+(5/36) Purging m4 (1.4.17-r1)
+(6/36) Purging build-base (0.4-r1)
+(7/36) Purging make (4.1-r1)
+(8/36) Purging fortify-headers (0.8-r0)
+(9/36) Purging g++ (5.3.0-r0)
+(10/36) Purging gcc (5.3.0-r0)
+(11/36) Purging binutils (2.26-r1)
+(12/36) Purging isl (0.14.1-r0)
+(13/36) Purging libatomic (5.3.0-r0)
+(14/36) Purging libc-dev (0.7-r0)
+(15/36) Purging musl-dev (1.1.14-r14)
+(16/36) Purging ruby-dev (2.3.1-r0)
+(17/36) Purging gmp-dev (6.1.0-r0)
+(18/36) Purging libgmpxx (6.1.0-r0)
+(19/36) Purging ruby-libs (2.3.1-r0)
+(20/36) Purging readline-dev (6.3.008-r4)
+(21/36) Purging sqlite-dev (3.13.0-r0)
+(22/36) Purging postgresql-dev (9.5.6-r0)
+(23/36) Purging libpcap-dev (1.7.4-r0)
+(24/36) Purging libxslt-dev (1.1.29-r1)
+(25/36) Purging libxslt (1.1.29-r1)
+(26/36) Purging ncurses-dev (6.0-r7)
+(27/36) Purging binutils-libs (2.26-r1)
+(28/36) Purging mpc1 (1.0.3-r0)
+(29/36) Purging mpfr3 (3.1.2-r0)
+(30/36) Purging gmp (6.1.0-r0)
+(31/36) Purging libgomp (5.3.0-r0)
+(32/36) Purging libedit (20150325.3.1-r3)
+(33/36) Purging libxml2-dev (2.9.4-r2)
+(34/36) Purging libxml2 (2.9.4-r2)
+(35/36) Purging libgcrypt (1.7.0-r1)
+(36/36) Purging libgpg-error (1.23-r0)
+Executing busybox-1.24.2-r13.trigger
+OK: 47 MiB in 43 packages
+ ---> 30b664454593
+Removing intermediate container 766bdbf7eb25
+Step 11 : RUN chmod o+r /usr/local/bundle/gems/robots-*/lib/robots.rb
+ ---> Running in 860a4df16650
+ ---> 7c658689d511
+Removing intermediate container 860a4df16650
+Step 12 : RUN adduser -g msfconsole -D $MSF_USER
+ ---> Running in e3a2a12a2f61
+ ---> 7c0d2ef84b8c
+Removing intermediate container e3a2a12a2f61
+Step 13 : RUN /usr/sbin/setcap cap_net_raw,cap_net_bind_service=+eip $(which ruby)
+ ---> Running in 81def716e8d3
+ ---> f3f26ec2137c
+Removing intermediate container 81def716e8d3
+Step 14 : RUN /usr/sbin/setcap cap_net_raw,cap_net_bind_service=+eip /usr/bin/nmap
+ ---> Running in 81e668682702
+ ---> 55b2f4d805dc
+Removing intermediate container 81e668682702
+Step 15 : USER $MSF_USER
+ ---> Running in b66fc94795ae
+ ---> cd253c8ee1c6
+Removing intermediate container b66fc94795ae
+Step 16 : ADD ./ $APP_HOME
+ ---> cf5a242b4960
+Removing intermediate container 6bff5cc79b83
+Step 17 : CMD ./msfconsole -r docker/msfconsole.rc
+ ---> Running in 6af4e6ed4e2e
+ ---> 18c37fcfe631
+Removing intermediate container 6af4e6ed4e2e
+Successfully built 18c37fcfe631
+
+travis_time:end:12044883:start=1496729751210772311,finish=1496729936655315767,duration=185444543456
+The command "bash -c "${CMD}"" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:16c77d52
+travis_time:end:16c77d52:start=1496729937134864323,finish=1496729937139514224,duration=4649901travis_time:start:2351abaanothing changed, not updating cache
+
+travis_time:end:2351abaa:start=1496729937144683422,finish=1496729938440500246,duration=1295816824travis_fold:end:cache.2
+Done. Your build exited with 0.

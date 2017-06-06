@@ -1,0 +1,190 @@
+Using worker: worker-linux-da6418d7-1.bb.travis-ci.org:travis-linux-3
+
+travis_fold:start:system_infoBuild system information
+Build language: ruby
+Build image provisioning date and time
+Wed Feb  4 18:22:50 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+2.6.32-042stab090.5
+Cookbooks Version
+23bb455 https://github.com/travis-ci/travis-cookbooks/tree/23bb455
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+Cassandra version
+2.0.9
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "2.6.32-042stab090.5", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:0063a905$ git clone --depth=50 git://github.com/imathis/octopress.git imathis/octopress
+Cloning into 'imathis/octopress'...
+remote: Counting objects: 1548, done.[K
+remote: Compressing objects:   0% (1/905)   [Kremote: Compressing objects:   1% (10/905)   [Kremote: Compressing objects:   2% (19/905)   [Kremote: Compressing objects:   3% (28/905)   [Kremote: Compressing objects:   4% (37/905)   [Kremote: Compressing objects:   5% (46/905)   [Kremote: Compressing objects:   6% (55/905)   [Kremote: Compressing objects:   7% (64/905)   [Kremote: Compressing objects:   8% (73/905)   [Kremote: Compressing objects:   9% (82/905)   [Kremote: Compressing objects:  10% (91/905)   [Kremote: Compressing objects:  11% (100/905)   [Kremote: Compressing objects:  12% (109/905)   [Kremote: Compressing objects:  13% (118/905)   [Kremote: Compressing objects:  14% (127/905)   [Kremote: Compressing objects:  15% (136/905)   [Kremote: Compressing objects:  16% (145/905)   [Kremote: Compressing objects:  17% (154/905)   [Kremote: Compressing objects:  18% (163/905)   [Kremote: Compressing objects:  19% (172/905)   [Kremote: Compressing objects:  20% (181/905)   [Kremote: Compressing objects:  21% (191/905)   [Kremote: Compressing objects:  22% (200/905)   [Kremote: Compressing objects:  23% (209/905)   [Kremote: Compressing objects:  24% (218/905)   [Kremote: Compressing objects:  25% (227/905)   [Kremote: Compressing objects:  26% (236/905)   [Kremote: Compressing objects:  27% (245/905)   [Kremote: Compressing objects:  28% (254/905)   [Kremote: Compressing objects:  29% (263/905)   [Kremote: Compressing objects:  30% (272/905)   [Kremote: Compressing objects:  31% (281/905)   [Kremote: Compressing objects:  32% (290/905)   [Kremote: Compressing objects:  33% (299/905)   [Kremote: Compressing objects:  34% (308/905)   [Kremote: Compressing objects:  35% (317/905)   [Kremote: Compressing objects:  36% (326/905)   [Kremote: Compressing objects:  37% (335/905)   [Kremote: Compressing objects:  38% (344/905)   [Kremote: Compressing objects:  39% (353/905)   [Kremote: Compressing objects:  40% (362/905)   [Kremote: Compressing objects:  41% (372/905)   [Kremote: Compressing objects:  42% (381/905)   [Kremote: Compressing objects:  43% (390/905)   [Kremote: Compressing objects:  44% (399/905)   [Kremote: Compressing objects:  45% (408/905)   [Kremote: Compressing objects:  46% (417/905)   [Kremote: Compressing objects:  47% (426/905)   [Kremote: Compressing objects:  48% (435/905)   [Kremote: Compressing objects:  49% (444/905)   [Kremote: Compressing objects:  50% (453/905)   [Kremote: Compressing objects:  51% (462/905)   [Kremote: Compressing objects:  52% (471/905)   [Kremote: Compressing objects:  53% (480/905)   [Kremote: Compressing objects:  54% (489/905)   [Kremote: Compressing objects:  55% (498/905)   [Kremote: Compressing objects:  56% (507/905)   [Kremote: Compressing objects:  57% (516/905)   [Kremote: Compressing objects:  58% (525/905)   [Kremote: Compressing objects:  59% (534/905)   [Kremote: Compressing objects:  60% (543/905)   [Kremote: Compressing objects:  61% (553/905)   [Kremote: Compressing objects:  62% (562/905)   [Kremote: Compressing objects:  63% (571/905)   [Kremote: Compressing objects:  64% (580/905)   [Kremote: Compressing objects:  65% (589/905)   [Kremote: Compressing objects:  66% (598/905)   [Kremote: Compressing objects:  67% (607/905)   [Kremote: Compressing objects:  68% (616/905)   [Kremote: Compressing objects:  69% (625/905)   [Kremote: Compressing objects:  70% (634/905)   [Kremote: Compressing objects:  71% (643/905)   [Kremote: Compressing objects:  72% (652/905)   [Kremote: Compressing objects:  73% (661/905)   [Kremote: Compressing objects:  74% (670/905)   [Kremote: Compressing objects:  75% (679/905)   [Kremote: Compressing objects:  76% (688/905)   [Kremote: Compressing objects:  77% (697/905)   [Kremote: Compressing objects:  78% (706/905)   [Kremote: Compressing objects:  79% (715/905)   [Kremote: Compressing objects:  80% (724/905)   [Kremote: Compressing objects:  81% (734/905)   [Kremote: Compressing objects:  82% (743/905)   [Kremote: Compressing objects:  83% (752/905)   [Kremote: Compressing objects:  84% (761/905)   [Kremote: Compressing objects:  85% (770/905)   [Kremote: Compressing objects:  86% (779/905)   [Kremote: Compressing objects:  87% (788/905)   [Kremote: Compressing objects:  88% (797/905)   [Kremote: Compressing objects:  89% (806/905)   [Kremote: Compressing objects:  90% (815/905)   [Kremote: Compressing objects:  91% (824/905)   [Kremote: Compressing objects:  92% (833/905)   [Kremote: Compressing objects:  93% (842/905)   [Kremote: Compressing objects:  94% (851/905)   [Kremote: Compressing objects:  95% (860/905)   [Kremote: Compressing objects:  96% (869/905)   [Kremote: Compressing objects:  97% (878/905)   [Kremote: Compressing objects:  98% (887/905)   [Kremote: Compressing objects:  99% (896/905)   [Kremote: Compressing objects: 100% (905/905)   [Kremote: Compressing objects: 100% (905/905), done.[K
+Receiving objects:   0% (1/1548)   Receiving objects:   1% (16/1548)   Receiving objects:   2% (31/1548)   Receiving objects:   3% (47/1548)   Receiving objects:   4% (62/1548)   Receiving objects:   5% (78/1548)   Receiving objects:   6% (93/1548)   Receiving objects:   7% (109/1548)   Receiving objects:   8% (124/1548)   Receiving objects:   9% (140/1548)   Receiving objects:  10% (155/1548)   Receiving objects:  11% (171/1548)   Receiving objects:  12% (186/1548)   Receiving objects:  13% (202/1548)   Receiving objects:  14% (217/1548)   Receiving objects:  15% (233/1548)   Receiving objects:  16% (248/1548)   Receiving objects:  17% (264/1548)   Receiving objects:  18% (279/1548)   Receiving objects:  19% (295/1548)   Receiving objects:  20% (310/1548)   Receiving objects:  21% (326/1548)   Receiving objects:  22% (341/1548)   Receiving objects:  23% (357/1548)   Receiving objects:  24% (372/1548)   Receiving objects:  25% (387/1548)   Receiving objects:  26% (403/1548)   Receiving objects:  27% (418/1548)   Receiving objects:  28% (434/1548)   Receiving objects:  29% (449/1548)   Receiving objects:  30% (465/1548)   Receiving objects:  31% (480/1548)   Receiving objects:  32% (496/1548)   Receiving objects:  33% (511/1548)   Receiving objects:  34% (527/1548)   Receiving objects:  35% (542/1548)   Receiving objects:  36% (558/1548)   Receiving objects:  37% (573/1548)   Receiving objects:  38% (589/1548)   Receiving objects:  39% (604/1548)   Receiving objects:  40% (620/1548)   Receiving objects:  41% (635/1548)   Receiving objects:  42% (651/1548)   Receiving objects:  43% (666/1548)   Receiving objects:  44% (682/1548)   Receiving objects:  45% (697/1548)   Receiving objects:  46% (713/1548)   Receiving objects:  47% (728/1548)   Receiving objects:  48% (744/1548)   Receiving objects:  49% (759/1548)   Receiving objects:  50% (774/1548)   Receiving objects:  51% (790/1548)   Receiving objects:  52% (805/1548)   Receiving objects:  53% (821/1548)   Receiving objects:  54% (836/1548)   Receiving objects:  55% (852/1548)   Receiving objects:  56% (867/1548)   Receiving objects:  57% (883/1548)   Receiving objects:  58% (898/1548)   Receiving objects:  59% (914/1548)   Receiving objects:  60% (929/1548)   Receiving objects:  61% (945/1548)   Receiving objects:  62% (960/1548)   Receiving objects:  63% (976/1548)   Receiving objects:  64% (991/1548)   Receiving objects:  65% (1007/1548)   Receiving objects:  66% (1022/1548)   Receiving objects:  67% (1038/1548)   Receiving objects:  68% (1053/1548)   Receiving objects:  69% (1069/1548)   Receiving objects:  70% (1084/1548)   Receiving objects:  71% (1100/1548)   Receiving objects:  72% (1115/1548)   Receiving objects:  73% (1131/1548)   Receiving objects:  74% (1146/1548)   Receiving objects:  75% (1161/1548)   Receiving objects:  76% (1177/1548)   remote: Total 1548 (delta 710), reused 1362 (delta 543), pack-reused 0[K
+Receiving objects:  77% (1192/1548)   Receiving objects:  78% (1208/1548)   Receiving objects:  79% (1223/1548)   Receiving objects:  80% (1239/1548)   Receiving objects:  81% (1254/1548)   Receiving objects:  82% (1270/1548)   Receiving objects:  83% (1285/1548)   Receiving objects:  84% (1301/1548)   Receiving objects:  85% (1316/1548)   Receiving objects:  86% (1332/1548)   Receiving objects:  87% (1347/1548)   Receiving objects:  88% (1363/1548)   Receiving objects:  89% (1378/1548)   Receiving objects:  90% (1394/1548)   Receiving objects:  91% (1409/1548)   Receiving objects:  92% (1425/1548)   Receiving objects:  93% (1440/1548)   Receiving objects:  94% (1456/1548)   Receiving objects:  95% (1471/1548)   Receiving objects:  96% (1487/1548)   Receiving objects:  97% (1502/1548)   Receiving objects:  98% (1518/1548)   Receiving objects:  99% (1533/1548)   Receiving objects: 100% (1548/1548)   Receiving objects: 100% (1548/1548), 577.15 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/710)   Resolving deltas:   1% (11/710)   Resolving deltas:   3% (24/710)   Resolving deltas:   4% (30/710)   Resolving deltas:   5% (37/710)   Resolving deltas:   6% (43/710)   Resolving deltas:   7% (51/710)   Resolving deltas:   8% (59/710)   Resolving deltas:  10% (72/710)   Resolving deltas:  11% (79/710)   Resolving deltas:  12% (86/710)   Resolving deltas:  13% (98/710)   Resolving deltas:  14% (101/710)   Resolving deltas:  15% (107/710)   Resolving deltas:  16% (114/710)   Resolving deltas:  17% (124/710)   Resolving deltas:  20% (149/710)   Resolving deltas:  21% (155/710)   Resolving deltas:  23% (166/710)   Resolving deltas:  27% (197/710)   Resolving deltas:  28% (205/710)   Resolving deltas:  30% (218/710)   Resolving deltas:  31% (223/710)   Resolving deltas:  32% (233/710)   Resolving deltas:  33% (241/710)   Resolving deltas:  35% (253/710)   Resolving deltas:  36% (259/710)   Resolving deltas:  37% (266/710)   Resolving deltas:  38% (276/710)   Resolving deltas:  39% (279/710)   Resolving deltas:  40% (288/710)   Resolving deltas:  41% (292/710)   Resolving deltas:  42% (302/710)   Resolving deltas:  44% (314/710)   Resolving deltas:  45% (321/710)   Resolving deltas:  46% (327/710)   Resolving deltas:  47% (339/710)   Resolving deltas:  49% (351/710)   Resolving deltas:  50% (357/710)   Resolving deltas:  51% (365/710)   Resolving deltas:  52% (374/710)   Resolving deltas:  54% (385/710)   Resolving deltas:  55% (391/710)   Resolving deltas:  56% (399/710)   Resolving deltas:  57% (407/710)   Resolving deltas:  59% (419/710)   Resolving deltas:  60% (430/710)   Resolving deltas:  61% (440/710)   Resolving deltas:  62% (442/710)   Resolving deltas:  63% (449/710)   Resolving deltas:  64% (458/710)   Resolving deltas:  65% (468/710)   Resolving deltas:  66% (474/710)   Resolving deltas:  67% (479/710)   Resolving deltas:  68% (483/710)   Resolving deltas:  69% (491/710)   Resolving deltas:  70% (497/710)   Resolving deltas:  72% (515/710)   Resolving deltas:  74% (526/710)   Resolving deltas:  75% (539/710)   Resolving deltas:  76% (545/710)   Resolving deltas:  77% (547/710)   Resolving deltas:  78% (556/710)   Resolving deltas:  79% (562/710)   Resolving deltas:  83% (591/710)   Resolving deltas:  84% (598/710)   Resolving deltas:  85% (609/710)   Resolving deltas:  86% (611/710)   Resolving deltas:  87% (619/710)   Resolving deltas:  88% (626/710)   Resolving deltas:  89% (632/710)   Resolving deltas:  90% (643/710)   Resolving deltas:  91% (651/710)   Resolving deltas:  92% (656/710)   Resolving deltas:  93% (665/710)   Resolving deltas:  94% (671/710)   Resolving deltas:  95% (675/710)   Resolving deltas:  98% (702/710)   Resolving deltas: 100% (710/710)   Resolving deltas: 100% (710/710), done.
+Checking connectivity... done.
+travis_time:end:0063a905:start=1436769615388863659,finish=1436769615717776345,duration=328912686$ cd imathis/octopress
+travis_time:start:23a38dde$ git fetch origin +refs/pull/1737/merge:
+remote: Counting objects: 4, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 4 (delta 3), reused 2 (delta 2), pack-reused 0[K
+Unpacking objects:  25% (1/4)   Unpacking objects:  50% (2/4)   Unpacking objects:  75% (3/4)   Unpacking objects: 100% (4/4)   Unpacking objects: 100% (4/4), done.
+From git://github.com/imathis/octopress
+ * branch            refs/pull/1737/merge -> FETCH_HEAD
+travis_time:end:23a38dde:start=1436769615726821230,finish=1436769615887221358,duration=160400128$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:rvmtravis_time:start:1fad5176$ rvm use 1.9.3 --install --binary --fuzzy
+Using /home/travis/.rvm/gems/ruby-1.9.3-p551
+travis_time:end:1fad5176:start=1436769615917480442,finish=1436769616178606320,duration=261125878travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+$ ruby --version
+ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.7.6
+$ gem --version
+2.4.5
+travis_fold:start:install.bundlertravis_time:start:1daf98bd$ bundle install --jobs=3 --retry=3
+Fetching gem metadata from https://rubygems.org/...........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Installing rake 10.4.2
+Installing blankslate 2.1.2.4
+Installing hitimes 1.2.2
+Installing RedCloth 4.2.9
+Installing chunky_png 1.3.4
+Installing coffee-script-source 1.9.1.1
+Installing execjs 2.5.2
+Installing fast-stemmer 1.0.2
+Installing colorator 0.1
+Installing multi_json 1.11.2
+Installing sass 3.4.16
+Installing rb-fsevent 0.9.5
+Installing tilt 2.0.1
+Installing jekyll-gist 1.2.1
+Installing jekyll-paginate 1.1.0
+Installing kramdown 1.8.0
+Installing liquid 2.6.2
+Installing mercenary 0.3.5
+Installing posix-spawn 0.3.11
+Installing yajl-ruby 1.2.1
+Installing ffi 1.9.10
+Installing safe_yaml 1.0.4
+Installing jekyll-sitemap 0.8.1
+Installing rack 1.6.4
+Installing redcarpet 3.3.2
+Installing stringex 1.4.0
+Using bundler 1.7.6
+Installing parslet 1.5.0
+Installing timers 4.0.1
+Installing coffee-script 2.4.1
+Installing classifier-reborn 2.0.3
+Installing compass-core 1.0.3
+Installing compass-import-once 1.0.5
+Installing rdiscount 2.1.8
+Installing sass-globbing 1.0.0
+Installing jekyll-sass-converter 1.3.0
+Installing haml 4.0.6
+Installing rb-inotify 0.9.5
+Installing pygments.rb 0.6.3
+Installing rack-protection 1.5.3
+Installing toml 0.1.2
+Installing celluloid 0.16.0
+Installing jekyll-coffeescript 1.0.1
+Installing sinatra 1.4.6
+Installing compass 1.0.3
+Installing listen 2.10.1
+Installing jekyll-watch 1.2.1
+Installing jekyll 2.5.3
+Installing octopress-hooks 2.6.1
+Installing octopress-date-format 2.0.2
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from haml:
+
+HEADS UP! Haml 4.0 has many improvements, but also has changes that may break
+your application:
+
+* Support for Ruby 1.8.6 dropped
+* Support for Rails 2 dropped
+* Sass filter now always outputs <style> tags
+* Data attributes are now hyphenated, not underscored
+* html2haml utility moved to the html2haml gem
+* Textile and Maruku filters moved to the haml-contrib gem
+
+For more info see:
+
+http://rubydoc.info/github/haml/haml/file/CHANGELOG.md
+
+Post-install message from compass:
+    Compass is charityware. If you love it, please donate on our behalf at http://umdf.org/compass Thanks!
+travis_time:end:1daf98bd:start=1436769616727527869,finish=1436769653144817328,duration=36417289459travis_fold:end:install.bundlertravis_time:start:09b03016$ bundle exec rake install; bundle exec rake generate
+## Copying classic theme into ./source and ./sass
+mkdir -p source
+cp -r .themes/classic/source/. source
+mkdir -p sass
+cp -r .themes/classic/sass/. sass
+mkdir -p source/_posts
+mkdir -p public
+## Generating Site with Jekyll
+directory source/stylesheets
+    write source/stylesheets/screen.css
+Configuration file: /home/travis/build/imathis/octopress/_config.yml
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: disabled. Use --watch to enable.
+travis_time:end:09b03016:start=1436769653154402555,finish=1436769659754506037,duration=6600103482
+The command "bundle exec rake install; bundle exec rake generate" exited with 0.
+
+Done. Your build exited with 0.

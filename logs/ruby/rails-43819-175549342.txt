@@ -1,0 +1,652 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-03e9e69-precise-production-2-worker-org-docker.travisci.net:c7c0f1a3-16f0-4697-9862-e9d4e7265e88
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 9caa2f9:travis:ruby
+startup: 6.348492337s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 239761398
+Job id: 239761446
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (34.6 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 96%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             62% [2 libssl1.0.0 57.7 kB/1,054 kB 5%]                                       100% [Working]              Fetched 2,634 kB in 0s (16.5 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0$ jdk_switcher use oraclejdk8
+Switching to Oracle JDK8 (java-8-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-8-oracle
+travis_fold:start:git.checkouttravis_time:start:01cd572e$ git clone --depth=50 https://github.com/rails/rails.git rails/rails
+Cloning into 'rails/rails'...
+remote: Counting objects: 40758, done.[K
+remote: Compressing objects:   0% (1/20774)   [Kremote: Compressing objects:   1% (208/20774)   [Kremote: Compressing objects:   2% (416/20774)   [Kremote: Compressing objects:   3% (624/20774)   [Kremote: Compressing objects:   4% (831/20774)   [Kremote: Compressing objects:   5% (1039/20774)   [Kremote: Compressing objects:   6% (1247/20774)   [Kremote: Compressing objects:   7% (1455/20774)   [Kremote: Compressing objects:   8% (1662/20774)   [Kremote: Compressing objects:   9% (1870/20774)   [Kremote: Compressing objects:  10% (2078/20774)   [Kremote: Compressing objects:  11% (2286/20774)   [Kremote: Compressing objects:  12% (2493/20774)   [Kremote: Compressing objects:  13% (2701/20774)   [Kremote: Compressing objects:  14% (2909/20774)   [Kremote: Compressing objects:  15% (3117/20774)   [Kremote: Compressing objects:  16% (3324/20774)   [Kremote: Compressing objects:  17% (3532/20774)   [Kremote: Compressing objects:  18% (3740/20774)   [Kremote: Compressing objects:  19% (3948/20774)   [Kremote: Compressing objects:  20% (4155/20774)   [Kremote: Compressing objects:  21% (4363/20774)   [Kremote: Compressing objects:  21% (4398/20774)   [Kremote: Compressing objects:  22% (4571/20774)   [Kremote: Compressing objects:  23% (4779/20774)   [Kremote: Compressing objects:  24% (4986/20774)   [Kremote: Compressing objects:  25% (5194/20774)   [Kremote: Compressing objects:  26% (5402/20774)   [Kremote: Compressing objects:  27% (5609/20774)   [Kremote: Compressing objects:  28% (5817/20774)   [Kremote: Compressing objects:  29% (6025/20774)   [Kremote: Compressing objects:  30% (6233/20774)   [Kremote: Compressing objects:  31% (6440/20774)   [Kremote: Compressing objects:  32% (6648/20774)   [Kremote: Compressing objects:  33% (6856/20774)   [Kremote: Compressing objects:  34% (7064/20774)   [Kremote: Compressing objects:  35% (7271/20774)   [Kremote: Compressing objects:  36% (7479/20774)   [Kremote: Compressing objects:  37% (7687/20774)   [Kremote: Compressing objects:  38% (7895/20774)   [Kremote: Compressing objects:  39% (8102/20774)   [Kremote: Compressing objects:  40% (8310/20774)   [Kremote: Compressing objects:  41% (8518/20774)   [Kremote: Compressing objects:  42% (8726/20774)   [Kremote: Compressing objects:  43% (8933/20774)   [Kremote: Compressing objects:  44% (9141/20774)   [Kremote: Compressing objects:  45% (9349/20774)   [Kremote: Compressing objects:  46% (9557/20774)   [Kremote: Compressing objects:  47% (9764/20774)   [Kremote: Compressing objects:  48% (9972/20774)   [Kremote: Compressing objects:  49% (10180/20774)   [Kremote: Compressing objects:  50% (10387/20774)   [Kremote: Compressing objects:  51% (10595/20774)   [Kremote: Compressing objects:  52% (10803/20774)   [Kremote: Compressing objects:  53% (11011/20774)   [Kremote: Compressing objects:  54% (11218/20774)   [Kremote: Compressing objects:  55% (11426/20774)   [Kremote: Compressing objects:  56% (11634/20774)   [Kremote: Compressing objects:  57% (11842/20774)   [Kremote: Compressing objects:  58% (12049/20774)   [Kremote: Compressing objects:  59% (12257/20774)   [Kremote: Compressing objects:  60% (12465/20774)   [Kremote: Compressing objects:  61% (12673/20774)   [Kremote: Compressing objects:  62% (12880/20774)   [Kremote: Compressing objects:  63% (13088/20774)   [Kremote: Compressing objects:  64% (13296/20774)   [Kremote: Compressing objects:  65% (13504/20774)   [Kremote: Compressing objects:  66% (13711/20774)   [Kremote: Compressing objects:  67% (13919/20774)   [Kremote: Compressing objects:  68% (14127/20774)   [Kremote: Compressing objects:  69% (14335/20774)   [Kremote: Compressing objects:  70% (14542/20774)   [Kremote: Compressing objects:  71% (14750/20774)   [Kremote: Compressing objects:  72% (14958/20774)   [Kremote: Compressing objects:  73% (15166/20774)   [Kremote: Compressing objects:  74% (15373/20774)   [Kremote: Compressing objects:  75% (15581/20774)   [Kremote: Compressing objects:  76% (15789/20774)   [Kremote: Compressing objects:  77% (15996/20774)   [Kremote: Compressing objects:  78% (16204/20774)   [Kremote: Compressing objects:  79% (16412/20774)   [Kremote: Compressing objects:  80% (16620/20774)   [Kremote: Compressing objects:  81% (16827/20774)   [Kremote: Compressing objects:  82% (17035/20774)   [Kremote: Compressing objects:  83% (17243/20774)   [Kremote: Compressing objects:  84% (17451/20774)   [Kremote: Compressing objects:  85% (17658/20774)   [Kremote: Compressing objects:  86% (17866/20774)   [Kremote: Compressing objects:  87% (18074/20774)   [Kremote: Compressing objects:  88% (18282/20774)   [Kremote: Compressing objects:  89% (18489/20774)   [Kremote: Compressing objects:  90% (18697/20774)   [Kremote: Compressing objects:  91% (18905/20774)   [Kremote: Compressing objects:  92% (19113/20774)   [Kremote: Compressing objects:  93% (19320/20774)   [Kremote: Compressing objects:  94% (19528/20774)   [Kremote: Compressing objects:  95% (19736/20774)   [Kremote: Compressing objects:  96% (19944/20774)   [Kremote: Compressing objects:  97% (20151/20774)   [Kremote: Compressing objects:  98% (20359/20774)   [Kremote: Compressing objects:  99% (20567/20774)   [Kremote: Compressing objects: 100% (20774/20774)   [Kremote: Compressing objects: 100% (20774/20774), done.[K
+Receiving objects:   0% (1/40758)   Receiving objects:   1% (408/40758)   Receiving objects:   2% (816/40758)   Receiving objects:   3% (1223/40758)   Receiving objects:   4% (1631/40758)   Receiving objects:   5% (2038/40758)   Receiving objects:   6% (2446/40758)   Receiving objects:   7% (2854/40758)   Receiving objects:   8% (3261/40758)   Receiving objects:   9% (3669/40758)   Receiving objects:  10% (4076/40758)   Receiving objects:  11% (4484/40758)   Receiving objects:  12% (4891/40758)   Receiving objects:  13% (5299/40758)   Receiving objects:  14% (5707/40758)   Receiving objects:  15% (6114/40758)   Receiving objects:  16% (6522/40758)   Receiving objects:  17% (6929/40758)   Receiving objects:  18% (7337/40758)   Receiving objects:  19% (7745/40758)   Receiving objects:  20% (8152/40758)   Receiving objects:  21% (8560/40758)   Receiving objects:  22% (8967/40758)   Receiving objects:  23% (9375/40758)   Receiving objects:  24% (9782/40758)   Receiving objects:  25% (10190/40758)   Receiving objects:  26% (10598/40758)   Receiving objects:  27% (11005/40758)   Receiving objects:  28% (11413/40758)   Receiving objects:  29% (11820/40758)   Receiving objects:  30% (12228/40758)   Receiving objects:  31% (12635/40758)   Receiving objects:  32% (13043/40758)   Receiving objects:  33% (13451/40758)   Receiving objects:  34% (13858/40758)   Receiving objects:  35% (14266/40758)   Receiving objects:  36% (14673/40758)   Receiving objects:  37% (15081/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  38% (15489/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  39% (15896/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  40% (16304/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  41% (16711/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  42% (17119/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  43% (17526/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  44% (17934/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  45% (18342/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  46% (18749/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  47% (19157/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  48% (19564/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  49% (19972/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  50% (20379/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  51% (20787/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  52% (21195/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  53% (21602/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  54% (22010/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  55% (22417/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  56% (22825/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  57% (23233/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  58% (23640/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  59% (24048/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  60% (24455/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  60% (24634/40758), 4.27 MiB | 8.51 MiB/s   Receiving objects:  61% (24863/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  62% (25270/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  63% (25678/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  64% (26086/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  65% (26493/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  66% (26901/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  67% (27308/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  68% (27716/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  69% (28124/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  70% (28531/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  71% (28939/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  72% (29346/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  73% (29754/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  74% (30161/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  75% (30569/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  76% (30977/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  77% (31384/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  78% (31792/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  79% (32199/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  80% (32607/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  81% (33014/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  82% (33422/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  83% (33830/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  84% (34237/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  85% (34645/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  86% (35052/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  87% (35460/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  88% (35868/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  89% (36275/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  90% (36683/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  91% (37090/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  92% (37498/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  93% (37905/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  94% (38313/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  95% (38721/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  96% (39128/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  97% (39536/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  98% (39943/40758), 10.31 MiB | 10.29 MiB/s   Receiving objects:  99% (40351/40758), 10.31 MiB | 10.29 MiB/s   remote: Total 40758 (delta 26949), reused 30893 (delta 18860), pack-reused 0[K
+Receiving objects: 100% (40758/40758), 15.43 MiB | 10.26 MiB/s   Receiving objects: 100% (40758/40758), 15.75 MiB | 10.26 MiB/s, done.
+Resolving deltas:   0% (0/26949)   Resolving deltas:   1% (271/26949)   Resolving deltas:   2% (556/26949)   Resolving deltas:   3% (925/26949)   Resolving deltas:   4% (1091/26949)   Resolving deltas:   5% (1439/26949)   Resolving deltas:   6% (1620/26949)   Resolving deltas:   7% (1900/26949)   Resolving deltas:   8% (2161/26949)   Resolving deltas:   9% (2431/26949)   Resolving deltas:  10% (2700/26949)   Resolving deltas:  11% (2966/26949)   Resolving deltas:  12% (3248/26949)   Resolving deltas:  13% (3509/26949)   Resolving deltas:  14% (3886/26949)   Resolving deltas:  15% (4059/26949)   Resolving deltas:  16% (4318/26949)   Resolving deltas:  17% (4592/26949)   Resolving deltas:  18% (4895/26949)   Resolving deltas:  19% (5199/26949)   Resolving deltas:  20% (5399/26949)   Resolving deltas:  21% (5695/26949)   Resolving deltas:  22% (5949/26949)   Resolving deltas:  23% (6225/26949)   Resolving deltas:  24% (6470/26949)   Resolving deltas:  25% (6738/26949)   Resolving deltas:  26% (7015/26949)   Resolving deltas:  27% (7422/26949)   Resolving deltas:  28% (7564/26949)   Resolving deltas:  29% (7819/26949)   Resolving deltas:  30% (8094/26949)   Resolving deltas:  31% (8379/26949)   Resolving deltas:  32% (8800/26949)   Resolving deltas:  33% (8895/26949)   Resolving deltas:  34% (9188/26949)   Resolving deltas:  35% (9448/26949)   Resolving deltas:  36% (9702/26949)   Resolving deltas:  37% (9972/26949)   Resolving deltas:  38% (10254/26949)   Resolving deltas:  39% (10511/26949)   Resolving deltas:  40% (10781/26949)   Resolving deltas:  41% (11061/26949)   Resolving deltas:  42% (11333/26949)   Resolving deltas:  43% (11589/26949)   Resolving deltas:  44% (11970/26949)   Resolving deltas:  45% (12131/26949)   Resolving deltas:  46% (12408/26949)   Resolving deltas:  47% (12724/26949)   Resolving deltas:  48% (12999/26949)   Resolving deltas:  49% (13208/26949)   Resolving deltas:  50% (13487/26949)   Resolving deltas:  51% (13759/26949)   Resolving deltas:  52% (14016/26949)   Resolving deltas:  53% (14283/26949)   Resolving deltas:  54% (14564/26949)   Resolving deltas:  55% (14822/26949)   Resolving deltas:  56% (15095/26949)   Resolving deltas:  57% (15364/26949)   Resolving deltas:  58% (15635/26949)   Resolving deltas:  59% (15900/26949)   Resolving deltas:  60% (16171/26949)   Resolving deltas:  61% (16440/26949)   Resolving deltas:  62% (16709/26949)   Resolving deltas:  63% (16980/26949)   Resolving deltas:  64% (17250/26949)   Resolving deltas:  65% (17518/26949)   Resolving deltas:  66% (17797/26949)   Resolving deltas:  67% (18070/26949)   Resolving deltas:  68% (18334/26949)   Resolving deltas:  69% (18595/26949)   Resolving deltas:  70% (18893/26949)   Resolving deltas:  71% (19139/26949)   Resolving deltas:  72% (19412/26949)   Resolving deltas:  73% (19676/26949)   Resolving deltas:  74% (19944/26949)   Resolving deltas:  75% (20222/26949)   Resolving deltas:  76% (20484/26949)   Resolving deltas:  76% (20654/26949)   Resolving deltas:  77% (20753/26949)   Resolving deltas:  78% (21021/26949)   Resolving deltas:  79% (21293/26949)   Resolving deltas:  80% (21567/26949)   Resolving deltas:  81% (21835/26949)   Resolving deltas:  82% (22099/26949)   Resolving deltas:  83% (22370/26949)   Resolving deltas:  84% (22644/26949)   Resolving deltas:  85% (22932/26949)   Resolving deltas:  86% (23178/26949)   Resolving deltas:  87% (23465/26949)   Resolving deltas:  88% (23720/26949)   Resolving deltas:  89% (23988/26949)   Resolving deltas:  90% (24256/26949)   Resolving deltas:  91% (24524/26949)   Resolving deltas:  92% (24823/26949)   Resolving deltas:  93% (25064/26949)   Resolving deltas:  94% (25361/26949)   Resolving deltas:  95% (25602/26949)   Resolving deltas:  96% (25875/26949)   Resolving deltas:  97% (26146/26949)   Resolving deltas:  98% (26412/26949)   Resolving deltas:  99% (26680/26949)   Resolving deltas: 100% (26949/26949)   Resolving deltas: 100% (26949/26949), done.
+Checking connectivity... done.
+
+travis_time:end:01cd572e:start=1496702550683347538,finish=1496702560154159809,duration=9470812271$ cd rails/rails
+travis_time:start:02736d23$ git fetch origin +refs/pull/29360/merge:
+remote: Counting objects: 17, done.[K
+remote: Compressing objects:  14% (1/7)   [Kremote: Compressing objects:  28% (2/7)   [Kremote: Compressing objects:  42% (3/7)   [Kremote: Compressing objects:  57% (4/7)   [Kremote: Compressing objects:  71% (5/7)   [Kremote: Compressing objects:  85% (6/7)   [Kremote: Compressing objects: 100% (7/7)   [Kremote: Compressing objects: 100% (7/7), done.[K
+remote: Total 17 (delta 12), reused 14 (delta 10), pack-reused 0[K
+Unpacking objects:   5% (1/17)   Unpacking objects:  11% (2/17)   Unpacking objects:  17% (3/17)   Unpacking objects:  23% (4/17)   Unpacking objects:  29% (5/17)   Unpacking objects:  35% (6/17)   Unpacking objects:  41% (7/17)   Unpacking objects:  47% (8/17)   Unpacking objects:  52% (9/17)   Unpacking objects:  58% (10/17)   Unpacking objects:  64% (11/17)   Unpacking objects:  70% (12/17)   Unpacking objects:  76% (13/17)   Unpacking objects:  82% (14/17)   Unpacking objects:  88% (15/17)   Unpacking objects:  94% (16/17)   Unpacking objects: 100% (17/17)   Unpacking objects: 100% (17/17), done.
+From https://github.com/rails/rails
+ * branch            refs/pull/29360/merge -> FETCH_HEAD
+
+travis_time:end:02736d23:start=1496702560166868099,finish=1496702561350130548,duration=1183262449$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:servicestravis_time:start:1c7f2a7f$ sudo service memcached start
+Starting memcached: memcached.
+
+travis_time:end:1c7f2a7f:start=1496702561498379706,finish=1496702561584879308,duration=86499602travis_time:start:013d9be6$ sudo service redis-server start
+redis-server start/running, process 1324
+
+travis_time:end:013d9be6:start=1496702561602145518,finish=1496702561660430249,duration=58284731travis_fold:end:servicestravis_fold:start:postgresqlStarting PostgreSQL v9.4
+travis_time:start:0b098a4c$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.1 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:0b098a4c:start=1496702564671202285,finish=1496702566012857168,duration=1341654883travis_time:start:00007365$ sudo service postgresql start 9.4
+ * Starting PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:00007365:start=1496702566017904857,finish=1496702568243968204,duration=2226063347travis_time:start:02f5329b$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:02f5329b:start=1496702568248791909,finish=1496702568303579698,duration=54787789travis_time:start:32425118$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:32425118:start=1496702568309375750,finish=1496702568573392328,duration=264016578travis_time:start:06835b50$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:06835b50:start=1496702568577960479,finish=1496702568621106636,duration=43146157travis_time:start:267050a0$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:267050a0:start=1496702568625960173,finish=1496702568668685998,duration=42725825travis_fold:end:postgresql
+Setting environment variables from .travis.yml
+$ export JRUBY_OPTS='--dev -J-Xmx1024M'
+$ export GEM=am,amo,aj
+
+travis_fold:start:rvmtravis_time:start:15964e15$ rvm use jruby-9.1.10.0 --install --binary --fuzzy
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+jruby-9.1.10.0 is not installed - installing.
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+Searching for binary rubies, this might take some time.
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+Found remote file https://s3.amazonaws.com/jruby.org/downloads/9.1.10.0/jruby-bin-9.1.10.0.tar.gz
+Checking requirements for ubuntu.
+Requirements installation successful.
+jruby-9.1.10.0 - #configure
+Unknown ruby string (do not know how to handle): jruby-9.1.10.0.
+jruby-9.1.10.0 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 21 19.8M   21 4401k    0     0  21.7M      0 --:--:-- --:--:-- --:--:-- 22.7M100 19.8M  100 19.8M    0     0  51.2M      0 --:--:-- --:--:-- --:--:-- 52.4M
+No checksum for downloaded archive, recording checksum in user configuration.
+jruby-9.1.10.0 - #validate archive
+jruby-9.1.10.0 - #extract
+jruby-9.1.10.0 - #validate binary
+jruby-9.1.10.0 - #setup
+jruby-9.1.10.0 - #gemset created /home/travis/.rvm/gems/jruby-9.1.10.0@global
+jruby-9.1.10.0 - #importing gemset /home/travis/.rvm/gemsets/jruby/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-.
+jruby-9.1.10.0 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+jruby-9.1.10.0 - #uninstalling gem rubygems-bundler-1.4.4|/.
+jruby-9.1.10.0 - #gemset created /home/travis/.rvm/gems/jruby-9.1.10.0
+jruby-9.1.10.0 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+jruby-9.1.10.0 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/jruby-9.1.10.0
+
+travis_time:end:15964e15:start=1496702573489426141,finish=1496702716346383763,duration=142856957622travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:05e948dc$ Installing caching utilities
+
+travis_time:end:05e948dc:start=1496702716583777788,finish=1496702716615538591,duration=31760803travis_time:start:053e54b8
+travis_time:end:053e54b8:start=1496702716621989030,finish=1496702716626668265,duration=4679235travis_time:start:23603a06attempting to download cache archive
+fetching PR.29360/cache-linux-precise-e334ca28f603058c4a504fdf441b93a3564588ce41412cc1a207cb7aebe683aa--jdk-oraclejdk8--rvm-jruby-9.1.10.0--gemfile-Gemfile.tgz
+fetching PR.29360/cache--jdk-oraclejdk8--rvm-jruby-9.1.10.0--gemfile-Gemfile.tgz
+fetching master/cache-linux-precise-e334ca28f603058c4a504fdf441b93a3564588ce41412cc1a207cb7aebe683aa--jdk-oraclejdk8--rvm-jruby-9.1.10.0--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:23603a06:start=1496702716633108005,finish=1496702720321249111,duration=3688141106travis_time:start:1b3d043c
+travis_time:end:1b3d043c:start=1496702720326588519,finish=1496702720331264031,duration=4675512travis_time:start:06dd1336adding /tmp/cache/unicode_conformance to cache
+creating directory /tmp/cache/unicode_conformance
+adding /tmp/beanstalkd-1.10 to cache
+creating directory /tmp/beanstalkd-1.10
+adding /home/travis/build/rails/rails/node_modules to cache
+creating directory /home/travis/build/rails/rails/node_modules
+adding /home/travis/.nvm to cache
+
+travis_time:end:06dd1336:start=1496702720336662389,finish=1496702723229859294,duration=2893196905travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:07a894a2
+travis_time:end:07a894a2:start=1496702723235499865,finish=1496702723240193092,duration=4693227travis_time:start:160e1dd2adding /home/travis/build/rails/rails/vendor/bundle to cache
+creating directory /home/travis/build/rails/rails/vendor/bundle
+
+travis_time:end:160e1dd2:start=1496702723246201480,finish=1496702726364029214,duration=3117827734travis_fold:end:cache.bundler$ java -Xmx32m -version
+java version "1.8.0_31"
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.8.0_31
+$ ruby --version
+jruby 9.1.10.0 (2.3.3) 2017-05-25 b09c48a Java HotSpot(TM) 64-Bit Server VM 25.31-b07 on 1.8.0_31-b13 [linux-x86_64]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.11
+travis_fold:start:before_install.1travis_time:start:05b0848b$ rm ${BUNDLE_GEMFILE}.lock
+
+travis_time:end:05b0848b:start=1496702735846951240,finish=1496702735854677246,duration=7726006travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0a842528$ gem update --system
+Updating rubygems-update
+Fetching: rubygems-update-2.6.12.gemFetching: rubygems-update-2.6.12.gem (  1%)Fetching: rubygems-update-2.6.12.gem (  2%)Fetching: rubygems-update-2.6.12.gem (  3%)Fetching: rubygems-update-2.6.12.gem (  4%)Fetching: rubygems-update-2.6.12.gem (  5%)Fetching: rubygems-update-2.6.12.gem (  7%)Fetching: rubygems-update-2.6.12.gem (  9%)Fetching: rubygems-update-2.6.12.gem ( 11%)Fetching: rubygems-update-2.6.12.gem ( 13%)Fetching: rubygems-update-2.6.12.gem ( 15%)Fetching: rubygems-update-2.6.12.gem ( 18%)Fetching: rubygems-update-2.6.12.gem ( 20%)Fetching: rubygems-update-2.6.12.gem ( 22%)Fetching: rubygems-update-2.6.12.gem ( 24%)Fetching: rubygems-update-2.6.12.gem ( 26%)Fetching: rubygems-update-2.6.12.gem ( 28%)Fetching: rubygems-update-2.6.12.gem ( 30%)Fetching: rubygems-update-2.6.12.gem ( 33%)Fetching: rubygems-update-2.6.12.gem ( 35%)Fetching: rubygems-update-2.6.12.gem ( 37%)Fetching: rubygems-update-2.6.12.gem ( 39%)Fetching: rubygems-update-2.6.12.gem ( 41%)Fetching: rubygems-update-2.6.12.gem ( 43%)Fetching: rubygems-update-2.6.12.gem ( 45%)Fetching: rubygems-update-2.6.12.gem ( 48%)Fetching: rubygems-update-2.6.12.gem ( 50%)Fetching: rubygems-update-2.6.12.gem ( 52%)Fetching: rubygems-update-2.6.12.gem ( 54%)Fetching: rubygems-update-2.6.12.gem ( 56%)Fetching: rubygems-update-2.6.12.gem ( 58%)Fetching: rubygems-update-2.6.12.gem ( 61%)Fetching: rubygems-update-2.6.12.gem ( 63%)Fetching: rubygems-update-2.6.12.gem ( 65%)Fetching: rubygems-update-2.6.12.gem ( 67%)Fetching: rubygems-update-2.6.12.gem ( 69%)Fetching: rubygems-update-2.6.12.gem ( 71%)Fetching: rubygems-update-2.6.12.gem ( 73%)Fetching: rubygems-update-2.6.12.gem ( 76%)Fetching: rubygems-update-2.6.12.gem ( 78%)Fetching: rubygems-update-2.6.12.gem ( 80%)Fetching: rubygems-update-2.6.12.gem ( 82%)Fetching: rubygems-update-2.6.12.gem ( 84%)Fetching: rubygems-update-2.6.12.gem ( 86%)Fetching: rubygems-update-2.6.12.gem ( 88%)Fetching: rubygems-update-2.6.12.gem ( 91%)Fetching: rubygems-update-2.6.12.gem ( 93%)Fetching: rubygems-update-2.6.12.gem ( 95%)Fetching: rubygems-update-2.6.12.gem ( 97%)Fetching: rubygems-update-2.6.12.gem ( 99%)Fetching: rubygems-update-2.6.12.gem (100%)Fetching: rubygems-update-2.6.12.gem (100%)
+Successfully installed rubygems-update-2.6.12
+Installing RubyGems 2.6.12
+RubyGems 2.6.12 installed
+
+=== 2.6.12 / 2017-04-30
+
+Bug fixes:
+
+* Fix test_self_find_files_with_gemfile to sort expected files. Pull
+  request #1880 by Kazuaki Matsuo.
+* Fix issue for MinGW / MSYS2 builds and testing. Pull request #1879 by
+  MSP-Greg.
+* Fix gem open to open highest version number rather than lowest. Pull
+  request #1877 by Tim Pope.
+* Add a test for requiring a default spec as installed by the ruby
+  installer. Pull request #1899 by Samuel Giddins.
+* Fix broken --exact parameter to gem command. Pull request #1873 by Jason
+  Frey.
+* [Installer] Generate backwards-compatible binstubs. Pull request #1904
+  by Samuel Giddins.
+* Fix pre-existing source recognition on add action. Pull request #1883 by
+  Jonathan Claudius.
+* Prevent negative IDs in output of #inspect. Pull request #1908 by Vít
+  Ondruch.
+* Allow Gem.finish_resolve to respect already-activated specs. Pull
+  request #1910 by Samuel Giddins.
+
+=== 2.6.11 / 2017-03-16
+
+Bug fixes:
+
+* Fixed broken tests on ruby-head. Pull request #1841 by
+  SHIBATA Hiroshi.
+* Update vendored Molinillo to 0.5.7. Pull request #1859 by Samuel
+  Giddins.
+* Avoid activating Ruby 2.5 default gems when possible. Pull request #1843
+  by Samuel Giddins.
+* Use improved resolver sorting algorithm. Pull request #1856 by
+  Samuel Giddins.
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jgem
+
+RubyGems system software updated
+
+travis_time:end:0a842528:start=1496702735859832279,finish=1496702755371372764,duration=19511540485travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:0c30126c$ gem update bundler
+Updating installed gems
+Nothing to update
+
+travis_time:end:0c30126c:start=1496702755376776213,finish=1496702765498609487,duration=10121833274travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:173ce544$ [ -f /tmp/beanstalkd-1.10/Makefile ] || (curl -L https://github.com/kr/beanstalkd/archive/v1.10.tar.gz | tar xz -C /tmp)
+
+travis_time:end:173ce544:start=1496702765504617485,finish=1496702765509139270,duration=4521785travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:12370fc0$ pushd /tmp/beanstalkd-1.10 && make && (./beanstalkd &); popd
+/tmp/beanstalkd-1.10 ~/build/rails/rails
+make: Nothing to be done for `all'.
+~/build/rails/rails
+
+travis_time:end:12370fc0:start=1496702765515454107,finish=1496702765532551365,duration=17097258travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:0a9f10ee$ [[ $GEM != 'av:ujs' ]] || nvm install node
+
+travis_time:end:0a9f10ee:start=1496702765538517678,finish=1496702765542913366,duration=4395688travis_fold:end:before_install.6travis_fold:start:before_install.7travis_time:start:1133b3e0$ [[ $GEM != 'av:ujs' ]] || node --version
+
+travis_time:end:1133b3e0:start=1496702765548882780,finish=1496702765553615357,duration=4732577travis_fold:end:before_install.7travis_fold:start:before_install.8travis_time:start:0190fd70$ [[ $GEM != 'av:ujs' ]] || (cd actionview && npm install)
+
+travis_time:end:0190fd70:start=1496702765561462832,finish=1496702765566074653,duration=4611821travis_fold:end:before_install.8travis_fold:start:before_install.9travis_time:start:15ff26dc$ [[ $GEM != 'av:ujs' ]] || [[ $(phantomjs --version) > '2' ]] || npm install -g phantomjs-prebuilt
+
+travis_time:end:15ff26dc:start=1496702765571624367,finish=1496702765575724610,duration=4100243travis_fold:end:before_install.9travis_fold:start:install.bundlertravis_time:start:0c20eec3$ bundle install --without test --jobs 3 --retry 3 --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching https://github.com/rails/arel.git
+Fetching https://github.com/guard/rb-inotify.git
+Fetching https://github.com/matthewd/websocket-client-simple.git
+The dependency redcarpet (~> 3.2.3) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency libxml-ruby (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency queue_classic (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency blade (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency blade-sauce_labs_plugin (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency stackprof (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency byebug (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency nokogiri (>= 1.6.8) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby, x86-mswin32, mswin64, x86-mingw32, x64-mingw32. To add those platforms to the bundle, run `bundle lock --add-platform ruby x86-mswin32 mswin64 x86-mingw32 x64-mingw32`.
+The dependency racc (>= 1.4.6) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby, x86-mswin32, mswin64, x86-mingw32, x64-mingw32. To add those platforms to the bundle, run `bundle lock --add-platform ruby x86-mswin32 mswin64 x86-mingw32 x64-mingw32`.
+The dependency sqlite3 (~> 1.3.6) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby, x86-mswin32, mswin64, x86-mingw32, x64-mingw32. To add those platforms to the bundle, run `bundle lock --add-platform ruby x86-mswin32 mswin64 x86-mingw32 x64-mingw32`.
+The dependency pg (>= 0.18.0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby, x86-mswin32, mswin64, x86-mingw32, x64-mingw32. To add those platforms to the bundle, run `bundle lock --add-platform ruby x86-mswin32 mswin64 x86-mingw32 x64-mingw32`.
+The dependency mysql2 (>= 0.4.4) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby, x86-mswin32, mswin64, x86-mingw32, x64-mingw32. To add those platforms to the bundle, run `bundle lock --add-platform ruby x86-mswin32 mswin64 x86-mingw32 x64-mingw32`.
+The dependency psych (~> 2.0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby. To add those platforms to the bundle, run `bundle lock --add-platform ruby`.
+The dependency wdm (>= 0.1.0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, mswin64. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 mswin64`.
+Fetching https://github.com/QueueClassic/queue_classic.git
+Fetching gem metadata from https://rubygems.org/.........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies.......................................................
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5 (java)
+Using i18n 0.8.4
+Using minitest 5.3.3
+Using thread_safe 0.3.6 (java)
+Using builder 3.2.3
+Using erubi 1.6.0
+Using nokogiri 1.8.0 (java)
+Using rack 2.0.3
+Using nio4r 2.1.0 (java)
+Using websocket-extensions 0.1.2
+Using mime-types-data 3.2016.0521
+Using arel 8.0.0 from https://github.com/rails/arel.git (at master@de0a83e)
+Using bundler 1.15.1
+Using method_source 0.8.2
+Using thor 0.19.4
+Using metaclass 0.0.4
+Using public_suffix 2.0.5
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using sass 3.4.24
+Using tilt 2.0.7
+Using turbolinks-source 5.0.3
+Using bcrypt 3.1.11 (java)
+Using ffi 1.9.18 (java)
+Using json 2.1.0 (java)
+Using parallel 1.11.2
+Using ast 2.3.0
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using rdoc 5.1.0
+Using mustache 1.0.5
+Using dalli 2.7.6
+Using rb-fsevent 0.9.8
+Using ruby_dep 1.5.0
+Using erubis 2.7.0
+Using mono_logger 1.1.0
+Using multi_json 1.12.1
+Using redis 3.3.3
+Using mustermann 1.0.0
+Using connection_pool 2.2.1
+Using amq-protocol 2.2.0
+Using sigdump 0.2.4
+Using thread 0.1.7
+Using que 0.12.3
+Using beaneater 1.0.0
+Using dante 0.2.0
+Using simple_uuid 0.4.0
+Using sequel 4.47.0
+Using puma 3.9.1 (java)
+Using eventmachine 1.2.3 (java)
+Using hiredis 0.6.1 (java)
+Using event_emitter 0.2.5
+Using websocket 1.2.4
+Using sprockets-export 1.0.0
+Using jdbc-sqlite3 3.8.11.2
+Using jdbc-mysql 5.1.42
+Using jdbc-postgres 9.4.1206
+Using sucker_punch 2.0.2
+Using rainbow 2.2.2
+Using tzinfo 1.2.3
+jar-dependencies: spec must be either String or Gem::Specification
+Using loofah 2.0.3
+Using xpath 2.1.0
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using rack-cache 1.7.0
+Using rack-protection 2.0.0
+Using vegas 0.1.11
+Using websocket-driver 0.6.5 (java)
+Using mime-types 3.1
+Using mocha 0.14.0
+Using addressable 2.5.1
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using turbolinks 5.0.1
+Using rb-inotify 0.9.9 from https://github.com/guard/rb-inotify.git (at master@7e3c714)
+jar-dependencies: spec must be either String or Gem::Specification
+Using w3c_validators 1.3.2
+Using parser 2.4.0.0
+Using sdoc 1.0.0.rc2
+Using kindlerb 1.2.0
+Using qu 0.2.0
+Using redis-namespace 1.5.3
+Using bunny 2.6.6
+Using serverengine 1.5.11
+Using backburner 1.4.0
+Using em-hiredis 0.3.1
+Using websocket-client-simple 0.3.0 from https://github.com/matthewd/websocket-client-simple.git (at close-race@e161305)
+jar-dependencies: spec must be either String or Gem::Specification
+Using activesupport 5.2.0.alpha from source at `.`
+Using et-orbi 1.0.4
+Using tzinfo-data 1.2017.2
+Using rails-html-sanitizer 1.0.3
+Using sidekiq 5.0.2
+Using sinatra 2.0.0
+Using mail 2.6.5
+Using capybara 2.14.0
+Using listen 3.1.5
+Using rubocop 0.49.1
+Using qu-redis 0.2.0
+Using sneakers 2.5.0
+Using rufus-scheduler 3.4.2
+Using rails-dom-testing 2.0.3
+Using globalid 0.4.0
+Using activemodel 5.2.0.alpha from source at `.`
+Using delayed_job 4.1.3
+Using resque 1.27.4
+Using actionview 5.2.0.alpha from source at `.`
+Using activejob 5.2.0.alpha from source at `.`
+Using resque-scheduler 4.3.0
+Using activerecord 5.2.0.alpha from source at `.`
+Using actionpack 5.2.0.alpha from source at `.`
+Using delayed_job_active_record 4.1.2
+Using activerecord-jdbc-adapter 1.3.23
+Using activerecord-jdbcsqlite3-adapter 1.3.23
+Using activerecord-jdbcmysql-adapter 1.3.23
+Using activerecord-jdbcpostgresql-adapter 1.3.23
+Using actioncable 5.2.0.alpha from source at `.`
+Using actionmailer 5.2.0.alpha from source at `.`
+Using railties 5.2.0.alpha from source at `.`
+Using sprockets-rails 3.2.0
+Using rails 5.2.0.alpha from source at `.`
+Using jquery-rails 4.3.1
+Using coffee-rails 4.2.2
+Using sass-rails 5.0.6
+Bundle complete! 58 Gemfile dependencies, 124 gems now installed.
+Gems in the group test were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:0c20eec3:start=1496702765581571060,finish=1496702787532066708,duration=21950495648travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:1682bb42$ $(base64 --decode <<< "ZXhwb3J0IFNBVUNFX0FDQ0VTU19LRVk9YTAzNTM0M2YtZTkyMi00MGIzLWFhM2MtMDZiM2VhNjM1YzQ4")
+
+travis_time:end:1682bb42:start=1496702787538705240,finish=1496702787553285872,duration=14580632travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:026c4704$ $(base64 --decode <<< "ZXhwb3J0IFNBVUNFX1VTRVJOQU1FPXJ1YnlvbnJhaWxz")
+
+travis_time:end:026c4704:start=1496702787559753786,finish=1496702787569977503,duration=10223717travis_fold:end:before_script.2travis_time:start:20ff856a$ ci/travis.rb
+
+3m[Travis CI] actionmailer[m
+Running command: bundle exec rake test
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -w -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/assert_select_email_test.rb" "test/asset_host_test.rb" "test/base_test.rb" "test/caching_test.rb" "test/delivery_methods_test.rb" "test/i18n_with_controller_test.rb" "test/log_subscriber_test.rb" "test/mail_helper_test.rb" "test/mail_layout_test.rb" "test/message_delivery_test.rb" "test/parameterized_test.rb" "test/test_case_test.rb" "test/test_helper_test.rb" "test/url_test.rb" 
+Run options: --seed 60912
+
+# Running:
+
+......................................................................................................................................................................................................
+
+Finished in 5.910553s, 33.4994 runs/s, 76.4734 assertions/s.
+
+198 runs, 452 assertions, 0 failures, 0 errors, 0 skips
+
+3m[Travis CI] activemodel[m
+Running command: bundle exec rake test
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -w -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "/home/travis/build/rails/rails/activemodel/test/cases/attribute_assignment_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/attribute_methods_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/callbacks_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/conversion_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/dirty_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/errors_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/forbidden_attributes_protection_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/lint_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/model_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/naming_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/railtie_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/secure_password_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/serialization_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/translation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/serializers/json_serialization_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/big_integer_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/binary_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/boolean_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/date_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/date_time_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/decimal_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/float_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/immutable_string_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/integer_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/registry_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/string_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/time_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/type/value_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/absence_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/acceptance_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/callbacks_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/conditional_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/confirmation_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/exclusion_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/format_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/i18n_generate_message_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/i18n_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/inclusion_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/length_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/numericality_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/presence_validation_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/validates_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/validations_context_test.rb" "/home/travis/build/rails/rails/activemodel/test/cases/validations/with_validation_test.rb" 
+Run options: --seed 18168
+
+# Running:
+
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Finished in 13.688117s, 52.0159 runs/s, 147.1349 assertions/s.
+
+712 runs, 2014 assertions, 0 failures, 0 errors, 0 skips
+
+3m[Travis CI] activejob[m
+Running command: bundle exec rake test
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using async
+Run options: --seed 46624
+
+# Running:
+
+........................................................................................................................................
+
+Finished in -0.028686s, -4740.9886 runs/s, -10562.6438 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using inline
+Run options: --seed 23813
+
+# Running:
+
+........................................S.....S......................S.S................................................................
+
+Finished in -0.530781s, -256.2262 runs/s, -559.5528 assertions/s.
+
+136 runs, 297 assertions, 0 failures, 0 errors, 4 skips
+
+You have skipped tests. Run with --verbose for details.
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using delayed_job
+Run options: --seed 33049
+
+# Running:
+
+........................................................................................................................................
+
+Finished in -0.529161s, -257.0106 runs/s, -572.6046 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using que
+Run options: --seed 35231
+
+# Running:
+
+........................................................................................................................................
+
+Finished in 0.181424s, 749.6252 runs/s, 1670.1208 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using resque
+Run options: --seed 49569
+
+# Running:
+
+........................................................................................................................................
+
+Finished in -0.219490s, -619.6182 runs/s, -1380.4729 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using sidekiq
+Run options: --seed 19205
+
+# Running:
+
+........................................................................................................................................
+
+Finished in -0.240603s, -565.2465 runs/s, -1259.3359 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using sneakers
+Run options: --seed 36746
+
+# Running:
+
+.........................................SS............................SS...............................................................
+
+Finished in -0.440883s, -308.4719 runs/s, -673.6481 assertions/s.
+
+136 runs, 297 assertions, 0 failures, 0 errors, 4 skips
+
+You have skipped tests. Run with --verbose for details.
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using sucker_punch
+Run options: --seed 56105
+
+# Running:
+
+........................................................................................................................................
+
+Finished in 0.032657s, 4164.4977 runs/s, 9278.2558 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using backburner
+Run options: --seed 17018
+
+# Running:
+
+........................................................................................................................................
+
+Finished in -0.203816s, -667.2685 runs/s, -1486.6350 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+/home/travis/.rvm/rubies/jruby-9.1.10.0/bin/jruby -I"lib:test" --dev -I"/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib" "/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader.rb" "test/cases/adapter_test.rb" "test/cases/argument_serialization_test.rb" "test/cases/callbacks_test.rb" "test/cases/exceptions_test.rb" "test/cases/job_serialization_test.rb" "test/cases/logging_test.rb" "test/cases/queue_adapter_test.rb" "test/cases/queue_naming_test.rb" "test/cases/queue_priority_test.rb" "test/cases/queuing_test.rb" "test/cases/rescue_test.rb" "test/cases/test_case_test.rb" "test/cases/test_helper_test.rb" "test/cases/translation_test.rb" 
+Using test
+Run options: --seed 49745
+
+# Running:
+
+........................................................................................................................................
+
+Finished in -0.418411s, -325.0393 runs/s, -724.1683 assertions/s.
+
+136 runs, 303 assertions, 0 failures, 0 errors, 0 skips
+
+Rails build finished successfully
+
+travis_time:end:20ff856a:start=1496702787577681236,finish=1496702916515318212,duration=128937636976
+The command "ci/travis.rb" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+The dependency nokogiri (>= 1.6.8) will be unused by any of the platforms Bundler is installing for. Bundler is installing for java but the dependency is only for ruby, x86-mswin32, mswin64, x86-mingw32, x64-mingw32. To add those platforms to the bundle, run `bundle lock --add-platform ruby x86-mswin32 mswin64 x86-mingw32 x64-mingw32`.
+travis_time:start:06edb784
+travis_time:end:06edb784:start=1496702921952554018,finish=1496702921959381128,duration=6827110travis_time:start:201b4917change detected (content changed, file is created, or file is deleted):
+/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/bundler/gems/arel-de0a83e11cae/.git/index
+/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/bundler/gems/queue_classic-cde82d17ded2/.git/index
+/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/bundler/gems/rb-inotify-7e3c714a09ae/.git/index
+/home/travis/build/rails/rails/vendor/bundle/jruby/2.3.0/bundler/gems/websocket-client-simple-e161305f1a46/.git/index
+
+
+changes detected, packing new archive
+.
+uploading archive
+
+travis_time:end:201b4917:start=1496702921966617004,finish=1496702932239824356,duration=10273207352travis_fold:end:cache.2
+Done. Your build exited with 0.

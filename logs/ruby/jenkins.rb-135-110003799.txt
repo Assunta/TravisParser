@@ -1,0 +1,133 @@
+travis_fold:start:worker_infoWorker information
+hostname: travis-worker-gce-org-prod-4:0f9e1d30-1c40-49d2-85f0-668290a09c99
+version: v2.3.0-5-gef7116f https://github.com/travis-ci/worker/tree/ef7116fac34a232b5d8ecfe0eb9d834b0af9705d
+instance: testing-gce-c7866dd4-1118-4bc5-a4ed-631a62d55e1e:travis-ci-ruby-precise-1470709805
+startup: 21.539718694s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 151151542
+Job id: 151151545
+travis-build version: 0692ebec4
+Build image provisioning date and time
+Tue Aug  9 02:56:40 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-92-generic
+Cookbooks Version
+ee25956 https://github.com/travis-ci/travis-cookbooks/tree/ee25956
+Git version
+git version 1.8.5.6
+bash version
+GNU bash, version 4.2.25(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ree-1.8.7-2012.02
+ruby-1.8.7-p374
+ruby-1.9.2-p330
+ruby-1.9.3-p551
+ruby-2.0.0-p648-clang
+ruby-2.1.2
+ruby-2.1.3
+ruby-2.1.4
+ruby-2.1.5
+ruby-2.2.5
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.2
+mysql --version
+mysql  Ver 14.14 Distrib 5.5.50, for debian-linux-gnu (x86_64) using readline 6.2
+Pre-installed PostgreSQL versions
+9.1.22
+9.2.17
+9.3.13
+9.4.8
+Redis version
+redis-server 3.0.6
+riak version
+2.0.2
+memcached version
+1.4.13
+MongoDB version
+MongoDB 2.4.14
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+Cassandra version
+2.0.9
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 38.4.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_80, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-92-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libc6 is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:git.checkouttravis_time:start:258bd664$ git clone --depth=50 --branch=ruby-runtime-parent-0.13 https://github.com/jenkinsci/jenkins.rb.git jenkinsci/jenkins.rb
+Cloning into 'jenkinsci/jenkins.rb'...
+remote: Counting objects: 1389, done.[K
+remote: Compressing objects:   0% (1/799)   [Kremote: Compressing objects:   1% (8/799)   [Kremote: Compressing objects:   2% (16/799)   [Kremote: Compressing objects:   3% (24/799)   [Kremote: Compressing objects:   4% (32/799)   [Kremote: Compressing objects:   5% (40/799)   [Kremote: Compressing objects:   6% (48/799)   [Kremote: Compressing objects:   7% (56/799)   [Kremote: Compressing objects:   8% (64/799)   [Kremote: Compressing objects:   9% (72/799)   [Kremote: Compressing objects:  10% (80/799)   [Kremote: Compressing objects:  11% (88/799)   [Kremote: Compressing objects:  12% (96/799)   [Kremote: Compressing objects:  13% (104/799)   [Kremote: Compressing objects:  14% (112/799)   [Kremote: Compressing objects:  15% (120/799)   [Kremote: Compressing objects:  16% (128/799)   [Kremote: Compressing objects:  17% (136/799)   [Kremote: Compressing objects:  18% (144/799)   [Kremote: Compressing objects:  19% (152/799)   [Kremote: Compressing objects:  20% (160/799)   [Kremote: Compressing objects:  21% (168/799)   [Kremote: Compressing objects:  22% (176/799)   [Kremote: Compressing objects:  23% (184/799)   [Kremote: Compressing objects:  24% (192/799)   [Kremote: Compressing objects:  25% (200/799)   [Kremote: Compressing objects:  26% (208/799)   [Kremote: Compressing objects:  27% (216/799)   [Kremote: Compressing objects:  28% (224/799)   [Kremote: Compressing objects:  29% (232/799)   [Kremote: Compressing objects:  30% (240/799)   [Kremote: Compressing objects:  31% (248/799)   [Kremote: Compressing objects:  32% (256/799)   [Kremote: Compressing objects:  33% (264/799)   [Kremote: Compressing objects:  34% (272/799)   [Kremote: Compressing objects:  35% (280/799)   [Kremote: Compressing objects:  36% (288/799)   [Kremote: Compressing objects:  37% (296/799)   [Kremote: Compressing objects:  38% (304/799)   [Kremote: Compressing objects:  39% (312/799)   [Kremote: Compressing objects:  40% (320/799)   [Kremote: Compressing objects:  41% (328/799)   [Kremote: Compressing objects:  42% (336/799)   [Kremote: Compressing objects:  43% (344/799)   [Kremote: Compressing objects:  44% (352/799)   [Kremote: Compressing objects:  45% (360/799)   [Kremote: Compressing objects:  46% (368/799)   [Kremote: Compressing objects:  47% (376/799)   [Kremote: Compressing objects:  48% (384/799)   [Kremote: Compressing objects:  49% (392/799)   [Kremote: Compressing objects:  50% (400/799)   [Kremote: Compressing objects:  51% (408/799)   [Kremote: Compressing objects:  52% (416/799)   [Kremote: Compressing objects:  53% (424/799)   [Kremote: Compressing objects:  54% (432/799)   [Kremote: Compressing objects:  55% (440/799)   [Kremote: Compressing objects:  56% (448/799)   [Kremote: Compressing objects:  57% (456/799)   [Kremote: Compressing objects:  58% (464/799)   [Kremote: Compressing objects:  59% (472/799)   [Kremote: Compressing objects:  60% (480/799)   [Kremote: Compressing objects:  61% (488/799)   [Kremote: Compressing objects:  62% (496/799)   [Kremote: Compressing objects:  63% (504/799)   [Kremote: Compressing objects:  64% (512/799)   [Kremote: Compressing objects:  65% (520/799)   [Kremote: Compressing objects:  66% (528/799)   [Kremote: Compressing objects:  67% (536/799)   [Kremote: Compressing objects:  68% (544/799)   [Kremote: Compressing objects:  69% (552/799)   [Kremote: Compressing objects:  70% (560/799)   [Kremote: Compressing objects:  71% (568/799)   [Kremote: Compressing objects:  72% (576/799)   [Kremote: Compressing objects:  73% (584/799)   [Kremote: Compressing objects:  74% (592/799)   [Kremote: Compressing objects:  75% (600/799)   [Kremote: Compressing objects:  76% (608/799)   [Kremote: Compressing objects:  77% (616/799)   [Kremote: Compressing objects:  78% (624/799)   [Kremote: Compressing objects:  79% (632/799)   [Kremote: Compressing objects:  80% (640/799)   [Kremote: Compressing objects:  81% (648/799)   [Kremote: Compressing objects:  82% (656/799)   [Kremote: Compressing objects:  83% (664/799)   [Kremote: Compressing objects:  84% (672/799)   [Kremote: Compressing objects:  85% (680/799)   [Kremote: Compressing objects:  86% (688/799)   [Kremote: Compressing objects:  87% (696/799)   [Kremote: Compressing objects:  88% (704/799)   [Kremote: Compressing objects:  89% (712/799)   [Kremote: Compressing objects:  90% (720/799)   [Kremote: Compressing objects:  91% (728/799)   [Kremote: Compressing objects:  92% (736/799)   [Kremote: Compressing objects:  93% (744/799)   [Kremote: Compressing objects:  94% (752/799)   [Kremote: Compressing objects:  95% (760/799)   [Kremote: Compressing objects:  96% (768/799)   [Kremote: Compressing objects:  97% (776/799)   [Kremote: Compressing objects:  98% (784/799)   [Kremote: Compressing objects:  99% (792/799)   [Kremote: Compressing objects: 100% (799/799)   [Kremote: Compressing objects: 100% (799/799), done.[K
+Receiving objects:   0% (1/1389)   Receiving objects:   1% (14/1389)   Receiving objects:   2% (28/1389)   Receiving objects:   3% (42/1389)   Receiving objects:   4% (56/1389)   Receiving objects:   5% (70/1389)   Receiving objects:   6% (84/1389)   Receiving objects:   7% (98/1389)   Receiving objects:   8% (112/1389)   Receiving objects:   9% (126/1389)   Receiving objects:  10% (139/1389)   Receiving objects:  11% (153/1389)   Receiving objects:  12% (167/1389)   Receiving objects:  13% (181/1389)   Receiving objects:  14% (195/1389)   Receiving objects:  15% (209/1389)   Receiving objects:  16% (223/1389)   Receiving objects:  17% (237/1389)   Receiving objects:  18% (251/1389)   Receiving objects:  19% (264/1389)   Receiving objects:  20% (278/1389)   Receiving objects:  21% (292/1389)   Receiving objects:  22% (306/1389)   Receiving objects:  23% (320/1389)   Receiving objects:  24% (334/1389)   Receiving objects:  25% (348/1389)   Receiving objects:  26% (362/1389)   Receiving objects:  27% (376/1389)   Receiving objects:  28% (389/1389)   Receiving objects:  29% (403/1389)   Receiving objects:  30% (417/1389)   Receiving objects:  31% (431/1389)   Receiving objects:  32% (445/1389)   Receiving objects:  33% (459/1389)   Receiving objects:  34% (473/1389)   Receiving objects:  35% (487/1389)   Receiving objects:  36% (501/1389)   Receiving objects:  37% (514/1389)   Receiving objects:  38% (528/1389)   Receiving objects:  39% (542/1389)   Receiving objects:  40% (556/1389)   Receiving objects:  41% (570/1389)   Receiving objects:  42% (584/1389)   Receiving objects:  43% (598/1389)   Receiving objects:  44% (612/1389)   Receiving objects:  45% (626/1389)   Receiving objects:  46% (639/1389)   Receiving objects:  47% (653/1389)   Receiving objects:  48% (667/1389)   Receiving objects:  49% (681/1389)   Receiving objects:  50% (695/1389)   Receiving objects:  51% (709/1389)   Receiving objects:  52% (723/1389)   Receiving objects:  53% (737/1389)   Receiving objects:  54% (751/1389)   Receiving objects:  55% (764/1389)   Receiving objects:  56% (778/1389)   Receiving objects:  57% (792/1389)   Receiving objects:  58% (806/1389)   Receiving objects:  59% (820/1389)   Receiving objects:  60% (834/1389)   Receiving objects:  61% (848/1389)   Receiving objects:  62% (862/1389)   Receiving objects:  63% (876/1389)   Receiving objects:  64% (889/1389)   Receiving objects:  65% (903/1389)   Receiving objects:  66% (917/1389)   Receiving objects:  67% (931/1389)   Receiving objects:  68% (945/1389)   Receiving objects:  69% (959/1389)   Receiving objects:  70% (973/1389)   Receiving objects:  71% (987/1389)   Receiving objects:  72% (1001/1389)   Receiving objects:  73% (1014/1389)   Receiving objects:  74% (1028/1389)   Receiving objects:  75% (1042/1389)   Receiving objects:  76% (1056/1389)   Receiving objects:  77% (1070/1389)   Receiving objects:  78% (1084/1389)   Receiving objects:  79% (1098/1389)   Receiving objects:  80% (1112/1389)   Receiving objects:  81% (1126/1389)   Receiving objects:  82% (1139/1389)   Receiving objects:  83% (1153/1389)   Receiving objects:  84% (1167/1389)   remote: Total 1389 (delta 560), reused 1272 (delta 502), pack-reused 0[K
+Receiving objects:  85% (1181/1389)   Receiving objects:  86% (1195/1389)   Receiving objects:  87% (1209/1389)   Receiving objects:  88% (1223/1389)   Receiving objects:  89% (1237/1389)   Receiving objects:  90% (1251/1389)   Receiving objects:  91% (1264/1389)   Receiving objects:  92% (1278/1389)   Receiving objects:  93% (1292/1389)   Receiving objects:  94% (1306/1389)   Receiving objects:  95% (1320/1389)   Receiving objects:  96% (1334/1389)   Receiving objects:  97% (1348/1389)   Receiving objects:  98% (1362/1389)   Receiving objects:  99% (1376/1389)   Receiving objects: 100% (1389/1389)   Receiving objects: 100% (1389/1389), 2.52 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/560)   Resolving deltas:   1% (6/560)   Resolving deltas:   3% (22/560)   Resolving deltas:   4% (26/560)   Resolving deltas:   6% (36/560)   Resolving deltas:   8% (49/560)   Resolving deltas:   9% (51/560)   Resolving deltas:  10% (56/560)   Resolving deltas:  12% (68/560)   Resolving deltas:  13% (76/560)   Resolving deltas:  14% (79/560)   Resolving deltas:  15% (86/560)   Resolving deltas:  16% (90/560)   Resolving deltas:  17% (99/560)   Resolving deltas:  18% (106/560)   Resolving deltas:  19% (107/560)   Resolving deltas:  20% (112/560)   Resolving deltas:  21% (118/560)   Resolving deltas:  22% (127/560)   Resolving deltas:  23% (130/560)   Resolving deltas:  24% (137/560)   Resolving deltas:  25% (142/560)   Resolving deltas:  26% (147/560)   Resolving deltas:  27% (154/560)   Resolving deltas:  28% (161/560)   Resolving deltas:  30% (172/560)   Resolving deltas:  31% (174/560)   Resolving deltas:  32% (181/560)   Resolving deltas:  35% (200/560)   Resolving deltas:  36% (205/560)   Resolving deltas:  37% (211/560)   Resolving deltas:  38% (214/560)   Resolving deltas:  39% (222/560)   Resolving deltas:  40% (225/560)   Resolving deltas:  42% (240/560)   Resolving deltas:  43% (241/560)   Resolving deltas:  44% (247/560)   Resolving deltas:  47% (264/560)   Resolving deltas:  55% (312/560)   Resolving deltas:  56% (315/560)   Resolving deltas:  59% (332/560)   Resolving deltas:  60% (340/560)   Resolving deltas:  61% (345/560)   Resolving deltas:  62% (350/560)   Resolving deltas:  67% (377/560)   Resolving deltas:  68% (384/560)   Resolving deltas:  73% (410/560)   Resolving deltas:  75% (423/560)   Resolving deltas:  76% (427/560)   Resolving deltas:  77% (432/560)   Resolving deltas:  78% (437/560)   Resolving deltas:  79% (444/560)   Resolving deltas:  80% (449/560)   Resolving deltas:  81% (455/560)   Resolving deltas:  82% (460/560)   Resolving deltas:  83% (465/560)   Resolving deltas:  84% (471/560)   Resolving deltas:  85% (476/560)   Resolving deltas:  86% (484/560)   Resolving deltas:  87% (488/560)   Resolving deltas:  88% (496/560)   Resolving deltas:  89% (499/560)   Resolving deltas:  90% (504/560)   Resolving deltas:  91% (514/560)   Resolving deltas:  92% (516/560)   Resolving deltas:  93% (522/560)   Resolving deltas:  94% (529/560)   Resolving deltas:  95% (532/560)   Resolving deltas:  96% (538/560)   Resolving deltas:  97% (545/560)   Resolving deltas:  98% (549/560)   Resolving deltas:  99% (555/560)   Resolving deltas: 100% (560/560)   Resolving deltas: 100% (560/560), done.
+Checking connectivity... done.
+Note: checking out '7ca8df3ba207c5f1332a92cbccfe5521af623864'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+
+travis_time:end:258bd664:start=1470818625170349690,finish=1470818626215054819,duration=1044705129$ cd jenkinsci/jenkins.rb
+$ git checkout -qf 4e5e0a4120e70724806f96262005226aa80cdb64
+fatal: reference is not a tree: 4e5e0a4120e70724806f96262005226aa80cdb64
+
+The command "git checkout -qf 4e5e0a4120e70724806f96262005226aa80cdb64" failed and exited with 128 during .
+
+Your build has been stopped.
