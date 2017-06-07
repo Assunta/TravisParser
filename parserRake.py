@@ -25,16 +25,20 @@ def parserRake(f):
             # per vedere se si usa Bullet (The Bullet gem is designed to help you increase your application's performance by reducing the number of queries it makes. )
         elif re.match("\ABullet not enabled",line):
             print line
-    #espressione per matchare tutti i comandi $ bundle
-            #TODO controllare perche' non li matcha tutti
-        elif re.match("\A\$ bundle ", line):
+    #espressione per matchare tutti i comandi $ bundle exec
+        elif re.match("(.)*bundle exec(.)*", line):
+            if re.match("(.)*exited with 0", line):
+                print ("Messaggio ok: "+line)
+            elif re.match("(.)*exited with 1", line):
+                print ("Messaggio di errore: "+line)
             print line
     # espressioni per i match dei test
-        elif re.match("\A(\d)* assertions,", line):
+        elif re.match("\A(.)* assertions,", line):
+            print line
+    # match di WARNING:
+        elif re.match("\AWARNING: ", line):
             print line
 
-#f = open('logs\\ruby\\exception_handler-1264-168008435.txt', 'r')
-f = open('logs\\ruby\\samson-7945-175559529.txt', 'r')
-# f=open('logs\\ruby\\octopress-963-145287347.txt','r')
-# f = open('logs\\ruby\\wraith-967-164825319.txt', 'r')
-parserRake(f)
+    print "Dipendenze "
+    for dip in listaDipendenze:
+        print dip

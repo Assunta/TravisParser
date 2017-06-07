@@ -48,8 +48,11 @@ def checkGradleMaven(f):
 def common_parse(reponame, build_id):
     repo= t.repo(reponame)
     #TODO settare la giusta build, non la last
-    # build= t.build(build_id)
-    build=repo.last_build
+    if (build_id==-1):
+        print "*/*/*/*/*/Build non trovata nel log uso la last build */*/*/*/*/*/*"
+        build = repo.last_build
+    else:
+         build= t.build(build_id)
     commit=build.commit
     print "Nome : "+repo.slug
     print "Stato: " + build.state
@@ -67,7 +70,8 @@ def common_parse(reponame, build_id):
     print "Commit SHA: " + commit.sha
     print "Branch: "+commit.branch
     print "Commit message: "+commit.message
-    print "Data commit: "+ commit.committed_at
+    if commit.committed_at is not None:
+        print "Data commit: "+ commit.committed_at
     print "Autore commit: "+ commit.author_name
     print "Email Autore commit: "+ commit.author_email
     #informazioni file travis.yml
@@ -75,7 +79,7 @@ def common_parse(reponame, build_id):
     print build.config
     print "Language: "+build.config["language"]
     print "Numero jobs: "+str(len(build.jobs))
-    pass
+    return build.config["language"]
 
 
 
