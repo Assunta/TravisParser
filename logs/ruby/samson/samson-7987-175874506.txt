@@ -1,0 +1,704 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-03dd00d-precise-production-2-worker-org-docker.travisci.net:3ed7e52c-475a-4af8-a8e9-bf0294fc9e61
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 046ecde:travis:ruby
+startup: 1.42737635s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 240202085
+Job id: 240202094
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (31.6 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             62% [2 libssl1.0.0 57.7 kB/1,054 kB 5%]                                       100% [Working]              Fetched 2,634 kB in 0s (15.5 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:03d10d00$ git clone --depth=50 https://github.com/zendesk/samson.git zendesk/samson
+Cloning into 'zendesk/samson'...
+remote: Counting objects: 4473, done.[K
+remote: Compressing objects:   0% (1/2457)   [Kremote: Compressing objects:   1% (25/2457)   [Kremote: Compressing objects:   2% (50/2457)   [Kremote: Compressing objects:   3% (74/2457)   [Kremote: Compressing objects:   4% (99/2457)   [Kremote: Compressing objects:   5% (123/2457)   [Kremote: Compressing objects:   6% (148/2457)   [Kremote: Compressing objects:   7% (172/2457)   [Kremote: Compressing objects:   8% (197/2457)   [Kremote: Compressing objects:   9% (222/2457)   [Kremote: Compressing objects:  10% (246/2457)   [Kremote: Compressing objects:  11% (271/2457)   [Kremote: Compressing objects:  12% (295/2457)   [Kremote: Compressing objects:  13% (320/2457)   [Kremote: Compressing objects:  14% (344/2457)   [Kremote: Compressing objects:  15% (369/2457)   [Kremote: Compressing objects:  16% (394/2457)   [Kremote: Compressing objects:  17% (418/2457)   [Kremote: Compressing objects:  18% (443/2457)   [Kremote: Compressing objects:  19% (467/2457)   [Kremote: Compressing objects:  20% (492/2457)   [Kremote: Compressing objects:  21% (516/2457)   [Kremote: Compressing objects:  22% (541/2457)   [Kremote: Compressing objects:  23% (566/2457)   [Kremote: Compressing objects:  24% (590/2457)   [Kremote: Compressing objects:  25% (615/2457)   [Kremote: Compressing objects:  26% (639/2457)   [Kremote: Compressing objects:  27% (664/2457)   [Kremote: Compressing objects:  28% (688/2457)   [Kremote: Compressing objects:  29% (713/2457)   [Kremote: Compressing objects:  30% (738/2457)   [Kremote: Compressing objects:  31% (762/2457)   [Kremote: Compressing objects:  32% (787/2457)   [Kremote: Compressing objects:  33% (811/2457)   [Kremote: Compressing objects:  34% (836/2457)   [Kremote: Compressing objects:  35% (860/2457)   [Kremote: Compressing objects:  36% (885/2457)   [Kremote: Compressing objects:  37% (910/2457)   [Kremote: Compressing objects:  38% (934/2457)   [Kremote: Compressing objects:  39% (959/2457)   [Kremote: Compressing objects:  40% (983/2457)   [Kremote: Compressing objects:  41% (1008/2457)   [Kremote: Compressing objects:  42% (1032/2457)   [Kremote: Compressing objects:  43% (1057/2457)   [Kremote: Compressing objects:  44% (1082/2457)   [Kremote: Compressing objects:  45% (1106/2457)   [Kremote: Compressing objects:  46% (1131/2457)   [Kremote: Compressing objects:  47% (1155/2457)   [Kremote: Compressing objects:  48% (1180/2457)   [Kremote: Compressing objects:  49% (1204/2457)   [Kremote: Compressing objects:  50% (1229/2457)   [Kremote: Compressing objects:  51% (1254/2457)   [Kremote: Compressing objects:  52% (1278/2457)   [Kremote: Compressing objects:  53% (1303/2457)   [Kremote: Compressing objects:  54% (1327/2457)   [Kremote: Compressing objects:  55% (1352/2457)   [Kremote: Compressing objects:  56% (1376/2457)   [Kremote: Compressing objects:  57% (1401/2457)   [Kremote: Compressing objects:  58% (1426/2457)   [Kremote: Compressing objects:  59% (1450/2457)   [Kremote: Compressing objects:  60% (1475/2457)   [Kremote: Compressing objects:  61% (1499/2457)   [Kremote: Compressing objects:  62% (1524/2457)   [Kremote: Compressing objects:  63% (1548/2457)   [Kremote: Compressing objects:  64% (1573/2457)   [Kremote: Compressing objects:  65% (1598/2457)   [Kremote: Compressing objects:  66% (1622/2457)   [Kremote: Compressing objects:  67% (1647/2457)   [Kremote: Compressing objects:  68% (1671/2457)   [Kremote: Compressing objects:  69% (1696/2457)   [Kremote: Compressing objects:  70% (1720/2457)   [Kremote: Compressing objects:  71% (1745/2457)   [Kremote: Compressing objects:  72% (1770/2457)   [Kremote: Compressing objects:  73% (1794/2457)   [Kremote: Compressing objects:  74% (1819/2457)   [Kremote: Compressing objects:  75% (1843/2457)   [Kremote: Compressing objects:  76% (1868/2457)   [Kremote: Compressing objects:  77% (1892/2457)   [Kremote: Compressing objects:  78% (1917/2457)   [Kremote: Compressing objects:  79% (1942/2457)   [Kremote: Compressing objects:  80% (1966/2457)   [Kremote: Compressing objects:  81% (1991/2457)   [Kremote: Compressing objects:  82% (2015/2457)   [Kremote: Compressing objects:  83% (2040/2457)   [Kremote: Compressing objects:  84% (2064/2457)   [Kremote: Compressing objects:  85% (2089/2457)   [Kremote: Compressing objects:  86% (2114/2457)   [Kremote: Compressing objects:  87% (2138/2457)   [Kremote: Compressing objects:  88% (2163/2457)   [Kremote: Compressing objects:  89% (2187/2457)   [Kremote: Compressing objects:  90% (2212/2457)   [Kremote: Compressing objects:  91% (2236/2457)   [Kremote: Compressing objects:  92% (2261/2457)   [Kremote: Compressing objects:  93% (2286/2457)   [Kremote: Compressing objects:  94% (2310/2457)   [Kremote: Compressing objects:  95% (2335/2457)   [Kremote: Compressing objects:  96% (2359/2457)   [Kremote: Compressing objects:  97% (2384/2457)   [Kremote: Compressing objects:  98% (2408/2457)   [Kremote: Compressing objects:  99% (2433/2457)   [Kremote: Compressing objects: 100% (2457/2457)   [Kremote: Compressing objects: 100% (2457/2457), done.[K
+Receiving objects:   0% (1/4473)   Receiving objects:   1% (45/4473)   Receiving objects:   2% (90/4473)   Receiving objects:   3% (135/4473)   Receiving objects:   4% (179/4473)   Receiving objects:   5% (224/4473)   Receiving objects:   6% (269/4473)   Receiving objects:   7% (314/4473)   Receiving objects:   8% (358/4473)   Receiving objects:   9% (403/4473)   Receiving objects:  10% (448/4473)   Receiving objects:  11% (493/4473)   Receiving objects:  12% (537/4473)   Receiving objects:  13% (582/4473)   Receiving objects:  14% (627/4473)   Receiving objects:  15% (671/4473)   Receiving objects:  16% (716/4473)   Receiving objects:  17% (761/4473)   Receiving objects:  18% (806/4473)   Receiving objects:  19% (850/4473)   Receiving objects:  20% (895/4473)   Receiving objects:  21% (940/4473)   Receiving objects:  22% (985/4473)   Receiving objects:  23% (1029/4473)   Receiving objects:  24% (1074/4473)   Receiving objects:  25% (1119/4473)   Receiving objects:  26% (1163/4473)   Receiving objects:  27% (1208/4473)   Receiving objects:  28% (1253/4473)   Receiving objects:  29% (1298/4473)   Receiving objects:  30% (1342/4473)   Receiving objects:  31% (1387/4473)   Receiving objects:  32% (1432/4473)   Receiving objects:  33% (1477/4473)   Receiving objects:  34% (1521/4473)   Receiving objects:  35% (1566/4473)   Receiving objects:  36% (1611/4473)   Receiving objects:  37% (1656/4473)   Receiving objects:  38% (1700/4473)   Receiving objects:  39% (1745/4473)   Receiving objects:  40% (1790/4473)   Receiving objects:  41% (1834/4473)   Receiving objects:  42% (1879/4473)   Receiving objects:  43% (1924/4473)   Receiving objects:  44% (1969/4473)   Receiving objects:  45% (2013/4473)   Receiving objects:  46% (2058/4473)   Receiving objects:  47% (2103/4473)   Receiving objects:  48% (2148/4473)   Receiving objects:  49% (2192/4473)   Receiving objects:  50% (2237/4473)   Receiving objects:  51% (2282/4473)   Receiving objects:  52% (2326/4473)   Receiving objects:  53% (2371/4473)   Receiving objects:  54% (2416/4473)   Receiving objects:  55% (2461/4473)   Receiving objects:  56% (2505/4473)   Receiving objects:  57% (2550/4473)   Receiving objects:  58% (2595/4473)   Receiving objects:  59% (2640/4473)   Receiving objects:  60% (2684/4473)   Receiving objects:  61% (2729/4473)   Receiving objects:  62% (2774/4473)   Receiving objects:  63% (2818/4473)   Receiving objects:  64% (2863/4473)   Receiving objects:  65% (2908/4473)   Receiving objects:  66% (2953/4473)   Receiving objects:  67% (2997/4473)   Receiving objects:  68% (3042/4473)   Receiving objects:  69% (3087/4473)   Receiving objects:  70% (3132/4473)   Receiving objects:  71% (3176/4473)   Receiving objects:  72% (3221/4473)   Receiving objects:  73% (3266/4473)   Receiving objects:  74% (3311/4473)   Receiving objects:  75% (3355/4473)   Receiving objects:  76% (3400/4473)   Receiving objects:  77% (3445/4473)   Receiving objects:  78% (3489/4473)   Receiving objects:  79% (3534/4473)   Receiving objects:  80% (3579/4473)   Receiving objects:  81% (3624/4473)   Receiving objects:  82% (3668/4473)   Receiving objects:  83% (3713/4473)   Receiving objects:  84% (3758/4473)   Receiving objects:  85% (3803/4473)   Receiving objects:  85% (3844/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  86% (3847/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  87% (3892/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  88% (3937/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  89% (3981/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  90% (4026/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  91% (4071/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  92% (4116/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  93% (4160/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  94% (4205/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  95% (4250/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  96% (4295/4473), 23.11 MiB | 23.06 MiB/s   Receiving objects:  97% (4339/4473), 34.32 MiB | 22.83 MiB/s   Receiving objects:  98% (4384/4473), 34.32 MiB | 22.83 MiB/s   Receiving objects:  99% (4429/4473), 34.32 MiB | 22.83 MiB/s   remote: Total 4473 (delta 2087), reused 3262 (delta 1720), pack-reused 0[K
+Receiving objects: 100% (4473/4473), 34.32 MiB | 22.83 MiB/s   Receiving objects: 100% (4473/4473), 43.34 MiB | 22.83 MiB/s, done.
+Resolving deltas:   0% (0/2087)   Resolving deltas:   1% (21/2087)   Resolving deltas:   2% (50/2087)   Resolving deltas:   3% (66/2087)   Resolving deltas:   4% (90/2087)   Resolving deltas:   5% (123/2087)   Resolving deltas:   6% (139/2087)   Resolving deltas:   7% (148/2087)   Resolving deltas:   8% (184/2087)   Resolving deltas:   9% (207/2087)   Resolving deltas:  10% (213/2087)   Resolving deltas:  11% (248/2087)   Resolving deltas:  12% (255/2087)   Resolving deltas:  13% (275/2087)   Resolving deltas:  14% (300/2087)   Resolving deltas:  15% (332/2087)   Resolving deltas:  16% (341/2087)   Resolving deltas:  17% (367/2087)   Resolving deltas:  18% (379/2087)   Resolving deltas:  19% (402/2087)   Resolving deltas:  21% (440/2087)   Resolving deltas:  22% (460/2087)   Resolving deltas:  23% (493/2087)   Resolving deltas:  24% (508/2087)   Resolving deltas:  27% (566/2087)   Resolving deltas:  28% (603/2087)   Resolving deltas:  29% (626/2087)   Resolving deltas:  30% (632/2087)   Resolving deltas:  33% (691/2087)   Resolving deltas:  34% (710/2087)   Resolving deltas:  35% (731/2087)   Resolving deltas:  36% (753/2087)   Resolving deltas:  39% (821/2087)   Resolving deltas:  40% (840/2087)   Resolving deltas:  41% (858/2087)   Resolving deltas:  43% (917/2087)   Resolving deltas:  44% (920/2087)   Resolving deltas:  45% (940/2087)   Resolving deltas:  47% (988/2087)   Resolving deltas:  48% (1015/2087)   Resolving deltas:  49% (1041/2087)   Resolving deltas:  50% (1044/2087)   Resolving deltas:  51% (1065/2087)   Resolving deltas:  52% (1087/2087)   Resolving deltas:  53% (1109/2087)   Resolving deltas:  54% (1128/2087)   Resolving deltas:  55% (1150/2087)   Resolving deltas:  56% (1170/2087)   Resolving deltas:  58% (1215/2087)   Resolving deltas:  59% (1238/2087)   Resolving deltas:  60% (1253/2087)   Resolving deltas:  61% (1277/2087)   Resolving deltas:  62% (1294/2087)   Resolving deltas:  63% (1317/2087)   Resolving deltas:  64% (1336/2087)   Resolving deltas:  65% (1361/2087)   Resolving deltas:  66% (1378/2087)   Resolving deltas:  67% (1399/2087)   Resolving deltas:  68% (1421/2087)   Resolving deltas:  69% (1442/2087)   Resolving deltas:  70% (1461/2087)   Resolving deltas:  71% (1484/2087)   Resolving deltas:  72% (1503/2087)   Resolving deltas:  73% (1525/2087)   Resolving deltas:  74% (1546/2087)   Resolving deltas:  75% (1568/2087)   Resolving deltas:  76% (1587/2087)   Resolving deltas:  77% (1610/2087)   Resolving deltas:  78% (1629/2087)   Resolving deltas:  79% (1649/2087)   Resolving deltas:  80% (1674/2087)   Resolving deltas:  81% (1691/2087)   Resolving deltas:  82% (1714/2087)   Resolving deltas:  83% (1734/2087)   Resolving deltas:  84% (1754/2087)   Resolving deltas:  85% (1781/2087)   Resolving deltas:  86% (1801/2087)   Resolving deltas:  87% (1821/2087)   Resolving deltas:  88% (1837/2087)   Resolving deltas:  89% (1860/2087)   Resolving deltas:  90% (1879/2087)   Resolving deltas:  91% (1900/2087)   Resolving deltas:  92% (1921/2087)   Resolving deltas:  93% (1941/2087)   Resolving deltas:  94% (1963/2087)   Resolving deltas:  95% (1983/2087)   Resolving deltas:  96% (2005/2087)   Resolving deltas:  97% (2025/2087)   Resolving deltas:  98% (2046/2087)   Resolving deltas:  99% (2067/2087)   Resolving deltas: 100% (2087/2087)   Resolving deltas: 100% (2087/2087), done.
+Checking connectivity... done.
+
+travis_time:end:03d10d00:start=1496801964402330171,finish=1496801967269186123,duration=2866855952$ cd zendesk/samson
+travis_time:start:109824b8$ git fetch origin +refs/pull/2035/merge:
+remote: Counting objects: 12, done.[K
+remote: Compressing objects:  25% (1/4)   [Kremote: Compressing objects:  50% (2/4)   [Kremote: Compressing objects:  75% (3/4)   [Kremote: Compressing objects: 100% (4/4)   [Kremote: Compressing objects: 100% (4/4), done.[K
+remote: Total 12 (delta 10), reused 10 (delta 8), pack-reused 0[K
+Unpacking objects:   8% (1/12)   Unpacking objects:  16% (2/12)   Unpacking objects:  25% (3/12)   Unpacking objects:  33% (4/12)   Unpacking objects:  41% (5/12)   Unpacking objects:  50% (6/12)   Unpacking objects:  58% (7/12)   Unpacking objects:  66% (8/12)   Unpacking objects:  75% (9/12)   Unpacking objects:  83% (10/12)   Unpacking objects:  91% (11/12)   Unpacking objects: 100% (12/12)   Unpacking objects: 100% (12/12), done.
+From https://github.com/zendesk/samson
+ * branch            refs/pull/2035/merge -> FETCH_HEAD
+
+travis_time:end:109824b8:start=1496801967275549828,finish=1496801967622629011,duration=347079183$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:servicestravis_time:start:02127c92$ sudo service memcached start
+Starting memcached: memcached.
+
+travis_time:end:02127c92:start=1496801967832280474,finish=1496801967873056016,duration=40775542travis_fold:end:services
+Setting environment variables from repository settings
+$ export CODECLIMATE_REPO_TOKEN=[secure]
+
+Setting environment variables from .travis.yml
+$ export BUNDLE_WITHOUT=postgres:mysql
+$ export DATABASE_URL=sqlite3://null$PWD/db/test.sqlite3
+$ export TASK='db:create default'
+
+travis_fold:start:rvmtravis_time:start:03c77b00$ rvm use $(< .ruby-version) --install --binary --fuzzy
+ruby-2.3.3 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.3.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.3 - #configure
+ruby-2.3.3 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 33 23.2M   33 7952k    0     0  75.5M      0 --:--:-- --:--:-- --:--:-- 78.4M100 23.2M  100 23.2M    0     0  46.6M      0 --:--:-- --:--:-- --:--:-- 46.9M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.3 - #validate archive
+ruby-2.3.3 - #extract
+ruby-2.3.3 - #validate binary
+ruby-2.3.3 - #setup
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3@global
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.3 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.3 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.3 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.3
+
+travis_time:end:03c77b00:start=1496801975660690353,finish=1496801998275600803,duration=22614910450travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:1b15a880$ Installing caching utilities
+
+travis_time:end:1b15a880:start=1496801998485805667,finish=1496801998511652459,duration=25846792travis_time:start:199510d4
+travis_time:end:199510d4:start=1496801998517646733,finish=1496801998522037531,duration=4390798travis_time:start:06e6edbcattempting to download cache archive
+fetching PR.2035/cache-linux-precise-92bc75a3a1067752268585b57873c203f197516892988854f81949b9d3f1d76e--rvm-default--gemfile-Gemfile.tgz
+fetching PR.2035/cache--rvm-default--gemfile-Gemfile.tgz
+fetching master/cache-linux-precise-92bc75a3a1067752268585b57873c203f197516892988854f81949b9d3f1d76e--rvm-default--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:06e6edbc:start=1496801998527281266,finish=1496802000666611037,duration=2139329771travis_time:start:2ca9963e
+travis_time:end:2ca9963e:start=1496802000672515451,finish=1496802000677559634,duration=5044183travis_time:start:0a7d1e49adding /home/travis/build/zendesk/samson/tmp/rubocop_cache to cache
+creating directory /home/travis/build/zendesk/samson/tmp/rubocop_cache
+adding /home/travis/build/zendesk/samson/node_modules to cache
+creating directory /home/travis/build/zendesk/samson/node_modules
+
+travis_time:end:0a7d1e49:start=1496802000682933473,finish=1496802003288870122,duration=2605936649travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:18a6fbc9
+travis_time:end:18a6fbc9:start=1496802003295962898,finish=1496802003301809694,duration=5846796travis_time:start:016e7d4cadding /home/travis/build/zendesk/samson/vendor/bundle to cache
+creating directory /home/travis/build/zendesk/samson/vendor/bundle
+
+travis_time:end:016e7d4c:start=1496802003308148892,finish=1496802007111778948,duration=3803630056travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.8
+travis_fold:start:install.bundlertravis_time:start:03a142a0$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.6.0
+Using mini_portile2 2.1.0
+Using rack 2.0.1
+Using nio4r 2.0.0
+Using websocket-extensions 0.1.2
+Using mime-types 2.99.3
+Using arel 8.0.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using bundler 1.15.1
+Using dotenv 2.2.1
+Using connection_pool 2.2.1
+Using marco-polo 1.2.1
+Using request_store 1.3.2
+Using logstash-event 1.2.02
+Using dogstatsd-ruby 2.2.0
+Using puma 3.8.2
+Using encryptor 3.0.0
+Using addressable 2.3.8
+Using multipart-post 2.0.0
+Using dalli 2.7.6
+Using jsonapi-renderer 0.1.2
+Using hashie 3.5.5
+Using jwt 1.5.1
+Using multi_json 1.12.0
+Using multi_xml 0.5.5
+Using net-ldap 0.14.0
+Using rubyntlm 0.3.4
+Using ansible 0.2.2
+Using github-markdown 0.6.9
+Using coderay 1.1.1
+Using net-http-persistent 2.9.4
+Using vault 0.7.1
+Using excon 0.55.0
+Using json 2.1.0
+Using newrelic_rpm 4.1.0.333
+Using airbrake-ruby 2.2.0
+Using json_pure 1.8.3
+Using samson_docker_binary_builder 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/docker_binary_builder`
+Using pyu-ruby-sasl 0.0.3.3
+Using dockerb 0.3.0
+Using samson_github 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/github`
+Using samson_hyperclair 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/hyperclair`
+Using mixlib-shellout 2.2.7
+Using socksify 1.7.1
+Using unicode-display_width 1.1.1
+Using unf_ext 0.0.7.2
+Using http_parser.rb 0.6.0
+Using recursive-open-struct 1.0.0
+Using http-form_data 1.0.1
+Using netrc 0.11.0
+Using samson_new_relic 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/new_relic`
+Using samson_pipelines 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/pipelines`
+Using samson_slack_app 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/slack_app`
+Using inflection 1.0.0
+Using scrub_rb 1.0.1
+Using mysql2 0.4.5
+Using sqlite3 1.3.13
+Using execjs 2.7.0
+Using sass 3.4.22
+Using tilt 2.0.5
+Using rails-assets-angular 1.4.9
+Using rails-assets-jquery 2.2.1
+Using rails-assets-spin.js 2.3.2
+Using rails-assets-font-awesome 4.3.0
+Using rails-assets-moment 2.11.2
+Using rails-assets-underscore 1.8.3
+Using rails-assets-angular-truncate-2 0.4.2
+Using rails-assets-jstimezonedetect 1.0.5
+Using byebug 8.2.2
+Using bootscale 0.5.1
+Using slop 3.6.0
+Using awesome_print 1.6.1
+Using brakeman 3.6.2
+Using ast 2.3.0
+Using powerpack 0.1.1
+Using rainbow 2.1.0
+Using ruby-progressbar 1.8.1
+Using erubis 2.7.0
+Using path_expander 1.0.1
+Using sexp_processor 4.9.0
+Using parallel 1.10.0
+Using metaclass 0.0.4
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.4
+Using single_cov 0.5.9
+Using sucker_punch 2.0.2
+Using maxitest 2.4.0
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using warden 1.2.7
+Using rack-mini-profiler 0.10.2
+Using websocket-driver 0.6.5
+Using mail 2.6.5
+Using bundler-audit 0.5.0
+Using samson_env 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/env`
+Using attr_encrypted 3.0.3
+Using faraday 0.9.2
+Using omniauth 1.6.1
+Using dogapi 1.21.0
+Using httparty 0.14.0
+Using docker-api 1.32.0
+Using airbrake 6.0.0
+Using jmespath 1.2.4
+Using samson_dockerb 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/dockerb`
+Using terminal-table 1.7.3
+Using unf 0.1.4
+Using uglifier 3.2.0
+Using autoprefixer-rails 6.3.3.1
+Using rails-assets-angular-mocks 1.4.9
+Using rails-assets-angular-scenario 1.4.9
+Using rails-assets-angular-ui-router 0.2.18
+Using rails-assets-spin 1.1.6
+Using rails-assets-bootstrap-select 1.10.0
+Using rails-assets-jquery-ui 1.11.4
+Using rails-assets-jquery-ujs 1.2.0
+Using rails-assets-typeahead.js 0.11.1
+Using rails-assets-x-editable 1.5.1
+Using rails-assets-jquery-cookie 1.4.1
+Using rails-assets-datatables.net 1.10.12
+Using rails-assets-angular-spinner 0.8.1
+Using pry 0.10.3
+Using parser 2.4.0.0
+Using ruby_parser 3.9.0
+Using parallel_tests 2.12.0
+Using mocha 1.2.1
+Using crack 0.4.3
+Using activesupport 5.1.0
+Using loofah 2.0.3
+Using sawyer 0.6.0
+Using oauth2 1.1.0
+Using faraday-http-cache 2.0.0
+Using samson_ledger 0.0.1 from source at `/home/travis/build/zendesk/samson/plugins/samson_ledger`
+Using samson_slack_webhooks 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/slack_webhooks`
+Using zendesk_api 1.13.4
+Using omniauth-ldap 1.0.5
+Using samson_datadog 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/datadog`
+Using flowdock 0.6.0
+Using samson_airbrake 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/airbrake`
+Using aws-sdk-core 2.2.36
+Using jenkins_api_client 1.5.3
+Using domain_name 0.5.20160826
+Using bootstrap-sass 3.3.6
+Using rails-assets-datatables.net-bs 1.10.11
+Using rails-assets-datatables.net-fixedcolumns 3.2.2
+Using pry-rails 0.3.4
+Using rubocop 0.48.1
+Using flay 2.9.0
+Using webmock 3.0.1
+Using rails-dom-testing 2.0.2
+Using globalid 0.4.0
+Using activemodel 5.1.0
+Using case_transform 0.2
+Using active_hash 1.4.1
+Using rails-html-sanitizer 1.0.3
+Using octokit 4.2.0
+Using omniauth-oauth2 1.4.0
+Using samson_zendesk 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/zendesk`
+Using samson_flowdock 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/flowdock`
+Using samson_aws_ecr 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/aws_ecr`
+Using samson_jenkins 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/jenkins`
+Using http-cookie 1.0.3
+Using rails-assets-datatables.net-fixedcolumns-bs 3.2.2
+Using activejob 5.1.0
+Using activerecord 5.1.0
+Using actionview 5.1.0
+Using omniauth-github 1.1.2
+Using omniauth-google-oauth2 0.4.0
+Using omniauth-gitlab 1.0.2
+Using http 0.9.8
+Using rest-client 2.0.0
+Using goldiloader 2.0.1
+Using paper_trail 7.0.2
+Using soft_deletion 1.1.0
+Using forking_test_runner 1.0.0
+Using ar_multi_threaded_transactional_tests 0.2.1
+Using actionpack 5.1.0
+Using kubeclient 2.1.0
+Using actioncable 5.1.0
+Using actionmailer 5.1.0
+Using railties 5.1.0
+Using sprockets-rails 3.2.0
+Using kaminari 0.17.0
+Using active_model_serializers 0.10.6
+Using rails-controller-testing 1.0.1
+Using samson_kubernetes 0.0.1 from source at `/home/travis/build/zendesk/samson/plugins/kubernetes`
+Using doorkeeper 4.2.5
+Using airbrake-user_informer 0.2.0
+Using lograge 0.5.0
+Using angular-rails-templates 1.0.2
+Using minitest-rails 3.0.0
+Using rails 5.1.0
+Using sass-rails 5.0.6
+Using sse-rails-engine 1.6.0
+Using ngannotate-rails 1.2.2
+Bundle complete! 107 Gemfile dependencies, 203 gems now installed.
+Gems in the groups postgres and mysql were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:03a142a0:start=1496802007739095273,finish=1496802011747476948,duration=4008381675travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:007ac5fe$ mysql -u root -e 'set GLOBAL innodb_large_prefix = true'
+
+travis_time:end:007ac5fe:start=1496802011754566207,finish=1496802011765187862,duration=10621655travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:0f7aba7c$ mysql -u root -e 'set GLOBAL innodb_file_per_table = true'
+
+travis_time:end:0f7aba7c:start=1496802011771358066,finish=1496802011780412780,duration=9054714travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:01c57815$ mysql -u root -e 'set GLOBAL innodb_file_format = "barracuda"'
+
+travis_time:end:01c57815:start=1496802011786096580,finish=1496802011796604356,duration=10507776travis_fold:end:before_script.3travis_time:start:23cab63f$ bundle exec rake $TASK
+Created database '/home/travis/build/zendesk/samson/db/test.sqlite3'
+forking-test-runner test plugins/*/test --merge-coverage --quiet
+Running 254 test files
+------ >>> plugins/airbrake/test/samson_airbrake/samson_plugin_test.rb 
+------ >>> plugins/aws_ecr/test/samson_aws_ecr/samson_plugin_test.rb 
+------ >>> plugins/datadog/test/decorators/stage_decorator_test.rb 
+------ >>> plugins/datadog/test/models/datadog_monitor_test.rb 
+------ >>> plugins/datadog/test/models/datadog_notification_test.rb 
+------ >>> plugins/datadog/test/samson_datadog/samson_plugin_test.rb 
+------ >>> plugins/docker_binary_builder/test/models/binary_builder_test.rb 
+------ >>> plugins/docker_binary_builder/test/samson_docker_binary_builder/samson_plugin_test.rb 
+------ >>> plugins/dockerb/test/samson_dockerb/samson_plugin_test.rb 
+------ >>> plugins/env/test/controllers/environment_variable_groups_controller_test.rb 
+------ >>> plugins/env/test/controllers/environment_variables_controller_test.rb 
+------ >>> plugins/env/test/decorators/deploy_group_decorator_test.rb 
+------ >>> plugins/env/test/decorators/environment_decorator_test.rb 
+------ >>> plugins/env/test/decorators/project_decorator_test.rb 
+------ >>> plugins/env/test/models/concerns/accepts_environment_variables_test.rb 
+------ >>> plugins/env/test/models/concerns/scopes_environment_variables_test.rb 
+------ >>> plugins/env/test/models/environment_variable_group_test.rb 
+------ >>> plugins/env/test/models/environment_variable_test.rb 
+------ >>> plugins/env/test/models/project_environment_variable_group_test.rb 
+------ >>> plugins/env/test/samson_env/samson_plugin_test.rb 
+------ >>> plugins/flowdock/test/controllers/flowdock_controller_test.rb 
+------ >>> plugins/flowdock/test/decorators/stage_decorator_test.rb 
+------ >>> plugins/flowdock/test/models/flowdock_flow_test.rb 
+------ >>> plugins/flowdock/test/models/flowdock_notification_renderer_test.rb 
+------ >>> plugins/flowdock/test/models/flowdock_notification_test.rb 
+------ >>> plugins/flowdock/test/samson_flowdock/flowdock_service_test.rb 
+------ >>> plugins/flowdock/test/samson_flowdock/samson_plugin_test.rb 
+------ >>> plugins/github/test/models/github_deployment_test.rb 
+------ >>> plugins/github/test/models/github_notification_test.rb 
+------ >>> plugins/github/test/samson_github/samson_plugin_test.rb 
+------ >>> plugins/hyperclair/test/samson_hyperclair/samson_plugin_test.rb 
+------ >>> plugins/jenkins/test/decorators/deploy_decorator_test.rb 
+------ >>> plugins/jenkins/test/helpers/jenkins_helper_test.rb 
+------ >>> plugins/jenkins/test/models/jenkins_job_test.rb 
+------ >>> plugins/jenkins/test/models/samson/jenkins_test.rb 
+------ >>> plugins/jenkins/test/samson_jenkins/samson_plugin_test.rb 
+------ >>> plugins/kubernetes/test/controllers/kubernetes/clusters_controller_test.rb 
+------ >>> plugins/kubernetes/test/controllers/kubernetes/deploy_group_roles_controller_test.rb 
+------ >>> plugins/kubernetes/test/controllers/kubernetes/releases_controller_test.rb 
+------ >>> plugins/kubernetes/test/controllers/kubernetes/role_verifications_controller_test.rb 
+------ >>> plugins/kubernetes/test/controllers/kubernetes/roles_controller_test.rb 
+------ >>> plugins/kubernetes/test/controllers/kubernetes/usage_limits_controller_test.rb 
+------ >>> plugins/kubernetes/test/decorators/build_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/deploy_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/deploy_group_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/deploy_group_serializer_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/deploy_groups_controller_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/environment_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/project_decorator_test.rb 
+------ >>> plugins/kubernetes/test/decorators/stage_decorator_test.rb 
+------ >>> plugins/kubernetes/test/initializers/kubeclient_extensions_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/api/job_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/api/pod_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/build_job_executor_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/cluster_deploy_group_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/cluster_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/deploy_executor_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/deploy_group_role_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/release_doc_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/release_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/resource_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/role_config_file_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/role_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/role_verifier_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/template_filler_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/usage_limit_test.rb 
+------ >>> plugins/kubernetes/test/models/kubernetes/util_test.rb 
+------ >>> plugins/kubernetes/test/samson_kubernetes/samson_plugin_test.rb 
+------ >>> plugins/new_relic/test/controllers/new_relic_controller_test.rb 
+------ >>> plugins/new_relic/test/decorators/stage_decorator_test.rb 
+------ >>> plugins/new_relic/test/helpers/new_relic_helper_test.rb 
+------ >>> plugins/new_relic/test/models/new_relic_application_test.rb 
+------ >>> plugins/new_relic/test/samson_new_relic/api_test.rb 
+------ >>> plugins/new_relic/test/samson_new_relic/samson_plugin_test.rb 
+------ >>> plugins/pipelines/test/decorators/stage_decorator_test.rb 
+------ >>> plugins/pipelines/test/samson_pipelines/samson_plugin_test.rb 
+------ >>> plugins/samson_ledger/test/lib/samson_ledger/client_test.rb 
+------ >>> plugins/samson_ledger/test/lib/samson_ledger/samson_plugin_test.rb 
+------ >>> plugins/slack_app/test/controllers/slack_app_controller_test.rb 
+------ >>> plugins/slack_app/test/helpers/slack_app_helper_test.rb 
+------ >>> plugins/slack_app/test/models/deploy_response_url_test.rb 
+------ >>> plugins/slack_app/test/models/slack_identifier_test.rb 
+------ >>> plugins/slack_app/test/models/slack_message_test.rb 
+------ >>> plugins/slack_app/test/samson_slack_app/samson_plugin_test.rb 
+------ >>> plugins/slack_webhooks/test/controllers/slack_webhooks_controller_test.rb 
+------ >>> plugins/slack_webhooks/test/decorators/stage_decorator_test.rb 
+------ >>> plugins/slack_webhooks/test/models/slack_webhook_notification_test.rb 
+------ >>> plugins/slack_webhooks/test/models/slack_webhook_test.rb 
+------ >>> plugins/slack_webhooks/test/samson_slack_webhooks/samson_plugin_test.rb 
+------ >>> plugins/slack_webhooks/test/samson_slack_webhooks/slack_webhooks_service_test.rb 
+------ >>> plugins/zendesk/test/models/zendesk_notification_renderer_test.rb 
+------ >>> plugins/zendesk/test/models/zendesk_notification_test.rb 
+------ >>> plugins/zendesk/test/samson_zendesk/samson_plugin_test.rb 
+------ >>> test/controllers/access_requests_controller_test.rb 
+------ >>> test/controllers/access_tokens_controller_test.rb 
+------ >>> test/controllers/api/automated_deploys_controller_test.rb 
+------ >>> test/controllers/api/base_controller_test.rb 
+------ >>> test/controllers/api/builds_controller_test.rb 
+------ >>> test/controllers/api/deploy_groups_controller_test.rb 
+------ >>> test/controllers/api/deploys_controller_test.rb 
+------ >>> test/controllers/api/locks_controller_test.rb 
+------ >>> test/controllers/api/projects_controller_test.rb 
+------ >>> test/controllers/api/stages_controller_test.rb 
+------ >>> test/controllers/api/users_controller_test.rb 
+------ >>> test/controllers/application_controller_test.rb 
+------ >>> test/controllers/build_commands_controller_test.rb 
+------ >>> test/controllers/builds_controller_test.rb 
+------ >>> test/controllers/changelogs_controller_test.rb 
+------ >>> test/controllers/commands_controller_test.rb 
+------ >>> test/controllers/commit_statuses_controller_test.rb 
+------ >>> test/controllers/concerns/current_project_test.rb 
+------ >>> test/controllers/concerns/current_user_test.rb 
+------ >>> test/controllers/csv_exports_controller_test.rb 
+------ >>> test/controllers/dashboards_controller_test.rb 
+------ >>> test/controllers/deploy_groups_controller_test.rb 
+------ >>> test/controllers/deploys_controller_test.rb 
+------ >>> test/controllers/doorkeeper_base_controller_test.rb 
+------ >>> test/controllers/environments_controller_test.rb 
+------ >>> test/controllers/integrations/base_controller_test.rb 
+------ >>> test/controllers/integrations/buildkite_controller_test.rb 
+------ >>> test/controllers/integrations/circleci_controller_test.rb 
+------ >>> test/controllers/integrations/github_controller_test.rb 
+------ >>> test/controllers/integrations/jenkins_controller_test.rb 
+------ >>> test/controllers/integrations/semaphore_controller_test.rb 
+------ >>> test/controllers/integrations/tddium_controller_test.rb 
+------ >>> test/controllers/integrations/travis_controller_test.rb 
+------ >>> test/controllers/jobs_controller_test.rb 
+------ >>> test/controllers/locks_controller_test.rb 
+------ >>> test/controllers/oauth_test_controller_test.rb 
+------ >>> test/controllers/outbound_webhooks_controller_test.rb 
+------ >>> test/controllers/ping_controller_test.rb 
+------ >>> test/controllers/profiles_controller_test.rb 
+------ >>> test/controllers/projects_controller_test.rb 
+------ >>> test/controllers/references_controller_test.rb 
+------ >>> test/controllers/releases_controller_test.rb 
+------ >>> test/controllers/secrets_controller_test.rb 
+------ >>> test/controllers/sessions_controller_test.rb 
+------ >>> test/controllers/stages_controller_test.rb 
+------ >>> test/controllers/stars_controller_test.rb 
+------ >>> test/controllers/streams_controller_test.rb 
+------ >>> test/controllers/unauthorized_controller_test.rb 
+------ >>> test/controllers/user_merges_controller_test.rb 
+------ >>> test/controllers/user_project_roles_controller_test.rb 
+------ >>> test/controllers/users_controller_test.rb 
+------ >>> test/controllers/vault_servers_controller_test.rb 
+------ >>> test/controllers/versions_controller_test.rb 
+------ >>> test/controllers/webhooks_controller_test.rb 
+------ >>> test/helpers/access_request_helper_test.rb 
+------ >>> test/helpers/application_helper_test.rb 
+------ >>> test/helpers/builds_helper_test.rb 
+------ >>> test/helpers/dashboards_helper_test.rb 
+------ >>> test/helpers/date_time_helper_test.rb 
+------ >>> test/helpers/deploys_helper_test.rb 
+------ >>> test/helpers/jobs_helper_test.rb 
+------ >>> test/helpers/locks_helper_test.rb 
+------ >>> test/helpers/projects_helper_test.rb 
+------ >>> test/helpers/releases_helper_test.rb 
+------ >>> test/helpers/sessions_helper_test.rb 
+------ >>> test/helpers/stages_helper_test.rb 
+------ >>> test/helpers/status_helper_test.rb 
+------ >>> test/helpers/user_project_roles_helper_test.rb 
+------ >>> test/helpers/versions_helper_test.rb 
+------ >>> test/helpers/webhooks_helper_test.rb 
+------ >>> test/integration/authentication_test.rb 
+------ >>> test/integration/cleanliness_test.rb 
+------ >>> test/integration/seed_test.rb 
+------ >>> test/jobs/csv_export_job_test.rb 
+------ >>> test/lib/buddy_check_test.rb 
+------ >>> test/lib/generators/plugin/plugin_generator_test.rb 
+------ >>> test/lib/omniauth/github_authorization_test.rb 
+------ >>> test/lib/references_service_test.rb 
+------ >>> test/lib/samson/command_executor_test.rb 
+------ >>> test/lib/samson/console_extensions_test.rb 
+------ >>> test/lib/samson/env_check_test.rb 
+------ >>> test/lib/samson/form_builder_test.rb 
+------ >>> test/lib/samson/git_info_test.rb 
+------ >>> test/lib/samson/hooks_test.rb 
+------ >>> test/lib/samson/integration_test.rb 
+------ >>> test/lib/samson/logging_test.rb 
+------ >>> test/lib/samson/natural_order_test.rb 
+------ >>> test/lib/samson/periodical_test.rb 
+------ >>> test/lib/samson/secrets/db_backend_test.rb 
+------ >>> test/lib/samson/secrets/hashicorp_vault_backend_test.rb 
+------ >>> test/lib/samson/secrets/key_resolver_test.rb 
+------ >>> test/lib/samson/secrets/vault_client_test.rb 
+------ >>> test/lib/samson/secrets/vault_server_test.rb 
+------ >>> test/lib/samson/secrets_test.rb 
+------ >>> test/lib/warden/strategies/basic_strategy_test.rb 
+------ >>> test/lib/warden/strategies/doorkeeper_strategy_test.rb 
+------ >>> test/mailers/access_request_mailer_test.rb 
+------ >>> test/mailers/application_mailer_test.rb 
+------ >>> test/mailers/csv_mailer_test.rb 
+------ >>> test/mailers/deploy_mailer_test.rb 
+------ >>> test/mailers/project_mailer_test.rb 
+------ >>> test/models/build_test.rb 
+------ >>> test/models/changeset/code_push_test.rb 
+------ >>> test/models/changeset/commit_test.rb 
+------ >>> test/models/changeset/github_user_test.rb 
+------ >>> test/models/changeset/issue_comment_test.rb 
+------ >>> test/models/changeset/jira_issue_test.rb 
+------ >>> test/models/changeset/pull_request_test.rb 
+------ >>> test/models/changeset_test.rb 
+------ >>> test/models/command_test.rb 
+------ >>> test/models/commit_status_test.rb 
+------ >>> test/models/concerns/attr_encrypted_support_test.rb 
+------ >>> test/models/concerns/group_scope_test.rb 
+------ >>> test/models/concerns/has_role_test.rb 
+------ >>> test/models/concerns/permalinkable_test.rb 
+------ >>> test/models/concerns/searchable_test.rb 
+------ >>> test/models/csv_export_test.rb 
+------ >>> test/models/deploy_group_test.rb 
+------ >>> test/models/deploy_groups_stage_test.rb 
+------ >>> test/models/deploy_service_test.rb 
+------ >>> test/models/deploy_test.rb 
+------ >>> test/models/docker_builder_service_test.rb 
+------ >>> test/models/docker_registry_test.rb 
+------ >>> test/models/environment_test.rb 
+------ >>> test/models/event_streamer_test.rb 
+------ >>> test/models/git_repository_test.rb 
+------ >>> test/models/job_execution_subscriber_test.rb 
+------ >>> test/models/job_execution_test.rb 
+------ >>> test/models/job_queue_test.rb 
+------ >>> test/models/job_test.rb 
+------ >>> test/models/job_viewers_test.rb 
+------ >>> test/models/lock_test.rb 
+------ >>> test/models/multi_lock_test.rb 
+------ >>> test/models/null_user_test.rb 
+------ >>> test/models/outbound_webhook_test.rb 
+------ >>> test/models/output_aggregator_test.rb 
+------ >>> test/models/output_buffer_test.rb 
+------ >>> test/models/project_test.rb 
+------ >>> test/models/release_service_test.rb 
+------ >>> test/models/release_test.rb 
+------ >>> test/models/restart_signal_handler_test.rb 
+------ >>> test/models/role_test.rb 
+------ >>> test/models/secret_storage_test.rb 
+------ >>> test/models/stage_command_test.rb 
+------ >>> test/models/stage_test.rb 
+------ >>> test/models/star_test.rb 
+------ >>> test/models/terminal_executor_test.rb 
+------ >>> test/models/terminal_output_scanner_test.rb 
+------ >>> test/models/user_project_role_test.rb 
+------ >>> test/models/user_test.rb 
+------ >>> test/models/webhook_recorder_test.rb 
+------ >>> test/models/webhook_test.rb 
+------ >>> test/presenters/user_csv_presenter_test.rb 
+------ >>> test/serializers/build_serializer_test.rb 
+------ >>> test/serializers/deploy_group_serializer_test.rb 
+------ >>> test/serializers/deploy_serializer_test.rb 
+------ >>> test/serializers/environment_serializer_test.rb 
+------ >>> test/serializers/lock_serializer_test.rb 
+------ >>> test/serializers/project_serializer_test.rb 
+------ >>> test/serializers/stage_serializer_test.rb 
+------ >>> test/serializers/user_serializer_test.rb 
+5676 assertions, 0 errors, 0 failures, 3186 runs, 0 skips
+
+travis_time:end:23cab63f:start=1496802011804704476,finish=1496802259796535209,duration=247991830733
+The command "bundle exec rake $TASK" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:142a79ae
+travis_time:end:142a79ae:start=1496802260257561116,finish=1496802260261658364,duration=4097248travis_time:start:15cb7b88nothing changed, not updating cache
+
+travis_time:end:15cb7b88:start=1496802260266451777,finish=1496802261723130677,duration=1456678900travis_fold:end:cache.2
+Done. Your build exited with 0.

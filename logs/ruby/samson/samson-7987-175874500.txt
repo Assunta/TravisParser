@@ -1,0 +1,550 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-03dc1af-precise-production-2-worker-org-docker.travisci.net:fe28768c-1c8a-495e-b219-3513e4343ce4
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 935c888:travis:ruby
+startup: 667.742058ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 240202085
+Job id: 240202088
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (34.4 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             60% [2 libssl1.0.0 10.6 kB/1,054 kB 1%]                                       100% [Working]              Fetched 2,634 kB in 0s (16.2 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:09ceab31$ git clone --depth=50 https://github.com/zendesk/samson.git zendesk/samson
+Cloning into 'zendesk/samson'...
+remote: Counting objects: 4473, done.[K
+remote: Compressing objects:   0% (1/2516)   [Kremote: Compressing objects:   1% (26/2516)   [Kremote: Compressing objects:   2% (51/2516)   [Kremote: Compressing objects:   3% (76/2516)   [Kremote: Compressing objects:   4% (101/2516)   [Kremote: Compressing objects:   5% (126/2516)   [Kremote: Compressing objects:   6% (151/2516)   [Kremote: Compressing objects:   7% (177/2516)   [Kremote: Compressing objects:   8% (202/2516)   [Kremote: Compressing objects:   9% (227/2516)   [Kremote: Compressing objects:  10% (252/2516)   [Kremote: Compressing objects:  11% (277/2516)   [Kremote: Compressing objects:  12% (302/2516)   [Kremote: Compressing objects:  13% (328/2516)   [Kremote: Compressing objects:  14% (353/2516)   [Kremote: Compressing objects:  15% (378/2516)   [Kremote: Compressing objects:  16% (403/2516)   [Kremote: Compressing objects:  17% (428/2516)   [Kremote: Compressing objects:  18% (453/2516)   [Kremote: Compressing objects:  19% (479/2516)   [Kremote: Compressing objects:  20% (504/2516)   [Kremote: Compressing objects:  21% (529/2516)   [Kremote: Compressing objects:  22% (554/2516)   [Kremote: Compressing objects:  23% (579/2516)   [Kremote: Compressing objects:  24% (604/2516)   [Kremote: Compressing objects:  25% (629/2516)   [Kremote: Compressing objects:  26% (655/2516)   [Kremote: Compressing objects:  27% (680/2516)   [Kremote: Compressing objects:  28% (705/2516)   [Kremote: Compressing objects:  29% (730/2516)   [Kremote: Compressing objects:  30% (755/2516)   [Kremote: Compressing objects:  31% (780/2516)   [Kremote: Compressing objects:  32% (806/2516)   [Kremote: Compressing objects:  33% (831/2516)   [Kremote: Compressing objects:  34% (856/2516)   [Kremote: Compressing objects:  35% (881/2516)   [Kremote: Compressing objects:  36% (906/2516)   [Kremote: Compressing objects:  37% (931/2516)   [Kremote: Compressing objects:  38% (957/2516)   [Kremote: Compressing objects:  39% (982/2516)   [Kremote: Compressing objects:  40% (1007/2516)   [Kremote: Compressing objects:  41% (1032/2516)   [Kremote: Compressing objects:  42% (1057/2516)   [Kremote: Compressing objects:  43% (1082/2516)   [Kremote: Compressing objects:  44% (1108/2516)   [Kremote: Compressing objects:  45% (1133/2516)   [Kremote: Compressing objects:  46% (1158/2516)   [Kremote: Compressing objects:  47% (1183/2516)   [Kremote: Compressing objects:  48% (1208/2516)   [Kremote: Compressing objects:  49% (1233/2516)   [Kremote: Compressing objects:  50% (1258/2516)   [Kremote: Compressing objects:  51% (1284/2516)   [Kremote: Compressing objects:  52% (1309/2516)   [Kremote: Compressing objects:  53% (1334/2516)   [Kremote: Compressing objects:  54% (1359/2516)   [Kremote: Compressing objects:  55% (1384/2516)   [Kremote: Compressing objects:  56% (1409/2516)   [Kremote: Compressing objects:  57% (1435/2516)   [Kremote: Compressing objects:  58% (1460/2516)   [Kremote: Compressing objects:  59% (1485/2516)   [Kremote: Compressing objects:  60% (1510/2516)   [Kremote: Compressing objects:  61% (1535/2516)   [Kremote: Compressing objects:  62% (1560/2516)   [Kremote: Compressing objects:  63% (1586/2516)   [Kremote: Compressing objects:  64% (1611/2516)   [Kremote: Compressing objects:  65% (1636/2516)   [Kremote: Compressing objects:  66% (1661/2516)   [Kremote: Compressing objects:  67% (1686/2516)   [Kremote: Compressing objects:  68% (1711/2516)   [Kremote: Compressing objects:  69% (1737/2516)   [Kremote: Compressing objects:  70% (1762/2516)   [Kremote: Compressing objects:  71% (1787/2516)   [Kremote: Compressing objects:  72% (1812/2516)   [Kremote: Compressing objects:  73% (1837/2516)   [Kremote: Compressing objects:  74% (1862/2516)   [Kremote: Compressing objects:  75% (1887/2516)   [Kremote: Compressing objects:  76% (1913/2516)   [Kremote: Compressing objects:  77% (1938/2516)   [Kremote: Compressing objects:  78% (1963/2516)   [Kremote: Compressing objects:  79% (1988/2516)   [Kremote: Compressing objects:  80% (2013/2516)   [Kremote: Compressing objects:  81% (2038/2516)   [Kremote: Compressing objects:  82% (2064/2516)   [Kremote: Compressing objects:  83% (2089/2516)   [Kremote: Compressing objects:  84% (2114/2516)   [Kremote: Compressing objects:  85% (2139/2516)   [Kremote: Compressing objects:  86% (2164/2516)   [Kremote: Compressing objects:  87% (2189/2516)   [Kremote: Compressing objects:  88% (2215/2516)   [Kremote: Compressing objects:  89% (2240/2516)   [Kremote: Compressing objects:  90% (2265/2516)   [Kremote: Compressing objects:  91% (2290/2516)   [Kremote: Compressing objects:  92% (2315/2516)   [Kremote: Compressing objects:  93% (2340/2516)   [Kremote: Compressing objects:  94% (2366/2516)   [Kremote: Compressing objects:  95% (2391/2516)   [Kremote: Compressing objects:  96% (2416/2516)   [Kremote: Compressing objects:  97% (2441/2516)   [Kremote: Compressing objects:  98% (2466/2516)   [Kremote: Compressing objects:  99% (2491/2516)   [Kremote: Compressing objects: 100% (2516/2516)   [Kremote: Compressing objects: 100% (2516/2516), done.[K
+Receiving objects:   0% (1/4473)   Receiving objects:   1% (45/4473)   Receiving objects:   2% (90/4473)   Receiving objects:   3% (135/4473)   Receiving objects:   4% (179/4473)   Receiving objects:   5% (224/4473)   Receiving objects:   6% (269/4473)   Receiving objects:   7% (314/4473)   Receiving objects:   8% (358/4473)   Receiving objects:   9% (403/4473)   Receiving objects:  10% (448/4473)   Receiving objects:  11% (493/4473)   Receiving objects:  12% (537/4473)   Receiving objects:  13% (582/4473)   Receiving objects:  14% (627/4473)   Receiving objects:  15% (671/4473)   Receiving objects:  16% (716/4473)   Receiving objects:  17% (761/4473)   Receiving objects:  18% (806/4473)   Receiving objects:  19% (850/4473)   Receiving objects:  20% (895/4473)   Receiving objects:  21% (940/4473)   Receiving objects:  22% (985/4473)   Receiving objects:  23% (1029/4473)   Receiving objects:  24% (1074/4473)   Receiving objects:  25% (1119/4473)   Receiving objects:  26% (1163/4473)   Receiving objects:  27% (1208/4473)   Receiving objects:  28% (1253/4473)   Receiving objects:  29% (1298/4473)   Receiving objects:  30% (1342/4473)   Receiving objects:  31% (1387/4473)   Receiving objects:  32% (1432/4473)   Receiving objects:  33% (1477/4473)   Receiving objects:  34% (1521/4473)   Receiving objects:  35% (1566/4473)   Receiving objects:  36% (1611/4473)   Receiving objects:  37% (1656/4473)   Receiving objects:  38% (1700/4473)   Receiving objects:  39% (1745/4473)   Receiving objects:  40% (1790/4473)   Receiving objects:  41% (1834/4473)   Receiving objects:  42% (1879/4473)   Receiving objects:  43% (1924/4473)   Receiving objects:  44% (1969/4473)   Receiving objects:  45% (2013/4473)   Receiving objects:  46% (2058/4473)   Receiving objects:  47% (2103/4473)   Receiving objects:  48% (2148/4473)   Receiving objects:  49% (2192/4473)   Receiving objects:  50% (2237/4473)   Receiving objects:  51% (2282/4473)   Receiving objects:  52% (2326/4473)   Receiving objects:  53% (2371/4473)   Receiving objects:  54% (2416/4473)   Receiving objects:  55% (2461/4473)   Receiving objects:  56% (2505/4473)   Receiving objects:  57% (2550/4473)   Receiving objects:  58% (2595/4473)   Receiving objects:  59% (2640/4473)   Receiving objects:  60% (2684/4473)   Receiving objects:  61% (2729/4473)   Receiving objects:  62% (2774/4473)   Receiving objects:  63% (2818/4473)   Receiving objects:  64% (2863/4473)   Receiving objects:  65% (2908/4473)   Receiving objects:  66% (2953/4473)   Receiving objects:  67% (2997/4473)   Receiving objects:  68% (3042/4473)   Receiving objects:  69% (3087/4473)   Receiving objects:  70% (3132/4473)   Receiving objects:  71% (3176/4473)   Receiving objects:  72% (3221/4473)   Receiving objects:  73% (3266/4473)   Receiving objects:  74% (3311/4473)   Receiving objects:  75% (3355/4473)   Receiving objects:  76% (3400/4473)   Receiving objects:  77% (3445/4473)   Receiving objects:  78% (3489/4473)   Receiving objects:  79% (3534/4473)   Receiving objects:  80% (3579/4473)   Receiving objects:  81% (3624/4473)   Receiving objects:  82% (3668/4473)   Receiving objects:  83% (3713/4473)   Receiving objects:  84% (3758/4473)   Receiving objects:  85% (3803/4473)   Receiving objects:  86% (3847/4473)   Receiving objects:  86% (3882/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  87% (3892/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  88% (3937/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  89% (3981/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  90% (4026/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  91% (4071/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  92% (4116/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  93% (4160/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  94% (4205/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  95% (4250/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  96% (4295/4473), 22.75 MiB | 22.70 MiB/s   Receiving objects:  97% (4339/4473), 34.74 MiB | 23.11 MiB/s   Receiving objects:  98% (4384/4473), 34.74 MiB | 23.11 MiB/s   Receiving objects:  99% (4429/4473), 34.74 MiB | 23.11 MiB/s   remote: Total 4473 (delta 2092), reused 3211 (delta 1661), pack-reused 0[K
+Receiving objects: 100% (4473/4473), 34.74 MiB | 23.11 MiB/s   Receiving objects: 100% (4473/4473), 43.34 MiB | 23.11 MiB/s, done.
+Resolving deltas:   0% (0/2092)   Resolving deltas:   1% (29/2092)   Resolving deltas:   2% (62/2092)   Resolving deltas:   3% (68/2092)   Resolving deltas:   4% (103/2092)   Resolving deltas:   5% (110/2092)   Resolving deltas:  18% (387/2092)   Resolving deltas:  19% (412/2092)   Resolving deltas:  21% (444/2092)   Resolving deltas:  25% (539/2092)   Resolving deltas:  26% (560/2092)   Resolving deltas:  27% (572/2092)   Resolving deltas:  29% (613/2092)   Resolving deltas:  30% (636/2092)   Resolving deltas:  31% (649/2092)   Resolving deltas:  32% (676/2092)   Resolving deltas:  33% (694/2092)   Resolving deltas:  34% (715/2092)   Resolving deltas:  35% (733/2092)   Resolving deltas:  36% (755/2092)   Resolving deltas:  37% (781/2092)   Resolving deltas:  38% (801/2092)   Resolving deltas:  39% (816/2092)   Resolving deltas:  40% (846/2092)   Resolving deltas:  41% (858/2092)   Resolving deltas:  42% (880/2092)   Resolving deltas:  43% (906/2092)   Resolving deltas:  44% (923/2092)   Resolving deltas:  45% (948/2092)   Resolving deltas:  46% (963/2092)   Resolving deltas:  48% (1015/2092)   Resolving deltas:  49% (1029/2092)   Resolving deltas:  50% (1059/2092)   Resolving deltas:  51% (1072/2092)   Resolving deltas:  52% (1088/2092)   Resolving deltas:  53% (1110/2092)   Resolving deltas:  54% (1141/2092)   Resolving deltas:  55% (1151/2092)   Resolving deltas:  56% (1174/2092)   Resolving deltas:  57% (1195/2092)   Resolving deltas:  58% (1217/2092)   Resolving deltas:  59% (1244/2092)   Resolving deltas:  60% (1257/2092)   Resolving deltas:  61% (1280/2092)   Resolving deltas:  62% (1299/2092)   Resolving deltas:  63% (1319/2092)   Resolving deltas:  64% (1339/2092)   Resolving deltas:  65% (1362/2092)   Resolving deltas:  66% (1382/2092)   Resolving deltas:  67% (1402/2092)   Resolving deltas:  68% (1424/2092)   Resolving deltas:  69% (1445/2092)   Resolving deltas:  70% (1465/2092)   Resolving deltas:  71% (1487/2092)   Resolving deltas:  72% (1507/2092)   Resolving deltas:  73% (1528/2092)   Resolving deltas:  74% (1550/2092)   Resolving deltas:  75% (1569/2092)   Resolving deltas:  76% (1590/2092)   Resolving deltas:  77% (1614/2092)   Resolving deltas:  78% (1633/2092)   Resolving deltas:  79% (1653/2092)   Resolving deltas:  80% (1675/2092)   Resolving deltas:  81% (1698/2092)   Resolving deltas:  82% (1716/2092)   Resolving deltas:  83% (1738/2092)   Resolving deltas:  84% (1759/2092)   Resolving deltas:  85% (1783/2092)   Resolving deltas:  86% (1802/2092)   Resolving deltas:  87% (1830/2092)   Resolving deltas:  88% (1841/2092)   Resolving deltas:  89% (1863/2092)   Resolving deltas:  90% (1885/2092)   Resolving deltas:  91% (1907/2092)   Resolving deltas:  92% (1925/2092)   Resolving deltas:  93% (1946/2092)   Resolving deltas:  94% (1967/2092)   Resolving deltas:  95% (1988/2092)   Resolving deltas:  96% (2010/2092)   Resolving deltas:  97% (2031/2092)   Resolving deltas:  98% (2051/2092)   Resolving deltas:  99% (2072/2092)   Resolving deltas: 100% (2092/2092)   Resolving deltas: 100% (2092/2092), done.
+Checking connectivity... done.
+
+travis_time:end:09ceab31:start=1496801866619076719,finish=1496801869500025214,duration=2880948495$ cd zendesk/samson
+travis_time:start:38734fe0$ git fetch origin +refs/pull/2035/merge:
+remote: Counting objects: 12, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 12 (delta 10), reused 12 (delta 10), pack-reused 0[K
+Unpacking objects:   8% (1/12)   Unpacking objects:  16% (2/12)   Unpacking objects:  25% (3/12)   Unpacking objects:  33% (4/12)   Unpacking objects:  41% (5/12)   Unpacking objects:  50% (6/12)   Unpacking objects:  58% (7/12)   Unpacking objects:  66% (8/12)   Unpacking objects:  75% (9/12)   Unpacking objects:  83% (10/12)   Unpacking objects:  91% (11/12)   Unpacking objects: 100% (12/12)   Unpacking objects: 100% (12/12), done.
+From https://github.com/zendesk/samson
+ * branch            refs/pull/2035/merge -> FETCH_HEAD
+
+travis_time:end:38734fe0:start=1496801869506655567,finish=1496801869831349537,duration=324693970$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:servicestravis_time:start:00612128$ sudo service memcached start
+Starting memcached: memcached.
+
+travis_time:end:00612128:start=1496801870031606042,finish=1496801870072888534,duration=41282492travis_fold:end:services
+Setting environment variables from repository settings
+$ export CODECLIMATE_REPO_TOKEN=[secure]
+
+Setting environment variables from .travis.yml
+$ export TASK='brakeman'
+
+travis_fold:start:rvmtravis_time:start:0d3eb28e$ rvm use $(< .ruby-version) --install --binary --fuzzy
+ruby-2.3.3 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.3.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.3 - #configure
+ruby-2.3.3 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23.2M  100 23.2M    0     0  81.7M      0 --:--:-- --:--:-- --:--:-- 82.3M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.3 - #validate archive
+ruby-2.3.3 - #extract
+ruby-2.3.3 - #validate binary
+ruby-2.3.3 - #setup
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3@global
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.3 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.3 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.3 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.3
+
+travis_time:end:0d3eb28e:start=1496801877980737223,finish=1496801899469468726,duration=21488731503travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:001a80a4$ Installing caching utilities
+
+travis_time:end:001a80a4:start=1496801899712709259,finish=1496801899794017402,duration=81308143travis_time:start:02e63a7f
+travis_time:end:02e63a7f:start=1496801899802944202,finish=1496801899808065114,duration=5120912travis_time:start:0041f760attempting to download cache archive
+fetching PR.2035/cache-linux-precise-2c58e45711c0f395f736ee4fa88816cd5eb9fa699bc071b807fb4505d63ffb2a--rvm-default--gemfile-Gemfile.tgz
+fetching PR.2035/cache--rvm-default--gemfile-Gemfile.tgz
+fetching master/cache-linux-precise-2c58e45711c0f395f736ee4fa88816cd5eb9fa699bc071b807fb4505d63ffb2a--rvm-default--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:0041f760:start=1496801899814495507,finish=1496801901655534703,duration=1841039196travis_time:start:1738af21
+travis_time:end:1738af21:start=1496801901661403073,finish=1496801901668082496,duration=6679423travis_time:start:0673de38adding /home/travis/build/zendesk/samson/tmp/rubocop_cache to cache
+creating directory /home/travis/build/zendesk/samson/tmp/rubocop_cache
+adding /home/travis/build/zendesk/samson/node_modules to cache
+creating directory /home/travis/build/zendesk/samson/node_modules
+
+travis_time:end:0673de38:start=1496801901677209167,finish=1496801904331113957,duration=2653904790travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:07d2d6f0
+travis_time:end:07d2d6f0:start=1496801904337777774,finish=1496801904344248266,duration=6470492travis_time:start:0fc32c00adding /home/travis/build/zendesk/samson/vendor/bundle to cache
+creating directory /home/travis/build/zendesk/samson/vendor/bundle
+
+travis_time:end:0fc32c00:start=1496801904350766079,finish=1496801909154715403,duration=4803949324travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.8
+travis_fold:start:install.bundlertravis_time:start:048984c3$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.6.0
+Using mini_portile2 2.1.0
+Using rack 2.0.1
+Using nio4r 2.0.0
+Using websocket-extensions 0.1.2
+Using mime-types 2.99.3
+Using arel 8.0.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using bundler 1.15.1
+Using dotenv 2.2.1
+Using connection_pool 2.2.1
+Using marco-polo 1.2.1
+Using jsonapi-renderer 0.1.2
+Using request_store 1.3.2
+Using logstash-event 1.2.02
+Using dogstatsd-ruby 2.2.0
+Using puma 3.8.2
+Using encryptor 3.0.0
+Using addressable 2.3.8
+Using dalli 2.7.6
+Using hashie 3.5.5
+Using multipart-post 2.0.0
+Using multi_json 1.12.0
+Using multi_xml 0.5.5
+Using net-ldap 0.14.0
+Using pyu-ruby-sasl 0.0.3.3
+Using rubyntlm 0.3.4
+Using jwt 1.5.1
+Using ansible 0.2.2
+Using github-markdown 0.6.9
+Using net-http-persistent 2.9.4
+Using vault 0.7.1
+Using excon 0.55.0
+Using json 2.1.0
+Using newrelic_rpm 4.1.0.333
+Using airbrake-ruby 2.2.0
+Using json_pure 1.8.3
+Using samson_docker_binary_builder 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/docker_binary_builder`
+Using coderay 1.1.1
+Using dockerb 0.3.0
+Using samson_github 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/github`
+Using samson_hyperclair 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/hyperclair`
+Using mixlib-shellout 2.2.7
+Using socksify 1.7.1
+Using unicode-display_width 1.1.1
+Using unf_ext 0.0.7.2
+Using http-form_data 1.0.1
+Using http_parser.rb 0.6.0
+Using recursive-open-struct 1.0.0
+Using netrc 0.11.0
+Using samson_new_relic 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/new_relic`
+Using samson_pipelines 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/pipelines`
+Using samson_slack_app 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/slack_app`
+Using inflection 1.0.0
+Using scrub_rb 1.0.1
+Using mysql2 0.4.5
+Using pg 0.20.0
+Using sqlite3 1.3.13
+Using execjs 2.7.0
+Using sass 3.4.22
+Using tilt 2.0.5
+Using rails-assets-angular 1.4.9
+Using rails-assets-spin.js 2.3.2
+Using rails-assets-font-awesome 4.3.0
+Using rails-assets-moment 2.11.2
+Using rails-assets-underscore 1.8.3
+Using rails-assets-angular-truncate-2 0.4.2
+Using rails-assets-jstimezonedetect 1.0.5
+Using byebug 8.2.2
+Using bootscale 0.5.1
+Using slop 3.6.0
+Using awesome_print 1.6.1
+Using brakeman 3.6.2
+Using ast 2.3.0
+Using powerpack 0.1.1
+Using rainbow 2.1.0
+Using rails-assets-jquery 2.2.1
+Using ruby-progressbar 1.8.1
+Using erubis 2.7.0
+Using path_expander 1.0.1
+Using sexp_processor 4.9.0
+Using parallel 1.10.0
+Using metaclass 0.0.4
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.4
+Using sucker_punch 2.0.2
+Using maxitest 2.4.0
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using warden 1.2.7
+Using rack-mini-profiler 0.10.2
+Using websocket-driver 0.6.5
+Using mail 2.6.5
+Using bundler-audit 0.5.0
+Using single_cov 0.5.9
+Using samson_env 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/env`
+Using attr_encrypted 3.0.3
+Using omniauth 1.6.1
+Using faraday 0.9.2
+Using dogapi 1.21.0
+Using httparty 0.14.0
+Using docker-api 1.32.0
+Using airbrake 6.0.0
+Using jmespath 1.2.4
+Using samson_dockerb 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/dockerb`
+Using terminal-table 1.7.3
+Using unf 0.1.4
+Using uglifier 3.2.0
+Using autoprefixer-rails 6.3.3.1
+Using rails-assets-angular-mocks 1.4.9
+Using rails-assets-angular-scenario 1.4.9
+Using rails-assets-angular-ui-router 0.2.18
+Using rails-assets-angular-spinner 0.8.1
+Using pry 0.10.3
+Using parser 2.4.0.0
+Using rails-assets-spin 1.1.6
+Using rails-assets-bootstrap-select 1.10.0
+Using rails-assets-jquery-ui 1.11.4
+Using rails-assets-jquery-ujs 1.2.0
+Using rails-assets-typeahead.js 0.11.1
+Using rails-assets-x-editable 1.5.1
+Using rails-assets-jquery-cookie 1.4.1
+Using rails-assets-datatables.net 1.10.12
+Using ruby_parser 3.9.0
+Using parallel_tests 2.12.0
+Using mocha 1.2.1
+Using crack 0.4.3
+Using activesupport 5.1.0
+Using loofah 2.0.3
+Using omniauth-ldap 1.0.5
+Using sawyer 0.6.0
+Using oauth2 1.1.0
+Using faraday-http-cache 2.0.0
+Using samson_ledger 0.0.1 from source at `/home/travis/build/zendesk/samson/plugins/samson_ledger`
+Using samson_slack_webhooks 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/slack_webhooks`
+Using zendesk_api 1.13.4
+Using samson_datadog 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/datadog`
+Using flowdock 0.6.0
+Using samson_airbrake 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/airbrake`
+Using aws-sdk-core 2.2.36
+Using jenkins_api_client 1.5.3
+Using domain_name 0.5.20160826
+Using bootstrap-sass 3.3.6
+Using pry-rails 0.3.4
+Using rubocop 0.48.1
+Using rails-assets-datatables.net-bs 1.10.11
+Using rails-assets-datatables.net-fixedcolumns 3.2.2
+Using flay 2.9.0
+Using webmock 3.0.1
+Using rails-dom-testing 2.0.2
+Using globalid 0.4.0
+Using activemodel 5.1.0
+Using case_transform 0.2
+Using active_hash 1.4.1
+Using rails-html-sanitizer 1.0.3
+Using octokit 4.2.0
+Using omniauth-oauth2 1.4.0
+Using samson_zendesk 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/zendesk`
+Using samson_flowdock 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/flowdock`
+Using samson_aws_ecr 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/aws_ecr`
+Using samson_jenkins 0.0.0 from source at `/home/travis/build/zendesk/samson/plugins/jenkins`
+Using http-cookie 1.0.3
+Using rails-assets-datatables.net-fixedcolumns-bs 3.2.2
+Using activejob 5.1.0
+Using activerecord 5.1.0
+Using actionview 5.1.0
+Using omniauth-github 1.1.2
+Using omniauth-google-oauth2 0.4.0
+Using omniauth-gitlab 1.0.2
+Using http 0.9.8
+Using rest-client 2.0.0
+Using goldiloader 2.0.1
+Using paper_trail 7.0.2
+Using soft_deletion 1.1.0
+Using forking_test_runner 1.0.0
+Using ar_multi_threaded_transactional_tests 0.2.1
+Using kubeclient 2.1.0
+Using actionpack 5.1.0
+Using samson_kubernetes 0.0.1 from source at `/home/travis/build/zendesk/samson/plugins/kubernetes`
+Using actioncable 5.1.0
+Using actionmailer 5.1.0
+Using railties 5.1.0
+Using kaminari 0.17.0
+Using active_model_serializers 0.10.6
+Using rails-controller-testing 1.0.1
+Using sprockets-rails 3.2.0
+Using doorkeeper 4.2.5
+Using lograge 0.5.0
+Using airbrake-user_informer 0.2.0
+Using angular-rails-templates 1.0.2
+Using minitest-rails 3.0.0
+Using rails 5.1.0
+Using sass-rails 5.0.6
+Using sse-rails-engine 1.6.0
+Using ngannotate-rails 1.2.2
+Bundle complete! 107 Gemfile dependencies, 204 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:048984c3:start=1496801909759680083,finish=1496801911121229258,duration=1361549175travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:285ae92d$ mysql -u root -e 'set GLOBAL innodb_large_prefix = true'
+
+travis_time:end:285ae92d:start=1496801911126719544,finish=1496801911135432704,duration=8713160travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:06955ddc$ mysql -u root -e 'set GLOBAL innodb_file_per_table = true'
+
+travis_time:end:06955ddc:start=1496801911142039394,finish=1496801911153777013,duration=11737619travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:00275d81$ mysql -u root -e 'set GLOBAL innodb_file_format = "barracuda"'
+
+travis_time:end:00275d81:start=1496801911159586683,finish=1496801911167482988,duration=7896305travis_fold:end:before_script.3travis_time:start:07357316$ bundle exec rake $TASK
+brakeman --exit-on-warn --exit-on-err --format plain --add-engine-path 'plugins/*' --ensure-latest
+Loading scanner...
+Processing application in /home/travis/build/zendesk/samson
+Processing gems...
+[Notice] Detected Rails 5 application
+Processing configuration...
+[Notice] Escaping HTML by default
+Parsing files...
+Processing initializers...
+ 0/32 files processed 1/32 files processed 2/32 files processed 3/32 files processed 4/32 files processed 5/32 files processed 6/32 files processed 7/32 files processed 8/32 files processed 9/32 files processed 10/32 files processed 11/32 files processed 12/32 files processed 13/32 files processed 14/32 files processed 15/32 files processed 16/32 files processed 17/32 files processed 18/32 files processed 19/32 files processed 20/32 files processed 21/32 files processed 22/32 files processed 23/32 files processed 24/32 files processed 25/32 files processed 26/32 files processed 27/32 files processed 28/32 files processed 29/32 files processed 30/32 files processed 31/32 files processedProcessing libs...
+ 0/61 files processed 1/61 files processed 2/61 files processed 3/61 files processed 4/61 files processed 5/61 files processed 6/61 files processed 7/61 files processed 8/61 files processed 9/61 files processed 10/61 files processed 11/61 files processed 12/61 files processed 13/61 files processed 14/61 files processed 15/61 files processed 16/61 files processed 17/61 files processed 18/61 files processed 19/61 files processed 20/61 files processed 21/61 files processed 22/61 files processed 23/61 files processed 24/61 files processed 25/61 files processed 26/61 files processed 27/61 files processed 28/61 files processed 29/61 files processed 30/61 files processed 31/61 files processed 32/61 files processed 33/61 files processed 34/61 files processed 35/61 files processed 36/61 files processed 37/61 files processed 38/61 files processed 39/61 files processed 40/61 files processed 41/61 files processed 42/61 files processed 43/61 files processed 44/61 files processed 45/61 files processed 46/61 files processed 47/61 files processed 48/61 files processed 49/61 files processed 50/61 files processed 51/61 files processed 52/61 files processed 53/61 files processed 54/61 files processed 55/61 files processed 56/61 files processed 57/61 files processed 58/61 files processed 59/61 files processed 60/61 files processedProcessing routes...          
+Processing templates...       
+ 0/182 templates processed 1/182 templates processed 2/182 templates processed 3/182 templates processed 4/182 templates processed 5/182 templates processed 6/182 templates processed 7/182 templates processed 8/182 templates processed 9/182 templates processed 10/182 templates processed 11/182 templates processed 12/182 templates processed 13/182 templates processed 14/182 templates processed 15/182 templates processed 16/182 templates processed 17/182 templates processed 18/182 templates processed 19/182 templates processed 20/182 templates processed 21/182 templates processed 22/182 templates processed 23/182 templates processed 24/182 templates processed 25/182 templates processed 26/182 templates processed 27/182 templates processed 28/182 templates processed 29/182 templates processed 30/182 templates processed 31/182 templates processed 32/182 templates processed 33/182 templates processed 34/182 templates processed 35/182 templates processed 36/182 templates processed 37/182 templates processed 38/182 templates processed 39/182 templates processed 40/182 templates processed 41/182 templates processed 42/182 templates processed 43/182 templates processed 44/182 templates processed 45/182 templates processed 46/182 templates processed 47/182 templates processed 48/182 templates processed 49/182 templates processed 50/182 templates processed 51/182 templates processed 52/182 templates processed 53/182 templates processed 54/182 templates processed 55/182 templates processed 56/182 templates processed 57/182 templates processed 58/182 templates processed 59/182 templates processed 60/182 templates processed 61/182 templates processed 62/182 templates processed 63/182 templates processed 64/182 templates processed 65/182 templates processed 66/182 templates processed 67/182 templates processed 68/182 templates processed 69/182 templates processed 70/182 templates processed 71/182 templates processed 72/182 templates processed 73/182 templates processed 74/182 templates processed 75/182 templates processed 76/182 templates processed 77/182 templates processed 78/182 templates processed 79/182 templates processed 80/182 templates processed 81/182 templates processed 82/182 templates processed 83/182 templates processed 84/182 templates processed 85/182 templates processed 86/182 templates processed 87/182 templates processed 88/182 templates processed 89/182 templates processed 90/182 templates processed 91/182 templates processed 92/182 templates processed 93/182 templates processed 94/182 templates processed 95/182 templates processed 96/182 templates processed 97/182 templates processed 98/182 templates processed 99/182 templates processed 100/182 templates processed 101/182 templates processed 102/182 templates processed 103/182 templates processed 104/182 templates processed 105/182 templates processed 106/182 templates processed 107/182 templates processed 108/182 templates processed 109/182 templates processed 110/182 templates processed 111/182 templates processed 112/182 templates processed 113/182 templates processed 114/182 templates processed 115/182 templates processed 116/182 templates processed 117/182 templates processed 118/182 templates processed 119/182 templates processed 120/182 templates processed 121/182 templates processed 122/182 templates processed 123/182 templates processed 124/182 templates processed 125/182 templates processed 126/182 templates processed 127/182 templates processed 128/182 templates processed 129/182 templates processed 130/182 templates processed 131/182 templates processed 132/182 templates processed 133/182 templates processed 134/182 templates processed 135/182 templates processed 136/182 templates processed 137/182 templates processed 138/182 templates processed 139/182 templates processed 140/182 templates processed 141/182 templates processed 142/182 templates processed 143/182 templates processed 144/182 templates processed 145/182 templates processed 146/182 templates processed 147/182 templates processed 148/182 templates processed 149/182 templates processed 150/182 templates processed 151/182 templates processed 152/182 templates processed 153/182 templates processed 154/182 templates processed 155/182 templates processed 156/182 templates processed 157/182 templates processed 158/182 templates processed 159/182 templates processed 160/182 templates processed 161/182 templates processed 162/182 templates processed 163/182 templates processed 164/182 templates processed 165/182 templates processed 166/182 templates processed 167/182 templates processed 168/182 templates processed 169/182 templates processed 170/182 templates processed 171/182 templates processed 172/182 templates processed 173/182 templates processed 174/182 templates processed 175/182 templates processed 176/182 templates processed 177/182 templates processed 178/182 templates processed 179/182 templates processed 180/182 templates processed 181/182 templates processedProcessing data flow in templates...
+ 0/182 templates processed 1/182 templates processed 2/182 templates processed 3/182 templates processed 4/182 templates processed 5/182 templates processed 6/182 templates processed 7/182 templates processed 8/182 templates processed 9/182 templates processed 10/182 templates processed 11/182 templates processed 12/182 templates processed 13/182 templates processed 14/182 templates processed 15/182 templates processed 16/182 templates processed 17/182 templates processed 18/182 templates processed 19/182 templates processed 20/182 templates processed 21/182 templates processed 22/182 templates processed 23/182 templates processed 24/182 templates processed 25/182 templates processed 26/182 templates processed 27/182 templates processed 28/182 templates processed 29/182 templates processed 30/182 templates processed 31/182 templates processed 32/182 templates processed 33/182 templates processed 34/182 templates processed 35/182 templates processed 36/182 templates processed 37/182 templates processed 38/182 templates processed 39/182 templates processed 40/182 templates processed 41/182 templates processed 42/182 templates processed 43/182 templates processed 44/182 templates processed 45/182 templates processed 46/182 templates processed 47/182 templates processed 48/182 templates processed 49/182 templates processed 50/182 templates processed 51/182 templates processed 52/182 templates processed 53/182 templates processed 54/182 templates processed 55/182 templates processed 56/182 templates processed 57/182 templates processed 58/182 templates processed 59/182 templates processed 60/182 templates processed 61/182 templates processed 62/182 templates processed 63/182 templates processed 64/182 templates processed 65/182 templates processed 66/182 templates processed 67/182 templates processed 68/182 templates processed 69/182 templates processed 70/182 templates processed 71/182 templates processed 72/182 templates processed 73/182 templates processed 74/182 templates processed 75/182 templates processed 76/182 templates processed 77/182 templates processed 78/182 templates processed 79/182 templates processed 80/182 templates processed 81/182 templates processed 82/182 templates processed 83/182 templates processed 84/182 templates processed 85/182 templates processed 86/182 templates processed 87/182 templates processed 88/182 templates processed 89/182 templates processed 90/182 templates processed 91/182 templates processed 92/182 templates processed 93/182 templates processed 94/182 templates processed 95/182 templates processed 96/182 templates processed 97/182 templates processed 98/182 templates processed 99/182 templates processed 100/182 templates processed 101/182 templates processed 102/182 templates processed 103/182 templates processed 104/182 templates processed 105/182 templates processed 106/182 templates processed 107/182 templates processed 108/182 templates processed 109/182 templates processed 110/182 templates processed 111/182 templates processed 112/182 templates processed 113/182 templates processed 114/182 templates processed 115/182 templates processed 116/182 templates processed 117/182 templates processed 118/182 templates processed 119/182 templates processed 120/182 templates processed 121/182 templates processed 122/182 templates processed 123/182 templates processed 124/182 templates processed 125/182 templates processed 126/182 templates processed 127/182 templates processed 128/182 templates processed 129/182 templates processed 130/182 templates processed 131/182 templates processed 132/182 templates processed 133/182 templates processed 134/182 templates processed 135/182 templates processed 136/182 templates processed 137/182 templates processed 138/182 templates processed 139/182 templates processed 140/182 templates processed 141/182 templates processed 142/182 templates processed 143/182 templates processed 144/182 templates processed 145/182 templates processed 146/182 templates processed 147/182 templates processed 148/182 templates processed 149/182 templates processed 150/182 templates processed 151/182 templates processed 152/182 templates processed 153/182 templates processed 154/182 templates processed 155/182 templates processed 156/182 templates processed 157/182 templates processed 158/182 templates processed 159/182 templates processed 160/182 templates processed 161/182 templates processed 162/182 templates processed 163/182 templates processed 164/182 templates processed 165/182 templates processed 166/182 templates processed 167/182 templates processed 168/182 templates processed 169/182 templates processed 170/182 templates processed 171/182 templates processed 172/182 templates processed 173/182 templates processed 174/182 templates processed 175/182 templates processed 176/182 templates processed 177/182 templates processed 178/182 templates processed 179/182 templates processed 180/182 templates processed 181/182 templates processedProcessing models...          
+ 0/90 files processed 1/90 files processed 2/90 files processed 3/90 files processed 4/90 files processed 5/90 files processed 6/90 files processed 7/90 files processed 8/90 files processed 9/90 files processed 10/90 files processed 11/90 files processed 12/90 files processed 13/90 files processed 14/90 files processed 15/90 files processed 16/90 files processed 17/90 files processed 18/90 files processed 19/90 files processed 20/90 files processed 21/90 files processed 22/90 files processed 23/90 files processed 24/90 files processed 25/90 files processed 26/90 files processed 27/90 files processed 28/90 files processed 29/90 files processed 30/90 files processed 31/90 files processed 32/90 files processed 33/90 files processed 34/90 files processed 35/90 files processed 36/90 files processed 37/90 files processed 38/90 files processed 39/90 files processed 40/90 files processed 41/90 files processed 42/90 files processed 43/90 files processed 44/90 files processed 45/90 files processed 46/90 files processed 47/90 files processed 48/90 files processed 49/90 files processed 50/90 files processed 51/90 files processed 52/90 files processed 53/90 files processed 54/90 files processed 55/90 files processed 56/90 files processed 57/90 files processed 58/90 files processed 59/90 files processed 60/90 files processed 61/90 files processed 62/90 files processed 63/90 files processed 64/90 files processed 65/90 files processed 66/90 files processed 67/90 files processed 68/90 files processed 69/90 files processed 70/90 files processed 71/90 files processed 72/90 files processed 73/90 files processed 74/90 files processed 75/90 files processed 76/90 files processed 77/90 files processed 78/90 files processed 79/90 files processed 80/90 files processed 81/90 files processed 82/90 files processed 83/90 files processed 84/90 files processed 85/90 files processed 86/90 files processed 87/90 files processed 88/90 files processed 89/90 files processedProcessing controllers...     
+ 0/66 files processed 1/66 files processed 2/66 files processed 3/66 files processed 4/66 files processed 5/66 files processed 6/66 files processed 7/66 files processed 8/66 files processed 9/66 files processed 10/66 files processed 11/66 files processed 12/66 files processed 13/66 files processed 14/66 files processed 15/66 files processed 16/66 files processed 17/66 files processed 18/66 files processed 19/66 files processed 20/66 files processed 21/66 files processed 22/66 files processed 23/66 files processed 24/66 files processed 25/66 files processed 26/66 files processed 27/66 files processed 28/66 files processed 29/66 files processed 30/66 files processed 31/66 files processed 32/66 files processed 33/66 files processed 34/66 files processed 35/66 files processed 36/66 files processed 37/66 files processed 38/66 files processed 39/66 files processed 40/66 files processed 41/66 files processed 42/66 files processed 43/66 files processed 44/66 files processed 45/66 files processed 46/66 files processed 47/66 files processed 48/66 files processed 49/66 files processed 50/66 files processed 51/66 files processed 52/66 files processed 53/66 files processed 54/66 files processed 55/66 files processed 56/66 files processed 57/66 files processed 58/66 files processed 59/66 files processed 60/66 files processed 61/66 files processed 62/66 files processed 63/66 files processed 64/66 files processed 65/66 files processedProcessing data flow in controllers...
+ 0/64 controllers processed 1/64 controllers processed 2/64 controllers processed 3/64 controllers processed 4/64 controllers processed 5/64 controllers processed 6/64 controllers processed 7/64 controllers processed 8/64 controllers processed 9/64 controllers processed 10/64 controllers processed 11/64 controllers processed 12/64 controllers processed 13/64 controllers processed 14/64 controllers processed 15/64 controllers processed 16/64 controllers processed 17/64 controllers processed 18/64 controllers processed 19/64 controllers processed 20/64 controllers processed 21/64 controllers processed 22/64 controllers processed 23/64 controllers processed 24/64 controllers processed 25/64 controllers processed 26/64 controllers processed 27/64 controllers processed 28/64 controllers processed 29/64 controllers processed 30/64 controllers processed 31/64 controllers processed 32/64 controllers processed 33/64 controllers processed 34/64 controllers processed 35/64 controllers processed 36/64 controllers processed 37/64 controllers processed 38/64 controllers processed 39/64 controllers processed 40/64 controllers processed 41/64 controllers processed 42/64 controllers processed 43/64 controllers processed 44/64 controllers processed 45/64 controllers processed 46/64 controllers processed 47/64 controllers processed 48/64 controllers processed 49/64 controllers processed 50/64 controllers processed 51/64 controllers processed 52/64 controllers processed 53/64 controllers processed 54/64 controllers processed 55/64 controllers processed 56/64 controllers processed 57/64 controllers processed 58/64 controllers processed 59/64 controllers processed 60/64 controllers processed 61/64 controllers processed 62/64 controllers processed 63/64 controllers processedIndexing call sites...        
+Running checks in parallel...
+ - CheckBasicAuth
+ - CheckBasicAuthTimingAttack
+ - CheckCrossSiteScripting
+ - CheckContentTag
+ - CheckCreateWith
+ - CheckDefaultRoutes
+ - CheckDeserialize
+ - CheckDetailedExceptions
+ - CheckDigestDoS
+ - CheckDynamicFinders
+ - CheckEscapeFunction
+ - CheckEvaluation
+ - CheckExecute
+ - CheckFileAccess
+ - CheckFileDisclosure
+ - CheckFilterSkipping
+ - CheckForgerySetting
+ - CheckHeaderDoS
+ - CheckI18nXSS
+ - CheckJRubyXML
+ - CheckJSONEncoding
+ - CheckJSONParsing
+ - CheckLinkTo
+ - CheckLinkToHref
+ - CheckMailTo
+ - CheckMassAssignment
+ - CheckMimeTypeDoS
+ - CheckModelAttrAccessible
+ - CheckModelAttributes
+ - CheckModelSerialize
+ - CheckNestedAttributes
+ - CheckNestedAttributesBypass
+ - CheckNumberToCurrency
+ - CheckQuoteTableName
+ - CheckRedirect
+ - CheckRegexDoS
+ - CheckRender
+ - CheckRenderDoS
+ - CheckRenderInline
+ - CheckResponseSplitting
+ - CheckRouteDoS
+ - CheckSafeBufferManipulation
+ - CheckSanitizeMethods
+ - CheckSelectTag
+ - CheckSelectVulnerability
+ - CheckSend
+ - CheckSendFile
+ - CheckSessionManipulation
+ - CheckSessionSettings
+ - CheckSimpleFormat
+ - CheckSingleQuotes
+ - CheckSkipBeforeFilter
+ - CheckSQL
+ - CheckSQLCVEs
+ - CheckSSLVerify
+ - CheckStripTags
+ - CheckSymbolDoSCVE
+ - CheckTranslateBug
+ - CheckUnsafeReflection
+ - CheckValidationRegex
+ - CheckWithoutProtection
+ - CheckXMLDoS
+ - CheckYAMLParsing
+Checks finished, collecting results...
+Generating report...
+
+== Brakeman Report ==
+
+Application Path: /home/travis/build/zendesk/samson
+Rails Version: 5.1.0
+Brakeman Version: 3.6.2
+Scan Date: 2017-06-07 02:18:34 +0000
+Duration: 7.811780285 seconds
+Checks Run: BasicAuth, BasicAuthTimingAttack, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing
+
+== Overview ==
+
+Controllers: 64
+Models: 87
+Templates: 182
+Errors: 0
+Security Warnings: 0
+
+== Warning Types ==
+
+
+No warnings found
+
+
+travis_time:end:07357316:start=1496801911176235547,finish=1496801922558967433,duration=11382731886
+The command "bundle exec rake $TASK" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:0ee047b0
+travis_time:end:0ee047b0:start=1496801923101073566,finish=1496801923105789110,duration=4715544travis_time:start:1416cde6nothing changed, not updating cache
+
+travis_time:end:1416cde6:start=1496801923110967300,finish=1496801924916528338,duration=1805561038travis_fold:end:cache.2
+Done. Your build exited with 0.

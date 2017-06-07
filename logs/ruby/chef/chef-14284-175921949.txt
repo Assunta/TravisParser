@@ -1,0 +1,1433 @@
+travis_fold:start:worker_infoWorker information
+hostname: production-5-worker-org-b-3-gce:ad8995ff-19c3-436c-802a-88fd1ee7b4cd
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-fc392b3e-8f71-41f5-abfa-b757f2f5f587:travis-ci-sugilite-trusty-1480960799
+startup: 21.375497571s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240266470
+Job id: 240266488
+travis-build version: 4183c5148
+Build image provisioning date and time
+Mon Dec  5 18:47:20 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-51-generic
+Cookbooks Version
+998099c https://github.com/travis-ci/travis-cookbooks/tree/998099c
+git version
+git version 2.11.0
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.73
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.1.0
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+jruby-9.1.2.0
+ruby-1.9.3-p551
+ruby-2.0.0-p648
+ruby-2.1.10
+ruby-2.2.5
+ruby-2.3.1
+Pre-installed Node.js versions
+iojs-v1.6
+iojs-v1.6.4
+v0.10
+v0.10.40
+v0.11.16
+v0.12.2
+v0.12.7
+v0.6.21
+v0.8.28
+v4.1.2
+v4.6.2
+v6.9.1
+Pre-installed Go versions
+1.2.2
+1.3.3
+1.4.3
+1.5.4
+1.6.3
+1.7
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Pre-installed PostgreSQL versions
+9.2.19
+9.3.15
+9.4.10
+9.5.5
+9.6.1
+Redis version
+redis-server 3.0.6
+MongoDB version
+MongoDB 3.2.11
+RabbitMQ Version
+3.6.6
+Installed Firefox version
+firefox 38.4.0esr
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/maven
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-51-generic", arch: "amd64", family: "unix"
+gradle version
+
+------------------------------------------------------------
+Gradle 2.13
+------------------------------------------------------------
+
+Build time:   2016-04-25 04:10:10 UTC
+Build number: none
+Revision:     3b427b1481e46232107303c90be7b05079b05b1c
+
+Groovy:       2.4.4
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_111 (Oracle Corporation 25.111-b14)
+OS:           Linux 4.4.0-51-generic amd64
+
+kerl list installations
+17.0
+17.1
+17.3
+17.4
+17.5
+18.0
+18.1
+18.2
+18.2.1
+R14B02
+R14B03
+R14B04
+R15B
+R15B01
+R15B02
+R15B03
+R16B
+R16B01
+R16B02
+R16B03
+R16B03-1
+kiex list
+
+kiex elixirs
+
+   elixir-1.0.3
+=* elixir-1.0.4
+
+# => - current
+# =* - current && default
+#  * - default
+
+rebar --version
+rebar 2.6.4 17 20160831_145136 git 2.6.4-dirty
+lein version
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_111 Java HotSpot(TM) 64-Bit Server VM
+perlbrew list
+  5.8 (5.8.8)
+  5.10 (5.10.1)
+  5.12 (5.12.5)
+  5.14 (5.14.4)
+  5.16 (5.16.3)
+  5.18 (5.18.4)
+  5.20 (5.20.3)
+  5.20-extras (5.20.3)
+  5.20-shrplib (5.20.3)
+  5.20.3
+  5.22 (5.22.0)
+  5.22-extras (5.22.0)
+  5.22-shrplib (5.22.0)
+  5.22.0
+phpenv versions
+  system
+  5.4
+  5.4.45
+  5.5.37
+  5.6
+* 5.6.24 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.7
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.2.0 2016-07-19 01:28:52
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:0f138129$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193)   Receiving objects:  70% (8536/12193)   Receiving objects:  71% (8658/12193)   Receiving objects:  72% (8779/12193)   Receiving objects:  73% (8901/12193)   Receiving objects:  74% (9023/12193)   Receiving objects:  75% (9145/12193)   Receiving objects:  76% (9267/12193)   Receiving objects:  77% (9389/12193)   Receiving objects:  78% (9511/12193)   Receiving objects:  79% (9633/12193)   Receiving objects:  80% (9755/12193)   Receiving objects:  81% (9877/12193)   Receiving objects:  82% (9999/12193)   Receiving objects:  83% (10121/12193)   Receiving objects:  84% (10243/12193)   Receiving objects:  85% (10365/12193)   Receiving objects:  86% (10486/12193)   Receiving objects:  87% (10608/12193)   Receiving objects:  88% (10730/12193)   Receiving objects:  89% (10852/12193)   Receiving objects:  90% (10974/12193)   Receiving objects:  91% (11096/12193)   Receiving objects:  92% (11218/12193)   Receiving objects:  93% (11340/12193)   Receiving objects:  94% (11462/12193)   Receiving objects:  95% (11584/12193)   Receiving objects:  96% (11706/12193)   Receiving objects:  97% (11828/12193)   Receiving objects:  98% (11950/12193)   Receiving objects:  99% (12072/12193)   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193)   Receiving objects: 100% (12193/12193), 5.43 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (83/7339)   Resolving deltas:   3% (226/7339)   Resolving deltas:   4% (299/7339)   Resolving deltas:   5% (393/7339)   Resolving deltas:   6% (477/7339)   Resolving deltas:  10% (761/7339)   Resolving deltas:  14% (1044/7339)   Resolving deltas:  15% (1113/7339)   Resolving deltas:  16% (1187/7339)   Resolving deltas:  17% (1248/7339)   Resolving deltas:  18% (1354/7339)   Resolving deltas:  19% (1429/7339)   Resolving deltas:  20% (1468/7339)   Resolving deltas:  21% (1556/7339)   Resolving deltas:  22% (1617/7339)   Resolving deltas:  23% (1691/7339)   Resolving deltas:  24% (1769/7339)   Resolving deltas:  25% (1876/7339)   Resolving deltas:  26% (1923/7339)   Resolving deltas:  27% (2003/7339)   Resolving deltas:  28% (2107/7339)   Resolving deltas:  29% (2152/7339)   Resolving deltas:  30% (2203/7339)   Resolving deltas:  31% (2282/7339)   Resolving deltas:  32% (2352/7339)   Resolving deltas:  33% (2447/7339)   Resolving deltas:  34% (2508/7339)   Resolving deltas:  35% (2570/7339)   Resolving deltas:  36% (2643/7339)   Resolving deltas:  37% (2725/7339)   Resolving deltas:  38% (2799/7339)   Resolving deltas:  39% (2926/7339)   Resolving deltas:  40% (2952/7339)   Resolving deltas:  43% (3194/7339)   Resolving deltas:  44% (3236/7339)   Resolving deltas:  45% (3329/7339)   Resolving deltas:  46% (3390/7339)   Resolving deltas:  51% (3782/7339)   Resolving deltas:  52% (3818/7339)   Resolving deltas:  53% (3898/7339)   Resolving deltas:  54% (3971/7339)   Resolving deltas:  55% (4039/7339)   Resolving deltas:  56% (4118/7339)   Resolving deltas:  57% (4191/7339)   Resolving deltas:  58% (4258/7339)   Resolving deltas:  59% (4331/7339)   Resolving deltas:  60% (4404/7339)   Resolving deltas:  61% (4477/7339)   Resolving deltas:  62% (4551/7339)   Resolving deltas:  63% (4639/7339)   Resolving deltas:  64% (4697/7339)   Resolving deltas:  65% (4772/7339)   Resolving deltas:  66% (4844/7339)   Resolving deltas:  67% (4921/7339)   Resolving deltas:  68% (4995/7339)   Resolving deltas:  69% (5066/7339)   Resolving deltas:  70% (5138/7339)   Resolving deltas:  71% (5213/7339)   Resolving deltas:  72% (5286/7339)   Resolving deltas:  73% (5358/7339)   Resolving deltas:  74% (5431/7339)   Resolving deltas:  75% (5505/7339)   Resolving deltas:  76% (5582/7339)   Resolving deltas:  77% (5654/7339)   Resolving deltas:  78% (5730/7339)   Resolving deltas:  79% (5802/7339)   Resolving deltas:  80% (5880/7339)   Resolving deltas:  81% (5945/7339)   Resolving deltas:  82% (6019/7339)   Resolving deltas:  83% (6093/7339)   Resolving deltas:  84% (6165/7339)   Resolving deltas:  85% (6242/7339)   Resolving deltas:  86% (6315/7339)   Resolving deltas:  87% (6385/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6607/7339)   Resolving deltas:  91% (6681/7339)   Resolving deltas:  92% (6753/7339)   Resolving deltas:  93% (6827/7339)   Resolving deltas:  94% (6900/7339)   Resolving deltas:  95% (6974/7339)   Resolving deltas:  96% (7049/7339)   Resolving deltas:  97% (7120/7339)   Resolving deltas:  98% (7193/7339)   Resolving deltas:  99% (7267/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+
+travis_time:end:0f138129:start=1496823280155516404,finish=1496823282672834607,duration=2517318203$ cd chef/chef
+travis_time:start:0871c9ab$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  10% (1/10)   [Kremote: Compressing objects:  20% (2/10)   [Kremote: Compressing objects:  30% (3/10)   [Kremote: Compressing objects:  40% (4/10)   [Kremote: Compressing objects:  50% (5/10)   [Kremote: Compressing objects:  60% (6/10)   [Kremote: Compressing objects:  70% (7/10)   [Kremote: Compressing objects:  80% (8/10)   [Kremote: Compressing objects:  90% (9/10)   [Kremote: Compressing objects: 100% (10/10)   [Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 23 (delta 17), reused 17 (delta 13), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:0871c9ab:start=1496823282678547351,finish=1496823283296837523,duration=618290172$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export PROXY_TESTS_DIR=proxy_tests/files/default/scripts
+$ export PROXY_TESTS_REPO=$PROXY_TESTS_DIR/repo
+
+travis_fold:start:rvmtravis_time:start:0091f2a0$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 10 14.3M   10 1562k    0     0  1285k      0  0:00:11  0:00:01  0:00:10 1285k 76 14.3M   76 10.9M    0     0  5048k      0  0:00:02  0:00:02 --:--:-- 9565k100 14.3M  100 14.3M    0     0  6126k      0  0:00:02  0:00:02 --:--:-- 10.8M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:0091f2a0:start=1496823283416024356,finish=1496823303868527540,duration=20452503184travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:0ea81248$ Installing caching utilities
+
+travis_time:end:0ea81248:start=1496823304228489635,finish=1496823304370079748,duration=141590113travis_time:start:12038ce6
+travis_time:end:12038ce6:start=1496823304376382557,finish=1496823304381015956,duration=4633399travis_time:start:062f5360attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-721b790aee34345efe0d5dec0369630fbcbe8500cb01e36de243e26aff40f944--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.6193/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-721b790aee34345efe0d5dec0369630fbcbe8500cb01e36de243e26aff40f944--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+could not download cache
+
+travis_time:end:062f5360:start=1496823304386171350,finish=1496823305312447061,duration=926275711travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:1a9192f1
+travis_time:end:1a9192f1:start=1496823305317956699,finish=1496823305322462476,duration=4505777travis_time:start:077124c0adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:077124c0:start=1496823305327374820,finish=1496823305771122956,duration=443748136travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:1a94b3d4$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 29%)Fetching: rubygems-update-2.6.11.gem ( 31%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 36%)Fetching: rubygems-update-2.6.11.gem ( 38%)Fetching: rubygems-update-2.6.11.gem ( 40%)Fetching: rubygems-update-2.6.11.gem ( 42%)Fetching: rubygems-update-2.6.11.gem ( 44%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 49%)Fetching: rubygems-update-2.6.11.gem ( 51%)Fetching: rubygems-update-2.6.11.gem ( 53%)Fetching: rubygems-update-2.6.11.gem ( 55%)Fetching: rubygems-update-2.6.11.gem ( 57%)Fetching: rubygems-update-2.6.11.gem ( 59%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 64%)Fetching: rubygems-update-2.6.11.gem ( 66%)Fetching: rubygems-update-2.6.11.gem ( 68%)Fetching: rubygems-update-2.6.11.gem ( 70%)Fetching: rubygems-update-2.6.11.gem ( 72%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 79%)Fetching: rubygems-update-2.6.11.gem ( 81%)Fetching: rubygems-update-2.6.11.gem ( 83%)Fetching: rubygems-update-2.6.11.gem ( 85%)Fetching: rubygems-update-2.6.11.gem ( 87%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 92%)Fetching: rubygems-update-2.6.11.gem ( 94%)Fetching: rubygems-update-2.6.11.gem ( 96%)Fetching: rubygems-update-2.6.11.gem ( 98%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:1a94b3d4:start=1496823306195806273,finish=1496823309039134314,duration=2843328041travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0319a472$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 11%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 42%)Fetching: bundler-1.14.6.gem ( 47%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 83%)Fetching: bundler-1.14.6.gem ( 88%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:0319a472:start=1496823309044126862,finish=1496823309495165408,duration=451038546travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:028265c0$ sudo apt-get update
+0% [Working]            Ign http://us-central1.gce.archive.ubuntu.com trusty InRelease
+            2% [Connecting to security.ubuntu.com (91.189.91.23)] [Connecting to ppa.launch                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates InRelease
+4% [Connecting to security.ubuntu.com (91.189.91.23)] [Connecting to ppa.launch                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports InRelease
+4% [Connecting to security.ubuntu.com (91.189.91.23)] [Connecting to ppa.launch4% [InRelease gpgv 65.9 kB] [Waiting for headers] [Connecting to security.ubunt                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty Release.gpg
+8% [InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty Release
+8% [InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                                Ign http://dl.google.com stable InRelease
+12% [InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                               Hit http://dl.hhvm.com trusty InRelease
+12% [InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.91.23)]10% [Connecting to security.ubuntu.com (91.189.91.23)] [Connecting to ppa.launc10% [InRelease gpgv 65.9 kB] [Waiting for headers] [Connecting to security.ubun                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/main Sources
+                                                                               Hit http://security.ubuntu.com trusty-security InRelease
+10% [InRelease gpgv 65.9 kB] [Connecting to ppa.launchpad.net (91.189.95.83)] [                                                                               Ign http://repo.mongodb.org trusty/mongodb-org/3.2 InRelease
+10% [Connecting to ppa.launchpad.net (91.189.95.83)] [Waiting for headers] [Con                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/restricted Sources
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/universe Sources
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/multiverse Sources
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/main amd64 Packages
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/universe amd64 Packages
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+                                                                               Get:1 http://us-central1.gce.archive.ubuntu.com trusty-updates/main i386 Packages [1,177 kB]
+                                                                               Hit http://dl.google.com stable Release.gpg
+55% [Sources 2,173 kB] [1 Packages 646 kB/1,177 kB 55%] [Waiting for headers] [55% [Sources 2,173 kB] [Release gpgv 58.5 kB] [1 Packages 646 kB/1,177 kB 55%] 66% [Connecting to heroku-toolbelt.s3.amazonaws.com (52.216.16.48)] [Sources 2,66% [Connecting to heroku-toolbelt.s3.amazonaws.com (52.216.16.48)] [Sources 2,                                                                               Hit http://dl.google.com stable Release
+88% [Connecting to heroku-toolbelt.s3.amazonaws.com (52.216.16.48)] [Sources 2,                                                                               Hit http://repo.mongodb.org trusty/mongodb-org/3.2 Release.gpg
+88% [Connecting to heroku-toolbelt.s3.amazonaws.com (52.216.16.48)] [Sources 2,100% [Waiting for headers] [Sources 2,173 kB] [InRelease gpgv 2,104 B] [Waiting                                                                               Ign http://toolbelt.heroku.com ./ InRelease
+                                                                               Get:2 http://us-central1.gce.archive.ubuntu.com trusty-updates/restricted i386 Packages [20.9 kB]
+                                                                               Get:3 http://us-central1.gce.archive.ubuntu.com trusty-updates/universe i386 Packages [532 kB]
+                                                                               Get:4 http://us-central1.gce.archive.ubuntu.com trusty-updates/multiverse i386 Packages [16.1 kB]
+                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/main Translation-en
+                                                                               Hit http://ppa.launchpad.net trusty InRelease
+                                                                               Hit http://repo.mongodb.org trusty/mongodb-org/3.2 Release
+                                                                               100% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                      100% [1 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waiting100% [1 Packages gzip 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Wait100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f                                                                               Hit http://dl.hhvm.com trusty/main amd64 Packages
+100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f                                                                               Hit http://apt.postgresql.org trusty-pgdg InRelease
+100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f                                                                               Get:5 http://dl.hhvm.com trusty/main i386 Packages [20 B]
+100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/multiverse Translation-en
+100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/restricted Translation-en
+100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f100% [1 Packages gzip 0 B] [Sources 855 kB] [InRelease gpgv 65.9 kB] [Waiting f                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-updates/universe Translation-en
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/main Sources
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/restricted Sources
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/universe Sources
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/multiverse Sources
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/main amd64 Packages
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/universe amd64 Packages
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Get:6 http://us-central1.gce.archive.ubuntu.com trusty-backports/main i386 Packages [14.8 kB]
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Get:7 http://us-central1.gce.archive.ubuntu.com trusty-backports/restricted i386 Packages [40 B]
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Get:8 http://us-central1.gce.archive.ubuntu.com trusty-backports/universe i386 Packages [52.6 kB]
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp                                                                               Get:9 http://us-central1.gce.archive.ubuntu.com trusty-backports/multiverse i386 Packages [1,381 B]
+100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 855 kB] [InRelease gp100% [1 Packages gzip 0 B] [Waiting for headers] [InRelease gpgv 65.9 kB] [Wait                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/main Translation-en
+100% [1 Packages gzip 0 B] [Waiting for headers] [InRelease gpgv 65.9 kB] [Wait                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/multiverse Translation-en
+100% [1 Packages gzip 0 B] [Waiting for headers] [InRelease gpgv 65.9 kB] [Wait100% [1 Packages gzip 0 B] [Waiting for headers] [Sources 31.7 kB] [InRelease g100% [1 Packages gzip 0 B] [Waiting for headers] [InRelease gpgv 65.9 kB] [Wait100% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease100% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [Waiting f                                                                               Hit http://toolbelt.heroku.com ./ Release.gpg
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Waiting for headers] [Waiting f100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://ppa.launchpad.net trusty InRelease
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/restricted Translation-en
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty-backports/universe Translation-en
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/main Sources
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/restricted Sources
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/universe Sources
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/multiverse Sources
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/main amd64 Packages
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/restricted amd64 Packages
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/universe amd64 Packages
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Hit http://us-central1.gce.archive.ubuntu.com trusty/multiverse amd64 Packages
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [Waiting                                                                                Get:10 http://us-central1.gce.archive.ubuntu.com trusty/main i386 Packages [1,739 kB]
+74% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [10 Packag                                                                               Hit http://security.ubuntu.com trusty-security/main Sources
+76% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [10 Packag77% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,189 B] [10 Packag77% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [10 Package77% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease                                                                                Ign http://dl.hhvm.com trusty/main Translation-en_US
+79% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease                                                                                Hit http://dl.google.com stable/main amd64 Packages
+79% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease                                                                                Ign http://dl.hhvm.com trusty/main Translation-en
+81% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease                                                                                Hit http://toolbelt.heroku.com ./ Release
+84% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.5 kB] [10 Pack                                                                               Hit http://security.ubuntu.com trusty-security/restricted Sources
+84% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.5 kB] [10 Pack87% [1 Packages gzip 0 B] [Packages 6,890 kB] [10 Packages 862 kB/1,739 kB 50%]87% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 3,462 B] [10 Packag                                                                               Hit http://security.ubuntu.com trusty-security/universe Sources
+91% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 3,462 B] [10 Packag91% [1 Packages gzip 0 B] [Packages 6,890 kB] [10 Packages 1,124 kB/1,739 kB 65                                                                               Hit http://ppa.launchpad.net trusty InRelease
+91% [1 Packages gzip 0 B] [Packages 6,890 kB] [10 Packages 1,124 kB/1,739 kB 6591% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [10 Pack                                                                               Hit http://security.ubuntu.com trusty-security/multiverse Sources
+97% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [10 Pack                                                                               Hit http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse amd64 Packages
+99% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [10 Pack100% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [Waitin                                                                               Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [Waitin                                                                               Get:11 http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse i386 Packages [29 B]
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [Waitin100% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 51.6 kB] [Waitin100% [1 Packages gzip 0 B] [Packages 6,890 kB] [Waiting for headers] [Waiting f                                                                               Get:12 http://us-central1.gce.archive.ubuntu.com trusty/restricted i386 Packages [16.4 kB]
+100% [1 Packages gzip 0 B] [Packages 6,890 kB] [12 Packages 0 B/16.4 kB 0%] [Wa100% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.4 kB] [12 Pac100% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.4 kB] [Waitin                                                                               Get:13 http://us-central1.gce.archive.ubuntu.com trusty/universe i386 Packages [7,597 kB]
+47% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.4 kB] [13 Pack                                                                               Hit http://security.ubuntu.com trusty-security/restricted amd64 Packages
+49% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.4 kB] [13 Pack                                                                               Hit http://ppa.launchpad.net trusty InRelease
+49% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.4 kB] [13 Pack49% [1 Packages gzip 0 B] [Packages 6,890 kB] [13 Packages 350 kB/7,597 kB 5%] 49% [1 Packages gzip 0 B] [Packages 6,890 kB] [Release gpgv 1,609 B] [13 Packag50% [1 Packages gzip 0 B] [Packages 6,890 kB] [13 Packages 481 kB/7,597 kB 6%] 50% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.5 kB] [13 Pack                                                                               Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+51% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.5 kB] [13 Pack52% [1 Packages gzip 0 B] [Packages 6,890 kB] [InRelease gpgv 15.5 kB] [13 Pack                                                                               Hit http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+52% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease 52% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package52% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease 54% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease                                                                                Get:14 http://security.ubuntu.com trusty-security/main i386 Packages [715 kB]
+52% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease                                                                                Hit http://ppa.launchpad.net trusty InRelease
+53% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease 53% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package53% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease 54% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [InRelease 56% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package                                                                               Ign http://ppa.launchpad.net trusty InRelease
+61% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package                                                                               Hit http://apt.postgresql.org trusty-pgdg/main amd64 Packages
+61% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package                                                                               Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en_US
+61% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package                                                                               Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en
+65% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package71% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package                                                                               Ign http://ppa.launchpad.net trusty InRelease
+73% [1 Packages gzip 0 B] [Waiting for headers] [Packages 6,890 kB] [13 Package81% [1 Packages gzip 0 B] [Waiting for headers] [13 Packages 3,506 kB/7,597 kB 82% [1 Packages gzip 0 B] [Waiting for headers] [Packages 166 kB] [13 Packages 82% [1 Packages gzip 0 B] [Waiting for headers] [13 Packages 3,627 kB/7,597 kB 82% [1 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [13 Package                                                                               Get:15 http://security.ubuntu.com trusty-security/restricted i386 Packages [17.6 kB]
+83% [1 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [13 Package                                                                               Hit https://apt.dockerproject.org ubuntu-trusty InRelease
+84% [1 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [13 Package84% [1 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [InRelease 84% [Waiting for headers] [Packages 2,425 kB] [InRelease gpgv 48.7 kB] [13 Pack                                                                               Ign http://dl.google.com stable/main Translation-en_US
+84% [Waiting for headers] [Packages 2,425 kB] [InRelease gpgv 48.7 kB] [13 Pack84% [2 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [InRelease 84% [Waiting for headers] [Packages 2,425 kB] [InRelease gpgv 48.7 kB] [13 Pack85% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [InRelease                                                                                Get:16 http://security.ubuntu.com trusty-security/universe i386 Packages [211 kB]
+85% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [InRelease 86% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [InRelease 87% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [13 Package                                                                               Get:17 http://security.ubuntu.com trusty-security/multiverse i386 Packages [4,186 B]
+87% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [13 Package                                                                               Hit http://ppa.launchpad.net trusty InRelease
+87% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [13 Package87% [3 Packages gzip 0 B] [Waiting for headers] [Packages 2,425 kB] [InRelease 89% [3 Packages gzip 0 B] [Waiting for headers] [InRelease gpgv 15.5 kB] [13 Pa89% [3 Packages gzip 0 B] [Waiting for headers] [Packages 77.5 kB] [InRelease g                                                                               Hit https://apt.dockerproject.org ubuntu-trusty/main amd64 Packages
+89% [3 Packages gzip 0 B] [Waiting for headers] [Packages 77.5 kB] [InRelease g89% [3 Packages gzip 0 B] [Waiting for headers] [InRelease gpgv 15.5 kB] [13 Pa89% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [InRe                                                                               Ign http://dl.google.com stable/main Translation-en
+89% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [InRe                                                                               Hit http://security.ubuntu.com trusty-security/main Translation-en
+90% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [InRe                                                                               Get:18 https://apt.dockerproject.org ubuntu-trusty/main i386 Packages
+91% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [InRe91% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P                                                                               Get:19 http://apt.postgresql.org trusty-pgdg/main i386 Packages [118 kB]
+92% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P                                                                               Hit http://security.ubuntu.com trusty-security/multiverse Translation-en
+92% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P                                                                               Get:20 https://apt.dockerproject.org ubuntu-trusty/main Translation-en_US
+92% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P                                                                               Hit http://security.ubuntu.com trusty-security/restricted Translation-en
+93% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P                                                                               Hit http://ppa.launchpad.net trusty InRelease
+94% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P94% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [InRe                                                                               Hit http://security.ubuntu.com trusty-security/universe Translation-en
+95% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [InRe                                                                               Hit http://toolbelt.heroku.com ./ Packages
+95% [3 Packages gzip 0 B] [Translation-en 6,713 kB] [InRelease gpgv 15.5 kB] [196% [3 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P97% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 6,904 kB/7,59797% [4 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P97% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,035 kB/7,59797% [5 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P97% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,035 kB/7,59797% [6 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P98% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,101 kB/7,59798% [7 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P98% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,101 kB/7,59798% [8 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 P99% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,428 kB/7,59799% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,494 kB/7,597100% [9 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13 100% [Waiting for headers] [Translation-en 6,713 kB] [13 Packages 7,559 kB/7,59100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [13100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Get:21 http://us-central1.gce.archive.ubuntu.com trusty/multiverse i386 Packages [172 kB]
+99% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [21                                                                                Hit http://ppa.launchpad.net trusty/main amd64 Packages
+99% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [21 100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty/main Translation-en
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty/multiverse Translation-en
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty/restricted Translation-en
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Hit http://us-central1.gce.archive.ubuntu.com trusty/universe Translation-en
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Ign http://us-central1.gce.archive.ubuntu.com trusty/main Translation-en_US
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Ign http://us-central1.gce.archive.ubuntu.com trusty/multiverse Translation-en_US
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Ign http://us-central1.gce.archive.ubuntu.com trusty/restricted Translation-en_US
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Ign http://us-central1.gce.archive.ubuntu.com trusty/universe Translation-en_US
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Get:22 http://ppa.launchpad.net trusty/main i386 Packages [1,611 B]
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa                                                                               Ign https://apt.dockerproject.org ubuntu-trusty/main Translation-en_US
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 6,713 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 8,706 B] [Waiting f100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 31.6 kB] [Wai100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 28.6 kB] [Wai100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 1,104 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 1,104 kB] [Wa                                                                               Ign https://apt.dockerproject.org ubuntu-trusty/main Translation-en
+100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 1,104 kB] [Wa100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 34.0 kB] [Waiting fo100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 0 B] [Waiting for he100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 141 kB] [Waiting for100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 4,444 B] [Waiting fo100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 59.1 kB] [Waiting f100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 0 B] [Waiting for h100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 220 kB] [Waiting fo100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 220 kB] [Waiting fo                                                                               Hit http://ppa.launchpad.net trusty/main Translation-en
+100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 220 kB] [Waiting fo100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Packages 3,396 B] [Waiting f100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 28.1 kB] [Wai100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 2,242 B] [Wai100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 0 B] [Waiting100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Translation-en 155 kB] [Wait100% [10 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Waitin100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 5,000 kB] [Waiting f100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 5,000 kB] [Waiting f100% [10 Packages gzip 0 B] [Waiting for headers] [Sources 5,000 kB] [Waiting f                                                                               Ign http://toolbelt.heroku.com ./ Translation-en_US
+100% [10 Packages gzip 0 B] [Sources 5,000 kB] [Waiting for headers] [Waiting f                                                                               Ign http://toolbelt.heroku.com ./ Translation-en
+100% [10 Packages gzip 0 B] [Sources 5,000 kB] [Waiting for headers] [Waiting f                                                                               Hit http://ppa.launchpad.net trusty/main amd64 Packages
+100% [10 Packages gzip 0 B] [Sources 5,000 kB] [Waiting for headers] [Waiting f                                                                               Hit https://packagecloud.io trusty InRelease
+100% [10 Packages gzip 0 B] [Sources 5,000 kB] [Waiting for headers] [Waiting f100% [10 Packages gzip 0 B] [Sources 5,000 kB] [InRelease gpgv 23.2 kB] [Waitin100% [Sources 5,000 kB] [InRelease gpgv 23.2 kB] [Waiting for headers] [Waiting100% [11 Packages gzip 0 B] [Sources 5,000 kB] [InRelease gpgv 23.2 kB] [Waitin100% [Sources 5,000 kB] [InRelease gpgv 23.2 kB] [Waiting for headers] [Waiting100% [12 Packages gzip 0 B] [Sources 5,000 kB] [InRelease gpgv 23.2 kB] [Waitin100% [12 Packages gzip 0 B] [Sources 5,000 kB] [Waiting for headers] [Waiting f                                                                               100% [Sources 5,000 kB] [Waiting for headers] [Waiting for headers]                                                                   100% [14 Packages gzip 0 B] [Sources 5,000 kB] [Waiting for headers] [Waiting f                                                                               100% [14 Packages gzip 0 B] [Waiting for headers] [Waiting for headers]                                                                       100% [14 Packages gzip 0 B] [Sources 22.9 kB] [Waiting for headers] [Waiting fo                                                                               100% [14 Packages gzip 0 B] [Waiting for headers] [Waiting for headers]                                                                       100% [14 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Get:23 http://ppa.launchpad.net trusty/main i386 Packages [3,427 B]
+100% [14 Packages gzip 0 B] [Sources 27.9 MB] [23 Packages 3,427 B/3,427 B 100%                                                                               100% [14 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers]                                                                   Hit https://packagecloud.io trusty InRelease
+                                                                   100% [14 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo100% [14 Packages gzip 0 B] [Sources 27.9 MB] [InRelease gpgv 23.9 kB] [Waiting100% [14 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Hit http://ppa.launchpad.net trusty/main Translation-en
+                                                                               100% [14 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers]                                                                   100% [Sources 27.9 MB] [Waiting for headers] [Waiting for headers]                                                                  100% [15 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               100% [Sources 27.9 MB] [Waiting for headers] [Waiting for headers]                                                                  100% [16 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Hit https://packagecloud.io trusty/main Sources
+100% [16 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               100% [Sources 27.9 MB] [Waiting for headers] [Waiting for headers]                                                                  100% [17 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               100% [Sources 27.9 MB] [Waiting for headers] [Waiting for headers]                                                                  100% [18 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               100% [Sources 27.9 MB] [Waiting for headers] [Waiting for headers]                                                                  100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers]                                                                   Hit http://ppa.launchpad.net trusty/main amd64 Packages
+                                                                   100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Hit https://packagecloud.io trusty/main amd64 Packages
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Get:24 http://ppa.launchpad.net trusty/main i386 Packages [7,556 B]
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Hit http://ppa.launchpad.net trusty/main Translation-en
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Get:25 https://packagecloud.io trusty/main Translation-en_US
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [25 Transla                                                                               Hit https://packagecloud.io trusty/main Sources
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Hit http://ppa.launchpad.net trusty/main amd64 Packages
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Hit https://packagecloud.io trusty/main amd64 Packages
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               Get:26 http://ppa.launchpad.net trusty/main i386 Packages [445 B]
+100% [13 Packages gzip 0 B] [Sources 27.9 MB] [Waiting for headers] [Waiting fo                                                                               100% [13 Packages gzip 0 B] [Waiting for headers] [Waiting for headers]                                                                       100% [13 Packages gzip 0 B] [Sources 711 kB] [Waiting for headers] [Waiting for100% [13 Packages gzip 0 B] [Sources 711 kB] [Waiting for headers] [Waiting for                                                                               100% [13 Packages gzip 0 B] [Waiting for headers] [Waiting for headers]                                                                       100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers] [Waiting                                                                                Hit http://ppa.launchpad.net trusty/main Translation-en
+                                                                               100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers]                                                                     Get:27 https://packagecloud.io trusty/main Translation-en_US
+                                                                     100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers] [27 Trans                                                                               Ign http://apt.postgresql.org trusty-pgdg/main Translation-en_US
+                                                                               100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers]                                                                     Hit http://ppa.launchpad.net trusty/main amd64 Packages
+100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers]                                                                     Ign http://apt.postgresql.org trusty-pgdg/main Translation-en
+100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers]                                                                     Get:28 http://ppa.launchpad.net trusty/main i386 Packages [3,055 B]
+                                                                     100% [13 Packages gzip 0 B] [Packages 8,235 kB] [28 Packages 3,055 B/3,055 B 10                                                                               100% [13 Packages gzip 0 B] [Packages 8,235 kB] [Waiting for headers]                                                                     100% [13 Packages gzip 0 B] [Waiting for headers]                                                 100% [13 Packages gzip 0 B] [Packages 184 kB] [Waiting for headers]                                                                   100% [13 Packages gzip 0 B] [Waiting for headers]                                                 100% [13 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    Hit http://ppa.launchpad.net trusty/main Translation-en
+                                                                    100% [13 Packages gzip 0 B] [Packages 31.7 MB]                                              Hit http://ppa.launchpad.net trusty Release.gpg
+100% [13 Packages gzip 0 B] [Packages 31.7 MB]                                              Hit http://ppa.launchpad.net trusty Release.gpg
+100% [13 Packages gzip 0 B] [Packages 31.7 MB]                                              Hit http://ppa.launchpad.net trusty/main amd64 Packages
+100% [13 Packages gzip 0 B] [Packages 31.7 MB]                                              100% [Packages 31.7 MB] [Waiting for headers]                                             100% [21 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             100% [22 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             100% [19 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             100% [23 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             100% [24 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             100% [Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                 100% [Packages 31.7 MB] [Waiting for headers]                                             100% [26 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             100% [Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                 100% [Packages 31.7 MB] [Waiting for headers]                                             100% [28 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             Ign https://packagecloud.io trusty/main Translation-en_US
+100% [Packages 31.7 MB] [Waiting for headers]                                             Get:29 http://ppa.launchpad.net trusty/main i386 Packages [749 B]
+                                             100% [Packages 31.7 MB] [29 Packages 749 B/749 B 100%]                                                      100% [Packages 31.7 MB]                       100% [29 Packages gzip 0 B] [Packages 31.7 MB] [Waiting for headers]                                                                    100% [Packages 31.7 MB] [Waiting for headers]                                             Ign https://packagecloud.io trusty/main Translation-en
+100% [Packages 31.7 MB] [Waiting for headers]                                             Ign https://packagecloud.io trusty/main Translation-en_US
+100% [Packages 31.7 MB] [Waiting for headers]                                             Hit http://ppa.launchpad.net trusty/main Translation-en
+100% [Packages 31.7 MB] [Waiting for headers]                                             Ign https://packagecloud.io trusty/main Translation-en
+100% [Packages 31.7 MB] [Waiting for headers]                                             Hit http://ppa.launchpad.net trusty/main amd64 Packages
+100% [Packages 31.7 MB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 664 kB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Sources 663 kB] [Waiting for headers]                                           100% [Waiting for headers]                          100% [Packages 4,484 B] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Sources 30.3 kB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Sources 230 kB] [Waiting for headers]                                           100% [Waiting for headers]                          100% [Sources 9,364 B] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Packages 236 kB] [Waiting for headers]                                            Get:30 http://ppa.launchpad.net trusty/main i386 Packages [3,140 B]
+100% [Packages 236 kB] [Waiting for headers]                                            100% [30 Packages gzip 0 B] [Packages 236 kB] [Waiting for headers]                                                                   100% [Packages 236 kB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Packages 4,323 kB] [Waiting for headers]                                              100% [Waiting for headers]                          100% [Packages 131 kB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Packages 956 kB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Packages 15.0 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 507 kB] [Waiting for headers]                                            Hit http://ppa.launchpad.net trusty/main Translation-en
+100% [Packages 507 kB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Packages 50.9 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 5,582 kB] [Waiting for headers]                                                    Hit http://ppa.launchpad.net trusty Release
+100% [Translation-en 5,582 kB] [Waiting for headers]                                                    100% [Translation-en 5,582 kB] [Release gpgv 14.0 kB] [Waiting for headers]                                                                           100% [Translation-en 5,582 kB] [Waiting for headers]                                                    100% [Waiting for headers]                          100% [Translation-en 7,412 B] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Translation-en 25.9 kB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Translation-en 479 kB] [Waiting for headers]                                                  100% [Waiting for headers]                          100% [Packages 1,300 B] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 4,699 B] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 4,149 kB] [Waiting for headers]                                                    100% [Waiting for headers]                          100% [Translation-en 409 kB] [Waiting for headers]                                                  100% [Waiting for headers]                          100% [Translation-en 21.2 kB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Translation-en 18.6 MB] [Waiting for headers]                                                   Hit http://ppa.launchpad.net trusty Release
+                                                   100% [Translation-en 18.6 MB]                             100% [Translation-en 18.6 MB] [Release gpgv 14.0 kB]                                                    100% [Translation-en 18.6 MB] [Waiting for headers]                                                   Hit http://ppa.launchpad.net trusty/main amd64 Packages
+                                                   100% [Translation-en 18.6 MB]                             Get:31 http://ppa.launchpad.net trusty/main i386 Packages [1,039 B]
+                             100% [Translation-en 18.6 MB] [31 Packages 1,039 B/1,039 B 100%]                                                                100% [Translation-en 18.6 MB]                             100% [31 Packages gzip 0 B] [Translation-en 18.6 MB] [Waiting for headers]                                                                          100% [Translation-en 18.6 MB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Translation-en 3,337 B] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Packages 11.8 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 13.0 kB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 34.8 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 16.2 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 17.7 kB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 616 B] [Waiting for headers]                                           100% [Waiting for headers]                          100% [Packages 10.1 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 621 B] [Waiting for headers]                                                 100% [Waiting for headers]                          100% [Packages 10.3 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 11.0 kB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Packages 1,542 B] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 998 B] [Waiting for headers]                                                 100% [Waiting for headers]                          100% [Packages 19.8 kB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Translation-en 6,192 B] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [Packages 2,131 B] [Waiting for headers]                                             100% [Waiting for headers]                          Hit http://ppa.launchpad.net trusty/main amd64 Packages
+                          100% [Working]              100% [Packages 2,126 B] [Waiting for headers]                                             100% [Waiting for headers]                          Get:32 http://ppa.launchpad.net trusty/main i386 Packages [1,043 B]
+                          100% [32 Packages 1,043 B/1,043 B 100%]                                       100% [Working]              100% [32 Packages gzip 0 B] [Waiting for headers]                                                 100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]                          Ign http://ppa.launchpad.net trusty/main Translation-en_US
+                          100% [Working]              Ign http://ppa.launchpad.net trusty/main Translation-en
+              100% [Waiting for headers]                                         24.1 MB/s 0s                                                                               Ign http://ppa.launchpad.net trusty/main Translation-en_US
+100% [Working]                                                     24.1 MB/s 0s                                                                               Ign http://ppa.launchpad.net trusty/main Translation-en
+100% [Working]                                                     24.1 MB/s 0s                                                                               Fetched 12.4 MB in 6s (2,004 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 24%Reading package lists... 26%Reading package lists... 26%Reading package lists... 26%Reading package lists... 26%Reading package lists... 32%Reading package lists... 32%Reading package lists... 32%Reading package lists... 32%Reading package lists... 53%Reading package lists... 53%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 69%Reading package lists... 69%Reading package lists... 73%Reading package lists... 73%Reading package lists... 73%Reading package lists... 73%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 90%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+
+travis_time:end:028265c0:start=1496823309500535413,finish=1496823319159724366,duration=9659188953travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:018f098e$ sudo apt-get -y install squid3 git curl
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+curl is already the newest version.
+The following extra packages will be installed:
+  git-man libecap2 libmnl0 libnetfilter-conntrack3 squid-langpack
+  squid3-common
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-cvs git-mediawiki git-svn squidclient squid-cgi
+  squid-purge smbclient winbindd
+The following NEW packages will be installed:
+  libecap2 libmnl0 libnetfilter-conntrack3 squid-langpack squid3 squid3-common
+The following packages will be upgraded:
+  git git-man
+2 upgraded, 6 newly installed, 0 to remove and 209 not upgraded.
+Need to get 8,439 kB of archives.
+After this operation, 10.7 MB of additional disk space will be used.
+0% [Working]            Get:1 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libmnl0 amd64 1.0.3-3ubuntu1 [11.4 kB]
+            0% [1 libmnl0 11.4 kB/11.4 kB 100%] [Connecting to ppa.launchpad.net (91.189.95                                                                               0% [Connecting to ppa.launchpad.net (91.189.95.83)]                                                   Get:2 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libnetfilter-conntrack3 amd64 1.0.4-1 [45.9 kB]
+                                                   0% [2 libnetfilter-conntrack3 25.7 kB/45.9 kB 56%] [Connecting to ppa.launchpad                                                                               1% [Waiting for headers] [Connecting to ppa.launchpad.net (91.189.95.83)]                                                                         Get:3 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main squid-langpack all 20121005-1 [334 kB]
+                                                                         1% [3 squid-langpack 7,046 B/334 kB 2%] [Connecting to ppa.launchpad.net (91.18                                                                               5% [Waiting for headers] [Connecting to ppa.launchpad.net (91.189.95.83)]                                                                         Get:4 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libecap2 amd64 0.2.0-1ubuntu4 [15.2 kB]
+                                                                         5% [4 libecap2 15.2 kB/15.2 kB 100%] [Connecting to ppa.launchpad.net (91.189.9                                                                               5% [Connecting to ppa.launchpad.net (91.189.95.83)]                                                   Get:5 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty-updates/main squid3-common all 3.3.8-1ubuntu6.9 [153 kB]
+                                                   5% [5 squid3-common 24.6 kB/153 kB 16%] [Connecting to ppa.launchpad.net (91.18                                                                               7% [Connecting to ppa.launchpad.net (91.189.95.83)]                                                   Get:6 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty-updates/main squid3 amd64 3.3.8-1ubuntu6.9 [1,786 kB]
+                                                   7% [6 squid3 15.9 kB/1,786 kB 1%] [Connecting to ppa.launchpad.net (91.189.95.8                                                                               28% [Connecting to ppa.launchpad.net (91.189.95.83)]                                                    Get:7 http://ppa.launchpad.net/git-core/ppa/ubuntu/ trusty/main git amd64 1:2.13.0-0ppa1~ubuntu14.04.1 [4,644 kB]
+                                                    28% [7 git 9,873 B/4,644 kB 0%]29% [7 git 66.5 kB/4,644 kB 1%]                               30% [7 git 208 kB/4,644 kB 4%]33% [7 git 407 kB/4,644 kB 9%]                              35% [7 git 633 kB/4,644 kB 14%]39% [7 git 915 kB/4,644 kB 20%]39% [7 git 922 kB/4,644 kB 20%]39% [7 git 966 kB/4,644 kB 21%]                               40% [7 git 1,044 kB/4,644 kB 22%]42% [7 git 1,165 kB/4,644 kB 25%]44% [7 git 1,368 kB/4,644 kB 29%]47% [7 git 1,619 kB/4,644 kB 35%]                                 50% [7 git 1,886 kB/4,644 kB 41%]                                   681 kB/s 6s53% [7 git 2,140 kB/4,644 kB 46%]                                   681 kB/s 5s56% [7 git 2,372 kB/4,644 kB 51%]                                   681 kB/s 5s59% [7 git 2,599 kB/4,644 kB 56%]                                   681 kB/s 5s61% [7 git 2,781 kB/4,644 kB 60%]                                   681 kB/s 4s64% [7 git 3,028 kB/4,644 kB 65%]                                   681 kB/s 4s66% [7 git 3,246 kB/4,644 kB 70%]                                   681 kB/s 4s69% [7 git 3,459 kB/4,644 kB 74%]                                   681 kB/s 3s71% [7 git 3,683 kB/4,644 kB 79%]                                   681 kB/s 3s74% [7 git 3,935 kB/4,644 kB 85%]                                   681 kB/s 3s77% [7 git 4,153 kB/4,644 kB 89%]                                   681 kB/s 2s80% [7 git 4,387 kB/4,644 kB 94%]                                   681 kB/s 2s83% [7 git 4,639 kB/4,644 kB 100%]                                  458 kB/s 3s83% [Working]                                                       458 kB/s 3s                                                                               Get:8 http://ppa.launchpad.net/git-core/ppa/ubuntu/ trusty/main git-man all 1:2.13.0-0ppa1~ubuntu14.04.1 [1,450 kB]
+83% [8 git-man 26.1 kB/1,450 kB 2%]                                 458 kB/s 3s87% [8 git-man 322 kB/1,450 kB 22%]                                 458 kB/s 2s90% [8 git-man 645 kB/1,450 kB 45%]                                 458 kB/s 1s94% [8 git-man 969 kB/1,450 kB 67%]                                 458 kB/s 1s99% [8 git-man 1,363 kB/1,450 kB 94%]                               458 kB/s 0s100% [Working]                                                      458 kB/s 0s                                                                               Fetched 8,439 kB in 14s (587 kB/s)
+Selecting previously unselected package libmnl0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88286 files and directories currently installed.)
+Preparing to unpack .../libmnl0_1.0.3-3ubuntu1_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-3ubuntu1) ...
+Selecting previously unselected package libnetfilter-conntrack3:amd64.
+Preparing to unpack .../libnetfilter-conntrack3_1.0.4-1_amd64.deb ...
+Unpacking libnetfilter-conntrack3:amd64 (1.0.4-1) ...
+Preparing to unpack .../git_1%3a2.13.0-0ppa1~ubuntu14.04.1_amd64.deb ...
+Unpacking git (1:2.13.0-0ppa1~ubuntu14.04.1) over (1:2.11.0-0ppa3~ubuntu14.04.1) ...
+Preparing to unpack .../git-man_1%3a2.13.0-0ppa1~ubuntu14.04.1_all.deb ...
+Unpacking git-man (1:2.13.0-0ppa1~ubuntu14.04.1) over (1:2.11.0-0ppa3~ubuntu14.04.1) ...
+Selecting previously unselected package squid-langpack.
+Preparing to unpack .../squid-langpack_20121005-1_all.deb ...
+Unpacking squid-langpack (20121005-1) ...
+Selecting previously unselected package libecap2.
+Preparing to unpack .../libecap2_0.2.0-1ubuntu4_amd64.deb ...
+Unpacking libecap2 (0.2.0-1ubuntu4) ...
+Selecting previously unselected package squid3-common.
+Preparing to unpack .../squid3-common_3.3.8-1ubuntu6.9_all.deb ...
+Unpacking squid3-common (3.3.8-1ubuntu6.9) ...
+Selecting previously unselected package squid3.
+Preparing to unpack .../squid3_3.3.8-1ubuntu6.9_amd64.deb ...
+Unpacking squid3 (3.3.8-1ubuntu6.9) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up libmnl0:amd64 (1.0.3-3ubuntu1) ...
+Setting up libnetfilter-conntrack3:amd64 (1.0.4-1) ...
+Setting up git-man (1:2.13.0-0ppa1~ubuntu14.04.1) ...
+Setting up git (1:2.13.0-0ppa1~ubuntu14.04.1) ...
+Setting up squid-langpack (20121005-1) ...
+Setting up libecap2 (0.2.0-1ubuntu4) ...
+Setting up squid3-common (3.3.8-1ubuntu6.9) ...
+Setting up squid3 (3.3.8-1ubuntu6.9) ...
+Creating Squid HTTP proxy 3.x spool directory structure
+2017/06/07 08:15:39 kid1| Creating missing swap directories
+2017/06/07 08:15:39 kid1| No cache_dir stores are configured.
+squid3 start/running, process 10432
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+
+travis_time:end:018f098e:start=1496823319165664118,finish=1496823340777716921,duration=21612052803travis_fold:end:before_install.4travis_fold:start:install.bundlertravis_time:start:05adeba6$ bundle install --without ci docgen guard integration maintenance omnibus_package --frozen --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching gem metadata from https://rubygems.org/......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Fetching https://github.com/chef/chefstyle.git
+Fetching https://github.com/rubysec/bundler-audit.git
+Fetching rake 12.0.0
+Installing rake 12.0.0
+Fetching addressable 2.4.0
+Installing addressable 2.4.0
+Fetching fuzzyurl 0.9.0
+Installing fuzzyurl 0.9.0
+Fetching mixlib-config 2.2.4
+Installing mixlib-config 2.2.4
+Fetching mixlib-shellout 2.2.7
+Installing mixlib-shellout 2.2.7
+Fetching libyajl2 1.2.0
+Installing libyajl2 1.2.0 with native extensions
+Fetching hashie 3.5.5
+Installing hashie 3.5.5
+Fetching mixlib-log 1.7.1
+Installing mixlib-log 1.7.1
+Fetching rack 2.0.3
+Installing rack 2.0.3
+Fetching uuidtools 2.1.5
+Installing uuidtools 2.1.5
+Fetching diff-lcs 1.3
+Installing diff-lcs 1.3
+Fetching erubis 2.7.0
+Installing erubis 2.7.0
+Fetching highline 1.7.8
+Installing highline 1.7.8
+Fetching iniparse 1.4.2
+Installing iniparse 1.4.2
+Fetching iso8601 0.9.1
+Installing iso8601 0.9.1
+Fetching mixlib-cli 1.7.0
+Installing mixlib-cli 1.7.0
+Fetching net-ssh 4.1.0
+Installing net-ssh 4.1.0
+Fetching ffi 1.9.18
+Installing ffi 1.9.18 with native extensions
+Fetching ipaddress 0.8.3
+Installing ipaddress 0.8.3
+Fetching plist 3.3.0
+Installing plist 3.3.0
+Fetching systemu 2.6.5
+Installing systemu 2.6.5
+Fetching wmi-lite 1.0.0
+Installing wmi-lite 1.0.0
+Fetching proxifier 1.0.3
+Installing proxifier 1.0.3
+Fetching rspec-support 3.6.0
+Installing rspec-support 3.6.0
+Fetching builder 3.2.3
+Installing builder 3.2.3
+Fetching multi_json 1.12.1
+Installing multi_json 1.12.1
+Fetching net-telnet 0.1.1
+Installing net-telnet 0.1.1
+Fetching sfl 2.3
+Installing sfl 2.3
+Fetching syslog-logger 1.6.8
+Installing syslog-logger 1.6.8
+Using bundler 1.15.1
+Fetching coderay 1.1.1
+Installing coderay 1.1.1
+Fetching method_source 0.8.2
+Installing method_source 0.8.2
+Fetching slop 3.6.0
+Installing slop 3.6.0
+Fetching byebug 9.0.6
+Installing byebug 9.0.6 with native extensions
+Fetching debug_inspector 0.0.3
+Installing debug_inspector 0.0.3 with native extensions
+Fetching ruby-prof 0.16.2
+Installing ruby-prof 0.16.2 with native extensions
+Fetching ruby-shadow 2.5.0
+Installing ruby-shadow 2.5.0 with native extensions
+Fetching docile 1.1.5
+Installing docile 1.1.5
+Fetching json 2.1.0
+Installing json 2.1.0 with native extensions
+Fetching simplecov-html 0.10.1
+Installing simplecov-html 0.10.1
+Fetching ast 2.3.0
+Installing ast 2.3.0
+Fetching powerpack 0.1.1
+Installing powerpack 0.1.1
+Fetching ruby-progressbar 1.8.1
+Installing ruby-progressbar 1.8.1
+Fetching unicode-display_width 1.2.1
+Installing unicode-display_width 1.2.1
+Fetching thor 0.19.4
+Installing thor 0.19.4
+Fetching backports 3.8.0
+Installing backports 3.8.0
+Fetching multipart-post 2.0.0
+Installing multipart-post 2.0.0
+Fetching net-http-persistent 2.9.4
+Installing net-http-persistent 2.9.4
+Fetching net-http-pipeline 1.0.1
+Installing net-http-pipeline 1.0.1
+Fetching websocket 1.2.4
+Installing websocket 1.2.4
+Fetching rainbow 2.2.2
+Installing rainbow 2.2.2 with native extensions
+Fetching launchy 2.4.3
+Installing launchy 2.4.3
+Using chef-config 13.2.7 from source at `chef-config`
+Fetching ffi-yajl 2.3.0
+Installing ffi-yajl 2.3.0 with native extensions
+Fetching mixlib-archive 0.4.1
+Installing mixlib-archive 0.4.1
+Fetching mixlib-authentication 1.4.1
+Installing mixlib-authentication 1.4.1
+Fetching net-sftp 2.1.2
+Installing net-sftp 2.1.2
+Fetching net-ssh-gateway 2.0.0
+Installing net-ssh-gateway 2.0.0
+Fetching net-scp 1.2.1
+Installing net-scp 1.2.1
+Fetching ethon 0.10.1
+Installing ethon 0.10.1
+Fetching rspec-core 3.6.0
+Installing rspec-core 3.6.0
+Fetching rspec-expectations 3.6.0
+Installing rspec-expectations 3.6.0
+Fetching rspec-mocks 3.6.0
+Installing rspec-mocks 3.6.0
+Fetching pry 0.10.4
+Installing pry 0.10.4
+Fetching binding_of_caller 0.7.2
+Installing binding_of_caller 0.7.2 with native extensions
+Fetching simplecov 0.14.1
+Installing simplecov 0.14.1
+Fetching parser 2.4.0.0
+Installing parser 2.4.0.0
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Fetching faraday 0.12.1
+Installing faraday 0.12.1
+Fetching pusher-client 0.6.2
+Installing pusher-client 0.6.2
+Fetching chef-zero 13.0.0
+Installing chef-zero 13.0.0
+Fetching ohai 13.1.0
+Installing ohai 13.1.0
+Fetching net-ssh-multi 1.2.1
+Installing net-ssh-multi 1.2.1
+Fetching specinfra 2.67.10
+Installing specinfra 2.67.10
+Fetching typhoeus 0.8.0
+Installing typhoeus 0.8.0
+Fetching rspec_junit_formatter 0.2.3
+Installing rspec_junit_formatter 0.2.3
+Fetching rspec-its 1.2.0
+Installing rspec-its 1.2.0
+Fetching rspec 3.6.0
+Installing rspec 3.6.0
+Fetching pry-byebug 3.4.2
+Installing pry-byebug 3.4.2
+Fetching pry-remote 0.1.8
+Installing pry-remote 0.1.8
+Fetching pry-stack_explorer 0.4.9.2
+Installing pry-stack_explorer 0.4.9.2
+Fetching rubocop 0.47.1
+Installing rubocop 0.47.1
+Fetching faraday_middleware 0.11.0.1
+Installing faraday_middleware 0.11.0.1
+Fetching gh 0.15.1
+Installing gh 0.15.1
+Fetching cheffish 13.0.0
+Installing cheffish 13.0.0
+Fetching serverspec 2.38.1
+Installing serverspec 2.38.1
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Fetching travis 1.8.8
+Installing travis 1.8.8
+Using chef 13.2.7 from source at `.`
+Bundle complete! 24 Gemfile dependencies, 89 gems now installed.
+Gems in the groups ci, docgen, guard, integration, maintenance and omnibus_package were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:05adeba6:start=1496823340783500025,finish=1496823371267944699,duration=30484444674travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:05adde96$ echo --color > .rspec
+
+travis_time:end:05adde96:start=1496823371273227749,finish=1496823371277288290,duration=4060541travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:003a8c88$ echo -fp >> .rspec
+
+travis_time:end:003a8c88:start=1496823371282648582,finish=1496823371286524544,duration=3875962travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:2666ce38$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+
+travis_time:end:2666ce38:start=1496823371291830554,finish=1496823371301722022,duration=9891468travis_fold:end:before_script.3travis_time:start:09c34322$ bundle exec chef-client --version
+Chef: 13.2.7
+
+travis_time:end:09c34322:start=1496823371309665905,finish=1496823372495442261,duration=1185776356
+The command "bundle exec chef-client --version" exited with 0.
+travis_time:start:13c14660$ git clone https://github.com/chef/proxy_tests.git
+Cloning into 'proxy_tests'...
+remote: Counting objects: 678, done.[K
+Receiving objects:   0% (1/678)   Receiving objects:   1% (7/678)   Receiving objects:   2% (14/678)   Receiving objects:   3% (21/678)   Receiving objects:   4% (28/678)   Receiving objects:   5% (34/678)   Receiving objects:   6% (41/678)   Receiving objects:   7% (48/678)   Receiving objects:   8% (55/678)   Receiving objects:   9% (62/678)   Receiving objects:  10% (68/678)   Receiving objects:  11% (75/678)   Receiving objects:  12% (82/678)   Receiving objects:  13% (89/678)   Receiving objects:  14% (95/678)   Receiving objects:  15% (102/678)   Receiving objects:  16% (109/678)   Receiving objects:  17% (116/678)   Receiving objects:  18% (123/678)   Receiving objects:  19% (129/678)   Receiving objects:  20% (136/678)   Receiving objects:  21% (143/678)   Receiving objects:  22% (150/678)   Receiving objects:  23% (156/678)   Receiving objects:  24% (163/678)   Receiving objects:  25% (170/678)   Receiving objects:  26% (177/678)   Receiving objects:  27% (184/678)   Receiving objects:  28% (190/678)   Receiving objects:  29% (197/678)   Receiving objects:  30% (204/678)   Receiving objects:  31% (211/678)   Receiving objects:  32% (217/678)   Receiving objects:  33% (224/678)   remote: Total 678 (delta 0), reused 0 (delta 0), pack-reused 678[K
+Receiving objects:  34% (231/678)   Receiving objects:  35% (238/678)   Receiving objects:  36% (245/678)   Receiving objects:  37% (251/678)   Receiving objects:  38% (258/678)   Receiving objects:  39% (265/678)   Receiving objects:  40% (272/678)   Receiving objects:  41% (278/678)   Receiving objects:  42% (285/678)   Receiving objects:  43% (292/678)   Receiving objects:  44% (299/678)   Receiving objects:  45% (306/678)   Receiving objects:  46% (312/678)   Receiving objects:  47% (319/678)   Receiving objects:  48% (326/678)   Receiving objects:  49% (333/678)   Receiving objects:  50% (339/678)   Receiving objects:  51% (346/678)   Receiving objects:  52% (353/678)   Receiving objects:  53% (360/678)   Receiving objects:  54% (367/678)   Receiving objects:  55% (373/678)   Receiving objects:  56% (380/678)   Receiving objects:  57% (387/678)   Receiving objects:  58% (394/678)   Receiving objects:  59% (401/678)   Receiving objects:  60% (407/678)   Receiving objects:  61% (414/678)   Receiving objects:  62% (421/678)   Receiving objects:  63% (428/678)   Receiving objects:  64% (434/678)   Receiving objects:  65% (441/678)   Receiving objects:  66% (448/678)   Receiving objects:  67% (455/678)   Receiving objects:  68% (462/678)   Receiving objects:  69% (468/678)   Receiving objects:  70% (475/678)   Receiving objects:  71% (482/678)   Receiving objects:  72% (489/678)   Receiving objects:  73% (495/678)   Receiving objects:  74% (502/678)   Receiving objects:  75% (509/678)   Receiving objects:  76% (516/678)   Receiving objects:  77% (523/678)   Receiving objects:  78% (529/678)   Receiving objects:  79% (536/678)   Receiving objects:  80% (543/678)   Receiving objects:  81% (550/678)   Receiving objects:  82% (556/678)   Receiving objects:  83% (563/678)   Receiving objects:  84% (570/678)   Receiving objects:  85% (577/678)   Receiving objects:  86% (584/678)   Receiving objects:  87% (590/678)   Receiving objects:  88% (597/678)   Receiving objects:  89% (604/678)   Receiving objects:  90% (611/678)   Receiving objects:  91% (617/678)   Receiving objects:  92% (624/678)   Receiving objects:  93% (631/678)   Receiving objects:  94% (638/678)   Receiving objects:  95% (645/678)   Receiving objects:  96% (651/678)   Receiving objects:  97% (658/678)   Receiving objects:  98% (665/678)   Receiving objects:  99% (672/678)   Receiving objects: 100% (678/678)   Receiving objects: 100% (678/678), 74.39 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/276)   Resolving deltas:   1% (5/276)   Resolving deltas:   4% (13/276)   Resolving deltas:   6% (19/276)   Resolving deltas:   7% (21/276)   Resolving deltas:   9% (26/276)   Resolving deltas:  13% (36/276)   Resolving deltas:  14% (39/276)   Resolving deltas:  15% (43/276)   Resolving deltas:  16% (46/276)   Resolving deltas:  17% (49/276)   Resolving deltas:  20% (56/276)   Resolving deltas:  22% (63/276)   Resolving deltas:  23% (65/276)   Resolving deltas:  25% (71/276)   Resolving deltas:  26% (73/276)   Resolving deltas:  27% (75/276)   Resolving deltas:  34% (96/276)   Resolving deltas:  35% (97/276)   Resolving deltas:  38% (107/276)   Resolving deltas:  39% (108/276)   Resolving deltas:  42% (117/276)   Resolving deltas:  44% (124/276)   Resolving deltas:  45% (125/276)   Resolving deltas:  46% (127/276)   Resolving deltas:  47% (130/276)   Resolving deltas:  48% (135/276)   Resolving deltas:  51% (141/276)   Resolving deltas:  72% (201/276)   Resolving deltas:  73% (204/276)   Resolving deltas:  76% (210/276)   Resolving deltas:  78% (216/276)   Resolving deltas:  80% (221/276)   Resolving deltas:  81% (225/276)   Resolving deltas:  82% (229/276)   Resolving deltas:  84% (234/276)   Resolving deltas:  85% (236/276)   Resolving deltas:  86% (238/276)   Resolving deltas:  88% (244/276)   Resolving deltas:  89% (246/276)   Resolving deltas:  91% (252/276)   Resolving deltas:  93% (257/276)   Resolving deltas:  95% (263/276)   Resolving deltas:  96% (265/276)   Resolving deltas:  98% (271/276)   Resolving deltas:  99% (275/276)   Resolving deltas: 100% (276/276)   Resolving deltas: 100% (276/276), done.
+
+travis_time:end:13c14660:start=1496823372500828776,finish=1496823372941898873,duration=441070097
+The command "git clone https://github.com/chef/proxy_tests.git" exited with 0.
+travis_time:start:09029d66$ rvmsudo -E bundle exec bash $PROXY_TESTS_DIR/run_tests.sh chef_client \* \* /tmp/out.txt
+Warning: can not check `/etc/sudoers` for `secure_path`, falling back to call via `/usr/bin/env`, this breaks rules from `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=1
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+
+In case there is no `secure_path` in `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=0
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+Running tests from proxy_tests/files/default/scripts ...
+
+========================================
+Proxy none
+========================================
+Running proxy_tests/files/default/scripts/proxies/none/start.sh ...
+Stopping squid ...
+
+Running service squid3 stop ...
+squid3 stop/waiting
+stopped successfully
+
+Running iptables -F OUTPUT ...
+
+====================
+Proxy none - Test chef_client
+====================
+SKIPPING - pending
+
+========================================
+Proxy single
+========================================
+Running proxy_tests/files/default/scripts/proxies/single/start.sh ...
+Stopping squid ...
+
+Running service squid3 stop ...
+stop: Unknown instance: 
+Copying squid configuration ...
+
+Running cp proxy_tests/files/default/scripts/proxies/single/squid.conf /etc/squid3/squid.conf ...
+Setting routes to deny all traffic except ssh and squid ...
+
+Running iptables -F OUTPUT ...
+
+Running iptables -A OUTPUT -j ACCEPT -p tcp --dport 22 ...
+
+Running iptables -A OUTPUT -j ACCEPT -m owner --uid-owner proxy ...
+
+Running iptables -A OUTPUT -j DROP ! -o lo+ -m state --state NEW -p tcp ...
+
+Running iptables -A OUTPUT -j ACCEPT ...
+Starting squid ...
+
+Running service squid3 start ...
+squid3 start/running, process 11736
+
+====================
+Proxy single - Test chef_client
+====================
+
+============================================================
+Test chef_client - Proxy single - Configuration client_rb
+============================================================
+Running proxy_tests/files/default/scripts/proxies/single/configurations/client_rb.sh ...
+Unsetting all proxy environment variables ...
+Commenting out set_proxy_config in proxy_tests/files/default/scripts/repo/.chef/knife.rb ...
+Uncommenting set_proxy_config in proxy_tests/files/default/scripts/repo/.chef/knife.rb ...
+Running proxy_tests/files/default/scripts/tests/chef_client.sh ...
+Recreating client and node ...
+
+Running knife node delete test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -y ...
+ERROR: You authenticated successfully to https://api.chef.io/organizations/chef_proxy_tests as client-creator but you are not authorized for this action.
+ERROR: There are proxy servers configured, your Chef server may need to be added to NO_PROXY.
+Response:  missing read permission
+
+Running knife client delete test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -y ...
+Deleted client[test_client]
+
+Running knife client create test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -d -f /tmp/client.pem ...
+Created client[test_client]
+
+Running knife node create test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -d ...
+ERROR: You authenticated successfully to https://api.chef.io/organizations/chef_proxy_tests as client-creator but you are not authorized for this action.
+ERROR: There are proxy servers configured, your Chef server may need to be added to NO_PROXY.
+Response:  missing update permission
+Uploading the test cookbook
+
+Running knife cookbook upload test_upload -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+Uploading test_upload    [1.0.0]
+Uploaded 1 cookbook.
+Running chef-client ...
+
+Running timeout 120 chef-client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -N test_client --client_key /tmp/client.pem -o test ...
+Starting Chef Client, version 13.2.7
+[2017-06-07T08:16:36+00:00] WARN: Run List override has been provided.
+[2017-06-07T08:16:36+00:00] WARN: Run List override has been provided.
+[2017-06-07T08:16:36+00:00] WARN: Original Run List: []
+[2017-06-07T08:16:36+00:00] WARN: Original Run List: []
+[2017-06-07T08:16:36+00:00] WARN: Overridden Run List: [recipe[test]]
+[2017-06-07T08:16:36+00:00] WARN: Overridden Run List: [recipe[test]]
+resolving cookbooks for run list: ["test"]
+Synchronizing Cookbooks:
+  - test (1.0.0)
+Installing Cookbook Gems:
+Compiling Cookbooks...
+Converging 14 resources
+Recipe: test::default
+  * directory[/tmp/test] action delete (up to date)
+  * directory[/tmp/test] action create
+    - create new directory /tmp/test
+  * remote_file[/tmp/test/https.txt] action create
+    - create new file /tmp/test/https.txt
+    - update content in file /tmp/test/https.txt from none to b20143
+    --- /tmp/test/https.txt	2017-06-07 08:16:38.960484486 +0000
+    +++ /tmp/chef-rest20170607-11797-1d4dtnd	2017-06-07 08:16:38.960484486 +0000
+    @@ -1 +1,3 @@
+    +--color
+    +-fd
+  * remote_file[/tmp/test/http.txt] action create
+    - create new file /tmp/test/http.txt
+    - update content in file /tmp/test/http.txt from none to c0394d
+    --- /tmp/test/http.txt	2017-06-07 08:16:39.100578329 +0000
+    +++ /tmp/chef-rest20170607-11797-qlv2rf	2017-06-07 08:16:39.100578329 +0000
+    @@ -1 +1,29 @@
+    +NOTICE (Mar 22 2017):
+    +We plan to cease support for the FTP protocol for file downloads as of
+    +September 4, 2017, because it is insecure. ftp.gnu.org will continue to offer
+    +downloads via HTTPS.
+    +
+    +If you currently have automated scripts that download GNU packages through FTP
+    +please update them to use HTTPS instead.
+    +
+    +--
+    +
+    +If you have any problems with the GNU software or its downloading,
+    +please refer your questions to <gnu@gnu.org>.
+    +
+    +There are several mirrors of this archive, a complete list can be
+    +found on http://www.gnu.org/order/ftp.html.  You might want to use a
+    +mirror closer to you.
+    +
+    +Non-GNU programs that were formerly in gnu/ have moved to gnu/non-gnu/.
+    +Most of them were just pointers in the format program.README.  If you
+    +are looking for such a file, be sure to check gnu/non-gnu/.
+    +
+    +Archives of the GNU mailing lists can be accessed or downloaded
+    +via the web from http://mail.gnu.org; they are no longer available
+    +by ftp.
+    +
+    +The FSF provides this archive as a service to GNU users.  Please
+    +consider donating to the FSF at http://donate.fsf.org/ or becoming an
+    +Associate Member at http://member.fsf.org/.
+  * apt_package[git] action install (up to date)
+  * git[/tmp/test/sudo] action sync
+    - clone from https://github.com/chef-cookbooks/sudo.git into /tmp/test/sudo
+    - checkout ref 2d88b21e96cad4f5db8b3f4f1ec698b1a7c04b14 branch HEAD
+  * apt_package[subversion] action install (up to date)
+  * directory[/tmp/test/couchdb] action create
+    - create new directory /tmp/test/couchdb
+  * subversion[/tmp/test/couchdb] action nothing (skipped due to action :nothing)
+  * chef_gem[retryable] action install
+    - install version 1.2 of package retryable
+  * gem_package[retryable] action install
+    - install version 1.2.1 of package retryable
+  * execute[curl works] action run
+    - execute curl 'https://omnitruck.chef.io/install.sh' -d /tmp/test/curl.out
+  * execute[wget works] action run
+    - execute wget 'https://omnitruck.chef.io/install.sh' -o /tmp/test/wget.out
+  * ruby_block[Net::HTTP test] action run{"BUNDLER_ORIG_PATH"=>"/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/home/travis/bin:/home/travis/.local/bin:/home/travis/.pyenv/shims:/home/travis/.phpenv/shims:/home/travis/gopath/bin:/home/travis/.gimme/versions/go1.7.linux.amd64/bin:/home/travis/.local/bin:/opt/pyenv/bin:/opt/python/2.7.12/bin:/opt/python/3.5.2/bin:/opt/python/2.6.9/bin:/opt/python/3.2.6/bin:/opt/python/3.3.6/bin:/opt/python/3.4.4/bin:/opt/python/pypy-5.4.1/bin:/opt/python/pypy3-2.4.0/bin:/usr/local/phantomjs/bin:/usr/local/phantomjs:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v4.1.2/bin:/usr/local/maven-3.1.1/bin:/home/travis/.kiex/elixirs/elixir-1.0.4/bin:/home/travis/.kiex/bin:/usr/local/gradle/bin:/usr/local/clang-3.5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/home/travis/.phpenv/bin", "MANPATH"=>"/home/travis/.nvm/versions/node/v4.1.2/share/man:/usr/local/clang-3.5.0/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man", "XDG_SESSION_ID"=>"2", "rvm_bin_path"=>"/home/travis/.rvm/bin", "MYSQL_UNIX_PORT"=>"/var/run/mysqld/mysqld.sock", "TK_SUITE_NAME"=>"client_rb", "GEM_HOME"=>"/home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0", "TRAVIS_STACK_JOB_BOARD_REGISTER"=>"/.job-board-register.yml", "HAS_JOSH_K_SEAL_OF_APPROVAL"=>"true", "NVM_CD_FLAGS"=>"", "TRAVIS_TEST_RESULT"=>"0", "TRAVIS_STACK_LANGUAGES"=>"__sugilite__ android c c++ clojure cplusplus cpp crystal csharp d dart default elixir erlang go groovy haskell haxe hhvm java julia legacy mega node_js perl perl6 php pure_java python r ruby rust scala universe", "SHELL"=>"/bin/bash", "TERM"=>"xterm", "HISTSIZE"=>"1000", "IRBRC"=>"/home/travis/.rvm/rubies/ruby-2.4.1/.irbrc", "rvm_binary_flag"=>"1", "ELIXIR_VERSION"=>"1.0.4", "DERBY_HOME"=>"/usr/lib/jvm/java-9-oracle/db", "SSH_CLIENT"=>"10.10.16.13 52456 22", "TRAVIS_COMMIT"=>"d9723ba8a83e694a24c24d3f9dc3a6cc173ff809", "NVM_PATH"=>"/home/travis/.nvm/versions/node/v4.1.2/lib/node", "TRAVIS_OS_NAME"=>"linux", "CASHER_DIR"=>"/home/travis/.casher", "MY_RUBY_HOME"=>"/home/travis/.rvm/rubies/ruby-2.4.1", "SSH_TTY"=>"/dev/pts/0", "rvm_autoupdate_flag"=>"0", "LC_ALL"=>"en_US.UTF-8", "MIX_ARCHIVES"=>"/home/travis/.kiex/mix/elixir-1.0.4", "HISTFILESIZE"=>"2000", "NVM_DIR"=>"/home/travis/.nvm", "USER"=>"root", "rvm_remote_server_url4"=>"https://s3.amazonaws.com/travis-rubies/binaries", "SUDO_USER"=>"travis", "_system_type"=>"Linux", "SUDO_UID"=>"1000", "TRAVIS_LANGUAGE"=>"ruby", "PERLBREW_BASHRC_VERSION"=>"0.78", "rvm_path"=>"/home/travis/.rvm", "TRAVIS"=>"true", "USERNAME"=>"root", "TRAVIS_REPO_SLUG"=>"chef/chef", "HAS_ANTARES_THREE_LITTLE_FRONZIES_BADGE"=>"true", "PYTHON_CONFIGURE_OPTS"=>"--enable-unicode=ucs4 --with-wide-unicode --enable-shared --enable-ipv6 --enable-loadable-sqlite-extensions --with-computed-gotos", "TRAVIS_COMMIT_MESSAGE"=>"Merge fe96207312ca1cea071e48aee9fa110de95a7f4c into 9ae037c7f5c067c48970832ccd3613da0d145b6f", "TRAVIS_PULL_REQUEST"=>"6193", "PAGER"=>"cat", "VIRTUAL_ENV_DISABLE_PROMPT"=>"true", "RACK_ENV"=>"test", "PROXY_TESTS_DIR"=>"proxy_tests/files/default/scripts", "rvm_gem_options"=>"--no-ri --no-rdoc", "PERLBREW_ROOT"=>"/home/travis/perl5/perlbrew", "TRAVIS_STACK_TIMESTAMP"=>"2016-12-05 18:01:17 UTC", "rvm_prefix"=>"/home/travis", "PYTHON_CFLAGS"=>"-g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security", "PATH"=>"/home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0/bin:/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/home/travis/bin:/home/travis/.local/bin:/home/travis/.pyenv/shims:/home/travis/.phpenv/shims:/home/travis/gopath/bin:/home/travis/.gimme/versions/go1.7.linux.amd64/bin:/opt/pyenv/bin:/opt/python/2.7.12/bin:/opt/python/3.5.2/bin:/opt/python/2.6.9/bin:/opt/python/3.2.6/bin:/opt/python/3.3.6/bin:/opt/python/3.4.4/bin:/opt/python/pypy-5.4.1/bin:/opt/python/pypy3-2.4.0/bin:/usr/local/phantomjs/bin:/usr/local/phantomjs:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v4.1.2/bin:/usr/local/maven-3.1.1/bin:/home/travis/.kiex/elixirs/elixir-1.0.4/bin:/home/travis/.kiex/bin:/usr/local/gradle/bin:/usr/local/clang-3.5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/home/travis/.phpenv/bin", "MAIL"=>"/var/mail/travis", "TRAVIS_PULL_REQUEST_SHA"=>"fe96207312ca1cea071e48aee9fa110de95a7f4c", "TRAVIS_RUBY_VERSION"=>"2.4.1", "NVM_NODEJS_ORG_MIRROR"=>"https://nodejs.org/dist", "PWD"=>"/home/travis/build/chef/chef", "JAVA_HOME"=>"/usr/lib/jvm/java-8-oracle", "CONTINUOUS_INTEGRATION"=>"true", "BUNDLER_ORIG_GEM_PATH"=>"/home/travis/.rvm/gems/ruby-2.4.1:/home/travis/.rvm/gems/ruby-2.4.1@global", "LANG"=>"en_US.UTF-8", "rvm_remote_server_verify_downloads4"=>"1", "TZ"=>"UTC", "MERB_ENV"=>"test", "_system_arch"=>"x86_64", "PERLBREW_HOME"=>"/home/travis/.perlbrew", "_system_version"=>"14.04", "TRAVIS_SUDO"=>"true", "TRAVIS_TAG"=>"", "TRAVIS_ALLOW_FAILURE"=>"false", "RBENV_SHELL"=>"bash", "HISTCONTROL"=>"ignoredups:ignorespace", "rvm_version"=>"1.27.0 (latest)", "SUDO_COMMAND"=>"/usr/bin/env rvm_bin_path=/home/travis/.rvm/bin GEM_HOME=/home/travis/.rvm/gems/ruby-2.4.1 rvm_binary_flag=1 IRBRC=/home/travis/.rvm/rubies/ruby-2.4.1/.irbrc MY_RUBY_HOME=/home/travis/.rvm/rubies/ruby-2.4.1 rvm_autoupdate_flag=0 rvm_remote_server_url4=https://s3.amazonaws.com/travis-rubies/binaries rvm_path=/home/travis/.rvm rvm_gem_options=--no-ri --no-rdoc rvm_prefix=/home/travis PATH=/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/home/travis/bin:/home/travis/.local/bin:/home/travis/.pyenv/shims:/home/travis/.phpenv/shims:/home/travis/gopath/bin:/home/travis/.gimme/versions/go1.7.linux.amd64/bin:/home/travis/.local/bin:/opt/pyenv/bin:/opt/python/2.7.12/bin:/opt/python/3.5.2/bin:/opt/python/2.6.9/bin:/opt/python/3.2.6/bin:/opt/python/3.3.6/bin:/opt/python/3.4.4/bin:/opt/python/pypy-5.4.1/bin:/opt/python/pypy3-2.4.0/bin:/usr/local/phantomjs/bin:/usr/local/phantomjs:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v4.1.2/bin:/usr/local/maven-3.1.1/bin:/home/travis/.kiex/elixirs/elixir-1.0.4/bin:/home/travis/.kiex/bin:/usr/local/gradle/bin:/usr/local/clang-3.5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/home/travis/.phpenv/bin TRAVIS_RUBY_VERSION=2.4.1 rvm_remote_server_verify_downloads4=1 rvm_version=1.27.0 (latest) BUNDLE_GEMFILE=/home/travis/build/chef/chef/Gemfile rvm_remote_server_type4=rubies GEM_PATH=/home/travis/.rvm/gems/ruby-2.4.1:/home/travis/.rvm/gems/ruby-2.4.1@global JRUBY_OPTS= --client -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -Xcext.enabled=false -J-Xss2m -Xcompile.invokedynamic=false RUBY_VERSION=ruby-2.4.1 rvm_silence_path_mismatch_check_flag=1 bundle exec bash proxy_tests/files/default/scripts/run_tests.sh chef_client * * /tmp/out.txt", "PROXY_TESTS_REPO"=>"proxy_tests/files/default/scripts/repo", "TRAVIS_JOB_NUMBER"=>"14284.18", "TRAVIS_EVENT_TYPE"=>"pull_request", "PYENV_SHELL"=>"bash", "HOME"=>"/home/travis", "SHLVL"=>"4", "BUNDLE_GEMFILE"=>"/home/travis/build/chef/chef/Gemfile", "GOROOT"=>"/home/travis/.gimme/versions/go1.7.linux.amd64", "RAILS_ENV"=>"test", "CI"=>"true", "rvm_remote_server_type4"=>"rubies", "TRAVIS_BUILD_ID"=>"240266470", "LOGNAME"=>"root", "TRAVIS_STACK_FEATURES"=>"basic chromium disabled-ipv6 docker docker-compose firefox go-toolchain google-chrome jdk memcached mongodb mysql nodejs_interpreter perl_interpreter perlbrew phantomjs postgresql python_interpreter rabbitmq redis ruby_interpreter sphinxsearch sqlite xserver", "TRAVIS_PULL_REQUEST_SLUG"=>"MsysTechnologiesllc/chef", "GEM_PATH"=>"", "COMPOSER_NO_INTERACTION"=>"1", "J2SDKDIR"=>"/usr/lib/jvm/java-9-oracle", "SSH_CONNECTION"=>"10.10.16.13 52456 10.10.20.28 22", "LC_CTYPE"=>"en_US.UTF-8", "TRAVIS_SECURE_ENV_VARS"=>"false", "DEBIAN_FRONTEND"=>"noninteractive", "GOPATH"=>"/home/travis/gopath", "TRAVIS_STACK_NODE_ATTRIBUTES"=>"/.node-attributes.yml", "NVM_BIN"=>"/home/travis/.nvm/versions/node/v4.1.2/bin", "TRAVIS_STACK_NAME"=>"sugilite", "NVM_IOJS_ORG_MIRROR"=>"https://iojs.org/dist", "GIT_ASKPASS"=>"echo", "SUDO_GID"=>"1000", "TRAVIS_BRANCH"=>"master", "XDG_RUNTIME_DIR"=>"/run/user/1000", "RUBYOPT"=>"-rbundler/setup", "TRAVIS_COMMIT_RANGE"=>"9ae037c7f5c067c48970832ccd3613da0d145b6f...fe96207312ca1cea071e48aee9fa110de95a7f4c", "JDK_SWITCHER_DEFAULT"=>"oraclejdk8", "JRUBY_OPTS"=>" --client -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -Xcext.enabled=false -J-Xss2m -Xcompile.invokedynamic=false", "BUNDLE_BIN_PATH"=>"/home/travis/.rvm/gems/ruby-2.4.1@global/gems/bundler-1.15.1/exe/bundle", "FORCE_FFI_YAJL"=>"ext", "TRAVIS_PULL_REQUEST_BRANCH"=>"harry/update_windows_task", "J2REDIR"=>"/usr/lib/jvm/java-9-oracle", "RUBYLIB"=>"/home/travis/.rvm/gems/ruby-2.4.1@global/gems/bundler-1.15.1/lib", "TRAVIS_JOB_ID"=>"240266488", "RUBY_VERSION"=>"ruby-2.4.1", "_system_name"=>"Ubuntu", "TRAVIS_BUILD_DIR"=>"/home/travis/build/chef/chef", "TRAVIS_BUILD_NUMBER"=>"14284", "rvm_silence_path_mismatch_check_flag"=>"1", "BUNDLER_VERSION"=>"1.15.1", "_"=>"/usr/bin/timeout", "BUNDLER_ORIG_MANPATH"=>"/home/travis/.nvm/versions/node/v4.1.2/share/man:/usr/local/clang-3.5.0/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man", "http_proxy"=>"http://127.0.0.1:3128", "HTTP_PROXY"=>"http://127.0.0.1:3128", "https_proxy"=>"http://127.0.0.1:3128", "HTTPS_PROXY"=>"http://127.0.0.1:3128", "ftp_proxy"=>"http://127.0.0.1:3128", "FTP_PROXY"=>"http://127.0.0.1:3128"}
+
+    - execute the ruby block Net::HTTP test
+[2017-06-07T08:16:43+00:00] WARN: Skipping final node save because override_runlist was given
+[2017-06-07T08:16:43+00:00] WARN: Skipping final node save because override_runlist was given
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 10/14 resources updated in 12 seconds
+[2017-06-07T08:16:43+00:00] WARN: *****************************************
+[2017-06-07T08:16:43+00:00] WARN: *****************************************
+[2017-06-07T08:16:43+00:00] WARN: Did not find config file: /proxy_tests/files/default/scripts/repo/.chef/knife.rb, using command line options.
+[2017-06-07T08:16:43+00:00] WARN: Did not find config file: /proxy_tests/files/default/scripts/repo/.chef/knife.rb, using command line options.
+[2017-06-07T08:16:43+00:00] WARN: *****************************************
+[2017-06-07T08:16:43+00:00] WARN: *****************************************
+Testing 'knife ssl'
+
+Running timeout -k 20 -s 9 20 knife ssl check -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+Connecting to host api.chef.io:443
+Successfully verified certificates from `api.chef.io'
+
+Running timeout -k 20 -s 9 20 knife ssl fetch -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+WARNING: Certificates from api.chef.io will be fetched and placed in your trusted_cert
+directory (/home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs).
+
+Knife has no means to verify these are the correct certificates. You should
+verify the authenticity of these certificates after downloading.
+
+Adding certificate for wildcard_opscode_com in /home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs/wildcard_opscode_com.crt
+Adding certificate for DigiCert_SHA2_Secure_Server_CA in /home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs/DigiCert_SHA2_Secure_Server_CA.crt
+Testing knife commands
+
+Running knife role from file proxy_tests/files/default/scripts/repo/roles/test_upload.json -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+Updated Role test_upload
+
+Running knife show roles/test_upload.json -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem --chef-repo-path . ...
+roles/test_upload.json:
+{
+  "name": "test_upload"
+}
+
+>>>>>>> succeeded
+
+
+============================================================
+Test chef_client - Proxy single - Configuration env
+============================================================
+Running proxy_tests/files/default/scripts/proxies/single/configurations/env.sh ...
+Unsetting all proxy environment variables ...
+Commenting out set_proxy_config in proxy_tests/files/default/scripts/repo/.chef/knife.rb ...
+Setting http_proxy, https_proxy and ftp_proxy to http://127.0.0.1:3128 ...
+Running proxy_tests/files/default/scripts/tests/chef_client.sh ...
+Recreating client and node ...
+
+Running knife node delete test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -y ...
+ERROR: You authenticated successfully to https://api.chef.io/organizations/chef_proxy_tests as client-creator but you are not authorized for this action.
+ERROR: There are proxy servers configured, your Chef server may need to be added to NO_PROXY.
+Response:  missing read permission
+
+Running knife client delete test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -y ...
+Deleted client[test_client]
+
+Running knife client create test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -d -f /tmp/client.pem ...
+Created client[test_client]
+
+Running knife node create test_client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem -d ...
+ERROR: You authenticated successfully to https://api.chef.io/organizations/chef_proxy_tests as client-creator but you are not authorized for this action.
+ERROR: There are proxy servers configured, your Chef server may need to be added to NO_PROXY.
+Response:  missing update permission
+Uploading the test cookbook
+
+Running knife cookbook upload test_upload -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+Uploading test_upload    [1.0.0]
+Uploaded 1 cookbook.
+Running chef-client ...
+
+Running timeout 120 chef-client -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -N test_client --client_key /tmp/client.pem -o test ...
+Starting Chef Client, version 13.2.7
+[2017-06-07T08:17:04+00:00] WARN: Run List override has been provided.
+[2017-06-07T08:17:04+00:00] WARN: Run List override has been provided.
+[2017-06-07T08:17:04+00:00] WARN: Original Run List: []
+[2017-06-07T08:17:04+00:00] WARN: Original Run List: []
+[2017-06-07T08:17:04+00:00] WARN: Overridden Run List: [recipe[test]]
+[2017-06-07T08:17:04+00:00] WARN: Overridden Run List: [recipe[test]]
+resolving cookbooks for run list: ["test"]
+Synchronizing Cookbooks:
+  - test (1.0.0)
+Installing Cookbook Gems:
+Compiling Cookbooks...
+Converging 14 resources
+Recipe: test::default
+  * directory[/tmp/test] action delete
+    - delete existing directory /tmp/test
+  * directory[/tmp/test] action create
+    - create new directory /tmp/test
+  * remote_file[/tmp/test/https.txt] action create
+    - create new file /tmp/test/https.txt
+    - update content in file /tmp/test/https.txt from none to b20143
+    --- /tmp/test/https.txt	2017-06-07 08:17:04.789575699 +0000
+    +++ /tmp/chef-rest20170607-12313-thkhy3	2017-06-07 08:17:04.789575699 +0000
+    @@ -1 +1,3 @@
+    +--color
+    +-fd
+  * remote_file[/tmp/test/http.txt] action create
+    - create new file /tmp/test/http.txt
+    - update content in file /tmp/test/http.txt from none to c0394d
+    --- /tmp/test/http.txt	2017-06-07 08:17:04.797580934 +0000
+    +++ /tmp/chef-rest20170607-12313-8ng2rt	2017-06-07 08:17:04.797580934 +0000
+    @@ -1 +1,29 @@
+    +NOTICE (Mar 22 2017):
+    +We plan to cease support for the FTP protocol for file downloads as of
+    +September 4, 2017, because it is insecure. ftp.gnu.org will continue to offer
+    +downloads via HTTPS.
+    +
+    +If you currently have automated scripts that download GNU packages through FTP
+    +please update them to use HTTPS instead.
+    +
+    +--
+    +
+    +If you have any problems with the GNU software or its downloading,
+    +please refer your questions to <gnu@gnu.org>.
+    +
+    +There are several mirrors of this archive, a complete list can be
+    +found on http://www.gnu.org/order/ftp.html.  You might want to use a
+    +mirror closer to you.
+    +
+    +Non-GNU programs that were formerly in gnu/ have moved to gnu/non-gnu/.
+    +Most of them were just pointers in the format program.README.  If you
+    +are looking for such a file, be sure to check gnu/non-gnu/.
+    +
+    +Archives of the GNU mailing lists can be accessed or downloaded
+    +via the web from http://mail.gnu.org; they are no longer available
+    +by ftp.
+    +
+    +The FSF provides this archive as a service to GNU users.  Please
+    +consider donating to the FSF at http://donate.fsf.org/ or becoming an
+    +Associate Member at http://member.fsf.org/.
+  * apt_package[git] action install (up to date)
+  * git[/tmp/test/sudo] action sync
+    - clone from https://github.com/chef-cookbooks/sudo.git into /tmp/test/sudo
+    - checkout ref 2d88b21e96cad4f5db8b3f4f1ec698b1a7c04b14 branch HEAD
+  * apt_package[subversion] action install (up to date)
+  * directory[/tmp/test/couchdb] action create
+    - create new directory /tmp/test/couchdb
+  * subversion[/tmp/test/couchdb] action nothing (skipped due to action :nothing)
+  * chef_gem[retryable] action install
+    - install version 1.2 of package retryable
+  * gem_package[retryable] action install
+    - install version 1.2.1 of package retryable
+  * execute[curl works] action run
+    - execute curl 'https://omnitruck.chef.io/install.sh' -d /tmp/test/curl.out
+  * execute[wget works] action run
+    - execute wget 'https://omnitruck.chef.io/install.sh' -o /tmp/test/wget.out
+  * ruby_block[Net::HTTP test] action run{"BUNDLER_ORIG_PATH"=>"/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/home/travis/bin:/home/travis/.local/bin:/home/travis/.pyenv/shims:/home/travis/.phpenv/shims:/home/travis/gopath/bin:/home/travis/.gimme/versions/go1.7.linux.amd64/bin:/home/travis/.local/bin:/opt/pyenv/bin:/opt/python/2.7.12/bin:/opt/python/3.5.2/bin:/opt/python/2.6.9/bin:/opt/python/3.2.6/bin:/opt/python/3.3.6/bin:/opt/python/3.4.4/bin:/opt/python/pypy-5.4.1/bin:/opt/python/pypy3-2.4.0/bin:/usr/local/phantomjs/bin:/usr/local/phantomjs:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v4.1.2/bin:/usr/local/maven-3.1.1/bin:/home/travis/.kiex/elixirs/elixir-1.0.4/bin:/home/travis/.kiex/bin:/usr/local/gradle/bin:/usr/local/clang-3.5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/home/travis/.phpenv/bin", "MANPATH"=>"/home/travis/.nvm/versions/node/v4.1.2/share/man:/usr/local/clang-3.5.0/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man", "XDG_SESSION_ID"=>"2", "rvm_bin_path"=>"/home/travis/.rvm/bin", "MYSQL_UNIX_PORT"=>"/var/run/mysqld/mysqld.sock", "TK_SUITE_NAME"=>"env", "GEM_HOME"=>"/home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0", "TRAVIS_STACK_JOB_BOARD_REGISTER"=>"/.job-board-register.yml", "HAS_JOSH_K_SEAL_OF_APPROVAL"=>"true", "NVM_CD_FLAGS"=>"", "TRAVIS_TEST_RESULT"=>"0", "TRAVIS_STACK_LANGUAGES"=>"__sugilite__ android c c++ clojure cplusplus cpp crystal csharp d dart default elixir erlang go groovy haskell haxe hhvm java julia legacy mega node_js perl perl6 php pure_java python r ruby rust scala universe", "SHELL"=>"/bin/bash", "TERM"=>"xterm", "HISTSIZE"=>"1000", "IRBRC"=>"/home/travis/.rvm/rubies/ruby-2.4.1/.irbrc", "rvm_binary_flag"=>"1", "ELIXIR_VERSION"=>"1.0.4", "DERBY_HOME"=>"/usr/lib/jvm/java-9-oracle/db", "SSH_CLIENT"=>"10.10.16.13 52456 22", "TRAVIS_COMMIT"=>"d9723ba8a83e694a24c24d3f9dc3a6cc173ff809", "NVM_PATH"=>"/home/travis/.nvm/versions/node/v4.1.2/lib/node", "TRAVIS_OS_NAME"=>"linux", "CASHER_DIR"=>"/home/travis/.casher", "MY_RUBY_HOME"=>"/home/travis/.rvm/rubies/ruby-2.4.1", "SSH_TTY"=>"/dev/pts/0", "rvm_autoupdate_flag"=>"0", "LC_ALL"=>"en_US.UTF-8", "MIX_ARCHIVES"=>"/home/travis/.kiex/mix/elixir-1.0.4", "http_proxy"=>"http://127.0.0.1:3128", "HISTFILESIZE"=>"2000", "NVM_DIR"=>"/home/travis/.nvm", "USER"=>"root", "rvm_remote_server_url4"=>"https://s3.amazonaws.com/travis-rubies/binaries", "SUDO_USER"=>"travis", "_system_type"=>"Linux", "SUDO_UID"=>"1000", "TRAVIS_LANGUAGE"=>"ruby", "PERLBREW_BASHRC_VERSION"=>"0.78", "rvm_path"=>"/home/travis/.rvm", "ftp_proxy"=>"http://127.0.0.1:3128", "TRAVIS"=>"true", "USERNAME"=>"root", "TRAVIS_REPO_SLUG"=>"chef/chef", "HAS_ANTARES_THREE_LITTLE_FRONZIES_BADGE"=>"true", "PYTHON_CONFIGURE_OPTS"=>"--enable-unicode=ucs4 --with-wide-unicode --enable-shared --enable-ipv6 --enable-loadable-sqlite-extensions --with-computed-gotos", "TRAVIS_COMMIT_MESSAGE"=>"Merge fe96207312ca1cea071e48aee9fa110de95a7f4c into 9ae037c7f5c067c48970832ccd3613da0d145b6f", "TRAVIS_PULL_REQUEST"=>"6193", "PAGER"=>"cat", "VIRTUAL_ENV_DISABLE_PROMPT"=>"true", "RACK_ENV"=>"test", "PROXY_TESTS_DIR"=>"proxy_tests/files/default/scripts", "rvm_gem_options"=>"--no-ri --no-rdoc", "PERLBREW_ROOT"=>"/home/travis/perl5/perlbrew", "TRAVIS_STACK_TIMESTAMP"=>"2016-12-05 18:01:17 UTC", "rvm_prefix"=>"/home/travis", "PYTHON_CFLAGS"=>"-g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security", "PATH"=>"/home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0/bin:/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/home/travis/bin:/home/travis/.local/bin:/home/travis/.pyenv/shims:/home/travis/.phpenv/shims:/home/travis/gopath/bin:/home/travis/.gimme/versions/go1.7.linux.amd64/bin:/opt/pyenv/bin:/opt/python/2.7.12/bin:/opt/python/3.5.2/bin:/opt/python/2.6.9/bin:/opt/python/3.2.6/bin:/opt/python/3.3.6/bin:/opt/python/3.4.4/bin:/opt/python/pypy-5.4.1/bin:/opt/python/pypy3-2.4.0/bin:/usr/local/phantomjs/bin:/usr/local/phantomjs:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v4.1.2/bin:/usr/local/maven-3.1.1/bin:/home/travis/.kiex/elixirs/elixir-1.0.4/bin:/home/travis/.kiex/bin:/usr/local/gradle/bin:/usr/local/clang-3.5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/home/travis/.phpenv/bin", "MAIL"=>"/var/mail/travis", "TRAVIS_PULL_REQUEST_SHA"=>"fe96207312ca1cea071e48aee9fa110de95a7f4c", "TRAVIS_RUBY_VERSION"=>"2.4.1", "NVM_NODEJS_ORG_MIRROR"=>"https://nodejs.org/dist", "PWD"=>"/home/travis/build/chef/chef", "JAVA_HOME"=>"/usr/lib/jvm/java-8-oracle", "CONTINUOUS_INTEGRATION"=>"true", "BUNDLER_ORIG_GEM_PATH"=>"/home/travis/.rvm/gems/ruby-2.4.1:/home/travis/.rvm/gems/ruby-2.4.1@global", "LANG"=>"en_US.UTF-8", "rvm_remote_server_verify_downloads4"=>"1", "TZ"=>"UTC", "MERB_ENV"=>"test", "_system_arch"=>"x86_64", "PERLBREW_HOME"=>"/home/travis/.perlbrew", "_system_version"=>"14.04", "TRAVIS_SUDO"=>"true", "https_proxy"=>"http://127.0.0.1:3128", "TRAVIS_TAG"=>"", "TRAVIS_ALLOW_FAILURE"=>"false", "RBENV_SHELL"=>"bash", "HISTCONTROL"=>"ignoredups:ignorespace", "rvm_version"=>"1.27.0 (latest)", "SUDO_COMMAND"=>"/usr/bin/env rvm_bin_path=/home/travis/.rvm/bin GEM_HOME=/home/travis/.rvm/gems/ruby-2.4.1 rvm_binary_flag=1 IRBRC=/home/travis/.rvm/rubies/ruby-2.4.1/.irbrc MY_RUBY_HOME=/home/travis/.rvm/rubies/ruby-2.4.1 rvm_autoupdate_flag=0 rvm_remote_server_url4=https://s3.amazonaws.com/travis-rubies/binaries rvm_path=/home/travis/.rvm rvm_gem_options=--no-ri --no-rdoc rvm_prefix=/home/travis PATH=/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/home/travis/bin:/home/travis/.local/bin:/home/travis/.pyenv/shims:/home/travis/.phpenv/shims:/home/travis/gopath/bin:/home/travis/.gimme/versions/go1.7.linux.amd64/bin:/home/travis/.local/bin:/opt/pyenv/bin:/opt/python/2.7.12/bin:/opt/python/3.5.2/bin:/opt/python/2.6.9/bin:/opt/python/3.2.6/bin:/opt/python/3.3.6/bin:/opt/python/3.4.4/bin:/opt/python/pypy-5.4.1/bin:/opt/python/pypy3-2.4.0/bin:/usr/local/phantomjs/bin:/usr/local/phantomjs:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v4.1.2/bin:/usr/local/maven-3.1.1/bin:/home/travis/.kiex/elixirs/elixir-1.0.4/bin:/home/travis/.kiex/bin:/usr/local/gradle/bin:/usr/local/clang-3.5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/home/travis/.phpenv/bin TRAVIS_RUBY_VERSION=2.4.1 rvm_remote_server_verify_downloads4=1 rvm_version=1.27.0 (latest) BUNDLE_GEMFILE=/home/travis/build/chef/chef/Gemfile rvm_remote_server_type4=rubies GEM_PATH=/home/travis/.rvm/gems/ruby-2.4.1:/home/travis/.rvm/gems/ruby-2.4.1@global JRUBY_OPTS= --client -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -Xcext.enabled=false -J-Xss2m -Xcompile.invokedynamic=false RUBY_VERSION=ruby-2.4.1 rvm_silence_path_mismatch_check_flag=1 bundle exec bash proxy_tests/files/default/scripts/run_tests.sh chef_client * * /tmp/out.txt", "PROXY_TESTS_REPO"=>"proxy_tests/files/default/scripts/repo", "TRAVIS_JOB_NUMBER"=>"14284.18", "TRAVIS_EVENT_TYPE"=>"pull_request", "PYENV_SHELL"=>"bash", "HOME"=>"/home/travis", "SHLVL"=>"4", "BUNDLE_GEMFILE"=>"/home/travis/build/chef/chef/Gemfile", "GOROOT"=>"/home/travis/.gimme/versions/go1.7.linux.amd64", "RAILS_ENV"=>"test", "CI"=>"true", "rvm_remote_server_type4"=>"rubies", "TRAVIS_BUILD_ID"=>"240266470", "LOGNAME"=>"root", "TRAVIS_STACK_FEATURES"=>"basic chromium disabled-ipv6 docker docker-compose firefox go-toolchain google-chrome jdk memcached mongodb mysql nodejs_interpreter perl_interpreter perlbrew phantomjs postgresql python_interpreter rabbitmq redis ruby_interpreter sphinxsearch sqlite xserver", "TRAVIS_PULL_REQUEST_SLUG"=>"MsysTechnologiesllc/chef", "GEM_PATH"=>"", "COMPOSER_NO_INTERACTION"=>"1", "J2SDKDIR"=>"/usr/lib/jvm/java-9-oracle", "SSH_CONNECTION"=>"10.10.16.13 52456 10.10.20.28 22", "LC_CTYPE"=>"en_US.UTF-8", "TRAVIS_SECURE_ENV_VARS"=>"false", "DEBIAN_FRONTEND"=>"noninteractive", "GOPATH"=>"/home/travis/gopath", "TRAVIS_STACK_NODE_ATTRIBUTES"=>"/.node-attributes.yml", "NVM_BIN"=>"/home/travis/.nvm/versions/node/v4.1.2/bin", "TRAVIS_STACK_NAME"=>"sugilite", "NVM_IOJS_ORG_MIRROR"=>"https://iojs.org/dist", "GIT_ASKPASS"=>"echo", "SUDO_GID"=>"1000", "TRAVIS_BRANCH"=>"master", "XDG_RUNTIME_DIR"=>"/run/user/1000", "RUBYOPT"=>"-rbundler/setup", "TRAVIS_COMMIT_RANGE"=>"9ae037c7f5c067c48970832ccd3613da0d145b6f...fe96207312ca1cea071e48aee9fa110de95a7f4c", "JDK_SWITCHER_DEFAULT"=>"oraclejdk8", "JRUBY_OPTS"=>" --client -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -Xcext.enabled=false -J-Xss2m -Xcompile.invokedynamic=false", "BUNDLE_BIN_PATH"=>"/home/travis/.rvm/gems/ruby-2.4.1@global/gems/bundler-1.15.1/exe/bundle", "FORCE_FFI_YAJL"=>"ext", "TRAVIS_PULL_REQUEST_BRANCH"=>"harry/update_windows_task", "J2REDIR"=>"/usr/lib/jvm/java-9-oracle", "RUBYLIB"=>"/home/travis/.rvm/gems/ruby-2.4.1@global/gems/bundler-1.15.1/lib", "TRAVIS_JOB_ID"=>"240266488", "RUBY_VERSION"=>"ruby-2.4.1", "_system_name"=>"Ubuntu", "TRAVIS_BUILD_DIR"=>"/home/travis/build/chef/chef", "TRAVIS_BUILD_NUMBER"=>"14284", "rvm_silence_path_mismatch_check_flag"=>"1", "BUNDLER_VERSION"=>"1.15.1", "_"=>"/usr/bin/timeout", "BUNDLER_ORIG_MANPATH"=>"/home/travis/.nvm/versions/node/v4.1.2/share/man:/usr/local/clang-3.5.0/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man"}
+
+    - execute the ruby block Net::HTTP test
+[2017-06-07T08:17:08+00:00] WARN: Skipping final node save because override_runlist was given
+[2017-06-07T08:17:08+00:00] WARN: Skipping final node save because override_runlist was given
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 11/14 resources updated in 09 seconds
+[2017-06-07T08:17:08+00:00] WARN: *****************************************
+[2017-06-07T08:17:08+00:00] WARN: *****************************************
+[2017-06-07T08:17:08+00:00] WARN: Did not find config file: /proxy_tests/files/default/scripts/repo/.chef/knife.rb, using command line options.
+[2017-06-07T08:17:08+00:00] WARN: Did not find config file: /proxy_tests/files/default/scripts/repo/.chef/knife.rb, using command line options.
+[2017-06-07T08:17:08+00:00] WARN: *****************************************
+[2017-06-07T08:17:08+00:00] WARN: *****************************************
+Testing 'knife ssl'
+
+Running timeout -k 20 -s 9 20 knife ssl check -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+
+Configuration Info:
+
+OpenSSL Configuration:
+* Version: OpenSSL 1.0.1f 6 Jan 2014
+* Certificate file: /usr/lib/ssl/cert.pem
+* Certificate directory: /usr/lib/ssl/certs
+Chef SSL Configuration:
+* ssl_ca_path: nil
+* ssl_ca_file: nil
+* trusted_certs_dir: "/home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs"
+WARNING: There are invalid certificates in your trusted_certs_dir.
+OpenSSL will not use the following certificates when verifying SSL connections:
+
+/home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs/DigiCert_SHA2_Secure_Server_CA.crt: unable to get local issuer certificate
+/home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs/wildcard_opscode_com.crt: unable to get local issuer certificate
+
+
+TO FIX THESE WARNINGS:
+
+We are working on documentation for resolving common issues uncovered here.
+
+* If the certificate is generated by the server, you may try redownloading the
+server's certificate. By default, the certificate is stored in the following
+location on the host where your chef-server runs:
+
+  /var/opt/opscode/nginx/ca/SERVER_HOSTNAME.crt
+
+Copy that file to your trusted_certs_dir (currently: /home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs)
+using SSH/SCP or some other secure method, then re-run this command to confirm
+that the server's certificate is now trusted.
+
+Connecting to host api.chef.io:443
+Successfully verified certificates from `api.chef.io'
+
+Running timeout -k 20 -s 9 20 knife ssl fetch -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+WARNING: Certificates from api.chef.io will be fetched and placed in your trusted_cert
+directory (/home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs).
+
+Knife has no means to verify these are the correct certificates. You should
+verify the authenticity of these certificates after downloading.
+
+Adding certificate for wildcard_opscode_com in /home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs/wildcard_opscode_com.crt
+Adding certificate for DigiCert_SHA2_Secure_Server_CA in /home/travis/build/chef/chef/proxy_tests/files/default/scripts/repo/.chef/trusted_certs/DigiCert_SHA2_Secure_Server_CA.crt
+Testing knife commands
+
+Running knife role from file proxy_tests/files/default/scripts/repo/roles/test_upload.json -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem ...
+Updated Role test_upload
+
+Running knife show roles/test_upload.json -c proxy_tests/files/default/scripts/repo/.chef/knife.rb -u client-creator --key proxy_tests/files/default/scripts/repo/.chef/client-creator.pem --chef-repo-path . ...
+roles/test_upload.json:
+{
+  "name": "test_upload"
+}
+
+>>>>>>> succeeded
+
+SKIPPING - pending
+
+========================================
+Proxy single_with_auth
+========================================
+Running proxy_tests/files/default/scripts/proxies/single_with_auth/start.sh ...
+Stopping squid ...
+
+Running service squid3 stop ...
+squid3 stop/waiting
+stopped successfully
+Copying squid configuration ...
+
+Running cp proxy_tests/files/default/scripts/proxies/single/squid.conf /etc/squid3/squid.conf ...
+Setting routes to deny all traffic except ssh and squid ...
+
+Running iptables -F OUTPUT ...
+
+Running iptables -A OUTPUT -j ACCEPT -p tcp --dport 22 ...
+
+Running iptables -A OUTPUT -j ACCEPT -m owner --uid-owner proxy ...
+
+Running iptables -A OUTPUT -j DROP ! -o lo+ -m state --state NEW -p tcp ...
+
+Running iptables -A OUTPUT -j ACCEPT ...
+Starting squid ...
+
+Running service squid3 start ...
+squid3 start/running, process 12811
+
+====================
+Proxy single_with_auth - Test chef_client
+====================
+SKIPPING - pending
+SKIPPING - pending
+SKIPPING - pending
+
+travis_time:end:09029d66:start=1496823372947405279,finish=1496823436164893450,duration=63217488171
+The command "rvmsudo -E bundle exec bash $PROXY_TESTS_DIR/run_tests.sh chef_client \* \* /tmp/out.txt" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+Removing retryable (1.2.1)
+Removing retryable (1.2)
+travis_time:start:1ba50e00
+travis_time:end:1ba50e00:start=1496823436600043807,finish=1496823436604559134,duration=4515327travis_time:start:21a7dc8achanges detected, packing new archive
+uploading archive
+failed to upload cache
+curl: (7) Failed to connect to travis-cache-production-org-gce.storage.googleapis.com port 443: Connection timed out
+
+
+travis_time:end:21a7dc8a:start=1496823436609422157,finish=1496823567376808269,duration=130767386112travis_fold:end:cache.2travis_fold:start:after_script.1travis_time:start:01a9e0e4$ cat /tmp/out.txt
+# Test,Proxy,Configuration,Result
+chef_client,none,no_proxy,pending
+chef_client,single,client_rb,succeeded
+chef_client,single,env,succeeded
+chef_client,single,env_upper,pending
+chef_client,single_with_auth,client_rb,pending
+chef_client,single_with_auth,env,pending
+chef_client,single_with_auth,env_upper,pending
+
+travis_time:end:01a9e0e4:start=1496823567383857409,finish=1496823567390302885,duration=6445476travis_fold:end:after_script.1travis_fold:start:after_script.2travis_time:start:030ee45c$ sudo cat /var/log/squid3/cache.log
+2017/06/07 08:15:39 kid1| Creating missing swap directories
+2017/06/07 08:15:39 kid1| No cache_dir stores are configured.
+2017/06/07 08:15:40| Starting Squid Cache version 3.3.8 for x86_64-pc-linux-gnu...
+2017/06/07 08:15:40| Process ID 10432
+2017/06/07 08:15:40| Process Roles: master worker
+2017/06/07 08:15:40| With 65536 file descriptors available
+2017/06/07 08:15:40| Initializing IP Cache...
+2017/06/07 08:15:40| DNS Socket created at [::], FD 5
+2017/06/07 08:15:40| DNS Socket created at 0.0.0.0, FD 6
+2017/06/07 08:15:40| Adding nameserver 169.254.169.254 from /etc/resolv.conf
+2017/06/07 08:15:40| Adding domain c.travis-ci-prod-5.internal from /etc/resolv.conf
+2017/06/07 08:15:40| Adding domain google.internal from /etc/resolv.conf
+2017/06/07 08:15:40| Logfile: opening log daemon:/var/log/squid3/access.log
+2017/06/07 08:15:40| Logfile Daemon: opening log /var/log/squid3/access.log
+2017/06/07 08:15:40| Local cache digest enabled; rebuild/rewrite every 3600/3600 sec
+2017/06/07 08:15:40| Store logging disabled
+2017/06/07 08:15:40| Swap maxSize 0 + 262144 KB, estimated 20164 objects
+2017/06/07 08:15:40| Target number of buckets: 1008
+2017/06/07 08:15:40| Using 8192 Store buckets
+2017/06/07 08:15:40| Max Mem  size: 262144 KB
+2017/06/07 08:15:40| Max Swap size: 0 KB
+2017/06/07 08:15:40| Using Least Load store dir selection
+2017/06/07 08:15:40| Set Current Directory to /var/spool/squid3
+2017/06/07 08:15:40| Loaded Icons.
+2017/06/07 08:15:40| HTCP Disabled.
+2017/06/07 08:15:40| commBind: Cannot bind socket FD 10 to [::1]: (99) Cannot assign requested address
+2017/06/07 08:15:40| commBind: Cannot bind socket FD 11 to [::1]: (99) Cannot assign requested address
+2017/06/07 08:15:40| ERROR: Failed to create helper child read FD: UDP[::1]
+2017/06/07 08:15:40| Squid plugin modules loaded: 0
+2017/06/07 08:15:40| Adaptation support is off.
+2017/06/07 08:15:40| Accepting HTTP Socket connections at local=[::]:3128 remote=[::] FD 9 flags=9
+2017/06/07 08:15:41| storeLateRelease: released 0 objects
+2017/06/07 08:16:13| Preparing for shutdown after 0 requests
+2017/06/07 08:16:13| Waiting 0 seconds for active connections to finish
+2017/06/07 08:16:13| Closing HTTP port [::]:3128
+2017/06/07 08:16:13| Shutdown: NTLM authentication.
+2017/06/07 08:16:13| Shutdown: Negotiate authentication.
+2017/06/07 08:16:13| Shutdown: Digest authentication.
+2017/06/07 08:16:13| Shutdown: Basic authentication.
+2017/06/07 08:16:15| Shutting down...
+2017/06/07 08:16:15| storeDirWriteCleanLogs: Starting...
+2017/06/07 08:16:15|   Finished.  Wrote 0 entries.
+2017/06/07 08:16:15|   Took 0.00 seconds (  0.00 entries/sec).
+CPU Usage: 0.056 seconds = 0.036 user + 0.020 sys
+Maximum Resident Size: 94368 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    4592 KB
+	Ordinary blocks:         4509 KB      4 blks
+	Small blocks:               0 KB     14 blks
+	Holding blocks:         36892 KB      8 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      82 KB
+	Total in use:           41401 KB 902%
+	Total free:                83 KB 2%
+2017/06/07 08:16:15| Logfile: closing log daemon:/var/log/squid3/access.log
+2017/06/07 08:16:15| Logfile Daemon: closing log daemon:/var/log/squid3/access.log
+2017/06/07 08:16:15| Open FD UNSTARTED     5 DNS Socket IPv6
+2017/06/07 08:16:15| Open FD UNSTARTED     6 DNS Socket IPv4
+2017/06/07 08:16:15| Open FD UNSTARTED     7 IPC UNIX STREAM Parent
+2017/06/07 08:16:15| Squid Cache (Version 3.3.8): Exiting normally.
+2017/06/07 08:16:15| Starting Squid Cache version 3.3.8 for x86_64-pc-linux-gnu...
+2017/06/07 08:16:15| Process ID 11736
+2017/06/07 08:16:15| Process Roles: master worker
+2017/06/07 08:16:15| With 65536 file descriptors available
+2017/06/07 08:16:15| Initializing IP Cache...
+2017/06/07 08:16:15| DNS Socket created at [::], FD 5
+2017/06/07 08:16:15| DNS Socket created at 0.0.0.0, FD 6
+2017/06/07 08:16:15| Adding nameserver 169.254.169.254 from /etc/resolv.conf
+2017/06/07 08:16:15| Adding domain c.travis-ci-prod-5.internal from /etc/resolv.conf
+2017/06/07 08:16:15| Adding domain google.internal from /etc/resolv.conf
+2017/06/07 08:16:15| Logfile: opening log daemon:/var/log/squid3/access.log
+2017/06/07 08:16:15| Logfile Daemon: opening log /var/log/squid3/access.log
+2017/06/07 08:16:15| Local cache digest enabled; rebuild/rewrite every 3600/3600 sec
+2017/06/07 08:16:15| Store logging disabled
+2017/06/07 08:16:15| Swap maxSize 0 + 262144 KB, estimated 20164 objects
+2017/06/07 08:16:15| Target number of buckets: 1008
+2017/06/07 08:16:15| Using 8192 Store buckets
+2017/06/07 08:16:15| Max Mem  size: 262144 KB
+2017/06/07 08:16:15| Max Swap size: 0 KB
+2017/06/07 08:16:15| Using Least Load store dir selection
+2017/06/07 08:16:15| chdir: /var/spool/squid: (2) No such file or directory
+2017/06/07 08:16:15| Current Directory is /
+2017/06/07 08:16:15| Loaded Icons.
+2017/06/07 08:16:15| HTCP Disabled.
+2017/06/07 08:16:15| commBind: Cannot bind socket FD 10 to [::1]: (99) Cannot assign requested address
+2017/06/07 08:16:15| commBind: Cannot bind socket FD 11 to [::1]: (99) Cannot assign requested address
+2017/06/07 08:16:15| ERROR: Failed to create helper child read FD: UDP[::1]
+2017/06/07 08:16:15| Squid plugin modules loaded: 0
+2017/06/07 08:16:15| Adaptation support is off.
+2017/06/07 08:16:15| Accepting HTTP Socket connections at local=127.0.0.1:3128 remote=[::] FD 9 flags=9
+2017/06/07 08:16:16| storeLateRelease: released 0 objects
+2017/06/07 08:17:12| Preparing for shutdown after 68 requests
+2017/06/07 08:17:12| Waiting 0 seconds for active connections to finish
+2017/06/07 08:17:12| Closing HTTP port 127.0.0.1:3128
+2017/06/07 08:17:12| Shutdown: NTLM authentication.
+2017/06/07 08:17:12| Shutdown: Negotiate authentication.
+2017/06/07 08:17:12| Shutdown: Digest authentication.
+2017/06/07 08:17:12| Shutdown: Basic authentication.
+2017/06/07 08:17:14| Shutting down...
+2017/06/07 08:17:14| storeDirWriteCleanLogs: Starting...
+2017/06/07 08:17:14|   Finished.  Wrote 0 entries.
+2017/06/07 08:17:14|   Took 0.00 seconds (  0.00 entries/sec).
+CPU Usage: 0.140 seconds = 0.072 user + 0.068 sys
+Maximum Resident Size: 96032 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    5420 KB
+	Ordinary blocks:         4686 KB     36 blks
+	Small blocks:               0 KB     13 blks
+	Holding blocks:         36892 KB      8 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:     733 KB
+	Total in use:           41578 KB 767%
+	Total free:               734 KB 14%
+2017/06/07 08:17:14| Logfile: closing log daemon:/var/log/squid3/access.log
+2017/06/07 08:17:14| Logfile Daemon: closing log daemon:/var/log/squid3/access.log
+2017/06/07 08:17:14| Open FD UNSTARTED     5 DNS Socket IPv6
+2017/06/07 08:17:14| Open FD READ/WRITE    6 DNS Socket IPv4
+2017/06/07 08:17:14| Open FD UNSTARTED     7 IPC UNIX STREAM Parent
+2017/06/07 08:17:14| Squid Cache (Version 3.3.8): Exiting normally.
+2017/06/07 08:17:14| Starting Squid Cache version 3.3.8 for x86_64-pc-linux-gnu...
+2017/06/07 08:17:14| Process ID 12811
+2017/06/07 08:17:14| Process Roles: master worker
+2017/06/07 08:17:14| With 65536 file descriptors available
+2017/06/07 08:17:14| Initializing IP Cache...
+2017/06/07 08:17:14| DNS Socket created at [::], FD 5
+2017/06/07 08:17:14| DNS Socket created at 0.0.0.0, FD 6
+2017/06/07 08:17:14| Adding nameserver 169.254.169.254 from /etc/resolv.conf
+2017/06/07 08:17:14| Adding domain c.travis-ci-prod-5.internal from /etc/resolv.conf
+2017/06/07 08:17:14| Adding domain google.internal from /etc/resolv.conf
+2017/06/07 08:17:14| Logfile: opening log daemon:/var/log/squid3/access.log
+2017/06/07 08:17:14| Logfile Daemon: opening log /var/log/squid3/access.log
+2017/06/07 08:17:14| Local cache digest enabled; rebuild/rewrite every 3600/3600 sec
+2017/06/07 08:17:14| Store logging disabled
+2017/06/07 08:17:14| Swap maxSize 0 + 262144 KB, estimated 20164 objects
+2017/06/07 08:17:14| Target number of buckets: 1008
+2017/06/07 08:17:14| Using 8192 Store buckets
+2017/06/07 08:17:14| Max Mem  size: 262144 KB
+2017/06/07 08:17:14| Max Swap size: 0 KB
+2017/06/07 08:17:14| Using Least Load store dir selection
+2017/06/07 08:17:14| chdir: /var/spool/squid: (2) No such file or directory
+2017/06/07 08:17:14| Current Directory is /
+2017/06/07 08:17:14| Loaded Icons.
+2017/06/07 08:17:14| HTCP Disabled.
+2017/06/07 08:17:14| commBind: Cannot bind socket FD 10 to [::1]: (99) Cannot assign requested address
+2017/06/07 08:17:14| commBind: Cannot bind socket FD 11 to [::1]: (99) Cannot assign requested address
+2017/06/07 08:17:14| ERROR: Failed to create helper child read FD: UDP[::1]
+2017/06/07 08:17:14| Squid plugin modules loaded: 0
+2017/06/07 08:17:14| Adaptation support is off.
+2017/06/07 08:17:14| Accepting HTTP Socket connections at local=127.0.0.1:3128 remote=[::] FD 9 flags=9
+2017/06/07 08:17:15| storeLateRelease: released 0 objects
+
+travis_time:end:030ee45c:start=1496823567397063936,finish=1496823567408402669,duration=11338733travis_fold:end:after_script.2travis_fold:start:after_script.3travis_time:start:01d138cc$ sudo cat /var/log/squid3/access.log
+1496823378.003    184 127.0.0.1 TCP_MISS/200 3455 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823378.884    131 127.0.0.1 TCP_MISS/200 3585 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823379.087    200 127.0.0.1 TCP_MISS/200 3585 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823379.923    126 127.0.0.1 TCP_MISS/200 3469 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823380.332    407 127.0.0.1 TCP_MISS/200 5958 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823381.196    135 127.0.0.1 TCP_MISS/200 3457 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823382.178    125 127.0.0.1 TCP_MISS/200 3547 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823387.316    135 127.0.0.1 TCP_MISS/200 3613 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823388.855   1534 127.0.0.1 TCP_MISS/200 3776 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823389.077    219 127.0.0.1 TCP_MISS/200 3624 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823389.219    137 127.0.0.1 TCP_MISS/200 3889 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823396.611    133 127.0.0.1 TCP_MISS/200 3605 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823396.776    145 127.0.0.1 TCP_MISS/200 3570 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823396.897    116 127.0.0.1 TCP_MISS/200 3853 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823397.045    144 127.0.0.1 TCP_MISS/200 4349 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823398.847    117 127.0.0.1 TCP_MISS/200 3853 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823398.960    105 127.0.0.1 TCP_MISS/200 4801 CONNECT raw.githubusercontent.com:443 - HIER_DIRECT/151.101.0.133 -
+1496823399.103    131 127.0.0.1 TCP_MISS/200 1570 GET http://ftp.gnu.org/welcome.msg - HIER_DIRECT/208.118.235.20 -
+1496823399.467    291 127.0.0.1 TCP_MISS/200 16526 CONNECT github.com:443 - HIER_DIRECT/192.30.253.113 -
+1496823399.951    459 127.0.0.1 TCP_MISS/200 340922 CONNECT github.com:443 - HIER_DIRECT/192.30.253.113 -
+1496823400.644   3582 127.0.0.1 TCP_MISS/200 3557 CONNECT s3-external-1.amazonaws.com:443 - HIER_DIRECT/52.216.64.84 -
+1496823400.645   3583 127.0.0.1 TCP_MISS/200 5312 CONNECT s3-external-1.amazonaws.com:443 - HIER_DIRECT/52.216.64.84 -
+1496823400.645   3583 127.0.0.1 TCP_MISS/200 4318 CONNECT s3-external-1.amazonaws.com:443 - HIER_DIRECT/52.216.64.84 -
+1496823400.646   3584 127.0.0.1 TCP_MISS/200 3666 CONNECT s3-external-1.amazonaws.com:443 - HIER_DIRECT/52.216.64.84 -
+1496823401.761    357 127.0.0.1 TCP_MISS/200 8922 CONNECT api.rubygems.org:443 - HIER_DIRECT/151.101.194.2 -
+1496823401.761    292 127.0.0.1 TCP_MISS/200 12908 CONNECT www.rubygems.org:443 - HIER_DIRECT/151.101.130.2 -
+1496823402.544    294 127.0.0.1 TCP_MISS/200 5654 CONNECT omnitruck.chef.io:443 - HIER_DIRECT/151.101.0.65 -
+1496823402.631     61 127.0.0.1 TCP_MISS/200 26521 CONNECT omnitruck.chef.io:443 - HIER_DIRECT/151.101.0.65 -
+1496823402.669     22 127.0.0.1 TCP_MISS/301 625 GET http://www.chef.io/ - HIER_DIRECT/151.101.0.65 -
+1496823403.379    708 127.0.0.1 TCP_MISS/200 24818 CONNECT www.chef.io:443 - HIER_DIRECT/151.101.0.65 -
+1496823403.550    159 127.0.0.1 TCP_MISS/200 3259 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823403.564   2831 127.0.0.1 TCP_MISS/200 27172 CONNECT www.rubygems.org:443 - HIER_DIRECT/151.101.130.2 -
+1496823404.388     93 127.0.0.1 TCP_MISS/200 3043 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823405.288     96 127.0.0.1 TCP_MISS/200 3043 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823406.149    153 127.0.0.1 TCP_MISS/200 3604 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823407.104    128 127.0.0.1 TCP_MISS/200 3604 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823408.003    140 127.0.0.1 TCP_MISS/200 3455 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823408.889    128 127.0.0.1 TCP_MISS/200 3585 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823409.068    175 127.0.0.1 TCP_MISS/200 3585 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823409.981    125 127.0.0.1 TCP_MISS/200 3469 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823410.437    452 127.0.0.1 TCP_MISS/200 5958 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823411.299    124 127.0.0.1 TCP_MISS/200 3457 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823412.178    119 127.0.0.1 TCP_MISS/200 3547 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823417.319    136 127.0.0.1 TCP_MISS/200 3613 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823417.543    219 127.0.0.1 TCP_MISS/200 3776 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823417.786    239 127.0.0.1 TCP_MISS/200 3624 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823417.925    134 127.0.0.1 TCP_MISS/200 3889 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823424.129    133 127.0.0.1 TCP_MISS/200 3605 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823424.322    174 127.0.0.1 TCP_MISS/200 3570 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823424.443    117 127.0.0.1 TCP_MISS/200 3853 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823424.597    149 127.0.0.1 TCP_MISS/200 4341 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823424.730    117 127.0.0.1 TCP_MISS/200 3853 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823424.792     46 127.0.0.1 TCP_MISS/200 4800 CONNECT raw.githubusercontent.com:443 - HIER_DIRECT/151.101.0.133 -
+1496823424.799      0 127.0.0.1 TCP_DENIED/200 1577 GET http://ftp.gnu.org/welcome.msg - HIER_NONE/- -
+1496823425.153    285 127.0.0.1 TCP_MISS/200 16680 CONNECT github.com:443 - HIER_DIRECT/192.30.253.113 -
+1496823425.640    463 127.0.0.1 TCP_MISS/200 341076 CONNECT github.com:443 - HIER_DIRECT/192.30.253.113 -
+1496823427.182    189 127.0.0.1 TCP_MISS/200 8921 CONNECT api.rubygems.org:443 - HIER_DIRECT/151.101.194.2 -
+1496823427.182    139 127.0.0.1 TCP_MISS/200 8919 CONNECT www.rubygems.org:443 - HIER_DIRECT/151.101.130.2 -
+1496823427.776    262 127.0.0.1 TCP_MISS/200 5654 CONNECT omnitruck.chef.io:443 - HIER_DIRECT/151.101.0.65 -
+1496823427.855     58 127.0.0.1 TCP_MISS/200 26521 CONNECT omnitruck.chef.io:443 - HIER_DIRECT/151.101.0.65 -
+1496823427.903     21 127.0.0.1 TCP_MISS/301 625 GET http://www.chef.io/ - HIER_DIRECT/151.101.0.65 -
+1496823428.567    661 127.0.0.1 TCP_MISS/200 24818 CONNECT www.chef.io:443 - HIER_DIRECT/151.101.0.65 -
+1496823428.725    140 127.0.0.1 TCP_MISS/200 3259 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823428.740   2298 127.0.0.1 TCP_MISS/200 20080 CONNECT www.rubygems.org:443 - HIER_DIRECT/151.101.130.2 -
+1496823429.558     92 127.0.0.1 TCP_MISS/200 3043 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823430.375     91 127.0.0.1 TCP_MISS/200 3043 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823431.236    168 127.0.0.1 TCP_MISS/200 3604 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+1496823432.203    136 127.0.0.1 TCP_MISS/200 3604 CONNECT api.chef.io:443 - HIER_DIRECT/52.2.37.93 -
+
+travis_time:end:01d138cc:start=1496823567414582560,finish=1496823567425406028,duration=10823468travis_fold:end:after_script.3
+Done. Your build exited with 0.

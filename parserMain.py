@@ -19,14 +19,20 @@ from parserRake import parserRake
 # reponame="codecov/example-android"
 # f = open('logs\\example-android-48-67063849.txt', 'r')
 
-reponame="richpeck/exception_handler"
-f = open('logs\\ruby\\exception_handler\\exception_handler-1264-168008434.txt', 'r')
-# f = open('logs\\ruby\\samson-7945-175559529.txt', 'r')
-#f = open('logs\\ruby\\github-services-662-175477697.txt', 'r')
-# reponame="psu-stewardship/scholarsphere"
-# f = open('logs\\ruby\\scholarsphere-4009-175444902.txt', 'r')
-# f=open('logs\\ruby\\octopress-963-145287347.txt','r')
-# f = open('logs\\ruby\\wraith-967-164825319.txt', 'r')
+#ruby
+# reponame="zendesk/samson"
+# f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
+# reponame="ManageIQ/manageiq"
+# f = open('logs\\ruby\\ManageIQ\\manageiq-59083-175928155.txt', 'r')
+# rapid7/metasploit-framework
+# reponame="rapid7/metasploit-framework"
+# f = open('logs\\ruby\\metasploit-framework\\metasploit-framework-20590-175876290.txt', 'r')
+# reponame="richpeck/exception_handler"
+# f = open('logs\\ruby\\exception_handler\\exception_handler-1264-168008434.txt', 'r')
+reponame="travis-ci/travis-cookbooks"
+f = open('logs\\ruby\\travis-cookbook\\travis-cookbooks-3486-175761182.txt', 'r')
+
+
 
 
 #per prendere l'id purtoppo non c'e' un metodo di build e quindi dobbiamo leggerlo dal log.........

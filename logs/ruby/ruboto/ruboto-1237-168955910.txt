@@ -1,0 +1,1715 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-04c46a3-precise-production-2-worker-org-docker.travisci.net:8b627522-5a63-4c7f-b6cf-4974e5d0d725
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 6b0d378:travis:android
+startup: 823.862434ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: android
+Build group: stable
+Build dist: precise
+Build id: 230814344
+Job id: 230814348
+travis-build version: e06d2d8c7
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6:i386 libc6-dev libc6-i386
+Suggested packages:
+  glibc-doc glibc-doc:i386 locales:i386
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6:i386 libc6-dev libc6-i386
+6 upgraded, 0 newly installed, 0 to remove and 278 not upgraded.
+Need to get 16.8 MB of archives.
+After this operation, 26.6 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-i386 amd64 2.15-0ubuntu10.18 [3,989 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 i386 2.15-0ubuntu10.18 [3,926 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 16.8 MB in 0s (39.2 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 72899 files and directories currently installed.)
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 72898 files and directories currently installed.)
+Preparing to replace libc6-i386 2.15-0ubuntu10.10 (using .../libc6-i386_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-i386 ...
+Replaced by files in installed package libc6:i386 ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+De-configuring libc6:i386 ...
+Unpacking replacement libc6 ...
+Preparing to replace libc6:i386 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_i386.deb) ...
+Unpacking replacement libc6:i386 ...
+Processing triggers for man-db ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc6:i386 (2.15-0ubuntu10.18) ...
+Setting up libc6-i386 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 41%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 82%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 0% Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 276 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             62% [2 libssl1.0.0 57.7 kB/1,054 kB 5%]                                       100% [Working]              Fetched 2,634 kB in 0s (16.4 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 72898 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0$ jdk_switcher use oraclejdk8
+Switching to Oracle JDK8 (java-8-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-8-oracle
+travis_fold:start:git.checkouttravis_time:start:1b4f0e24$ git clone --depth=50 --branch=master https://github.com/ruboto/ruboto.git ruboto/ruboto
+Cloning into 'ruboto/ruboto'...
+remote: Counting objects: 606, done.[K
+remote: Compressing objects:   0% (1/357)   [Kremote: Compressing objects:   1% (4/357)   [Kremote: Compressing objects:   2% (8/357)   [Kremote: Compressing objects:   3% (11/357)   [Kremote: Compressing objects:   4% (15/357)   [Kremote: Compressing objects:   5% (18/357)   [Kremote: Compressing objects:   6% (22/357)   [Kremote: Compressing objects:   7% (25/357)   [Kremote: Compressing objects:   8% (29/357)   [Kremote: Compressing objects:   9% (33/357)   [Kremote: Compressing objects:  10% (36/357)   [Kremote: Compressing objects:  11% (40/357)   [Kremote: Compressing objects:  12% (43/357)   [Kremote: Compressing objects:  13% (47/357)   [Kremote: Compressing objects:  14% (50/357)   [Kremote: Compressing objects:  15% (54/357)   [Kremote: Compressing objects:  16% (58/357)   [Kremote: Compressing objects:  17% (61/357)   [Kremote: Compressing objects:  18% (65/357)   [Kremote: Compressing objects:  19% (68/357)   [Kremote: Compressing objects:  20% (72/357)   [Kremote: Compressing objects:  21% (75/357)   [Kremote: Compressing objects:  22% (79/357)   [Kremote: Compressing objects:  23% (83/357)   [Kremote: Compressing objects:  24% (86/357)   [Kremote: Compressing objects:  25% (90/357)   [Kremote: Compressing objects:  26% (93/357)   [Kremote: Compressing objects:  27% (97/357)   [Kremote: Compressing objects:  28% (100/357)   [Kremote: Compressing objects:  29% (104/357)   [Kremote: Compressing objects:  30% (108/357)   [Kremote: Compressing objects:  31% (111/357)   [Kremote: Compressing objects:  32% (115/357)   [Kremote: Compressing objects:  33% (118/357)   [Kremote: Compressing objects:  34% (122/357)   [Kremote: Compressing objects:  35% (125/357)   [Kremote: Compressing objects:  36% (129/357)   [Kremote: Compressing objects:  37% (133/357)   [Kremote: Compressing objects:  38% (136/357)   [Kremote: Compressing objects:  39% (140/357)   [Kremote: Compressing objects:  40% (143/357)   [Kremote: Compressing objects:  41% (147/357)   [Kremote: Compressing objects:  42% (150/357)   [Kremote: Compressing objects:  43% (154/357)   [Kremote: Compressing objects:  44% (158/357)   [Kremote: Compressing objects:  45% (161/357)   [Kremote: Compressing objects:  46% (165/357)   [Kremote: Compressing objects:  47% (168/357)   [Kremote: Compressing objects:  48% (172/357)   [Kremote: Compressing objects:  49% (175/357)   [Kremote: Compressing objects:  50% (179/357)   [Kremote: Compressing objects:  51% (183/357)   [Kremote: Compressing objects:  52% (186/357)   [Kremote: Compressing objects:  53% (190/357)   [Kremote: Compressing objects:  54% (193/357)   [Kremote: Compressing objects:  55% (197/357)   [Kremote: Compressing objects:  56% (200/357)   [Kremote: Compressing objects:  57% (204/357)   [Kremote: Compressing objects:  58% (208/357)   [Kremote: Compressing objects:  59% (211/357)   [Kremote: Compressing objects:  60% (215/357)   [Kremote: Compressing objects:  61% (218/357)   [Kremote: Compressing objects:  62% (222/357)   [Kremote: Compressing objects:  63% (225/357)   [Kremote: Compressing objects:  64% (229/357)   [Kremote: Compressing objects:  65% (233/357)   [Kremote: Compressing objects:  66% (236/357)   [Kremote: Compressing objects:  67% (240/357)   [Kremote: Compressing objects:  68% (243/357)   [Kremote: Compressing objects:  69% (247/357)   [Kremote: Compressing objects:  70% (250/357)   [Kremote: Compressing objects:  71% (254/357)   [Kremote: Compressing objects:  72% (258/357)   [Kremote: Compressing objects:  73% (261/357)   [Kremote: Compressing objects:  74% (265/357)   [Kremote: Compressing objects:  75% (268/357)   [Kremote: Compressing objects:  76% (272/357)   [Kremote: Compressing objects:  77% (275/357)   [Kremote: Compressing objects:  78% (279/357)   [Kremote: Compressing objects:  79% (283/357)   [Kremote: Compressing objects:  80% (286/357)   [Kremote: Compressing objects:  81% (290/357)   [Kremote: Compressing objects:  82% (293/357)   [Kremote: Compressing objects:  83% (297/357)   [Kremote: Compressing objects:  84% (300/357)   [Kremote: Compressing objects:  85% (304/357)   [Kremote: Compressing objects:  86% (308/357)   [Kremote: Compressing objects:  87% (311/357)   [Kremote: Compressing objects:  88% (315/357)   [Kremote: Compressing objects:  89% (318/357)   [Kremote: Compressing objects:  90% (322/357)   [Kremote: Compressing objects:  91% (325/357)   [Kremote: Compressing objects:  92% (329/357)   [Kremote: Compressing objects:  93% (333/357)   [Kremote: Compressing objects:  94% (336/357)   [Kremote: Compressing objects:  95% (340/357)   [Kremote: Compressing objects:  96% (343/357)   [Kremote: Compressing objects:  97% (347/357)   [Kremote: Compressing objects:  98% (350/357)   [Kremote: Compressing objects:  99% (354/357)   [Kremote: Compressing objects: 100% (357/357)   [Kremote: Compressing objects: 100% (357/357), done.[K
+Receiving objects:   0% (1/606)   Receiving objects:   1% (7/606)   Receiving objects:   2% (13/606)   Receiving objects:   3% (19/606)   Receiving objects:   4% (25/606)   Receiving objects:   5% (31/606)   Receiving objects:   6% (37/606)   Receiving objects:   7% (43/606)   Receiving objects:   8% (49/606)   Receiving objects:   9% (55/606)   Receiving objects:  10% (61/606)   Receiving objects:  11% (67/606)   Receiving objects:  12% (73/606)   Receiving objects:  13% (79/606)   Receiving objects:  14% (85/606)   Receiving objects:  15% (91/606)   Receiving objects:  16% (97/606)   Receiving objects:  17% (104/606)   Receiving objects:  18% (110/606)   Receiving objects:  19% (116/606)   Receiving objects:  20% (122/606)   Receiving objects:  21% (128/606)   Receiving objects:  22% (134/606)   Receiving objects:  23% (140/606)   Receiving objects:  24% (146/606)   Receiving objects:  25% (152/606)   Receiving objects:  26% (158/606)   Receiving objects:  27% (164/606)   Receiving objects:  28% (170/606)   Receiving objects:  29% (176/606)   Receiving objects:  30% (182/606)   Receiving objects:  31% (188/606)   Receiving objects:  32% (194/606)   Receiving objects:  33% (200/606)   Receiving objects:  34% (207/606)   Receiving objects:  35% (213/606)   Receiving objects:  36% (219/606)   Receiving objects:  37% (225/606)   Receiving objects:  38% (231/606)   Receiving objects:  39% (237/606)   Receiving objects:  40% (243/606)   Receiving objects:  41% (249/606)   Receiving objects:  42% (255/606)   Receiving objects:  43% (261/606)   Receiving objects:  44% (267/606)   Receiving objects:  45% (273/606)   Receiving objects:  46% (279/606)   Receiving objects:  47% (285/606)   Receiving objects:  48% (291/606)   Receiving objects:  49% (297/606)   Receiving objects:  50% (303/606)   Receiving objects:  51% (310/606)   Receiving objects:  52% (316/606)   Receiving objects:  53% (322/606)   Receiving objects:  54% (328/606)   Receiving objects:  55% (334/606)   Receiving objects:  56% (340/606)   Receiving objects:  57% (346/606)   Receiving objects:  58% (352/606)   Receiving objects:  59% (358/606), 11.19 MiB | 22.33 MiB/s   Receiving objects:  60% (364/606), 11.19 MiB | 22.33 MiB/s   Receiving objects:  61% (370/606), 11.19 MiB | 22.33 MiB/s   Receiving objects:  61% (372/606), 22.79 MiB | 22.72 MiB/s   Receiving objects:  62% (376/606), 22.79 MiB | 22.72 MiB/s   Receiving objects:  63% (382/606), 22.79 MiB | 22.72 MiB/s   Receiving objects:  63% (385/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  64% (388/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  65% (394/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  66% (400/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  67% (407/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  68% (413/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  69% (419/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  70% (425/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  71% (431/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  72% (437/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  73% (443/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  74% (449/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  75% (455/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  76% (461/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  77% (467/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  78% (473/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  79% (479/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  80% (485/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  81% (491/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  82% (497/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  83% (503/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  84% (510/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  85% (516/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  86% (522/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  87% (528/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  88% (534/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  89% (540/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  90% (546/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  91% (552/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  92% (558/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  93% (564/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  94% (570/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  95% (576/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  96% (582/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  97% (588/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  98% (594/606), 39.91 MiB | 19.89 MiB/s   Receiving objects:  99% (600/606), 39.91 MiB | 19.89 MiB/s   remote: Total 606 (delta 285), reused 426 (delta 219), pack-reused 0[K
+Receiving objects: 100% (606/606), 39.91 MiB | 19.89 MiB/s   Receiving objects: 100% (606/606), 47.05 MiB | 19.89 MiB/s, done.
+Resolving deltas:   0% (0/285)   Resolving deltas:   1% (4/285)   Resolving deltas:   4% (12/285)   Resolving deltas:  12% (35/285)   Resolving deltas:  19% (56/285)   Resolving deltas:  21% (61/285)   Resolving deltas:  25% (72/285)   Resolving deltas:  32% (92/285)   Resolving deltas:  38% (110/285)   Resolving deltas:  39% (112/285)   Resolving deltas:  41% (119/285)   Resolving deltas:  42% (120/285)   Resolving deltas:  43% (124/285)   Resolving deltas:  46% (133/285)   Resolving deltas:  47% (135/285)   Resolving deltas:  48% (139/285)   Resolving deltas:  49% (142/285)   Resolving deltas:  50% (143/285)   Resolving deltas:  51% (148/285)   Resolving deltas:  52% (151/285)   Resolving deltas:  53% (152/285)   Resolving deltas:  54% (154/285)   Resolving deltas:  55% (157/285)   Resolving deltas:  56% (160/285)   Resolving deltas:  58% (167/285)   Resolving deltas:  59% (169/285)   Resolving deltas:  62% (178/285)   Resolving deltas:  66% (190/285)   Resolving deltas:  71% (205/285)   Resolving deltas:  72% (208/285)   Resolving deltas:  75% (215/285)   Resolving deltas:  76% (217/285)   Resolving deltas:  77% (222/285)   Resolving deltas:  85% (243/285)   Resolving deltas:  87% (248/285)   Resolving deltas:  88% (251/285)   Resolving deltas:  89% (254/285)   Resolving deltas:  90% (258/285)   Resolving deltas:  91% (260/285)   Resolving deltas:  93% (267/285)   Resolving deltas:  96% (274/285)   Resolving deltas:  98% (281/285)   Resolving deltas: 100% (285/285)   Resolving deltas: 100% (285/285), done.
+Checking connectivity... done.
+
+travis_time:end:1b4f0e24:start=1494432854722941054,finish=1494432858039695307,duration=3316754253$ cd ruboto/ruboto
+$ git checkout -qf b4f6bd1d1a266105643c0a3bf19d88d4c117e239
+travis_fold:end:git.checkout
+Setting environment variables from repository settings
+$ export DEPENDENT_BUILD=true
+$ export TRIGGER_COMMIT=0b188a994b2d22b13ec69b5db1526e317f48f681
+$ export TRIGGER_COMMIT=0b188a994b2d22b13ec69b5db1526e317f48f681
+$ export TRIGGER_REPO=jruby/activerecord-jdbc-adapter
+$ export TRIGGER_COMMIT=0b188a994b2d22b13ec69b5db1526e317f48f681
+$ export TRIGGER_REPO=jruby/activerecord-jdbc-adapter
+$ export TRIGGER_REPO=jruby/activerecord-jdbc-adapter
+$ export DEPENDENT_BUILD=true
+$ export TRIGGER_COMMIT=0b188a994b2d22b13ec69b5db1526e317f48f681
+$ export TRIGGER_REPO=jruby/activerecord-jdbc-adapter
+$ export DEPENDENT_BUILD=true
+$ export DEPENDENT_BUILD=true
+$ export TRIGGER_REPO=jruby/activerecord-jdbc-adapter
+$ export DEPENDENT_BUILD=true
+$ export DEPENDENT_BUILD=true
+$ export TRIGGER_COMMIT=0b188a994b2d22b13ec69b5db1526e317f48f681
+$ export DEPENDENT_BUILD=true
+$ export TRIGGER_REPO=jruby/activerecord-jdbc-adapter
+
+Setting environment variables from .travis.yml
+$ export DX_HEAP_SIZE=2048
+$ export RUBOTO_UPDATE_EXAMPLES=0
+$ export ANDROID_TARGET=23
+$ export RUBOTO_PLATFORM=STANDALONE
+$ export TEST_PART=4of6
+$ export JRUBY_JARS_VERSION=MASTER
+
+travis_fold:start:android.installInstalling Android dependencies
+travis_time:start:32233847$ android-update-sdk --components=tools
+Installing tools
+spawn android update sdk --no-ui --all --filter tools
+Refresh Sources:
+  Fetching https://dl-ssl.google.com/android/repository/addons_list-2.xml
+  Validate XML
+  Parse XML
+  Fetched Add-ons List successfully
+  Refresh Sources
+  Fetching URL: https://dl-ssl.google.com/android/repository/repository-10.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/repository-10.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/repository-10.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/addon.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/addon.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/addon.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/glass/addon.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/glass/addon.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/glass/addon.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/extras/intel/addon.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/android/sys-img.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/sys-img/android/sys-img.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/android/sys-img.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Fetching URL: https://dl-ssl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Validate XML: https://dl-ssl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Parse XML:    https://dl-ssl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+-------------------------------
+License id: android-sdk-license-5be876d5
+Used by: 
+ - Android SDK Tools, revision 24.4.1
+-------------------------------
+
+To get started with the Android SDK, you must agree to the following terms and conditions.
+
+This is the Android SDK License Agreement (the "License Agreement").
+
+1. Introduction
+
+1.1 The Android SDK (referred to in the License Agreement as the "SDK" and specifically including the Android system files, packaged APIs, and SDK library files and tools , if and when they are made available) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the SDK.
+
+1.2 "Android" means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.3 "Google" means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+2. Accepting the License Agreement
+
+2.1 In order to use the SDK, you must first agree to the License Agreement. You may not use the SDK if you do not accept the License Agreement.
+
+2.2 By clicking to accept and/or using the SDK, you hereby agree to the terms of the License Agreement.
+
+2.3 You may not use the SDK and may not accept the License Agreement if you are a person barred from receiving the SDK under the laws of the United States or other countries including the country in which you are resident or from which you use the SDK.
+
+2.4 If you will use the SDK internally within your company or organization you agree to be bound by the License Agreement on behalf of your employer or other entity, and you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the SDK on behalf of your employer or other entity.
+
+3. SDK License from Google
+
+3.1 Subject to the terms of the License Agreement, Google grants you a royalty-free, non-assignable, non-exclusive, non-sublicensable, limited, revocable license to use the SDK, personally or internally within your company or organization, solely to develop and distribute applications to run on the Android platform.
+
+3.2 You agree that Google or third parties own all legal right, title and interest in and to the SDK, including any Intellectual Property Rights that subsist in the SDK. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.3 You may not use the SDK for any purpose not expressly permitted by the License Agreement. Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the SDK or any part of the SDK; or (b) load any part of the SDK onto a mobile handset or any other hardware device except a personal computer, combine any part of the SDK with other software, or distribute any software or device incorporating a part of the SDK.
+
+3.4 You agree that you will not take any actions that may cause or result in the fragmentation of Android, including but not limited to distributing, participating in the creation of, or promoting in any way a software development kit derived from the SDK.
+
+3.5 Use, reproduction and distribution of components of the SDK licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement. You agree to remain a licensee in good standing in regard to such open source software licenses under all the rights granted and to refrain from any actions that may terminate, suspend, or breach such rights.
+
+3.6 You agree that the form and nature of the SDK that Google provides may change without prior notice to you and that future versions of the SDK may be incompatible with applications developed on previous versions of the SDK. You agree that Google may stop (permanently or temporarily) providing the SDK (or any features within the SDK) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in the License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the SDK.
+
+4. Use of the SDK by You
+
+4.1 Google agrees that nothing in the License Agreement gives Google any right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the SDK, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the SDK and write applications only for purposes that are permitted by (a) the License Agreement, and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the SDK to develop applications, you will protect the privacy and legal rights of users. If users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If users provide you with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, each user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the SDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of Google or any third party.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the SDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the SDK are being used and how they are being used. Before any of this information is collected, the SDK will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the SDK and is maintained in accordance with Google's Privacy Policy located at http://www.google.com/policies/privacy/.
+
+7. Third Party Applications
+
+7.1 If you use the SDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party.
+
+8. Using Google APIs
+
+8.1 Google APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+9. Terminating the License Agreement
+
+9.1 The License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the SDK and any relevant developer credentials.
+
+9.3 Google may at any time, terminate the License Agreement, with or without cause, upon notice to you.
+
+9.4 The License Agreement will automatically terminate without notice or other action when Google ceases to provide the SDK or certain parts of the SDK to users in the country in which you are resident or from which you use the service.
+
+9.5 When the License Agreement is terminated, the license granted to you in the License Agreement will terminate, you will immediately cease all use of the SDK, and the provisions of paragraphs 10, 11, 12 and 14 shall survive indefinitely.
+
+10. DISCLAIMERS
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE. WITHOUT LIMITING THE FOREGOING, YOU UNDERSTAND THAT THE SDK MAY CONTAIN ERRORS, DEFECTS AND SECURITY VULNERABILITIES THAT CAN RESULT IN SIGNIFICANT DAMAGE, INCLUDING THE COMPLETE, IRRECOVERABLE LOSS OF USE OF YOUR COMPUTER SYSTEM OR OTHER DEVICE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys’ fees) arising out of or accruing from (a) your use of the SDK, (b) any application you develop on the SDK that infringes any Intellectual Property Rights of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you of the License Agreement.
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the SDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the SDK is made available.
+
+14. General Legal Terms
+
+14.1 The License Agreement constitutes the whole legal agreement between you and Google and governs your use of the SDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the SDK.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE SDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE SDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The License Agreement may not be assigned or transferred by you without the prior written approval of Google, and any attempted assignment without such approval will be void. You shall not delegate your responsibilities or obligations under the License Agreement without the prior written approval of Google.
+
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+June 2014.
+    
+Do you accept the license 'android-sdk-license-5be876d5' [y/n]: y
+
+Installing Archives:
+  Preparing to install archives
+  Downloading Android SDK Tools, revision 24.4.1
+     (2%, 3270 KiB/s, 95 seconds left)     (3%, 3255 KiB/s, 95 seconds left)     (4%, 3292 KiB/s, 92 seconds left)     (5%, 3295 KiB/s, 91 seconds left)     (6%, 3329 KiB/s, 89 seconds left)     (7%, 3324 KiB/s, 88 seconds left)     (8%, 3211 KiB/s, 91 seconds left)     (9%, 3237 KiB/s, 89 seconds left)     (10%, 3238 KiB/s, 88 seconds left)     (11%, 3263 KiB/s, 86 seconds left)     (12%, 3231 KiB/s, 86 seconds left)     (13%, 3219 KiB/s, 86 seconds left)     (14%, 3233 KiB/s, 84 seconds left)     (15%, 3217 KiB/s, 84 seconds left)     (16%, 3194 KiB/s, 83 seconds left)     (17%, 3199 KiB/s, 82 seconds left)     (18%, 3201 KiB/s, 81 seconds left)     (19%, 3215 KiB/s, 80 seconds left)     (20%, 3216 KiB/s, 79 seconds left)     (21%, 3223 KiB/s, 77 seconds left)     (22%, 3209 KiB/s, 77 seconds left)     (23%, 3217 KiB/s, 76 seconds left)     (24%, 3230 KiB/s, 74 seconds left)     (25%, 3205 KiB/s, 74 seconds left)     (26%, 3211 KiB/s, 73 seconds left)     (27%, 3219 KiB/s, 72 seconds left)     (28%, 3230 KiB/s, 70 seconds left)     (29%, 3231 KiB/s, 69 seconds left)     (30%, 3236 KiB/s, 68 seconds left)     (31%, 3243 KiB/s, 67 seconds left)     (32%, 3252 KiB/s, 66 seconds left)     (33%, 3261 KiB/s, 64 seconds left)     (34%, 3267 KiB/s, 63 seconds left)     (36%, 3274 KiB/s, 62 seconds left)     (37%, 3272 KiB/s, 61 seconds left)     (38%, 3273 KiB/s, 60 seconds left)     (39%, 3272 KiB/s, 59 seconds left)     (40%, 3279 KiB/s, 58 seconds left)     (41%, 3283 KiB/s, 57 seconds left)     (42%, 3281 KiB/s, 56 seconds left)     (43%, 3284 KiB/s, 55 seconds left)     (44%, 3272 KiB/s, 54 seconds left)     (45%, 3279 KiB/s, 53 seconds left)     (46%, 3281 KiB/s, 52 seconds left)     (47%, 3285 KiB/s, 51 seconds left)     (48%, 3287 KiB/s, 49 seconds left)     (49%, 3287 KiB/s, 48 seconds left)     (50%, 3291 KiB/s, 47 seconds left)     (51%, 3290 KiB/s, 46 seconds left)     (52%, 3295 KiB/s, 45 seconds left)     (53%, 3297 KiB/s, 44 seconds left)     (54%, 3300 KiB/s, 43 seconds left)     (56%, 3305 KiB/s, 42 seconds left)     (57%, 3307 KiB/s, 41 seconds left)     (58%, 3311 KiB/s, 40 seconds left)     (59%, 3312 KiB/s, 39 seconds left)     (60%, 3316 KiB/s, 38 seconds left)     (61%, 3320 KiB/s, 36 seconds left)     (62%, 3321 KiB/s, 35 seconds left)     (63%, 3313 KiB/s, 35 seconds left)     (64%, 3313 KiB/s, 34 seconds left)     (65%, 3312 KiB/s, 33 seconds left)     (66%, 3315 KiB/s, 32 seconds left)     (67%, 3315 KiB/s, 31 seconds left)     (68%, 3318 KiB/s, 29 seconds left)     (69%, 3317 KiB/s, 29 seconds left)     (70%, 3318 KiB/s, 27 seconds left)     (71%, 3320 KiB/s, 26 seconds left)     (73%, 3323 KiB/s, 25 seconds left)     (74%, 3324 KiB/s, 24 seconds left)     (75%, 3326 KiB/s, 23 seconds left)     (76%, 3329 KiB/s, 22 seconds left)     (77%, 3332 KiB/s, 21 seconds left)     (78%, 3326 KiB/s, 20 seconds left)     (79%, 3323 KiB/s, 19 seconds left)     (80%, 3325 KiB/s, 18 seconds left)     (81%, 3326 KiB/s, 17 seconds left)     (82%, 3326 KiB/s, 16 seconds left)     (83%, 3326 KiB/s, 15 seconds left)     (84%, 3325 KiB/s, 14 seconds left)     (85%, 3323 KiB/s, 13 seconds left)     (86%, 3323 KiB/s, 12 seconds left)     (87%, 3324 KiB/s, 11 seconds left)     (88%, 3324 KiB/s, 10 seconds left)     (89%, 3323 KiB/s, 9 seconds left)     (90%, 3326 KiB/s, 8 seconds left)     (91%, 3318 KiB/s, 7 seconds left)     (92%, 3318 KiB/s, 6 seconds left)     (93%, 3318 KiB/s, 5 seconds left)     (94%, 3319 KiB/s, 4 seconds left)     (96%, 3322 KiB/s, 3 seconds left)     (97%, 3322 KiB/s, 2 seconds left)     (98%, 3324 KiB/s, 1 seconds left)     (99%, 3325 KiB/s, 0 seconds left)  Installing Android SDK Tools, revision 24.4.1
+  Unzipping Android SDK Tools, revision 24.4.1 (1%)  Unzipping Android SDK Tools, revision 24.4.1 (3%)  Unzipping Android SDK Tools, revision 24.4.1 (4%)  Unzipping Android SDK Tools, revision 24.4.1 (5%)  Unzipping Android SDK Tools, revision 24.4.1 (6%)  Unzipping Android SDK Tools, revision 24.4.1 (7%)  Unzipping Android SDK Tools, revision 24.4.1 (8%)  Unzipping Android SDK Tools, revision 24.4.1 (9%)  Unzipping Android SDK Tools, revision 24.4.1 (10%)  Unzipping Android SDK Tools, revision 24.4.1 (11%)  Unzipping Android SDK Tools, revision 24.4.1 (12%)  Unzipping Android SDK Tools, revision 24.4.1 (13%)  Unzipping Android SDK Tools, revision 24.4.1 (14%)  Unzipping Android SDK Tools, revision 24.4.1 (15%)  Unzipping Android SDK Tools, revision 24.4.1 (16%)  Unzipping Android SDK Tools, revision 24.4.1 (18%)  Unzipping Android SDK Tools, revision 24.4.1 (19%)  Unzipping Android SDK Tools, revision 24.4.1 (20%)  Unzipping Android SDK Tools, revision 24.4.1 (21%)  Unzipping Android SDK Tools, revision 24.4.1 (25%)  Unzipping Android SDK Tools, revision 24.4.1 (32%)  Unzipping Android SDK Tools, revision 24.4.1 (38%)  Unzipping Android SDK Tools, revision 24.4.1 (44%)  Unzipping Android SDK Tools, revision 24.4.1 (45%)  Unzipping Android SDK Tools, revision 24.4.1 (46%)  Unzipping Android SDK Tools, revision 24.4.1 (47%)  Unzipping Android SDK Tools, revision 24.4.1 (48%)  Unzipping Android SDK Tools, revision 24.4.1 (49%)  Unzipping Android SDK Tools, revision 24.4.1 (50%)  Unzipping Android SDK Tools, revision 24.4.1 (51%)  Unzipping Android SDK Tools, revision 24.4.1 (52%)  Unzipping Android SDK Tools, revision 24.4.1 (53%)  Unzipping Android SDK Tools, revision 24.4.1 (54%)  Unzipping Android SDK Tools, revision 24.4.1 (55%)  Unzipping Android SDK Tools, revision 24.4.1 (56%)  Unzipping Android SDK Tools, revision 24.4.1 (57%)  Unzipping Android SDK Tools, revision 24.4.1 (58%)  Unzipping Android SDK Tools, revision 24.4.1 (59%)  Unzipping Android SDK Tools, revision 24.4.1 (61%)  Unzipping Android SDK Tools, revision 24.4.1 (63%)  Unzipping Android SDK Tools, revision 24.4.1 (65%)  Unzipping Android SDK Tools, revision 24.4.1 (68%)  Unzipping Android SDK Tools, revision 24.4.1 (69%)  Unzipping Android SDK Tools, revision 24.4.1 (70%)  Unzipping Android SDK Tools, revision 24.4.1 (71%)  Unzipping Android SDK Tools, revision 24.4.1 (72%)  Unzipping Android SDK Tools, revision 24.4.1 (73%)  Unzipping Android SDK Tools, revision 24.4.1 (75%)  Unzipping Android SDK Tools, revision 24.4.1 (77%)  Unzipping Android SDK Tools, revision 24.4.1 (79%)  Unzipping Android SDK Tools, revision 24.4.1 (85%)  Unzipping Android SDK Tools, revision 24.4.1 (91%)  Unzipping Android SDK Tools, revision 24.4.1 (98%)  Unzipping Android SDK Tools, revision 24.4.1 (99%)    Installed Android SDK Tools, revision 24.4.1
+  Done. 1 package installed.
+
+travis_time:end:32233847:start=1494432864678149116,finish=1494432976247198016,duration=111569048900travis_time:start:0edccb80$ android-update-sdk --components=build-tools-25.0.2
+Installing build-tools-25.0.2
+spawn android update sdk --no-ui --all --filter build-tools-25.0.2
+Refresh Sources:
+  Fetching https://dl.google.com/android/repository/addons_list-2.xml
+  Validate XML
+  Parse XML
+  Fetched Add-ons List successfully
+  Refresh Sources
+  Fetching URL: https://dl.google.com/android/repository/repository-11.xml
+  Validate XML: https://dl.google.com/android/repository/repository-11.xml
+  Parse XML:    https://dl.google.com/android/repository/repository-11.xml
+  Fetching URL: https://dl.google.com/android/repository/addon.xml
+  Validate XML: https://dl.google.com/android/repository/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/glass/addon.xml
+  Validate XML: https://dl.google.com/android/repository/glass/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/glass/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/extras/intel/addon.xml
+  Validate XML: https://dl.google.com/android/repository/extras/intel/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/extras/intel/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+-------------------------------
+License id: android-sdk-license-c81a61d9
+Used by: 
+ - Android SDK Build-tools, revision 25.0.2
+-------------------------------
+
+Terms and Conditions
+
+This is the Android Software Development Kit License Agreement
+
+1. Introduction
+
+1.1 The Android Software Development Kit (referred to in the License Agreement as the "SDK" and specifically including the Android system files, packaged APIs, and Google APIs add-ons) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the SDK.
+
+1.2 "Android" means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.3 A "compatible implementation" means any Android device that (i) complies with the Android Compatibility Definition document, which can be found at the Android compatibility website (http://source.android.com/compatibility) and which may be updated from time to time; and (ii) successfully passes the Android Compatibility Test Suite (CTS).
+
+1.4 "Google" means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+
+2. Accepting the License Agreement
+
+2.1 In order to use the SDK, you must first agree to the License Agreement. You may not use the SDK if you do not accept the License Agreement.
+
+2.2 By clicking to accept, you hereby agree to the terms of the License Agreement.
+
+2.3 You may not use the SDK and may not accept the License Agreement if you are a person barred from receiving the SDK under the laws of the United States or other countries, including the country in which you are resident or from which you use the SDK.
+
+2.4 If you are agreeing to be bound by the License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the SDK on behalf of your employer or other entity.
+
+
+3. SDK License from Google
+
+3.1 Subject to the terms of the License Agreement, Google grants you a limited, worldwide, royalty-free, non-assignable, non-exclusive, and non-sublicensable license to use the SDK solely to develop applications for compatible implementations of Android.
+
+3.2 You may not use this SDK to develop applications for other platforms (including non-compatible implementations of Android) or to develop another SDK. You are of course free to develop applications for other platforms, including non-compatible implementations of Android, provided that this SDK is not used for that purpose.
+
+3.3 You agree that Google or third parties own all legal right, title and interest in and to the SDK, including any Intellectual Property Rights that subsist in the SDK. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.4 You may not use the SDK for any purpose not expressly permitted by the License Agreement.  Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the SDK or any part of the SDK; or (b) load any part of the SDK onto a mobile handset or any other hardware device except a personal computer, combine any part of the SDK with other software, or distribute any software or device incorporating a part of the SDK.
+
+3.5 Use, reproduction and distribution of components of the SDK licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement.
+
+3.6 You agree that the form and nature of the SDK that Google provides may change without prior notice to you and that future versions of the SDK may be incompatible with applications developed on previous versions of the SDK. You agree that Google may stop (permanently or temporarily) providing the SDK (or any features within the SDK) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in the License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the SDK.
+
+
+4. Use of the SDK by You
+
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the SDK, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the SDK and write applications only for purposes that are permitted by (a) the License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the SDK to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, the user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the SDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google or any mobile communications carrier.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the SDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the SDK are being used and how they are being used. Before any of this information is collected, the SDK will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the SDK and is maintained in accordance with Google's Privacy Policy.
+
+
+7. Third Party Applications
+
+7.1 If you use the SDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, the License Agreement does not affect your legal relationship with these third parties.
+
+
+8. Using Android APIs
+
+8.1 Google Data APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+
+9. Terminating the License Agreement
+
+9.1 The License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the SDK and any relevant developer credentials.
+
+9.3 Google may at any time, terminate the License Agreement with you if:
+(A) you have breached any provision of the License Agreement; or
+(B) Google is required to do so by law; or
+(C) the partner with whom Google offered certain parts of SDK (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the SDK to you; or
+(D) Google decides to no longer provide the SDK or certain parts of the SDK to users in the country in which you are resident or from which you use the service, or the provision of the SDK or certain SDK services to you by Google is, in Google's sole discretion, no longer commercially viable.
+
+9.4 When the License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst the License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+
+10. DISCLAIMER OF WARRANTIES
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the SDK, (b) any application you develop on the SDK that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with the License Agreement.
+
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the SDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the SDK is made available.
+
+
+14. General Legal Terms
+
+14.1 The License Agreement constitutes the whole legal agreement between you and Google and governs your use of the SDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the SDK.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE SDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE SDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The rights granted in the License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under the License Agreement without the prior written approval of the other party.
+
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+
+November 20, 2015
+Do you accept the license 'android-sdk-license-c81a61d9' [y/n]: y
+
+Installing Archives:
+  Preparing to install archives
+  Downloading Android SDK Build-tools, revision 25.0.2
+     (13%, 3208 KiB/s, 13 seconds left)     (19%, 3212 KiB/s, 12 seconds left)     (26%, 3265 KiB/s, 10 seconds left)     (33%, 3284 KiB/s, 9 seconds left)     (41%, 3324 KiB/s, 8 seconds left)     (47%, 3315 KiB/s, 7 seconds left)     (55%, 3340 KiB/s, 6 seconds left)     (62%, 3349 KiB/s, 5 seconds left)     (69%, 3361 KiB/s, 4 seconds left)     (76%, 3371 KiB/s, 3 seconds left)     (83%, 3368 KiB/s, 2 seconds left)     (90%, 3373 KiB/s, 1 seconds left)     (96%, 3360 KiB/s, 0 seconds left)  Installing Android SDK Build-tools, revision 25.0.2
+  Unzipping Android SDK Build-tools, revision 25.0.2 (1%)  Unzipping Android SDK Build-tools, revision 25.0.2 (3%)  Unzipping Android SDK Build-tools, revision 25.0.2 (4%)  Unzipping Android SDK Build-tools, revision 25.0.2 (6%)  Unzipping Android SDK Build-tools, revision 25.0.2 (8%)  Unzipping Android SDK Build-tools, revision 25.0.2 (9%)  Unzipping Android SDK Build-tools, revision 25.0.2 (30%)  Unzipping Android SDK Build-tools, revision 25.0.2 (31%)  Unzipping Android SDK Build-tools, revision 25.0.2 (32%)  Unzipping Android SDK Build-tools, revision 25.0.2 (34%)  Unzipping Android SDK Build-tools, revision 25.0.2 (36%)  Unzipping Android SDK Build-tools, revision 25.0.2 (37%)  Unzipping Android SDK Build-tools, revision 25.0.2 (38%)  Unzipping Android SDK Build-tools, revision 25.0.2 (39%)  Unzipping Android SDK Build-tools, revision 25.0.2 (40%)  Unzipping Android SDK Build-tools, revision 25.0.2 (41%)  Unzipping Android SDK Build-tools, revision 25.0.2 (42%)  Unzipping Android SDK Build-tools, revision 25.0.2 (43%)  Unzipping Android SDK Build-tools, revision 25.0.2 (44%)  Unzipping Android SDK Build-tools, revision 25.0.2 (46%)  Unzipping Android SDK Build-tools, revision 25.0.2 (47%)  Unzipping Android SDK Build-tools, revision 25.0.2 (48%)  Unzipping Android SDK Build-tools, revision 25.0.2 (49%)  Unzipping Android SDK Build-tools, revision 25.0.2 (50%)  Unzipping Android SDK Build-tools, revision 25.0.2 (51%)  Unzipping Android SDK Build-tools, revision 25.0.2 (52%)  Unzipping Android SDK Build-tools, revision 25.0.2 (53%)  Unzipping Android SDK Build-tools, revision 25.0.2 (67%)  Unzipping Android SDK Build-tools, revision 25.0.2 (68%)  Unzipping Android SDK Build-tools, revision 25.0.2 (69%)  Unzipping Android SDK Build-tools, revision 25.0.2 (89%)  Unzipping Android SDK Build-tools, revision 25.0.2 (91%)  Unzipping Android SDK Build-tools, revision 25.0.2 (92%)  Unzipping Android SDK Build-tools, revision 25.0.2 (98%)  Unzipping Android SDK Build-tools, revision 25.0.2 (99%)    Installed Android SDK Build-tools, revision 25.0.2
+  Done. 1 package installed.
+
+travis_time:end:0edccb80:start=1494432976251993649,finish=1494432996580332469,duration=20328338820travis_time:start:0127ffa0$ android-update-sdk --components=platform-tools
+Installing platform-tools
+spawn android update sdk --no-ui --all --filter platform-tools
+Refresh Sources:
+  Fetching https://dl.google.com/android/repository/addons_list-2.xml
+  Validate XML
+  Parse XML
+  Fetched Add-ons List successfully
+  Refresh Sources
+  Fetching URL: https://dl.google.com/android/repository/repository-11.xml
+  Validate XML: https://dl.google.com/android/repository/repository-11.xml
+  Parse XML:    https://dl.google.com/android/repository/repository-11.xml
+  Fetching URL: https://dl.google.com/android/repository/addon.xml
+  Validate XML: https://dl.google.com/android/repository/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/glass/addon.xml
+  Validate XML: https://dl.google.com/android/repository/glass/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/glass/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/extras/intel/addon.xml
+  Validate XML: https://dl.google.com/android/repository/extras/intel/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/extras/intel/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+-------------------------------
+License id: android-sdk-license-c81a61d9
+Used by: 
+ - Android SDK Platform-tools, revision 25.0.5
+-------------------------------
+
+Terms and Conditions
+
+This is the Android Software Development Kit License Agreement
+
+1. Introduction
+
+1.1 The Android Software Development Kit (referred to in the License Agreement as the "SDK" and specifically including the Android system files, packaged APIs, and Google APIs add-ons) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the SDK.
+
+1.2 "Android" means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.3 A "compatible implementation" means any Android device that (i) complies with the Android Compatibility Definition document, which can be found at the Android compatibility website (http://source.android.com/compatibility) and which may be updated from time to time; and (ii) successfully passes the Android Compatibility Test Suite (CTS).
+
+1.4 "Google" means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+
+2. Accepting the License Agreement
+
+2.1 In order to use the SDK, you must first agree to the License Agreement. You may not use the SDK if you do not accept the License Agreement.
+
+2.2 By clicking to accept, you hereby agree to the terms of the License Agreement.
+
+2.3 You may not use the SDK and may not accept the License Agreement if you are a person barred from receiving the SDK under the laws of the United States or other countries, including the country in which you are resident or from which you use the SDK.
+
+2.4 If you are agreeing to be bound by the License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the SDK on behalf of your employer or other entity.
+
+
+3. SDK License from Google
+
+3.1 Subject to the terms of the License Agreement, Google grants you a limited, worldwide, royalty-free, non-assignable, non-exclusive, and non-sublicensable license to use the SDK solely to develop applications for compatible implementations of Android.
+
+3.2 You may not use this SDK to develop applications for other platforms (including non-compatible implementations of Android) or to develop another SDK. You are of course free to develop applications for other platforms, including non-compatible implementations of Android, provided that this SDK is not used for that purpose.
+
+3.3 You agree that Google or third parties own all legal right, title and interest in and to the SDK, including any Intellectual Property Rights that subsist in the SDK. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.4 You may not use the SDK for any purpose not expressly permitted by the License Agreement.  Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the SDK or any part of the SDK; or (b) load any part of the SDK onto a mobile handset or any other hardware device except a personal computer, combine any part of the SDK with other software, or distribute any software or device incorporating a part of the SDK.
+
+3.5 Use, reproduction and distribution of components of the SDK licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement.
+
+3.6 You agree that the form and nature of the SDK that Google provides may change without prior notice to you and that future versions of the SDK may be incompatible with applications developed on previous versions of the SDK. You agree that Google may stop (permanently or temporarily) providing the SDK (or any features within the SDK) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in the License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the SDK.
+
+
+4. Use of the SDK by You
+
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the SDK, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the SDK and write applications only for purposes that are permitted by (a) the License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the SDK to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, the user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the SDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google or any mobile communications carrier.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the SDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the SDK are being used and how they are being used. Before any of this information is collected, the SDK will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the SDK and is maintained in accordance with Google's Privacy Policy.
+
+
+7. Third Party Applications
+
+7.1 If you use the SDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, the License Agreement does not affect your legal relationship with these third parties.
+
+
+8. Using Android APIs
+
+8.1 Google Data APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+
+9. Terminating the License Agreement
+
+9.1 The License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the SDK and any relevant developer credentials.
+
+9.3 Google may at any time, terminate the License Agreement with you if:
+(A) you have breached any provision of the License Agreement; or
+(B) Google is required to do so by law; or
+(C) the partner with whom Google offered certain parts of SDK (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the SDK to you; or
+(D) Google decides to no longer provide the SDK or certain parts of the SDK to users in the country in which you are resident or from which you use the service, or the provision of the SDK or certain SDK services to you by Google is, in Google's sole discretion, no longer commercially viable.
+
+9.4 When the License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst the License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+
+10. DISCLAIMER OF WARRANTIES
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the SDK, (b) any application you develop on the SDK that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with the License Agreement.
+
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the SDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the SDK is made available.
+
+
+14. General Legal Terms
+
+14.1 The License Agreement constitutes the whole legal agreement between you and Google and governs your use of the SDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the SDK.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE SDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE SDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The rights granted in the License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under the License Agreement without the prior written approval of the other party.
+
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+
+November 20, 2015
+Do you accept the license 'android-sdk-license-c81a61d9' [y/n]: y
+
+Installing Archives:
+  Preparing to install archives
+  Downloading Android SDK Platform-tools, revision 25.0.5
+     (87%, 3242 KiB/s, 0 seconds left)  Installing Android SDK Platform-tools, revision 25.0.5
+    Stopping ADB server succeeded.
+  Unzipping Android SDK Platform-tools, revision 25.0.5 (11%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (16%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (17%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (19%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (25%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (30%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (31%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (39%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (40%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (41%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (42%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (43%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (44%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (45%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (46%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (47%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (48%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (49%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (50%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (51%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (52%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (53%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (55%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (56%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (57%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (58%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (61%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (63%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (64%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (65%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (66%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (67%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (68%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (69%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (70%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (71%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (72%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (73%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (74%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (75%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (76%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (77%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (78%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (79%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (80%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (81%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (82%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (89%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (90%)  Unzipping Android SDK Platform-tools, revision 25.0.5 (91%)    Installed Android SDK Platform-tools, revision 25.0.5
+    Stopping ADB server succeeded.
+    Starting ADB server succeeded.
+  Done. 1 package installed.
+
+travis_time:end:0127ffa0:start=1494432996585099751,finish=1494433004360541851,duration=7775442100travis_fold:end:android.install$ java -Xmx32m -version
+java version "1.8.0_31"
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
+$ javac -J-Xmx32m -version
+javac 1.8.0_31
+travis_fold:start:before_install.1travis_time:start:10e66710$ export ANDROID_OS=$ANDROID_TARGET
+
+travis_time:end:10e66710:start=1494433004741820882,finish=1494433004745976778,duration=4155896travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:08b88f00$ MASTER=`ls jruby-jars-*.gem | tail -n 1 | cut -f 3 -d'-' | sed s/\\.gem//`
+
+travis_time:end:08b88f00:start=1494433004750632875,finish=1494433004759252048,duration=8619173travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:003773dc$ if [ "$JRUBY_JARS_VERSION" == "MASTER" ] ; then export JRUBY_JARS_VERSION=$MASTER ; fi
+
+travis_time:end:003773dc:start=1494433004765140753,finish=1494433004769906078,duration=4765325travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:10406838$ if [ "$ANDROID_TARGET" == "23" ] ; then ls -l $ANDROID_HOME/platforms ; rm -rf $ANDROID_HOME/platforms/android-1* ; ls -l $ANDROID_HOME/platforms ; ls -l $ANDROID_HOME/system-images ; rm -rf $ANDROID_HOME/system-images/android-1* ; ls -l $ANDROID_HOME/system-images ; fi
+total 28
+drwxr-xr-x 6 travis travis 4096 Feb  5  2015 android-10
+drwxr-xr-x 5 travis travis  146 Feb  5  2015 android-15
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-16
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-17
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-18
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-19
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-20
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-21
+total 8
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-20
+drwxr-xr-x 5 travis travis 4096 Feb  5  2015 android-21
+total 0
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-15
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-16
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-17
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-18
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-19
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-21
+total 0
+drwxr-xr-x 3 travis travis 20 Feb  5  2015 android-21
+
+travis_time:end:10406838:start=1494433004775531266,finish=1494433006736421923,duration=1960890657travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:000773fc$ if [ "$ANDROID_TARGET" == "24" ] ; then ls -l $ANDROID_HOME/platforms ; rm -rf $ANDROID_HOME/platforms/android-1* ; ls -l $ANDROID_HOME/platforms ; ls -l $ANDROID_HOME/system-images ; rm -rf $ANDROID_HOME/system-images/android-1* ; ls -l $ANDROID_HOME/system-images ; fi
+
+travis_time:end:000773fc:start=1494433006741605339,finish=1494433006746371106,duration=4765767travis_fold:end:before_install.5travis_time:start:2b05fe90$ rvm use 2.3.1 --install
+ruby-2.3.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/12.04/x86_64/ruby-2.3.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.1 - #configure
+ruby-2.3.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 65 23.0M   65 15.0M    0     0  55.0M      0 --:--:-- --:--:-- --:--:-- 55.0M100 23.0M  100 23.0M    0     0  69.9M      0 --:--:-- --:--:-- --:--:--  146M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.1 - #validate archive
+ruby-2.3.1 - #extract
+ruby-2.3.1 - #validate binary
+ruby-2.3.1 - #setup
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1@global
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.1
+
+travis_time:end:2b05fe90:start=1494433006751660274,finish=1494433030762476879,duration=24010816605
+The command "rvm use 2.3.1 --install" exited with 0.
+travis_time:start:050dbf93$ ./run_tests.sh
+Starting tests...
+PIDs: Boss: 4914, Timer: 5166
+Wake travis every 300 seconds
+ruboto-2.0.0.dev is not installed.
+Generating ruboto-2.0.0.dev.gem
+Installing gem
+Successfully installed rubyzip-1.2.1
+Successfully installed rake-12.0.0
+Successfully installed coderay-1.1.1
+Successfully installed slop-3.6.0
+Successfully installed method_source-0.8.2
+Successfully installed pry-0.10.4
+Successfully installed map-6.6.0
+Successfully installed arrayfields-4.9.2
+Successfully installed fattr-2.3.0
+Successfully installed chronic-0.10.2
+Successfully installed main-5.3.2
+Successfully installed ruboto-2.0.0.dev
+12 gems installed
+Java runtime             : Found
+Java Compiler            : Found
+Apache ANT               : Found
+Android Package Installer: Found
+Android SDK Manager      : Not found
+Android Emulator         : Found
+Android SDK Command adb  : Found
+Android SDK Command dx   : Found
+Platform SDK android-23  : Not found
+
+    !!! Ruboto setup is NOT OK !!!
+
+Android platform SDK for android-23 not found.
+Installing ["sys-img-armeabi-v7a-android-23", "sys-img-armeabi-v7a-google_apis-23", "sys-img-arm64-v8a-android-23", "sys-img-arm64-v8a-google_apis-23"]
+Refresh Sources:
+  Fetching https://dl.google.com/android/repository/addons_list-2.xml
+  Validate XML
+  Parse XML
+  Fetched Add-ons List successfully
+  Refresh Sources
+  Fetching URL: https://dl.google.com/android/repository/repository-11.xml
+  Validate XML: https://dl.google.com/android/repository/repository-11.xml
+  Parse XML:    https://dl.google.com/android/repository/repository-11.xml
+  Fetching URL: https://dl.google.com/android/repository/addon.xml
+  Validate XML: https://dl.google.com/android/repository/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/glass/addon.xml
+  Validate XML: https://dl.google.com/android/repository/glass/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/glass/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/extras/intel/addon.xml
+  Validate XML: https://dl.google.com/android/repository/extras/intel/addon.xml
+  Parse XML:    https://dl.google.com/android/repository/extras/intel/addon.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android-wear/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/android-tv/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/google_apis/sys-img.xml
+  Fetching URL: https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Validate XML: https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+  Parse XML:    https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img.xml
+Error: Ignoring unknown package filter 'sys-img-armeabi-v7a-android-23'
+Error: Ignoring unknown package filter 'sys-img-arm64-v8a-android-23'
+Error: Ignoring unknown package filter 'sys-img-arm64-v8a-google_apis-23'
+-------------------------------
+License id: android-sdk-license-c81a61d9
+Used by: 
+ - SDK Platform Android 6.0, API 23, revision 3
+  - Google APIs ARM EABI v7a System Image, Android API 23, revision 20
+-------------------------------
+
+Terms and Conditions
+
+This is the Android Software Development Kit License Agreement
+
+1. Introduction
+
+1.1 The Android Software Development Kit (referred to in the License Agreement as the "SDK" and specifically including the Android system files, packaged APIs, and Google APIs add-ons) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the SDK.
+
+1.2 "Android" means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.3 A "compatible implementation" means any Android device that (i) complies with the Android Compatibility Definition document, which can be found at the Android compatibility website (http://source.android.com/compatibility) and which may be updated from time to time; and (ii) successfully passes the Android Compatibility Test Suite (CTS).
+
+1.4 "Google" means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+
+2. Accepting the License Agreement
+
+2.1 In order to use the SDK, you must first agree to the License Agreement. You may not use the SDK if you do not accept the License Agreement.
+
+2.2 By clicking to accept, you hereby agree to the terms of the License Agreement.
+
+2.3 You may not use the SDK and may not accept the License Agreement if you are a person barred from receiving the SDK under the laws of the United States or other countries, including the country in which you are resident or from which you use the SDK.
+
+2.4 If you are agreeing to be bound by the License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the SDK on behalf of your employer or other entity.
+
+
+3. SDK License from Google
+
+3.1 Subject to the terms of the License Agreement, Google grants you a limited, worldwide, royalty-free, non-assignable, non-exclusive, and non-sublicensable license to use the SDK solely to develop applications for compatible implementations of Android.
+
+3.2 You may not use this SDK to develop applications for other platforms (including non-compatible implementations of Android) or to develop another SDK. You are of course free to develop applications for other platforms, including non-compatible implementations of Android, provided that this SDK is not used for that purpose.
+
+3.3 You agree that Google or third parties own all legal right, title and interest in and to the SDK, including any Intellectual Property Rights that subsist in the SDK. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.4 You may not use the SDK for any purpose not expressly permitted by the License Agreement.  Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the SDK or any part of the SDK; or (b) load any part of the SDK onto a mobile handset or any other hardware device except a personal computer, combine any part of the SDK with other software, or distribute any software or device incorporating a part of the SDK.
+
+3.5 Use, reproduction and distribution of components of the SDK licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement.
+
+3.6 You agree that the form and nature of the SDK that Google provides may change without prior notice to you and that future versions of the SDK may be incompatible with applications developed on previous versions of the SDK. You agree that Google may stop (permanently or temporarily) providing the SDK (or any features within the SDK) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in the License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the SDK.
+
+
+4. Use of the SDK by You
+
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the SDK, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the SDK and write applications only for purposes that are permitted by (a) the License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the SDK to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, the user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the SDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google or any mobile communications carrier.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the SDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the SDK are being used and how they are being used. Before any of this information is collected, the SDK will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the SDK and is maintained in accordance with Google's Privacy Policy.
+
+
+7. Third Party Applications
+
+7.1 If you use the SDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, the License Agreement does not affect your legal relationship with these third parties.
+
+
+8. Using Android APIs
+
+8.1 Google Data APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+
+9. Terminating the License Agreement
+
+9.1 The License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the SDK and any relevant developer credentials.
+
+9.3 Google may at any time, terminate the License Agreement with you if:
+(A) you have breached any provision of the License Agreement; or
+(B) Google is required to do so by law; or
+(C) the partner with whom Google offered certain parts of SDK (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the SDK to you; or
+(D) Google decides to no longer provide the SDK or certain parts of the SDK to users in the country in which you are resident or from which you use the service, or the provision of the SDK or certain SDK services to you by Google is, in Google's sole discretion, no longer commercially viable.
+
+9.4 When the License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst the License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+
+10. DISCLAIMER OF WARRANTIES
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the SDK, (b) any application you develop on the SDK that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with the License Agreement.
+
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the SDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the SDK is made available.
+
+
+14. General Legal Terms
+
+14.1 The License Agreement constitutes the whole legal agreement between you and Google and governs your use of the SDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the SDK.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE SDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE SDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The rights granted in the License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under the License Agreement without the prior written approval of the other party.
+
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+
+November 20, 2015
+Do you accept the license 'android-sdk-license-c81a61d9' [y/n]: 
+Installing Archives:
+  Preparing to install archives
+  Downloading SDK Platform Android 6.0, API 23, revision 3
+     (8%, 2985 KiB/s, 21 seconds left)     (13%, 3103 KiB/s, 19 seconds left)     (18%, 3118 KiB/s, 18 seconds left)     (22%, 3150 KiB/s, 16 seconds left)     (27%, 3182 KiB/s, 15 seconds left)     (32%, 3165 KiB/s, 14 seconds left)     (37%, 3184 KiB/s, 13 seconds left)     (41%, 3159 KiB/s, 12 seconds left)     (46%, 3154 KiB/s, 11 seconds left)     (50%, 3162 KiB/s, 10 seconds left)     (55%, 3150 KiB/s, 9 seconds left)     (59%, 3150 KiB/s, 8 seconds left)     (64%, 3156 KiB/s, 7 seconds left)     (69%, 3160 KiB/s, 6 seconds left)     (73%, 3167 KiB/s, 5 seconds left)     (77%, 3142 KiB/s, 4 seconds left)     (82%, 3142 KiB/s, 3 seconds left)     (87%, 3151 KiB/s, 2 seconds left)     (91%, 3153 KiB/s, 1 seconds left)     (96%, 3166 KiB/s, 0 seconds left)  Installing SDK Platform Android 6.0, API 23, revision 3
+  Unzipping SDK Platform Android 6.0, API 23, revision 3 (20%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (21%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (22%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (23%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (24%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (25%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (26%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (27%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (28%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (29%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (30%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (31%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (32%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (33%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (34%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (35%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (36%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (37%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (38%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (39%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (40%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (41%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (42%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (43%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (44%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (77%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (78%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (79%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (82%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (83%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (84%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (85%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (86%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (89%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (90%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (91%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (92%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (93%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (94%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (95%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (96%)  Unzipping SDK Platform Android 6.0, API 23, revision 3 (97%)    Installed SDK Platform Android 6.0, API 23, revision 3
+  Downloading Google APIs ARM EABI v7a System Image, Android API 23, revision 20
+     (1%, 3055 KiB/s, 2 minutes left)     (2%, 3103 KiB/s, 2 minutes left)     (3%, 3211 KiB/s, 2 minutes left)     (3%, 3231 KiB/s, 2 minutes left)     (4%, 3211 KiB/s, 2 minutes left)     (5%, 3092 KiB/s, 2 minutes left)     (6%, 3076 KiB/s, 2 minutes left)     (6%, 3115 KiB/s, 2 minutes left)     (7%, 3108 KiB/s, 2 minutes left)     (8%, 3102 KiB/s, 120 seconds left)     (9%, 3077 KiB/s, 120 seconds left)     (9%, 3087 KiB/s, 119 seconds left)     (10%, 3117 KiB/s, 117 seconds left)     (11%, 3131 KiB/s, 115 seconds left)     (12%, 3143 KiB/s, 113 seconds left)     (13%, 3141 KiB/s, 113 seconds left)     (13%, 3156 KiB/s, 111 seconds left)     (14%, 3170 KiB/s, 109 seconds left)     (15%, 3183 KiB/s, 108 seconds left)     (16%, 3185 KiB/s, 107 seconds left)     (17%, 3198 KiB/s, 105 seconds left)     (18%, 3213 KiB/s, 104 seconds left)     (18%, 3223 KiB/s, 102 seconds left)     (19%, 3234 KiB/s, 101 seconds left)     (20%, 3243 KiB/s, 99 seconds left)     (21%, 3254 KiB/s, 98 seconds left)     (22%, 3257 KiB/s, 97 seconds left)     (23%, 3261 KiB/s, 96 seconds left)     (24%, 3264 KiB/s, 95 seconds left)     (24%, 3263 KiB/s, 94 seconds left)     (25%, 3254 KiB/s, 93 seconds left)     (26%, 3257 KiB/s, 92 seconds left)     (27%, 3258 KiB/s, 91 seconds left)     (28%, 3261 KiB/s, 90 seconds left)     (28%, 3268 KiB/s, 88 seconds left)     (29%, 3269 KiB/s, 87 seconds left)     (30%, 3275 KiB/s, 86 seconds left)     (31%, 3280 KiB/s, 85 seconds left)     (32%, 3285 KiB/s, 84 seconds left)     (33%, 3288 KiB/s, 83 seconds left)     (33%, 3292 KiB/s, 82 seconds left)     (34%, 3296 KiB/s, 80 seconds left)     (35%, 3298 KiB/s, 79 seconds left)     (36%, 3299 KiB/s, 78 seconds left)     (37%, 3303 KiB/s, 77 seconds left)     (38%, 3304 KiB/s, 76 seconds left)     (38%, 3309 KiB/s, 75 seconds left)     (39%, 3312 KiB/s, 74 seconds left)     (40%, 3315 KiB/s, 73 seconds left)     (41%, 3317 KiB/s, 72 seconds left)     (42%, 3320 KiB/s, 70 seconds left)     (43%, 3322 KiB/s, 69 seconds left)     (44%, 3325 KiB/s, 68 seconds left)     (44%, 3324 KiB/s, 67 seconds left)     (45%, 3320 KiB/s, 66 seconds left)     (46%, 3321 KiB/s, 65 seconds left)     (47%, 3324 KiB/s, 64 seconds left)     (48%, 3326 KiB/s, 63 seconds left)     (49%, 3329 KiB/s, 62 seconds left)     (49%, 3330 KiB/s, 61 seconds left)     (50%, 3332 KiB/s, 60 seconds left)     (51%, 3328 KiB/s, 59 seconds left)     (52%, 3323 KiB/s, 58 seconds left)     (52%, 3321 KiB/s, 57 seconds left)     (53%, 3312 KiB/s, 57 seconds left)     (54%, 3311 KiB/s, 56 seconds left)     (55%, 3307 KiB/s, 55 seconds left)     (56%, 3308 KiB/s, 54 seconds left)     (56%, 3311 KiB/s, 53 seconds left)     (57%, 3311 KiB/s, 52 seconds left)     (58%, 3314 KiB/s, 51 seconds left)     (59%, 3314 KiB/s, 50 seconds left)     (60%, 3316 KiB/s, 49 seconds left)     (61%, 3315 KiB/s, 48 seconds left)     (61%, 3316 KiB/s, 47 seconds left)     (62%, 3312 KiB/s, 46 seconds left)     (63%, 3314 KiB/s, 45 seconds left)     (64%, 3315 KiB/s, 44 seconds left)     (65%, 3312 KiB/s, 43 seconds left)     (65%, 3305 KiB/s, 42 seconds left)     (66%, 3299 KiB/s, 41 seconds left)     (67%, 3298 KiB/s, 40 seconds left)     (68%, 3299 KiB/s, 39 seconds left)     (68%, 3300 KiB/s, 38 seconds left)     (69%, 3302 KiB/s, 37 seconds left)     (70%, 3304 KiB/s, 36 seconds left)     (71%, 3306 KiB/s, 35 seconds left)     (72%, 3308 KiB/s, 34 seconds left)     (73%, 3311 KiB/s, 33 seconds left)     (74%, 3313 KiB/s, 32 seconds left)     (74%, 3313 KiB/s, 31 seconds left)     (75%, 3313 KiB/s, 30 seconds left)     (76%, 3315 KiB/s, 28 seconds left)     (77%, 3313 KiB/s, 28 seconds left)     (78%, 3314 KiB/s, 27 seconds left)     (78%, 3315 KiB/s, 25 seconds left)     (79%, 3317 KiB/s, 24 seconds left)     (80%, 3319 KiB/s, 23 seconds left)     (81%, 3321 KiB/s, 22 seconds left)     (82%, 3323 KiB/s, 21 seconds left)     (83%, 3323 KiB/s, 20 seconds left)     (83%, 3321 KiB/s, 19 seconds left)     (84%, 3323 KiB/s, 18 seconds left)     (85%, 3325 KiB/s, 17 seconds left)     (86%, 3323 KiB/s, 16 seconds left)     (87%, 3320 KiB/s, 15 seconds left)     (88%, 3320 KiB/s, 14 seconds left)     (88%, 3319 KiB/s, 13 seconds left)     (89%, 3320 KiB/s, 12 seconds left)     (90%, 3321 KiB/s, 11 seconds left)     (91%, 3321 KiB/s, 10 seconds left)     (92%, 3320 KiB/s, 9 seconds left)     (92%, 3320 KiB/s, 8 seconds left)     (93%, 3321 KiB/s, 7 seconds left)     (94%, 3323 KiB/s, 6 seconds left)     (95%, 3320 KiB/s, 5 seconds left)     (96%, 3321 KiB/s, 4 seconds left)     (97%, 3321 KiB/s, 3 seconds left)     (97%, 3322 KiB/s, 2 seconds left)     (98%, 3323 KiB/s, 1 seconds left)     (99%, 3323 KiB/s, 0 seconds left)  Installing Google APIs ARM EABI v7a System Image, Android API 23, revision 20
+  Unzipping Google APIs ARM EABI v7a System Image, Android API 23, revision 20 (1%)  Unzipping Google APIs ARM EABI v7a System Image, Android API 23, revision 20 (2%)  Unzipping Google APIs ARM EABI v7a System Image, Android API 23, revision 20 (3%)  Unzipping Google APIs ARM EABI v7a System Image, Android API 23, revision 20 (99%)    Installed Google APIs ARM EABI v7a System Image, Android API 23, revision 20
+  Done. 2 packages installed.
+Platform SDK android-23  : Found
+Java runtime             : Found
+Java Compiler            : Found
+Apache ANT               : Found
+Android Package Installer: Found
+Android SDK Manager      : Not found
+Android Emulator         : Found
+Android SDK Command adb  : Found
+Android SDK Command dx   : Found
+Platform SDK android-23  : Found
+
+    *** Ruboto setup is OK! ***
+
+
+You are missing some paths.  Execute these lines to add them:
+
+    export PATH="/usr/local/android-sdk/build-tools/25.0.2:$PATH"
+
+Updated /home/travis/.bashrc to load the ~/.rubotorc config file.
+Please close your command window and reopen, or run
+
+    source ~/.rubotorc
+
+No emulator is running.
+Creating AVD Android_6.0
+Available abis: ["google_apis/armeabi-v7a"]
+Created AVD 'Android_6.0' based on Android 6.0, Google apis ARM (armeabi-v7a) processor,
+with the following hardware config:
+hw.accelerometer=yes
+hw.audioInput=yes
+hw.battery=yes
+hw.dPad=no
+hw.device.hash2=MD5:36362a51e6c830c2ab515a312c9ecbff
+hw.device.manufacturer=Google
+hw.device.name=Nexus One
+hw.gps=yes
+hw.keyboard=no
+hw.lcd.density=240
+hw.mainKeys=yes
+hw.sdCard=yes
+hw.sensors.orientation=no
+hw.sensors.proximity=yes
+hw.trackBall=yes
+Added property: vm.heapSize=256
+Changed property: hw.mainKeys=no (was "yes")
+Start emulator Android_6.0 without snapshot
+emulator -avd Android_6.0 -partition-size 256 -no-snapshot -no-window &
+emulator: WARNING: Increasing RAM size to 1GB
+
+Emulator started: ........Creating filesystem with parameters:
+    Size: 2147483648
+    Block size: 4096
+    Blocks per group: 32768
+    Inodes per group: 8192
+    Inode size: 256
+    Journal blocks: 8192
+    Label: 
+    Blocks: 524288
+    Block groups: 16
+    Reserved block group size: 127
+Created filesystem with 11/131072 inodes and 17193/524288 blocks
+............resize2fs 1.42.13 (17-May-2015)
+....The filesystem is already 524288 (4k) blocks long.  Nothing to do!
+
+Creating filesystem with parameters:
+    Size: 69206016
+    Block size: 4096
+    Blocks per group: 32768
+    Inodes per group: 4224
+    Inode size: 256
+    Journal blocks: 1024
+    Label: 
+    Blocks: 16896
+    Block groups: 1
+    Reserved block group size: 7
+Created filesystem with 11/4224 inodes and 1302/16896 blocks
+....emulator: UpdateCheck: current version '24.4.1', last version '24.4.1'
+.............................
+Allow the emulator to calm down a bit.
+...............................................................
+Emulator Android_6.0 started OK.
+Fetching gem metadata from http://rubygems.org/.........
+Fetching version metadata from http://rubygems.org/.
+Using rake 12.0.0
+Using arrayfields 4.9.2
+Using chronic 0.10.2
+Using coderay 1.1.1
+Using fattr 2.3.0
+Using map 6.6.0
+Using method_source 0.8.2
+Using slop 3.6.0
+Installing minitest 5.10.1
+Using net-telnet 0.1.1
+Using rubyzip 1.2.1
+Using bundler 1.14.6
+Using pry 0.10.4
+Using main 5.3.2
+Using ruboto 2.0.0.dev from source at `.`
+Bundle complete! 2 Gemfile dependencies, 15 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Running tests 10-11 of 17
+Detected RUBOTO_UPDATE_EXAMPLES environment variable.  Limiting to 0 examples.
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ANDROID_OS: 23
+ANDROID_TARGET: 23
+ANDROID_HOME: /usr/local/android-sdk/
+ANDROID_SDK_TOOLS_REVISION: 24
+RUBOTO_PLATFORM: STANDALONE
+JRUBY_JARS_VERSION: 9.1.9.0.SNAPSHOT
+Run options: --seed 31978
+
+# Running:
+
+
+================================================================================
+Starting test RubotoUpdateTest#test_jruby_adapter_heap_alloc at 2017-05-10 16:24:56:
+
+Successfully installed jruby-jars-9.1.9.0.SNAPSHOT
+1 gem installed
+Generating app /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp
+
+Generating Android app RubotoTestApp in /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp...
+Created project directory: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app/RubotoTestAppActivity.java
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/values
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/values/strings.xml
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/layout
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/layout/main.xml
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-xhdpi
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-hdpi
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-mdpi
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-ldpi
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/AndroidManifest.xml
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/proguard-project.txt
+Removed file src/org/ruboto/test_app/RubotoTestAppActivity.java
+Removed file res/layout/main.xml
+Done
+
+Adding RubotoActivity, RubotoDialog, RubotoService, and SDK versions to the manifest...Done.
+
+Generating Android test project RubotoTestApp in /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp...
+Found main project package: org.ruboto.test_app
+Found main project activity: RubotoTestAppActivity
+Found main project target: Android 6.0
+Created project directory: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/src/org/ruboto/test_app
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/src/org/ruboto/test_app/RubotoTestAppActivityTest.java
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/res
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/bin
+Created directory /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/libs
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/AndroidManifest.xml
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/build.xml
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/proguard-project.txt
+Done
+update_test: target_level: 23
+
+Copying files:
+.gitignore...Done.
+Rakefile...Done.
+ruboto.yml...Done.
+assets...Done.
+rakelib...Done.
+res/layout...Done.
+test...Done.
+Copying ruboto/version.rb...Done.
+Copying additional ruboto script components...Done.
+Copying icons...Done.
+Ruboto java classes...Done.
+Ruboto java test classes...Done.
+Copying /home/travis/.rvm/gems/ruby-2.3.1/gems/jruby-jars-9.1.9.0.SNAPSHOT/lib/jruby-core-9.1.9.0-SNAPSHOT-complete.jar to libs...Done.
+Setting JUMBO dex file format...Done.
+Copying dx.jar to libs...Done.
+Removing unneeded classes from jruby-core-9.1.9.0.SNAPSHOT.jar...Note: /home/travis/build/ruboto/ruboto/lib/DynamicScopeGenerator.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Done.
+Copying /home/travis/.rvm/gems/ruby-2.3.1/gems/jruby-jars-9.1.9.0.SNAPSHOT/lib/jruby-stdlib-9.1.9.0-SNAPSHOT.jar to libs...Done.
+Reformatting jruby-stdlib-9.1.9.0.SNAPSHOT.jar...generator...parser...bcpkix-jdk15on-1.56...bcprov-jdk15on-1.56...snakeyaml-1.18...cparse-jruby...jopenssl...psych...Done.
+Removing unneeded classes from dx.jar...Done.
+JRuby version is now: 9.1.9.0.SNAPSHOT
+Copying dx.jar to libs...Done.
+Loading Android API...Done.
+Generating methods for RubotoActivity...Done. Methods created: 62
+Generating methods for RubotoService...Done. Methods created: 10
+Generating methods for RubotoBroadcastReceiver...Done. Methods created: 1
+patching build.xml
+Generating the default Activity and script...Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app/RubotoTestAppActivity.java.
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto_test_app_activity.rb.
+Added file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/src/ruboto_test_app_activity_test.rb.
+Done.
+
+Hello, RubotoTestApp
+Adding ruboto.yml:
+---
+ruby_version: '2.2'
+heap_alloc: 16
+patching build.xml
+Removing libs/jruby-core-9.1.9.0.SNAPSHOT.jar...Done.
+Removing libs/jruby-stdlib-9.1.9.0.SNAPSHOT.jar...Done.
+Copying /home/travis/.rvm/gems/ruby-2.3.1/gems/jruby-jars-9.1.9.0.SNAPSHOT/lib/jruby-core-9.1.9.0-SNAPSHOT-complete.jar to libs...Done.
+Copying dx.jar to libs...Done.
+Removing unneeded classes from jruby-core-9.1.9.0.SNAPSHOT.jar...Note: /home/travis/build/ruboto/ruboto/lib/DynamicScopeGenerator.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Done.
+Copying /home/travis/.rvm/gems/ruby-2.3.1/gems/jruby-jars-9.1.9.0.SNAPSHOT/lib/jruby-stdlib-9.1.9.0-SNAPSHOT.jar to libs...Done.
+Reformatting jruby-stdlib-9.1.9.0.SNAPSHOT.jar...removing include...generator...parser...bcpkix-jdk15on-1.56...bcprov-jdk15on-1.56...snakeyaml-1.18...cparse-jruby...jopenssl...psych...Done.
+Removing unneeded classes from dx.jar...Done.
+JRuby version is now: 9.1.9.0.SNAPSHOT
+Updated local.properties
+Updated file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Updated file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/proguard-project.txt
+Updated local.properties
+Updated file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/build.xml
+Updated file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/test/proguard-project.txt
+update_test: target_level: 23
+
+Copying files:
+.gitignore...Done.
+Rakefile...Done.
+ruboto.yml...Done.
+assets...Done.
+rakelib...Done.
+res/layout...Done.
+test...Done.
+Copying ruboto/version.rb...Done.
+Copying additional ruboto script components...Done.
+Ruboto java classes...Done.
+Ruboto java test classes...Done.
+Regenerating Activity RubotoTestAppActivity
+Updated file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app/RubotoTestAppActivity.java.
+Copying dx.jar to libs...Done.
+JRuby is up to date at version 9.1.9.0.SNAPSHOT. Make sure you 'gem update jruby-jars' if there is a new version.
+
+Adding RubotoActivity, RubotoDialog, RubotoService, and SDK versions to the manifest...Done.
+Copying icons...Done.
+Loading Android API...Done.
+Generating methods for RubotoActivity...Done. Methods created: 57
+Generating methods for RubotoService...Done. Methods created: 10
+Generating methods for RubotoBroadcastReceiver...Done. Methods created: 1
+patching build.xml
+Regenerating RubotoActivity.java with active methods
+** Invoke debug (first_time)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug.apk (first_time)
+** Invoke patch_dex (first_time)
+** Execute patch_dex
+Increasing max heap space from 1024M to 2048M in /usr/local/android-sdk/build-tools/21.1.2/dx
+Increasing max heap space from 1024M to 2048M in /usr/local/android-sdk/build-tools/25.0.2/dx
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/AndroidManifest.xml (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/project.properties (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/ruboto.yml (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/ruboto.yml (not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/bundle.jar (first_time)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/Gemfile.apk (first_time)
+** Execute /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/Gemfile.apk
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/Gemfile.apk.lock (first_time)
+** Execute /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/Gemfile.apk.lock
+** Execute /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/bundle.jar
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug-unaligned.apk.d (first_time)
+** Execute /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug-unaligned.apk.d
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-core-9.1.9.0.SNAPSHOT.jar (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-stdlib-9.1.9.0.SNAPSHOT.jar (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dx.jar (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dexmaker-2.2.0.jar (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app/RubotoTestAppActivity.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/DexDex.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/EntryPointActivity.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/FrameworkHack.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/JRubyAdapter.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/ruboto.yml (not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/Log.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoComponent.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoDialog.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/Script.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/ScriptInfo.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/ScriptLoader.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/SplashActivity.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoActivity.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto_test_app_activity.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoService.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoBroadcastReceiver.java (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/values (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/values/strings.xml (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/layout (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/layout/get_ruboto_core.xml (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/layout/dummy_layout.xml (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-xhdpi (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-xhdpi/ic_launcher.png (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-hdpi (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-hdpi/ic_launcher.png (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-mdpi (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-mdpi/ic_launcher.png (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-ldpi (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable-ldpi/ic_launcher.png (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res/drawable/get_ruboto_core.png (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/version.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/activity.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/activity/reload.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/base.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/broadcast_receiver.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/package.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/preference.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/service.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/util/stack.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/util/toast.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/widget.rb (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto_test_app_activity.rb (not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/activity (first_time, not_needed)
+** Invoke /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/util (first_time, not_needed)
+** Execute /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug.apk
+ant -v debug
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+Trying the default build file: build.xml
+Buildfile: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Detected Java version: 1.7 in: /usr/lib/jvm/java-7-oracle/jre
+Detected OS: Linux
+parsing buildfile /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml with URI = file:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Project base dir set to: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp
+parsing buildfile jar:file:/usr/share/ant/lib/ant.jar!/org/apache/tools/ant/antlib.xml with URI = jar:file:/usr/share/ant/lib/ant.jar!/org/apache/tools/ant/antlib.xml from a zip file
+ [property] Loading /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/local.properties
+ [property] Loading /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/ant.properties
+ [property] Loading Environment env.
+Override ignored for property "sdk.dir"
+Importing file /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/custom_rules.xml from /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Cannot find /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/custom_rules.xml imported from /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Importing file /usr/local/android-sdk/tools/ant/build.xml from /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/build.xml
+Overriding previous definition of reference to ant.projectHelper
+parsing buildfile /usr/local/android-sdk/tools/ant/build.xml with URI = file:/usr/local/android-sdk/tools/ant/build.xml
+Already defined in main or a previous import, ignore -package
+Override ignored for property "dex.force.jumbo"
+Property "key.store" has not been set
+ [macrodef] creating macro  do-only-if-not-library
+ [macrodef] creating macro  do-only-if-manifest-hasCode
+ [macrodef] creating macro  dex-helper
+ [macrodef] creating macro  package-helper
+ [macrodef] creating macro  zipalign-helper
+ [macrodef] creating macro  run-tests-helper
+ [macrodef] creating macro  record-build-key
+ [macrodef] creating macro  record-build-info
+ [macrodef] creating macro  uninstall-helper
+Overriding previous definition of reference to ant.projectHelper
+ [macrodef] creating macro  multi-dex-helper
+Trying to override old definition of task dex-helper
+ [macrodef] creating macro  dex-helper
+Build sequence for target(s) `debug' is [-set-mode-check, -set-debug-files, -check-env, -setup, -set-debug-mode, -debug-obfuscation-check, -pre-build, -build-setup, -code-gen, -pre-compile, -compile, -post-compile, -obfuscate, -dex, -crunch, -package-resources, -post-package-resources, -package, -post-package, -do-debug, -post-build, debug]
+Complete build sequence is [-set-mode-check, -set-debug-files, -check-env, -setup, -set-debug-mode, -debug-obfuscation-check, -pre-build, -build-setup, -code-gen, -pre-compile, -compile, -post-compile, -obfuscate, -dex, -crunch, -package-resources, -post-package-resources, -package, -post-package, -do-debug, -post-build, debug, -set-instrumented-mode, instrument, emma, android_rules.-pre-build, android_rules.-release-obfuscation-check, android_rules.-setup, lint, android_rules.-release-sign, -test-project-check, android_rules.nodeps, android_rules.-set-debug-files, android_rules.-set-debug-mode, -pre-clean, -release-nosign, install, installd, android_rules.installt, android_rules.-dex, -set-release-mode, android_rules.installr, android_rules.emma, android_rules.-release-nosign, android_rules.-pre-compile, android_rules.instrument, android_rules.uninstall, android_rules.installi, android_rules.lint, android_rules.-obfuscate, android_rules.clean, android_rules.installd, android_rules.-post-build, android_rules.-debug-obfuscation-check, android_rules.-compile, installt, help, -release-obfuscation-check, -release-prompt-for-password, -release-sign, android_rules.release, installr, release, android_rules.-pre-clean, android_rules.-post-compile, installi, android_rules.-code-gen, android_rules.-release-prompt-for-password, android_rules.-package-resources, android_rules.-set-mode-check, android_rules.-test-project-check, test, android_rules.help, android_rules.install, clean, android_rules.-do-debug, android_rules.-check-env, android_rules.-package, android_rules.-set-instrumented-mode, android_rules.test, android_rules.-post-package, android_rules.debug, uninstall, android_rules.-build-setup, nodeps, android_rules.-crunch, , android_rules.-set-release-mode]
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 24.4.1
+ [checkenv] Installed at /usr/local/android-sdk
+
+-setup:
+     [echo] Project Name: RubotoTestApp
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+Property "emma.enabled" has not been set
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 25.0.2
+ [property] Loading /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/build.prop
+ [property] Unable to find property file: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/build.prop
+     [echo] Resolving Build Target for RubotoTestApp...
+[gettarget] Project Target:   Android 6.0
+[gettarget] API level:        23
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Skipping /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res because it already exists.
+    [mkdir] Skipping /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs because it already exists.
+    [mkdir] Skipping /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin because it already exists.
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/res
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/rsObj
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/rsLibs
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/gen
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for RubotoTestApp...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+   [subant] No sub-builds to iterate on
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+Property "android.library" has not been set
+     [aapt] Generating resource IDs...
+     [aapt] Current OS is Linux
+     [aapt] Executing '/usr/local/android-sdk/build-tools/25.0.2/aapt' with arguments:
+     [aapt] 'package'
+     [aapt] '-f'
+     [aapt] '-m'
+     [aapt] '-0'
+     [aapt] 'apk'
+     [aapt] '-M'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/AndroidManifest.xml'
+     [aapt] '-S'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/res'
+     [aapt] '-S'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res'
+     [aapt] '-I'
+     [aapt] '/usr/local/android-sdk/platforms/android-23/android.jar'
+     [aapt] '-J'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/gen'
+     [aapt] '--generate-dependencies'
+     [aapt] '-G'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/proguard.txt'
+     [aapt] 
+     [aapt] The ' characters around the executable and arguments are
+     [aapt] not part of the command.
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] org/ruboto/DexDex.java added as org/ruboto/DexDex.class doesn't exist.
+    [javac] org/ruboto/EntryPointActivity.java added as org/ruboto/EntryPointActivity.class doesn't exist.
+    [javac] org/ruboto/FrameworkHack.java added as org/ruboto/FrameworkHack.class doesn't exist.
+    [javac] org/ruboto/JRubyAdapter.java added as org/ruboto/JRubyAdapter.class doesn't exist.
+    [javac] org/ruboto/Log.java added as org/ruboto/Log.class doesn't exist.
+    [javac] org/ruboto/RubotoActivity.java added as org/ruboto/RubotoActivity.class doesn't exist.
+    [javac] org/ruboto/RubotoBroadcastReceiver.java added as org/ruboto/RubotoBroadcastReceiver.class doesn't exist.
+    [javac] org/ruboto/RubotoComponent.java added as org/ruboto/RubotoComponent.class doesn't exist.
+    [javac] org/ruboto/RubotoDialog.java added as org/ruboto/RubotoDialog.class doesn't exist.
+    [javac] org/ruboto/RubotoService.java added as org/ruboto/RubotoService.class doesn't exist.
+    [javac] org/ruboto/Script.java added as org/ruboto/Script.class doesn't exist.
+    [javac] org/ruboto/ScriptInfo.java added as org/ruboto/ScriptInfo.class doesn't exist.
+    [javac] org/ruboto/ScriptLoader.java added as org/ruboto/ScriptLoader.class doesn't exist.
+    [javac] org/ruboto/SplashActivity.java added as org/ruboto/SplashActivity.class doesn't exist.
+    [javac] org/ruboto/test_app/RubotoTestAppActivity.java added as org/ruboto/test_app/RubotoTestAppActivity.class doesn't exist.
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/activity.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/activity/reload.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/base.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/broadcast_receiver.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/package.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/preference.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/service.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/util/stack.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/util/toast.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/version.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto/widget.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/ruboto_test_app_activity.rb skipped - don't know how to handle it
+    [javac] /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/gen/R.java.d skipped - don't know how to handle it
+    [javac] org/ruboto/test_app/BuildConfig.java added as org/ruboto/test_app/BuildConfig.class doesn't exist.
+    [javac] org/ruboto/test_app/R.java added as org/ruboto/test_app/R.class doesn't exist.
+    [javac] Compiling 17 source files to /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes
+    [javac] Using modern compiler
+    [javac] Compilation arguments:
+    [javac] '-d'
+    [javac] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes'
+    [javac] '-classpath'
+    [javac] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-stdlib-9.1.9.0.SNAPSHOT.jar:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-core-9.1.9.0.SNAPSHOT.jar:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dexmaker-2.2.0.jar:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dx.jar'
+    [javac] '-sourcepath'
+    [javac] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/gen'
+    [javac] '-target'
+    [javac] '1.5'
+    [javac] '-bootclasspath'
+    [javac] '/usr/local/android-sdk/platforms/android-23/android.jar'
+    [javac] '-encoding'
+    [javac] 'UTF-8'
+    [javac] '-g'
+    [javac] '-source'
+    [javac] '1.5'
+    [javac] 
+    [javac] The ' characters around the executable and arguments are
+    [javac] not part of the command.
+    [javac] Files to be compiled:
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/DexDex.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/EntryPointActivity.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/FrameworkHack.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/JRubyAdapter.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/Log.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoActivity.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoBroadcastReceiver.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoComponent.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoDialog.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/RubotoService.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/Script.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/ScriptInfo.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/ScriptLoader.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/SplashActivity.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/src/org/ruboto/test_app/RubotoTestAppActivity.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/gen/org/ruboto/test_app/BuildConfig.java
+    [javac]     /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/gen/org/ruboto/test_app/R.java
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+[available] Found: bin/classes2.dex
+ [uptodate] The targetfile "/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes.dex" does not exist.
+     [echo] Converting compiled files and external libraries into /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin (multi-dex)
+   [delete] Deleting: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes2.dex
+     [echo] Dexing /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes and /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-stdlib-9.1.9.0.SNAPSHOT.jar:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-core-9.1.9.0.SNAPSHOT.jar:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dexmaker-2.2.0.jar:/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dx.jar
+    [apply] Current OS is Linux
+    [apply] Executing '/usr/local/android-sdk/build-tools/25.0.2/dx' with arguments:
+    [apply] '--dex'
+    [apply] '--multi-dex'
+    [apply] '--output=/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin'
+    [apply] '--force-jumbo'
+    [apply] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes'
+    [apply] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-stdlib-9.1.9.0.SNAPSHOT.jar'
+    [apply] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/jruby-core-9.1.9.0.SNAPSHOT.jar'
+    [apply] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dexmaker-2.2.0.jar'
+    [apply] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/libs/dx.jar'
+    [apply] 
+    [apply] The ' characters around the executable and arguments are
+    [apply] not part of the command.
+    [apply] Applied /usr/local/android-sdk/build-tools/25.0.2/dx to 4 files and 0 directories.
+    [sleep] sleeping for 1000 milliseconds
+
+-package-resources:
+     [aapt] Creating full resource package...
+     [aapt] Current OS is Linux
+     [aapt] Executing '/usr/local/android-sdk/build-tools/25.0.2/aapt' with arguments:
+     [aapt] 'package'
+     [aapt] '--no-crunch'
+     [aapt] '-f'
+     [aapt] '--debug-mode'
+     [aapt] '-0'
+     [aapt] 'apk'
+     [aapt] '-M'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/AndroidManifest.xml'
+     [aapt] '-S'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/res'
+     [aapt] '-S'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/res'
+     [aapt] '-I'
+     [aapt] '/usr/local/android-sdk/platforms/android-23/android.jar'
+     [aapt] '-F'
+     [aapt] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp.ap_'
+     [aapt] '--generate-dependencies'
+     [aapt] 
+     [aapt] The ' characters around the executable and arguments are
+     [aapt] not part of the command.
+
+-post-package-resources:
+[available] Found: bin/classes2.dex
+     [echo] Adding assets/classes2.jar to RubotoTestApp.ap_
+     [exec] Current OS is Linux
+     [exec] Executing 'aapt' with arguments:
+     [exec] 'remove'
+     [exec] '-v'
+     [exec] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp.ap_'
+     [exec] 'assets/classes2.jar'
+     [exec] 
+     [exec] The ' characters around the executable and arguments are
+     [exec] not part of the command.
+     [exec]  'assets/classes2.jar' NOT FOUND
+     [exec] Result: 1
+     [copy] Copying 1 file to /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/dexedLibs
+     [copy] Copying /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/classes2.dex to /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/dexedLibs/classes.dex
+    [mkdir] Created dir: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/dexedLibs/assets
+      [zip] Building zip: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/dexedLibs/assets/classes2.jar
+      [zip] adding entry classes.dex
+   [delete] Deleting: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/dexedLibs/classes.dex
+     [exec] Current OS is Linux
+     [exec] Executing 'aapt' with arguments:
+     [exec] 'add'
+     [exec] '-v'
+     [exec] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp.ap_'
+     [exec] 'assets/classes2.jar'
+     [exec] 
+     [exec] The ' characters around the executable and arguments are
+     [exec] not part of the command.
+     [exec]  'assets/classes2.jar'...
+
+-package:
+[apkbuilder] Current build type is different than previous build: forced apkbuilder run.
+[apkbuilder] Creating RubotoTestApp-debug-unaligned.apk and signing it with a debug key...
+
+-post-package:
+
+-do-debug:
+ [zipalign] Running zip align on final apk...
+[zip-align] Current OS is Linux
+[zip-align] Executing '/usr/local/android-sdk/build-tools/25.0.2/zipalign' with arguments:
+[zip-align] '-f'
+[zip-align] '4'
+[zip-align] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug-unaligned.apk'
+[zip-align] '/home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug.apk'
+[zip-align] 
+[zip-align] The ' characters around the executable and arguments are
+[zip-align] not part of the command.
+     [echo] Debug Package: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/RubotoTestApp-debug.apk
+[propertyfile] Creating new property file: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/build.prop
+[propertyfile] Updating property file: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/build.prop
+[propertyfile] Updating property file: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/build.prop
+[propertyfile] Updating property file: /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp/bin/build.prop
+
+-post-build:
+
+debug:
+
+BUILD SUCCESSFUL
+Total time: 1 minute 9 seconds
+** Execute debug
+Storing app as template /home/travis/build/ruboto/ruboto/tmp/RubotoTestApp_template_6067_heap_alloc_16_updated_standalone
+
+Ended test RubotoUpdateTest#test_jruby_adapter_heap_alloc: PASSED after 2:06
+
+.
+...================================================================================
+Starting test SampleBroadcastReceiverTest#test_on_receive_calls_log_e at 2017-05-10 16:27:09:
+
+
+Ended test SampleBroadcastReceiverTest#test_on_receive_calls_log_e: PASSED after 0:08
+================================================================================
+.
+================================================================================
+Starting test SampleBroadcastReceiverTest#test_on_receive_calls_log_v at 2017-05-10 16:27:22:
+
+================================================================================
+
+.
+
+Finished in 156.749090s, 0.0191 runs/s, 0.0255 assertions/s.
+
+3 runs, 4 assertions, 0 failures, 0 errors, 0 skips
+Tests exited with code 0

@@ -1,0 +1,1004 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-0e606d0-production-2-worker-org-ec2.travisci.net:4336132c-ddc0-4dcb-a286-95ff13e19278
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: d0b9761:travis:ruby
+startup: 757.941883ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240236043
+Job id: 240236053
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:0c72bff4$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  70% (8536/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  71% (8658/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  72% (8779/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  73% (8901/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  74% (9023/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  75% (9145/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  76% (9267/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  77% (9389/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  78% (9511/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  79% (9633/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  80% (9755/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  81% (9877/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  82% (9999/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  83% (10121/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  84% (10243/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  85% (10365/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  86% (10486/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  87% (10608/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  88% (10730/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  89% (10852/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  90% (10974/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  91% (11096/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  92% (11218/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  93% (11340/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  94% (11462/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  95% (11584/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  96% (11706/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  97% (11828/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  98% (11950/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects:  99% (12072/12193), 3.19 MiB | 6.35 MiB/s   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193), 3.19 MiB | 6.35 MiB/s   Receiving objects: 100% (12193/12193), 5.43 MiB | 6.35 MiB/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (104/7339)   Resolving deltas:   2% (185/7339)   Resolving deltas:   3% (231/7339)   Resolving deltas:   8% (615/7339)   Resolving deltas:   9% (714/7339)   Resolving deltas:  10% (734/7339)   Resolving deltas:  13% (982/7339)   Resolving deltas:  14% (1069/7339)   Resolving deltas:  15% (1104/7339)   Resolving deltas:  16% (1179/7339)   Resolving deltas:  17% (1255/7339)   Resolving deltas:  18% (1335/7339)   Resolving deltas:  19% (1409/7339)   Resolving deltas:  20% (1517/7339)   Resolving deltas:  21% (1542/7339)   Resolving deltas:  22% (1639/7339)   Resolving deltas:  23% (1753/7339)   Resolving deltas:  24% (1767/7339)   Resolving deltas:  25% (1881/7339)   Resolving deltas:  26% (1918/7339)   Resolving deltas:  27% (1997/7339)   Resolving deltas:  28% (2098/7339)   Resolving deltas:  29% (2130/7339)   Resolving deltas:  30% (2204/7339)   Resolving deltas:  31% (2284/7339)   Resolving deltas:  32% (2356/7339)   Resolving deltas:  33% (2457/7339)   Resolving deltas:  34% (2501/7339)   Resolving deltas:  35% (2637/7339)   Resolving deltas:  36% (2643/7339)   Resolving deltas:  37% (2726/7339)   Resolving deltas:  38% (2798/7339)   Resolving deltas:  39% (2865/7339)   Resolving deltas:  41% (3018/7339)   Resolving deltas:  42% (3108/7339)   Resolving deltas:  43% (3172/7339)   Resolving deltas:  44% (3240/7339)   Resolving deltas:  45% (3303/7339)   Resolving deltas:  46% (3378/7339)   Resolving deltas:  47% (3450/7339)   Resolving deltas:  50% (3713/7339)   Resolving deltas:  51% (3776/7339)   Resolving deltas:  52% (3820/7339)   Resolving deltas:  53% (3946/7339)   Resolving deltas:  54% (3969/7339)   Resolving deltas:  55% (4037/7339)   Resolving deltas:  56% (4113/7339)   Resolving deltas:  57% (4188/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4338/7339)   Resolving deltas:  60% (4407/7339)   Resolving deltas:  61% (4478/7339)   Resolving deltas:  62% (4554/7339)   Resolving deltas:  63% (4628/7339)   Resolving deltas:  64% (4699/7339)   Resolving deltas:  65% (4780/7339)   Resolving deltas:  66% (4845/7339)   Resolving deltas:  67% (4918/7339)   Resolving deltas:  68% (4996/7339)   Resolving deltas:  69% (5068/7339)   Resolving deltas:  70% (5139/7339)   Resolving deltas:  71% (5212/7339)   Resolving deltas:  72% (5287/7339)   Resolving deltas:  73% (5360/7339)   Resolving deltas:  74% (5431/7339)   Resolving deltas:  75% (5506/7339)   Resolving deltas:  76% (5580/7339)   Resolving deltas:  77% (5654/7339)   Resolving deltas:  78% (5727/7339)   Resolving deltas:  79% (5798/7339)   Resolving deltas:  80% (5878/7339)   Resolving deltas:  81% (5945/7339)   Resolving deltas:  82% (6022/7339)   Resolving deltas:  83% (6092/7339)   Resolving deltas:  84% (6166/7339)   Resolving deltas:  85% (6239/7339)   Resolving deltas:  86% (6313/7339)   Resolving deltas:  87% (6391/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6681/7339)   Resolving deltas:  92% (6756/7339)   Resolving deltas:  93% (6827/7339)   Resolving deltas:  94% (6899/7339)   Resolving deltas:  95% (6975/7339)   Resolving deltas:  96% (7049/7339)   Resolving deltas:  97% (7119/7339)   Resolving deltas:  98% (7205/7339)   Resolving deltas:  99% (7267/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+Checking connectivity... done.
+
+travis_time:end:0c72bff4:start=1496815100599428968,finish=1496815105127716788,duration=4528287820$ cd chef/chef
+travis_time:start:056abf28$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  11% (1/9)   [Kremote: Compressing objects:  22% (2/9)   [Kremote: Compressing objects:  33% (3/9)   [Kremote: Compressing objects:  44% (4/9)   [Kremote: Compressing objects:  55% (5/9)   [Kremote: Compressing objects:  66% (6/9)   [Kremote: Compressing objects:  77% (7/9)   [Kremote: Compressing objects:  88% (8/9)   [Kremote: Compressing objects: 100% (9/9)   [Kremote: Compressing objects: 100% (9/9), done.[K
+remote: Total 23 (delta 17), reused 19 (delta 14), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:056abf28:start=1496815105146451297,finish=1496815106427803968,duration=1281352671$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export TEST_GEM=poise/halite
+
+travis_fold:start:rvmtravis_time:start:01af77ba$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 14.3M  100 14.3M    0     0  60.5M      0 --:--:-- --:--:-- --:--:-- 60.5M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:01af77ba:start=1496815117639886192,finish=1496815151236361358,duration=33596475166travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:137e2108$ Installing caching utilities
+
+travis_time:end:137e2108:start=1496815152688064987,finish=1496815152759365726,duration=71300739travis_time:start:2210722d
+travis_time:end:2210722d:start=1496815152775833350,finish=1496815152789195876,duration=13362526travis_time:start:00c51170attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-94f8eaa6aef80a605044ee7e39568a63affa0f2af3df58a3e3ea01d55a812949--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.6193/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-94f8eaa6aef80a605044ee7e39568a63affa0f2af3df58a3e3ea01d55a812949--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:00c51170:start=1496815152825994845,finish=1496815155347709733,duration=2521714888travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:31decf5c
+travis_time:end:31decf5c:start=1496815155369679125,finish=1496815155400042478,duration=30363353travis_time:start:0462c594adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:0462c594:start=1496815155416080619,finish=1496815162239997212,duration=6823916593travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:1dfd09c7$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 97%)Fetching: rubygems-update-2.6.11.gem ( 99%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:1dfd09c7:start=1496815163604319874,finish=1496815169358737140,duration=5754417266travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0283d6f4$ gem --version
+2.6.11
+
+travis_time:end:0283d6f4:start=1496815169367776102,finish=1496815169629660324,duration=261884222travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:0d9afbf9$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:0d9afbf9:start=1496815169647805512,finish=1496815171435836841,duration=1788031329travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:081e7a9d$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 11%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 42%)Fetching: bundler-1.14.6.gem ( 47%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 83%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 92%)Fetching: bundler-1.14.6.gem ( 97%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:081e7a9d:start=1496815171459923994,finish=1496815172507581157,duration=1047657163travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:0365f754$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:0365f754:start=1496815172523558205,finish=1496815173166048541,duration=642490336travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:0f8cf2ee$ rm -f .bundle/config
+
+travis_time:end:0f8cf2ee:start=1496815173188085850,finish=1496815173214205025,duration=26119175travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:0e044260$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using addressable 2.4.0
+Using mixlib-cli 1.7.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using blankslate 2.1.2.4
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using diff-lcs 1.3
+Using erubis 2.7.0
+Using highline 1.7.8
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using net-ssh 4.1.0
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using systemu 2.6.5
+Using wmi-lite 1.0.0
+Using proxifier 1.0.3
+Using rspec-support 3.6.0
+Using multi_json 1.12.1
+Using net-telnet 0.1.1
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using excon 0.55.0
+Using json 2.1.0
+Using multipart-post 2.0.0
+Using net-http-persistent 2.9.4
+Using net-http-pipeline 1.0.1
+Using plist 3.3.0
+Using httpclient 2.8.3
+Using method_source 0.8.2
+Using parallel 1.11.2
+Using slop 3.6.0
+Using rubyzip 1.2.1
+Using semverse 2.0.0
+Using sslshake 1.2.0
+Using little-plugger 1.1.4
+Using nori 2.6.0
+Using rubyntlm 0.6.2
+Using mixlib-versioning 1.1.0
+Using netrc 0.11.0
+Using websocket 1.2.4
+Using rb-readline 0.5.4
+Using ruby-prof 0.16.2
+Using ruby-shadow 2.5.0
+Using simplecov-html 0.10.1
+Using tomlrb 1.2.4
+Using yard 0.9.9
+Using rainbow 2.2.2
+Using tzinfo 1.2.3
+Using launchy 2.4.3
+Using appbundler 0.10.0
+Using retriable 3.0.2
+Using binding_of_caller 0.7.2
+Using parslet 1.5.0
+Using gyoku 1.3.1
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using parser 2.4.0.0
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using mixlib-archive 0.4.1
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using ethon 0.10.1
+Using gssapi 1.2.0
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using docker-api 1.33.4
+Using faraday 0.12.1
+Using pry 0.10.4
+Using logging 2.2.2
+Using mixlib-install 3.2.1
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using activesupport 5.1.1
+Using toml 0.1.2
+Using rubocop 0.47.1
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using typhoeus 0.8.0
+Using rspec_junit_formatter 0.2.3
+Using rspec-its 1.2.0
+Using rspec 3.6.0
+Using faraday-http-cache 2.0.0
+Using faraday_middleware 0.11.0.1
+Using gh 0.15.1
+Using sawyer 0.8.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using winrm 2.2.3
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using mixlib-authentication 1.4.1
+Using serverspec 2.38.1
+Using travis 1.8.8
+Using octokit 4.7.0
+Using winrm-fs 1.0.1
+Using cheffish 13.0.0
+Using chef 13.2.7 from source at `.`
+Using github_changelog_generator 1.14.2 from https://github.com/chef/github-changelog-generator (at master@7ab4953)
+Using train 0.23.0
+Using inspec 1.25.1
+Bundle complete! 24 Gemfile dependencies, 127 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:0e044260:start=1496815173229029200,finish=1496815175212459953,duration=1983430753travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:0b195aae$ echo --color > .rspec
+
+travis_time:end:0b195aae:start=1496815175233460992,finish=1496815175242325529,duration=8864537travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:00a6c11a$ echo -fp >> .rspec
+
+travis_time:end:00a6c11a:start=1496815175266731308,finish=1496815175282930467,duration=16199159travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:21868d9d$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+This job is running on container-based infrastructure, which does not allow use of 'sudo', setuid, and setgid executables.
+If you require sudo, add 'sudo: required' to your .travis.yml
+
+
+travis_time:end:21868d9d:start=1496815175298448703,finish=1496815175376068405,duration=77619702travis_fold:end:before_script.3travis_time:start:02b640be$ bundle exec tasks/bin/run_external_test $TEST_GEM master rake spec
+Cloning into '/tmp/chef-external-test20170607-5024-1414mdp'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+Fetching gem metadata from https://rubygems.org/........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies.....
+Using rake 12.0.0
+Installing addressable 2.4.0
+Installing artifactory 2.8.1
+Installing awesome_print 1.7.0
+Installing aws-sigv4 1.0.0
+Installing jmespath 1.3.1
+Installing backports 3.8.0
+Installing builder 3.2.3
+Using bundler 1.14.6
+Installing byebug 9.0.6 with native extensions
+Installing fuzzyurl 0.9.0
+Installing mixlib-config 2.2.4
+Installing mixlib-shellout 2.2.7
+Installing libyajl2 1.2.0 with native extensions
+Installing hashie 3.5.5
+Installing mixlib-log 1.7.1
+Installing rack 2.0.3
+Installing uuidtools 2.1.5
+Installing diff-lcs 1.3
+Installing erubis 2.7.0
+Installing highline 1.7.8
+Installing iniparse 1.4.3
+Installing iso8601 0.9.1
+Installing mixlib-cli 1.7.0
+Installing net-ssh 4.1.0
+Installing ffi 1.9.18 with native extensions
+Installing ipaddress 0.8.3
+Installing plist 3.3.0
+Installing systemu 2.6.5
+Installing wmi-lite 1.0.0
+Installing proxifier 1.0.3
+Installing rspec-support 3.6.0
+Installing multi_json 1.12.1
+Using net-telnet 0.1.1
+Installing sfl 2.3
+Installing syslog-logger 1.6.8
+Installing logify 0.2.0
+Installing mime-types-data 3.2016.0521
+Installing docile 1.1.5
+Installing json 2.1.0 with native extensions
+Installing simplecov-html 0.10.1
+Installing url 0.3.2
+Installing coderay 1.1.1
+Installing gherkin 4.1.3
+Installing excon 0.56.0
+Installing multipart-post 2.0.0
+Installing mini_portile2 2.2.0
+Installing rufus-lru 1.1.0
+Installing polyglot 0.3.5
+Installing yajl-ruby 1.3.0 with native extensions
+Installing ruby-progressbar 1.8.1
+Installing net-http-persistent 2.9.4
+Installing net-http-pipeline 1.0.1
+Installing git 1.3.0
+Installing thor 0.19.1
+Installing hirb 0.7.3
+Installing httpclient 2.8.3
+Installing mixlib-versioning 1.1.0
+Installing safe_yaml 1.0.4
+Installing retryable 2.0.4
+Installing little-plugger 1.1.4
+Installing method_source 0.8.2
+Installing nori 2.6.0
+Installing paint 2.0.0
+Installing slop 3.6.0
+Installing websocket 1.2.4
+Installing vagrant-wrapper 2.0.3
+Installing rubyntlm 0.6.2
+Installing rubyzip 1.2.1
+Installing yard 0.9.9
+Installing launchy 2.4.3
+Installing aws-sdk-core 2.9.32
+Installing gyoku 1.3.1
+Installing chef-config 13.1.31
+Installing ffi-yajl 2.3.0 with native extensions
+Installing mixlib-archive 0.4.1
+Installing mixlib-authentication 1.4.1
+Installing net-sftp 2.1.2
+Installing net-ssh-gateway 1.3.0
+Installing net-scp 1.2.1
+Installing fauxhai 4.1.0
+Installing ethon 0.10.1
+Installing gssapi 1.2.0
+Installing rspec-core 3.6.0
+Installing rspec-expectations 3.6.0
+Installing rspec-mocks 3.6.0
+Installing mime-types 3.1
+Installing simplecov 0.13.0
+Installing cucumber-core 2.0.0
+Installing faraday 0.12.1
+Installing nokogiri 1.8.0 with native extensions
+Installing treetop 1.6.8
+Installing mixlib-install 2.1.12
+Installing logging 2.2.2
+Installing wirb 2.1.1
+Installing pry 0.10.4
+Installing pusher-client 0.6.2
+Installing yard-classmethods 1.0.0
+Installing aws-sdk-resources 2.9.32
+Installing chef-zero 13.0.0
+Installing ohai 13.1.0
+Installing net-ssh-multi 1.2.1
+Installing specinfra 2.68.0
+Installing typhoeus 0.8.0
+Installing rspec_junit_formatter 0.2.3
+Installing fuubar 2.2.0
+Installing rspec-its 1.2.0
+Installing rspec 3.6.0
+Installing chef-api 0.7.0
+Installing codeclimate-test-reporter 1.0.8
+Installing codecov 0.1.10
+Installing faraday_middleware 0.11.0.1
+Installing gh 0.15.1
+Installing foodcritic 11.1.0
+Installing test-kitchen 1.16.0
+Installing winrm 2.2.3
+Installing pry-byebug 3.4.2
+Installing aws-sdk 2.9.32
+Installing serverspec 2.39.1
+Installing rspec-command 1.0.3
+Installing stove 5.2.0
+Installing travis 1.8.8
+Installing kitchen-docker 2.6.0
+Installing kitchen-sync 2.2.0
+Installing kitchen-vagrant 1.1.0
+Installing winrm-fs 1.0.1
+Installing kitchen-ec2 1.3.2
+Installing chef 13.1.31
+Installing chefspec 7.1.0
+Using halite 1.7.1.pre from source at `/tmp/chef-external-test20170607-5024-1414mdp`
+Installing poise 2.8.1
+Installing poise-profiler 1.1.0
+Using test1 1.2.3 from source at `/tmp/chef-external-test20170607-5024-1414mdp/spec/fixtures/gems/test1`
+Using test2 4.5.6 from source at `/tmp/chef-external-test20170607-5024-1414mdp/spec/fixtures/gems/test2`
+Using test4 2.3.1.rc.1 from source at `/tmp/chef-external-test20170607-5024-1414mdp/spec/fixtures/gems/test4`
+Installing poise-boiler 1.16.0
+Using test3 7.8.9 from source at `/tmp/chef-external-test20170607-5024-1414mdp/spec/fixtures/gems/test3`
+Bundle complete! 8 Gemfile dependencies, 137 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from yard:
+--------------------------------------------------------------------------------
+As of YARD v0.9.2:
+
+RubyGems "--document=yri,yard" hooks are now supported. You can auto-configure
+YARD to automatically build the yri index for installed gems by typing:
+
+    $ yard config --gem-install-yri
+
+See `yard config --help` for more information on RubyGems install hooks.
+
+You can also add the following to your .gemspec to have YARD document your gem
+on install:
+
+    spec.metadata["yard.run"] = "yri" # use "yard" to build full HTML docs.
+
+--------------------------------------------------------------------------------
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb --color --format documentation --tag ~slow
+Run options: exclude {:slow=>true}
+
+Randomized with seed 21363
+
+Halite::Converter::Libraries
+  #write_libraries
+    with a multiple files
+      should receive copy("/source/mygem/two.rb", "/test/files/halite_gem/mygem/two.rb", {:preserve=>true}) 1 time
+    with a single file
+      should receive copy("/source/mygem.rb", "/test/files/halite_gem/mygem.rb", {:preserve=>true}) 1 time
+  #write_bootstrap
+    with an explicit entry point
+      should receive write("/test/libraries/default.rb", #<Double "output sentinel">) 1 time
+    with metadata entry points
+      should receive write("/test/libraries/default.rb", #<Double "output sentinel">) 1 time
+    with defaults
+      should receive write("/test/libraries/default.rb", #<Double "output sentinel">) 1 time
+  #generate_bootstrap
+    with defaults
+      should eq "raise 'Halite is not compatible with no_lazy_load false, please set no_lazy_load true in your Chef c...s Chef::Config[:no_lazy_load]\n$LOAD_PATH << File.expand_path('../../files/halite_gem', __FILE__)\n"
+    with entry points
+      should eq "raise 'Halite is not compatible with no_lazy_load false, please set no_lazy_load true in your Chef c...ile.expand_path('../../files/halite_gem', __FILE__)\nrequire \"mygem/one\"\nrequire \"mygem/two\"\n"
+    with a license header
+      should eq "# Copyright me.\nraise 'Halite is not compatible with no_lazy_load false, please set no_lazy_load tr...s Chef::Config[:no_lazy_load]\n$LOAD_PATH << File.expand_path('../../files/halite_gem', __FILE__)\n"
+  #find_default_entry_points
+    with multiple entry points
+      should eq ["mygem/cheftie", "mygem/other/cheftie"]
+    with a single entry point
+      should eq ["mygem/cheftie"]
+    with no default entry points
+      should eq []
+  #write
+    should receive write_bootstrap(*(any args)) 1 time
+
+Halite::SpecHelper::Runner
+  #converge
+    with a block
+      should eq true
+    with a recipe
+      should receive add("test") 1 time
+    with both a block and a recipe
+      should raise Halite::Error
+  #initialize
+    with a simple option
+      dry_run?
+        should be truthy
+    with default_attributes
+      should eq "test"
+      should eq "test"
+    with override_attributes
+      should eq "test"
+      should eq "test"
+    with normal_attributes
+      should eq "test"
+      should eq "test"
+  Runner.converge
+    with a recipe
+      should receive converge("test") 1 time
+    with options
+      should receive converge("test") 1 time
+    with a block
+      should be a kind of Proc
+
+Halite::Converter
+  #write
+    should receive write(*(any args)) 1 time
+
+Halite::SpecHelper
+  patcher
+    without a provider in scope
+      should raise Chef::Exceptions::ProviderNotFound
+    with a named provider in scope
+      should be truthy
+    with a provider in scope
+      should be truthy
+  #recipe
+    with a block
+      should  ruby_block "test"
+    with a recipe
+      should receive converge("test") 1 time
+    with subject:false
+      should eq 42
+  #step_into
+    with a Poise resource
+      without step_into
+        should  halite_test_poise "test"
+        should not  ruby_block "test"
+        should be a kind of Chef::Resource
+      with step_into
+        should  halite_test_poise "test"
+        should be a kind of Chef::Resource
+        should  ruby_block "test"
+    with a simple HWRP
+      without step_into
+        should  halite_test_simple "test"
+        should not  ruby_block "test"
+      with step_into
+        should  ruby_block "test"
+        should be a kind of Chef::Resource
+        should  halite_test_simple "test"
+  #provider
+    with magic helpers
+      on the instance
+        example_group
+          should be truthy
+        described_class
+          should eq Halite::SpecHelper
+      on the class
+        described_class
+          should eq Halite::SpecHelper
+        example_group
+          should be truthy
+    with defaults
+      should be < Chef::Provider
+      should be a kind of Class
+      instance_methods
+        should include :action_run
+  #resource
+    with auto:false
+      should eq [:nothing]
+      should be a kind of Class
+      should be < Chef::Resource
+      should eq [:nothing]
+    with defaults
+      should be < Chef::Resource
+      should eq [:nothing, :run]
+      should eq :halite_test
+      should be a kind of Class
+      should eq [:run]
+      resource_name
+        should eq :halite_test
+    with a parent
+      should be < Chef::Resource
+      should be < Chef::Resource::File
+      should eq :halite_test
+      should be a kind of Class
+      resource_name
+        should eq :halite_test
+    with magic helpers
+      on the class
+        example_group
+          should be truthy
+        described_class
+          should eq Halite::SpecHelper
+      on the instance
+        example_group
+          should be truthy
+        described_class
+          should eq Halite::SpecHelper
+    with a helper-defined parent in an enclosing context
+      inner
+        should be a kind of Class
+        should be < Chef::Resource
+        should be < #<Class:0x00000003ca31b0>
+    with a helper-defined parent
+      should eq :halite_test
+      should be < Chef::Resource
+      should be a kind of Class
+      should be < #<Class:0x00000003cac580>
+      resource_name
+        should eq :halite_test
+    regression test for finding the wrong parent in a sibling context
+      sibling
+        should eq :sibling
+      inner
+        should eq :parent
+    with step_into:false
+      should not  ruby_block "inner"
+      should  halite_test "test"
+
+Halite::Converter::Chef
+  #write
+    with a single file
+      should receive copy("/source/recipes/default.rb", "/test/recipes/default.rb", {:preserve=>true}) 1 time
+    with multiple files
+      should receive copy("/source/templates/default/conf.erb", "/test/templates/default/conf.erb", {:preserve=>true}) 1 time
+
+Halite::Converter::Metadata
+  #write
+    should write out metadata
+  #generate
+    with one dependency
+      should eq "name \"mygem\"\nversion \"1.0.0\"\ndepends \"other\"\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with two dependencies
+      should eq "name \"mygem\"\nversion \"1.0.0\"\ndepends \"other\", \"~> 1.0\"\ndepends \"another\", \"~> 2.0.0\"\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with platforms
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nchef_version \">= 12\" if defined?(chef_version)\nsupports \"ubuntu\"\nsupports \"debian\"\nsupports \"redhat\"\n"
+    with a readme
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nlong_description \"My awesome readme!\\nCopyright me.\\n\"\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with complex platforms
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nchef_version \">= 12\" if defined?(chef_version)\nsupports \"ubuntu\", \">= 16.04\"\nsupports \"debian\", \">= 6\", \"< 9\"\nsupports \"redhat\"\n"
+    with an issues_url
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nissues_url \"http://issues\" if defined?(issues_url)\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with a description
+      should eq "name \"mygem\"\nversion \"1.0.0\"\ndescription \"My awesome library!\"\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with a license header
+      should eq "# header\nname \"mygem\"\nversion \"1.0.0\"\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with a complex chef_version
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nchef_version \"< 15\", \">= 12.5\" if defined?(chef_version)\n"
+    with simple data
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nchef_version \">= 12\" if defined?(chef_version)\n"
+    with a chef_version
+      should eq "name \"mygem\"\nversion \"1.0.0\"\nchef_version \">= 0\" if defined?(chef_version)\n"
+
+integration tests
+  with test3 gem
+    it should behave like an integration test
+      run rake chef:build
+        should match fixture cookbooks/test3
+      Halite.convert
+        should match fixture cookbooks/test3
+  with test4 gem
+    it should behave like an integration test
+      Halite.convert
+        should match fixture cookbooks/test4
+      run rake chef:build
+        should match fixture cookbooks/test4
+  with test1 gem
+    it should behave like an integration test
+      run rake chef:build
+        should match fixture cookbooks/test1
+      Halite.convert
+        should match fixture cookbooks/test1
+  with test2 gem
+    it should behave like an integration test
+      run rake chef:build
+        should match fixture cookbooks/test2
+      Halite.convert
+        should match fixture cookbooks/test2
+
+Halite::Converter::Misc
+  #write
+    with multiple files
+      writes out a README
+    with a Readme
+      should receive copy("/source/Readme", "/test/Readme", {:preserve=>true}) 1 time
+    with no files
+      should not receive copy(*(any args)) 0 times
+
+Halite::Dependencies
+  #clean_version
+    with 1.0.0
+      should eq "1.0.0"
+    with 1
+      should eq "1.0"
+    with 0
+      should eq "0"
+    with 1.2.3
+      should eq "1.2.3"
+    with 1.0.a
+      should eq "1.0"
+    with 1.0
+      should eq "1.0"
+    with 2.3.rc.0
+      should eq "2.3"
+    with 1.2.3.4
+      should raise Halite::InvalidDependencyError
+    with 0.0
+      should eq "0"
+  #clean_requirement
+    with 1.0.0
+      should eq "= 1.0.0"
+    with =  1.0.0
+      should eq "= 1.0.0"
+    with =1.0.0
+      should eq "= 1.0.0"
+    with ~> 1.0.0
+      should eq "~> 1.0.0"
+    with <= 1.0.0
+      should eq "<= 1.0.0"
+    with >= 1.0.0
+      should eq ">= 1.0.0"
+    with = 1.0.0
+      should eq "= 1.0.0"
+  #clean
+    with name = 1.0.0
+      should eq ["name", "= 1.0.0"]
+    with [name, = 1.0.0]
+      should eq ["name", "= 1.0.0"]
+    with [name, = 1.0.0, = 1.0.0]
+      should raise Halite::InvalidDependencyError
+    with name
+      should eq ["name", ">= 0"]
+    with [name]
+      should eq ["name", ">= 0"]
+    with name 1.0.0
+      should eq ["name", "1.0.0"]
+  #extract_from_dependencies
+    with a non-halite dependency
+      should eq []
+    with a development dependency
+      should eq []
+    with development mode
+      with a halite-ish dependency
+        should eq [["gem3", ">= 0", #<Gem::Specification:0x1d0b12c gem3-1.0.0>]]
+      with a development dependency
+        should eq [["gem3", ">= 0", #<Gem::Specification:0x1cdf25c gem3-1.0.0>]]
+      with a non-halite dependency
+        should eq []
+    with a halite-ish dependency
+      should eq [["gem3", ">= 0", #<Gem::Specification:0x1c90ae4 gem3-1.0.0>]]
+  #extract_from_requirements
+    with [req1]
+      should eq ["req1"]
+    with []
+      should eq []
+    with [req1, req2]
+      should eq ["req1", "req2"]
+  #extract_from_metadata
+    with req1,req2
+      should eq ["req1", "req2"]
+    with no metadata
+      should eq []
+    with req1
+      should eq ["req1"]
+
+Halite
+  #convert
+    with a gem name
+      should receive write(#<Double "Halite::Gem">, "/path") 1 time
+    with a Gem object
+      should receive write(#<Double "Halite::Gem">, "/path") 1 time
+
+Halite::Gem
+  when loading rspec
+    is_halite_cookbook?
+      should be falsey
+    name
+      should eq "rspec"
+    spec
+      should be a Gem::Specification
+  when loading halite with a version
+    version
+      should eq "1.7.1.pre"
+    spec
+      should be a Gem::Specification
+    name
+      should eq "halite"
+    cookbook_name
+      should eq "halite"
+  when loading test1
+    platforms
+      should eq []
+    is_halite_cookbook?
+      should be truthy
+    #each_file
+      with no prefixes
+        returns all files
+      with a prefix that overlaps a filename
+        returns only files in that folder
+    issues_url
+      should be nil
+    license_header
+      should eq "# coding: utf-8\n# Awesome license\n"
+    cookbook_dependencies
+      should eq []
+    name
+      should eq "test1"
+    version
+      should eq "1.2.3"
+    chef_version_requirement
+      should eq [">= 12"]
+    cookbook_name
+      should eq "test1"
+    each_library_file
+      should eq [["/tmp/chef-external-test20170607-5024-1414mdp/spec/fixtures/gems/test1/lib/test1.rb", "test1.rb"], ...ernal-test20170607-5024-1414mdp/spec/fixtures/gems/test1/lib/test1/version.rb", "test1/version.rb"]]
+    cookbook_version
+      should eq "1.2.3"
+  when loading test2
+    license_header
+      should eq "# coding: utf-8\n"
+    each_library_file
+      should eq [["/tmp/chef-external-test20170607-5024-1414mdp/spec/fixtures/gems/test2/lib/test2.rb", "test2.rb"], ...ernal-test20170607-5024-1414mdp/spec/fixtures/gems/test2/lib/test2/version.rb", "test2/version.rb"]]
+    version
+      should eq "4.5.6"
+    name
+      should eq "test2"
+    issues_url
+      should be nil
+    chef_version_requirement
+      should eq [">= 12"]
+    cookbook_name
+      should eq "test2"
+    #each_file
+      with a prefix of chef
+        returns only files in that folder
+      with no prefixes
+        returns all files
+    cookbook_dependencies
+      should eq [#<struct Halite::Dependencies::Dependency name="testdep", requirement=">= 0", type=:requirements, spec=nil>]
+    platforms
+      should eq [["ubuntu"]]
+    is_halite_cookbook?
+      should be truthy
+    cookbook_version
+      should eq "4.5.6"
+  when loading halite
+    spec
+      should be a Gem::Specification
+    name
+      should eq "halite"
+    issues_url
+      should eq "https://github.com/poise/halite/issues"
+    platforms
+      should eq []
+    cookbook_name
+      should eq "halite"
+    version
+      should eq "1.7.1.pre"
+  #cookbook_name
+    with a gem named mygem-cookbook
+      should eq "mygem"
+    with a gem named mygem-chef
+      should eq "mygem"
+    with a gem named chef-mygem
+      should eq "mygem"
+    with a gem named mycompany-mygem
+      should eq "mycompany-mygem"
+    with a gem named chef-mygem-cookbook
+      should eq "mygem"
+    with a gem with an override
+      should eq "other"
+    with a gem named mygem
+      should eq "mygem"
+    with a gem named cookbook-mygem
+      should eq "mygem"
+  when loading test4
+    should eq [#<struct Halite::Dependencies::Dependency name="test2", requirement="~> 4.5.6", type=:dependencies, spec=nil>]
+    cookbook_dependencies
+      should eq []
+    cookbook_version
+      should eq "2.3.1"
+    platforms
+      should eq [["ubuntu"], ["debian"], ["centos"], ["redhat"], ["fedora"]]
+    chef_version_requirement
+      should eq ["< 99", ">= 1"]
+    version
+      should eq "2.3.1.rc.1"
+    cookbook_name
+      should eq "test4"
+    issues_url
+      should eq "http://issues"
+  when loading a Gem::Dependency
+    test1 > 1.3.0
+      should raise Halite::Error
+    test1
+      version
+        should eq "1.2.3"
+    test4 ~> 2.3
+      version
+        should eq "2.3.1.rc.1"
+    test1 ~> 1.2
+      version
+        should eq "1.2.3"
+    test1 > 1.2.0
+      version
+        should eq "1.2.3"
+  when loading test3
+    cookbook_dependencies
+      should eq [#<struct Halite::Dependencies::Dependency name="test2", requirement="~> 4.5.6", type=:dependencies, spec=nil>]
+    issues_url
+      should be nil
+    platforms
+      should eq [["ubuntu", ">= 16.04"], ["redhat"]]
+    is_halite_cookbook?
+      should be truthy
+    cookbook_name
+      should eq "test3"
+    chef_version_requirement
+      should eq [">= 3"]
+  #platforms
+    with "name1 "
+      should eq [["name1"]]
+    with "any"
+      should eq [["aix"], ["amazon"], ["arch"], ["centos"], ["chefspec"], ["debian"], ["dragonfly4"], ["fedora"], ["f...raspbian"], ["redhat"], ["slackware"], ["smartos"], ["solaris2"], ["suse"], ["ubuntu"], ["windows"]]
+    with "name1 name2"
+      should eq [["name1"], ["name2"]]
+    with " name1"
+      should eq [["name1"]]
+    with "name1, name2"
+      should eq [["name1"], ["name2"]]
+    with " "
+      should eq []
+    with "name1"
+      should eq [["name1"]]
+    with "all"
+      should eq [["aix"], ["amazon"], ["arch"], ["centos"], ["chefspec"], ["debian"], ["dragonfly4"], ["fedora"], ["f...raspbian"], ["redhat"], ["slackware"], ["smartos"], ["solaris2"], ["suse"], ["ubuntu"], ["windows"]]
+    with no metadata
+      should eq []
+    with ""
+      should eq []
+    with "*"
+      should eq [["aix"], ["amazon"], ["arch"], ["centos"], ["chefspec"], ["debian"], ["dragonfly4"], ["fedora"], ["f...raspbian"], ["redhat"], ["slackware"], ["smartos"], ["solaris2"], ["suse"], ["ubuntu"], ["windows"]]
+    with "name1 >= 1.0, name2"
+      should eq [["name1", ">= 1.0"], ["name2"]]
+    with "name1 >= 1.0, name2 <= 2.0"
+      should eq [["name1", ">= 1.0"], ["name2", "<= 2.0"]]
+
+Finished in 3.74 seconds (files took 3.93 seconds to load)
+221 examples, 0 failures
+
+Randomized with seed 21363
+
+{"url": "https://codecov.io/github/chef/chef/commit/d8dc4ea35336a5a90f01fe993ac8c9bbbc270c54", "message": "Coverage reports upload successfully", "id": "5cffccfb-ddf8-4c2e-9735-5637a00c54a6", "uploaded": true, "meta": {"status": 200}, "queued": true}
+
+travis_time:end:02b640be:start=1496815175385690649,finish=1496815418011220800,duration=242625530151
+The command "bundle exec tasks/bin/run_external_test $TEST_GEM master rake spec" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:12ecc700
+travis_time:end:12ecc700:start=1496815419375665474,finish=1496815419393968000,duration=18302526travis_time:start:0186fa50nothing changed, not updating cache
+
+travis_time:end:0186fa50:start=1496815419420203410,finish=1496815423399310636,duration=3979107226travis_fold:end:cache.2
+Done. Your build exited with 0.

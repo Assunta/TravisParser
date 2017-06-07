@@ -1,0 +1,2031 @@
+travis_fold:start:worker_infoWorker information
+hostname: production-1-worker-org-b-1-gce:5eb708a3-f58d-419f-b74b-6886326530bb
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0:travis-ci-sugilite-trusty-1480960799
+startup: 21.369363508s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240236043
+Job id: 240236044
+travis-build version: 4183c5148
+Build image provisioning date and time
+Mon Dec  5 18:47:20 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-51-generic
+Cookbooks Version
+998099c https://github.com/travis-ci/travis-cookbooks/tree/998099c
+git version
+git version 2.11.0
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.73
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.1.0
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+jruby-9.1.2.0
+ruby-1.9.3-p551
+ruby-2.0.0-p648
+ruby-2.1.10
+ruby-2.2.5
+ruby-2.3.1
+Pre-installed Node.js versions
+iojs-v1.6
+iojs-v1.6.4
+v0.10
+v0.10.40
+v0.11.16
+v0.12.2
+v0.12.7
+v0.6.21
+v0.8.28
+v4.1.2
+v4.6.2
+v6.9.1
+Pre-installed Go versions
+1.2.2
+1.3.3
+1.4.3
+1.5.4
+1.6.3
+1.7
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Pre-installed PostgreSQL versions
+9.2.19
+9.3.15
+9.4.10
+9.5.5
+9.6.1
+Redis version
+redis-server 3.0.6
+MongoDB version
+MongoDB 3.2.11
+RabbitMQ Version
+3.6.6
+Installed Firefox version
+firefox 38.4.0esr
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/maven
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-51-generic", arch: "amd64", family: "unix"
+gradle version
+
+------------------------------------------------------------
+Gradle 2.13
+------------------------------------------------------------
+
+Build time:   2016-04-25 04:10:10 UTC
+Build number: none
+Revision:     3b427b1481e46232107303c90be7b05079b05b1c
+
+Groovy:       2.4.4
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_111 (Oracle Corporation 25.111-b14)
+OS:           Linux 4.4.0-51-generic amd64
+
+kerl list installations
+17.0
+17.1
+17.3
+17.4
+17.5
+18.0
+18.1
+18.2
+18.2.1
+R14B02
+R14B03
+R14B04
+R15B
+R15B01
+R15B02
+R15B03
+R16B
+R16B01
+R16B02
+R16B03
+R16B03-1
+kiex list
+
+kiex elixirs
+
+   elixir-1.0.3
+=* elixir-1.0.4
+
+# => - current
+# =* - current && default
+#  * - default
+
+rebar --version
+rebar 2.6.4 17 20160831_145136 git 2.6.4-dirty
+lein version
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_111 Java HotSpot(TM) 64-Bit Server VM
+perlbrew list
+  5.8 (5.8.8)
+  5.10 (5.10.1)
+  5.12 (5.12.5)
+  5.14 (5.14.4)
+  5.16 (5.16.3)
+  5.18 (5.18.4)
+  5.20 (5.20.3)
+  5.20-extras (5.20.3)
+  5.20-shrplib (5.20.3)
+  5.20.3
+  5.22 (5.22.0)
+  5.22-extras (5.22.0)
+  5.22-shrplib (5.22.0)
+  5.22.0
+phpenv versions
+  system
+  5.4
+  5.4.45
+  5.5.37
+  5.6
+* 5.6.24 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.7
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.2.0 2016-07-19 01:28:52
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:10db0ece$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193)   Receiving objects:  70% (8536/12193)   Receiving objects:  71% (8658/12193)   Receiving objects:  72% (8779/12193)   Receiving objects:  73% (8901/12193)   Receiving objects:  74% (9023/12193)   Receiving objects:  75% (9145/12193)   Receiving objects:  76% (9267/12193)   Receiving objects:  77% (9389/12193)   Receiving objects:  78% (9511/12193)   Receiving objects:  79% (9633/12193)   Receiving objects:  80% (9755/12193)   Receiving objects:  81% (9877/12193)   Receiving objects:  82% (9999/12193)   Receiving objects:  83% (10121/12193)   Receiving objects:  84% (10243/12193)   Receiving objects:  85% (10365/12193)   Receiving objects:  86% (10486/12193)   Receiving objects:  87% (10608/12193)   Receiving objects:  88% (10730/12193)   Receiving objects:  89% (10852/12193)   Receiving objects:  90% (10974/12193)   Receiving objects:  91% (11096/12193)   Receiving objects:  92% (11218/12193)   Receiving objects:  93% (11340/12193)   Receiving objects:  94% (11462/12193)   Receiving objects:  95% (11584/12193)   Receiving objects:  96% (11706/12193)   Receiving objects:  97% (11828/12193)   Receiving objects:  98% (11950/12193)   Receiving objects:  99% (12072/12193)   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193)   Receiving objects: 100% (12193/12193), 5.43 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (91/7339)   Resolving deltas:   3% (230/7339)   Resolving deltas:   5% (383/7339)   Resolving deltas:   6% (463/7339)   Resolving deltas:  10% (744/7339)   Resolving deltas:  14% (1037/7339)   Resolving deltas:  15% (1111/7339)   Resolving deltas:  16% (1189/7339)   Resolving deltas:  17% (1249/7339)   Resolving deltas:  18% (1343/7339)   Resolving deltas:  19% (1438/7339)   Resolving deltas:  20% (1479/7339)   Resolving deltas:  21% (1545/7339)   Resolving deltas:  22% (1681/7339)   Resolving deltas:  23% (1704/7339)   Resolving deltas:  24% (1771/7339)   Resolving deltas:  25% (1868/7339)   Resolving deltas:  26% (1931/7339)   Resolving deltas:  27% (1982/7339)   Resolving deltas:  28% (2082/7339)   Resolving deltas:  29% (2131/7339)   Resolving deltas:  30% (2229/7339)   Resolving deltas:  31% (2279/7339)   Resolving deltas:  32% (2356/7339)   Resolving deltas:  33% (2447/7339)   Resolving deltas:  34% (2508/7339)   Resolving deltas:  35% (2569/7339)   Resolving deltas:  36% (2648/7339)   Resolving deltas:  37% (2718/7339)   Resolving deltas:  38% (2790/7339)   Resolving deltas:  39% (2868/7339)   Resolving deltas:  40% (2953/7339)   Resolving deltas:  43% (3198/7339)   Resolving deltas:  44% (3242/7339)   Resolving deltas:  45% (3336/7339)   Resolving deltas:  46% (3384/7339)   Resolving deltas:  51% (3793/7339)   Resolving deltas:  52% (3830/7339)   Resolving deltas:  53% (3893/7339)   Resolving deltas:  54% (3964/7339)   Resolving deltas:  55% (4037/7339)   Resolving deltas:  56% (4111/7339)   Resolving deltas:  57% (4187/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4331/7339)   Resolving deltas:  60% (4405/7339)   Resolving deltas:  61% (4477/7339)   Resolving deltas:  62% (4559/7339)   Resolving deltas:  63% (4628/7339)   Resolving deltas:  64% (4700/7339)   Resolving deltas:  65% (4772/7339)   Resolving deltas:  66% (4844/7339)   Resolving deltas:  67% (4926/7339)   Resolving deltas:  68% (4998/7339)   Resolving deltas:  69% (5066/7339)   Resolving deltas:  70% (5139/7339)   Resolving deltas:  71% (5213/7339)   Resolving deltas:  72% (5286/7339)   Resolving deltas:  73% (5358/7339)   Resolving deltas:  74% (5431/7339)   Resolving deltas:  75% (5505/7339)   Resolving deltas:  76% (5582/7339)   Resolving deltas:  77% (5653/7339)   Resolving deltas:  78% (5730/7339)   Resolving deltas:  79% (5801/7339)   Resolving deltas:  80% (5880/7339)   Resolving deltas:  81% (5946/7339)   Resolving deltas:  82% (6019/7339)   Resolving deltas:  83% (6093/7339)   Resolving deltas:  84% (6165/7339)   Resolving deltas:  85% (6241/7339)   Resolving deltas:  86% (6315/7339)   Resolving deltas:  87% (6385/7339)   Resolving deltas:  88% (6463/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6680/7339)   Resolving deltas:  92% (6753/7339)   Resolving deltas:  93% (6826/7339)   Resolving deltas:  94% (6901/7339)   Resolving deltas:  95% (6975/7339)   Resolving deltas:  96% (7049/7339)   Resolving deltas:  97% (7120/7339)   Resolving deltas:  98% (7194/7339)   Resolving deltas:  99% (7267/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+
+travis_time:end:10db0ece:start=1496815140277935597,finish=1496815142678462453,duration=2400526856$ cd chef/chef
+travis_time:start:385d2a1f$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  11% (1/9)   [Kremote: Compressing objects:  22% (2/9)   [Kremote: Compressing objects:  33% (3/9)   [Kremote: Compressing objects:  44% (4/9)   [Kremote: Compressing objects:  55% (5/9)   [Kremote: Compressing objects:  66% (6/9)   [Kremote: Compressing objects:  77% (7/9)   [Kremote: Compressing objects:  88% (8/9)   [Kremote: Compressing objects: 100% (9/9)   [Kremote: Compressing objects: 100% (9/9), done.[K
+remote: Total 23 (delta 17), reused 19 (delta 14), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:385d2a1f:start=1496815142683833206,finish=1496815143286406702,duration=602573496$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+
+travis_fold:start:rvmtravis_time:start:0bd3970c$ rvm use 2.3.3 --install --binary --fuzzy
+ruby-2.3.3 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.3.3.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.3 - #configure
+ruby-2.3.3 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  4 25.1M    4 1273k    0     0  1358k      0  0:00:18 --:--:--  0:00:18 1358k 35 25.1M   35 9145k    0     0  4714k      0  0:00:05  0:00:01  0:00:04 7856k100 25.1M  100 25.1M    0     0  9843k      0  0:00:02  0:00:02 --:--:-- 14.2M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.3 - #validate archive
+ruby-2.3.3 - #extract
+ruby-2.3.3 - #validate binary
+ruby-2.3.3 - #setup
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3@global
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.3.3 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.3.3 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.3.3 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.3.3
+
+travis_time:end:0bd3970c:start=1496815143400588526,finish=1496815165762889410,duration=22362300884travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:0b74ca9c$ Installing caching utilities
+
+travis_time:end:0b74ca9c:start=1496815166115703887,finish=1496815166255505356,duration=139801469travis_time:start:140f084a
+travis_time:end:140f084a:start=1496815166261452923,finish=1496815166266051359,duration=4598436travis_time:start:029c5878attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--rvm-2.3.3--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:029c5878:start=1496815166271139596,finish=1496815167574011051,duration=1302871455travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:0bd22f66
+travis_time:end:0bd22f66:start=1496815167579048358,finish=1496815167583022958,duration=3974600travis_time:start:017ff63dadding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:017ff63d:start=1496815167587536541,finish=1496815169417313348,duration=1829776807travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.8
+travis_fold:start:before_install.1travis_time:start:0a49f457$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 73%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 96%)Fetching: rubygems-update-2.6.11.gem ( 98%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+=== 2.6.11 / 2017-03-16
+
+Bug fixes:
+
+* Fixed broken tests on ruby-head. Pull request #1841 by
+  SHIBATA Hiroshi.
+* Update vendored Molinillo to 0.5.7. Pull request #1859 by Samuel
+  Giddins.
+* Avoid activating Ruby 2.5 default gems when possible. Pull request #1843
+  by Samuel Giddins.
+* Use improved resolver sorting algorithm. Pull request #1856 by
+  Samuel Giddins.
+
+=== 2.6.10 / 2017-01-23
+
+Bug fixes:
+
+* Fix `require` calling the wrong `gem` method when it is overridden.
+  Pull request #1822 by Samuel Giddins.
+
+=== 2.6.9 / 2017-01-20
+
+Bug fixes:
+
+* Allow initializing versions with empty strings. Pull request #1767 by
+  Luis Sagastume.
+* Fix TypeError on 2.4. Pull request #1788 by Nobuyoshi Nakada.
+* Don't output mkmf.log message if compilation didn't fail. Pull request
+  #1808 by Jeremy Evans.
+* Fixed broken links and overzealous URL encoding in gem server. Pull
+  request #1809 by Nicole Orchard.
+* Update vendored Molinillo to 0.5.5. Pull request #1812 by Samuel
+  Giddins.
+* RakeBuilder: avoid frozen string issue. Pull request #1819 by Olle
+  Jonsson.
+
+=== 2.6.8 / 2016-10-29
+
+Bug fixes:
+
+* Improve SSL verification failure message. Pull request #1751
+  by Eric Hodel.
+* Ensure `to_spec` falls back on prerelease specs. Pull request
+  #1755 by André Arko.
+* Update vendored Molinillo to 0.5.3. Pull request #1763 by
+  Samuel Giddins.
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.3.3/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:0a49f457:start=1496815169827860507,finish=1496815172503302166,duration=2675441659travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0356fe1b$ gem --version
+2.6.11
+
+travis_time:end:0356fe1b:start=1496815172508462896,finish=1496815172637529836,duration=129066940travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:064b5aa9$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:064b5aa9:start=1496815172643041963,finish=1496815173109459289,duration=466417326travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:00dd4213$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 51%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 69%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:00dd4213:start=1496815173114840406,finish=1496815173598512983,duration=483672577travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:055c46bc$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:055c46bc:start=1496815173603399272,finish=1496815173760087411,duration=156688139travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:2a82cd30$ rm -f .bundle/config
+
+travis_time:end:2a82cd30:start=1496815173765111642,finish=1496815173770848799,duration=5737157travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:09b03eaa$ bundle install --without ci docgen guard integration maintenance omnibus_package --frozen --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching gem metadata from https://rubygems.org/......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Using rake 12.0.0
+Using addressable 2.4.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using diff-lcs 1.3
+Using erubis 2.7.0
+Using highline 1.7.8
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using mixlib-cli 1.7.0
+Using net-ssh 4.1.0
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using plist 3.3.0
+Using systemu 2.6.5
+Using wmi-lite 1.0.0
+Using proxifier 1.0.3
+Using rspec-support 3.6.0
+Using multi_json 1.12.1
+Using net-telnet 0.1.1
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using multipart-post 2.0.0
+Using net-http-persistent 2.9.4
+Using net-http-pipeline 1.0.1
+Using json 2.1.0
+Using method_source 0.8.2
+Using slop 3.6.0
+Using websocket 1.2.4
+Using ruby-prof 0.16.2
+Using ruby-shadow 2.5.0
+Using simplecov-html 0.10.1
+Using rainbow 2.2.2
+Using launchy 2.4.3
+Using parser 2.4.0.0
+Using binding_of_caller 0.7.2
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using mixlib-archive 0.4.1
+Using mixlib-authentication 1.4.1
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using ethon 0.10.1
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using faraday 0.12.1
+Using pry 0.10.4
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using rubocop 0.47.1
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using typhoeus 0.8.0
+Using rspec_junit_formatter 0.2.3
+Using rspec-its 1.2.0
+Using rspec 3.6.0
+Using faraday_middleware 0.11.0.1
+Using gh 0.15.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using cheffish 13.0.0
+Using serverspec 2.38.1
+Using travis 1.8.8
+Using chef 13.2.7 from source at `.`
+Bundle complete! 24 Gemfile dependencies, 89 gems now installed.
+Gems in the groups ci, docgen, guard, integration, maintenance and omnibus_package were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:09b03eaa:start=1496815173776326341,finish=1496815176915135367,duration=3138809026travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:05934544$ echo --color > .rspec
+
+travis_time:end:05934544:start=1496815176920226561,finish=1496815176924278722,duration=4052161travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:2f465a8e$ echo -fp >> .rspec
+
+travis_time:end:2f465a8e:start=1496815176929233602,finish=1496815176933048717,duration=3815115travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:0b577735$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+
+travis_time:end:0b577735:start=1496815176938068437,finish=1496815176947729009,duration=9660572travis_fold:end:before_script.3travis_time:start:14645294$ sudo -E $(which bundle) exec rake spec;
+
+*** TomlRb not available.
+
+
+*** TomlRb not available.
+
+github_changelog_generator is not available. gem install github_changelog_generator to generate changelogs
+yard is not available. (sudo) gem install yard to generate yard documentation.
+bundle install
+Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+installing your bundle as root will break this application for all non-root
+users on this machine.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching version metadata from https://rubygems.org/.
+Resolving dependencies...
+Installing rake 10.5.0
+Installing public_suffix 2.0.5
+Installing fuzzyurl 0.9.0
+Installing mixlib-config 2.2.4
+Installing mixlib-shellout 2.2.7
+Installing diff-lcs 1.3
+Installing rspec-support 3.6.0
+Using bundler 1.14.6
+Installing addressable 2.5.1
+Installing rspec-core 3.6.0
+Installing rspec-expectations 3.6.0
+Installing rspec-mocks 3.6.0
+Using chef-config 13.2.7 from source at `.`
+Bundle complete! 5 Gemfile dependencies, 13 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+bundle exec rake spec
+/home/travis/.rvm/rubies/ruby-2.3.3/bin/ruby -I/home/travis/.rvm/gems/ruby-2.3.3/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.3.3/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.3.3/gems/rspec-core-3.6.0/exe/rspec spec/unit/config_spec.rb spec/unit/fips_spec.rb spec/unit/path_helper_spec.rb spec/unit/workstation_config_loader_spec.rb
+Run options:
+  include {:focus=>true}
+  exclude {:windows_only=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Randomized with seed 49536
+
+ChefConfig::PathHelper
+  validate_path
+    on windows
+      returns the path if the path passes the tests
+      Adds the \\?\ prefix if the path exceeds MAX_LENGTH and does not have it
+      raises an error if the path has invalid characters
+      does not raise an error if everything looks great
+  escape_glob_dir
+    escapes characters reserved by glob without using backslashes for path separators
+    when given more than one argument
+      joins, cleanpaths, and escapes characters reserved by glob
+  on windows
+    path_separator is \
+    cleanpath does not remove leading double backslash
+    cleanpath changes slashes into backslashes and leaves backslashes alone
+    join
+      joins ending with '' add a / to the end
+      joins starting with '' resolve to absolute paths
+    platform-specific #join behavior
+      joins components when some end with separators
+      joins components that don't end in separators
+      joins components on Windows when some end with unix separators
+      joins components when some end and start with separators
+    dirname
+      dirname('/') is '/'
+      dirname('abc') is '.'
+      dirname('a/b/c/') is 'a/b'
+      dirname('a/b/c') is 'a/b'
+      dirname('/a/b/c') is '/a/b'
+  windows_max_length_exceeded?
+    returns false if the path is not too long (259 + NUL) for the standard API
+    returns false if the path is over 259 characters but uses the \\?\ prefix
+    returns true if the path is too long (259 + NUL) for the API
+  printable?
+    returns false if the string contains a non-printable character
+    returns true when given 'abc' in unicode
+    returns true when given japanese unicode
+    returns true if the string contains no non-printable characters
+    returns false if the string contains a newline or tab
+  canonical_path
+    not on windows
+      returns a canonical path
+  paths_eql?
+    returns true if the paths are the same
+    returns false if the paths are different
+  all_homes
+    on unix
+      when HOME is not set
+        returns an empty array
+  escape_glob
+    escapes characters reserved by glob
+    when given more than one argument
+      joins, cleanpaths, and escapes characters reserved by glob
+  on unix
+    cleanpath removes extra slashes alone
+    path_separator is /
+    dirname
+      dirname('abc') is '.'
+      dirname('/a/b/c') is '/a/b'
+      dirname('/') is '/'
+      dirname('a/b/c') is 'a/b'
+      dirname('a/b/c/') is 'a/b'
+    join
+      joins starting with '' resolve to absolute paths
+      joins ending with '' add a / to the end
+    platform-specific #join behavior
+      joins components when some end with separators
+      joins components that don't end in separators
+      joins components when some end and start with separators
+
+ChefConfig::Config
+  On Unix
+    class method: windows_installation_drive
+      should return nil on a non-windows system
+    class method: platform_specific_path
+      should return given path on non-windows systems
+    ChefConfig::Config[:encrypted_data_bag_secret]
+      /etc/chef/encrypted_data_bag_secret does not exist
+        sets the value to nil
+      /etc/chef/encrypted_data_bag_secret exists
+        sets the value to /etc/chef/encrypted_data_bag_secret
+    ChefConfig::Config[:user_valid_regex]
+      on a platform that is not Windows
+        allows one letter usernames
+    default values
+      ChefConfig::Config[:ssl_verify_mode] defaults to :verify_peer
+      ChefConfig::Config[:environment_path] defaults to /var/chef/environments
+      ChefConfig::Config[:ssl_ca_file] defaults to nil
+      ChefConfig::Config[:data_bag_path] defaults to /var/chef/data_bags
+      ChefConfig::Config[:download_progress_interval] defaults to every 10%
+      ChefConfig::Config[:file_backup_path] defaults to /var/chef/backup
+      ChefConfig::Config[:cookbook_artifact_path] defaults to /var/chef/cookbook_artifacts
+      ChefConfig::Config[:ssl_ca_path] defaults to nil
+      ChefConfig::Config[:show_download_progress] defaults to false
+      ChefConfig::Config[:stream_execute_output] defaults to false
+      ChefConfig::Config[:chef_repo_path]
+        when cookbook_path is not set but cookbook_artifact_path is set
+          is set to a path one directory up from the cookbook_artifact_path
+        when cookbook_path is not set
+          is set to the cache_path
+        when cookbook_path is set to multiple paths
+          is set to an Array of paths one directory up from the cookbook_paths
+        when cookbook_path is set to a single path
+          is set to a path one directory up from the cookbook_path
+      ChefConfig::Config[:repo_mode]
+        when local mode is enabled
+          defaults to 'hosted_everything'
+          and osc_compat is enabled
+            defaults to 'everything'
+        when local mode is not enabled
+          and the chef_server_url is multi-tenant
+            defaults to 'hosted_everything'
+          and the chef_server_url is not multi-tenant
+            defaults to 'everything'
+      setting the config dir
+        when the config file is given with a relative path
+          expands the path when determining config_dir
+          does not set derived paths at FS root
+        when the config file is /etc/chef/client.rb
+          config_dir is /etc/chef
+          and chef is running in local mode
+            config_dir is /etc/chef
+          when config_dir is set to /other/config/dir/
+            yields the explicit value
+        when the user's home dir is /home/charlie/
+          config_dir is /home/charlie/.chef/
+          and chef is running in local mode
+            config_dir is /home/charlie/.chef/
+      ChefConfig::Config[:chef_server_root]
+        when chef_server_url matches '../organizations/*' without a trailing slash
+          returns the full URL without /organizations/*
+        when chef_server_url is a standard URL without the string organization(s)
+          returns the full URL without any modifications
+        when chef_server_url isn't set manually
+          returns the default of 'https://localhost:443'
+        when chef_server_url matches '../organizations/*' with a trailing slash
+          returns the full URL without /organizations/*
+        when chef_server_url matches '..organizations..' but not '../organizations/*'
+          returns the full URL without any modifications
+      ChefConfig::Config[:cache_path]
+        when /var/chef does not exist and /var is not accessible
+          defaults to $HOME/.chef
+        when /var/chef exists and is not accessible
+          defaults to $HOME/.chef
+        when chef is running in local mode
+          and config_dir is /a/b/c/
+            cache_path is /a/b/c/local-mode-cache
+          and config_dir is /a/b/c
+            cache_path is /a/b/c/local-mode-cache
+        when /var/chef exists and is accessible
+          defaults to /var/chef
+        when /var/chef does not exist and /var is accessible
+          defaults to /var/chef
+      ChefConfig::Config[:fips]
+        returns false when no environment is set and not enabled on system
+        when ENV['CHEF_FIPS'] is set
+          returns true
+        when fips is enabled on system
+          returns true
+        when ENV['CHEF_FIPS'] is empty
+          returns false
+    ChefConfig::Config[:user_home]
+      falls back to the current working directory when HOME and USERPROFILE is not set
+      should set when HOME is provided
+    ChefConfig::Config[:internal_locale]
+      when the result includes 'en.UTF-8'
+        returns an English UTF-8 locale
+      when the result includes 'en_US.UTF-8'
+        returns an English UTF-8 locale
+      when the result includes 'en_*.UTF-8'
+        returns an English UTF-8 locale
+      when the result includes 'en_*.utf8'
+        returns an English UTF-8 locale
+      when the result does not include 'en_*.UTF-8'
+        should fall back to C locale
+      on error
+        should default to 'en_US.UTF-8'
+      when the result includes 'en_US.utf8'
+        returns an English UTF-8 locale
+      when the result includes 'C.UTF-8'
+        returns an English UTF-8 locale
+    ChefConfig::Config[:event_handlers]
+      should be able to add custom handlers
+      sets a event_handlers to an empty array by default
+  config attribute writer: chef_server_url
+    sets the server url
+    when the url has a leading space
+      strips the space from the url when setting
+    when the url is invalid
+      raises an exception
+    when the url is a frozen string
+      strips the space from the url when setting without raising an error
+  Treating deprecation warnings as errors
+    when using our default RSpec configuration
+      defaults to treating deprecation warnings as errors
+      treats deprecation warnings as errors in child processes when testing
+      sets CHEF_TREAT_DEPRECATION_WARNINGS_AS_ERRORS environment variable
+    outside of our test environment
+      defaults to NOT treating deprecation warnings as errors
+  allowing chefdk configuration outside of chefdk
+    allows arbitrary settings in the chefdk config context
+  On Windows
+    ChefConfig::Config[:user_home]
+      should set when HOME is provided
+      falls back to the current working directory when HOME and USERPROFILE is not set
+    ChefConfig::Config[:user_valid_regex]
+      on a platform that is not Windows
+        allows one letter usernames
+    ChefConfig::Config[:encrypted_data_bag_secret]
+      /etc/chef/encrypted_data_bag_secret does not exist
+        sets the value to nil
+      /etc/chef/encrypted_data_bag_secret exists
+        sets the value to /etc/chef/encrypted_data_bag_secret
+    ChefConfig::Config[:event_handlers]
+      should be able to add custom handlers
+      sets a event_handlers to an empty array by default
+    class method: platform_specific_path
+      a windows system with chef installed on D: drive
+        should return a windows path rooted in D:
+      a windows system with chef installed on C: drive
+        should return a windows path rooted in C:
+    class method: windows_installation_drive
+      should return D: on a windows system
+    ChefConfig::Config[:internal_locale]
+      when the result includes 'C.UTF-8'
+        returns an English UTF-8 locale
+      when the result includes 'en_*.utf8'
+        returns an English UTF-8 locale
+      on error
+        should default to 'en_US.UTF-8'
+      when the result does not include 'en_*.UTF-8'
+        should fall back to C locale
+      when the result includes 'en_US.UTF-8'
+        returns an English UTF-8 locale
+      when the result includes 'en.UTF-8'
+        returns an English UTF-8 locale
+      when the result includes 'en_US.utf8'
+        returns an English UTF-8 locale
+      when the result includes 'en_*.UTF-8'
+        returns an English UTF-8 locale
+    default values
+      ChefConfig::Config[:ssl_ca_path] defaults to nil
+      ChefConfig::Config[:cookbook_artifact_path] defaults to /var/chef/cookbook_artifacts
+      ChefConfig::Config[:show_download_progress] defaults to false
+      ChefConfig::Config[:data_bag_path] defaults to /var/chef/data_bags
+      ChefConfig::Config[:environment_path] defaults to /var/chef/environments
+      ChefConfig::Config[:download_progress_interval] defaults to every 10%
+      ChefConfig::Config[:stream_execute_output] defaults to false
+      ChefConfig::Config[:file_backup_path] defaults to /var/chef/backup
+      ChefConfig::Config[:ssl_verify_mode] defaults to :verify_peer
+      ChefConfig::Config[:chef_repo_path]
+        when cookbook_path is not set
+          is set to the cache_path
+        when cookbook_path is not set but cookbook_artifact_path is set
+          is set to a path one directory up from the cookbook_artifact_path
+        when cookbook_path is set to a single path
+          is set to a path one directory up from the cookbook_path
+        when cookbook_path is set to multiple paths
+          is set to an Array of paths one directory up from the cookbook_paths
+      ChefConfig::Config[:fips]
+        returns false when no environment is set and not enabled on system
+        when ENV['CHEF_FIPS'] is set
+          returns true
+        when fips is enabled on system
+          returns true
+        when ENV['CHEF_FIPS'] is empty
+          returns false
+      ChefConfig::Config[:repo_mode]
+        when local mode is enabled
+          defaults to 'hosted_everything'
+          and osc_compat is enabled
+            defaults to 'everything'
+        when local mode is not enabled
+          and the chef_server_url is not multi-tenant
+            defaults to 'everything'
+          and the chef_server_url is multi-tenant
+            defaults to 'hosted_everything'
+      finding the windows embedded dir
+        finds the embedded dir in the default location
+        sets the ssl_ca_cert path if the cert file is available
+        finds the embedded dir in a custom install location
+        doesn't error when not in an omnibus install
+      ChefConfig::Config[:chef_server_root]
+        when chef_server_url matches '..organizations..' but not '../organizations/*'
+          returns the full URL without any modifications
+        when chef_server_url isn't set manually
+          returns the default of 'https://localhost:443'
+        when chef_server_url is a standard URL without the string organization(s)
+          returns the full URL without any modifications
+        when chef_server_url matches '../organizations/*' without a trailing slash
+          returns the full URL without /organizations/*
+        when chef_server_url matches '../organizations/*' with a trailing slash
+          returns the full URL without /organizations/*
+      ChefConfig::Config[:cache_path]
+        when /var/chef does not exist and /var is not accessible
+          defaults to $HOME/.chef
+        when /var/chef exists and is not accessible
+          defaults to $HOME/.chef
+        when /var/chef exists and is accessible
+          defaults to /var/chef
+        when chef is running in local mode
+          and config_dir is /a/b/c/
+            cache_path is /a/b/c/local-mode-cache
+          and config_dir is /a/b/c
+            cache_path is /a/b/c/local-mode-cache
+        when /var/chef does not exist and /var is accessible
+          defaults to /var/chef
+      setting the config dir
+        when the config file is /etc/chef/client.rb
+          config_dir is /etc/chef
+          when config_dir is set to /other/config/dir/
+            yields the explicit value
+          and chef is running in local mode
+            config_dir is /etc/chef
+        when the user's home dir is /home/charlie/
+          config_dir is /home/charlie/.chef/
+          and chef is running in local mode
+            config_dir is /home/charlie/.chef/
+        when the config file is given with a relative path
+          expands the path when determining config_dir
+          does not set derived paths at FS root
+  parsing arbitrary config from the CLI
+    when given input that is not in key=value form
+      raises UnparsableConfigOption
+    when given a simple string option
+      applies the string option
+    when given an integer value
+      converts to a numeric type and applies the config option
+    when given a blank value
+      sets the value to nil
+    when given spaces between `key = value`
+      handles the extra spaces and applies the config option
+    when given a boolean
+      converts to a boolean type and applies the config option
+    when no arbitrary config is given
+      succeeds
+  proxy_uri
+    when the proxy is set by the environment
+      contains the port
+      contains the host
+    when no_proxy is set
+      when no_proxy is included on a list
+        should eq nil
+      when no_proxy is included on a list with wildcards
+        should eq nil
+      when no_proxy is a domain with a dot prefix
+        should eq nil
+      when no_proxy is a domain with no wildcard
+        should eq nil
+      when no_proxy includes the same domain with a wildcard
+        should eq nil
+      when no_proxy is the exact host
+        should eq nil
+    when an empty proxy is set by the environment
+      does not fail with URI parse exception
+    when the config setting is normalized (does not contain the scheme)
+      contains the host
+      contains the port
+  when configuring formatters
+    configures a formatter with a file output
+    configures a formatter with a short name
+    has an empty list of formatters by default
+  data collector URL
+    when using default settings
+      for Chef Solo
+        sets the data collector server URL to nil
+      for Chef Client
+        configures the data collector URL as a relative path to the Chef Server URL
+  export_proxies
+    when all the users and passwords are set but no proxies are set
+      does not export any proxy settings
+    when ftp_proxy, proxy_pass and proxy_user are set
+      exports ENV['ftp_proxy']
+    when nothing is set
+      does not export any proxy settings
+    no_proxy is set
+      exports ENV['no_proxy']
+    when proxy_pass and proxy_user are not provided
+      does not populate the user or password
+    when http_proxy, proxy_pass and proxy_user are set
+      exports ENV['http_proxy']
+    when https_proxy, proxy_pass and proxy_user are set
+      exports ENV['https_proxy']
+    when proxy_pass and proxy_user are passed as empty strings
+      does not populate the user or password
+    when the proxy is provided without a scheme
+      automatically adds the scheme to the proxy url
+
+ChefConfig.fips?
+  on *nix
+    fips file is present and contains 1
+      returns true
+    fips file is not present
+      returns false
+    fips file does not contain 1
+      returns false
+
+ChefConfig::WorkstationConfigLoader
+  locating the config file
+    when given an explicit config to load
+      prefers the explicit config
+    without an explicit config
+/home/travis/build/chef/chef/chef-config/lib/chef-config/path_helper.rb:238: warning: Dir.exists? is a deprecated name, use Dir.exist? instead
+      has no config if HOME is not set
+      when HOME is set and contains a knife.rb
+        uses the config in HOME/.chef/knife.rb
+        and has a config.rb
+          uses the config in HOME/.chef/config.rb
+          and/or a parent dir contains a .chef dir
+            prefers the config from parent_dir/.chef
+            and the parent dir's .chef dir has a config.rb
+              prefers the config from parent_dir/.chef
+              and/or the current working directory contains a .chef dir
+                prefers a knife.rb located in the cwd
+                and the CWD's .chef dir has a config.rb
+                  prefers a config located in the cwd
+                  and/or KNIFE_HOME is set
+                    prefers a knife located in KNIFE_HOME
+                    and KNIFE_HOME contains a config.rb
+                      prefers a config.rb located in KNIFE_HOME
+      when the current working dir is inside a symlinked directory
+        loads the config from the non-dereferenced directory path
+  loading the config file
+    when no explicit config is specifed and no implicit config is found
+      skips loading
+    when an explicit config is given but it doesn't exist
+      raises a configuration error
+    when the config file exists
+      and is valid
+        sets ChefConfig::Config.config_file
+        loads the config
+      and has a syntax error
+        raises a ConfigurationError
+      and raises a ruby exception during evaluation
+/tmp/Chef-WorkstationConfigLoader-rspec-test20170607-6740-1mj84ks:1: warning: unused literal ignored
+/tmp/Chef-WorkstationConfigLoader-rspec-test20170607-6740-1mj84ks:2: warning: unused literal ignored
+        raises a ConfigurationError
+  when loading config.d
+    when the conf.d directory exists
+      and is valid
+        loads the config
+      and has a syntax error
+        raises a ConfigurationError
+      has a non rb file
+        does not load the non rb file
+    when the conf.d directory does not exist
+      does not load anything
+  external dependencies
+    delegates to ENV for env
+    tests a path's existence
+
+Finished in 0.23108 seconds (files took 0.2183 seconds to load)
+231 examples, 0 failures
+
+Randomized with seed 49536
+
+/home/travis/.rvm/rubies/ruby-2.3.3/bin/ruby -I/home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.6.0/lib:/home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/gems/rspec-support-3.6.0/lib /home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.6.0/exe/rspec spec/functional/application_spec.rb spec/functional/audit/rspec_formatter_spec.rb spec/functional/audit/runner_spec.rb spec/functional/dsl/reboot_pending_spec.rb spec/functional/dsl/registry_helper_spec.rb spec/functional/event_loggers/windows_eventlog_spec.rb spec/functional/file_content_management/deploy_strategies_spec.rb spec/functional/http/simple_spec.rb spec/functional/knife/configure_spec.rb spec/functional/knife/cookbook_delete_spec.rb spec/functional/knife/exec_spec.rb spec/functional/knife/rehash_spec.rb spec/functional/knife/ssh_spec.rb spec/functional/mixin/powershell_out_spec.rb spec/functional/mixin/shell_out_spec.rb spec/functional/notifications_spec.rb spec/functional/provider/remote_file/cache_control_data_spec.rb spec/functional/provider/whyrun_safe_ruby_block_spec.rb spec/functional/rebooter_spec.rb spec/functional/resource/aix_service_spec.rb spec/functional/resource/aixinit_service_spec.rb spec/functional/resource/bash_spec.rb spec/functional/resource/batch_spec.rb spec/functional/resource/bff_spec.rb spec/functional/resource/chocolatey_package_spec.rb spec/functional/resource/cookbook_file_spec.rb spec/functional/resource/cron_spec.rb spec/functional/resource/deploy_revision_spec.rb spec/functional/resource/directory_spec.rb spec/functional/resource/dnf_package_spec.rb spec/functional/resource/dpkg_package_spec.rb spec/functional/resource/dsc_resource_spec.rb spec/functional/resource/dsc_script_spec.rb spec/functional/resource/env_spec.rb spec/functional/resource/execute_spec.rb spec/functional/resource/file_spec.rb spec/functional/resource/git_spec.rb spec/functional/resource/group_spec.rb spec/functional/resource/ifconfig_spec.rb spec/functional/resource/link_spec.rb spec/functional/resource/mount_spec.rb spec/functional/resource/msu_package_spec.rb spec/functional/resource/ohai_spec.rb spec/functional/resource/package_spec.rb spec/functional/resource/powershell_script_spec.rb spec/functional/resource/reboot_spec.rb spec/functional/resource/registry_spec.rb spec/functional/resource/remote_directory_spec.rb spec/functional/resource/remote_file_spec.rb spec/functional/resource/rpm_spec.rb spec/functional/resource/template_spec.rb spec/functional/resource/user/dscl_spec.rb spec/functional/resource/user/useradd_spec.rb spec/functional/resource/user/windows_spec.rb spec/functional/resource/windows_package_spec.rb spec/functional/resource/windows_service_spec.rb spec/functional/resource/windows_task_spec.rb spec/functional/root_alias_spec.rb spec/functional/run_lock_spec.rb spec/functional/shell_spec.rb spec/functional/tiny_server_spec.rb spec/functional/util/path_helper_spec.rb spec/functional/util/powershell/cmdlet_spec.rb spec/functional/version_spec.rb spec/functional/win32/crypto_spec.rb spec/functional/win32/registry_spec.rb spec/functional/win32/security_spec.rb spec/functional/win32/service_manager_spec.rb spec/functional/win32/sid_spec.rb spec/functional/win32/version_info_spec.rb spec/functional/win32/versions_spec.rb spec/integration/client/client_spec.rb spec/integration/client/exit_code_spec.rb spec/integration/client/ipv6_spec.rb spec/integration/knife/chef_fs_data_store_spec.rb spec/integration/knife/chef_repo_path_spec.rb spec/integration/knife/chef_repository_file_system_spec.rb spec/integration/knife/chefignore_spec.rb spec/integration/knife/client_bulk_delete_spec.rb spec/integration/knife/client_create_spec.rb spec/integration/knife/client_delete_spec.rb spec/integration/knife/client_key_create_spec.rb spec/integration/knife/client_key_delete_spec.rb spec/integration/knife/client_key_list_spec.rb spec/integration/knife/client_key_show_spec.rb spec/integration/knife/client_list_spec.rb spec/integration/knife/client_show_spec.rb spec/integration/knife/common_options_spec.rb spec/integration/knife/cookbook_api_ipv6_spec.rb spec/integration/knife/cookbook_bulk_delete_spec.rb spec/integration/knife/cookbook_download_spec.rb spec/integration/knife/cookbook_list_spec.rb spec/integration/knife/cookbook_show_spec.rb spec/integration/knife/cookbook_upload_spec.rb spec/integration/knife/data_bag_create_spec.rb spec/integration/knife/data_bag_delete_spec.rb spec/integration/knife/data_bag_from_file_spec.rb spec/integration/knife/data_bag_list_spec.rb spec/integration/knife/data_bag_show_spec.rb spec/integration/knife/delete_spec.rb spec/integration/knife/deps_spec.rb spec/integration/knife/diff_spec.rb spec/integration/knife/download_spec.rb spec/integration/knife/environment_compare_spec.rb spec/integration/knife/environment_create_spec.rb spec/integration/knife/environment_delete_spec.rb spec/integration/knife/environment_from_file_spec.rb spec/integration/knife/environment_list_spec.rb spec/integration/knife/environment_show_spec.rb spec/integration/knife/list_spec.rb spec/integration/knife/node_bulk_delete_spec.rb spec/integration/knife/node_create_spec.rb spec/integration/knife/node_delete_spec.rb spec/integration/knife/node_environment_set_spec.rb spec/integration/knife/node_from_file_spec.rb spec/integration/knife/node_list_spec.rb spec/integration/knife/node_run_list_add_spec.rb spec/integration/knife/node_run_list_remove_spec.rb spec/integration/knife/node_run_list_set_spec.rb spec/integration/knife/node_show_spec.rb spec/integration/knife/raw_spec.rb spec/integration/knife/redirection_spec.rb spec/integration/knife/role_bulk_delete_spec.rb spec/integration/knife/role_create_spec.rb spec/integration/knife/role_delete_spec.rb spec/integration/knife/role_from_file_spec.rb spec/integration/knife/role_list_spec.rb spec/integration/knife/role_show_spec.rb spec/integration/knife/search_node_spec.rb spec/integration/knife/serve_spec.rb spec/integration/knife/show_spec.rb spec/integration/knife/upload_spec.rb spec/integration/recipes/accumulator_spec.rb spec/integration/recipes/lwrp_inline_resources_spec.rb spec/integration/recipes/lwrp_spec.rb spec/integration/recipes/noop_resource_spec.rb spec/integration/recipes/notifies_spec.rb spec/integration/recipes/notifying_block_spec.rb spec/integration/recipes/recipe_dsl_spec.rb spec/integration/recipes/resource_action_spec.rb spec/integration/recipes/resource_converge_if_changed_spec.rb spec/integration/recipes/resource_load_spec.rb spec/integration/solo/solo_spec.rb spec/stress/win32/file_spec.rb spec/stress/win32/memory_spec.rb spec/stress/win32/security_spec.rb spec/unit/api_client/registration_spec.rb spec/unit/api_client_spec.rb spec/unit/api_client_v1_spec.rb spec/unit/application/agent_spec.rb spec/unit/application/apply_spec.rb spec/unit/application/client_spec.rb spec/unit/application/exit_code_spec.rb spec/unit/application/knife_spec.rb spec/unit/application/server_spec.rb spec/unit/application/solo_spec.rb spec/unit/application_spec.rb spec/unit/audit/audit_event_proxy_spec.rb spec/unit/audit/audit_reporter_spec.rb spec/unit/audit/control_group_data_spec.rb spec/unit/audit/logger_spec.rb spec/unit/audit/rspec_formatter_spec.rb spec/unit/audit/runner_spec.rb spec/unit/chef_class_spec.rb spec/unit/chef_fs/config_spec.rb spec/unit/chef_fs/data_handler/group_handler_spec.rb spec/unit/chef_fs/diff_spec.rb spec/unit/chef_fs/file_pattern_spec.rb spec/unit/chef_fs/file_system/cookbook_subdir_spec.rb spec/unit/chef_fs/file_system/operation_failed_error_spec.rb spec/unit/chef_fs/file_system/repository/base_file_spec.rb spec/unit/chef_fs/file_system/repository/directory_spec.rb spec/unit/chef_fs/file_system_spec.rb spec/unit/chef_fs/path_util_spec.rb spec/unit/chef_spec.rb spec/unit/client_spec.rb spec/unit/config_fetcher_spec.rb spec/unit/config_spec.rb spec/unit/cookbook/chefignore_spec.rb spec/unit/cookbook/cookbook_version_loader_spec.rb spec/unit/cookbook/file_vendor_spec.rb spec/unit/cookbook/gem_installer_spec.rb spec/unit/cookbook/manifest_v0_spec.rb spec/unit/cookbook/manifest_v2_spec.rb spec/unit/cookbook/metadata_spec.rb spec/unit/cookbook/synchronizer_spec.rb spec/unit/cookbook/syntax_check_spec.rb spec/unit/cookbook_loader_spec.rb spec/unit/cookbook_manifest_spec.rb spec/unit/cookbook_site_streaming_uploader_spec.rb spec/unit/cookbook_spec.rb spec/unit/cookbook_uploader_spec.rb spec/unit/cookbook_version_file_specificity_spec.rb spec/unit/cookbook_version_spec.rb spec/unit/daemon_spec.rb spec/unit/data_bag_item_spec.rb spec/unit/data_bag_spec.rb spec/unit/data_collector/messages/helpers_spec.rb spec/unit/data_collector/messages_spec.rb spec/unit/data_collector/resource_report_spec.rb spec/unit/data_collector_spec.rb spec/unit/decorator/lazy_array_spec.rb spec/unit/decorator/lazy_spec.rb spec/unit/decorator_spec.rb spec/unit/deprecated_spec.rb spec/unit/deprecation_spec.rb spec/unit/digester_spec.rb spec/unit/dsl/audit_spec.rb spec/unit/dsl/data_query_spec.rb spec/unit/dsl/declare_resource_spec.rb spec/unit/dsl/platform_introspection_spec.rb spec/unit/dsl/reboot_pending_spec.rb spec/unit/dsl/recipe_spec.rb spec/unit/dsl/registry_helper_spec.rb spec/unit/dsl/resources_spec.rb spec/unit/encrypted_data_bag_item/check_encrypted_spec.rb spec/unit/encrypted_data_bag_item_spec.rb spec/unit/environment_spec.rb spec/unit/event_dispatch/dispatcher_spec.rb spec/unit/event_dispatch/dsl_spec.rb spec/unit/exceptions_spec.rb spec/unit/file_access_control_spec.rb spec/unit/file_cache_spec.rb spec/unit/file_content_management/deploy/cp_spec.rb spec/unit/file_content_management/deploy/mv_unix_spec.rb spec/unit/file_content_management/deploy/mv_windows_spec.rb spec/unit/file_content_management/tempfile_spec.rb spec/unit/formatters/base_spec.rb spec/unit/formatters/doc_spec.rb spec/unit/formatters/error_description_spec.rb spec/unit/formatters/error_inspectors/api_error_formatting_spec.rb spec/unit/formatters/error_inspectors/compile_error_inspector_spec.rb spec/unit/formatters/error_inspectors/cookbook_resolve_error_inspector_spec.rb spec/unit/formatters/error_inspectors/cookbook_sync_error_inspector_spec.rb spec/unit/formatters/error_inspectors/node_load_error_inspector_spec.rb spec/unit/formatters/error_inspectors/registration_error_inspector_spec.rb spec/unit/formatters/error_inspectors/resource_failure_inspector_spec.rb spec/unit/formatters/error_inspectors/run_list_expansion_error_inspector_spec.rb spec/unit/guard_interpreter/resource_guard_interpreter_spec.rb spec/unit/guard_interpreter_spec.rb spec/unit/handler/json_file_spec.rb spec/unit/handler_spec.rb spec/unit/http/api_versions_spec.rb spec/unit/http/authenticator_spec.rb spec/unit/http/basic_client_spec.rb spec/unit/http/http_request_spec.rb spec/unit/http/json_input_spec.rb spec/unit/http/simple_spec.rb spec/unit/http/socketless_chef_zero_client_spec.rb spec/unit/http/ssl_policies_spec.rb spec/unit/http/validate_content_length_spec.rb spec/unit/http_spec.rb spec/unit/json_compat_spec.rb spec/unit/key_spec.rb spec/unit/knife/bootstrap/chef_vault_handler_spec.rb spec/unit/knife/bootstrap/client_builder_spec.rb spec/unit/knife/bootstrap_spec.rb spec/unit/knife/client_bulk_delete_spec.rb spec/unit/knife/client_create_spec.rb spec/unit/knife/client_delete_spec.rb spec/unit/knife/client_edit_spec.rb spec/unit/knife/client_list_spec.rb spec/unit/knife/client_reregister_spec.rb spec/unit/knife/client_show_spec.rb spec/unit/knife/configure_client_spec.rb spec/unit/knife/configure_spec.rb spec/unit/knife/cookbook_bulk_delete_spec.rb spec/unit/knife/cookbook_create_spec.rb spec/unit/knife/cookbook_delete_spec.rb spec/unit/knife/cookbook_download_spec.rb spec/unit/knife/cookbook_list_spec.rb spec/unit/knife/cookbook_metadata_from_file_spec.rb spec/unit/knife/cookbook_metadata_spec.rb spec/unit/knife/cookbook_show_spec.rb spec/unit/knife/cookbook_site_download_spec.rb spec/unit/knife/cookbook_site_install_spec.rb spec/unit/knife/cookbook_site_share_spec.rb spec/unit/knife/cookbook_site_unshare_spec.rb spec/unit/knife/cookbook_test_spec.rb spec/unit/knife/cookbook_upload_spec.rb spec/unit/knife/core/bootstrap_context_spec.rb spec/unit/knife/core/cookbook_scm_repo_spec.rb spec/unit/knife/core/gem_glob_loader_spec.rb spec/unit/knife/core/hashed_command_loader_spec.rb spec/unit/knife/core/node_editor_spec.rb spec/unit/knife/core/object_loader_spec.rb spec/unit/knife/core/subcommand_loader_spec.rb spec/unit/knife/core/ui_spec.rb spec/unit/knife/data_bag_create_spec.rb spec/unit/knife/data_bag_edit_spec.rb spec/unit/knife/data_bag_from_file_spec.rb spec/unit/knife/data_bag_secret_options_spec.rb spec/unit/knife/data_bag_show_spec.rb spec/unit/knife/environment_compare_spec.rb spec/unit/knife/environment_create_spec.rb spec/unit/knife/environment_delete_spec.rb spec/unit/knife/environment_edit_spec.rb spec/unit/knife/environment_from_file_spec.rb spec/unit/knife/environment_list_spec.rb spec/unit/knife/environment_show_spec.rb spec/unit/knife/index_rebuild_spec.rb spec/unit/knife/key_create_spec.rb spec/unit/knife/key_delete_spec.rb spec/unit/knife/key_edit_spec.rb spec/unit/knife/key_list_spec.rb spec/unit/knife/key_show_spec.rb spec/unit/knife/node_bulk_delete_spec.rb spec/unit/knife/node_delete_spec.rb spec/unit/knife/node_edit_spec.rb spec/unit/knife/node_environment_set_spec.rb spec/unit/knife/node_from_file_spec.rb spec/unit/knife/node_list_spec.rb spec/unit/knife/node_run_list_add_spec.rb spec/unit/knife/node_run_list_remove_spec.rb spec/unit/knife/node_run_list_set_spec.rb spec/unit/knife/node_show_spec.rb spec/unit/knife/osc_user_create_spec.rb spec/unit/knife/osc_user_delete_spec.rb spec/unit/knife/osc_user_edit_spec.rb spec/unit/knife/osc_user_list_spec.rb spec/unit/knife/osc_user_reregister_spec.rb spec/unit/knife/osc_user_show_spec.rb spec/unit/knife/raw_spec.rb spec/unit/knife/role_bulk_delete_spec.rb spec/unit/knife/role_create_spec.rb spec/unit/knife/role_delete_spec.rb spec/unit/knife/role_edit_spec.rb spec/unit/knife/role_env_run_list_add_spec.rb spec/unit/knife/role_env_run_list_clear_spec.rb spec/unit/knife/role_env_run_list_remove_spec.rb spec/unit/knife/role_env_run_list_replace_spec.rb spec/unit/knife/role_env_run_list_set_spec.rb spec/unit/knife/role_from_file_spec.rb spec/unit/knife/role_list_spec.rb spec/unit/knife/role_run_list_add_spec.rb spec/unit/knife/role_run_list_clear_spec.rb spec/unit/knife/role_run_list_remove_spec.rb spec/unit/knife/role_run_list_replace_spec.rb spec/unit/knife/role_run_list_set_spec.rb spec/unit/knife/role_show_spec.rb spec/unit/knife/ssh_spec.rb spec/unit/knife/ssl_check_spec.rb spec/unit/knife/ssl_fetch_spec.rb spec/unit/knife/status_spec.rb spec/unit/knife/tag_create_spec.rb spec/unit/knife/tag_delete_spec.rb spec/unit/knife/tag_list_spec.rb spec/unit/knife/user_create_spec.rb spec/unit/knife/user_delete_spec.rb spec/unit/knife/user_edit_spec.rb spec/unit/knife/user_list_spec.rb spec/unit/knife/user_reregister_spec.rb spec/unit/knife/user_show_spec.rb spec/unit/knife_spec.rb spec/unit/log/syslog_spec.rb spec/unit/log/winevt_spec.rb spec/unit/log_spec.rb spec/unit/lwrp_spec.rb spec/unit/mash_spec.rb spec/unit/mixin/api_version_request_handling_spec.rb spec/unit/mixin/checksum_spec.rb spec/unit/mixin/convert_to_class_name_spec.rb spec/unit/mixin/deep_merge_spec.rb spec/unit/mixin/deprecation_spec.rb spec/unit/mixin/enforce_ownership_and_permissions_spec.rb spec/unit/mixin/homebrew_user_spec.rb spec/unit/mixin/params_validate_spec.rb spec/unit/mixin/path_sanity_spec.rb spec/unit/mixin/powershell_out_spec.rb spec/unit/mixin/powershell_type_coercions_spec.rb spec/unit/mixin/properties_spec.rb spec/unit/mixin/proxified_socket_spec.rb spec/unit/mixin/securable_spec.rb spec/unit/mixin/shell_out_spec.rb spec/unit/mixin/subclass_directive_spec.rb spec/unit/mixin/template_spec.rb spec/unit/mixin/unformatter_spec.rb spec/unit/mixin/uris_spec.rb spec/unit/mixin/versioned_api_spec.rb spec/unit/mixin/windows_architecture_helper_spec.rb spec/unit/mixin/xml_escape_spec.rb spec/unit/monkey_patches/uri_spec.rb spec/unit/monologger_spec.rb spec/unit/node/attribute_spec.rb spec/unit/node/immutable_collections_spec.rb spec/unit/node/vivid_mash_spec.rb spec/unit/node_map_spec.rb spec/unit/node_spec.rb spec/unit/org_spec.rb spec/unit/platform/query_helpers_spec.rb spec/unit/policy_builder/dynamic_spec.rb spec/unit/policy_builder/expand_node_object_spec.rb spec/unit/policy_builder/policyfile_spec.rb spec/unit/policy_builder_spec.rb spec/unit/property/state_spec.rb spec/unit/property/validation_spec.rb spec/unit/property_spec.rb spec/unit/provider/apt_repository_spec.rb spec/unit/provider/apt_update_spec.rb spec/unit/provider/cookbook_file/content_spec.rb spec/unit/provider/cookbook_file_spec.rb spec/unit/provider/cron/unix_spec.rb spec/unit/provider/cron_spec.rb spec/unit/provider/deploy/revision_spec.rb spec/unit/provider/deploy/timestamped_spec.rb spec/unit/provider/deploy_spec.rb spec/unit/provider/directory_spec.rb spec/unit/provider/dsc_resource_spec.rb spec/unit/provider/dsc_script_spec.rb spec/unit/provider/env/windows_spec.rb spec/unit/provider/env_spec.rb spec/unit/provider/erl_call_spec.rb spec/unit/provider/execute_spec.rb spec/unit/provider/file/content_spec.rb spec/unit/provider/file_spec.rb spec/unit/provider/git_spec.rb spec/unit/provider/group/dscl_spec.rb spec/unit/provider/group/gpasswd_spec.rb spec/unit/provider/group/groupadd_spec.rb spec/unit/provider/group/groupmod_spec.rb spec/unit/provider/group/pw_spec.rb spec/unit/provider/group/suse_spec.rb spec/unit/provider/group/usermod_spec.rb spec/unit/provider/group/windows_spec.rb spec/unit/provider/group_spec.rb spec/unit/provider/http_request_spec.rb spec/unit/provider/ifconfig/aix_spec.rb spec/unit/provider/ifconfig/debian_spec.rb spec/unit/provider/ifconfig/redhat_spec.rb spec/unit/provider/ifconfig_spec.rb spec/unit/provider/launchd_spec.rb spec/unit/provider/link_spec.rb spec/unit/provider/log_spec.rb spec/unit/provider/mdadm_spec.rb spec/unit/provider/mount/aix_spec.rb spec/unit/provider/mount/mount_spec.rb spec/unit/provider/mount/solaris_spec.rb spec/unit/provider/mount/windows_spec.rb spec/unit/provider/mount_spec.rb spec/unit/provider/ohai_spec.rb spec/unit/provider/osx_profile_spec.rb spec/unit/provider/package/aix_spec.rb spec/unit/provider/package/apt_spec.rb spec/unit/provider/package/cab_spec.rb spec/unit/provider/package/chocolatey_spec.rb spec/unit/provider/package/dnf/python_helper_spec.rb spec/unit/provider/package/dpkg_spec.rb spec/unit/provider/package/freebsd/pkg_spec.rb spec/unit/provider/package/freebsd/pkgng_spec.rb spec/unit/provider/package/freebsd/port_spec.rb spec/unit/provider/package/homebrew_spec.rb spec/unit/provider/package/ips_spec.rb spec/unit/provider/package/macports_spec.rb spec/unit/provider/package/msu_spec.rb spec/unit/provider/package/openbsd_spec.rb spec/unit/provider/package/pacman_spec.rb spec/unit/provider/package/paludis_spec.rb spec/unit/provider/package/portage_spec.rb spec/unit/provider/package/powershell_spec.rb spec/unit/provider/package/rpm_spec.rb spec/unit/provider/package/rubygems_spec.rb spec/unit/provider/package/smartos_spec.rb spec/unit/provider/package/solaris_spec.rb spec/unit/provider/package/windows/exe_spec.rb spec/unit/provider/package/windows/msi_spec.rb spec/unit/provider/package/windows/registry_uninstall_entry_spec.rb spec/unit/provider/package/windows_spec.rb spec/unit/provider/package/yum/yum_cache_spec.rb spec/unit/provider/package/yum_spec.rb spec/unit/provider/package/zypper_spec.rb spec/unit/provider/package_spec.rb spec/unit/provider/powershell_script_spec.rb spec/unit/provider/registry_key_spec.rb spec/unit/provider/remote_directory_spec.rb spec/unit/provider/remote_file/cache_control_data_spec.rb spec/unit/provider/remote_file/content_spec.rb spec/unit/provider/remote_file/fetcher_spec.rb spec/unit/provider/remote_file/ftp_spec.rb spec/unit/provider/remote_file/http_spec.rb spec/unit/provider/remote_file/local_file_spec.rb spec/unit/provider/remote_file/network_file_spec.rb spec/unit/provider/remote_file/sftp_spec.rb spec/unit/provider/remote_file_spec.rb spec/unit/provider/route_spec.rb spec/unit/provider/ruby_block_spec.rb spec/unit/provider/script_spec.rb spec/unit/provider/service/aix_service_spec.rb spec/unit/provider/service/aixinit_service_spec.rb spec/unit/provider/service/arch_service_spec.rb spec/unit/provider/service/debian_service_spec.rb spec/unit/provider/service/freebsd_service_spec.rb spec/unit/provider/service/gentoo_service_spec.rb spec/unit/provider/service/init_service_spec.rb spec/unit/provider/service/insserv_service_spec.rb spec/unit/provider/service/invokercd_service_spec.rb spec/unit/provider/service/macosx_spec.rb spec/unit/provider/service/openbsd_service_spec.rb spec/unit/provider/service/redhat_spec.rb spec/unit/provider/service/simple_service_spec.rb spec/unit/provider/service/solaris_smf_service_spec.rb spec/unit/provider/service/systemd_service_spec.rb spec/unit/provider/service/upstart_service_spec.rb spec/unit/provider/service/windows_spec.rb spec/unit/provider/service_spec.rb spec/unit/provider/subversion_spec.rb spec/unit/provider/systemd_unit_spec.rb spec/unit/provider/template/content_spec.rb spec/unit/provider/template_spec.rb spec/unit/provider/user/aix_spec.rb spec/unit/provider/user/dscl_spec.rb spec/unit/provider/user/linux_spec.rb spec/unit/provider/user/pw_spec.rb spec/unit/provider/user/solaris_spec.rb spec/unit/provider/user/windows_spec.rb spec/unit/provider/user_spec.rb spec/unit/provider/whyrun_safe_ruby_block_spec.rb spec/unit/provider/windows_task_spec.rb spec/unit/provider/yum_repository_spec.rb spec/unit/provider_resolver_spec.rb spec/unit/provider_spec.rb spec/unit/pure_application_spec.rb spec/unit/recipe_spec.rb spec/unit/resource/apt_package_spec.rb spec/unit/resource/apt_repository_spec.rb spec/unit/resource/apt_update_spec.rb spec/unit/resource/bash_spec.rb spec/unit/resource/batch_spec.rb spec/unit/resource/breakpoint_spec.rb spec/unit/resource/cab_package_spec.rb spec/unit/resource/chef_gem_spec.rb spec/unit/resource/chocolatey_package_spec.rb spec/unit/resource/conditional_action_not_nothing_spec.rb spec/unit/resource/conditional_spec.rb spec/unit/resource/cookbook_file_spec.rb spec/unit/resource/cron_spec.rb spec/unit/resource/csh_spec.rb spec/unit/resource/deploy_revision_spec.rb spec/unit/resource/deploy_spec.rb spec/unit/resource/directory_spec.rb spec/unit/resource/dnf_package_spec.rb spec/unit/resource/dpkg_package_spec.rb spec/unit/resource/dsc_resource_spec.rb spec/unit/resource/dsc_script_spec.rb spec/unit/resource/env_spec.rb spec/unit/resource/erl_call_spec.rb spec/unit/resource/execute_spec.rb spec/unit/resource/file/verification/systemd_unit_spec.rb spec/unit/resource/file/verification_spec.rb spec/unit/resource/file_spec.rb spec/unit/resource/freebsd_package_spec.rb spec/unit/resource/gem_package_spec.rb spec/unit/resource/git_spec.rb spec/unit/resource/group_spec.rb spec/unit/resource/homebrew_package_spec.rb spec/unit/resource/http_request_spec.rb spec/unit/resource/ifconfig_spec.rb spec/unit/resource/ips_package_spec.rb spec/unit/resource/ksh_spec.rb spec/unit/resource/launchd_spec.rb spec/unit/resource/link_spec.rb spec/unit/resource/log_spec.rb spec/unit/resource/macports_package_spec.rb spec/unit/resource/mdadm_spec.rb spec/unit/resource/mount_spec.rb spec/unit/resource/msu_package_spec.rb spec/unit/resource/ohai_spec.rb spec/unit/resource/openbsd_package_spec.rb spec/unit/resource/osx_profile_spec.rb spec/unit/resource/package_spec.rb spec/unit/resource/pacman_package_spec.rb spec/unit/resource/perl_spec.rb spec/unit/resource/portage_package_spec.rb spec/unit/resource/powershell_package_spec.rb spec/unit/resource/powershell_script_spec.rb spec/unit/resource/python_spec.rb spec/unit/resource/registry_key_spec.rb spec/unit/resource/remote_directory_spec.rb spec/unit/resource/remote_file_spec.rb spec/unit/resource/resource_notification_spec.rb spec/unit/resource/route_spec.rb spec/unit/resource/rpm_package_spec.rb spec/unit/resource/ruby_block_spec.rb spec/unit/resource/ruby_spec.rb spec/unit/resource/scm_spec.rb spec/unit/resource/script_spec.rb spec/unit/resource/service_spec.rb spec/unit/resource/smartos_package_spec.rb spec/unit/resource/solaris_package_spec.rb spec/unit/resource/subversion_spec.rb spec/unit/resource/systemd_unit_spec.rb spec/unit/resource/template_spec.rb spec/unit/resource/timestamped_deploy_spec.rb spec/unit/resource/user_spec.rb spec/unit/resource/windows_package_spec.rb spec/unit/resource/windows_service_spec.rb spec/unit/resource/windows_task_spec.rb spec/unit/resource/yum_package_spec.rb spec/unit/resource/yum_repository_spec.rb spec/unit/resource_builder_spec.rb spec/unit/resource_collection/resource_list_spec.rb spec/unit/resource_collection/resource_set_spec.rb spec/unit/resource_collection/stepable_iterator_spec.rb spec/unit/resource_collection_spec.rb spec/unit/resource_definition_spec.rb spec/unit/resource_reporter_spec.rb spec/unit/resource_resolver_spec.rb spec/unit/resource_spec.rb spec/unit/role_spec.rb spec/unit/run_context/child_run_context_spec.rb spec/unit/run_context/cookbook_compiler_spec.rb spec/unit/run_context_spec.rb spec/unit/run_list/run_list_expansion_spec.rb spec/unit/run_list/run_list_item_spec.rb spec/unit/run_list/versioned_recipe_list_spec.rb spec/unit/run_list_spec.rb spec/unit/run_lock_spec.rb spec/unit/run_status_spec.rb spec/unit/runner_spec.rb spec/unit/scan_access_control_spec.rb spec/unit/search/query_spec.rb spec/unit/server_api_spec.rb spec/unit/server_api_versions_spec.rb spec/unit/shell/model_wrapper_spec.rb spec/unit/shell/shell_ext_spec.rb spec/unit/shell/shell_session_spec.rb spec/unit/shell_spec.rb spec/unit/user_spec.rb spec/unit/user_v1_spec.rb spec/unit/util/backup_spec.rb spec/unit/util/diff_spec.rb spec/unit/util/dsc/configuration_generator_spec.rb spec/unit/util/dsc/lcm_output_parser_spec.rb spec/unit/util/dsc/local_configuration_manager_spec.rb spec/unit/util/editor_spec.rb spec/unit/util/file_edit_spec.rb spec/unit/util/powershell/cmdlet_spec.rb spec/unit/util/powershell/ps_credential_spec.rb spec/unit/util/selinux_spec.rb spec/unit/util/threaded_job_queue_spec.rb spec/unit/version/platform_spec.rb spec/unit/version_class_spec.rb spec/unit/version_constraint/platform_spec.rb spec/unit/version_constraint_spec.rb spec/unit/version_string_spec.rb spec/unit/win32/error_spec.rb spec/unit/win32/registry_spec.rb spec/unit/win32/security_spec.rb spec/unit/windows_service_spec.rb --profile
+WARNING: Shared example group 'with a chef repo' has been previously defined at:
+  /home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/gems/cheffish-13.0.0/lib/cheffish/rspec/repository_support.rb:12
+...and you are now defining it at:
+  /home/travis/build/chef/chef/spec/support/shared/integration/integration_helper.rb:111
+The new definition will overwrite the original one.
+/home/travis/.rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- win32/daemon (LoadError)
+	from /home/travis/.rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+Run options:
+  include {:focus=>true}
+  exclude {:provider=>#<Proc:./spec/spec_helper.rb:195>, :arch=>#<Proc:./spec/spec_helper.rb:189>, :choco_installed=>true, :ruby=>"2.3.3", :chef=>"13.2.7", :not_wpar=>true, :broken=>true, :openssl_lt_101=>true, :requires_unprivileged_user=>true, :selinux_only=>true, :aix_only=>true, :system_windows_service_gem_only=>true, :solaris_only=>true, :windows_service_requires_assign_token=>true, :windows_domain_joined_only=>true, :windows_powershell_dsc_only=>true, :ruby32_only=>true, :windows_nano_only=>true, :windows32_only=>true, :windows64_only=>true, :windows_2008r2_or_later=>true, :win2012r2_only=>true, :win2k3_only=>true, :not_supported_on_gce=>true, :mac_osx_only=>true, :windows_only=>true, :skip_travis=>true, :appveyor_only=>true, :volatile_from_verify=>false, :volatile=>true, :external=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+.............................................Using knife-rehash will speed up knife's load time by caching the location of subcommands on disk.
+However, you will need to update the cache by running `knife rehash` anytime you install a new knife plugin.
+Knife subcommands are cached in /home/travis/.chef/plugin_manifest.json. Delete this file to disable the caching.
+.....................en_US.UTF-8
+.POSIX
+......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................hello
+..hello
+..hello
+..hello
+..hello
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................WARNING: Using the `raise_error` matcher without providing a specific error or message risks false positives, since `raise_error` will match when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially allowing the expectation to pass without even executing the method you are intending to call. Actual error raised was #<Mixlib::ShellOut::ShellCommandFailed: group[group3770] (dynamically defined) had an error: Mixlib::...sdz,htulrvwq", "group3770"] ----
+Ran ["gpasswd", "-M", "mnou5sdz,htulrvwq", "group3770"] returned 3>. Instead consider providing a specific error class or message. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /home/travis/build/chef/chef/spec/functional/resource/group_spec.rb:159:in `block (5 levels) in <top (required)>'.
+.WARNING: Using the `raise_error` matcher without providing a specific error or message risks false positives, since `raise_error` will match when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially allowing the expectation to pass without even executing the method you are intending to call. Actual error raised was #<Mixlib::ShellOut::ShellCommandFailed: group[group2280] (dynamically defined) had an error: Mixlib::...swd", "-a", "mnou5sdz", "group2280"] ----
+Ran ["gpasswd", "-a", "mnou5sdz", "group2280"] returned 3>. Instead consider providing a specific error class or message. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /home/travis/build/chef/chef/spec/functional/resource/group_spec.rb:169:in `block (5 levels) in <top (required)>'.
+.......WARNING: Using the `raise_error` matcher without providing a specific error or message risks false positives, since `raise_error` will match when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially allowing the expectation to pass without even executing the method you are intending to call. Actual error raised was #<Mixlib::ShellOut::ShellCommandFailed: group[group5466] (dynamically defined) had an error: Mixlib::...sdz,htulrvwq", "group5466"] ----
+Ran ["gpasswd", "-M", "mnou5sdz,htulrvwq", "group5466"] returned 3>. Instead consider providing a specific error class or message. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /home/travis/build/chef/chef/spec/functional/resource/group_spec.rb:159:in `block (5 levels) in <top (required)>'.
+.WARNING: Using the `raise_error` matcher without providing a specific error or message risks false positives, since `raise_error` will match when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially allowing the expectation to pass without even executing the method you are intending to call. Actual error raised was #<Mixlib::ShellOut::ShellCommandFailed: group[group1559] (dynamically defined) had an error: Mixlib::...swd", "-a", "mnou5sdz", "group1559"] ----
+Ran ["gpasswd", "-a", "mnou5sdz", "group1559"] returned 3>. Instead consider providing a specific error class or message. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /home/travis/build/chef/chef/spec/functional/resource/group_spec.rb:169:in `block (5 levels) in <top (required)>'.
+...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................***********...............................................................................*...................../home/travis/build/chef/chef/lib/chef/knife/help_topics.rb:4: warning: already initialized constant HELP_TOPICS
+/home/travis/build/chef/chef/lib/chef/knife/help_topics.rb:4: warning: previous definition of HELP_TOPICS was here
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:28: warning: already initialized constant Chef::Knife::CookbookUpload::CHECKSUM
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:28: warning: previous definition of CHECKSUM was here
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:29: warning: already initialized constant Chef::Knife::CookbookUpload::MATCH_CHECKSUM
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:29: warning: previous definition of MATCH_CHECKSUM was here
+............................................................................................................................................*.............................[2017-06-07T06:06:29+00:00] WARN: Port 8889 not available
+.[2017-06-07T06:06:29+00:00] WARN: Port 9999 not available
+.[2017-06-07T06:06:29+00:00] WARN: Port 9999 not available
+................................*............................................................................................................................................................................................................................................*.............................................*.........................*...................................................................................................................................................................................................................................................................................................................................[2017-06-07T06:08:59+00:00] INFO: Forking chef instance to converge...
+[2017-06-07T06:08:59+00:00] DEBUG: Fork successful. Waiting for new chef pid: 6498
+[2017-06-07T06:08:59+00:00] DEBUG: Forked instance now converging
+[2017-06-07T06:08:59+00:00] DEBUG: Creating directory /tmp/chef_repo20170607-6745-7cvapg/config/cache
+[2017-06-07T06:08:59+00:00] INFO: Forking chef instance to converge...
+[2017-06-07T06:08:59+00:00] DEBUG: Fork successful. Waiting for new chef pid: 6501
+[2017-06-07T06:08:59+00:00] DEBUG: Forked instance now converging
+[2017-06-07T06:08:59+00:00] WARN: Chef client 6498 is running, will wait for it to finish and then run.
+Starting Chef Client, version 13.2.7
+[2017-06-07T06:08:59+00:00] INFO: *** Chef 13.2.7 ***
+[2017-06-07T06:08:59+00:00] INFO: Platform: x86_64-linux
+[2017-06-07T06:08:59+00:00] INFO: Chef-client pid: 6498
+[2017-06-07T06:08:59+00:00] DEBUG: Chef-client request_id: 2bb761f5-b9f0-4b51-a0e2-32c3174925b9
+[2017-06-07T06:09:00+00:00] DEBUG: data collector URL is not configured, disabling data collector
+[2017-06-07T06:09:00+00:00] DEBUG: Building node object for testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0
+[2017-06-07T06:09:00+00:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2017-06-07T06:09:00+00:00] DEBUG: Applying attributes from json file
+[2017-06-07T06:09:00+00:00] DEBUG: Platform is ubuntu version 14.04
+[2017-06-07T06:09:00+00:00] WARN: Run List override has been provided.
+[2017-06-07T06:09:00+00:00] WARN: Original Run List: []
+[2017-06-07T06:09:00+00:00] WARN: Overridden Run List: [recipe[x::default]]
+[2017-06-07T06:09:00+00:00] INFO: Run List is [recipe[x::default]]
+[2017-06-07T06:09:00+00:00] INFO: Run List expands to [x::default]
+[2017-06-07T06:09:00+00:00] INFO: Starting Chef Run for testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0
+[2017-06-07T06:09:00+00:00] INFO: Running start handlers
+[2017-06-07T06:09:00+00:00] INFO: Start handlers complete.
+[2017-06-07T06:09:00+00:00] DEBUG: No chefignore file found at /tmp/chef_repo20170607-6745-7cvapg/chefignore no files will be ignored
+Installing Cookbook Gems:
+Compiling Cookbooks...
+[2017-06-07T06:09:00+00:00] DEBUG: Cookbooks to compile: [:x]
+[2017-06-07T06:09:00+00:00] DEBUG: Loading recipe x::default via include_recipe
+[2017-06-07T06:09:00+00:00] DEBUG: Found recipe default in cookbook x
+[2017-06-07T06:09:00+00:00] DEBUG: Resources for generic ruby_block resource enabled on node include: [Chef::Resource::RubyBlock]
+[2017-06-07T06:09:00+00:00] DEBUG: Resource for ruby_block is Chef::Resource::RubyBlock
+[2017-06-07T06:09:00+00:00] DEBUG: Loading from cookbook_path: /tmp/chef_repo20170607-6745-7cvapg/cookbooks
+Converging 1 resources
+[2017-06-07T06:09:00+00:00] DEBUG: Converging node testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0
+Recipe: x::default
+  * ruby_block[sleeping] action run[2017-06-07T06:09:00+00:00] INFO: Processing ruby_block[sleeping] action run (x::default line 1)
+[2017-06-07T06:09:00+00:00] DEBUG: Providers for generic ruby_block resource enabled on node include: [Chef::Provider::RubyBlock]
+[2017-06-07T06:09:00+00:00] DEBUG: Provider for action run on resource ruby_block[sleeping] is Chef::Provider::RubyBlock
+[2017-06-07T06:09:00+00:00] INFO: ruby_block[sleeping] called
+
+    - execute the ruby block sleeping
+[2017-06-07T06:09:00+00:00] INFO: Chef Run complete in 0.007985327 seconds
+[2017-06-07T06:09:00+00:00] INFO: Skipping removal of unused files from the cache
+
+Running handlers:
+[2017-06-07T06:09:00+00:00] INFO: Running report handlers
+Running handlers complete
+[2017-06-07T06:09:00+00:00] INFO: Report handlers complete
+Chef Client finished, 1/1 resources updated in 00 seconds
+[2017-06-07T06:09:00+00:00] DEBUG: Forked instance successfully reaped (pid: 6498)
+[2017-06-07T06:09:00+00:00] DEBUG: Exiting
+Starting Chef Client, version 13.2.7
+[2017-06-07T06:09:00+00:00] INFO: *** Chef 13.2.7 ***
+[2017-06-07T06:09:00+00:00] INFO: Platform: x86_64-linux
+[2017-06-07T06:09:00+00:00] INFO: Chef-client pid: 6501
+[2017-06-07T06:09:00+00:00] DEBUG: Chef-client request_id: 7c3f37f6-4517-4adb-868a-3f713ce5d371
+[2017-06-07T06:09:00+00:00] DEBUG: data collector URL is not configured, disabling data collector
+[2017-06-07T06:09:00+00:00] DEBUG: Building node object for testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0
+[2017-06-07T06:09:00+00:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2017-06-07T06:09:00+00:00] DEBUG: Applying attributes from json file
+[2017-06-07T06:09:00+00:00] DEBUG: Platform is ubuntu version 14.04
+[2017-06-07T06:09:00+00:00] WARN: Run List override has been provided.
+[2017-06-07T06:09:00+00:00] WARN: Original Run List: []
+[2017-06-07T06:09:00+00:00] WARN: Overridden Run List: [recipe[x::default]]
+[2017-06-07T06:09:00+00:00] INFO: Run List is [recipe[x::default]]
+[2017-06-07T06:09:00+00:00] INFO: Run List expands to [x::default]
+[2017-06-07T06:09:00+00:00] INFO: Starting Chef Run for testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0
+[2017-06-07T06:09:00+00:00] INFO: Running start handlers
+[2017-06-07T06:09:00+00:00] INFO: Start handlers complete.
+[2017-06-07T06:09:00+00:00] DEBUG: No chefignore file found at /tmp/chef_repo20170607-6745-7cvapg/chefignore no files will be ignored
+Installing Cookbook Gems:
+Compiling Cookbooks...
+[2017-06-07T06:09:00+00:00] DEBUG: Cookbooks to compile: [:x]
+[2017-06-07T06:09:00+00:00] DEBUG: Loading recipe x::default via include_recipe
+[2017-06-07T06:09:00+00:00] DEBUG: Found recipe default in cookbook x
+[2017-06-07T06:09:00+00:00] DEBUG: Resources for generic ruby_block resource enabled on node include: [Chef::Resource::RubyBlock]
+[2017-06-07T06:09:00+00:00] DEBUG: Resource for ruby_block is Chef::Resource::RubyBlock
+[2017-06-07T06:09:00+00:00] DEBUG: Loading from cookbook_path: /tmp/chef_repo20170607-6745-7cvapg/cookbooks
+Converging 1 resources
+[2017-06-07T06:09:00+00:00] DEBUG: Converging node testing-gce-a6dfe1ac-f1da-44f8-9b32-5231f92537e0
+Recipe: x::default
+  * ruby_block[sleeping] action run[2017-06-07T06:09:00+00:00] INFO: Processing ruby_block[sleeping] action run (x::default line 1)
+[2017-06-07T06:09:00+00:00] DEBUG: Providers for generic ruby_block resource enabled on node include: [Chef::Provider::RubyBlock]
+[2017-06-07T06:09:00+00:00] DEBUG: Provider for action run on resource ruby_block[sleeping] is Chef::Provider::RubyBlock
+[2017-06-07T06:09:00+00:00] INFO: ruby_block[sleeping] called
+
+    - execute the ruby block sleeping
+[2017-06-07T06:09:00+00:00] INFO: Chef Run complete in 0.007679527 seconds
+[2017-06-07T06:09:00+00:00] INFO: Skipping removal of unused files from the cache
+
+Running handlers:
+[2017-06-07T06:09:00+00:00] INFO: Running report handlers
+Running handlers complete
+[2017-06-07T06:09:00+00:00] INFO: Report handlers complete
+Chef Client finished, 1/1 resources updated in 00 seconds
+[2017-06-07T06:09:00+00:00] DEBUG: Forked instance successfully reaped (pid: 6501)
+[2017-06-07T06:09:00+00:00] DEBUG: Exiting
+...................................................................................................................................Usage: chef-apply [RECIPE_FILE | -e RECIPE_TEXT | -s] [OPTIONS]
+        --[no-]color                 Use colored output, defaults to enabled
+    -e, --execute RECIPE_TEXT        Execute resources supplied in a string
+        --force-formatter            Use formatter output instead of logger output
+        --force-logger               Use logger output instead of formatter output
+    -F, --format FORMATTER           output format to use
+    -j JSON_ATTRIBS,                 Load attributes from a JSON file or URL
+        --json-attributes
+    -l, --log_level LEVEL            Set the log level (debug, info, warn, error, fatal)
+        --minimal-ohai               Only run the bare minimum ohai plugins chef needs to function
+        --[no-]profile-ruby          Dump complete Ruby call graph stack of entire Chef run (expert only)
+    -s, --stdin                      Execute resources read from STDIN
+    -v, --version                    Show chef version
+    -W, --why-run                    Enable whyrun mode
+    -h, --help                       Show this message
+.................[2017-06-07T06:09:02+00:00] WARN: *****************************************
+[2017-06-07T06:09:02+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:02+00:00] WARN: *****************************************
+[2017-06-07T06:09:03+00:00] WARN: *****************************************
+[2017-06-07T06:09:03+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:03+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+..[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.WARNING: `allow(...).to receive(..).ordered` is not supported and will have no effect, use `and_return(*ordered_values)` instead.. Called from /home/travis/build/chef/chef/spec/support/shared/unit/application_dot_d.rb:41:in `block (3 levels) in <top (required)>'.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+..[2017-06-07T06:09:04+00:00] WARN: *****************************************
+[2017-06-07T06:09:04+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:04+00:00] WARN: *****************************************
+.[2017-06-07T06:09:04+00:00] FATAL: SIGTERM received, stopping
+[2017-06-07T06:09:04+00:00] FATAL: SIGTERM received, stopping
+..[2017-06-07T06:09:07+00:00] FATAL: SIGTERM received, stopping
+[2017-06-07T06:09:07+00:00] FATAL: SIGTERM received, stopping
+.[2017-06-07T06:09:09+00:00] WARN: *****************************************
+[2017-06-07T06:09:09+00:00] WARN: *****************************************
+[2017-06-07T06:09:09+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:09+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:09+00:00] WARN: *****************************************
+[2017-06-07T06:09:09+00:00] WARN: *****************************************
+[2017-06-07T06:09:10+00:00] WARN: *****************************************
+[2017-06-07T06:09:10+00:00] WARN: *****************************************
+[2017-06-07T06:09:10+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:10+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:10+00:00] WARN: *****************************************
+[2017-06-07T06:09:10+00:00] WARN: *****************************************
+[2017-06-07T06:09:11+00:00] WARN: *****************************************
+[2017-06-07T06:09:11+00:00] WARN: *****************************************
+[2017-06-07T06:09:11+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:11+00:00] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2017-06-07T06:09:11+00:00] WARN: *****************************************
+[2017-06-07T06:09:11+00:00] WARN: *****************************************
+...........[2017-06-07T06:09:11+00:00] WARN: Chef attempted to exit with a non-standard exit code of 151. Chef RFC 062 (https://github.com/chef/chef-rfc/blob/master/rfc062-exit-status.md) defines the exit codes that should be used with Chef.  Chef::Application::ExitCode defines valid exit codes Non-standard exit codes are redefined as GENERIC_FAILURE.
+[2017-06-07T06:09:11+00:00] WARN: Chef attempted to exit with a non-standard exit code of 151. Chef RFC 062 (https://github.com/chef/chef-rfc/blob/master/rfc062-exit-status.md) defines the exit codes that should be used with Chef.  Chef::Application::ExitCode defines valid exit codes Non-standard exit codes are redefined as GENERIC_FAILURE.
+............ERROR: You need to pass a sub-command (e.g., knife SUB-COMMAND)
+
+ERROR: You need to pass a sub-command (e.g., knife SUB-COMMAND)
+
+...WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+..WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+..WARNING: No knife configuration file found
+..............WARNING: `allow(...).to receive(..).ordered` is not supported and will have no effect, use `and_return(*ordered_values)` instead.. Called from /home/travis/build/chef/chef/spec/support/shared/unit/application_dot_d.rb:41:in `block (3 levels) in <top (required)>'.
+...WARN: No cookbooks directory found at or above current directory.  Assuming /var/chef.
+.WARN: No cookbooks directory found at or above current directory.  Assuming /var/chef.
+..WARN: No cookbooks directory found at or above current directory.  Assuming /var/chef.
+.WARN: No cookbooks directory found at or above current directory.  Assuming /var/chef.
+.WARN: -r MUST be changed to --recipe-url, the -r option will be changed in Chef 13.0 at /home/travis/build/chef/chef/spec/unit/application/solo_spec.rb:209:in `block (4 levels) in <top (required)>'
+WARN: No cookbooks directory found at or above current directory.  Assuming /var/chef.
+...........................WARN: Chef attempted to exit with a non-standard exit code of -100. Chef RFC 062 (https://github.com/chef/chef-rfc/blob/master/rfc062-exit-status.md) defines the exit codes that should be used with Chef.  Chef::Application::ExitCode defines valid exit codes Non-standard exit codes are redefined as GENERIC_FAILURE.
+............................................................................................................................................................................................................*..*...............................................................................................................Chef Client failed. 0 resources updated in 00 seconds
+.Chef Client failed. 0 resources updated in 00 seconds
+........................................................................................................................WARNING: Using the `raise_error` matcher without providing a specific error or message risks false positives, since `raise_error` will match when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially allowing the expectation to pass without even executing the method you are intending to call. Actual error raised was #<RuntimeError: Cookbook depends on itself in cookbook foo, please remove the this unnecessary self-dependency>. Instead consider providing a specific error class or message. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /home/travis/build/chef/chef/spec/unit/cookbook/metadata_spec.rb:286:in `block (3 levels) in <top (required)>'.
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................../home/travis/build/chef/chef/spec/unit/deprecated_spec.rb:32: warning: toplevel constant TestDeprecation referenced by Chef::Deprecated::TestDeprecation
+.../home/travis/build/chef/chef/spec/unit/deprecated_spec.rb:52: warning: toplevel constant TestDeprecation referenced by Chef::Deprecated::TestDeprecation
+./home/travis/build/chef/chef/spec/unit/deprecated_spec.rb:56: warning: toplevel constant TestDeprecation referenced by Chef::Deprecated::TestDeprecation
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................hi
+.hi
+.................................................................................................................................................................................................................................................................................................................................................................................................Client unchanged, not saving.
+..
+....
+..............................................................................Generating metadata for quick_start from /home/travis/build/chef/chef/spec/data/metadata/quick_start/metadata.rb
+.Generating metadata for quick_start from /home/travis/build/chef/chef/spec/data/metadata/quick_start/metadata.rb
+.Generating metadata for quick_start from /home/travis/build/chef/chef/spec/data/metadata/quick_start/metadata.rb
+.Generating metadata for quick_start from /home/travis/build/chef/chef/spec/data/metadata/quick_start/metadata.rb
+........................WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+.WARNING: No knife configuration file found
+......Installing getting-started to /var/tmp/chef
+Removing downloaded tarball
+.Installing getting-started to /var/tmp/chef
+Removing downloaded tarball
+.Installing getting-started to /var/tmp/chef
+Removing downloaded tarball
+.Installing getting-started to /var/tmp/chef
+Removing pre-existing version.
+Uncompressing getting-started version 0.3.0.
+Removing downloaded tarball
+.Installing getting-started to /var/tmp/chef
+Removing downloaded tarball
+.......Making tarball cookbook_name.tgz
+Upload complete
+.Making tarball cookbook_name.tgz
+Upload complete
+..Making tarball cookbook_name.tgz
+Upload complete
+..Making tarball cookbook_name.tgz
+Upload complete
+.Making tarball cookbook_name.tgz
+.Making tarball cookbook_name.tgz
+Upload complete
+.Making tarball cookbook_name.tgz
+Not uploading cookbook_name.tgz due to --dry-run flag.
+file
+.Making tarball cookbook_name.tgz
+Not uploading cookbook_name.tgz due to --dry-run flag.
+file
+.....Unshared all versions of the cookbook cookbook_name
+.Unshared all versions of the cookbook cookbook_name
+.....WARNING: DEPRECATED: Please use ChefSpec or Rubocop to syntax-check cookbooks.
+checking italian
+.WARNING: DEPRECATED: Please use ChefSpec or Rubocop to syntax-check cookbooks.
+checking tats
+checking jimmy_johns
+.WARNING: DEPRECATED: Please use ChefSpec or Rubocop to syntax-check cookbooks.
+checking example
+Running syntax check on example
+.WARNING: DEPRECATED: Please use ChefSpec or Rubocop to syntax-check cookbooks.
+.............................................................................................................................................................................................................FATAL: Chef::Exceptions::InvalidDataBagName
+..Created data_bag[sudoing_admins]
+.Created data_bag[sudoing_admins]
+...Saving data bag unencrypted. To encrypt it, provide an appropriate secret.
+.Saving data bag unencrypted. To encrypt it, provide an appropriate secret.
+.Encrypting data bag using provided secret.
+.Encrypting data bag using provided secret.
+.Updated data_bag_item[::]
+.Updated data_bag_item[::]
+Updated data_bag_item[::]
+.Updated data_bag_item[::]
+Updated data_bag_item[::]
+.Updated data_bag_item[::]
+Updated data_bag_item[::]
+Updated data_bag_item[::]
+.Updated data_bag_item[::]
+.Updated data_bag_item[::]
+.................................................FATAL: You must specify an environment name
+..Updated Environment spec
+.Updated Environment spec
+..Updated Environment spec
+Updated Environment spec
+.Updated Environment spec
+Updated Environment spec
+.Updated Environment spec
+.........................................................................................................................................................FATAL: You must supply a regular expression to match the results against
+...........ERROR: You specified the --disable_editing option, nothing to edit
+.ERROR: You must set your EDITOR environment variable or configure your editor via knife.rb
+.....Updated Node 
+.Updated Node 
+.Updated Node 
+..................................................
+....
+..
+......ERROR: You must supply a regular expression to match the results against
+....................................chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[person]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[person]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  PRD:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[person]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[person]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  PRD:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[dude]
+    role[fixer]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[dude]
+    role[fixer]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  PRD:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[person]
+    role[bucket]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    role[monkey]
+    role[person]
+    role[bucket]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+  PRD:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+  QA:
+    recipe[orange::chicken]
+    role[monkey]
+    recipe[duck::type]
+    role[person]
+    role[bird]
+    role[town]
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+.Updated Role 
+.Updated Role 
+.Updated Role 
+.Updated Role 
+Updated Role 
+..................chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[person]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[person]
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  recipe[orange::chicken]
+  role[monkey]
+  recipe[duck::type]
+  role[person]
+  role[bird]
+  role[town]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[person]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[person]
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  recipe[orange::chicken]
+  role[monkey]
+  recipe[duck::type]
+  role[person]
+  role[bird]
+  role[town]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[dude]
+  role[fixer]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[dude]
+  role[fixer]
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  recipe[orange::chicken]
+  role[monkey]
+  recipe[duck::type]
+  role[person]
+  role[bird]
+  role[town]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[person]
+  role[bucket]
+..chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  role[monkey]
+  role[person]
+  role[bucket]
+.chef_type:           role
+default_attributes:
+description:         
+env_run_lists:
+json_class:          Chef::Role
+name:                will
+override_attributes:
+run_list:
+  recipe[orange::chicken]
+  role[monkey]
+  recipe[duck::type]
+  role[person]
+  role[bird]
+  role[town]
+.
+.................................................................................................................................../home/travis/build/chef/chef/lib/chef/knife/help_topics.rb:4: warning: already initialized constant HELP_TOPICS
+/home/travis/build/chef/chef/lib/chef/knife/help_topics.rb:4: warning: previous definition of HELP_TOPICS was here
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:28: warning: already initialized constant Chef::Knife::CookbookUpload::CHECKSUM
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:28: warning: previous definition of CHECKSUM was here
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:29: warning: already initialized constant Chef::Knife::CookbookUpload::MATCH_CHECKSUM
+/home/travis/build/chef/chef/lib/chef/knife/cookbook_upload.rb:29: warning: previous definition of MATCH_CHECKSUM was here
+.................................................................................................................................................................................................................................................*........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................./home/travis/build/chef/chef/spec/unit/property/validation_spec.rb:72: warning: key :nillable is duplicated and overwritten on line 72
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................./home/travis/build/chef/chef/spec/unit/property_spec.rb:1040: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/property_spec.rb:1044: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/property_spec.rb:1048: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/property_spec.rb:1052: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+......./home/travis/build/chef/chef/spec/unit/property_spec.rb:1040: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/property_spec.rb:1044: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/property_spec.rb:1048: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/property_spec.rb:1052: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+.........................................................................***.......................*........................................................................................................................................................................................................................................................................................................................................***.......................*........................................................................................................................................................................................................................................................................................................................................................................................................................................................*......................................................................................sh: 1: profiles: not found
+..sh: 1: profiles: not found
+..........................................................................................................................................*..............................................................................................................................................................................................................sh: 1: powershell.exe: not found
+.sh: 1: powershell.exe: not found
+......sh: 1: powershell.exe: not found
+.sh: 1: powershell.exe: not found
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................***.......................*........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................***.......................*.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................*...........................................................................................................................................................................................................................................................................................................................................................WARNING: Using the `raise_error` matcher without providing a specific error or message risks false positives, since `raise_error` will match when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially allowing the expectation to pass without even executing the method you are intending to call. Actual error raised was #<NoMethodError: undefined method `path' for Chef::Resource::Execute>. Instead consider providing a specific error class or message. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /home/travis/build/chef/chef/spec/support/shared/unit/execute_resource.rb:80:in `block (2 levels) in <top (required)>'.
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................../home/travis/build/chef/chef/spec/unit/resource/windows_task_spec.rb:69: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/resource/windows_task_spec.rb:75: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+.../home/travis/build/chef/chef/spec/unit/resource/windows_task_spec.rb:94: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+../home/travis/build/chef/chef/spec/unit/resource/windows_task_spec.rb:106: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+./home/travis/build/chef/chef/spec/unit/resource/windows_task_spec.rb:113: warning: toplevel constant ArgumentError referenced by Chef::Exceptions::ArgumentError
+....................................................................................................................................................................*.........................................................................................*..........................................................................................................................................................................................................................................................................................................................................................................................................................Session type: standalone
+Loading.............done.
+
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) Chef::Provider::User::Useradd action :create when the user already exists and all properties are in the desired state does not update the user
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:367
+
+  2) Chef::Provider::User::Useradd action :create when the user already exists and the uid is updated ensures the uid is set to the desired value
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:376
+
+  3) Chef::Provider::User::Useradd action :create when the user already exists and the comment is updated ensures the comment field is set to the desired value
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:385
+
+  4) Chef::Provider::User::Useradd action :create when the user already exists and home directory is updated ensures the home directory is set to the desired value
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:393
+
+  5) Chef::Provider::User::Useradd action :create when the user already exists and home directory is updated and manage_home is enabled moves the home directory to the new location
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:400
+
+  6) Chef::Provider::User::Useradd action :create when the user already exists and home directory is updated and manage_home wasn't enabled but is now does not create the home dir in the desired location (XXX)
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:423
+
+  7) Chef::Provider::User::Useradd action :create when the user already exists and home directory is updated and manage_home was enabled but is not now leaves the old home directory around (XXX)
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:435
+
+  8) Chef::Provider::User::Useradd action :create when the user already exists and a password is added ensures the password is set
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:454
+
+  9) Chef::Provider::User::Useradd action :create when the user already exists and the password is updated ensures the password is set to the desired value
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:482
+
+  10) Chef::Provider::User::Useradd action :create when the user already exists and the user is changed from not-system to system does not modify the user at all
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:494
+
+  11) Chef::Provider::User::Useradd action :create when the user already exists and the user is changed from system to not-system does not modify the user at all
+     # No reason given
+     # ./spec/functional/resource/user/useradd_spec.rb:504
+
+  12) chef-client when the chef repo has a cookbook that uses chef-provisioning resources the cheffish DSL tries to load but fails (because chef-provisioning is not there)
+     # but if chef-provisioning is in our bundle or in our gemset then this test, very annoyingly, always fails
+     # ./spec/integration/client/client_spec.rb:380
+
+  13) knife client create When the Chef server is empty refuses to add an existing client
+      # Knife client create must not blindly overwrite an existing client
+      Failure/Error: expect { knife(1m"client create -k bah1m") }.to raise_error(4;4mNet::4;4mHTTPServerException)
+        expected Net::HTTPServerException but nothing was raised
+      # ./spec/integration/knife/client_create_spec.rb:47:in `block (3 levels) in <top (required)>'
+
+  14) knife data bag from file When the Chef server has an empty data bag when the chef repo has some data bag items uploads a file in chef's internal format
+      # chef/chef#4815
+      Failure/Error:
+                knife(1m"data bag from file bar #{db_dir}/bar/round_trip.json1m").should_succeed stderr: 1m<<EOM
+        Updated data_bag_item[bar::round_trip]1m
+        1mEOM
+      
+      Chef::Exceptions::InvalidDataBagItemID:
+        Data Bag items must have an id matching /^[\.\-[:alnum:]_]+$/, you gave: nil
+      # ./lib/chef/data_bag_item.rb:45:in `validate_id!'
+      # ./lib/chef/data_bag_item.rb:74:in `validate_id!'
+      # ./lib/chef/data_bag_item.rb:82:in `raw_data='
+      # ./lib/chef/knife/data_bag_from_file.rb:95:in `block in load_data_bag_items'
+      # ./lib/chef/knife/data_bag_from_file.rb:86:in `each'
+      # ./lib/chef/knife/data_bag_from_file.rb:86:in `load_data_bag_items'
+      # ./lib/chef/knife/data_bag_from_file.rb:58:in `run'
+      # ./lib/chef/knife.rb:442:in `block in run_with_pretty_exceptions'
+      # ./lib/chef/local_mode.rb:44:in `with_server_connectivity'
+      # ./lib/chef/knife.rb:441:in `run_with_pretty_exceptions'
+      # ./spec/support/shared/integration/knife_support.rb:99:in `block in knife'
+      # ./spec/support/shared/integration/knife_support.rb:41:in `knife'
+      # ./spec/integration/knife/data_bag_from_file_spec.rb:90:in `block (4 levels) in <top (required)>'
+
+  15) knife environment create When the Chef server is empty refuses to add an existing environment
+      # Knife environment create must not blindly overwrite an existing environment
+      Failure/Error: expect { knife(1m"environment create bah1m") }.to raise_error(4;4mNet::4;4mHTTPServerException)
+        expected Net::HTTPServerException but nothing was raised
+      # ./spec/integration/knife/environment_create_spec.rb:36:in `block (3 levels) in <top (required)>'
+
+  16) knife node create When the Chef server is empty refuses to add an existing node
+      # Knife node create must not blindly overwrite an existing node
+      Failure/Error: expect { knife(1m"node create bah1m") }.to raise_error(4;4mNet::4;4mHTTPServerException)
+        expected Net::HTTPServerException but nothing was raised
+      # ./spec/integration/knife/node_create_spec.rb:42:in `block (3 levels) in <top (required)>'
+
+  17) knife role create When the Chef server is empty refuses to add an existing role
+      # Knife role create must not blindly overwrite an existing role
+      Failure/Error: expect { knife(1m"role create bah1m") }.to raise_error(4;4mNet::4;4mHTTPServerException)
+        expected Net::HTTPServerException but nothing was raised
+      # ./spec/integration/knife/role_create_spec.rb:36:in `block (3 levels) in <top (required)>'
+
+  18) Chef::ChefFS::FileSystem::Repository::BaseFile#is_json_file? returns false when the file is not json
+      # We assume that everything is ruby or JSON
+      Failure/Error: expect(file.is_json_file?).to be_falsey
+      
+        expected: falsey value
+             got: true
+      # ./spec/unit/chef_fs/file_system/repository/base_file_spec.rb:52:in `block (3 levels) in <top (required)>'
+
+  19) Chef::ChefFS::FileSystem::Repository::BaseFile#name_valid? rejects non json files
+      # We assume that everything is ruby or JSON
+      Failure/Error: expect(file.name_valid?).to be_falsey
+      
+        expected: falsey value
+             got: true
+      # ./spec/unit/chef_fs/file_system/repository/base_file_spec.rb:68:in `block (3 levels) in <top (required)>'
+
+  20) Chef::Mixin::Securable unix-specific behavior should not accept group/owner names containing embedded carriage returns
+     # XXX: params_validate needs to be extended to support multi-line regex
+     # ./spec/unit/mixin/securable_spec.rb:118
+
+  21) Chef::Provider::CookbookFile behaves like Chef::Provider::File when reporting security metadata on windows records the file owner
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:402
+
+  22) Chef::Provider::CookbookFile behaves like Chef::Provider::File when reporting security metadata on windows records rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:406
+
+  23) Chef::Provider::CookbookFile behaves like Chef::Provider::File when reporting security metadata on windows records deny_rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:410
+
+  24) Chef::Provider::CookbookFile behaves like Chef::Provider::File action create do_acl_changes needs tests
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:601
+
+  25) Chef::Provider::File behaves like Chef::Provider::File when reporting security metadata on windows records the file owner
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:402
+
+  26) Chef::Provider::File behaves like Chef::Provider::File when reporting security metadata on windows records rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:406
+
+  27) Chef::Provider::File behaves like Chef::Provider::File when reporting security metadata on windows records deny_rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:410
+
+  28) Chef::Provider::File behaves like Chef::Provider::File action create do_acl_changes needs tests
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:601
+
+  29) Chef::Provider::Mount::Solaris#load_current_resource when the device is an smbfs mount should work at some point in the future
+     # SMBFS mounts on solaris look like they will need some future code work and more investigation
+     # ./spec/unit/provider/mount/solaris_spec.rb:260
+
+  30) Chef::Provider::Package::Chocolatey#action_remove removes a single package when its the only one installed
+      # this is a bug in the superclass
+      Got 2 failures:
+
+      30.1) Failure/Error: provider.run_action(:remove)
+            
+              #<Chef::Provider::Package::Chocolatey:0x0000001a7ead28 @new_resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package>, @action=:remove, @current_resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package @version: [nil, "15.10.25.0"]>, @run_context=#<Chef::RunContext::ChildRunContext:0x000000196eefd8 @parent_run_context=#<Chef::RunContext:0x0000001a7eb980 @node=#<Chef::Node:0x007f25f40d8e70 @chef_server_rest=nil, @name=nil, @chef_environment="_default", @primary_runlist=#<Chef::RunList:0x007f25f40d8e20 @run_list_items=[]>, @override_runlist=#<Chef::RunList:0x007f25f40d8d58 @run_list_items=[]>, @policy_name=nil, @policy_group=nil, @attributes=#<Chef::Node::Attribute @default={}, @env_default={}, @role_default={}, @force_default={}, @normal={}, @override={}, @role_override={}, @env_override={}, @force_override={}, @automatic={}, @merged_attributes=nil, @properties=nil>, @run_state={}, @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>>, @cookbook_collection={}, @events=#<Chef::EventDispatch::Dispatcher:0x0000001a7eb9f8 @subscribers=[]>, @definitions={}, @loaded_recipes_hash={}, @loaded_attributes_hash={}, @reboot_info={}, @cookbook_compiler=nil, @delayed_actions=[], @audits={}, @resource_collection=#<Chef::ResourceCollection:0x0000001a7eb840 @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x0000001a7eb818 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x0000001a7eb7c8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}>, @audits={}, @resource_collection=#<Chef::ResourceCollection:0x000000196eef88 @run_context=#<Chef::RunContext::ChildRunContext:0x000000196eefd8 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x000000196eef60 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x000000196eeee8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}, @delayed_actions=[]>, @converge_actions=#<Chef::Mixin::WhyRun::ConvergeActions:0x000000196ee8f8 @run_context=#<Chef::RunContext::ChildRunContext:0x000000196eefd8 @parent_run_context=#<Chef::RunContext:0x0000001a7eb980 @node=#<Chef::Node:0x007f25f40d8e70 @chef_server_rest=nil, @name=nil, @chef_environment="_default", @primary_runlist=#<Chef::RunList:0x007f25f40d8e20 @run_list_items=[]>, @override_runlist=#<Chef::RunList:0x007f25f40d8d58 @run_list_items=[]>, @policy_name=nil, @policy_group=nil, @attributes=#<Chef::Node::Attribute @default={}, @env_default={}, @role_default={}, @force_default={}, @normal={}, @override={}, @role_override={}, @env_override={}, @force_override={}, @automatic={}, @merged_attributes=nil, @properties=nil>, @run_state={}, @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>>, @cookbook_collection={}, @events=#<Chef::EventDispatch::Dispatcher:0x0000001a7eb9f8 @subscribers=[]>, @definitions={}, @loaded_recipes_hash={}, @loaded_attributes_hash={}, @reboot_info={}, @cookbook_compiler=nil, @delayed_actions=[], @audits={}, @resource_collection=#<Chef::ResourceCollection:0x0000001a7eb840 @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x0000001a7eb818 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x0000001a7eb7c8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}>, @audits={}, @resource_collection=#<Chef::ResourceCollection:0x000000196eef88 @run_context=#<Chef::RunContext::ChildRunContext:0x000000196eefd8 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x000000196eef60 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x000000196eeee8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}, @delayed_actions=[]>, @resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package>, @actions=[["remove package [\"git\", \"conemu\"]", #<Proc:0x000000196ee920@/home/travis/build/chef/chef/lib/chef/provider/package.rb:153>]]>, @recipe_name=nil, @cookbook_name=nil, @candidate_version=["2.6.2", "15.10.25.1"], @available_packages={"chocolatey"=>"0.9.9.11", "conemu"=>"15.10.25.1", "git"=>"2.6.2", "munin-node"=>"1.6.1.20130823"}, @installed_packages={"chocolatey"=>"0.9.9.11", "conemu"=>"15.10.25.0"}, @requirements=#<Chef::Mixin::WhyRun::ResourceRequirements:0x007f25f40c4bf0 @run_context=#<Chef::RunContext:0x0000001a7eb980 @node=#<Chef::Node:0x007f25f40d8e70 @chef_server_rest=nil, @name=nil, @chef_environment="_default", @primary_runlist=#<Chef::RunList:0x007f25f40d8e20 @run_list_items=[]>, @override_runlist=#<Chef::RunList:0x007f25f40d8d58 @run_list_items=[]>, @policy_name=nil, @policy_group=nil, @attributes=#<Chef::Node::Attribute @default={}, @env_default={}, @role_default={}, @force_default={}, @normal={}, @override={}, @role_override={}, @env_override={}, @force_override={}, @automatic={}, @merged_attributes=nil, @properties=nil>, @run_state={}, @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>>, @cookbook_collection={}, @events=#<Chef::EventDispatch::Dispatcher:0x0000001a7eb9f8 @subscribers=[]>, @definitions={}, @loaded_recipes_hash={}, @loaded_attributes_hash={}, @reboot_info={}, @cookbook_compiler=nil, @delayed_actions=[], @audits={}, @resource_collection=#<Chef::ResourceCollection:0x0000001a7eb840 @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x0000001a7eb818 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x0000001a7eb7c8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}>, @resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package>, @assertions={:install=>[#<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x007f25f40c4ad8 @block_action=false, @assertion_proc=#<Proc:0x007f25f40c4a60@/home/travis/build/chef/chef/lib/chef/provider/package.rb:70>, @failure_message="No version specified, and no candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>, #<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x0000001a71ff88 @block_action=false, @assertion_proc=#<Proc:0x0000001a71ff38@/home/travis/build/chef/chef/lib/chef/provider/package.rb:79>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>, #<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x000000196ef370 @block_action=false, @assertion_proc=#<Proc:0x000000196ef2f8@/home/travis/build/chef/chef/lib/chef/provider/package/chocolatey.rb:61>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>], :upgrade=>[#<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x0000001a71ff88 @block_action=false, @assertion_proc=#<Proc:0x0000001a71ff38@/home/travis/build/chef/chef/lib/chef/provider/package.rb:79>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>, #<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x000000196ef370 @block_action=false, @assertion_proc=#<Proc:0x000000196ef2f8@/home/travis/build/chef/chef/lib/chef/provider/package/chocolatey.rb:61>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>], :all_actions=>[], :remove=>[]}, @blocked_actions=[]>, @forced_packages_missing_candidates=[], @packages_missing_candidates=[]> received :shell_out! with unexpected arguments
+                expected: ("C:\\ProgramData\\chocolatey\\bin\\choco.exe uninstall -y conemu", {:returns=>[0], :timeout=>900})
+                     got: ("C:\\ProgramData\\chocolatey\\bin\\choco.exe uninstall -y git conemu", {:returns=>[0], :timeout=>900})
+              Diff:
+              @@ -1,3 +1,3 @@
+              -["C:\\ProgramData\\chocolatey\\bin\\choco.exe uninstall -y conemu",
+              +["C:\\ProgramData\\chocolatey\\bin\\choco.exe uninstall -y git conemu",
+                {:returns=>[0], :timeout=>900}]
+              
+            # ./lib/chef/provider/package.rb:629:in `shell_out_with_timeout!'
+            # ./lib/chef/provider/package/chocolatey.rb:171:in `choco_command'
+            # ./lib/chef/provider/package/chocolatey.rb:124:in `remove_package'
+            # ./lib/chef/provider/package.rb:155:in `block (3 levels) in <class:Package>'
+            # ./lib/chef/provider/package.rb:258:in `multipackage_api_adapter'
+            # ./lib/chef/provider/package.rb:154:in `block (2 levels) in <class:Package>'
+            # ./lib/chef/mixin/why_run.rb:52:in `add_action'
+            # ./lib/chef/provider.rb:202:in `converge_by'
+            # ./lib/chef/provider/package.rb:153:in `block in <class:Package>'
+            # (eval):2:in `block in action_remove'
+            # ./lib/chef/provider.rb:211:in `instance_eval'
+            # ./lib/chef/provider.rb:211:in `compile_and_converge_action'
+            # (eval):2:in `action_remove'
+            # ./lib/chef/provider.rb:171:in `run_action'
+            # ./spec/unit/provider/package/chocolatey_spec.rb:436:in `block (3 levels) in <top (required)>'
+
+      30.2) Failure/Error: expect(provider).to receive(:shell_out!).with(1m"#{choco_exe} uninstall -y conemu1m", { :returns => [4m0], :timeout => timeout }).and_return(double)
+            
+              #<Chef::Provider::Package::Chocolatey:0x0000001a7ead28 @new_resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package>, @action=:remove, @current_resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package @version: [nil, "15.10.25.0"]>, @run_context=#<Chef::RunContext:0x0000001a7eb980 @node=#<Chef::Node:0x007f25f40d8e70 @chef_server_rest=nil, @name=nil, @chef_environment="_default", @primary_runlist=#<Chef::RunList:0x007f25f40d8e20 @run_list_items=[]>, @override_runlist=#<Chef::RunList:0x007f25f40d8d58 @run_list_items=[]>, @policy_name=nil, @policy_group=nil, @attributes=#<Chef::Node::Attribute @default={}, @env_default={}, @role_default={}, @force_default={}, @normal={}, @override={}, @role_override={}, @env_override={}, @force_override={}, @automatic={}, @merged_attributes=nil, @properties=nil>, @run_state={}, @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>>, @cookbook_collection={}, @events=#<Chef::EventDispatch::Dispatcher:0x0000001a7eb9f8 @subscribers=[]>, @definitions={}, @loaded_recipes_hash={}, @loaded_attributes_hash={}, @reboot_info={}, @cookbook_compiler=nil, @delayed_actions=[], @audits={}, @resource_collection=#<Chef::ResourceCollection:0x0000001a7eb840 @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x0000001a7eb818 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x0000001a7eb7c8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}>, @converge_actions=#<Chef::Mixin::WhyRun::ConvergeActions:0x000000196ee8f8 @run_context=#<Chef::RunContext::ChildRunContext:0x000000196eefd8 @parent_run_context=#<Chef::RunContext:0x0000001a7eb980 @node=#<Chef::Node:0x007f25f40d8e70 @chef_server_rest=nil, @name=nil, @chef_environment="_default", @primary_runlist=#<Chef::RunList:0x007f25f40d8e20 @run_list_items=[]>, @override_runlist=#<Chef::RunList:0x007f25f40d8d58 @run_list_items=[]>, @policy_name=nil, @policy_group=nil, @attributes=#<Chef::Node::Attribute @default={}, @env_default={}, @role_default={}, @force_default={}, @normal={}, @override={}, @role_override={}, @env_override={}, @force_override={}, @automatic={}, @merged_attributes=nil, @properties=nil>, @run_state={}, @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>>, @cookbook_collection={}, @events=#<Chef::EventDispatch::Dispatcher:0x0000001a7eb9f8 @subscribers=[]>, @definitions={}, @loaded_recipes_hash={}, @loaded_attributes_hash={}, @reboot_info={}, @cookbook_compiler=nil, @delayed_actions=[], @audits={}, @resource_collection=#<Chef::ResourceCollection:0x0000001a7eb840 @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x0000001a7eb818 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x0000001a7eb7c8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}>, @audits={}, @resource_collection=#<Chef::ResourceCollection:0x000000196eef88 @run_context=#<Chef::RunContext::ChildRunContext:0x000000196eefd8 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x000000196eef60 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x000000196eeee8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}, @delayed_actions=[]>, @resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package>, @actions=[["remove package [\"git\", \"conemu\"]", #<Proc:0x000000196ee920@/home/travis/build/chef/chef/lib/chef/provider/package.rb:153>]]>, @recipe_name=nil, @cookbook_name=nil, @candidate_version=["2.6.2", "15.10.25.1"], @available_packages={"chocolatey"=>"0.9.9.11", "conemu"=>"15.10.25.1", "git"=>"2.6.2", "munin-node"=>"1.6.1.20130823"}, @installed_packages={"chocolatey"=>"0.9.9.11", "conemu"=>"15.10.25.0"}, @requirements=#<Chef::Mixin::WhyRun::ResourceRequirements:0x007f25f40c4bf0 @run_context=#<Chef::RunContext:0x0000001a7eb980 @node=#<Chef::Node:0x007f25f40d8e70 @chef_server_rest=nil, @name=nil, @chef_environment="_default", @primary_runlist=#<Chef::RunList:0x007f25f40d8e20 @run_list_items=[]>, @override_runlist=#<Chef::RunList:0x007f25f40d8d58 @run_list_items=[]>, @policy_name=nil, @policy_group=nil, @attributes=#<Chef::Node::Attribute @default={}, @env_default={}, @role_default={}, @force_default={}, @normal={}, @override={}, @role_override={}, @env_override={}, @force_override={}, @automatic={}, @merged_attributes=nil, @properties=nil>, @run_state={}, @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>>, @cookbook_collection={}, @events=#<Chef::EventDispatch::Dispatcher:0x0000001a7eb9f8 @subscribers=[]>, @definitions={}, @loaded_recipes_hash={}, @loaded_attributes_hash={}, @reboot_info={}, @cookbook_compiler=nil, @delayed_actions=[], @audits={}, @resource_collection=#<Chef::ResourceCollection:0x0000001a7eb840 @run_context=#<Chef::RunContext:0x0000001a7eb980 ...>, @resource_set=#<Chef::ResourceCollection::ResourceSet:0x0000001a7eb818 @resources_by_key={}>, @resource_list=#<Chef::ResourceCollection::ResourceList:0x0000001a7eb7c8 @resources=[], @insert_after_idx=nil>>, @before_notification_collection={}, @immediate_notification_collection={}, @delayed_notification_collection={}>, @resource=<chocolatey_package[git] @package_name: ["git", "conemu"] @name: "git" @before: nil @params: {} @provider: nil @allowed_actions: [:nothing, :install, :upgrade, :remove, :purge, :reconfig, :lock, :unlock, :uninstall] @action: [:install] @updated: false @updated_by_last_action: false @source_line: nil @guard_interpreter: nil @default_guard_interpreter: :default @elapsed_time: 0 @resource_name: :chocolatey_package>, @assertions={:install=>[#<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x007f25f40c4ad8 @block_action=false, @assertion_proc=#<Proc:0x007f25f40c4a60@/home/travis/build/chef/chef/lib/chef/provider/package.rb:70>, @failure_message="No version specified, and no candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>, #<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x0000001a71ff88 @block_action=false, @assertion_proc=#<Proc:0x0000001a71ff38@/home/travis/build/chef/chef/lib/chef/provider/package.rb:79>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>, #<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x000000196ef370 @block_action=false, @assertion_proc=#<Proc:0x000000196ef2f8@/home/travis/build/chef/chef/lib/chef/provider/package/chocolatey.rb:61>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>], :upgrade=>[#<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x0000001a71ff88 @block_action=false, @assertion_proc=#<Proc:0x0000001a71ff38@/home/travis/build/chef/chef/lib/chef/provider/package.rb:79>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>, #<Chef::Mixin::WhyRun::ResourceRequirements::Assertion:0x000000196ef370 @block_action=false, @assertion_proc=#<Proc:0x000000196ef2f8@/home/travis/build/chef/chef/lib/chef/provider/package/chocolatey.rb:61>, @failure_message="No candidate version available for ", @whyrun_message="Assuming a repository that offers  would have been configured", @resource_modifier=nil, @assertion_failed=false, @exception_type=Chef::Exceptions::Package>], :all_actions=>[], :remove=>[]}, @blocked_actions=[]>, @forced_packages_missing_candidates=[], @packages_missing_candidates=[]> received :shell_out! with unexpected arguments
+                expected: ("C:\\ProgramData\\chocolatey\\bin\\choco.exe uninstall -y conemu", {:returns=>[0], :timeout=>900})
+                     got: ("C:\\ProgramData\\chocolatey\\bin\\choco.exe list -r git conemu", {:returns=>[0], :timeout=>900})
+              Diff:
+              @@ -1,3 +1,3 @@
+              -["C:\\ProgramData\\chocolatey\\bin\\choco.exe uninstall -y conemu",
+              +["C:\\ProgramData\\chocolatey\\bin\\choco.exe list -r git conemu",
+                {:returns=>[0], :timeout=>900}]
+              
+            # ./spec/unit/provider/package/chocolatey_spec.rb:435:in `block (3 levels) in <top (required)>'
+
+  31) Chef::Provider::RemoteFile behaves like Chef::Provider::File when reporting security metadata on windows records the file owner
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:402
+
+  32) Chef::Provider::RemoteFile behaves like Chef::Provider::File when reporting security metadata on windows records rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:406
+
+  33) Chef::Provider::RemoteFile behaves like Chef::Provider::File when reporting security metadata on windows records deny_rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:410
+
+  34) Chef::Provider::RemoteFile behaves like Chef::Provider::File action create do_acl_changes needs tests
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:601
+
+  35) Chef::Provider::Template behaves like Chef::Provider::File when reporting security metadata on windows records the file owner
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:402
+
+  36) Chef::Provider::Template behaves like Chef::Provider::File when reporting security metadata on windows records rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:406
+
+  37) Chef::Provider::Template behaves like Chef::Provider::File when reporting security metadata on windows records deny_rights for each user in the ACL
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:410
+
+  38) Chef::Provider::Template behaves like Chef::Provider::File action create do_acl_changes needs tests
+     # No reason given
+     # ./spec/support/shared/unit/provider/file.rb:601
+
+  39) Chef::Provider when using use_inline_resources should log a deprecation warning
+      # No reason given
+      Got 1 failure:
+
+      39.1) Failure/Error: expect(4;4mChef).to receive(:deprecated).with(:use_inline_resources, kind_of(4;4mString))
+            
+              (Chef (class)).deprecated(:use_inline_resources, kind of String)
+                  expected: 1 time with arguments: (:use_inline_resources, kind of String)
+                  received: 0 times
+            # ./spec/unit/provider_spec.rb:201:in `block (3 levels) in <top (required)>'
+
+  40) Chef::ResourceReporter after the chef run completes reports a successful run
+     # refactor how node gets set.
+     # ./spec/unit/resource_reporter_spec.rb:87
+
+  41) Chef::Resource runs an action by finding its provider, loading the current resource and then running the action
+     # No reason given
+     # ./spec/unit/resource_spec.rb:583
+
+
+Top 10 slowest examples (103.97 seconds, 12.5% of total time):
+  Chef::Resource::RemoteFile when dealing with content length checking when the download of the source raises an exception should not create the file
+    25.01 seconds ./spec/functional/resource/remote_file_spec.rb:234
+  LWRP Lightweight Chef::Provider provider class created sets itself as a provider for a resource of the same name
+    11.6 seconds ./spec/unit/lwrp_spec.rb:429
+  LWRP Lightweight Chef::Provider provider class created should create a method for each action
+    9.74 seconds ./spec/unit/lwrp_spec.rb:424
+  LWRP Lightweight Chef::Provider should insert embedded resources from multiple providers, including from the last position, properly into the resource collection
+    8.85 seconds ./spec/unit/lwrp_spec.rb:479
+  LWRP Lightweight Chef::Provider should insert resources embedded in the provider into the middle of the resource collection
+    8.79 seconds ./spec/unit/lwrp_spec.rb:462
+  LWRP Lightweight Chef::Provider should properly handle a new_resource reference
+    8.51 seconds ./spec/unit/lwrp_spec.rb:402
+  LWRP Lightweight Chef::Provider when using inline compilation when interior resources are not updated does not mark the parent resource updated
+    8.35 seconds ./spec/unit/lwrp_spec.rb:562
+  LWRP Lightweight Chef::Provider should properly handle a new_resource reference
+    7.97 seconds ./spec/unit/lwrp_spec.rb:506
+  LWRP Lightweight Chef::Provider should properly handle an embedded Resource accessing the enclosing Provider's scope
+    7.62 seconds ./spec/unit/lwrp_spec.rb:517
+  LWRP Lightweight Chef::Provider when using inline compilation when interior resources are updated marks the parent resource updated
+    7.52 seconds ./spec/unit/lwrp_spec.rb:554
+
+Top 10 slowest example groups:
+  knife serve
+    4.89 seconds average (39.11 seconds / 8 examples) ./spec/integration/knife/serve_spec.rb:22
+  Chef::Resource::RegistryKey
+    4.87 seconds average (4.87 seconds / 1 example) ./spec/functional/resource/registry_spec.rb:24
+  Shell
+    4.84 seconds average (24.19 seconds / 5 examples) ./spec/functional/shell_spec.rb:24
+  Chef::Resource::Ohai
+    4.15 seconds average (8.3 seconds / 2 examples) ./spec/functional/resource/ohai_spec.rb:21
+  LWRP
+    3.73 seconds average (212.45 seconds / 57 examples) ./spec/unit/lwrp_spec.rb:27
+  Chef::Resource::Package
+    3.05 seconds average (48.83 seconds / 16 examples) ./spec/functional/resource/package_spec.rb:95
+  chef-solo
+    2.51 seconds average (20.04 seconds / 8 examples) ./spec/integration/solo/solo_spec.rb:9
+  Accumulators
+    1.77 seconds average (3.54 seconds / 2 examples) ./spec/integration/recipes/accumulator_spec.rb:4
+  chef-client
+    1.76 seconds average (65.29 seconds / 37 examples) ./spec/integration/client/client_spec.rb:6
+  Chef::Application::Client run_application
+    1.74 seconds average (6.96 seconds / 4 examples) ./spec/unit/application/client_spec.rb:441
+
+Finished in 13 minutes 50 seconds (files took 9.79 seconds to load)
+18292 examples, 0 failures, 41 pending
+
+
+travis_time:end:14645294:start=1496815176952987642,finish=1496816021433435702,duration=844480448060
+The command "sudo -E $(which bundle) exec rake spec;" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:0babddd0
+travis_time:end:0babddd0:start=1496816021826022889,finish=1496816021830884554,duration=4861665travis_time:start:0041f760change detected (content changed, file is created, or file is deleted):
+/home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/bundler/gems/bundler-audit-6eb5a81e9b18/.git/index
+/home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/bundler/gems/bundler-audit-6eb5a81e9b18/.git/logs/HEAD
+/home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/bundler/gems/chefstyle-b2bf89dd1127/.git/index
+/home/travis/build/chef/chef/vendor/bundle/ruby/2.3.0/bundler/gems/chefstyle-b2bf89dd1127/.git/logs/HEAD
+
+
+changes detected, packing new archive
+uploading archive
+
+travis_time:end:0041f760:start=1496816021836852992,finish=1496816026160494752,duration=4323641760travis_fold:end:cache.2
+Done. Your build exited with 0.

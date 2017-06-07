@@ -1,0 +1,843 @@
+travis_fold:start:worker_infoWorker information
+hostname: production-4-worker-org-c-5-gce:a8f48bf4-c31f-44b4-aa78-4d71866a3ea6
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-d8213c30-bf6a-4897-a013-37c04557e314:travis-ci-sugilite-trusty-1480960799
+startup: 21.066745552s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240266470
+Job id: 240266487
+travis-build version: 4183c5148
+Build image provisioning date and time
+Mon Dec  5 18:47:20 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-51-generic
+Cookbooks Version
+998099c https://github.com/travis-ci/travis-cookbooks/tree/998099c
+git version
+git version 2.11.0
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.73
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.1.0
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+jruby-9.1.2.0
+ruby-1.9.3-p551
+ruby-2.0.0-p648
+ruby-2.1.10
+ruby-2.2.5
+ruby-2.3.1
+Pre-installed Node.js versions
+iojs-v1.6
+iojs-v1.6.4
+v0.10
+v0.10.40
+v0.11.16
+v0.12.2
+v0.12.7
+v0.6.21
+v0.8.28
+v4.1.2
+v4.6.2
+v6.9.1
+Pre-installed Go versions
+1.2.2
+1.3.3
+1.4.3
+1.5.4
+1.6.3
+1.7
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Pre-installed PostgreSQL versions
+9.2.19
+9.3.15
+9.4.10
+9.5.5
+9.6.1
+Redis version
+redis-server 3.0.6
+MongoDB version
+MongoDB 3.2.11
+RabbitMQ Version
+3.6.6
+Installed Firefox version
+firefox 38.4.0esr
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/maven
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-51-generic", arch: "amd64", family: "unix"
+gradle version
+
+------------------------------------------------------------
+Gradle 2.13
+------------------------------------------------------------
+
+Build time:   2016-04-25 04:10:10 UTC
+Build number: none
+Revision:     3b427b1481e46232107303c90be7b05079b05b1c
+
+Groovy:       2.4.4
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_111 (Oracle Corporation 25.111-b14)
+OS:           Linux 4.4.0-51-generic amd64
+
+kerl list installations
+17.0
+17.1
+17.3
+17.4
+17.5
+18.0
+18.1
+18.2
+18.2.1
+R14B02
+R14B03
+R14B04
+R15B
+R15B01
+R15B02
+R15B03
+R16B
+R16B01
+R16B02
+R16B03
+R16B03-1
+kiex list
+
+kiex elixirs
+
+   elixir-1.0.3
+=* elixir-1.0.4
+
+# => - current
+# =* - current && default
+#  * - default
+
+rebar --version
+rebar 2.6.4 17 20160831_145136 git 2.6.4-dirty
+lein version
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_111 Java HotSpot(TM) 64-Bit Server VM
+perlbrew list
+  5.8 (5.8.8)
+  5.10 (5.10.1)
+  5.12 (5.12.5)
+  5.14 (5.14.4)
+  5.16 (5.16.3)
+  5.18 (5.18.4)
+  5.20 (5.20.3)
+  5.20-extras (5.20.3)
+  5.20-shrplib (5.20.3)
+  5.20.3
+  5.22 (5.22.0)
+  5.22-extras (5.22.0)
+  5.22-shrplib (5.22.0)
+  5.22.0
+phpenv versions
+  system
+  5.4
+  5.4.45
+  5.5.37
+  5.6
+* 5.6.24 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.7
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.2.0 2016-07-19 01:28:52
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:00b6b57e$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193)   Receiving objects:  70% (8536/12193)   Receiving objects:  71% (8658/12193)   Receiving objects:  72% (8779/12193)   Receiving objects:  73% (8901/12193)   Receiving objects:  74% (9023/12193)   Receiving objects:  75% (9145/12193)   Receiving objects:  76% (9267/12193)   Receiving objects:  77% (9389/12193)   Receiving objects:  78% (9511/12193)   Receiving objects:  79% (9633/12193)   Receiving objects:  80% (9755/12193)   Receiving objects:  81% (9877/12193)   Receiving objects:  82% (9999/12193)   Receiving objects:  83% (10121/12193)   Receiving objects:  84% (10243/12193)   Receiving objects:  85% (10365/12193)   Receiving objects:  86% (10486/12193)   Receiving objects:  87% (10608/12193)   Receiving objects:  88% (10730/12193)   Receiving objects:  89% (10852/12193)   Receiving objects:  90% (10974/12193)   Receiving objects:  91% (11096/12193)   Receiving objects:  92% (11218/12193)   Receiving objects:  93% (11340/12193)   Receiving objects:  94% (11462/12193)   Receiving objects:  95% (11584/12193)   Receiving objects:  96% (11706/12193)   Receiving objects:  97% (11828/12193)   Receiving objects:  98% (11950/12193)   Receiving objects:  99% (12072/12193)   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193)   Receiving objects: 100% (12193/12193), 5.43 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (90/7339)   Resolving deltas:   3% (228/7339)   Resolving deltas:   4% (303/7339)   Resolving deltas:   5% (407/7339)   Resolving deltas:   6% (489/7339)   Resolving deltas:  10% (767/7339)   Resolving deltas:  14% (1036/7339)   Resolving deltas:  15% (1118/7339)   Resolving deltas:  16% (1187/7339)   Resolving deltas:  17% (1255/7339)   Resolving deltas:  18% (1348/7339)   Resolving deltas:  19% (1440/7339)   Resolving deltas:  20% (1486/7339)   Resolving deltas:  21% (1542/7339)   Resolving deltas:  22% (1670/7339)   Resolving deltas:  23% (1700/7339)   Resolving deltas:  24% (1778/7339)   Resolving deltas:  25% (1903/7339)   Resolving deltas:  26% (1927/7339)   Resolving deltas:  27% (1985/7339)   Resolving deltas:  28% (2092/7339)   Resolving deltas:  29% (2129/7339)   Resolving deltas:  30% (2236/7339)   Resolving deltas:  31% (2277/7339)   Resolving deltas:  32% (2362/7339)   Resolving deltas:  33% (2454/7339)   Resolving deltas:  34% (2520/7339)   Resolving deltas:  35% (2586/7339)   Resolving deltas:  36% (2643/7339)   Resolving deltas:  37% (2727/7339)   Resolving deltas:  38% (2789/7339)   Resolving deltas:  39% (2917/7339)   Resolving deltas:  40% (2952/7339)   Resolving deltas:  43% (3200/7339)   Resolving deltas:  44% (3230/7339)   Resolving deltas:  45% (3338/7339)   Resolving deltas:  46% (3387/7339)   Resolving deltas:  51% (3797/7339)   Resolving deltas:  52% (3817/7339)   Resolving deltas:  53% (3899/7339)   Resolving deltas:  54% (3964/7339)   Resolving deltas:  55% (4041/7339)   Resolving deltas:  56% (4114/7339)   Resolving deltas:  57% (4185/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4333/7339)   Resolving deltas:  60% (4404/7339)   Resolving deltas:  61% (4477/7339)   Resolving deltas:  62% (4551/7339)   Resolving deltas:  63% (4631/7339)   Resolving deltas:  64% (4704/7339)   Resolving deltas:  65% (4771/7339)   Resolving deltas:  66% (4844/7339)   Resolving deltas:  67% (4926/7339)   Resolving deltas:  68% (4995/7339)   Resolving deltas:  69% (5066/7339)   Resolving deltas:  70% (5138/7339)   Resolving deltas:  71% (5213/7339)   Resolving deltas:  72% (5287/7339)   Resolving deltas:  73% (5358/7339)   Resolving deltas:  74% (5431/7339)   Resolving deltas:  75% (5505/7339)   Resolving deltas:  76% (5582/7339)   Resolving deltas:  77% (5654/7339)   Resolving deltas:  78% (5729/7339)   Resolving deltas:  79% (5802/7339)   Resolving deltas:  80% (5880/7339)   Resolving deltas:  81% (5947/7339)   Resolving deltas:  82% (6019/7339)   Resolving deltas:  83% (6092/7339)   Resolving deltas:  84% (6165/7339)   Resolving deltas:  85% (6241/7339)   Resolving deltas:  86% (6315/7339)   Resolving deltas:  87% (6385/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6680/7339)   Resolving deltas:  92% (6753/7339)   Resolving deltas:  93% (6826/7339)   Resolving deltas:  94% (6900/7339)   Resolving deltas:  95% (6974/7339)   Resolving deltas:  96% (7049/7339)   Resolving deltas:  97% (7120/7339)   Resolving deltas:  98% (7193/7339)   Resolving deltas:  99% (7267/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+
+travis_time:end:00b6b57e:start=1496823152388060548,finish=1496823155189842928,duration=2801782380$ cd chef/chef
+travis_time:start:0767f694$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  10% (1/10)   [Kremote: Compressing objects:  20% (2/10)   [Kremote: Compressing objects:  30% (3/10)   [Kremote: Compressing objects:  40% (4/10)   [Kremote: Compressing objects:  50% (5/10)   [Kremote: Compressing objects:  60% (6/10)   [Kremote: Compressing objects:  70% (7/10)   [Kremote: Compressing objects:  80% (8/10)   [Kremote: Compressing objects:  90% (9/10)   [Kremote: Compressing objects: 100% (10/10)   [Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 23 (delta 17), reused 17 (delta 13), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:0767f694:start=1496823155195957135,finish=1496823155820980278,duration=625023143$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:servicestravis_time:start:1c4b0616$ sudo service docker start
+start: Job is already running: docker
+
+travis_time:end:1c4b0616:start=1496823155938458338,finish=1496823155955076733,duration=16618395travis_fold:end:services
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export CENTOS=7
+$ export KITCHEN_YAML=.kitchen.travis.yml
+
+travis_fold:start:rvmtravis_time:start:1cc75d94$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  8 14.3M    8 1222k    0     0  1347k      0  0:00:10 --:--:--  0:00:10 1347k 86 14.3M   86 12.4M    0     0  6636k      0  0:00:02  0:00:01  0:00:01 11.1M100 14.3M  100 14.3M    0     0  7341k      0  0:00:01  0:00:01 --:--:-- 12.0M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:1cc75d94:start=1496823158981951076,finish=1496823178620045137,duration=19638094061travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/kitchen-tests/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:02319ac8$ Installing caching utilities
+
+travis_time:end:02319ac8:start=1496823178984883445,finish=1496823179124438523,duration=139555078travis_time:start:018123fc
+travis_time:end:018123fc:start=1496823179130806619,finish=1496823179135788970,duration=4982351travis_time:start:0befbecdattempting to download cache archive
+fetching PR.6193/cache-linux-trusty-d3dab3977e1b7af3089afe426095d9b1239d9fe5c630fca4bb895381cc164b75--rvm-2.4.1--gemfile-kitchen-testsGemfile.tgz
+found cache
+
+travis_time:end:0befbecd:start=1496823179141162731,finish=1496823180318124886,duration=1176962155travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:2e91ffae
+travis_time:end:2e91ffae:start=1496823180323988425,finish=1496823180328598102,duration=4609677travis_time:start:15148a96adding /home/travis/build/chef/chef/kitchen-tests/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/kitchen-tests/vendor/bundle
+
+travis_time:end:15148a96:start=1496823180333719481,finish=1496823182398776083,duration=2065056602travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:03e3ad08$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 97%)Fetching: rubygems-update-2.6.11.gem ( 99%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:03e3ad08:start=1496823182874624979,finish=1496823185943786553,duration=3069161574travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0e135470$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 51%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 69%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:0e135470:start=1496823185950335169,finish=1496823186483702969,duration=533367800travis_fold:end:before_install.2travis_fold:start:install.bundlertravis_time:start:01734db0$ bundle install --without ci docgen guard integration maintenance omnibus_package --frozen --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using public_suffix 2.0.5
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using multipart-post 2.0.0
+Using httpclient 2.8.3
+Using buff-extensions 2.0.0
+Using hashie 3.5.5
+Using buff-ignore 1.2.0
+Using buff-ruby_engine 1.0.0
+Using hitimes 1.2.4
+Using nio4r 2.0.0
+Using erubis 2.7.0
+Using json 2.0.3
+Using mixlib-log 1.7.1
+Using retryable 2.0.4
+Using semverse 2.0.0
+Using cleanroom 1.0.0
+Using minitar 0.6.1
+Using molinillo 0.5.7
+Using thor 0.19.1
+Using kitchen-appbundle-updater 0.2.0
+Using excon 0.55.0
+Using artifactory 2.8.1
+Using mixlib-versioning 1.1.0
+Using net-ssh 4.1.0
+Using safe_yaml 1.0.4
+Using aws-sigv4 1.0.0
+Using jmespath 1.3.1
+Using multi_json 1.12.1
+Using method_source 0.8.2
+Using mini_portile 0.6.2
+Using parallel 1.11.1
+Using coderay 1.1.1
+Using slop 3.6.0
+Using rainbow 2.2.1
+Using rspec-support 3.5.0
+Using diff-lcs 1.3
+Using rubyzip 1.2.1
+Using sslshake 1.1.0
+Using blankslate 2.1.2.4
+Using builder 3.2.3
+Using ffi 1.9.18
+Using little-plugger 1.1.4
+Using nori 2.6.0
+Using rubyntlm 0.6.1
+Using vagrant-wrapper 2.0.3
+Using bundler 1.15.1
+Using addressable 2.5.1
+Using faraday 0.9.2
+Using varia_model 0.6.0
+Using buff-shell_out 1.1.0
+Using timers 4.0.4
+Using mixlib-authentication 1.4.1
+Using mixlib-archive 0.4.1
+Using solve 3.1.0
+Using docker-api 1.33.2
+Using mixlib-install 2.1.12
+Using net-scp 1.2.1
+Using net-ssh-gateway 1.3.0
+Using aws-sdk-core 2.9.1
+Using nokogiri 1.6.6.4
+Using pry 0.10.4
+Using rspec-core 3.5.4
+Using rspec-expectations 3.5.0
+Using rspec-mocks 3.5.0
+Using parslet 1.5.0
+Using gyoku 1.3.1
+Using gssapi 1.2.0
+Using logging 2.2.0
+Using chef-config 12.19.36
+Using sawyer 0.8.1
+Using buff-config 2.0.0
+Using celluloid 0.16.0
+Using test-kitchen 1.16.0
+Using aws-sdk-resources 2.9.1
+Using rspec-its 1.2.0
+Using rspec 3.5.0
+Using toml 0.1.2
+Using winrm 2.1.3
+Using octokit 4.6.2
+Using celluloid-io 0.16.2
+Using kitchen-dokken 1.1.0
+Using kitchen-vagrant 1.0.2
+Using aws-sdk 2.9.1
+Using winrm-fs 1.0.1
+Using ridley 5.1.0
+Using kitchen-ec2 1.3.2
+Using train 0.23.0
+Using berkshelf-api-client 3.0.0
+Using inspec 1.18.0
+Using berkshelf 5.6.4
+Using kitchen-inspec 0.17.0
+Bundle complete! 11 Gemfile dependencies, 94 gems now installed.
+Gems in the groups ci, docgen, guard, integration, maintenance and omnibus_package were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:01734db0:start=1496823186490177774,finish=1496823187008758376,duration=518580602travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:2dd4d960$ sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+
+travis_time:end:2dd4d960:start=1496823187014461109,finish=1496823187024635191,duration=10174082travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:08d706ef$ cd kitchen-tests
+
+travis_time:end:08d706ef:start=1496823187030204907,finish=1496823187034451474,duration=4246567travis_fold:end:before_script.2travis_time:start:02230cd8$ bundle exec kitchen test webapp-centos-7
+-----> Starting Kitchen (v1.16.0)
+-----> Cleaning up any prior instances of <webapp-centos-7>
+-----> Destroying <webapp-centos-7>...
+       Finished destroying <webapp-centos-7> (0m0.04s).
+-----> Testing <webapp-centos-7>
+-----> Creating <webapp-centos-7>...
+       Finished creating <webapp-centos-7> (0m42.04s).
+-----> Converging <webapp-centos-7>...
+       Preparing files for transfer
+       Preparing dna.json
+       Resolving cookbook dependencies with Berkshelf 5.6.4...
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+/home/travis/build/chef/chef/kitchen-tests/vendor/bundle/ruby/2.4.0/gems/faraday-0.9.2/lib/faraday/request/retry.rb:30: warning: constant ::Fixnum is deprecated
+       Removing non-cookbook files before transfer
+       Preparing data
+       Preparing data_bags
+       Preparing validation.pem
+       Preparing client.rb
+-----> Installing Chef Omnibus (always install latest version)
+Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+Trying wget...
+Download complete.
+el 7 x86_64
+Getting information for chef current  for el...
+downloading https://omnitruck.chef.io/current/chef/metadata?v=&p=el&pv=7&m=x86_64
+  to file /tmp/install.sh.183/metadata.txt
+trying wget...
+sha1	9ecf02e89c0e8a8ce5427bdffbf96e253f59d858
+sha256	87bb590c2d975c5af954b90b816c0d9f3c6fe2c526e7cbb5483d8c432fd937ff
+url	https://packages.chef.io/files/current/chef/13.2.7/el/7/chef-13.2.7-1.el7.x86_64.rpm
+version	13.2.7
+downloaded metadata file looks valid...
+downloading https://packages.chef.io/files/current/chef/13.2.7/el/7/chef-13.2.7-1.el7.x86_64.rpm
+  to file /tmp/install.sh.183/chef-13.2.7-1.el7.x86_64.rpm
+trying wget...
+Comparing checksum with sha256sum...
+
+WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+
+You are installing an omnibus package without a version pin.  If you are installing
+on production servers via an automated process this is DANGEROUS and you will
+be upgraded without warning on new releases, even to new major releases.
+Letting the version float is only appropriate in desktop, test, development or
+CI/CD environments.
+
+WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+
+Installing chef 
+installing with rpm...
+Preparing...                          warning: /tmp/install.sh.183/chef-13.2.7-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+########################################
+Updating / installing...
+chef-13.2.7-1.el7                     ########################################
+Thank you for installing Chef!
+       Transferring files to <webapp-centos-7>
+Successfully installed appbundler-0.10.0
+Parsing documentation for appbundler-0.10.0
+Installing ri documentation for appbundler-0.10.0
+Done installing documentation for appbundler after 0 seconds
+Successfully installed appbundle-updater-0.5.0
+Parsing documentation for appbundle-updater-0.5.0
+Installing ri documentation for appbundle-updater-0.5.0
+Done installing documentation for appbundle-updater after 0 seconds
+2 gems installed
+-----> Cleaning ohai checkout
+-----> Creating /opt/chef/embedded/apps directory
+-----> Installing Packages
+[2017-06-07T08:14:13+00:00] INFO: The plugin path /etc/chef/ohai/plugins does not exist. Skipping...
+    running: yum -y install gcc make git zlib-devel lzma-devel
+-----> Extracting ohai from https://github.com/chef/ohai/archive/master.tar.gz
+Unkown tar entry: pax_global_header type: g.
+-----> Installing dependencies
+    running: /opt/chef/embedded/bin/ruby /opt/chef/embedded/bin/bundle install --without test
+-----> Installing gem
+    running: /opt/chef/embedded/bin/ruby /opt/chef/embedded/bin/bundle exec /opt/chef/embedded/bin/rake install
+-----> Updating appbundler binstubs for ohai
+    running: /opt/chef/embedded/bin/ruby /opt/chef/embedded/bin/appbundler /opt/chef/embedded/apps/ohai /opt/chef/bin
+-----> Finished!
+-----> Cleaning chef checkout
+-----> Installing Packages
+[2017-06-07T08:14:38+00:00] INFO: The plugin path /etc/chef/ohai/plugins does not exist. Skipping...
+    running: yum -y install gcc make git zlib-devel lzma-devel
+-----> Extracting chef from https://github.com/chef/chef/archive/d9723ba8a83e694a24c24d3f9dc3a6cc173ff809.tar.gz
+Unkown tar entry: pax_global_header type: g.
+-----> Installing dependencies
+    running: /opt/chef/embedded/bin/ruby /opt/chef/embedded/bin/bundle install --without changelog development docgen guard integration maintenance tools travis style
+-----> Installing gem
+    running: /opt/chef/embedded/bin/ruby /opt/chef/embedded/bin/bundle exec /opt/chef/embedded/bin/rake install
+-----> Updating appbundler binstubs for chef
+    running: /opt/chef/embedded/bin/ruby /opt/chef/embedded/bin/appbundler /opt/chef/embedded/apps/chef /opt/chef/bin
+-----> Finished!
+Starting Chef Client, version 13.2.7
+Creating a new client identity for webapp-centos-7 using the validator key.
+resolving cookbooks for run list: ["base::default"]
+Synchronizing Cookbooks:
+  - base (0.1.0)
+  - apt (6.0.1)
+  - build-essential (8.0.0)
+  - chef-client (8.0.0)
+  - chef_hostname (0.5.0)
+  - logrotate (2.1.0)
+  - nscd (5.0.0)
+  - multipackage (4.0.0)
+  - ntp (3.3.1)
+  - openssh (2.2.0)
+  - resolver (2.0.1)
+  - selinux (1.0.3)
+  - sudo (3.3.1)
+  - ubuntu (2.0.1)
+  - users (4.0.3)
+  - seven_zip (2.0.2)
+  - mingw (2.0.0)
+  - cron (4.1.0)
+  - windows (3.0.4)
+  - compat_resource (12.16.3)
+  - iptables (4.0.1)
+  - ohai (5.0.2)
+Installing Cookbook Gems:
+Compiling Cookbooks...
+CHEF SUGAR THINKS WE ARE ON RHEL
+Recipe: base::default
+  * hostname[chef-travis-ci.chef.io] action set
+    * ohai[reload hostname] action nothing (skipped due to action :nothing)
+    * execute[set hostname to chef-travis-ci.chef.io] action run
+      - execute /bin/hostname chef-travis-ci.chef.io
+    * file[/etc/hosts] action create
+      - update content in file /etc/hosts from 6dd249 to 15dfcd
+      (diff output suppressed by config)
+    * file[/etc/hostname] action create
+      - update content in file /etc/hostname from 6ba3e7 to 0aeccf
+      (diff output suppressed by config)
+    * ohai[reload hostname] action reload
+      - re-run ohai and merge results into node attributes
+  
+[2017-06-07T08:15:04+00:00] WARN: The sysadmins recipe has been deprecated. We suggest using the users_manage resource in your own cookbook if you need similar functionality. The resource in this recipe will be removed with a major release of the cookbook in April 2017
+  Converging 50 resources
+  * hostname[chef-travis-ci.chef.io] action set
+    * ohai[reload hostname] action nothing (skipped due to action :nothing)
+    * execute[set hostname to chef-travis-ci.chef.io] action run (skipped due to not_if)
+    * file[/etc/hosts] action create (skipped due to not_if)
+    * file[/etc/hostname] action create (up to date)
+     (up to date)
+Recipe: selinux::_common
+  * selinux_install[selinux os prep] action install
+    * yum_package[policycoreutils] action install
+      - install version 2.5-11.el7_3 of package policycoreutils
+    * yum_package[selinux-policy] action install
+      - install version 3.13.1-102.el7_3.16 of package selinux-policy
+    * yum_package[selinux-policy-targeted] action install
+      - install version 3.13.1-102.el7_3.16 of package selinux-policy-targeted
+    * yum_package[libselinux-utils] action install (up to date)
+    * yum_package[mcstrans] action install
+      - install version 0.3.4-5.el7 of package mcstrans
+    * directory[/etc/selinux] action create (up to date)
+  
+Recipe: selinux::disabled
+  * selinux_state[SELinux Disabled] action disabled
+    * template[disabled selinux config] action create
+      - update content in file /etc/selinux/config from f1edb8 to 8a6a4a
+      (diff output suppressed by config)
+  
+Recipe: base::default
+  * yum_repository[epel] action create
+    * template[/etc/yum.repos.d/epel.repo] action create
+      - create new file /etc/yum.repos.d/epel.repo
+      - update content in file /etc/yum.repos.d/epel.repo from none to 82260b
+      (diff output suppressed by config)
+      - change mode from '' to '0644'
+    * execute[yum clean metadata epel] action run
+      - execute yum clean metadata --disablerepo=* --enablerepo=epel
+    * execute[yum-makecache-epel] action run
+      - execute yum -q -y makecache --disablerepo=* --enablerepo=epel
+    * ruby_block[yum-cache-reload-epel] action create
+      - execute the ruby block yum-cache-reload-epel
+    * execute[yum clean metadata epel] action nothing (skipped due to action :nothing)
+    * execute[yum-makecache-epel] action nothing (skipped due to action :nothing)
+    * ruby_block[yum-cache-reload-epel] action nothing (skipped due to action :nothing)
+  
+Recipe: build-essential::default
+  * build_essential[install_packages] action install
+    * yum_package[autoconf, bison, flex, gcc, gcc-c++, gettext, kernel-devel, make, m4, ncurses-devel, patch] action install
+      - install version 2.69-11.el7 of package autoconf
+      - install version 2.7-4.el7 of package bison
+      - install version 2.5.37-3.el7 of package flex
+      - install version 4.8.5-11.el7 of package gcc-c++
+      - install version 0.18.2.1-4.el7 of package gettext
+      - install version 3.10.0-514.21.1.el7 of package kernel-devel
+      - install version 1.4.16-10.el7 of package m4
+      - install version 5.9-13.20130511.el7 of package ncurses-devel
+      - install version 2.7.1-8.el7 of package patch
+  
+Recipe: base::packages
+  * multipackage_internal[collected packages install] action install (up to date)
+  * yum_package[collected packages install] action install
+    - install version 4.87-4.el7 of package lsof
+    - install version 4.5.1-3.el7 of package tcpdump
+    - install version 4.8-11.el7 of package strace
+    - install version 5.0.2-25.el7_3.1 of package zsh
+    - install version 3.0-2.1.el7_3 of package dmidecode
+    - install version 0.7.91-14.el7 of package ltrace
+    - install version 1.06.95-13.el7 of package bc
+    - install version 0.17-60.el7 of package telnet
+    - install version 1.7.14-10.el7 of package subversion
+    - install version 2.0.22-2.el7 of package traceroute
+    - install version 2.0.2-1.el7 of package htop
+    - install version 1.8-4.el7 of package tmux
+  * chef_gem[fpm] action install
+    - install version 1.8.1 of package fpm
+  * chef_gem[aws-sdk] action install
+    - install version 2.9.32 of package aws-sdk
+Recipe: ntp::default
+  * yum_package[ntp] action install
+    - install version 4.2.6p5-25.el7.centos.2 of package ntp
+  * yum_package[ntpdate] action install (up to date)
+  * yum_package[Remove ntpdate] action remove (skipped due to only_if)
+  * directory[/var/lib/ntp] action create (up to date)
+  * directory[/var/log/ntpstats/] action create (up to date)
+  * cookbook_file[/etc/ntp.leapseconds] action create
+    - create new file /etc/ntp.leapseconds
+    - update content in file /etc/ntp.leapseconds from none to 9a89a3
+    (diff output suppressed by config)
+    - change mode from '' to '0644'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * template[/etc/ntp.conf] action create
+    - update content in file /etc/ntp.conf from 88a203 to a3fc29
+    (diff output suppressed by config)
+  * execute[Force sync hardware clock with system clock] action run (skipped due to only_if)
+  * service[ntpd] action enable
+    - enable service service[ntpd]
+  * service[ntpd] action start
+    - start service service[ntpd]
+Recipe: resolver::default
+  * template[/etc/resolv.conf] action create
+    - update content in file /etc/resolv.conf from 32d8e4 to 3c0917
+    (diff output suppressed by config)
+Recipe: users::sysadmins
+  * users_manage[sysadmin] action remove (up to date)
+  * users_manage[sysadmin] action create
+    * group[adam] action create
+      - create group adam
+    * linux_user[adam] action create
+      - create user adam
+    * directory[/home/adam/.ssh] action create (skipped due to only_if)
+    * template[/home/adam/.ssh/authorized_keys] action create (skipped due to only_if)
+    * group[sysadmin] action create
+      - create group sysadmin
+  
+Recipe: sudo::default
+  * yum_package[sudo] action install (skipped due to not_if)
+  * template[/etc/sudoers] action create
+    - update content in file /etc/sudoers from a5cb73 to 91026b
+    (diff output suppressed by config)
+Recipe: chef-client::delete_validation
+  * file[/opt/kitchen/validation.pem] action delete
+    - delete file /opt/kitchen/validation.pem
+Recipe: chef-client::config
+  * logrotate_app[chef-client] action enable
+    * directory[/etc/logrotate.d] action create (up to date)
+    * template[/etc/logrotate.d/chef-client] action create
+      - create new file /etc/logrotate.d/chef-client
+      - update content in file /etc/logrotate.d/chef-client from none to 57f0fc
+      (diff output suppressed by config)
+      - change mode from '' to '0644'
+      - change owner from '' to 'root'
+      - change group from '' to 'root'
+  
+  * directory[/var/run/chef] action create
+    - create new directory /var/run/chef
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * directory[/var/cache/chef] action create
+    - create new directory /var/cache/chef
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * directory[/var/lib/chef] action create
+    - create new directory /var/lib/chef
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * directory[/var/log/chef] action create
+    - create new directory /var/log/chef
+    - change mode from '' to '0755'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * directory[/etc/chef] action create
+    - create new directory /etc/chef
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * file[/var/log/chef/client.log] action create
+    - create new file /var/log/chef/client.log
+    - change mode from '' to '0640'
+  * template[/etc/chef/client.rb] action create
+    - create new file /etc/chef/client.rb
+    - update content in file /etc/chef/client.rb from none to c28ee0
+    (diff output suppressed by config)
+    - change mode from '' to '0644'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * ruby_block[reload_client_config] action create
+    - execute the ruby block reload_client_config
+  * directory[/etc/chef/client.d] action create
+    - create new directory /etc/chef/client.d
+    - change mode from '' to '0755'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * ruby_block[reload_client_config] action nothing (skipped due to action :nothing)
+Recipe: chef-client::systemd_service
+  * template[/etc/systemd/system/chef-client.service] action create
+    - create new file /etc/systemd/system/chef-client.service
+    - update content in file /etc/systemd/system/chef-client.service from none to 120987
+    (diff output suppressed by config)
+    - change mode from '' to '0644'
+  * template[/etc/sysconfig/chef-client] action create
+    - create new file /etc/sysconfig/chef-client
+    - update content in file /etc/sysconfig/chef-client from none to a2d433
+    (diff output suppressed by config)
+    - change mode from '' to '0644'
+  * service[chef-client] action enable
+    - enable service service[chef-client]
+  * service[chef-client] action start
+    - start service service[chef-client]
+  * systemd_unit[chef-client.timer] action disable (up to date)
+  * systemd_unit[chef-client.timer] action delete (up to date)
+Recipe: base::default
+  * directory[/var/run/sshd] action create
+    - create new directory /var/run/sshd
+Recipe: openssh::default
+  * yum_package[openssh-clients] action install (up to date)
+  * yum_package[openssh-server] action install
+    - install version 6.6.1p1-35.el7_3 of package openssh-server
+  * template[/etc/ssh/ssh_config] action create
+    - update content in file /etc/ssh/ssh_config from 22def2 to 8fe8bf
+    (diff output suppressed by config)
+  * template[/etc/ssh/sshd_config] action create
+    - update content in file /etc/ssh/sshd_config from bbd30b to fa3b3d
+    (diff output suppressed by config)
+  * execute[sshd-config-check] action run
+    - execute /usr/sbin/sshd -t
+  * execute[sshd-config-check] action nothing (skipped due to action :nothing)
+  * service[ssh] action enable (up to date)
+  * service[ssh] action start
+    - start service service[ssh]
+Recipe: nscd::default
+  * yum_package[nscd] action install
+    - install version 2.17-157.el7_3.2 of package nscd
+  * template[/etc/nscd.conf] action create
+    - update content in file /etc/nscd.conf from b75aa5 to fccce7
+    (diff output suppressed by config)
+  * service[nscd] action enable
+    - enable service service[nscd]
+  * service[nscd] action start
+    - start service service[nscd]
+Recipe: logrotate::default
+  * yum_package[logrotate] action upgrade
+    - upgrade package logrotate from uninstalled to 3.8.6-12.el7
+  * directory[/etc/logrotate.d] action create (up to date)
+Recipe: base::tests
+  * file[/tmp/chef-test-ümlauts] action create
+    - create new file /tmp/chef-test-ümlauts
+    - update content in file /tmp/chef-test-ümlauts from none to f7763f
+    (diff output suppressed by config)
+  * file[/tmp/chef-test-�mlaut] action create
+    - create new file /tmp/chef-test-�mlaut
+    - update content in file /tmp/chef-test-�mlaut from none to 36df01
+    (diff output suppressed by config)
+Recipe: ntp::default
+  * service[ntpd] action restart
+    - restart service service[ntpd]
+Recipe: chef-client::systemd_service
+  * service[chef-client] action restart
+    - restart service service[chef-client]
+Recipe: openssh::default
+  * service[ssh] action restart
+    - restart service service[ssh]
+Recipe: nscd::default
+  * service[nscd] action restart
+    - restart service service[nscd]
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 66/95 resources updated in 01 minutes 19 seconds
+       Finished converging <webapp-centos-7> (2m28.16s).
+-----> Setting up <webapp-centos-7>...
+       Finished setting up <webapp-centos-7> (0m0.00s).
+-----> Verifying <webapp-centos-7>...
+       Loaded tests from {:path=>"/home/travis/build/chef/chef/kitchen-tests/test/integration/webapp"} 
+............................................
+
+Finished in 16.75 seconds (files took 3 minutes 11.4 seconds to load)
+44 examples, 0 failures
+
+       Finished verifying <webapp-centos-7> (0m17.68s).
+-----> Destroying <webapp-centos-7>...
+       Finished destroying <webapp-centos-7> (0m2.15s).
+       Finished testing <webapp-centos-7> (3m30.22s).
+-----> Kitchen is finished. (3m31.05s)
+
+travis_time:end:02230cd8:start=1496823187039811472,finish=1496823398622157039,duration=211582345567
+The command "bundle exec kitchen test webapp-centos-7" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:13f59ae0
+travis_time:end:13f59ae0:start=1496823399061740136,finish=1496823399067142394,duration=5402258travis_time:start:039ae6ecnothing changed, not updating cache
+
+travis_time:end:039ae6ec:start=1496823399073435638,finish=1496823400334954036,duration=1261518398travis_fold:end:cache.2
+Done. Your build exited with 0.

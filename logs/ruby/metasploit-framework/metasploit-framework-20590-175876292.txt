@@ -1,0 +1,1865 @@
+travis_fold:start:worker_infoWorker information
+hostname: production-2-worker-org-b-1-gce:b90089c3-ab21-4610-9b7f-5b2d25a16ec4
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-bcc4124d-37b5-4711-832b-5df4a8e65b0b:travis-ci-sugilite-trusty-1480960799
+startup: 21.497875816s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240204542
+Job id: 240204545
+travis-build version: 4183c5148
+Build image provisioning date and time
+Mon Dec  5 18:47:20 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-51-generic
+Cookbooks Version
+998099c https://github.com/travis-ci/travis-cookbooks/tree/998099c
+git version
+git version 2.11.0
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.73
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.1.0
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+jruby-9.1.2.0
+ruby-1.9.3-p551
+ruby-2.0.0-p648
+ruby-2.1.10
+ruby-2.2.5
+ruby-2.3.1
+Pre-installed Node.js versions
+iojs-v1.6
+iojs-v1.6.4
+v0.10
+v0.10.40
+v0.11.16
+v0.12.2
+v0.12.7
+v0.6.21
+v0.8.28
+v4.1.2
+v4.6.2
+v6.9.1
+Pre-installed Go versions
+1.2.2
+1.3.3
+1.4.3
+1.5.4
+1.6.3
+1.7
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Pre-installed PostgreSQL versions
+9.2.19
+9.3.15
+9.4.10
+9.5.5
+9.6.1
+Redis version
+redis-server 3.0.6
+MongoDB version
+MongoDB 3.2.11
+RabbitMQ Version
+3.6.6
+Installed Firefox version
+firefox 38.4.0esr
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/maven
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-51-generic", arch: "amd64", family: "unix"
+gradle version
+
+------------------------------------------------------------
+Gradle 2.13
+------------------------------------------------------------
+
+Build time:   2016-04-25 04:10:10 UTC
+Build number: none
+Revision:     3b427b1481e46232107303c90be7b05079b05b1c
+
+Groovy:       2.4.4
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_111 (Oracle Corporation 25.111-b14)
+OS:           Linux 4.4.0-51-generic amd64
+
+kerl list installations
+17.0
+17.1
+17.3
+17.4
+17.5
+18.0
+18.1
+18.2
+18.2.1
+R14B02
+R14B03
+R14B04
+R15B
+R15B01
+R15B02
+R15B03
+R16B
+R16B01
+R16B02
+R16B03
+R16B03-1
+kiex list
+
+kiex elixirs
+
+   elixir-1.0.3
+=* elixir-1.0.4
+
+# => - current
+# =* - current && default
+#  * - default
+
+rebar --version
+rebar 2.6.4 17 20160831_145136 git 2.6.4-dirty
+lein version
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_111 Java HotSpot(TM) 64-Bit Server VM
+perlbrew list
+  5.8 (5.8.8)
+  5.10 (5.10.1)
+  5.12 (5.12.5)
+  5.14 (5.14.4)
+  5.16 (5.16.3)
+  5.18 (5.18.4)
+  5.20 (5.20.3)
+  5.20-extras (5.20.3)
+  5.20-shrplib (5.20.3)
+  5.20.3
+  5.22 (5.22.0)
+  5.22-extras (5.22.0)
+  5.22-shrplib (5.22.0)
+  5.22.0
+phpenv versions
+  system
+  5.4
+  5.4.45
+  5.5.37
+  5.6
+* 5.6.24 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.7
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.2.0 2016-07-19 01:28:52
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:17818bcc$ git clone --depth=5 https://github.com/rapid7/metasploit-framework.git rapid7/metasploit-framework
+Cloning into 'rapid7/metasploit-framework'...
+remote: Counting objects: 14044, done.[K
+remote: Compressing objects:   0% (1/10065)   [Kremote: Compressing objects:   1% (101/10065)   [Kremote: Compressing objects:   2% (202/10065)   [Kremote: Compressing objects:   3% (302/10065)   [Kremote: Compressing objects:   4% (403/10065)   [Kremote: Compressing objects:   5% (504/10065)   [Kremote: Compressing objects:   6% (604/10065)   [Kremote: Compressing objects:   7% (705/10065)   [Kremote: Compressing objects:   8% (806/10065)   [Kremote: Compressing objects:   9% (906/10065)   [Kremote: Compressing objects:  10% (1007/10065)   [Kremote: Compressing objects:  11% (1108/10065)   [Kremote: Compressing objects:  12% (1208/10065)   [Kremote: Compressing objects:  13% (1309/10065)   [Kremote: Compressing objects:  14% (1410/10065)   [Kremote: Compressing objects:  15% (1510/10065)   [Kremote: Compressing objects:  16% (1611/10065)   [Kremote: Compressing objects:  17% (1712/10065)   [Kremote: Compressing objects:  18% (1812/10065)   [Kremote: Compressing objects:  19% (1913/10065)   [Kremote: Compressing objects:  20% (2013/10065)   [Kremote: Compressing objects:  21% (2114/10065)   [Kremote: Compressing objects:  22% (2215/10065)   [Kremote: Compressing objects:  23% (2315/10065)   [Kremote: Compressing objects:  24% (2416/10065)   [Kremote: Compressing objects:  25% (2517/10065)   [Kremote: Compressing objects:  26% (2617/10065)   [Kremote: Compressing objects:  27% (2718/10065)   [Kremote: Compressing objects:  28% (2819/10065)   [Kremote: Compressing objects:  29% (2919/10065)   [Kremote: Compressing objects:  30% (3020/10065)   [Kremote: Compressing objects:  31% (3121/10065)   [Kremote: Compressing objects:  32% (3221/10065)   [Kremote: Compressing objects:  33% (3322/10065)   [Kremote: Compressing objects:  34% (3423/10065)   [Kremote: Compressing objects:  35% (3523/10065)   [Kremote: Compressing objects:  36% (3624/10065)   [Kremote: Compressing objects:  37% (3725/10065)   [Kremote: Compressing objects:  38% (3825/10065)   [Kremote: Compressing objects:  39% (3926/10065)   [Kremote: Compressing objects:  40% (4026/10065)   [Kremote: Compressing objects:  41% (4127/10065)   [Kremote: Compressing objects:  42% (4228/10065)   [Kremote: Compressing objects:  43% (4328/10065)   [Kremote: Compressing objects:  44% (4429/10065)   [Kremote: Compressing objects:  45% (4530/10065)   [Kremote: Compressing objects:  46% (4630/10065)   [Kremote: Compressing objects:  47% (4731/10065)   [Kremote: Compressing objects:  48% (4832/10065)   [Kremote: Compressing objects:  49% (4932/10065)   [Kremote: Compressing objects:  50% (5033/10065)   [Kremote: Compressing objects:  51% (5134/10065)   [Kremote: Compressing objects:  52% (5234/10065)   [Kremote: Compressing objects:  52% (5314/10065)   [Kremote: Compressing objects:  53% (5335/10065)   [Kremote: Compressing objects:  54% (5436/10065)   [Kremote: Compressing objects:  55% (5536/10065)   [Kremote: Compressing objects:  56% (5637/10065)   [Kremote: Compressing objects:  57% (5738/10065)   [Kremote: Compressing objects:  58% (5838/10065)   [Kremote: Compressing objects:  59% (5939/10065)   [Kremote: Compressing objects:  60% (6039/10065)   [Kremote: Compressing objects:  61% (6140/10065)   [Kremote: Compressing objects:  62% (6241/10065)   [Kremote: Compressing objects:  63% (6341/10065)   [Kremote: Compressing objects:  64% (6442/10065)   [Kremote: Compressing objects:  65% (6543/10065)   [Kremote: Compressing objects:  66% (6643/10065)   [Kremote: Compressing objects:  67% (6744/10065)   [Kremote: Compressing objects:  68% (6845/10065)   [Kremote: Compressing objects:  69% (6945/10065)   [Kremote: Compressing objects:  70% (7046/10065)   [Kremote: Compressing objects:  71% (7147/10065)   [Kremote: Compressing objects:  72% (7247/10065)   [Kremote: Compressing objects:  73% (7348/10065)   [Kremote: Compressing objects:  74% (7449/10065)   [Kremote: Compressing objects:  75% (7549/10065)   [Kremote: Compressing objects:  76% (7650/10065)   [Kremote: Compressing objects:  77% (7751/10065)   [Kremote: Compressing objects:  78% (7851/10065)   [Kremote: Compressing objects:  79% (7952/10065)   [Kremote: Compressing objects:  80% (8052/10065)   [Kremote: Compressing objects:  81% (8153/10065)   [Kremote: Compressing objects:  82% (8254/10065)   [Kremote: Compressing objects:  83% (8354/10065)   [Kremote: Compressing objects:  84% (8455/10065)   [Kremote: Compressing objects:  85% (8556/10065)   [Kremote: Compressing objects:  86% (8656/10065)   [Kremote: Compressing objects:  87% (8757/10065)   [Kremote: Compressing objects:  88% (8858/10065)   [Kremote: Compressing objects:  89% (8958/10065)   [Kremote: Compressing objects:  90% (9059/10065)   [Kremote: Compressing objects:  91% (9160/10065)   [Kremote: Compressing objects:  92% (9260/10065)   [Kremote: Compressing objects:  93% (9361/10065)   [Kremote: Compressing objects:  94% (9462/10065)   [Kremote: Compressing objects:  95% (9562/10065)   [Kremote: Compressing objects:  96% (9663/10065)   [Kremote: Compressing objects:  97% (9764/10065)   [Kremote: Compressing objects:  98% (9864/10065)   [Kremote: Compressing objects:  99% (9965/10065)   [Kremote: Compressing objects: 100% (10065/10065)   [Kremote: Compressing objects: 100% (10065/10065), done.[K
+Receiving objects:   0% (1/14044)   Receiving objects:   1% (141/14044)   Receiving objects:   2% (281/14044)   Receiving objects:   3% (422/14044)   Receiving objects:   4% (562/14044)   Receiving objects:   5% (703/14044)   Receiving objects:   6% (843/14044)   Receiving objects:   7% (984/14044)   Receiving objects:   8% (1124/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:   9% (1264/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  10% (1405/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  11% (1545/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  12% (1686/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  13% (1826/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  14% (1967/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  15% (2107/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  16% (2248/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  17% (2388/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  18% (2528/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  19% (2669/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  20% (2809/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  21% (2950/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  22% (3090/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  23% (3231/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  24% (3371/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  25% (3511/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  26% (3652/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  27% (3792/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  28% (3933/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  29% (4073/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  30% (4214/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  31% (4354/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  32% (4495/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  33% (4635/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  34% (4775/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  35% (4916/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  36% (5056/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  37% (5197/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  38% (5337/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  39% (5478/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  40% (5618/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  41% (5759/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  42% (5899/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  43% (6039/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  44% (6180/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  45% (6320/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  46% (6461/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  47% (6601/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  47% (6658/14044), 10.64 MiB | 21.28 MiB/s   Receiving objects:  48% (6742/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  49% (6882/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  50% (7022/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  51% (7163/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  52% (7303/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  53% (7444/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  54% (7584/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  55% (7725/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  56% (7865/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  57% (8006/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  58% (8146/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  59% (8286/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  60% (8427/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  61% (8567/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  62% (8708/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  63% (8848/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  64% (8989/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  65% (9129/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  66% (9270/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  67% (9410/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  68% (9550/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  69% (9691/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  70% (9831/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  71% (9972/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  72% (10112/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  73% (10253/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  74% (10393/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  75% (10533/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  76% (10674/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  77% (10814/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  78% (10955/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  79% (11095/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  80% (11236/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  81% (11376/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  82% (11517/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  83% (11657/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  84% (11797/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  85% (11938/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  86% (12078/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  87% (12219/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  88% (12359/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  89% (12500/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  90% (12640/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  91% (12781/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  92% (12921/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  93% (13061/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  94% (13202/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  95% (13342/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  96% (13483/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  97% (13623/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  98% (13764/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects:  99% (13904/14044), 20.43 MiB | 20.42 MiB/s   remote: Total 14044 (delta 4944), reused 7164 (delta 3203), pack-reused 0[K
+Receiving objects: 100% (14044/14044), 20.43 MiB | 20.42 MiB/s   Receiving objects: 100% (14044/14044), 25.81 MiB | 20.42 MiB/s, done.
+Resolving deltas:   0% (0/4944)   Resolving deltas:   1% (66/4944)   Resolving deltas:   2% (99/4944)   Resolving deltas:   3% (149/4944)   Resolving deltas:   4% (198/4944)   Resolving deltas:   5% (248/4944)   Resolving deltas:   6% (297/4944)   Resolving deltas:   7% (355/4944)   Resolving deltas:   8% (400/4944)   Resolving deltas:   9% (445/4944)   Resolving deltas:  10% (495/4944)   Resolving deltas:  11% (548/4944)   Resolving deltas:  12% (597/4944)   Resolving deltas:  13% (643/4944)   Resolving deltas:  14% (693/4944)   Resolving deltas:  15% (742/4944)   Resolving deltas:  16% (792/4944)   Resolving deltas:  17% (841/4944)   Resolving deltas:  18% (898/4944)   Resolving deltas:  19% (940/4944)   Resolving deltas:  20% (989/4944)   Resolving deltas:  21% (1039/4944)   Resolving deltas:  22% (1088/4944)   Resolving deltas:  23% (1138/4944)   Resolving deltas:  24% (1187/4944)   Resolving deltas:  25% (1236/4944)   Resolving deltas:  26% (1286/4944)   Resolving deltas:  27% (1335/4944)   Resolving deltas:  28% (1386/4944)   Resolving deltas:  29% (1434/4944)   Resolving deltas:  30% (1484/4944)   Resolving deltas:  31% (1534/4944)   Resolving deltas:  32% (1583/4944)   Resolving deltas:  33% (1632/4944)   Resolving deltas:  34% (1681/4944)   Resolving deltas:  35% (1732/4944)   Resolving deltas:  36% (1780/4944)   Resolving deltas:  37% (1831/4944)   Resolving deltas:  38% (1879/4944)   Resolving deltas:  39% (1929/4944)   Resolving deltas:  40% (1978/4944)   Resolving deltas:  41% (2028/4944)   Resolving deltas:  42% (2077/4944)   Resolving deltas:  43% (2128/4944)   Resolving deltas:  44% (2177/4944)   Resolving deltas:  45% (2226/4944)   Resolving deltas:  46% (2275/4944)   Resolving deltas:  47% (2324/4944)   Resolving deltas:  48% (2375/4944)   Resolving deltas:  49% (2423/4944)   Resolving deltas:  50% (2472/4944)   Resolving deltas:  51% (2525/4944)   Resolving deltas:  52% (2571/4944)   Resolving deltas:  53% (2622/4944)   Resolving deltas:  54% (2670/4944)   Resolving deltas:  55% (2720/4944)   Resolving deltas:  56% (2770/4944)   Resolving deltas:  57% (2819/4944)   Resolving deltas:  58% (2868/4944)   Resolving deltas:  59% (2919/4944)   Resolving deltas:  60% (2968/4944)   Resolving deltas:  61% (3019/4944)   Resolving deltas:  62% (3066/4944)   Resolving deltas:  63% (3115/4944)   Resolving deltas:  64% (3166/4944)   Resolving deltas:  65% (3214/4944)   Resolving deltas:  66% (3264/4944)   Resolving deltas:  67% (3319/4944)   Resolving deltas:  68% (3362/4944)   Resolving deltas:  69% (3413/4944)   Resolving deltas:  70% (3461/4944)   Resolving deltas:  71% (3511/4944)   Resolving deltas:  72% (3560/4944)   Resolving deltas:  73% (3610/4944)   Resolving deltas:  74% (3659/4944)   Resolving deltas:  75% (3708/4944)   Resolving deltas:  76% (3758/4944)   Resolving deltas:  77% (3807/4944)   Resolving deltas:  78% (3863/4944)   Resolving deltas:  79% (3908/4944)   Resolving deltas:  80% (3959/4944)   Resolving deltas:  81% (4010/4944)   Resolving deltas:  82% (4057/4944)   Resolving deltas:  83% (4111/4944)   Resolving deltas:  84% (4153/4944)   Resolving deltas:  85% (4203/4944)   Resolving deltas:  86% (4258/4944)   Resolving deltas:  87% (4308/4944)   Resolving deltas:  88% (4351/4944)   Resolving deltas:  89% (4401/4944)   Resolving deltas:  90% (4450/4944)   Resolving deltas:  91% (4500/4944)   Resolving deltas:  92% (4549/4944)   Resolving deltas:  93% (4598/4944)   Resolving deltas:  94% (4648/4944)   Resolving deltas:  95% (4697/4944)   Resolving deltas:  96% (4747/4944)   Resolving deltas:  97% (4797/4944)   Resolving deltas:  98% (4847/4944)   Resolving deltas:  99% (4895/4944)   Resolving deltas: 100% (4944/4944)   Resolving deltas: 100% (4944/4944), done.
+
+travis_time:end:17818bcc:start=1496802968857174858,finish=1496802974200346276,duration=5343171418$ cd rapid7/metasploit-framework
+travis_time:start:2abd02df$ git fetch origin +refs/pull/8523/merge:
+remote: Counting objects: 192384   [Kremote: Counting objects: 390227, done.[K
+remote: Compressing objects:   0% (1/95600)   [Kremote: Compressing objects:   1% (956/95600)   [Kremote: Compressing objects:   2% (1912/95600)   [Kremote: Compressing objects:   3% (2868/95600)   [Kremote: Compressing objects:   4% (3824/95600)   [Kremote: Compressing objects:   5% (4780/95600)   [Kremote: Compressing objects:   6% (5736/95600)   [Kremote: Compressing objects:   7% (6692/95600)   [Kremote: Compressing objects:   8% (7648/95600)   [Kremote: Compressing objects:   9% (8604/95600)   [Kremote: Compressing objects:  10% (9560/95600)   [Kremote: Compressing objects:  11% (10516/95600)   [Kremote: Compressing objects:  12% (11472/95600)   [Kremote: Compressing objects:  13% (12428/95600)   [Kremote: Compressing objects:  13% (12766/95600)   [Kremote: Compressing objects:  14% (13384/95600)   [Kremote: Compressing objects:  15% (14340/95600)   [Kremote: Compressing objects:  16% (15296/95600)   [Kremote: Compressing objects:  17% (16252/95600)   [Kremote: Compressing objects:  18% (17208/95600)   [Kremote: Compressing objects:  19% (18164/95600)   [Kremote: Compressing objects:  20% (19120/95600)   [Kremote: Compressing objects:  21% (20076/95600)   [Kremote: Compressing objects:  22% (21032/95600)   [Kremote: Compressing objects:  23% (21988/95600)   [Kremote: Compressing objects:  24% (22944/95600)   [Kremote: Compressing objects:  25% (23900/95600)   [Kremote: Compressing objects:  26% (24856/95600)   [Kremote: Compressing objects:  27% (25812/95600)   [Kremote: Compressing objects:  28% (26768/95600)   [Kremote: Compressing objects:  29% (27724/95600)   [Kremote: Compressing objects:  30% (28680/95600)   [Kremote: Compressing objects:  31% (29636/95600)   [Kremote: Compressing objects:  32% (30592/95600)   [Kremote: Compressing objects:  33% (31548/95600)   [Kremote: Compressing objects:  34% (32504/95600)   [Kremote: Compressing objects:  35% (33460/95600)   [Kremote: Compressing objects:  36% (34416/95600)   [Kremote: Compressing objects:  37% (35372/95600)   [Kremote: Compressing objects:  38% (36328/95600)   [Kremote: Compressing objects:  39% (37284/95600)   [Kremote: Compressing objects:  40% (38240/95600)   [Kremote: Compressing objects:  41% (39196/95600)   [Kremote: Compressing objects:  42% (40152/95600)   [Kremote: Compressing objects:  43% (41108/95600)   [Kremote: Compressing objects:  44% (42064/95600)   [Kremote: Compressing objects:  45% (43020/95600)   [Kremote: Compressing objects:  46% (43976/95600)   [Kremote: Compressing objects:  47% (44932/95600)   [Kremote: Compressing objects:  48% (45888/95600)   [Kremote: Compressing objects:  49% (46844/95600)   [Kremote: Compressing objects:  50% (47800/95600)   [Kremote: Compressing objects:  51% (48756/95600)   [Kremote: Compressing objects:  52% (49712/95600)   [Kremote: Compressing objects:  53% (50668/95600)   [Kremote: Compressing objects:  54% (51624/95600)   [Kremote: Compressing objects:  55% (52580/95600)   [Kremote: Compressing objects:  56% (53536/95600)   [Kremote: Compressing objects:  57% (54492/95600)   [Kremote: Compressing objects:  58% (55448/95600)   [Kremote: Compressing objects:  59% (56404/95600)   [Kremote: Compressing objects:  60% (57360/95600)   [Kremote: Compressing objects:  61% (58316/95600)   [Kremote: Compressing objects:  62% (59272/95600)   [Kremote: Compressing objects:  63% (60228/95600)   [Kremote: Compressing objects:  64% (61184/95600)   [Kremote: Compressing objects:  65% (62140/95600)   [Kremote: Compressing objects:  66% (63096/95600)   [Kremote: Compressing objects:  67% (64052/95600)   [Kremote: Compressing objects:  68% (65008/95600)   [Kremote: Compressing objects:  69% (65964/95600)   [Kremote: Compressing objects:  70% (66920/95600)   [Kremote: Compressing objects:  71% (67876/95600)   [Kremote: Compressing objects:  72% (68832/95600)   [Kremote: Compressing objects:  73% (69788/95600)   [Kremote: Compressing objects:  74% (70744/95600)   [Kremote: Compressing objects:  75% (71700/95600)   [Kremote: Compressing objects:  76% (72656/95600)   [Kremote: Compressing objects:  77% (73612/95600)   [Kremote: Compressing objects:  78% (74568/95600)   [Kremote: Compressing objects:  79% (75524/95600)   [Kremote: Compressing objects:  80% (76480/95600)   [Kremote: Compressing objects:  81% (77436/95600)   [Kremote: Compressing objects:  82% (78392/95600)   [Kremote: Compressing objects:  83% (79348/95600)   [Kremote: Compressing objects:  84% (80304/95600)   [Kremote: Compressing objects:  85% (81260/95600)   [Kremote: Compressing objects:  86% (82216/95600)   [Kremote: Compressing objects:  87% (83172/95600)   [Kremote: Compressing objects:  88% (84128/95600)   [Kremote: Compressing objects:  89% (85084/95600)   [Kremote: Compressing objects:  90% (86040/95600)   [Kremote: Compressing objects:  91% (86996/95600)   [Kremote: Compressing objects:  92% (87952/95600)   [Kremote: Compressing objects:  93% (88908/95600)   [Kremote: Compressing objects:  94% (89864/95600)   [Kremote: Compressing objects:  95% (90820/95600)   [Kremote: Compressing objects:  96% (91776/95600)   [Kremote: Compressing objects:  97% (92732/95600)   [Kremote: Compressing objects:  98% (93688/95600)   [Kremote: Compressing objects:  99% (94644/95600)   [Kremote: Compressing objects: 100% (95600/95600)   [Kremote: Compressing objects: 100% (95600/95600), done.[K
+Receiving objects:   0% (1/390227)   Receiving objects:   1% (3903/390227)   Receiving objects:   2% (7805/390227)   Receiving objects:   3% (11707/390227)   Receiving objects:   4% (15610/390227)   Receiving objects:   5% (19512/390227)   Receiving objects:   6% (23414/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:   7% (27316/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:   8% (31219/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:   9% (35121/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  10% (39023/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  11% (42925/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  12% (46828/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  13% (50730/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  14% (54632/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  15% (58535/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  16% (62437/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  17% (66339/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  17% (67321/390227), 9.45 MiB | 18.89 MiB/s   Receiving objects:  18% (70241/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  19% (74144/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  20% (78046/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  21% (81948/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  22% (85850/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  23% (89753/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  24% (93655/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  25% (97557/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  26% (101460/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  27% (105362/390227), 18.15 MiB | 18.14 MiB/s   Receiving objects:  28% (109264/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  29% (113166/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  30% (117069/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  31% (120971/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  32% (124873/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  33% (128775/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  34% (132678/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  35% (136580/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  36% (140482/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  37% (144384/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  37% (147753/390227), 28.81 MiB | 19.20 MiB/s   Receiving objects:  38% (148287/390227), 39.84 MiB | 19.92 MiB/s   Receiving objects:  39% (152189/390227), 39.84 MiB | 19.92 MiB/s   Receiving objects:  40% (156091/390227), 39.84 MiB | 19.92 MiB/s   Receiving objects:  40% (158471/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  41% (159994/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  42% (163896/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  43% (167798/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  44% (171700/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  45% (175603/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  46% (179505/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  47% (183407/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  48% (187309/390227), 62.23 MiB | 20.74 MiB/s   Receiving objects:  49% (191212/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  50% (195114/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  51% (199016/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  52% (202919/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  53% (206821/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  54% (210723/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  55% (214625/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  56% (218528/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  57% (222430/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  58% (226332/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  59% (230234/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  60% (234137/390227), 73.27 MiB | 20.93 MiB/s   Receiving objects:  60% (234717/390227), 84.61 MiB | 21.15 MiB/s   Receiving objects:  61% (238039/390227), 84.61 MiB | 21.15 MiB/s   Receiving objects:  61% (240791/390227), 96.00 MiB | 21.33 MiB/s   Receiving objects:  62% (241941/390227), 107.25 MiB | 21.73 MiB/s   Receiving objects:  63% (245844/390227), 107.25 MiB | 21.73 MiB/s   Receiving objects:  63% (248219/390227), 118.16 MiB | 22.22 MiB/s   Receiving objects:  64% (249746/390227), 128.43 MiB | 22.14 MiB/s   Receiving objects:  65% (253648/390227), 128.43 MiB | 22.14 MiB/s   Receiving objects:  66% (257550/390227), 128.43 MiB | 22.14 MiB/s   Receiving objects:  67% (261453/390227), 128.43 MiB | 22.14 MiB/s   Receiving objects:  68% (265355/390227), 128.43 MiB | 22.14 MiB/s   Receiving objects:  69% (269257/390227), 128.43 MiB | 22.14 MiB/s   Receiving objects:  70% (273159/390227), 138.82 MiB | 22.00 MiB/s   Receiving objects:  71% (277062/390227), 138.82 MiB | 22.00 MiB/s   Receiving objects:  72% (280964/390227), 138.82 MiB | 22.00 MiB/s   Receiving objects:  73% (284866/390227), 138.82 MiB | 22.00 MiB/s   Receiving objects:  74% (288768/390227), 138.82 MiB | 22.00 MiB/s   Receiving objects:  75% (292671/390227), 138.82 MiB | 22.00 MiB/s   Receiving objects:  75% (295771/390227), 150.14 MiB | 22.06 MiB/s   Receiving objects:  76% (296573/390227), 150.14 MiB | 22.06 MiB/s   Receiving objects:  76% (298101/390227), 171.06 MiB | 21.74 MiB/s   Receiving objects:  77% (300475/390227), 171.06 MiB | 21.74 MiB/s   Receiving objects:  78% (304378/390227), 171.06 MiB | 21.74 MiB/s   Receiving objects:  79% (308280/390227), 182.51 MiB | 21.76 MiB/s   Receiving objects:  79% (309573/390227), 182.51 MiB | 21.76 MiB/s   Receiving objects:  80% (312182/390227), 205.71 MiB | 21.88 MiB/s   Receiving objects:  81% (316084/390227), 205.71 MiB | 21.88 MiB/s   Receiving objects:  81% (318038/390227), 216.94 MiB | 21.95 MiB/s   Receiving objects:  82% (319987/390227), 216.94 MiB | 21.95 MiB/s   Receiving objects:  83% (323889/390227), 216.94 MiB | 21.95 MiB/s   Receiving objects:  84% (327791/390227), 216.94 MiB | 21.95 MiB/s   Receiving objects:  85% (331693/390227), 228.54 MiB | 22.25 MiB/s   Receiving objects:  86% (335596/390227), 228.54 MiB | 22.25 MiB/s   Receiving objects:  87% (339498/390227), 228.54 MiB | 22.25 MiB/s   Receiving objects:  88% (343400/390227), 228.54 MiB | 22.25 MiB/s   Receiving objects:  88% (343463/390227), 237.46 MiB | 21.92 MiB/s   Receiving objects:  89% (347303/390227), 237.46 MiB | 21.92 MiB/s   Receiving objects:  90% (351205/390227), 237.46 MiB | 21.92 MiB/s   Receiving objects:  91% (355107/390227), 248.97 MiB | 21.96 MiB/s   Receiving objects:  92% (359009/390227), 248.97 MiB | 21.96 MiB/s   Receiving objects:  93% (362912/390227), 248.97 MiB | 21.96 MiB/s   Receiving objects:  94% (366814/390227), 248.97 MiB | 21.96 MiB/s   Receiving objects:  95% (370716/390227), 248.97 MiB | 21.96 MiB/s   Receiving objects:  95% (372931/390227), 248.97 MiB | 21.96 MiB/s   Receiving objects:  96% (374618/390227), 270.96 MiB | 22.20 MiB/s   Receiving objects:  97% (378521/390227), 270.96 MiB | 22.20 MiB/s   Receiving objects:  98% (382423/390227), 270.96 MiB | 22.20 MiB/s   Receiving objects:  99% (386325/390227), 270.96 MiB | 22.20 MiB/s   Receiving objects:  99% (389856/390227), 282.08 MiB | 22.12 MiB/s   remote: Total 390227 (delta 290345), reused 384259 (delta 284544), pack-reused 0[K
+Receiving objects: 100% (390227/390227), 282.08 MiB | 22.12 MiB/s   Receiving objects: 100% (390227/390227), 283.98 MiB | 22.01 MiB/s, done.
+Resolving deltas:   0% (0/290345)   Resolving deltas:   1% (2907/290345)   Resolving deltas:   2% (5904/290345)   Resolving deltas:   3% (8723/290345)   Resolving deltas:   4% (11619/290345)   Resolving deltas:   5% (14614/290345)   Resolving deltas:   6% (17433/290345)   Resolving deltas:   7% (20350/290345)   Resolving deltas:   8% (23642/290345)   Resolving deltas:   9% (26628/290345)   Resolving deltas:  10% (29037/290345)   Resolving deltas:  11% (32052/290345)   Resolving deltas:  12% (34845/290345)   Resolving deltas:  13% (37754/290345)   Resolving deltas:  14% (40656/290345)   Resolving deltas:  15% (43590/290345)   Resolving deltas:  16% (46465/290345)   Resolving deltas:  17% (49585/290345)   Resolving deltas:  18% (52430/290345)   Resolving deltas:  19% (55166/290345)   Resolving deltas:  20% (58112/290345)   Resolving deltas:  21% (61524/290345)   Resolving deltas:  22% (63876/290345)   Resolving deltas:  23% (66958/290345)   Resolving deltas:  24% (69701/290345)   Resolving deltas:  25% (72608/290345)   Resolving deltas:  26% (75951/290345)   Resolving deltas:  27% (78478/290345)   Resolving deltas:  28% (81587/290345)   Resolving deltas:  29% (84215/290345)   Resolving deltas:  30% (87104/290345)   Resolving deltas:  31% (90497/290345)   Resolving deltas:  32% (92930/290345)   Resolving deltas:  33% (95814/290345)   Resolving deltas:  34% (98878/290345)   Resolving deltas:  35% (101626/290345)   Resolving deltas:  36% (105836/290345)   Resolving deltas:  37% (107430/290345)   Resolving deltas:  38% (110486/290345)   Resolving deltas:  39% (113273/290345)   Resolving deltas:  40% (116221/290345)   Resolving deltas:  41% (119095/290345)   Resolving deltas:  42% (122018/290345)   Resolving deltas:  43% (124942/290345)   Resolving deltas:  44% (127754/290345)   Resolving deltas:  45% (130725/290345)   Resolving deltas:  46% (133660/290345)   Resolving deltas:  47% (136470/290345)   Resolving deltas:  48% (139729/290345)   Resolving deltas:  49% (142287/290345)   Resolving deltas:  50% (145196/290345)   Resolving deltas:  51% (148276/290345)   Resolving deltas:  52% (151051/290345)   Resolving deltas:  53% (153924/290345)   Resolving deltas:  54% (156837/290345)   Resolving deltas:  54% (157738/290345)   Resolving deltas:  55% (159692/290345)   Resolving deltas:  56% (162639/290345)   Resolving deltas:  57% (165517/290345)   Resolving deltas:  58% (168434/290345)   Resolving deltas:  59% (171317/290345)   Resolving deltas:  60% (174221/290345)   Resolving deltas:  61% (177143/290345)   Resolving deltas:  62% (180020/290345)   Resolving deltas:  63% (182922/290345)   Resolving deltas:  64% (185853/290345)   Resolving deltas:  65% (188725/290345)   Resolving deltas:  66% (191634/290345)   Resolving deltas:  67% (194533/290345)   Resolving deltas:  68% (197461/290345)   Resolving deltas:  69% (200340/290345)   Resolving deltas:  70% (203244/290345)   Resolving deltas:  70% (204469/290345)   Resolving deltas:  71% (206146/290345)   Resolving deltas:  72% (209059/290345)   Resolving deltas:  73% (211968/290345)   Resolving deltas:  74% (214859/290345)   Resolving deltas:  75% (217777/290345)   Resolving deltas:  75% (217924/290345)   Resolving deltas:  76% (220667/290345)   Resolving deltas:  77% (223571/290345)   Resolving deltas:  78% (226481/290345)   Resolving deltas:  79% (229379/290345)   Resolving deltas:  80% (232276/290345)   Resolving deltas:  80% (234178/290345)   Resolving deltas:  81% (235189/290345)   Resolving deltas:  82% (238084/290345)   Resolving deltas:  83% (240988/290345)   Resolving deltas:  84% (244087/290345)   Resolving deltas:  85% (246797/290345)   Resolving deltas:  86% (249700/290345)   Resolving deltas:  86% (250002/290345)   Resolving deltas:  87% (252610/290345)   Resolving deltas:  88% (255507/290345)   Resolving deltas:  89% (258418/290345)   Resolving deltas:  90% (261324/290345)   Resolving deltas:  91% (264230/290345)   Resolving deltas:  92% (267130/290345)   Resolving deltas:  93% (270036/290345)   Resolving deltas:  94% (272940/290345)   Resolving deltas:  95% (275828/290345)   Resolving deltas:  95% (277726/290345)   Resolving deltas:  96% (278741/290345)   Resolving deltas:  97% (281658/290345)   Resolving deltas:  98% (284551/290345)   Resolving deltas:  99% (287442/290345)   Resolving deltas: 100% (290345/290345)   Resolving deltas: 100% (290345/290345), completed with 4323 local objects.
+From https://github.com/rapid7/metasploit-framework
+ * branch                  refs/pull/8523/merge -> FETCH_HEAD
+
+travis_time:end:2abd02df:start=1496802974206079203,finish=1496803003776349818,duration=29570270615$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:git.submoduletravis_time:start:0329a0d8$ git submodule update --init --recursive
+Submodule 'external/source/ReflectiveDLLInjection' (https://github.com/rapid7/ReflectiveDLLInjection.git) registered for path 'external/source/ReflectiveDLLInjection'
+Cloning into '/home/travis/build/rapid7/metasploit-framework/external/source/ReflectiveDLLInjection'...
+Submodule path 'external/source/ReflectiveDLLInjection': checked out '88e8e5f109793f09b35cb17a621f33647d644103'
+
+travis_time:end:0329a0d8:start=1496803003919755992,finish=1496803004483869039,duration=564113047travis_fold:end:git.submoduletravis_fold:start:aptInstalling APT Packages (BETA)
+$ export DEBIAN_FRONTEND=noninteractive
+travis_time:start:26ff7060$ sudo -E apt-get -yq update &>> ~/apt-get-update.log
+
+travis_time:end:26ff7060:start=1496803004490169281,finish=1496803016070499066,duration=11580329785travis_time:start:1995f77d$ sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install libpcap-dev graphviz
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libpcap0.8-dev
+Suggested packages:
+  graphviz-doc
+The following NEW packages will be installed:
+  graphviz libpcap-dev libpcap0.8-dev
+0 upgraded, 3 newly installed, 0 to remove and 211 not upgraded.
+Need to get 669 kB of archives.
+After this operation, 2,547 kB of additional disk space will be used.
+Get:1 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty-updates/main graphviz amd64 2.36.0-0ubuntu3.2 [461 kB]
+Get:2 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libpcap0.8-dev amd64 1.5.3-2 [205 kB]
+Get:3 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libpcap-dev all 1.5.3-2 [3,390 B]
+Fetched 669 kB in 0s (31.1 MB/s)
+Selecting previously unselected package graphviz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88286 files and directories currently installed.)
+Preparing to unpack .../graphviz_2.36.0-0ubuntu3.2_amd64.deb ...
+Unpacking graphviz (2.36.0-0ubuntu3.2) ...
+Selecting previously unselected package libpcap0.8-dev.
+Preparing to unpack .../libpcap0.8-dev_1.5.3-2_amd64.deb ...
+Unpacking libpcap0.8-dev (1.5.3-2) ...
+Selecting previously unselected package libpcap-dev.
+Preparing to unpack .../libpcap-dev_1.5.3-2_all.deb ...
+Unpacking libpcap-dev (1.5.3-2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up graphviz (2.36.0-0ubuntu3.2) ...
+Setting up libpcap0.8-dev (1.5.3-2) ...
+Setting up libpcap-dev (1.5.3-2) ...
+
+travis_time:end:1995f77d:start=1496803016074706362,finish=1496803020956564057,duration=4881857695travis_fold:end:apttravis_fold:start:servicestravis_time:start:0487e1f8$ sudo service docker start
+start: Job is already running: docker
+
+travis_time:end:0487e1f8:start=1496803020961278051,finish=1496803020976578518,duration=15300467travis_fold:end:servicestravis_fold:start:postgresqlStarting PostgreSQL v9.6
+travis_time:start:1773b010$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.5 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.6 database server       G G[ OK ]
+
+travis_time:end:1773b010:start=1496803023983459074,finish=1496803025310709951,duration=1327250877travis_time:start:0451d9d0$ sudo service postgresql start 9.6
+ * Starting PostgreSQL 9.6 database server       G G[ OK ]
+
+travis_time:end:0451d9d0:start=1496803025315044664,finish=1496803027533859887,duration=2218815223travis_time:start:12f12416$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:12f12416:start=1496803027538254874,finish=1496803027597392693,duration=59137819travis_time:start:22eb1147$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:22eb1147:start=1496803027602043778,finish=1496803027851552988,duration=249509210travis_time:start:0099d2fc$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:0099d2fc:start=1496803027855786955,finish=1496803027896137359,duration=40350404travis_time:start:1053f270$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:1053f270:start=1496803027900578589,finish=1496803027939314482,duration=38735893travis_fold:end:postgresql
+Setting environment variables from .travis.yml
+$ export CMD='bundle exec rake spec SPEC_OPTS="--tag content"'
+
+travis_fold:start:rvmtravis_time:start:0a595192$ rvm use 2.3.4 --install --binary --fuzzy
+ruby-2.3.4 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.3.4.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.4 - #configure
+ruby-2.3.4 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  3 25.3M    3  933k    0     0  1161k      0  0:00:22 --:--:--  0:00:22 1161k 42 25.3M   42 10.8M    0     0  6213k      0  0:00:04  0:00:01  0:00:03 10.0M100 25.3M  100 25.3M    0     0  9410k      0  0:00:02  0:00:02 --:--:-- 12.5M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.4 - #validate archive
+ruby-2.3.4 - #extract
+ruby-2.3.4 - #validate binary
+ruby-2.3.4 - #setup
+ruby-2.3.4 - #gemset created /home/travis/.rvm/gems/ruby-2.3.4@global
+ruby-2.3.4 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.3.4 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.3.4 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.4 - #gemset created /home/travis/.rvm/gems/ruby-2.3.4
+ruby-2.3.4 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.3.4 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.3.4
+
+travis_time:end:0a595192:start=1496803027950720484,finish=1496803052399922865,duration=24449202381travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:171fa452$ Installing caching utilities
+
+travis_time:end:171fa452:start=1496803052590616460,finish=1496803052730238956,duration=139622496travis_time:start:122f7934
+travis_time:end:122f7934:start=1496803052736196559,finish=1496803052740570722,duration=4374163travis_time:start:2458b176attempting to download cache archive
+fetching PR.8523/cache-linux-trusty-f9c16ab20b4495ed6c173b419c2a9af5aa626256797d4f45fb020a12688a5d6b--rvm-2.3.4--gemfile-Gemfile.tgz
+fetching PR.8523/cache--rvm-2.3.4--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-f9c16ab20b4495ed6c173b419c2a9af5aa626256797d4f45fb020a12688a5d6b--rvm-2.3.4--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:2458b176:start=1496803052745231240,finish=1496803054042115910,duration=1296884670travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:15f3d987
+travis_time:end:15f3d987:start=1496803054047580579,finish=1496803054051676759,duration=4096180travis_time:start:011a9024adding /home/travis/build/rapid7/metasploit-framework/vendor/bundle to cache
+creating directory /home/travis/build/rapid7/metasploit-framework/vendor/bundle
+
+travis_time:end:011a9024:start=1496803054056517347,finish=1496803057275366988,duration=3218849641travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.11
+travis_fold:start:before_install.1travis_time:start:0143ce8c$ echo 'gem: --no-ri --no-rdoc' > ~/.gemrc
+
+travis_time:end:0143ce8c:start=1496803057721463785,finish=1496803057726207333,duration=4743548travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0cd64ca6$ rake --version
+rake, version 10.4.2
+
+travis_time:end:0cd64ca6:start=1496803057731478453,finish=1496803057826738472,duration=95260019travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:02fbcbe0$ ln -sf ../../tools/dev/pre-commit-hook.rb ./.git/hooks/post-merge
+
+travis_time:end:02fbcbe0:start=1496803057831849298,finish=1496803057836766820,duration=4917522travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:04666ac4$ ls -la ./.git/hooks
+total 52
+drwxrwxr-x 2 travis travis 4096 Jun  7 02:37 .
+drwxrwxr-x 9 travis travis 4096 Jun  7 02:36 ..
+-rwxrwxr-x 1 travis travis  478 Jun  7 02:36 applypatch-msg.sample
+-rwxrwxr-x 1 travis travis  896 Jun  7 02:36 commit-msg.sample
+lrwxrwxrwx 1 travis travis   34 Jun  7 02:37 post-merge -> ../../tools/dev/pre-commit-hook.rb
+-rwxrwxr-x 1 travis travis  189 Jun  7 02:36 post-update.sample
+-rwxrwxr-x 1 travis travis  424 Jun  7 02:36 pre-applypatch.sample
+-rwxrwxr-x 1 travis travis 1642 Jun  7 02:36 pre-commit.sample
+-rwxrwxr-x 1 travis travis 1239 Jun  7 02:36 prepare-commit-msg.sample
+-rwxrwxr-x 1 travis travis 1348 Jun  7 02:36 pre-push.sample
+-rwxrwxr-x 1 travis travis 4898 Jun  7 02:36 pre-rebase.sample
+-rwxrwxr-x 1 travis travis  544 Jun  7 02:36 pre-receive.sample
+-rwxrwxr-x 1 travis travis 3610 Jun  7 02:36 update.sample
+
+travis_time:end:04666ac4:start=1496803057841811542,finish=1496803057847858498,duration=6046956travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:0a6d0385$ ./.git/hooks/post-merge
+[*] Running msftidy.rb in ./.git/hooks/post-merge mode
+--- Checking new and changed module syntax with tools/dev/msftidy.rb ---
+modules/payloads/singles/php/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_bind_tcp.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_reverse_http.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_reverse_https.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_bind_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_http.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_https.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_ipv6_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_bind_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_http.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_https.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_ipv6_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/stages/php/meterpreter.rb - msftidy check passed
+------------------------------------------------------------------------
+
+travis_time:end:0a6d0385:start=1496803057852938456,finish=1496803058864155934,duration=1011217478travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:2bb300b4$ gem install bundler
+Fetching: bundler-1.15.1.gemFetching: bundler-1.15.1.gem (  1%)Fetching: bundler-1.15.1.gem (  2%)Fetching: bundler-1.15.1.gem (  3%)Fetching: bundler-1.15.1.gem (  4%)Fetching: bundler-1.15.1.gem (  5%)Fetching: bundler-1.15.1.gem (  6%)Fetching: bundler-1.15.1.gem (  7%)Fetching: bundler-1.15.1.gem (  8%)Fetching: bundler-1.15.1.gem (  9%)Fetching: bundler-1.15.1.gem ( 10%)Fetching: bundler-1.15.1.gem ( 15%)Fetching: bundler-1.15.1.gem ( 20%)Fetching: bundler-1.15.1.gem ( 24%)Fetching: bundler-1.15.1.gem ( 29%)Fetching: bundler-1.15.1.gem ( 34%)Fetching: bundler-1.15.1.gem ( 39%)Fetching: bundler-1.15.1.gem ( 44%)Fetching: bundler-1.15.1.gem ( 49%)Fetching: bundler-1.15.1.gem ( 53%)Fetching: bundler-1.15.1.gem ( 58%)Fetching: bundler-1.15.1.gem ( 63%)Fetching: bundler-1.15.1.gem ( 65%)Fetching: bundler-1.15.1.gem ( 70%)Fetching: bundler-1.15.1.gem ( 75%)Fetching: bundler-1.15.1.gem ( 80%)Fetching: bundler-1.15.1.gem ( 84%)Fetching: bundler-1.15.1.gem ( 89%)Fetching: bundler-1.15.1.gem ( 94%)Fetching: bundler-1.15.1.gem ( 99%)Fetching: bundler-1.15.1.gem (100%)Fetching: bundler-1.15.1.gem (100%)
+Successfully installed bundler-1.15.1
+1 gem installed
+
+travis_time:end:2bb300b4:start=1496803058869501942,finish=1496803059439982811,duration=570480869travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:04a86aa0$ bundle install --without coverage development pcap --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching gem metadata from https://rubygems.org/...........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Using rake 12.0.0
+Using i18n 0.8.4
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.8
+Using arel 6.0.4
+Using backports 3.8.0
+Using bcrypt 3.1.11
+Using bit-struct 0.16
+Using filesize 0.1.1
+Using rkelly-remix 0.0.7
+Using json 2.1.0
+Using metasm 1.0.3
+Using thor 0.19.4
+Using pg 0.20.0
+Using pg_array_parser 0.0.9
+Using rubyntlm 0.6.2
+Using rubyzip 1.2.1
+Using metasploit-payloads 1.2.32
+Using metasploit_payloads-mettle 0.1.9
+Using msgpack 1.1.0
+Using nessus_rest 0.1.6
+Using net-ssh 4.1.0
+Using network_interface 0.0.1
+Using nexpose 6.0.0
+Using public_suffix 2.0.5
+Using multipart-post 2.0.0
+Using openssl-ccm 1.2.1
+Using openvas-omp 0.0.4
+Using pcaprub 0.12.4
+Using patch_finder 1.0.2
+Using rb-readline 0.5.4
+Using redcarpet 3.4.0
+Using rex-text 0.2.15
+Using rex-core 0.1.10
+Using rex-struct2 0.1.2
+Using rex-java 0.1.5
+Using rex-registry 0.1.3
+Using robots 0.10.1
+Using bindata 2.4.0
+Using windows_error 0.1.2
+Using sqlite3 1.3.13
+Using sshkey 1.9.0
+Using xmlrpc 0.3.0
+Using fivemat 1.3.4
+Using rspec-support 3.6.0
+Using diff-lcs 1.3
+Using ffi 1.9.18
+Using contracts 0.16.0
+Using gherkin 4.1.3
+Using cucumber-wire 0.0.1
+Using multi_json 1.12.1
+Using multi_test 0.1.2
+Using mime-types-data 3.2016.0521
+Using timecop 0.8.1
+Using bundler 1.15.1
+Using tzinfo 1.2.3
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using jsobfu 0.4.2
+Using addressable 2.5.1
+Using faraday 0.12.1
+Using packetfu 1.1.13
+Using rex-arch 0.1.8
+Using rex-mime 0.1.5
+Using rex-ole 0.1.6
+Using rex-random_identifier 0.1.2
+Using rex-zip 0.1.3
+Using rex-rop_builder 0.1.3
+Using rex-socket 0.1.6
+Using ruby_smb 0.0.18
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using childprocess 0.5.9
+Using cucumber-core 1.5.0
+Using mime-types 3.1
+Using activesupport 4.2.8
+Using tzinfo-data 1.2017.2
+Using loofah 2.0.3
+Using recog 2.1.8
+Using xpath 2.1.0
+Using sawyer 0.8.1
+Using rex-bin_tools 0.1.3
+Using rex-encoder 0.1.4
+Using rex-nop 0.1.1
+Using rex-powershell 0.1.72
+Using rex-sslscan 0.1.4
+Using cucumber 2.4.0
+Using rails-deprecated_sanitizer 1.0.3
+Using activemodel 4.2.8
+Using factory_girl 4.8.0
+Using shoulda-matchers 3.1.1
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.14.0
+Using octokit 4.7.0
+Using rex-exploitation 0.1.14
+Using aruba 0.14.2
+Using rails-dom-testing 1.0.8
+Using activerecord 4.2.8
+Using actionview 4.2.8
+Using arel-helpers 2.4.0
+Using postgres_ext 3.0.0
+Using actionpack 4.2.8
+Using railties 4.2.8
+Using metasploit-concern 2.0.4
+Using metasploit-model 2.0.4
+Using factory_girl_rails 4.8.0
+Using rspec-rails 3.6.0
+Using cucumber-rails 1.5.0
+Using metasploit_data_models 2.0.14
+Using metasploit-credential 2.0.9
+Using metasploit-framework 4.14.25 from source at `.`
+Bundle complete! 15 Gemfile dependencies, 116 gems now installed.
+Gems in the groups coverage, development and pcap were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:04a86aa0:start=1496803059445602910,finish=1496803063131789060,duration=3686186150travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:1bd2a50d$ cp config/database.yml.travis config/database.yml
+
+travis_time:end:1bd2a50d:start=1496803063137210451,finish=1496803063142469693,duration=5259242travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:06847914$ bundle exec rake --version
+rake, version 12.0.0
+
+travis_time:end:06847914:start=1496803063147599724,finish=1496803063687074829,duration=539475105travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:27c6fa17$ bundle exec rake db:create
+YARD not defined, so yard tasks cannot be setup.
+
+travis_time:end:27c6fa17:start=1496803063692344359,finish=1496803067234206812,duration=3541862453travis_fold:end:before_script.3travis_fold:start:before_script.4travis_time:start:162023e5$ bundle exec rake db:migrate
+YARD not defined, so yard tasks cannot be setup.
+== 0 CreateTables: migrating ==================================================
+-- create_table(:hosts)
+   -> 0.0032s
+-- add_index(:hosts, :address, {:unique=>true})
+   -> 0.0021s
+-- create_table(:clients)
+   -> 0.0018s
+-- create_table(:services)
+   -> 0.0019s
+-- create_table(:vulns)
+   -> 0.0019s
+-- create_table(:refs)
+   -> 0.0018s
+-- create_table(:vulns_refs, {:id=>false})
+   -> 0.0007s
+-- create_table(:notes)
+   -> 0.0018s
+== 0 CreateTables: migrated (0.0159s) =========================================
+
+== 1 AddWmapTables: migrating =================================================
+-- create_table(:wmap_targets)
+   -> 0.0019s
+-- create_table(:wmap_requests)
+   -> 0.0019s
+== 1 AddWmapTables: migrated (0.0040s) ========================================
+
+== 2 AddWorkspaces: migrating =================================================
+-- create_table(:workspaces)
+   -> 0.0018s
+-- change_table(:hosts)
+   -> 0.0009s
+-- remove_index(:hosts, {:column=>:address})
+   -> 0.0017s
+== 2 AddWorkspaces: migrated (0.0046s) ========================================
+
+== 3 MoveNotes: migrating =====================================================
+-- remove_column(:notes, :host_id)
+   -> 0.0005s
+-- change_table(:notes)
+   -> 0.0033s
+== 3 MoveNotes: migrated (0.0040s) ============================================
+
+== 4 AddEventsTable: migrating ================================================
+-- create_table(:events)
+   -> 0.0020s
+== 4 AddEventsTable: migrated (0.0021s) =======================================
+
+== 5 ExpandInfo: migrating ====================================================
+-- remove_column(:events, :info)
+   -> 0.0005s
+-- change_table(:events)
+   -> 0.0006s
+-- remove_column(:notes, :data)
+   -> 0.0004s
+-- change_table(:notes)
+   -> 0.0006s
+-- remove_column(:vulns, :data)
+   -> 0.0005s
+-- change_table(:vulns)
+   -> 0.0006s
+-- remove_column(:hosts, :info)
+   -> 0.0008s
+-- change_table(:hosts)
+   -> 0.0005s
+-- remove_column(:services, :info)
+   -> 0.0005s
+-- change_table(:services)
+   -> 0.0006s
+== 5 ExpandInfo: migrated (0.0065s) ===========================================
+
+== 6 AddTimestamps: migrating =================================================
+-- rename_column(:clients, :created, :created_at)
+   -> 0.0020s
+-- rename_column(:hosts, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:notes, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:refs, :created, :created_at)
+   -> 0.0012s
+-- rename_column(:services, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:vulns, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:wmap_requests, :created, :created_at)
+   -> 0.0012s
+-- add_column(:wmap_targets, :created_at, :datetime)
+   -> 0.0006s
+-- add_column(:clients, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:events, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:hosts, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:notes, :updated_at, :datetime)
+   -> 0.0006s
+-- add_column(:refs, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:services, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:vulns, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:wmap_requests, :updated_at, :datetime)
+   -> 0.0004s
+-- add_column(:wmap_targets, :updated_at, :datetime)
+   -> 0.0004s
+== 6 AddTimestamps: migrated (0.0151s) ========================================
+
+== 7 AddLoots: migrating ======================================================
+-- create_table(:loots)
+   -> 0.0025s
+== 7 AddLoots: migrated (0.0025s) =============================================
+
+== 8 CreateUsers: migrating ===================================================
+-- create_table(:users)
+   -> 0.0019s
+== 8 CreateUsers: migrated (0.0020s) ==========================================
+
+== 9 AddLootsCtype: migrating =================================================
+-- add_column(:loots, :content_type, :string)
+   -> 0.0006s
+== 9 AddLootsCtype: migrated (0.0006s) ========================================
+
+== 10 AddAlertFields: migrating ===============================================
+-- add_column(:notes, :critical, :boolean)
+   -> 0.0006s
+-- add_column(:notes, :seen, :boolean)
+   -> 0.0004s
+-- add_column(:events, :critical, :boolean)
+   -> 0.0005s
+-- add_column(:events, :seen, :boolean)
+   -> 0.0004s
+== 10 AddAlertFields: migrated (0.0024s) ======================================
+
+== 11 AddReports: migrating ===================================================
+-- create_table(:reports)
+   -> 0.0024s
+== 11 AddReports: migrated (0.0025s) ==========================================
+
+== 12 AddTasks: migrating =====================================================
+-- create_table(:tasks)
+   -> 0.0025s
+== 12 AddTasks: migrated (0.0026s) ============================================
+
+== 13 AddTasksResult: migrating ===============================================
+-- add_column(:tasks, :result, :text)
+   -> 0.0006s
+== 13 AddTasksResult: migrated (0.0006s) ======================================
+
+== 14 AddLootsFields: migrating ===============================================
+-- add_column(:loots, :name, :text)
+   -> 0.0005s
+-- add_column(:loots, :info, :text)
+   -> 0.0004s
+== 14 AddLootsFields: migrated (0.0011s) ======================================
+
+== 15 RenameUser: migrating ===================================================
+-- remove_column(:events, :user)
+   -> 0.0005s
+-- change_table(:events)
+   -> 0.0006s
+== 15 RenameUser: migrated (0.0011s) ==========================================
+
+== 16 AddHostPurpose: migrating ===============================================
+-- add_column(:hosts, :purpose, :text)
+   -> 0.0006s
+== 16 AddHostPurpose: migrated (0.0006s) ======================================
+
+== 17 ExpandInfo2: migrating ==================================================
+-- remove_column(:events, :info)
+   -> 0.0004s
+-- change_table(:events)
+   -> 0.0006s
+-- remove_column(:notes, :data)
+   -> 0.0004s
+-- change_table(:notes)
+   -> 0.0004s
+-- remove_column(:vulns, :data)
+   -> 0.0005s
+-- change_table(:vulns)
+   -> 0.0004s
+-- remove_column(:hosts, :info)
+   -> 0.0006s
+-- change_table(:hosts)
+   -> 0.0004s
+-- remove_column(:services, :info)
+   -> 0.0004s
+-- change_table(:services)
+   -> 0.0005s
+== 17 ExpandInfo2: migrated (0.0055s) =========================================
+
+== 18 AddWorkspaceUserInfo: migrating =========================================
+-- change_table(:workspaces)
+   -> 0.0006s
+-- change_table(:users)
+   -> 0.0015s
+== 18 AddWorkspaceUserInfo: migrated (0.0022s) ================================
+
+== 19 AddWorkspaceDesc: migrating =============================================
+-- change_table(:workspaces)
+   -> 0.0006s
+-- change_table(:hosts)
+   -> 0.0006s
+== 19 AddWorkspaceDesc: migrated (0.0013s) ====================================
+
+== 20 AddUserPreferences: migrating ===========================================
+-- add_column(:users, :prefs, :string, {:limit=>524288})
+   -> 0.0006s
+== 20 AddUserPreferences: migrated (0.0007s) ==================================
+
+== 21 StandardizeInfoAndData: migrating =======================================
+-- remove_column(:vulns, :data)
+   -> 0.0005s
+-- change_table(:vulns)
+   -> 0.0005s
+== 21 StandardizeInfoAndData: migrated (0.0011s) ==============================
+
+== 22 EnlargeEventInfo: migrating =============================================
+-- change_column(:events, :info, :text)
+   -> 0.0005s
+== 22 EnlargeEventInfo: migrated (0.0006s) ====================================
+
+== 23 AddReportDownloadedAt: migrating ========================================
+-- add_column(:reports, :downloaded_at, :timestamp)
+   -> 0.0006s
+== 23 AddReportDownloadedAt: migrated (0.0006s) ===============================
+
+== 24 ConvertServiceInfoToText: migrating =====================================
+-- change_column(:services, :info, :text)
+   -> 0.0005s
+== 24 ConvertServiceInfoToText: migrated (0.0006s) ============================
+
+== 25 AddUserAdmin: migrating =================================================
+-- add_column(:users, :admin, :boolean, {:default=>true})
+   -> 0.0025s
+-- create_table(:project_members, {:id=>false})
+   -> 0.0007s
+== 25 AddUserAdmin: migrated (0.0033s) ========================================
+
+== 26 AddCredsTable: migrating ================================================
+-- create_table(:creds)
+   -> 0.0024s
+== 26 AddCredsTable: migrated (0.0025s) =======================================
+
+== 20100819123300 MigrateCredData: migrating ==================================
+-- Migrating 0 credentials.
+-- Migrating 0 notes.
+-- Deleting migrated auth notes.
+== 20100819123300 MigrateCredData: migrated (0.0030s) =========================
+
+== 20100824151500 AddExploitedTable: migrating ================================
+-- create_table(:exploited_hosts)
+   -> 0.0027s
+== 20100824151500 AddExploitedTable: migrated (0.0028s) =======================
+
+== 20100908001428 AddOwnerToWorkspaces: migrating =============================
+-- add_column(:workspaces, :owner_id, :integer)
+   -> 0.0007s
+== 20100908001428 AddOwnerToWorkspaces: migrated (0.0008s) ====================
+
+== 20100911122000 AddReportTemplates: migrating ===============================
+-- create_table(:report_templates)
+   -> 0.0023s
+== 20100911122000 AddReportTemplates: migrated (0.0023s) ======================
+
+== 20100916151530 RequireAdminFlag: migrating =================================
+-- change_column(:users, :admin, :boolean, {:null=>false, :default=>true})
+   -> 0.0033s
+== 20100916151530 RequireAdminFlag: migrated (0.0075s) ========================
+
+== 20100916175000 AddCampaignsAndTemplates: migrating =========================
+-- create_table(:campaigns)
+   -> 0.0026s
+-- create_table(:email_templates)
+   -> 0.0020s
+-- create_table(:attachments)
+   -> 0.0026s
+-- create_table(:attachments_email_templates, {:id=>false})
+   -> 0.0006s
+-- create_table(:email_addresses)
+   -> 0.0023s
+-- create_table(:web_templates)
+   -> 0.0018s
+== 20100916175000 AddCampaignsAndTemplates: migrated (0.0124s) ================
+
+== 20100920012100 AddGenerateExeColumn: migrating =============================
+-- add_column(:email_templates, :generate_exe, :boolean, {:null=>false, :default=>false})
+   -> 0.0024s
+== 20100920012100 AddGenerateExeColumn: migrated (0.0025s) ====================
+
+== 20100926214000 AddTemplatePrefs: migrating =================================
+-- remove_column(:email_templates, :generate_exe)
+   -> 0.0005s
+-- add_column(:email_templates, :prefs, :text)
+   -> 0.0006s
+-- add_column(:web_templates, :prefs, :text)
+   -> 0.0004s
+== 20100926214000 AddTemplatePrefs: migrated (0.0019s) ========================
+
+== 20101001000000 AddWebTables: migrating =====================================
+-- create_table(:web_sites)
+   -> 0.0022s
+-- create_table(:web_pages)
+   -> 0.0020s
+-- create_table(:web_forms)
+   -> 0.0019s
+-- create_table(:web_vulns)
+   -> 0.0021s
+== 20101001000000 AddWebTables: migrated (0.0084s) ============================
+
+== 20101002000000 AddQuery: migrating =========================================
+-- add_column(:web_forms, :query, :text)
+   -> 0.0005s
+-- add_column(:web_vulns, :query, :text)
+   -> 0.0006s
+== 20101002000000 AddQuery: migrated (0.0014s) ================================
+
+== 20101007000000 AddVulnInfo: migrating ======================================
+-- add_column(:web_vulns, :category, :text)
+   -> 0.0006s
+-- add_column(:web_vulns, :confidence, :text)
+   -> 0.0005s
+-- add_column(:web_vulns, :description, :text)
+   -> 0.0004s
+-- add_column(:web_vulns, :blame, :text)
+   -> 0.0004s
+== 20101007000000 AddVulnInfo: migrated (0.0023s) =============================
+
+== 20101008111800 AddClientsToCampaigns: migrating ============================
+-- add_column(:clients, :campaign_id, :integer)
+   -> 0.0006s
+== 20101008111800 AddClientsToCampaigns: migrated (0.0007s) ===================
+
+== 20101009023300 AddCampaignAttachments: migrating ===========================
+-- add_column(:attachments, :campaign_id, :integer)
+   -> 0.0005s
+== 20101009023300 AddCampaignAttachments: migrated (0.0006s) ==================
+
+== 20101104135100 AddImportedCreds: migrating =================================
+-- create_table(:imported_creds)
+   -> 0.0027s
+== 20101104135100 AddImportedCreds: migrated (0.0028s) ========================
+
+== 20101203000000 FixWebTables: migrating =====================================
+-- change_column(:web_pages, :path, :text)
+   -> 0.0005s
+-- change_column(:web_pages, :query, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :cookie, :text)
+   -> 0.0006s
+-- change_column(:web_pages, :auth, :text)
+   -> 0.0003s
+-- change_column(:web_pages, :ctype, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :location, :text)
+   -> 0.0005s
+-- change_column(:web_pages, :path, :text)
+   -> 0.0004s
+-- change_column(:web_vulns, :path, :text)
+   -> 0.0004s
+-- change_column(:web_vulns, :pname, :text)
+   -> 0.0004s
+-- add_column(:web_pages, :request, :text)
+   -> 0.0005s
+-- add_column(:web_vulns, :request, :text)
+   -> 0.0004s
+== 20101203000000 FixWebTables: migrated (0.0056s) ============================
+
+== 20101203000001 ExpandHostComment: migrating ================================
+-- change_column(:hosts, :comments, :text)
+   -> 0.0006s
+== 20101203000001 ExpandHostComment: migrated (0.0006s) =======================
+
+== 20101206212033 AddLimitToNetworkToWorkspaces: migrating ====================
+-- add_column(:workspaces, :limit_to_network, :boolean, {:null=>false, :default=>false})
+   -> 0.0024s
+== 20101206212033 AddLimitToNetworkToWorkspaces: migrated (0.0025s) ===========
+
+== 20110112154300 AddModuleUuidToTasks: migrating =============================
+-- add_column(:tasks, :module_uuid, :string, {:limit=>8})
+   -> 0.0006s
+== 20110112154300 AddModuleUuidToTasks: migrated (0.0006s) ====================
+
+== 20110204112800 AddHostTags: migrating ======================================
+-- create_table(:tags)
+   -> 0.0029s
+-- create_table(:hosts_tags, {:id=>false})
+   -> 0.0007s
+== 20110204112800 AddHostTags: migrated (0.0037s) =============================
+
+== 20110317144932 AddSessionTable: migrating ==================================
+-- create_table(:sessions)
+   -> 0.0025s
+-- create_table(:session_events)
+   -> 0.0019s
+== 20110317144932 AddSessionTable: migrated (0.0073s) =========================
+
+== 20110414180600 AddLocalIdToSessionTable: migrating =========================
+-- add_column(:sessions, :local_id, :integer)
+   -> 0.0006s
+== 20110414180600 AddLocalIdToSessionTable: migrated (0.0007s) ================
+
+== 20110415175705 AddRoutesTable: migrating ===================================
+-- create_table(:routes)
+   -> 0.0019s
+-- remove_column(:sessions, :routes)
+   -> 0.0004s
+== 20110415175705 AddRoutesTable: migrated (0.0024s) ==========================
+
+== 20110422000000 ConvertBinary: migrating ====================================
+-- rename_column(:web_pages, :body, :body_text)
+   -> 0.0014s
+-- rename_column(:web_pages, :request, :request_text)
+   -> 0.0011s
+-- rename_column(:web_vulns, :request, :request_text)
+   -> 0.0010s
+-- rename_column(:web_vulns, :proof, :proof_text)
+   -> 0.0011s
+-- add_column(:web_pages, :body, :binary)
+   -> 0.0006s
+-- add_column(:web_pages, :request, :binary)
+   -> 0.0004s
+-- add_column(:web_vulns, :request, :binary)
+   -> 0.0005s
+-- add_column(:web_vulns, :proof, :binary)
+   -> 0.0005s
+-- remove_column(:web_pages, :body_text)
+   -> 0.0003s
+-- remove_column(:web_pages, :request_text)
+   -> 0.0004s
+-- remove_column(:web_vulns, :request_text)
+   -> 0.0004s
+-- remove_column(:web_vulns, :proof_text)
+   -> 0.0004s
+== 20110422000000 ConvertBinary: migrated (0.0142s) ===========================
+
+== 20110425095900 AddLastSeenToSessions: migrating ============================
+-- add_column(:sessions, :last_seen, :timestamp)
+   -> 0.0006s
+== 20110425095900 AddLastSeenToSessions: migrated (0.0007s) ===================
+
+== 20110513143900 TrackSuccessfulExploits: migrating ==========================
+-- add_column(:vulns, :exploited_at, :timestamp)
+   -> 0.0007s
+== 20110513143900 TrackSuccessfulExploits: migrated (0.0026s) =================
+
+== 20110517160800 RenameAndPruneNessusVulns: migrating ========================
+== 20110517160800 RenameAndPruneNessusVulns: migrated (0.0017s) ===============
+
+== 20110527000000 AddTaskIdToReportsTable: migrating ==========================
+-- add_column(:reports, :task_id, :integer)
+   -> 0.0005s
+== 20110527000000 AddTaskIdToReportsTable: migrated (0.0006s) =================
+
+== 20110527000001 AddApiKeysTable: migrating ==================================
+-- create_table(:api_keys)
+   -> 0.0020s
+== 20110527000001 AddApiKeysTable: migrated (0.0021s) =========================
+
+== 20110606000001 AddMacrosTable: migrating ===================================
+-- create_table(:macros)
+   -> 0.0020s
+== 20110606000001 AddMacrosTable: migrated (0.0021s) ==========================
+
+== 20110622000000 AddSettingsToTasksTable: migrating ==========================
+-- add_column(:tasks, :settings, :binary)
+   -> 0.0006s
+== 20110622000000 AddSettingsToTasksTable: migrated (0.0007s) =================
+
+== 20110624000001 AddListenersTable: migrating ================================
+-- create_table(:listeners)
+   -> 0.0028s
+== 20110624000001 AddListenersTable: migrated (0.0028s) =======================
+
+== 20110625000001 AddMacroToListenersTable: migrating =========================
+-- add_column(:listeners, :macro, :text)
+   -> 0.0006s
+== 20110625000001 AddMacroToListenersTable: migrated (0.0006s) ================
+
+== 20110630000001 AddNexposeConsolesTable: migrating ==========================
+-- create_table(:nexpose_consoles)
+   -> 0.0028s
+== 20110630000001 AddNexposeConsolesTable: migrated (0.0028s) =================
+
+== 20110630000002 AddNameToNexposeConsolesTable: migrating ====================
+-- add_column(:nexpose_consoles, :name, :text)
+   -> 0.0007s
+== 20110630000002 AddNameToNexposeConsolesTable: migrated (0.0008s) ===========
+
+== 20110717000001 AddProfilesTable: migrating =================================
+-- create_table(:profiles)
+   -> 0.0023s
+== 20110717000001 AddProfilesTable: migrated (0.0024s) ========================
+
+== 20110727163801 ExpandCredPtypeColumn: migrating ============================
+-- change_column(:creds, :ptype, :string, {:limit=>256})
+   -> 0.0006s
+== 20110727163801 ExpandCredPtypeColumn: migrated (0.0007s) ===================
+
+== 20110730000001 AddInitialIndexes: migrating ================================
+-- add_index(:hosts, :address)
+   -> 0.0022s
+-- add_index(:hosts, :address6)
+   -> 0.0019s
+-- add_index(:hosts, :name)
+   -> 0.0020s
+-- add_index(:hosts, :state)
+   -> 0.0018s
+-- add_index(:hosts, :os_name)
+   -> 0.0020s
+-- add_index(:hosts, :os_flavor)
+   -> 0.0018s
+-- add_index(:hosts, :purpose)
+   -> 0.0018s
+-- add_index(:services, :port)
+   -> 0.0019s
+-- add_index(:services, :proto)
+   -> 0.0019s
+-- add_index(:services, :state)
+   -> 0.0020s
+-- add_index(:services, :name)
+   -> 0.0019s
+-- add_index(:notes, :ntype)
+   -> 0.0020s
+-- add_index(:vulns, :name)
+   -> 0.0020s
+-- add_index(:refs, :name)
+   -> 0.0021s
+-- add_index(:web_sites, :vhost)
+   -> 0.0020s
+-- add_index(:web_sites, :comments)
+   -> 0.0021s
+-- add_index(:web_sites, :options)
+   -> 0.0018s
+-- add_index(:web_pages, :path)
+   -> 0.0020s
+-- add_index(:web_pages, :query)
+   -> 0.0018s
+-- add_index(:web_forms, :path)
+   -> 0.0019s
+-- add_index(:web_vulns, :path)
+   -> 0.0020s
+-- add_index(:web_vulns, :method)
+   -> 0.0019s
+-- add_index(:web_vulns, :name)
+   -> 0.0019s
+== 20110730000001 AddInitialIndexes: migrated (0.0470s) =======================
+
+== 20110812000001 PruneIndexes: migrating =====================================
+-- indexes(:hosts)
+   -> 0.0034s
+-- indexes(:services)
+   -> 0.0021s
+-- indexes(:vulns)
+   -> 0.0013s
+== 20110812000001 PruneIndexes: migrated (0.0073s) ============================
+
+== 20110922000000 ExpandNotes: migrating ======================================
+-- change_column(:notes, :data, :text)
+   -> 0.0006s
+== 20110922000000 ExpandNotes: migrated (0.0006s) =============================
+
+== 20110928101300 AddModRefTable: migrating ===================================
+-- create_table(:mod_refs)
+   -> 0.0020s
+== 20110928101300 AddModRefTable: migrated (0.0022s) ==========================
+
+== 20111011110000 AddDisplayNameToReportsTable: migrating =====================
+-- add_column(:reports, :name, :string, {:limit=>63})
+   -> 0.0006s
+== 20111011110000 AddDisplayNameToReportsTable: migrated (0.0027s) ============
+
+== 20111203000000 InetColumns: migrating ======================================
+-- change_column(:hosts, :address, "INET using address::INET")
+   -> 0.0035s
+-- remove_column(:hosts, :address6)
+   -> 0.0004s
+== 20111203000000 InetColumns: migrated (0.0040s) =============================
+
+== 20111204000000 MoreInetColumns: migrating ==================================
+-- change_column(:wmap_requests, :address, "INET using address::INET")
+   -> 0.0021s
+-- remove_column(:wmap_requests, :address6)
+   -> 0.0004s
+-- change_column(:wmap_targets, :address, "INET using address::INET")
+   -> 0.0018s
+-- remove_column(:wmap_targets, :address6)
+   -> 0.0004s
+== 20111204000000 MoreInetColumns: migrated (0.0052s) =========================
+
+== 20111210000000 AddScopeToHosts: migrating ==================================
+-- add_column(:hosts, :scope, :text)
+   -> 0.0006s
+== 20111210000000 AddScopeToHosts: migrated (0.0007s) =========================
+
+== 20120126110000 AddVirtualHostToHosts: migrating ============================
+-- add_column(:hosts, :virtual_host, :text)
+   -> 0.0006s
+== 20120126110000 AddVirtualHostToHosts: migrated (0.0006s) ===================
+
+== 20120411173220 RenameWorkspaceMembers: migrating ===========================
+-- rename_table(:project_members, :workspace_members)
+   -> 0.0041s
+== 20120411173220 RenameWorkspaceMembers: migrated (0.0042s) ==================
+
+== 20120601152442 AddCounterCachesToHosts: migrating ==========================
+-- add_column(:hosts, :note_count, :integer, {:default=>0})
+   -> 0.0032s
+-- add_column(:hosts, :vuln_count, :integer, {:default=>0})
+   -> 0.0028s
+-- add_column(:hosts, :service_count, :integer, {:default=>0})
+   -> 0.0027s
+== 20120601152442 AddCounterCachesToHosts: migrated (0.0116s) =================
+
+== 20120625000000 AddVulnDetails: migrating ===================================
+-- create_table(:vuln_details)
+   -> 0.0023s
+== 20120625000000 AddVulnDetails: migrated (0.0024s) ==========================
+
+== 20120625000001 AddHostDetails: migrating ===================================
+-- create_table(:host_details)
+   -> 0.0015s
+== 20120625000001 AddHostDetails: migrated (0.0016s) ==========================
+
+== 20120625000002 ExpandDetails: migrating ====================================
+-- add_column(:vuln_details, :nx_vuln_status, :text)
+   -> 0.0007s
+-- add_column(:vuln_details, :nx_proof_key, :text)
+   -> 0.0004s
+-- add_column(:vuln_details, :src, :string)
+   -> 0.0005s
+-- add_column(:host_details, :src, :string)
+   -> 0.0009s
+== 20120625000002 ExpandDetails: migrated (0.0028s) ===========================
+
+== 20120625000003 ExpandDetails2: migrating ===================================
+-- add_column(:host_details, :nx_site_name, :string)
+   -> 0.0006s
+-- add_column(:host_details, :nx_site_importance, :string)
+   -> 0.0005s
+-- add_column(:host_details, :nx_scan_template, :string)
+   -> 0.0005s
+-- add_column(:host_details, :nx_risk_score, :float)
+   -> 0.0004s
+-- add_column(:vuln_details, :nx_scan_id, :integer)
+   -> 0.0007s
+-- add_column(:vuln_details, :nx_vulnerable_since, :timestamp)
+   -> 0.0004s
+-- add_column(:vuln_details, :nx_pci_compliance_status, :string)
+   -> 0.0004s
+== 20120625000003 ExpandDetails2: migrated (0.0042s) ==========================
+
+== 20120625000004 AddVulnAttempts: migrating ==================================
+-- create_table(:vuln_attempts)
+   -> 0.0022s
+== 20120625000004 AddVulnAttempts: migrated (0.0022s) =========================
+
+== 20120625000005 AddVulnAndHostCounterCaches: migrating ======================
+-- add_column(:hosts, :host_detail_count, :integer, {:default=>0})
+   -> 0.0035s
+-- add_column(:vulns, :vuln_detail_count, :integer, {:default=>0})
+   -> 0.0023s
+-- add_column(:vulns, :vuln_attempt_count, :integer, {:default=>0})
+   -> 0.0022s
+== 20120625000005 AddVulnAndHostCounterCaches: migrated (0.0087s) =============
+
+== 20120625000006 AddModuleDetails: migrating =================================
+-- create_table(:module_details)
+   -> 0.0022s
+-- add_index(:module_details, :refname)
+   -> 0.0019s
+-- add_index(:module_details, :name)
+   -> 0.0018s
+-- add_index(:module_details, :description)
+   -> 0.0018s
+-- add_index(:module_details, :mtype)
+   -> 0.0017s
+-- create_table(:module_authors)
+   -> 0.0019s
+-- add_index(:module_authors, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_mixins)
+   -> 0.0019s
+-- add_index(:module_mixins, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_targets)
+   -> 0.0017s
+-- add_index(:module_targets, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_actions)
+   -> 0.0016s
+-- add_index(:module_actions, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_refs)
+   -> 0.0016s
+-- add_index(:module_refs, :module_detail_id)
+   -> 0.0019s
+-- add_index(:module_refs, :name)
+   -> 0.0017s
+-- create_table(:module_archs)
+   -> 0.0017s
+-- add_index(:module_archs, :module_detail_id)
+   -> 0.0017s
+-- create_table(:module_platforms)
+   -> 0.0018s
+-- add_index(:module_platforms, :module_detail_id)
+   -> 0.0018s
+== 20120625000006 AddModuleDetails: migrated (0.0380s) ========================
+
+== 20120625000007 AddExploitAttempts: migrating ===============================
+-- create_table(:exploit_attempts)
+   -> 0.0022s
+-- add_column(:hosts, :exploit_attempt_count, :integer, {:default=>0})
+   -> 0.0033s
+== 20120625000007 AddExploitAttempts: migrated (0.0056s) ======================
+
+== 20120625000008 AddFailMessage: migrating ===================================
+-- add_column(:vuln_attempts, :fail_detail, :text)
+   -> 0.0007s
+-- add_column(:exploit_attempts, :fail_detail, :text)
+   -> 0.0005s
+== 20120625000008 AddFailMessage: migrated (0.0013s) ==========================
+
+== 20120718202805 AddOwnerAndPayloadToWebVulns: migrating =====================
+-- add_column(:web_vulns, :owner, :string)
+   -> 0.0006s
+-- add_column(:web_vulns, :payload, :text)
+   -> 0.0006s
+== 20120718202805 AddOwnerAndPayloadToWebVulns: migrated (0.0013s) ============
+
+== 20130228214900 ChangeRequiredColumnsToNullFalseInWebVulns: migrating =======
+-- change_column_null(:web_vulns, :category, false)
+   -> 0.0005s
+-- change_column_null(:web_vulns, :confidence, false)
+   -> 0.0005s
+-- change_column_null(:web_vulns, :method, false)
+   -> 0.0004s
+-- change_column_null(:web_vulns, :name, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :params, false)
+   -> 0.0004s
+-- change_column_null(:web_vulns, :path, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :pname, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :proof, false)
+   -> 0.0004s
+-- change_column_null(:web_vulns, :risk, false)
+   -> 0.0004s
+== 20130228214900 ChangeRequiredColumnsToNullFalseInWebVulns: migrated (0.0041s) 
+
+== 20130412154159 ChangeForeignKeyInModuleActions: migrating ==================
+-- rename_column(:module_actions, :module_detail_id, :detail_id)
+   -> 0.0020s
+== 20130412154159 ChangeForeignKeyInModuleActions: migrated (0.0021s) =========
+
+== 20130412171844 ChangeForeignKeyInModuleArchs: migrating ====================
+-- rename_column(:module_archs, :module_detail_id, :detail_id)
+   -> 0.0018s
+== 20130412171844 ChangeForeignKeyInModuleArchs: migrated (0.0019s) ===========
+
+== 20130412173121 ChangeForeignKeyInModuleAuthors: migrating ==================
+-- rename_column(:module_authors, :module_detail_id, :detail_id)
+   -> 0.0020s
+== 20130412173121 ChangeForeignKeyInModuleAuthors: migrated (0.0021s) =========
+
+== 20130412173640 ChangeForeignKeyInModuleMixins: migrating ===================
+-- rename_column(:module_mixins, :module_detail_id, :detail_id)
+   -> 0.0019s
+== 20130412173640 ChangeForeignKeyInModuleMixins: migrated (0.0020s) ==========
+
+== 20130412174254 ChangeForeignKeyInModulePlatforms: migrating ================
+-- rename_column(:module_platforms, :module_detail_id, :detail_id)
+   -> 0.0018s
+== 20130412174254 ChangeForeignKeyInModulePlatforms: migrated (0.0019s) =======
+
+== 20130412174719 ChangeForeignKeyInModuleRefs: migrating =====================
+-- rename_column(:module_refs, :module_detail_id, :detail_id)
+   -> 0.0020s
+== 20130412174719 ChangeForeignKeyInModuleRefs: migrated (0.0022s) ============
+
+== 20130412175040 ChangeForeignKeyInModuleTargets: migrating ==================
+-- rename_column(:module_targets, :module_detail_id, :detail_id)
+   -> 0.0019s
+== 20130412175040 ChangeForeignKeyInModuleTargets: migrated (0.0020s) =========
+
+== 20130423211152 AddCredsCounterCache: migrating =============================
+-- add_column(:hosts, :cred_count, :integer, {:default=>0})
+   -> 0.0034s
+== 20130423211152 AddCredsCounterCache: migrated (0.0059s) ====================
+
+== 20130430151353 ChangeRequiredColumnsToNullFalseInHosts: migrating ==========
+-- change_column_null(:hosts, :address, false)
+   -> 0.0005s
+-- change_column_null(:hosts, :workspace_id, false)
+   -> 0.0004s
+== 20130430151353 ChangeRequiredColumnsToNullFalseInHosts: migrated (0.0012s) =
+
+== 20130430162145 EnforceAddressUniquenessInWorkspaceInHosts: migrating =======
+-- change_table(:hosts)
+   -> 0.0032s
+== 20130430162145 EnforceAddressUniquenessInWorkspaceInHosts: migrated (0.0044s) 
+
+== 20130510021637 RemoveCampaigns: migrating ==================================
+-- drop_table(:attachments)
+   -> 0.0011s
+-- drop_table(:attachments_email_templates)
+   -> 0.0005s
+-- drop_table(:email_addresses)
+   -> 0.0010s
+-- drop_table(:email_templates)
+   -> 0.0010s
+-- drop_table(:web_templates)
+   -> 0.0008s
+-- drop_table(:campaigns)
+   -> 0.0010s
+== 20130510021637 RemoveCampaigns: migrated (0.0060s) =========================
+
+== 20130515164311 ChangeWebVulnsConfidenceToInteger: migrating ================
+-- execute("ALTER TABLE web_vulns ALTER COLUMN confidence TYPE integer USING confidence::integer")
+   -> 0.0025s
+== 20130515164311 ChangeWebVulnsConfidenceToInteger: migrated (0.0025s) =======
+
+== 20130515172727 ValidMdmWebVulnParams: migrating ============================
+== 20130515172727 ValidMdmWebVulnParams: migrated (0.0050s) ===================
+
+== 20130516204810 MakingVulnsRefsARealArModel: migrating ======================
+-- add_column(:vulns_refs, :id, :primary_key)
+   -> 0.0020s
+== 20130516204810 MakingVulnsRefsARealArModel: migrated (0.0021s) =============
+
+== 20130522001343 CreateTaskCreds: migrating ==================================
+-- create_table(:task_creds)
+   -> 0.0018s
+== 20130522001343 CreateTaskCreds: migrated (0.0018s) =========================
+
+== 20130522032517 CreateTaskHosts: migrating ==================================
+-- create_table(:task_hosts)
+   -> 0.0017s
+== 20130522032517 CreateTaskHosts: migrated (0.0018s) =========================
+
+== 20130522041110 CreateTaskServices: migrating ===============================
+-- create_table(:task_services)
+   -> 0.0018s
+== 20130522041110 CreateTaskServices: migrated (0.0019s) ======================
+
+== 20130525015035 RemoveCampaignIdFromClients: migrating ======================
+-- remove_column(:clients, :campaign_id)
+   -> 0.0005s
+== 20130525015035 RemoveCampaignIdFromClients: migrated (0.0006s) =============
+
+== 20130525212420 DropTableImportedCreds: migrating ===========================
+-- drop_table(:imported_creds)
+   -> 0.0011s
+== 20130525212420 DropTableImportedCreds: migrated (0.0011s) ==================
+
+== 20130531144949 MakingHostTagsARealArModel: migrating =======================
+-- add_column(:hosts_tags, :id, :primary_key)
+   -> 0.0021s
+== 20130531144949 MakingHostTagsARealArModel: migrated (0.0021s) ==============
+
+== 20130604145732 CreateTaskSessions: migrating ===============================
+-- create_table(:task_sessions)
+   -> 0.0016s
+== 20130604145732 CreateTaskSessions: migrated (0.0017s) ======================
+
+== 20130717150737 RemovePnameValidation: migrating ============================
+-- change_column(:web_vulns, :pname, :text, {:null=>true})
+   -> 0.0008s
+== 20130717150737 RemovePnameValidation: migrated (0.0009s) ===================
+
+== 20131002004641 CreateAutomaticExploitationMatches: migrating ===============
+-- create_table(:automatic_exploitation_matches)
+   -> 0.0021s
+-- add_index(:automatic_exploitation_matches, :ref_id)
+   -> 0.0020s
+== 20131002004641 CreateAutomaticExploitationMatches: migrated (0.0042s) ======
+
+== 20131002164449 CreateAutomaticExploitationMatchSets: migrating =============
+-- create_table(:automatic_exploitation_match_sets)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_match_sets, :user_id)
+   -> 0.0020s
+-- add_index(:automatic_exploitation_match_sets, :workspace_id)
+   -> 0.0017s
+== 20131002164449 CreateAutomaticExploitationMatchSets: migrated (0.0060s) ====
+
+== 20131008213344 CreateAutomaticExploitationRuns: migrating ==================
+-- create_table(:automatic_exploitation_runs)
+   -> 0.0015s
+== 20131008213344 CreateAutomaticExploitationRuns: migrated (0.0016s) =========
+
+== 20131011184338 ModuleDetailOnAutomaticExploitationMatch: migrating =========
+-- rename_column(:automatic_exploitation_matches, :ref_id, :module_detail_id)
+   -> 0.0021s
+-- add_column(:automatic_exploitation_matches, :match_set_id, :integer)
+   -> 0.0004s
+== 20131011184338 ModuleDetailOnAutomaticExploitationMatch: migrated (0.0026s) 
+
+== 20131017150735 CreateAutomaticExploitationMatchResults: migrating ==========
+-- create_table(:automatic_exploitation_match_results)
+   -> 0.0019s
+== 20131017150735 CreateAutomaticExploitationMatchResults: migrated (0.0020s) =
+
+== 20131021185657 MakeMatchPolymorphic: migrating =============================
+-- add_column(:automatic_exploitation_matches, :matchable_type, :string)
+   -> 0.0005s
+-- add_column(:automatic_exploitation_matches, :matchable_id, :integer)
+   -> 0.0006s
+== 20131021185657 MakeMatchPolymorphic: migrated (0.0013s) ====================
+
+== 20140331173835 CreateMetasploitCredentialPublics: migrating ================
+-- create_table(:metasploit_credential_publics)
+   -> 0.0019s
+-- change_table(:metasploit_credential_publics)
+   -> 0.0019s
+== 20140331173835 CreateMetasploitCredentialPublics: migrated (0.0039s) =======
+
+== 20140407212345 CreateMetasploitCredentialPrivates: migrating ===============
+-- create_table(:metasploit_credential_privates)
+   -> 0.0018s
+-- change_table(:metasploit_credential_privates)
+   -> 0.0020s
+== 20140407212345 CreateMetasploitCredentialPrivates: migrated (0.0039s) ======
+
+== 20140410132401 CreateMetasploitCredentialRealms: migrating =================
+-- create_table(:metasploit_credential_realms)
+   -> 0.0020s
+== 20140410132401 CreateMetasploitCredentialRealms: migrated (0.0021s) ========
+
+== 20140410161611 UniqueMetasploitCredentialRealms: migrating =================
+-- change_table(:metasploit_credential_realms)
+   -> 0.0022s
+== 20140410161611 UniqueMetasploitCredentialRealms: migrated (0.0023s) ========
+
+== 20140410191213 CreateMetasploitCredentialOriginManuals: migrating ==========
+-- create_table(:metasploit_credential_origin_manuals)
+   -> 0.0016s
+-- add_index(:metasploit_credential_origin_manuals, :user_id)
+   -> 0.0019s
+== 20140410191213 CreateMetasploitCredentialOriginManuals: migrated (0.0036s) =
+
+== 20140410205410 CreateMetasploitCredentialOriginImports: migrating ==========
+-- create_table(:metasploit_credential_origin_imports)
+   -> 0.0021s
+-- add_index(:metasploit_credential_origin_imports, :task_id)
+   -> 0.0022s
+== 20140410205410 CreateMetasploitCredentialOriginImports: migrated (0.0044s) =
+
+== 20140411142102 CreateMetasploitCredentialOriginSessions: migrating =========
+-- create_table(:metasploit_credential_origin_sessions)
+   -> 0.0019s
+-- add_index(:metasploit_credential_origin_sessions, [:session_id, :post_reference_name], {:name=>:unique_metasploit_credential_origin_sessions, :unique=>true})
+   -> 0.0021s
+== 20140411142102 CreateMetasploitCredentialOriginSessions: migrated (0.0041s) 
+
+== 20140411205325 CreateMetasploitCredentialOriginServices: migrating =========
+-- create_table(:metasploit_credential_origin_services)
+   -> 0.0019s
+-- add_index(:metasploit_credential_origin_services, [:service_id, :module_full_name], {:name=>:unique_metasploit_credential_origin_services, :unique=>true})
+   -> 0.0019s
+== 20140411205325 CreateMetasploitCredentialOriginServices: migrated (0.0040s) 
+
+== 20140414192550 CreateMetasploitCredentialCores: migrating ==================
+-- create_table(:metasploit_credential_cores)
+   -> 0.0021s
+-- change_table(:metasploit_credential_cores)
+   -> 0.0086s
+== 20140414192550 CreateMetasploitCredentialCores: migrated (0.0108s) =========
+
+== 20140417140933 CreateMetasploitCredentialLogins: migrating =================
+-- create_table(:metasploit_credential_logins)
+   -> 0.0022s
+-- change_table(:metasploit_credential_logins)
+   -> 0.0037s
+== 20140417140933 CreateMetasploitCredentialLogins: migrated (0.0060s) ========
+
+== 20140520140817 AddLoginsCounterCacheToCores: migrating =====================
+-- add_column(:metasploit_credential_cores, :logins_count, :integer, {:default=>0})
+   -> 0.0032s
+== 20140520140817 AddLoginsCounterCacheToCores: migrated (0.0054s) ============
+
+== 20140603163708 AddJtrFormatToMetasploitCredentialPrivates: migrating =======
+-- add_column(:metasploit_credential_privates, :jtr_format, :string)
+   -> 0.0007s
+== 20140603163708 AddJtrFormatToMetasploitCredentialPrivates: migrated (0.0007s) 
+
+== 20140605173747 CreateMetasploitCredentialOriginCrackedPasswords: migrating =
+-- create_table(:metasploit_credential_origin_cracked_passwords)
+   -> 0.0018s
+-- add_index(:metasploit_credential_origin_cracked_passwords, :metasploit_credential_core_id, {:name=>:originating_credential_cores})
+   -> 0.0019s
+== 20140605173747 CreateMetasploitCredentialOriginCrackedPasswords: migrated (0.0038s) 
+
+== 20140702184622 CreateCredentialCoresTasksJoinTable: migrating ==============
+-- create_table(:credential_cores_tasks, {:force=>true, :id=>false})
+   -> 0.0013s
+== 20140702184622 CreateCredentialCoresTasksJoinTable: migrated (0.0014s) =====
+
+== 20140703144541 CreateCredentialLoginsTasksJoinTable: migrating =============
+-- create_table(:credential_logins_tasks, {:force=>true, :id=>false})
+   -> 0.0012s
+== 20140703144541 CreateCredentialLoginsTasksJoinTable: migrated (0.0013s) ====
+
+== 20140722174919 OldCredsToNewCreds: migrating ===============================
+== 20140722174919 OldCredsToNewCreds: migrated (0.0082s) ======================
+
+== 20140728191933 UniqueMetasploitCredentialCores: migrating ==================
+-- execute("CREATE UNIQUE INDEX unique_complete_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id, public_id) WHERE private_id IS NOT NULL AND public_id IS NOT NULL")
+   -> 0.0008s
+-- execute("CREATE UNIQUE INDEX unique_private_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id) WHERE private_id IS NOT NULL AND public_id IS NULL")
+   -> 0.0006s
+-- execute("CREATE UNIQUE INDEX unique_public_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id) WHERE private_id IS NULL AND public_id IS NOT NULL")
+   -> 0.0006s
+== 20140728191933 UniqueMetasploitCredentialCores: migrated (0.0025s) =========
+
+== 20140801150537 UniqueMetasploitCredentialCoresWithRealmId: migrating =======
+-- execute("DROP INDEX unique_complete_metasploit_credential_cores")
+   -> 0.0004s
+-- execute("DROP INDEX unique_private_metasploit_credential_cores")
+   -> 0.0003s
+-- execute("DROP INDEX unique_public_metasploit_credential_cores")
+   -> 0.0003s
+-- execute("CREATE UNIQUE INDEX unique_private_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id) WHERE realm_id IS NULL AND public_id IS NULL AND private_id IS NOT NULL")
+   -> 0.0006s
+-- execute("CREATE UNIQUE INDEX unique_public_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id) WHERE realm_id IS NULL AND public_id IS NOT NULL AND private_id IS NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_realmless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id, private_id) WHERE realm_id IS NULL AND public_id IS NOT NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_publicless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, private_id) WHERE realm_id IS NOT NULL AND public_id IS NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_privateless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, public_id) WHERE realm_id IS NOT NULL AND public_id IS NOT NULL AND private_id IS NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_complete_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, public_id, private_id) WHERE realm_id IS NOT NULL AND public_id IS NOT NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+== 20140801150537 UniqueMetasploitCredentialCoresWithRealmId: migrated (0.0063s) 
+
+== 20140905031549 AddDetectedArchToHost: migrating ============================
+-- add_column(:hosts, :detected_arch, :string, {:null=>true})
+   -> 0.0007s
+== 20140905031549 AddDetectedArchToHost: migrated (0.0008s) ===================
+
+== 20140922170030 AddTypetoPublic: migrating ==================================
+-- change_table(:metasploit_credential_publics)
+-- execute("UPDATE metasploit_credential_publics SET type = 'Metasploit::Credential::Username'")
+   -> 0.0005s
+-- change_column(:metasploit_credential_publics, :type, :string, {:null=>false})
+   -> 0.0008s
+   -> 0.0022s
+== 20140922170030 AddTypetoPublic: migrated (0.0023s) =========================
+
+== 20150106201450 OldCredsToNewCreds2: migrating ==============================
+== 20150106201450 OldCredsToNewCreds2: migrated (0.0009s) =====================
+
+== 20150112203945 RemoveDuplicateServices: migrating ==========================
+-- add_index(:services, [:host_id, :port, :proto], {:unique=>true})
+   -> 0.0021s
+== 20150112203945 RemoveDuplicateServices: migrated (0.0057s) =================
+
+== 20150205192745 DropServiceUniquenessIndex: migrating =======================
+-- remove_index(:services, :host_id_and_port_and_proto)
+   -> 0.0013s
+== 20150205192745 DropServiceUniquenessIndex: migrated (0.0014s) ==============
+
+== 20150209195939 AddVulnIdToNote: migrating ==================================
+-- add_column(:notes, :vuln_id, :integer)
+   -> 0.0006s
+-- add_index(:notes, :vuln_id)
+   -> 0.0020s
+== 20150209195939 AddVulnIdToNote: migrated (0.0028s) =========================
+
+== 20150212214222 RemoveDuplicateServices2: migrating =========================
+-- add_index(:services, [:host_id, :port, :proto], {:unique=>true})
+   -> 0.0020s
+== 20150212214222 RemoveDuplicateServices2: migrated (0.0028s) ================
+
+== 20150219173821 CreateModuleRuns: migrating =================================
+-- create_table(:module_runs)
+   -> 0.0023s
+-- add_index(:module_runs, :session_id)
+   -> 0.0019s
+-- add_index(:module_runs, :user_id)
+   -> 0.0018s
+== 20150219173821 CreateModuleRuns: migrated (0.0063s) ========================
+
+== 20150219215039 AddModuleRunToSession: migrating ============================
+-- change_table(:sessions)
+   -> 0.0009s
+-- add_index(:sessions, :module_run_id)
+   -> 0.0022s
+== 20150219215039 AddModuleRunToSession: migrated (0.0032s) ===================
+
+== 20150226151459 AddModuleRunFkToLoot: migrating =============================
+-- change_table(:loots)
+   -> 0.0023s
+== 20150226151459 AddModuleRunFkToLoot: migrated (0.0025s) ====================
+
+== 20150312155312 AddModuleFullNameToMatch: migrating =========================
+-- add_column(:automatic_exploitation_matches, :module_fullname, :text)
+   -> 0.0006s
+-- add_index(:automatic_exploitation_matches, :module_fullname)
+   -> 0.0019s
+== 20150312155312 AddModuleFullNameToMatch: migrated (0.0028s) ================
+
+== 20150317145455 RenameModuleIndices: migrating ==============================
+== 20150317145455 RenameModuleIndices: migrated (0.0012s) =====================
+
+== 20150326183742 AddMissingAeIndices: migrating ==============================
+-- add_index(:automatic_exploitation_match_results, :match_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_match_results, :run_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_runs, :match_set_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_runs, :user_id)
+   -> 0.0017s
+-- add_index(:automatic_exploitation_runs, :workspace_id)
+   -> 0.0018s
+== 20150326183742 AddMissingAeIndices: migrated (0.0099s) =====================
+
+== 20150421211719 RenameAutomaticExploitationIndex: migrating =================
+-- index_name_exists?(:automatic_exploitation_matches, :index_automatic_exploitation_matches_on_ref_id, false)
+   -> 0.0009s
+== 20150421211719 RenameAutomaticExploitationIndex: migrated (0.0010s) ========
+
+== 20150514182921 AddOriginToMdmVuln: migrating ===============================
+-- add_column(:vulns, :origin_id, :integer)
+   -> 0.0006s
+-- add_column(:vulns, :origin_type, :string)
+   -> 0.0006s
+-- add_index(:vulns, :origin_id)
+   -> 0.0019s
+== 20150514182921 AddOriginToMdmVuln: migrated (0.0034s) ======================
+
+== 20160415153312 RemoveNotNullFromWebVulnPArams: migrating ===================
+-- change_column_null(:web_vulns, :params, true)
+   -> 0.0005s
+== 20160415153312 RemoveNotNullFromWebVulnPArams: migrated (0.0005s) ==========
+
+== 20161004165612 AddFingerprintedToWorkspace: migrating ======================
+-- add_column(:workspaces, :import_fingerprint, :boolean, {:default=>false})
+   -> 0.0024s
+== 20161004165612 AddFingerprintedToWorkspace: migrated (0.0025s) =============
+
+== 20161107153145 RecreateIndexOnPrivateDataAndType: migrating ================
+-- remove_index(:metasploit_credential_privates, [:type, :data])
+   -> 0.0013s
+-- change_table(:metasploit_credential_privates)
+   -> 0.0019s
+== 20161107153145 RecreateIndexOnPrivateDataAndType: migrated (0.0034s) =======
+
+== 20161107203710 CreateIndexOnPrivateDataAndTypeForSshKey: migrating =========
+-- execute("CREATE UNIQUE INDEX \"index_metasploit_credential_privates_on_type_and_data_sshkey\" ON\n\"metasploit_credential_privates\" (\"type\", decode(md5(data), 'hex'))\nWHERE type in ('Metasploit::Credential::SSHKey')\n")
+   -> 0.0007s
+== 20161107203710 CreateIndexOnPrivateDataAndTypeForSshKey: migrated (0.0008s) 
+
+== 20161227212223 AddOsFamilyToHosts: migrating ===============================
+-- add_column(:hosts, :os_family, :string)
+   -> 0.0007s
+== 20161227212223 AddOsFamilyToHosts: migrated (0.0008s) ======================
+
+
+travis_time:end:162023e5:start=1496803067239462295,finish=1496803072187040080,duration=4947577785travis_fold:end:before_script.4travis_fold:start:before_script.5travis_time:start:001d9d88$ git diff --exit-code db/schema.rb
+
+travis_time:end:001d9d88:start=1496803072192228582,finish=1496803072221118503,duration=28889921travis_fold:end:before_script.5travis_time:start:0491b7ee$ echo "${CMD}"
+bundle exec rake spec SPEC_OPTS="--tag content"
+
+travis_time:end:0491b7ee:start=1496803072226392042,finish=1496803072230374546,duration=3982504
+The command "echo "${CMD}"" exited with 0.
+travis_time:start:1f512ac6$ bash -c "${CMD}"
+YARD not defined, so yard tasks cannot be setup.
+/home/travis/.rvm/rubies/ruby-2.3.4/bin/ruby -I/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.6.0/lib:/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rspec-support-3.6.0/lib /home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+Run options: include {:focus=>true, :content=>true}
+
+Randomized with seed 46286
+modules .................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+modules/payloads ....F................................................................................................................................F.............................................................................................................................................................................................F.......................................................................................................................................................F..........................................................................................................................................................................................................................F........................................................F....................................................................F.........................................................................F......F................................................................................................................................................F....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+  1) modules/payloads windows/meterpreter_bind_tcp it should behave like payload cached size is consistent windows/meterpreter_bind_tcp has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 957503
+            got: 957487
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:2648
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  2) modules/payloads windows/meterpreter_reverse_tcp it should behave like payload cached size is consistent windows/meterpreter_reverse_tcp has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 957503
+            got: 957487
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:2688
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  3) modules/payloads windows/meterpreter_reverse_https it should behave like payload cached size is consistent windows/meterpreter_reverse_https has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 958547
+            got: 958531
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:2668
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  4) modules/payloads windows/x64/meterpreter_reverse_ipv6_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_ipv6_tcp has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 1189439
+            got: 1189423
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:3874
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  5) modules/payloads windows/x64/meterpreter_reverse_http it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_http has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 1190483
+            got: 1190467
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:3854
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  6) modules/payloads windows/x64/meterpreter_reverse_https it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_https has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 1190483
+            got: 1190467
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:3864
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  7) modules/payloads windows/x64/meterpreter_bind_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_bind_tcp has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 1189439
+            got: 1189423
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:3844
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  8) modules/payloads windows/meterpreter_reverse_ipv6_tcp it should behave like payload cached size is consistent windows/meterpreter_reverse_ipv6_tcp has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 957503
+            got: 957487
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:2678
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  9) modules/payloads windows/x64/meterpreter_reverse_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_tcp has a valid cached_size
+     Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+     
+       expected: 1189439
+            got: 1189423
+     
+       (compared using ==)
+     Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:3884
+     # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+  10) modules/payloads windows/meterpreter_reverse_http it should behave like payload cached size is consistent windows/meterpreter_reverse_http has a valid cached_size
+      Failure/Error: expect(pinst.cached_size).to eq(pinst.generate_simple(opts).size)
+      
+        expected: 958547
+             got: 958531
+      
+        (compared using ==)
+      Shared Example Group: "payload cached size is consistent" called from ./spec/modules/payloads_spec.rb:2658
+      # ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:160:in `block (3 levels) in <top (required)>'
+
+Top 10 slowest examples (3.82 seconds, 4.9% of total time):
+  modules/payloads windows/x64/meterpreter_reverse_https it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_https has a valid cached_size
+    0.50471 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:151
+  modules/payloads android/shell/reverse_https it should behave like payload cached size is consistent android/shell/reverse_https can be instantiated
+    0.4667 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:128
+  modules/payloads windows/x64/meterpreter_reverse_http it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_http has a valid cached_size
+    0.44304 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:151
+  modules/payloads windows/x64/meterpreter_reverse_ipv6_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_ipv6_tcp has a valid cached_size
+    0.42633 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:151
+  modules/payloads windows/x64/meterpreter_reverse_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_tcp has a valid cached_size
+    0.40969 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:151
+  modules/payloads windows/x64/meterpreter_bind_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_bind_tcp has a valid cached_size
+    0.35573 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:151
+  modules/payloads android/meterpreter/reverse_https it should behave like payload cached size is consistent android/meterpreter/reverse_https can be instantiated
+    0.32147 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:128
+  modules/payloads windows/meterpreter/reverse_winhttps it should behave like payload cached size is consistent windows/meterpreter/reverse_winhttps has a valid cached_size
+    0.32091 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:151
+  modules/payloads android/meterpreter/reverse_https it should behave like payload cached size is consistent android/meterpreter/reverse_https is dynamic_size?
+    0.30956 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:140
+  modules/payloads android/shell/reverse_https it should behave like payload cached size is consistent android/shell/reverse_https is dynamic_size?
+    0.25792 seconds ./spec/support/shared/examples/payload_cached_size_is_consistent.rb:140
+
+Top 2 slowest example groups:
+  modules/payloads
+    0.01999 seconds average (30.93 seconds / 1547 examples) ./spec/modules/payloads_spec.rb:3
+  modules
+    0.01747 seconds average (46.42 seconds / 2657 examples) ./spec/modules_spec.rb:3
+
+Finished in 1 minute 17.45 seconds (files took 8.28 seconds to load)
+4204 examples, 10 failures
+
+Failed examples:
+
+rspec ./spec/modules/payloads_spec.rb[1:257:1:1:3] # modules/payloads windows/meterpreter_bind_tcp it should behave like payload cached size is consistent windows/meterpreter_bind_tcp has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:261:1:1:3] # modules/payloads windows/meterpreter_reverse_tcp it should behave like payload cached size is consistent windows/meterpreter_reverse_tcp has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:259:1:1:3] # modules/payloads windows/meterpreter_reverse_https it should behave like payload cached size is consistent windows/meterpreter_reverse_https has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:370:1:1:3] # modules/payloads windows/x64/meterpreter_reverse_ipv6_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_ipv6_tcp has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:368:1:1:3] # modules/payloads windows/x64/meterpreter_reverse_http it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_http has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:369:1:1:3] # modules/payloads windows/x64/meterpreter_reverse_https it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_https has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:367:1:1:3] # modules/payloads windows/x64/meterpreter_bind_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_bind_tcp has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:260:1:1:3] # modules/payloads windows/meterpreter_reverse_ipv6_tcp it should behave like payload cached size is consistent windows/meterpreter_reverse_ipv6_tcp has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:371:1:1:3] # modules/payloads windows/x64/meterpreter_reverse_tcp it should behave like payload cached size is consistent windows/x64/meterpreter_reverse_tcp has a valid cached_size
+rspec ./spec/modules/payloads_spec.rb[1:258:1:1:3] # modules/payloads windows/meterpreter_reverse_http it should behave like payload cached size is consistent windows/meterpreter_reverse_http has a valid cached_size
+
+Randomized with seed 46286
+/home/travis/.rvm/rubies/ruby-2.3.4/bin/ruby -I/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.6.0/lib:/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rspec-support-3.6.0/lib /home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+
+travis_time:end:1f512ac6:start=1496803072235731417,finish=1496803162974707526,duration=90738976109
+The command "bash -c "${CMD}"" exited with 1.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:0888506a
+travis_time:end:0888506a:start=1496803163451108978,finish=1496803163455627172,duration=4518194travis_time:start:04358b98nothing changed, not updating cache
+
+travis_time:end:04358b98:start=1496803163460880496,finish=1496803164768102916,duration=1307222420travis_fold:end:cache.2
+Done. Your build exited with 1.

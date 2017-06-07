@@ -1,0 +1,992 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-08f95e0-production-2-worker-org-ec2.travisci.net:bd1cf318-ae01-4335-bf6e-91ff1c8f2bd1
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: f410381:travis:ruby
+startup: 884.46918ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240266470
+Job id: 240266478
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:01e1bcef$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193)   Receiving objects:  70% (8536/12193)   Receiving objects:  71% (8658/12193)   Receiving objects:  72% (8779/12193)   Receiving objects:  73% (8901/12193)   Receiving objects:  74% (9023/12193)   Receiving objects:  75% (9145/12193)   Receiving objects:  76% (9267/12193)   Receiving objects:  77% (9389/12193)   Receiving objects:  78% (9511/12193)   Receiving objects:  79% (9633/12193)   Receiving objects:  80% (9755/12193)   Receiving objects:  81% (9877/12193)   Receiving objects:  82% (9999/12193)   Receiving objects:  83% (10121/12193)   Receiving objects:  84% (10243/12193)   Receiving objects:  85% (10365/12193)   Receiving objects:  86% (10486/12193)   Receiving objects:  87% (10608/12193)   Receiving objects:  88% (10730/12193)   Receiving objects:  89% (10852/12193)   Receiving objects:  90% (10974/12193)   Receiving objects:  91% (11096/12193)   Receiving objects:  92% (11218/12193)   Receiving objects:  93% (11340/12193)   Receiving objects:  94% (11462/12193)   Receiving objects:  95% (11584/12193)   Receiving objects:  96% (11706/12193)   Receiving objects:  97% (11828/12193)   Receiving objects:  98% (11950/12193)   Receiving objects:  99% (12072/12193)   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193)   Receiving objects: 100% (12193/12193), 5.43 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (104/7339)   Resolving deltas:   2% (185/7339)   Resolving deltas:   3% (231/7339)   Resolving deltas:   4% (331/7339)   Resolving deltas:   9% (669/7339)   Resolving deltas:  11% (813/7339)   Resolving deltas:  13% (1013/7339)   Resolving deltas:  14% (1042/7339)   Resolving deltas:  15% (1106/7339)   Resolving deltas:  16% (1176/7339)   Resolving deltas:  17% (1249/7339)   Resolving deltas:  18% (1328/7339)   Resolving deltas:  19% (1411/7339)   Resolving deltas:  20% (1484/7339)   Resolving deltas:  21% (1586/7339)   Resolving deltas:  22% (1615/7339)   Resolving deltas:  23% (1696/7339)   Resolving deltas:  24% (1809/7339)   Resolving deltas:  26% (1915/7339)   Resolving deltas:  27% (1982/7339)   Resolving deltas:  29% (2166/7339)   Resolving deltas:  30% (2202/7339)   Resolving deltas:  31% (2276/7339)   Resolving deltas:  32% (2350/7339)   Resolving deltas:  33% (2456/7339)   Resolving deltas:  34% (2504/7339)   Resolving deltas:  36% (2662/7339)   Resolving deltas:  37% (2717/7339)   Resolving deltas:  38% (2797/7339)   Resolving deltas:  39% (2878/7339)   Resolving deltas:  40% (2962/7339)   Resolving deltas:  41% (3071/7339)   Resolving deltas:  42% (3084/7339)   Resolving deltas:  43% (3190/7339)   Resolving deltas:  45% (3312/7339)   Resolving deltas:  46% (3379/7339)   Resolving deltas:  48% (3528/7339)   Resolving deltas:  49% (3597/7339)   Resolving deltas:  50% (3671/7339)   Resolving deltas:  51% (3808/7339)   Resolving deltas:  52% (3819/7339)   Resolving deltas:  53% (3892/7339)   Resolving deltas:  54% (3964/7339)   Resolving deltas:  55% (4038/7339)   Resolving deltas:  56% (4123/7339)   Resolving deltas:  57% (4192/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4331/7339)   Resolving deltas:  60% (4406/7339)   Resolving deltas:  61% (4478/7339)   Resolving deltas:  62% (4559/7339)   Resolving deltas:  63% (4626/7339)   Resolving deltas:  64% (4697/7339)   Resolving deltas:  65% (4778/7339)   Resolving deltas:  66% (4854/7339)   Resolving deltas:  67% (4922/7339)   Resolving deltas:  68% (5000/7339)   Resolving deltas:  69% (5070/7339)   Resolving deltas:  70% (5140/7339)   Resolving deltas:  71% (5211/7339)   Resolving deltas:  72% (5286/7339)   Resolving deltas:  73% (5360/7339)   Resolving deltas:  74% (5432/7339)   Resolving deltas:  75% (5506/7339)   Resolving deltas:  76% (5581/7339)   Resolving deltas:  77% (5653/7339)   Resolving deltas:  78% (5732/7339)   Resolving deltas:  79% (5798/7339)   Resolving deltas:  80% (5876/7339)   Resolving deltas:  81% (5946/7339)   Resolving deltas:  82% (6018/7339)   Resolving deltas:  83% (6093/7339)   Resolving deltas:  84% (6166/7339)   Resolving deltas:  85% (6241/7339)   Resolving deltas:  86% (6312/7339)   Resolving deltas:  87% (6387/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6684/7339)   Resolving deltas:  92% (6752/7339)   Resolving deltas:  93% (6826/7339)   Resolving deltas:  94% (6901/7339)   Resolving deltas:  95% (6974/7339)   Resolving deltas:  96% (7046/7339)   Resolving deltas:  97% (7119/7339)   Resolving deltas:  98% (7209/7339)   Resolving deltas:  99% (7268/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+Checking connectivity... done.
+
+travis_time:end:01e1bcef:start=1496822982558063048,finish=1496822985888177324,duration=3330114276$ cd chef/chef
+travis_time:start:1cf7c78d$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  10% (1/10)   [Kremote: Compressing objects:  20% (2/10)   [Kremote: Compressing objects:  30% (3/10)   [Kremote: Compressing objects:  40% (4/10)   [Kremote: Compressing objects:  50% (5/10)   [Kremote: Compressing objects:  60% (6/10)   [Kremote: Compressing objects:  70% (7/10)   [Kremote: Compressing objects:  80% (8/10)   [Kremote: Compressing objects:  90% (9/10)   [Kremote: Compressing objects: 100% (10/10)   [Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 23 (delta 17), reused 17 (delta 13), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:1cf7c78d:start=1496822985916258518,finish=1496822986698825415,duration=782566897$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export TEST_GEM=sethvargo/chefspec
+
+travis_fold:start:rvmtravis_time:start:043081c8$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 14.3M  100 14.3M    0     0  45.5M      0 --:--:-- --:--:-- --:--:-- 45.5M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:043081c8:start=1496822994456563973,finish=1496823026418191696,duration=31961627723travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:002843f4$ Installing caching utilities
+
+travis_time:end:002843f4:start=1496823027459742183,finish=1496823027508277038,duration=48534855travis_time:start:05596ff0
+travis_time:end:05596ff0:start=1496823027525365357,finish=1496823027544271566,duration=18906209travis_time:start:0ecb3113attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-3a0930fefdf347e52366b2518ee2df12bb08ea72ba640dc635d4fca2c3a27a26--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.6193/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-3a0930fefdf347e52366b2518ee2df12bb08ea72ba640dc635d4fca2c3a27a26--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:0ecb3113:start=1496823027560063487,finish=1496823030308602947,duration=2748539460travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:0c7c543a
+travis_time:end:0c7c543a:start=1496823030328439082,finish=1496823030354106299,duration=25667217travis_time:start:099c9a38adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:099c9a38:start=1496823030378681665,finish=1496823035343748081,duration=4965066416travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:077ec4a0$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 97%)Fetching: rubygems-update-2.6.11.gem ( 99%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:077ec4a0:start=1496823036528076681,finish=1496823041488391883,duration=4960315202travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0fbedce6$ gem --version
+2.6.11
+
+travis_time:end:0fbedce6:start=1496823041513826325,finish=1496823041834874752,duration=321048427travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:0af40d30$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:0af40d30:start=1496823041853192138,finish=1496823043697995550,duration=1844803412travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:00f47c90$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:00f47c90:start=1496823043716255032,finish=1496823044430555662,duration=714300630travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:0ea48081$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:0ea48081:start=1496823044442427128,finish=1496823044726845422,duration=284418294travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:086ecae0$ rm -f .bundle/config
+
+travis_time:end:086ecae0:start=1496823044746990948,finish=1496823044776569979,duration=29579031travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:10aa5930$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using addressable 2.4.0
+Using mixlib-cli 1.7.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using blankslate 2.1.2.4
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using diff-lcs 1.3
+Using erubis 2.7.0
+Using highline 1.7.8
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using net-ssh 4.1.0
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using plist 3.3.0
+Using systemu 2.6.5
+Using wmi-lite 1.0.0
+Using proxifier 1.0.3
+Using rspec-support 3.6.0
+Using net-telnet 0.1.1
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using multi_json 1.12.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using excon 0.55.0
+Using powerpack 0.1.1
+Using multipart-post 2.0.0
+Using json 2.1.0
+Using net-http-pipeline 1.0.1
+Using net-http-persistent 2.9.4
+Using httpclient 2.8.3
+Using retriable 3.0.2
+Using parallel 1.11.2
+Using method_source 0.8.2
+Using slop 3.6.0
+Using semverse 2.0.0
+Using rubyzip 1.2.1
+Using little-plugger 1.1.4
+Using nori 2.6.0
+Using sslshake 1.2.0
+Using mixlib-versioning 1.1.0
+Using netrc 0.11.0
+Using rubyntlm 0.6.2
+Using rb-readline 0.5.4
+Using websocket 1.2.4
+Using ruby-shadow 2.5.0
+Using ruby-prof 0.16.2
+Using tomlrb 1.2.4
+Using simplecov-html 0.10.1
+Using rainbow 2.2.2
+Using yard 0.9.9
+Using launchy 2.4.3
+Using appbundler 0.10.0
+Using parser 2.4.0.0
+Using binding_of_caller 0.7.2
+Using parslet 1.5.0
+Using tzinfo 1.2.3
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using gyoku 1.3.1
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using mixlib-archive 0.4.1
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using ethon 0.10.1
+Using gssapi 1.2.0
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using faraday 0.12.1
+Using docker-api 1.33.4
+Using pry 0.10.4
+Using logging 2.2.2
+Using mixlib-install 3.2.1
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using rubocop 0.47.1
+Using toml 0.1.2
+Using activesupport 5.1.1
+Using mixlib-authentication 1.4.1
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using typhoeus 0.8.0
+Using rspec_junit_formatter 0.2.3
+Using rspec 3.6.0
+Using faraday-http-cache 2.0.0
+Using faraday_middleware 0.11.0.1
+Using gh 0.15.1
+Using sawyer 0.8.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using winrm 2.2.3
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using cheffish 13.0.0
+Using rspec-its 1.2.0
+Using travis 1.8.8
+Using winrm-fs 1.0.1
+Using serverspec 2.38.1
+Using octokit 4.7.0
+Using train 0.23.0
+Using github_changelog_generator 1.14.2 from https://github.com/chef/github-changelog-generator (at master@7ab4953)
+Using chef 13.2.7 from source at `.`
+Using inspec 1.25.1
+Bundle complete! 24 Gemfile dependencies, 127 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:10aa5930:start=1496823044799866743,finish=1496823046652149716,duration=1852282973travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:018440b2$ echo --color > .rspec
+
+travis_time:end:018440b2:start=1496823046684251762,finish=1496823046704413790,duration=20162028travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:009ecf40$ echo -fp >> .rspec
+
+travis_time:end:009ecf40:start=1496823046715011335,finish=1496823046745779902,duration=30768567travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:224cd5d0$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+This job is running on container-based infrastructure, which does not allow use of 'sudo', setuid, and setgid executables.
+If you require sudo, add 'sudo: required' to your .travis.yml
+
+
+travis_time:end:224cd5d0:start=1496823046774040199,finish=1496823046853672925,duration=79632726travis_fold:end:before_script.3travis_time:start:11ffda23$ bundle exec tasks/bin/run_external_test $TEST_GEM master rake
+Cloning into '/tmp/chef-external-test20170607-4962-7i9dsy'...
+Your branch is up-to-date with 'origin/master'.
+Already on 'master'
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.0.0
+Installing public_suffix 2.0.5
+Installing builder 3.2.3
+Using bundler 1.14.6
+Installing fuzzyurl 0.9.0
+Installing mixlib-config 2.2.4
+Installing mixlib-shellout 2.2.7
+Installing libyajl2 1.2.0 with native extensions
+Installing hashie 3.5.5
+Installing mixlib-log 1.7.1
+Installing rack 2.0.3
+Installing uuidtools 2.1.5
+Installing diff-lcs 1.3
+Installing erubis 2.7.0
+Installing highline 1.7.8
+Installing iniparse 1.4.3
+Installing iso8601 0.9.1
+Installing mixlib-cli 1.7.0
+Installing net-ssh 4.1.0
+Installing ffi 1.9.18 with native extensions
+Installing ipaddress 0.8.3
+Installing plist 3.3.0
+Installing systemu 2.6.5
+Installing wmi-lite 1.0.0
+Installing proxifier 1.0.3
+Installing rspec-support 3.6.0
+Installing multi_json 1.12.1
+Using net-telnet 0.1.1
+Installing sfl 2.3
+Installing syslog-logger 1.6.8
+Installing redcarpet 3.4.0 with native extensions
+Installing yard 0.9.9
+Installing addressable 2.5.1
+Installing ffi-yajl 2.3.0 with native extensions
+Installing mixlib-archive 0.4.1
+Installing mixlib-authentication 1.4.1
+Installing net-sftp 2.1.2
+Installing net-ssh-gateway 2.0.0
+Installing net-scp 1.2.1
+Installing fauxhai 4.1.0
+Installing rspec-core 3.6.0
+Installing rspec-expectations 3.6.0
+Installing rspec-mocks 3.6.0
+Installing chef-config 13.1.31
+Installing chef-zero 13.0.0
+Installing net-ssh-multi 1.2.1
+Installing specinfra 2.68.0
+Installing rspec_junit_formatter 0.2.3
+Installing rspec-its 1.2.0
+Installing rspec 3.6.0
+Installing ohai 13.1.0
+Installing serverspec 2.39.1
+Installing chef 13.1.31
+Using chefspec 7.1.0 from source at `.`
+Bundle complete! 4 Gemfile dependencies, 54 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from yard:
+--------------------------------------------------------------------------------
+As of YARD v0.9.2:
+
+RubyGems "--document=yri,yard" hooks are now supported. You can auto-configure
+YARD to automatically build the yri index for installed gems by typing:
+
+    $ yard config --gem-install-yri
+
+See `yard config --help` for more information on RubyGems install hooks.
+
+You can also add the following to your .gemspec to have YARD document your gem
+on install:
+
+    spec.metadata["yard.run"] = "yri" # use "yard" to build full HTML docs.
+
+--------------------------------------------------------------------------------
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb --color --format progress
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+...............................WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+...WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+..........................*..............................WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+...WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.....................................................
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) ChefSpec::Matchers::ResourceMatcher 
+     # Not yet implemented
+     # ./spec/unit/matchers/resource_matcher_spec.rb:4
+
+Finished in 0.57771 seconds (files took 2.01 seconds to load)
+158 examples, 0 failures, 1 pending
+
+Touched  Resource                                           File:Line
+
+  No Chef resources found, skipping coverage calculation...
+rspec examples/apt_package
+................
+
+Finished in 6.82 seconds (files took 0.1281 seconds to load)
+16 examples, 0 failures
+
+rspec examples/apt_repository
+...
+
+Finished in 0.87536 seconds (files took 0.01123 seconds to load)
+3 examples, 0 failures
+
+rspec examples/apt_update
+...
+
+Finished in 1.07 seconds (files took 0.01172 seconds to load)
+3 examples, 0 failures
+
+rspec examples/attributes
+..
+
+Finished in 0.63951 seconds (files took 0.03712 seconds to load)
+2 examples, 0 failures
+
+rspec examples/batch
+...
+
+Finished in 1.1 seconds (files took 0.02365 seconds to load)
+3 examples, 0 failures
+
+rspec examples/bff_package
+.............
+
+Finished in 0.52978 seconds (files took 0.01029 seconds to load)
+13 examples, 0 failures
+
+rspec examples/cab_package
+.......
+
+Finished in 2.76 seconds (files took 0.02502 seconds to load)
+7 examples, 0 failures
+
+rspec examples/cached
+.
+
+Finished in 0.38406 seconds (files took 0.00632 seconds to load)
+1 example, 0 failures
+
+rspec examples/chef_gem
+................
+
+Finished in 5.66 seconds (files took 0.03886 seconds to load)
+16 examples, 0 failures
+
+rspec examples/chocolatey_package
+......
+
+Finished in 2.55 seconds (files took 0.01328 seconds to load)
+6 examples, 0 failures
+
+rspec examples/compile_time
+......
+
+Finished in 1.6 seconds (files took 0.00718 seconds to load)
+6 examples, 0 failures
+
+rspec examples/cookbook_file
+.............
+
+Finished in 3.83 seconds (files took 0.0164 seconds to load)
+13 examples, 0 failures
+
+rspec examples/cron
+.....
+
+Finished in 1.35 seconds (files took 0.01947 seconds to load)
+5 examples, 0 failures
+
+rspec examples/custom_matcher
+.........
+
+Finished in 2.91 seconds (files took 0.00532 seconds to load)
+9 examples, 0 failures
+
+rspec examples/custom_resource
+..
+
+Finished in 0.74606 seconds (files took 0.01936 seconds to load)
+2 examples, 0 failures
+
+rspec examples/deploy
+......
+
+Finished in 1.65 seconds (files took 0.0073 seconds to load)
+6 examples, 0 failures
+
+rspec examples/directory
+........
+
+Finished in 1.99 seconds (files took 0.00717 seconds to load)
+8 examples, 0 failures
+
+rspec examples/dnf_package
+.............
+
+Finished in 3.65 seconds (files took 0.00985 seconds to load)
+13 examples, 0 failures
+
+rspec examples/do_nothing
+..
+
+Finished in 0.41657 seconds (files took 0.01408 seconds to load)
+2 examples, 0 failures
+
+rspec examples/dpkg_package
+..........
+
+Finished in 3 seconds (files took 0.01467 seconds to load)
+10 examples, 0 failures
+
+rspec examples/dsc_resource
+...
+
+Finished in 1.07 seconds (files took 0.00623 seconds to load)
+3 examples, 0 failures
+
+rspec examples/dsc_script
+..
+
+Finished in 0.82025 seconds (files took 0.00581 seconds to load)
+2 examples, 0 failures
+
+rspec examples/env
+..........
+
+Finished in 4.83 seconds (files took 0.00816 seconds to load)
+10 examples, 0 failures
+
+rspec examples/erl_call
+....
+
+Finished in 0.86686 seconds (files took 0.00674 seconds to load)
+4 examples, 0 failures
+
+rspec examples/execute
+....
+
+Finished in 0.8844 seconds (files took 0.00896 seconds to load)
+4 examples, 0 failures
+
+rspec examples/expect_exception
+...
+
+Finished in 0.84301 seconds (files took 0.00768 seconds to load)
+3 examples, 0 failures
+
+rspec examples/file
+.............
+
+Finished in 4.27 seconds (files took 0.00875 seconds to load)
+13 examples, 0 failures
+
+rspec examples/freebsd_package
+.......
+
+Finished in 1.61 seconds (files took 0.02718 seconds to load)
+7 examples, 0 failures
+
+rspec examples/gem_package
+................
+
+Finished in 5.65 seconds (files took 0.02943 seconds to load)
+16 examples, 0 failures
+
+rspec examples/git
+..........
+
+Finished in 2.39 seconds (files took 0.00843 seconds to load)
+10 examples, 0 failures
+
+rspec examples/group
+.............
+
+Finished in 4.49 seconds (files took 0.00624 seconds to load)
+13 examples, 0 failures
+
+rspec examples/guards
+...
+
+Finished in 0.86639 seconds (files took 0.01157 seconds to load)
+3 examples, 0 failures
+
+rspec examples/heavy_provider_light_resource
+.
+
+Finished in 0.27001 seconds (files took 0.05741 seconds to load)
+1 example, 0 failures
+
+rspec examples/homebrew_package
+.............
+
+Finished in 3.98 seconds (files took 0.01379 seconds to load)
+13 examples, 0 failures
+
+rspec examples/http_request
+...................
+
+Finished in 7.06 seconds (files took 0.00918 seconds to load)
+19 examples, 0 failures
+
+rspec examples/ifconfig
+.........
+
+Finished in 2.88 seconds (files took 0.00875 seconds to load)
+9 examples, 0 failures
+
+rspec examples/include_recipe
+..
+
+Finished in 0.50557 seconds (files took 0.00612 seconds to load)
+2 examples, 0 failures
+
+rspec examples/ips_package
+..........
+
+Finished in 3.66 seconds (files took 0.00974 seconds to load)
+10 examples, 0 failures
+
+rspec examples/launchd
+......
+
+Finished in 2.11 seconds (files took 0.00945 seconds to load)
+6 examples, 0 failures
+
+rspec examples/link
+........
+
+Finished in 2.31 seconds (files took 0.00804 seconds to load)
+8 examples, 0 failures
+
+rspec examples/log
+...
+
+Finished in 0.78591 seconds (files took 0.00662 seconds to load)
+3 examples, 0 failures
+
+rspec examples/macports_package
+.............
+
+Finished in 4.63 seconds (files took 0.01077 seconds to load)
+13 examples, 0 failures
+
+rspec examples/mdadm
+..........
+
+Finished in 2.89 seconds (files took 0.0121 seconds to load)
+10 examples, 0 failures
+
+rspec examples/mount
+...........
+
+Finished in 3.56 seconds (files took 0.02545 seconds to load)
+11 examples, 0 failures
+
+rspec examples/msu_package
+.......
+
+Finished in 2.37 seconds (files took 0.01031 seconds to load)
+7 examples, 0 failures
+
+rspec examples/multiple_actions
+......
+
+Finished in 1.9 seconds (files took 0.01429 seconds to load)
+6 examples, 0 failures
+
+rspec examples/multiple_run_action
+...
+
+Finished in 0.65147 seconds (files took 0.01488 seconds to load)
+3 examples, 0 failures
+
+rspec examples/nothing_matcher
+......
+
+Finished in 1.68 seconds (files took 0.0089 seconds to load)
+6 examples, 0 failures
+
+rspec examples/notifications
+...........
+
+Finished in 3.6 seconds (files took 0.01012 seconds to load)
+11 examples, 0 failures
+
+rspec examples/ohai
+....
+
+Finished in 0.9426 seconds (files took 0.00685 seconds to load)
+4 examples, 0 failures
+
+rspec examples/openbsd_package
+.............
+
+Finished in 0.23076 seconds (files took 0.00944 seconds to load)
+13 examples, 0 failures
+
+rspec examples/osx_profile
+....
+
+Finished in 1.27 seconds (files took 0.00718 seconds to load)
+4 examples, 0 failures
+
+rspec examples/package
+.....................
+
+Finished in 6.83 seconds (files took 0.01111 seconds to load)
+21 examples, 0 failures
+
+rspec examples/pacman_package
+.............
+
+Finished in 3.98 seconds (files took 0.01563 seconds to load)
+13 examples, 0 failures
+
+rspec examples/paludis_package
+.............
+
+Finished in 0.28169 seconds (files took 0.01679 seconds to load)
+13 examples, 0 failures
+
+rspec examples/portage_package
+.............
+
+Finished in 4.38 seconds (files took 0.01562 seconds to load)
+13 examples, 0 failures
+
+rspec examples/powershell_script
+...
+
+Finished in 1.53 seconds (files took 0.01112 seconds to load)
+3 examples, 0 failures
+
+rspec examples/reboot
+...
+
+Finished in 0.87451 seconds (files took 0.00848 seconds to load)
+3 examples, 0 failures
+
+rspec examples/registry_key
+.............
+
+Finished in 4.61 seconds (files took 0.00916 seconds to load)
+13 examples, 0 failures
+
+rspec examples/remote_directory
+..........
+
+Finished in 2.85 seconds (files took 0.00832 seconds to load)
+10 examples, 0 failures
+
+rspec examples/remote_file
+.............
+
+Finished in 3.8 seconds (files took 0.02349 seconds to load)
+13 examples, 0 failures
+
+rspec examples/render_file
+.........................
+
+Finished in 8.34 seconds (files took 0.01388 seconds to load)
+25 examples, 0 failures
+
+rspec examples/roles
+...
+
+Finished in 0.06482 seconds (files took 0.01523 seconds to load)
+3 examples, 0 failures
+
+rspec examples/route
+.......
+
+Finished in 2.33 seconds (files took 0.00699 seconds to load)
+7 examples, 0 failures
+
+rspec examples/rpm_package
+..........
+
+Finished in 3.85 seconds (files took 0.01495 seconds to load)
+10 examples, 0 failures
+
+rspec examples/ruby_block
+.....
+
+Finished in 0.09998 seconds (files took 0.00718 seconds to load)
+5 examples, 0 failures
+
+rspec examples/script
+.....................
+
+Finished in 8.09 seconds (files took 0.00833 seconds to load)
+21 examples, 0 failures
+
+rspec examples/server
+........[2017-06-07T08:14:34+00:00] WARN: Port 8889 not available
+.......WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
+.
+
+Finished in 8.08 seconds (files took 0.02295 seconds to load)
+17 examples, 0 failures
+
+rspec examples/service
+..................
+
+Finished in 6.4 seconds (files took 0.027 seconds to load)
+18 examples, 0 failures
+
+rspec examples/smartos_package
+..........
+
+Finished in 4.01 seconds (files took 0.00966 seconds to load)
+10 examples, 0 failures
+
+rspec examples/solaris_package
+..........
+
+Finished in 3.92 seconds (files took 0.00822 seconds to load)
+10 examples, 0 failures
+
+rspec examples/state_attrs
+.
+
+Finished in 0.28491 seconds (files took 0.0063 seconds to load)
+1 example, 0 failures
+
+rspec examples/step_into
+....
+
+Finished in 1.38 seconds (files took 0.00705 seconds to load)
+4 examples, 0 failures
+
+rspec examples/stub_command
+...
+
+Finished in 0.92707 seconds (files took 0.01514 seconds to load)
+3 examples, 0 failures
+
+rspec examples/stub_data_bag
+...
+
+Finished in 0.10247 seconds (files took 0.02688 seconds to load)
+3 examples, 0 failures
+
+rspec examples/stub_data_bag_item
+...
+
+Finished in 0.05552 seconds (files took 0.00845 seconds to load)
+3 examples, 0 failures
+
+rspec examples/stub_node
+..
+
+Finished in 0.01022 seconds (files took 0.00625 seconds to load)
+2 examples, 0 failures
+
+rspec examples/stub_search
+......
+
+Finished in 0.11382 seconds (files took 0.00956 seconds to load)
+6 examples, 0 failures
+
+rspec examples/subscribes
+...........
+
+Finished in 4.18 seconds (files took 0.01327 seconds to load)
+11 examples, 0 failures
+
+rspec examples/subversion
+.............
+
+Finished in 4.7 seconds (files took 0.00951 seconds to load)
+13 examples, 0 failures
+
+rspec examples/systemd_unit
+............
+
+Finished in 6.94 seconds (files took 0.03242 seconds to load)
+12 examples, 0 failures
+
+rspec examples/template
+.............
+
+Finished in 4.53 seconds (files took 0.01725 seconds to load)
+13 examples, 0 failures
+
+rspec examples/use_inline_resources
+..
+
+Finished in 1.12 seconds (files took 0.0138 seconds to load)
+2 examples, 0 failures
+
+rspec examples/user
+...................
+
+Finished in 7.67 seconds (files took 0.03552 seconds to load)
+19 examples, 0 failures
+
+rspec examples/windows_package
+......
+
+Finished in 2.47 seconds (files took 0.00741 seconds to load)
+6 examples, 0 failures
+
+rspec examples/windows_service
+.....................
+
+Finished in 10.45 seconds (files took 0.0165 seconds to load)
+21 examples, 0 failures
+
+rspec examples/yum_package
+.............
+
+Finished in 4.17 seconds (files took 0.02093 seconds to load)
+13 examples, 0 failures
+
+rspec examples/yum_repository
+......
+
+Finished in 2.6 seconds (files took 0.01383 seconds to load)
+6 examples, 0 failures
+
+rspec examples/zypper_package
+.............
+
+Finished in 0.29417 seconds (files took 0.02745 seconds to load)
+13 examples, 0 failures
+
+
+travis_time:end:11ffda23:start=1496823046894198825,finish=1496823346506676312,duration=299612477487
+The command "bundle exec tasks/bin/run_external_test $TEST_GEM master rake" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:07691970
+travis_time:end:07691970:start=1496823347365252367,finish=1496823347372367257,duration=7114890travis_time:start:03d3039cnothing changed, not updating cache
+
+travis_time:end:03d3039c:start=1496823347385656629,finish=1496823349962080414,duration=2576423785travis_fold:end:cache.2
+Done. Your build exited with 0.

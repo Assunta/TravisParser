@@ -1,0 +1,2340 @@
+travis_fold:start:worker_infoWorker information
+hostname: production-3-worker-org-b-2-gce:ed07e8bf-458b-40b8-8c0c-81c68d0061e8
+version: v2.7.0 https://github.com/travis-ci/worker/tree/66fc24311e055643710f4e0567f6888c927d3ab8
+instance: testing-gce-c6b77371-2c21-401b-a7bd-298ff9e12cd7:travis-ci-sugilite-trusty-1480960799
+startup: 21.43596264s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240204542
+Job id: 240204548
+travis-build version: 4183c5148
+Build image provisioning date and time
+Mon Dec  5 18:47:20 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-51-generic
+Cookbooks Version
+998099c https://github.com/travis-ci/travis-cookbooks/tree/998099c
+git version
+git version 2.11.0
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 21:44:32 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.73
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.1.0
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+jruby-9.1.2.0
+ruby-1.9.3-p551
+ruby-2.0.0-p648
+ruby-2.1.10
+ruby-2.2.5
+ruby-2.3.1
+Pre-installed Node.js versions
+iojs-v1.6
+iojs-v1.6.4
+v0.10
+v0.10.40
+v0.11.16
+v0.12.2
+v0.12.7
+v0.6.21
+v0.8.28
+v4.1.2
+v4.6.2
+v6.9.1
+Pre-installed Go versions
+1.2.2
+1.3.3
+1.4.3
+1.5.4
+1.6.3
+1.7
+mysql version
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Pre-installed PostgreSQL versions
+9.2.19
+9.3.15
+9.4.10
+9.5.5
+9.6.1
+Redis version
+redis-server 3.0.6
+MongoDB version
+MongoDB 3.2.11
+RabbitMQ Version
+3.6.6
+Installed Firefox version
+firefox 38.4.0esr
+ant version
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+mvn version
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /usr/local/maven
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-51-generic", arch: "amd64", family: "unix"
+gradle version
+
+------------------------------------------------------------
+Gradle 2.13
+------------------------------------------------------------
+
+Build time:   2016-04-25 04:10:10 UTC
+Build number: none
+Revision:     3b427b1481e46232107303c90be7b05079b05b1c
+
+Groovy:       2.4.4
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_111 (Oracle Corporation 25.111-b14)
+OS:           Linux 4.4.0-51-generic amd64
+
+kerl list installations
+17.0
+17.1
+17.3
+17.4
+17.5
+18.0
+18.1
+18.2
+18.2.1
+R14B02
+R14B03
+R14B04
+R15B
+R15B01
+R15B02
+R15B03
+R16B
+R16B01
+R16B02
+R16B03
+R16B03-1
+kiex list
+
+kiex elixirs
+
+   elixir-1.0.3
+=* elixir-1.0.4
+
+# => - current
+# =* - current && default
+#  * - default
+
+rebar --version
+rebar 2.6.4 17 20160831_145136 git 2.6.4-dirty
+lein version
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set LEIN_ROOT to disable this warning.
+Leiningen 2.7.1 on Java 1.8.0_111 Java HotSpot(TM) 64-Bit Server VM
+perlbrew list
+  5.8 (5.8.8)
+  5.10 (5.10.1)
+  5.12 (5.12.5)
+  5.14 (5.14.4)
+  5.16 (5.16.3)
+  5.18 (5.18.4)
+  5.20 (5.20.3)
+  5.20-extras (5.20.3)
+  5.20-shrplib (5.20.3)
+  5.20.3
+  5.22 (5.22.0)
+  5.22-extras (5.22.0)
+  5.22-shrplib (5.22.0)
+  5.22.0
+phpenv versions
+  system
+  5.4
+  5.4.45
+  5.5.37
+  5.6
+* 5.6.24 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.7
+  hhvm
+  hhvm-stable
+composer --version
+Composer version 1.2.0 2016-07-19 01:28:52
+travis_fold:end:system_info
+travis_fold:start:git.checkouttravis_time:start:08be472e$ git clone --depth=5 https://github.com/rapid7/metasploit-framework.git rapid7/metasploit-framework
+Cloning into 'rapid7/metasploit-framework'...
+remote: Counting objects: 14044, done.[K
+remote: Compressing objects:   0% (1/10065)   [Kremote: Compressing objects:   1% (101/10065)   [Kremote: Compressing objects:   2% (202/10065)   [Kremote: Compressing objects:   3% (302/10065)   [Kremote: Compressing objects:   4% (403/10065)   [Kremote: Compressing objects:   5% (504/10065)   [Kremote: Compressing objects:   6% (604/10065)   [Kremote: Compressing objects:   7% (705/10065)   [Kremote: Compressing objects:   8% (806/10065)   [Kremote: Compressing objects:   9% (906/10065)   [Kremote: Compressing objects:  10% (1007/10065)   [Kremote: Compressing objects:  11% (1108/10065)   [Kremote: Compressing objects:  12% (1208/10065)   [Kremote: Compressing objects:  13% (1309/10065)   [Kremote: Compressing objects:  14% (1410/10065)   [Kremote: Compressing objects:  15% (1510/10065)   [Kremote: Compressing objects:  16% (1611/10065)   [Kremote: Compressing objects:  17% (1712/10065)   [Kremote: Compressing objects:  18% (1812/10065)   [Kremote: Compressing objects:  19% (1913/10065)   [Kremote: Compressing objects:  20% (2013/10065)   [Kremote: Compressing objects:  21% (2114/10065)   [Kremote: Compressing objects:  22% (2215/10065)   [Kremote: Compressing objects:  23% (2315/10065)   [Kremote: Compressing objects:  24% (2416/10065)   [Kremote: Compressing objects:  25% (2517/10065)   [Kremote: Compressing objects:  26% (2617/10065)   [Kremote: Compressing objects:  27% (2718/10065)   [Kremote: Compressing objects:  28% (2819/10065)   [Kremote: Compressing objects:  29% (2919/10065)   [Kremote: Compressing objects:  30% (3020/10065)   [Kremote: Compressing objects:  31% (3121/10065)   [Kremote: Compressing objects:  32% (3221/10065)   [Kremote: Compressing objects:  33% (3322/10065)   [Kremote: Compressing objects:  34% (3423/10065)   [Kremote: Compressing objects:  35% (3523/10065)   [Kremote: Compressing objects:  36% (3624/10065)   [Kremote: Compressing objects:  37% (3725/10065)   [Kremote: Compressing objects:  38% (3825/10065)   [Kremote: Compressing objects:  39% (3926/10065)   [Kremote: Compressing objects:  40% (4026/10065)   [Kremote: Compressing objects:  41% (4127/10065)   [Kremote: Compressing objects:  42% (4228/10065)   [Kremote: Compressing objects:  43% (4328/10065)   [Kremote: Compressing objects:  44% (4429/10065)   [Kremote: Compressing objects:  45% (4530/10065)   [Kremote: Compressing objects:  46% (4630/10065)   [Kremote: Compressing objects:  47% (4731/10065)   [Kremote: Compressing objects:  48% (4832/10065)   [Kremote: Compressing objects:  49% (4932/10065)   [Kremote: Compressing objects:  50% (5033/10065)   [Kremote: Compressing objects:  51% (5134/10065)   [Kremote: Compressing objects:  52% (5234/10065)   [Kremote: Compressing objects:  53% (5335/10065)   [Kremote: Compressing objects:  54% (5436/10065)   [Kremote: Compressing objects:  55% (5536/10065)   [Kremote: Compressing objects:  56% (5637/10065)   [Kremote: Compressing objects:  56% (5682/10065)   [Kremote: Compressing objects:  57% (5738/10065)   [Kremote: Compressing objects:  58% (5838/10065)   [Kremote: Compressing objects:  59% (5939/10065)   [Kremote: Compressing objects:  60% (6039/10065)   [Kremote: Compressing objects:  61% (6140/10065)   [Kremote: Compressing objects:  62% (6241/10065)   [Kremote: Compressing objects:  63% (6341/10065)   [Kremote: Compressing objects:  64% (6442/10065)   [Kremote: Compressing objects:  65% (6543/10065)   [Kremote: Compressing objects:  66% (6643/10065)   [Kremote: Compressing objects:  67% (6744/10065)   [Kremote: Compressing objects:  68% (6845/10065)   [Kremote: Compressing objects:  69% (6945/10065)   [Kremote: Compressing objects:  70% (7046/10065)   [Kremote: Compressing objects:  71% (7147/10065)   [Kremote: Compressing objects:  72% (7247/10065)   [Kremote: Compressing objects:  73% (7348/10065)   [Kremote: Compressing objects:  74% (7449/10065)   [Kremote: Compressing objects:  75% (7549/10065)   [Kremote: Compressing objects:  76% (7650/10065)   [Kremote: Compressing objects:  77% (7751/10065)   [Kremote: Compressing objects:  78% (7851/10065)   [Kremote: Compressing objects:  79% (7952/10065)   [Kremote: Compressing objects:  80% (8052/10065)   [Kremote: Compressing objects:  81% (8153/10065)   [Kremote: Compressing objects:  82% (8254/10065)   [Kremote: Compressing objects:  83% (8354/10065)   [Kremote: Compressing objects:  84% (8455/10065)   [Kremote: Compressing objects:  85% (8556/10065)   [Kremote: Compressing objects:  86% (8656/10065)   [Kremote: Compressing objects:  87% (8757/10065)   [Kremote: Compressing objects:  88% (8858/10065)   [Kremote: Compressing objects:  89% (8958/10065)   [Kremote: Compressing objects:  90% (9059/10065)   [Kremote: Compressing objects:  91% (9160/10065)   [Kremote: Compressing objects:  92% (9260/10065)   [Kremote: Compressing objects:  93% (9361/10065)   [Kremote: Compressing objects:  94% (9462/10065)   [Kremote: Compressing objects:  95% (9562/10065)   [Kremote: Compressing objects:  96% (9663/10065)   [Kremote: Compressing objects:  97% (9764/10065)   [Kremote: Compressing objects:  98% (9864/10065)   [Kremote: Compressing objects:  99% (9965/10065)   [Kremote: Compressing objects: 100% (10065/10065)   [Kremote: Compressing objects: 100% (10065/10065), done.[K
+Receiving objects:   0% (1/14044)   Receiving objects:   1% (141/14044)   Receiving objects:   2% (281/14044)   Receiving objects:   3% (422/14044)   Receiving objects:   4% (562/14044)   Receiving objects:   5% (703/14044)   Receiving objects:   6% (843/14044)   Receiving objects:   7% (984/14044)   Receiving objects:   8% (1124/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:   9% (1264/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  10% (1405/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  11% (1545/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  12% (1686/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  13% (1826/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  14% (1967/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  15% (2107/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  16% (2248/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  17% (2388/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  18% (2528/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  19% (2669/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  20% (2809/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  21% (2950/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  22% (3090/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  23% (3231/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  24% (3371/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  25% (3511/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  26% (3652/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  27% (3792/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  28% (3933/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  29% (4073/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  30% (4214/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  31% (4354/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  32% (4495/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  33% (4635/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  34% (4775/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  35% (4916/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  36% (5056/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  37% (5197/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  37% (5320/14044), 10.00 MiB | 20.00 MiB/s   Receiving objects:  38% (5337/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  39% (5478/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  40% (5618/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  41% (5759/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  42% (5899/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  43% (6039/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  44% (6180/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  45% (6320/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  46% (6461/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  47% (6601/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  48% (6742/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  49% (6882/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  50% (7022/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  51% (7163/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  52% (7303/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  53% (7444/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  54% (7584/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  55% (7725/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  56% (7865/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  57% (8006/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  58% (8146/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  59% (8286/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  60% (8427/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  61% (8567/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  62% (8708/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  63% (8848/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  64% (8989/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  65% (9129/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  66% (9270/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  67% (9410/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  68% (9550/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  69% (9691/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  70% (9831/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  71% (9972/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  72% (10112/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  73% (10253/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  74% (10393/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  75% (10533/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  76% (10674/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  77% (10814/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  78% (10955/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  79% (11095/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  80% (11236/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  81% (11376/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  82% (11517/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  83% (11657/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  84% (11797/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  85% (11938/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  86% (12078/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  87% (12219/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  88% (12359/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  89% (12500/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  90% (12640/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  91% (12781/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  92% (12921/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  93% (13061/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  94% (13202/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  95% (13342/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  96% (13483/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  97% (13623/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  98% (13764/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects:  99% (13904/14044), 19.45 MiB | 19.46 MiB/s   remote: Total 14044 (delta 4944), reused 7164 (delta 3203), pack-reused 0[K
+Receiving objects: 100% (14044/14044), 19.45 MiB | 19.46 MiB/s   Receiving objects: 100% (14044/14044), 25.81 MiB | 19.46 MiB/s, done.
+Resolving deltas:   0% (0/4944)   Resolving deltas:   1% (66/4944)   Resolving deltas:   2% (99/4944)   Resolving deltas:   3% (149/4944)   Resolving deltas:   4% (199/4944)   Resolving deltas:   5% (248/4944)   Resolving deltas:   6% (297/4944)   Resolving deltas:   7% (352/4944)   Resolving deltas:   8% (399/4944)   Resolving deltas:   9% (445/4944)   Resolving deltas:  10% (495/4944)   Resolving deltas:  11% (548/4944)   Resolving deltas:  12% (594/4944)   Resolving deltas:  13% (643/4944)   Resolving deltas:  14% (694/4944)   Resolving deltas:  15% (742/4944)   Resolving deltas:  16% (792/4944)   Resolving deltas:  17% (841/4944)   Resolving deltas:  18% (898/4944)   Resolving deltas:  19% (940/4944)   Resolving deltas:  20% (989/4944)   Resolving deltas:  21% (1039/4944)   Resolving deltas:  22% (1088/4944)   Resolving deltas:  23% (1138/4944)   Resolving deltas:  24% (1187/4944)   Resolving deltas:  25% (1236/4944)   Resolving deltas:  26% (1286/4944)   Resolving deltas:  27% (1335/4944)   Resolving deltas:  28% (1385/4944)   Resolving deltas:  29% (1434/4944)   Resolving deltas:  30% (1484/4944)   Resolving deltas:  31% (1533/4944)   Resolving deltas:  32% (1583/4944)   Resolving deltas:  33% (1632/4944)   Resolving deltas:  34% (1681/4944)   Resolving deltas:  35% (1732/4944)   Resolving deltas:  36% (1780/4944)   Resolving deltas:  37% (1831/4944)   Resolving deltas:  38% (1879/4944)   Resolving deltas:  39% (1929/4944)   Resolving deltas:  40% (1978/4944)   Resolving deltas:  41% (2028/4944)   Resolving deltas:  42% (2077/4944)   Resolving deltas:  43% (2126/4944)   Resolving deltas:  44% (2177/4944)   Resolving deltas:  45% (2226/4944)   Resolving deltas:  46% (2275/4944)   Resolving deltas:  47% (2324/4944)   Resolving deltas:  48% (2375/4944)   Resolving deltas:  49% (2423/4944)   Resolving deltas:  50% (2472/4944)   Resolving deltas:  51% (2524/4944)   Resolving deltas:  52% (2571/4944)   Resolving deltas:  53% (2622/4944)   Resolving deltas:  54% (2670/4944)   Resolving deltas:  55% (2720/4944)   Resolving deltas:  56% (2770/4944)   Resolving deltas:  57% (2819/4944)   Resolving deltas:  58% (2868/4944)   Resolving deltas:  59% (2919/4944)   Resolving deltas:  60% (2968/4944)   Resolving deltas:  61% (3019/4944)   Resolving deltas:  62% (3066/4944)   Resolving deltas:  63% (3115/4944)   Resolving deltas:  64% (3166/4944)   Resolving deltas:  65% (3214/4944)   Resolving deltas:  66% (3264/4944)   Resolving deltas:  67% (3318/4944)   Resolving deltas:  68% (3362/4944)   Resolving deltas:  69% (3413/4944)   Resolving deltas:  70% (3461/4944)   Resolving deltas:  71% (3511/4944)   Resolving deltas:  72% (3560/4944)   Resolving deltas:  73% (3610/4944)   Resolving deltas:  74% (3659/4944)   Resolving deltas:  75% (3708/4944)   Resolving deltas:  76% (3758/4944)   Resolving deltas:  77% (3807/4944)   Resolving deltas:  78% (3862/4944)   Resolving deltas:  79% (3906/4944)   Resolving deltas:  80% (3957/4944)   Resolving deltas:  81% (4005/4944)   Resolving deltas:  82% (4056/4944)   Resolving deltas:  83% (4111/4944)   Resolving deltas:  84% (4154/4944)   Resolving deltas:  85% (4203/4944)   Resolving deltas:  86% (4259/4944)   Resolving deltas:  87% (4311/4944)   Resolving deltas:  88% (4352/4944)   Resolving deltas:  89% (4402/4944)   Resolving deltas:  90% (4450/4944)   Resolving deltas:  91% (4500/4944)   Resolving deltas:  92% (4549/4944)   Resolving deltas:  93% (4598/4944)   Resolving deltas:  94% (4648/4944)   Resolving deltas:  95% (4697/4944)   Resolving deltas:  96% (4747/4944)   Resolving deltas:  97% (4797/4944)   Resolving deltas:  98% (4847/4944)   Resolving deltas:  99% (4895/4944)   Resolving deltas: 100% (4944/4944)   Resolving deltas: 100% (4944/4944), done.
+
+travis_time:end:08be472e:start=1496803224508041066,finish=1496803229799086625,duration=5291045559$ cd rapid7/metasploit-framework
+travis_time:start:1b8adf84$ git fetch origin +refs/pull/8523/merge:
+remote: Counting objects: 155837   [Kremote: Counting objects: 390227, done.[K
+remote: Compressing objects:   0% (1/95600)   [Kremote: Compressing objects:   1% (956/95600)   [Kremote: Compressing objects:   2% (1912/95600)   [Kremote: Compressing objects:   3% (2868/95600)   [Kremote: Compressing objects:   4% (3824/95600)   [Kremote: Compressing objects:   5% (4780/95600)   [Kremote: Compressing objects:   6% (5736/95600)   [Kremote: Compressing objects:   7% (6692/95600)   [Kremote: Compressing objects:   8% (7648/95600)   [Kremote: Compressing objects:   9% (8604/95600)   [Kremote: Compressing objects:  10% (9560/95600)   [Kremote: Compressing objects:  11% (10516/95600)   [Kremote: Compressing objects:  12% (11472/95600)   [Kremote: Compressing objects:  13% (12428/95600)   [Kremote: Compressing objects:  13% (13047/95600)   [Kremote: Compressing objects:  14% (13384/95600)   [Kremote: Compressing objects:  15% (14340/95600)   [Kremote: Compressing objects:  16% (15296/95600)   [Kremote: Compressing objects:  17% (16252/95600)   [Kremote: Compressing objects:  18% (17208/95600)   [Kremote: Compressing objects:  19% (18164/95600)   [Kremote: Compressing objects:  20% (19120/95600)   [Kremote: Compressing objects:  21% (20076/95600)   [Kremote: Compressing objects:  22% (21032/95600)   [Kremote: Compressing objects:  23% (21988/95600)   [Kremote: Compressing objects:  24% (22944/95600)   [Kremote: Compressing objects:  25% (23900/95600)   [Kremote: Compressing objects:  26% (24856/95600)   [Kremote: Compressing objects:  27% (25812/95600)   [Kremote: Compressing objects:  28% (26768/95600)   [Kremote: Compressing objects:  29% (27724/95600)   [Kremote: Compressing objects:  30% (28680/95600)   [Kremote: Compressing objects:  31% (29636/95600)   [Kremote: Compressing objects:  32% (30592/95600)   [Kremote: Compressing objects:  33% (31548/95600)   [Kremote: Compressing objects:  34% (32504/95600)   [Kremote: Compressing objects:  35% (33460/95600)   [Kremote: Compressing objects:  36% (34416/95600)   [Kremote: Compressing objects:  37% (35372/95600)   [Kremote: Compressing objects:  38% (36328/95600)   [Kremote: Compressing objects:  39% (37284/95600)   [Kremote: Compressing objects:  40% (38240/95600)   [Kremote: Compressing objects:  41% (39196/95600)   [Kremote: Compressing objects:  42% (40152/95600)   [Kremote: Compressing objects:  43% (41108/95600)   [Kremote: Compressing objects:  44% (42064/95600)   [Kremote: Compressing objects:  44% (42067/95600)   [Kremote: Compressing objects:  45% (43020/95600)   [Kremote: Compressing objects:  46% (43976/95600)   [Kremote: Compressing objects:  47% (44932/95600)   [Kremote: Compressing objects:  48% (45888/95600)   [Kremote: Compressing objects:  49% (46844/95600)   [Kremote: Compressing objects:  50% (47800/95600)   [Kremote: Compressing objects:  51% (48756/95600)   [Kremote: Compressing objects:  52% (49712/95600)   [Kremote: Compressing objects:  53% (50668/95600)   [Kremote: Compressing objects:  54% (51624/95600)   [Kremote: Compressing objects:  55% (52580/95600)   [Kremote: Compressing objects:  56% (53536/95600)   [Kremote: Compressing objects:  57% (54492/95600)   [Kremote: Compressing objects:  58% (55448/95600)   [Kremote: Compressing objects:  59% (56404/95600)   [Kremote: Compressing objects:  60% (57360/95600)   [Kremote: Compressing objects:  61% (58316/95600)   [Kremote: Compressing objects:  62% (59272/95600)   [Kremote: Compressing objects:  63% (60228/95600)   [Kremote: Compressing objects:  64% (61184/95600)   [Kremote: Compressing objects:  65% (62140/95600)   [Kremote: Compressing objects:  66% (63096/95600)   [Kremote: Compressing objects:  67% (64052/95600)   [Kremote: Compressing objects:  68% (65008/95600)   [Kremote: Compressing objects:  69% (65964/95600)   [Kremote: Compressing objects:  70% (66920/95600)   [Kremote: Compressing objects:  71% (67876/95600)   [Kremote: Compressing objects:  72% (68832/95600)   [Kremote: Compressing objects:  73% (69788/95600)   [Kremote: Compressing objects:  74% (70744/95600)   [Kremote: Compressing objects:  75% (71700/95600)   [Kremote: Compressing objects:  76% (72656/95600)   [Kremote: Compressing objects:  77% (73612/95600)   [Kremote: Compressing objects:  78% (74568/95600)   [Kremote: Compressing objects:  79% (75524/95600)   [Kremote: Compressing objects:  80% (76480/95600)   [Kremote: Compressing objects:  81% (77436/95600)   [Kremote: Compressing objects:  82% (78392/95600)   [Kremote: Compressing objects:  83% (79348/95600)   [Kremote: Compressing objects:  84% (80304/95600)   [Kremote: Compressing objects:  85% (81260/95600)   [Kremote: Compressing objects:  86% (82216/95600)   [Kremote: Compressing objects:  87% (83172/95600)   [Kremote: Compressing objects:  88% (84128/95600)   [Kremote: Compressing objects:  89% (85084/95600)   [Kremote: Compressing objects:  90% (86040/95600)   [Kremote: Compressing objects:  91% (86996/95600)   [Kremote: Compressing objects:  92% (87952/95600)   [Kremote: Compressing objects:  93% (88908/95600)   [Kremote: Compressing objects:  94% (89864/95600)   [Kremote: Compressing objects:  95% (90820/95600)   [Kremote: Compressing objects:  96% (91776/95600)   [Kremote: Compressing objects:  97% (92732/95600)   [Kremote: Compressing objects:  98% (93688/95600)   [Kremote: Compressing objects:  99% (94644/95600)   [Kremote: Compressing objects: 100% (95600/95600)   [Kremote: Compressing objects: 100% (95600/95600), done.[K
+Receiving objects:   0% (1/390227)   Receiving objects:   1% (3903/390227)   Receiving objects:   2% (7805/390227)   Receiving objects:   3% (11707/390227)   Receiving objects:   4% (15610/390227)   Receiving objects:   5% (19512/390227)   Receiving objects:   6% (23414/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:   7% (27316/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:   8% (31219/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:   9% (35121/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  10% (39023/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  11% (42925/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  12% (46828/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  13% (50730/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  14% (54632/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  15% (58535/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  16% (62437/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  16% (62642/390227), 9.16 MiB | 18.32 MiB/s   Receiving objects:  17% (66339/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  18% (70241/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  19% (74144/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  20% (78046/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  21% (81948/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  22% (85850/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  23% (89753/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  24% (93655/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  25% (97557/390227), 17.23 MiB | 17.22 MiB/s   Receiving objects:  26% (101460/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  27% (105362/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  28% (109264/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  29% (113166/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  30% (117069/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  31% (120971/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  32% (124873/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  33% (128775/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  34% (132678/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  35% (136580/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  35% (139012/390227), 27.50 MiB | 18.33 MiB/s   Receiving objects:  36% (140482/390227), 37.94 MiB | 18.97 MiB/s   Receiving objects:  37% (144384/390227), 37.94 MiB | 18.97 MiB/s   Receiving objects:  38% (148287/390227), 37.94 MiB | 18.97 MiB/s   Receiving objects:  39% (152189/390227), 37.94 MiB | 18.97 MiB/s   Receiving objects:  40% (156091/390227), 37.94 MiB | 18.97 MiB/s   Receiving objects:  40% (158405/390227), 48.60 MiB | 19.44 MiB/s   Receiving objects:  41% (159994/390227), 59.28 MiB | 19.76 MiB/s   Receiving objects:  42% (163896/390227), 59.28 MiB | 19.76 MiB/s   Receiving objects:  43% (167798/390227), 59.28 MiB | 19.76 MiB/s   Receiving objects:  44% (171700/390227), 59.28 MiB | 19.76 MiB/s   Receiving objects:  45% (175603/390227), 59.28 MiB | 19.76 MiB/s   Receiving objects:  46% (179505/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  47% (183407/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  48% (187309/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  49% (191212/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  50% (195114/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  51% (199016/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  52% (202919/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  53% (206821/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  54% (210723/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  55% (214625/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  56% (218528/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  57% (222430/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  57% (223838/390227), 69.93 MiB | 19.98 MiB/s   Receiving objects:  58% (226332/390227), 80.61 MiB | 20.15 MiB/s   Receiving objects:  59% (230234/390227), 80.61 MiB | 20.15 MiB/s   Receiving objects:  60% (234137/390227), 80.61 MiB | 20.15 MiB/s   Receiving objects:  61% (238039/390227), 80.61 MiB | 20.15 MiB/s   Receiving objects:  61% (240683/390227), 102.24 MiB | 20.69 MiB/s   Receiving objects:  62% (241941/390227), 113.09 MiB | 21.31 MiB/s   Receiving objects:  63% (245844/390227), 113.09 MiB | 21.31 MiB/s   Receiving objects:  63% (246955/390227), 123.14 MiB | 21.26 MiB/s   Receiving objects:  64% (249746/390227), 123.14 MiB | 21.26 MiB/s   Receiving objects:  65% (253648/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  66% (257550/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  67% (261453/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  68% (265355/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  69% (269257/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  70% (273159/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  71% (277062/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  72% (280964/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  72% (282154/390227), 133.19 MiB | 21.17 MiB/s   Receiving objects:  73% (284866/390227), 143.56 MiB | 21.11 MiB/s   Receiving objects:  74% (288768/390227), 143.56 MiB | 21.11 MiB/s   Receiving objects:  75% (292671/390227), 143.56 MiB | 21.11 MiB/s   Receiving objects:  76% (296573/390227), 143.56 MiB | 21.11 MiB/s   Receiving objects:  76% (298101/390227), 164.50 MiB | 21.02 MiB/s   Receiving objects:  77% (300475/390227), 174.34 MiB | 20.83 MiB/s   Receiving objects:  78% (304378/390227), 174.34 MiB | 20.83 MiB/s   Receiving objects:  78% (307246/390227), 185.48 MiB | 20.88 MiB/s   Receiving objects:  79% (308280/390227), 185.48 MiB | 20.88 MiB/s   Receiving objects:  79% (310378/390227), 207.17 MiB | 20.91 MiB/s   Receiving objects:  80% (312182/390227), 207.17 MiB | 20.91 MiB/s   Receiving objects:  81% (316084/390227), 207.17 MiB | 20.91 MiB/s   Receiving objects:  82% (319987/390227), 217.87 MiB | 21.05 MiB/s   Receiving objects:  83% (323889/390227), 217.87 MiB | 21.05 MiB/s   Receiving objects:  84% (327791/390227), 217.87 MiB | 21.05 MiB/s   Receiving objects:  84% (330753/390227), 228.70 MiB | 21.22 MiB/s   Receiving objects:  85% (331693/390227), 228.70 MiB | 21.22 MiB/s   Receiving objects:  86% (335596/390227), 228.70 MiB | 21.22 MiB/s   Receiving objects:  87% (339498/390227), 228.70 MiB | 21.22 MiB/s   Receiving objects:  88% (343400/390227), 228.70 MiB | 21.22 MiB/s   Receiving objects:  89% (347303/390227), 239.47 MiB | 21.31 MiB/s   Receiving objects:  90% (351205/390227), 239.47 MiB | 21.31 MiB/s   Receiving objects:  91% (355107/390227), 239.47 MiB | 21.31 MiB/s   Receiving objects:  92% (359009/390227), 239.47 MiB | 21.31 MiB/s   Receiving objects:  92% (361523/390227), 239.47 MiB | 21.31 MiB/s   Receiving objects:  93% (362912/390227), 250.04 MiB | 21.26 MiB/s   Receiving objects:  94% (366814/390227), 250.04 MiB | 21.26 MiB/s   Receiving objects:  95% (370716/390227), 250.04 MiB | 21.26 MiB/s   Receiving objects:  95% (374186/390227), 271.06 MiB | 21.49 MiB/s   Receiving objects:  96% (374618/390227), 271.06 MiB | 21.49 MiB/s   Receiving objects:  97% (378521/390227), 271.06 MiB | 21.49 MiB/s   Receiving objects:  98% (382423/390227), 271.06 MiB | 21.49 MiB/s   Receiving objects:  99% (386325/390227), 271.06 MiB | 21.49 MiB/s   remote: Total 390227 (delta 290345), reused 384259 (delta 284544), pack-reused 0[K
+Receiving objects: 100% (390227/390227), 281.71 MiB | 21.38 MiB/s   Receiving objects: 100% (390227/390227), 283.98 MiB | 21.31 MiB/s, done.
+Resolving deltas:   0% (0/290345)   Resolving deltas:   1% (2908/290345)   Resolving deltas:   2% (5909/290345)   Resolving deltas:   3% (8717/290345)   Resolving deltas:   4% (11622/290345)   Resolving deltas:   5% (14596/290345)   Resolving deltas:   6% (17485/290345)   Resolving deltas:   7% (20350/290345)   Resolving deltas:   8% (23232/290345)   Resolving deltas:   9% (26642/290345)   Resolving deltas:  10% (29041/290345)   Resolving deltas:  11% (32041/290345)   Resolving deltas:  12% (34855/290345)   Resolving deltas:  13% (37750/290345)   Resolving deltas:  14% (40650/290345)   Resolving deltas:  15% (43599/290345)   Resolving deltas:  16% (46469/290345)   Resolving deltas:  17% (49579/290345)   Resolving deltas:  18% (52397/290345)   Resolving deltas:  19% (55234/290345)   Resolving deltas:  20% (58069/290345)   Resolving deltas:  21% (61456/290345)   Resolving deltas:  22% (63900/290345)   Resolving deltas:  23% (66961/290345)   Resolving deltas:  24% (69683/290345)   Resolving deltas:  25% (72628/290345)   Resolving deltas:  26% (75953/290345)   Resolving deltas:  27% (78405/290345)   Resolving deltas:  28% (81533/290345)   Resolving deltas:  29% (84278/290345)   Resolving deltas:  30% (87104/290345)   Resolving deltas:  31% (90516/290345)   Resolving deltas:  32% (92933/290345)   Resolving deltas:  33% (95814/290345)   Resolving deltas:  34% (98725/290345)   Resolving deltas:  35% (101630/290345)   Resolving deltas:  36% (105724/290345)   Resolving deltas:  37% (107537/290345)   Resolving deltas:  38% (110473/290345)   Resolving deltas:  39% (113295/290345)   Resolving deltas:  40% (116228/290345)   Resolving deltas:  41% (119105/290345)   Resolving deltas:  42% (122014/290345)   Resolving deltas:  43% (124942/290345)   Resolving deltas:  44% (127754/290345)   Resolving deltas:  45% (130731/290345)   Resolving deltas:  46% (133627/290345)   Resolving deltas:  47% (136471/290345)   Resolving deltas:  48% (139746/290345)   Resolving deltas:  48% (140510/290345)   Resolving deltas:  49% (142286/290345)   Resolving deltas:  50% (145217/290345)   Resolving deltas:  51% (148280/290345)   Resolving deltas:  52% (151069/290345)   Resolving deltas:  53% (153895/290345)   Resolving deltas:  54% (156846/290345)   Resolving deltas:  55% (159712/290345)   Resolving deltas:  56% (162606/290345)   Resolving deltas:  57% (165540/290345)   Resolving deltas:  58% (168401/290345)   Resolving deltas:  59% (171313/290345)   Resolving deltas:  60% (174221/290345)   Resolving deltas:  61% (177168/290345)   Resolving deltas:  62% (180014/290345)   Resolving deltas:  63% (182920/290345)   Resolving deltas:  64% (185854/290345)   Resolving deltas:  65% (188727/290345)   Resolving deltas:  66% (191634/290345)   Resolving deltas:  67% (194534/290345)   Resolving deltas:  68% (197462/290345)   Resolving deltas:  69% (200340/290345)   Resolving deltas:  70% (203243/290345)   Resolving deltas:  70% (203888/290345)   Resolving deltas:  71% (206155/290345)   Resolving deltas:  72% (209061/290345)   Resolving deltas:  73% (211969/290345)   Resolving deltas:  74% (214858/290345)   Resolving deltas:  75% (217786/290345)   Resolving deltas:  76% (220668/290345)   Resolving deltas:  77% (223571/290345)   Resolving deltas:  78% (226475/290345)   Resolving deltas:  79% (229379/290345)   Resolving deltas:  79% (232230/290345)   Resolving deltas:  80% (232277/290345)   Resolving deltas:  81% (235189/290345)   Resolving deltas:  82% (238085/290345)   Resolving deltas:  82% (239901/290345)   Resolving deltas:  83% (240988/290345)   Resolving deltas:  84% (244087/290345)   Resolving deltas:  85% (246797/290345)   Resolving deltas:  86% (249700/290345)   Resolving deltas:  87% (252610/290345)   Resolving deltas:  88% (255507/290345)   Resolving deltas:  89% (258418/290345)   Resolving deltas:  90% (261324/290345)   Resolving deltas:  91% (264230/290345)   Resolving deltas:  92% (267130/290345)   Resolving deltas:  92% (268093/290345)   Resolving deltas:  93% (270036/290345)   Resolving deltas:  94% (272940/290345)   Resolving deltas:  95% (275828/290345)   Resolving deltas:  96% (278741/290345)   Resolving deltas:  97% (281658/290345)   Resolving deltas:  98% (284551/290345)   Resolving deltas:  99% (287442/290345)   Resolving deltas:  99% (289796/290345)   Resolving deltas: 100% (290345/290345)   Resolving deltas: 100% (290345/290345), completed with 4323 local objects.
+From https://github.com/rapid7/metasploit-framework
+ * branch                  refs/pull/8523/merge -> FETCH_HEAD
+
+travis_time:end:1b8adf84:start=1496803229805011770,finish=1496803261231264515,duration=31426252745$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:git.submoduletravis_time:start:0747c20c$ git submodule update --init --recursive
+Submodule 'external/source/ReflectiveDLLInjection' (https://github.com/rapid7/ReflectiveDLLInjection.git) registered for path 'external/source/ReflectiveDLLInjection'
+Cloning into '/home/travis/build/rapid7/metasploit-framework/external/source/ReflectiveDLLInjection'...
+Submodule path 'external/source/ReflectiveDLLInjection': checked out '88e8e5f109793f09b35cb17a621f33647d644103'
+
+travis_time:end:0747c20c:start=1496803261784349690,finish=1496803262835243503,duration=1050893813travis_fold:end:git.submoduletravis_fold:start:aptInstalling APT Packages (BETA)
+$ export DEBIAN_FRONTEND=noninteractive
+travis_time:start:138ece62$ sudo -E apt-get -yq update &>> ~/apt-get-update.log
+
+travis_time:end:138ece62:start=1496803262841556377,finish=1496803272412396448,duration=9570840071travis_time:start:06cd2485$ sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install libpcap-dev graphviz
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libpcap0.8-dev
+Suggested packages:
+  graphviz-doc
+The following NEW packages will be installed:
+  graphviz libpcap-dev libpcap0.8-dev
+0 upgraded, 3 newly installed, 0 to remove and 211 not upgraded.
+Need to get 669 kB of archives.
+After this operation, 2,547 kB of additional disk space will be used.
+Get:1 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty-updates/main graphviz amd64 2.36.0-0ubuntu3.2 [461 kB]
+Get:2 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libpcap0.8-dev amd64 1.5.3-2 [205 kB]
+Get:3 http://us-central1.gce.archive.ubuntu.com/ubuntu/ trusty/main libpcap-dev all 1.5.3-2 [3,390 B]
+Fetched 669 kB in 0s (27.2 MB/s)
+Selecting previously unselected package graphviz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88286 files and directories currently installed.)
+Preparing to unpack .../graphviz_2.36.0-0ubuntu3.2_amd64.deb ...
+Unpacking graphviz (2.36.0-0ubuntu3.2) ...
+Selecting previously unselected package libpcap0.8-dev.
+Preparing to unpack .../libpcap0.8-dev_1.5.3-2_amd64.deb ...
+Unpacking libpcap0.8-dev (1.5.3-2) ...
+Selecting previously unselected package libpcap-dev.
+Preparing to unpack .../libpcap-dev_1.5.3-2_all.deb ...
+Unpacking libpcap-dev (1.5.3-2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up graphviz (2.36.0-0ubuntu3.2) ...
+Setting up libpcap0.8-dev (1.5.3-2) ...
+Setting up libpcap-dev (1.5.3-2) ...
+
+travis_time:end:06cd2485:start=1496803272416974522,finish=1496803277581986377,duration=5165011855travis_fold:end:apttravis_fold:start:servicestravis_time:start:1e3323a9$ sudo service docker start
+start: Job is already running: docker
+
+travis_time:end:1e3323a9:start=1496803277587123736,finish=1496803277603970968,duration=16847232travis_fold:end:servicestravis_fold:start:postgresqlStarting PostgreSQL v9.6
+travis_time:start:14d08880$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.5 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.6 database server       G G[ OK ]
+
+travis_time:end:14d08880:start=1496803280610727826,finish=1496803281963436935,duration=1352709109travis_time:start:1fb68094$ sudo service postgresql start 9.6
+ * Starting PostgreSQL 9.6 database server       G G[ OK ]
+
+travis_time:end:1fb68094:start=1496803281968132277,finish=1496803284194730722,duration=2226598445travis_time:start:105b2ac4$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:105b2ac4:start=1496803284199176696,finish=1496803284253828251,duration=54651555travis_time:start:13f87700$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:13f87700:start=1496803284258472777,finish=1496803284509883191,duration=251410414travis_time:start:0bc26500$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:0bc26500:start=1496803284514485877,finish=1496803284553785548,duration=39299671travis_time:start:017e5120$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:017e5120:start=1496803284558567130,finish=1496803284598824854,duration=40257724travis_fold:end:postgresql
+Setting environment variables from .travis.yml
+$ export CMD='bundle exec rake spec SPEC_OPTS="--tag ~content"'
+
+travis_fold:start:rvmtravis_time:start:0152c8b0$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 12 14.3M   12 1783k    0     0  1475k      0  0:00:09  0:00:01  0:00:08 1475k100 14.3M  100 14.3M    0     0  7120k      0  0:00:02  0:00:02 --:--:-- 14.7M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:0152c8b0:start=1496803284610221249,finish=1496803302233769561,duration=17623548312travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:0ea76248$ Installing caching utilities
+
+travis_time:end:0ea76248:start=1496803302437066676,finish=1496803302573420489,duration=136353813travis_time:start:00798ca3
+travis_time:end:00798ca3:start=1496803302579842754,finish=1496803302584131886,duration=4289132travis_time:start:00bad2a0attempting to download cache archive
+fetching PR.8523/cache-linux-trusty-e2dce4ddf20cff5215035652620f04e3a87767694fa4fcd7c77d6e1f3b2f1736--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.8523/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-e2dce4ddf20cff5215035652620f04e3a87767694fa4fcd7c77d6e1f3b2f1736--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:00bad2a0:start=1496803302589049893,finish=1496803304104751427,duration=1515701534travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:0616deaf
+travis_time:end:0616deaf:start=1496803304109923791,finish=1496803304114359302,duration=4435511travis_time:start:2665272fadding /home/travis/build/rapid7/metasploit-framework/vendor/bundle to cache
+creating directory /home/travis/build/rapid7/metasploit-framework/vendor/bundle
+
+travis_time:end:2665272f:start=1496803304119428550,finish=1496803307451978927,duration=3332550377travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:0e63ce7b$ echo 'gem: --no-ri --no-rdoc' > ~/.gemrc
+
+travis_time:end:0e63ce7b:start=1496803307885779368,finish=1496803307890722356,duration=4942988travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:03a4c618$ rake --version
+rake, version 12.0.0
+
+travis_time:end:03a4c618:start=1496803307895786850,finish=1496803307981828318,duration=86041468travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:0468276c$ ln -sf ../../tools/dev/pre-commit-hook.rb ./.git/hooks/post-merge
+
+travis_time:end:0468276c:start=1496803307987169114,finish=1496803307992172585,duration=5003471travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:1d6250cf$ ls -la ./.git/hooks
+total 52
+drwxrwxr-x 2 travis travis 4096 Jun  7 02:41 .
+drwxrwxr-x 9 travis travis 4096 Jun  7 02:41 ..
+-rwxrwxr-x 1 travis travis  478 Jun  7 02:40 applypatch-msg.sample
+-rwxrwxr-x 1 travis travis  896 Jun  7 02:40 commit-msg.sample
+lrwxrwxrwx 1 travis travis   34 Jun  7 02:41 post-merge -> ../../tools/dev/pre-commit-hook.rb
+-rwxrwxr-x 1 travis travis  189 Jun  7 02:40 post-update.sample
+-rwxrwxr-x 1 travis travis  424 Jun  7 02:40 pre-applypatch.sample
+-rwxrwxr-x 1 travis travis 1642 Jun  7 02:40 pre-commit.sample
+-rwxrwxr-x 1 travis travis 1239 Jun  7 02:40 prepare-commit-msg.sample
+-rwxrwxr-x 1 travis travis 1348 Jun  7 02:40 pre-push.sample
+-rwxrwxr-x 1 travis travis 4898 Jun  7 02:40 pre-rebase.sample
+-rwxrwxr-x 1 travis travis  544 Jun  7 02:40 pre-receive.sample
+-rwxrwxr-x 1 travis travis 3610 Jun  7 02:40 update.sample
+
+travis_time:end:1d6250cf:start=1496803307997451988,finish=1496803308003411835,duration=5959847travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:093342b4$ ./.git/hooks/post-merge
+[*] Running msftidy.rb in ./.git/hooks/post-merge mode
+--- Checking new and changed module syntax with tools/dev/msftidy.rb ---
+modules/payloads/singles/php/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_bind_tcp.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_reverse_http.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_reverse_https.rb - msftidy check passed
+modules/payloads/singles/python/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_bind_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_http.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_https.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_ipv6_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_bind_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_http.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_https.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_ipv6_tcp.rb - msftidy check passed
+modules/payloads/singles/windows/x64/meterpreter_reverse_tcp.rb - msftidy check passed
+modules/payloads/stages/php/meterpreter.rb - msftidy check passed
+------------------------------------------------------------------------
+
+travis_time:end:093342b4:start=1496803308008710556,finish=1496803308905337161,duration=896626605travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:182356fa$ gem install bundler
+Fetching: bundler-1.15.1.gemFetching: bundler-1.15.1.gem (  1%)Fetching: bundler-1.15.1.gem (  2%)Fetching: bundler-1.15.1.gem (  3%)Fetching: bundler-1.15.1.gem (  4%)Fetching: bundler-1.15.1.gem (  5%)Fetching: bundler-1.15.1.gem (  6%)Fetching: bundler-1.15.1.gem (  7%)Fetching: bundler-1.15.1.gem (  8%)Fetching: bundler-1.15.1.gem (  9%)Fetching: bundler-1.15.1.gem ( 10%)Fetching: bundler-1.15.1.gem ( 15%)Fetching: bundler-1.15.1.gem ( 20%)Fetching: bundler-1.15.1.gem ( 24%)Fetching: bundler-1.15.1.gem ( 29%)Fetching: bundler-1.15.1.gem ( 34%)Fetching: bundler-1.15.1.gem ( 39%)Fetching: bundler-1.15.1.gem ( 44%)Fetching: bundler-1.15.1.gem ( 49%)Fetching: bundler-1.15.1.gem ( 53%)Fetching: bundler-1.15.1.gem ( 58%)Fetching: bundler-1.15.1.gem ( 63%)Fetching: bundler-1.15.1.gem ( 68%)Fetching: bundler-1.15.1.gem ( 73%)Fetching: bundler-1.15.1.gem ( 78%)Fetching: bundler-1.15.1.gem ( 83%)Fetching: bundler-1.15.1.gem ( 87%)Fetching: bundler-1.15.1.gem ( 92%)Fetching: bundler-1.15.1.gem ( 97%)Fetching: bundler-1.15.1.gem (100%)Fetching: bundler-1.15.1.gem (100%)
+Successfully installed bundler-1.15.1
+1 gem installed
+
+travis_time:end:182356fa:start=1496803308910449615,finish=1496803309467787629,duration=557338014travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:055126bf$ bundle install --without coverage development pcap --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching gem metadata from https://rubygems.org/...........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Using rake 12.0.0
+Using i18n 0.8.4
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.8
+Using arel 6.0.4
+Using backports 3.8.0
+Using bcrypt 3.1.11
+Using bit-struct 0.16
+Using filesize 0.1.1
+Using rkelly-remix 0.0.7
+Using json 2.1.0
+Using metasm 1.0.3
+Using thor 0.19.4
+Using pg 0.20.0
+Using pg_array_parser 0.0.9
+Using rubyntlm 0.6.2
+Using rubyzip 1.2.1
+Using metasploit-payloads 1.2.32
+Using metasploit_payloads-mettle 0.1.9
+Using msgpack 1.1.0
+Using nessus_rest 0.1.6
+Using net-ssh 4.1.0
+Using network_interface 0.0.1
+Using nexpose 6.0.0
+Using public_suffix 2.0.5
+Using multipart-post 2.0.0
+Using openssl-ccm 1.2.1
+Using openvas-omp 0.0.4
+Using pcaprub 0.12.4
+Using patch_finder 1.0.2
+Using rb-readline 0.5.4
+Using redcarpet 3.4.0
+Using rex-text 0.2.15
+Using rex-core 0.1.10
+Using rex-struct2 0.1.2
+Using rex-java 0.1.5
+Using rex-registry 0.1.3
+Using robots 0.10.1
+Using bindata 2.4.0
+Using windows_error 0.1.2
+Using sqlite3 1.3.13
+Using sshkey 1.9.0
+Using xmlrpc 0.3.0
+Using fivemat 1.3.4
+Using rspec-support 3.6.0
+Using diff-lcs 1.3
+Using ffi 1.9.18
+Using contracts 0.16.0
+Using gherkin 4.1.3
+Using cucumber-wire 0.0.1
+Using multi_json 1.12.1
+Using multi_test 0.1.2
+Using mime-types-data 3.2016.0521
+Using timecop 0.8.1
+Using bundler 1.15.1
+Using tzinfo 1.2.3
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using jsobfu 0.4.2
+Using addressable 2.5.1
+Using faraday 0.12.1
+Using packetfu 1.1.13
+Using rex-arch 0.1.8
+Using rex-mime 0.1.5
+Using rex-ole 0.1.6
+Using rex-random_identifier 0.1.2
+Using rex-zip 0.1.3
+Using rex-rop_builder 0.1.3
+Using rex-socket 0.1.6
+Using ruby_smb 0.0.18
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using childprocess 0.5.9
+Using cucumber-core 1.5.0
+Using mime-types 3.1
+Using activesupport 4.2.8
+Using tzinfo-data 1.2017.2
+Using loofah 2.0.3
+Using recog 2.1.8
+Using xpath 2.1.0
+Using sawyer 0.8.1
+Using rex-bin_tools 0.1.3
+Using rex-encoder 0.1.4
+Using rex-nop 0.1.1
+Using rex-powershell 0.1.72
+Using rex-sslscan 0.1.4
+Using cucumber 2.4.0
+Using rails-deprecated_sanitizer 1.0.3
+Using activemodel 4.2.8
+Using factory_girl 4.8.0
+Using shoulda-matchers 3.1.1
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.14.0
+Using octokit 4.7.0
+Using rex-exploitation 0.1.14
+Using aruba 0.14.2
+Using rails-dom-testing 1.0.8
+Using activerecord 4.2.8
+Using actionview 4.2.8
+Using arel-helpers 2.4.0
+Using postgres_ext 3.0.0
+Using actionpack 4.2.8
+Using railties 4.2.8
+Using metasploit-concern 2.0.4
+Using metasploit-model 2.0.4
+Using factory_girl_rails 4.8.0
+Using rspec-rails 3.6.0
+Using cucumber-rails 1.5.0
+Using metasploit_data_models 2.0.14
+Using metasploit-credential 2.0.9
+Using metasploit-framework 4.14.25 from source at `.`
+Bundle complete! 15 Gemfile dependencies, 116 gems now installed.
+Gems in the groups coverage, development and pcap were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:055126bf:start=1496803309473482896,finish=1496803312942851288,duration=3469368392travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:2f1a507b$ cp config/database.yml.travis config/database.yml
+
+travis_time:end:2f1a507b:start=1496803312948303557,finish=1496803312956334721,duration=8031164travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:0a7cd264$ bundle exec rake --version
+rake, version 12.0.0
+
+travis_time:end:0a7cd264:start=1496803312961674813,finish=1496803313469158434,duration=507483621travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:2d8b7e08$ bundle exec rake db:create
+YARD not defined, so yard tasks cannot be setup.
+
+travis_time:end:2d8b7e08:start=1496803313474778464,finish=1496803316782841431,duration=3308062967travis_fold:end:before_script.3travis_fold:start:before_script.4travis_time:start:35ef4ed0$ bundle exec rake db:migrate
+YARD not defined, so yard tasks cannot be setup.
+== 0 CreateTables: migrating ==================================================
+-- create_table(:hosts)
+   -> 0.0029s
+-- add_index(:hosts, :address, {:unique=>true})
+   -> 0.0024s
+-- create_table(:clients)
+   -> 0.0019s
+-- create_table(:services)
+   -> 0.0021s
+-- create_table(:vulns)
+   -> 0.0019s
+-- create_table(:refs)
+   -> 0.0020s
+-- create_table(:vulns_refs, {:id=>false})
+   -> 0.0007s
+-- create_table(:notes)
+   -> 0.0021s
+== 0 CreateTables: migrated (0.0166s) =========================================
+
+== 1 AddWmapTables: migrating =================================================
+-- create_table(:wmap_targets)
+   -> 0.0024s
+-- create_table(:wmap_requests)
+   -> 0.0022s
+== 1 AddWmapTables: migrated (0.0048s) ========================================
+
+== 2 AddWorkspaces: migrating =================================================
+-- create_table(:workspaces)
+   -> 0.0018s
+-- change_table(:hosts)
+   -> 0.0008s
+-- remove_index(:hosts, {:column=>:address})
+   -> 0.0017s
+== 2 AddWorkspaces: migrated (0.0045s) ========================================
+
+== 3 MoveNotes: migrating =====================================================
+-- remove_column(:notes, :host_id)
+   -> 0.0006s
+-- change_table(:notes)
+   -> 0.0033s
+== 3 MoveNotes: migrated (0.0042s) ============================================
+
+== 4 AddEventsTable: migrating ================================================
+-- create_table(:events)
+   -> 0.0024s
+== 4 AddEventsTable: migrated (0.0025s) =======================================
+
+== 5 ExpandInfo: migrating ====================================================
+-- remove_column(:events, :info)
+   -> 0.0004s
+-- change_table(:events)
+   -> 0.0007s
+-- remove_column(:notes, :data)
+   -> 0.0005s
+-- change_table(:notes)
+   -> 0.0006s
+-- remove_column(:vulns, :data)
+   -> 0.0005s
+-- change_table(:vulns)
+   -> 0.0007s
+-- remove_column(:hosts, :info)
+   -> 0.0005s
+-- change_table(:hosts)
+   -> 0.0006s
+-- remove_column(:services, :info)
+   -> 0.0005s
+-- change_table(:services)
+   -> 0.0007s
+== 5 ExpandInfo: migrated (0.0068s) ===========================================
+
+== 6 AddTimestamps: migrating =================================================
+-- rename_column(:clients, :created, :created_at)
+   -> 0.0023s
+-- rename_column(:hosts, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:notes, :created, :created_at)
+   -> 0.0011s
+-- rename_column(:refs, :created, :created_at)
+   -> 0.0018s
+-- rename_column(:services, :created, :created_at)
+   -> 0.0013s
+-- rename_column(:vulns, :created, :created_at)
+   -> 0.0012s
+-- rename_column(:wmap_requests, :created, :created_at)
+   -> 0.0011s
+-- add_column(:wmap_targets, :created_at, :datetime)
+   -> 0.0006s
+-- add_column(:clients, :updated_at, :datetime)
+   -> 0.0006s
+-- add_column(:events, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:hosts, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:notes, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:refs, :updated_at, :datetime)
+   -> 0.0006s
+-- add_column(:services, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:vulns, :updated_at, :datetime)
+   -> 0.0006s
+-- add_column(:wmap_requests, :updated_at, :datetime)
+   -> 0.0005s
+-- add_column(:wmap_targets, :updated_at, :datetime)
+   -> 0.0005s
+== 6 AddTimestamps: migrated (0.0175s) ========================================
+
+== 7 AddLoots: migrating ======================================================
+-- create_table(:loots)
+   -> 0.0026s
+== 7 AddLoots: migrated (0.0027s) =============================================
+
+== 8 CreateUsers: migrating ===================================================
+-- create_table(:users)
+   -> 0.0021s
+== 8 CreateUsers: migrated (0.0022s) ==========================================
+
+== 9 AddLootsCtype: migrating =================================================
+-- add_column(:loots, :content_type, :string)
+   -> 0.0006s
+== 9 AddLootsCtype: migrated (0.0007s) ========================================
+
+== 10 AddAlertFields: migrating ===============================================
+-- add_column(:notes, :critical, :boolean)
+   -> 0.0007s
+-- add_column(:notes, :seen, :boolean)
+   -> 0.0005s
+-- add_column(:events, :critical, :boolean)
+   -> 0.0006s
+-- add_column(:events, :seen, :boolean)
+   -> 0.0005s
+== 10 AddAlertFields: migrated (0.0027s) ======================================
+
+== 11 AddReports: migrating ===================================================
+-- create_table(:reports)
+   -> 0.0025s
+== 11 AddReports: migrated (0.0025s) ==========================================
+
+== 12 AddTasks: migrating =====================================================
+-- create_table(:tasks)
+   -> 0.0026s
+== 12 AddTasks: migrated (0.0028s) ============================================
+
+== 13 AddTasksResult: migrating ===============================================
+-- add_column(:tasks, :result, :text)
+   -> 0.0007s
+== 13 AddTasksResult: migrated (0.0009s) ======================================
+
+== 14 AddLootsFields: migrating ===============================================
+-- add_column(:loots, :name, :text)
+   -> 0.0007s
+-- add_column(:loots, :info, :text)
+   -> 0.0006s
+== 14 AddLootsFields: migrated (0.0015s) ======================================
+
+== 15 RenameUser: migrating ===================================================
+-- remove_column(:events, :user)
+   -> 0.0005s
+-- change_table(:events)
+   -> 0.0007s
+== 15 RenameUser: migrated (0.0015s) ==========================================
+
+== 16 AddHostPurpose: migrating ===============================================
+-- add_column(:hosts, :purpose, :text)
+   -> 0.0006s
+== 16 AddHostPurpose: migrated (0.0007s) ======================================
+
+== 17 ExpandInfo2: migrating ==================================================
+-- remove_column(:events, :info)
+   -> 0.0005s
+-- change_table(:events)
+   -> 0.0006s
+-- remove_column(:notes, :data)
+   -> 0.0007s
+-- change_table(:notes)
+   -> 0.0005s
+-- remove_column(:vulns, :data)
+   -> 0.0005s
+-- change_table(:vulns)
+   -> 0.0005s
+-- remove_column(:hosts, :info)
+   -> 0.0006s
+-- change_table(:hosts)
+   -> 0.0007s
+-- remove_column(:services, :info)
+   -> 0.0005s
+-- change_table(:services)
+   -> 0.0007s
+== 17 ExpandInfo2: migrated (0.0071s) =========================================
+
+== 18 AddWorkspaceUserInfo: migrating =========================================
+-- change_table(:workspaces)
+   -> 0.0006s
+-- change_table(:users)
+   -> 0.0019s
+== 18 AddWorkspaceUserInfo: migrated (0.0027s) ================================
+
+== 19 AddWorkspaceDesc: migrating =============================================
+-- change_table(:workspaces)
+   -> 0.0006s
+-- change_table(:hosts)
+   -> 0.0006s
+== 19 AddWorkspaceDesc: migrated (0.0015s) ====================================
+
+== 20 AddUserPreferences: migrating ===========================================
+-- add_column(:users, :prefs, :string, {:limit=>524288})
+   -> 0.0006s
+== 20 AddUserPreferences: migrated (0.0007s) ==================================
+
+== 21 StandardizeInfoAndData: migrating =======================================
+-- remove_column(:vulns, :data)
+   -> 0.0005s
+-- change_table(:vulns)
+   -> 0.0006s
+== 21 StandardizeInfoAndData: migrated (0.0014s) ==============================
+
+== 22 EnlargeEventInfo: migrating =============================================
+-- change_column(:events, :info, :text)
+   -> 0.0006s
+== 22 EnlargeEventInfo: migrated (0.0007s) ====================================
+
+== 23 AddReportDownloadedAt: migrating ========================================
+-- add_column(:reports, :downloaded_at, :timestamp)
+   -> 0.0006s
+== 23 AddReportDownloadedAt: migrated (0.0007s) ===============================
+
+== 24 ConvertServiceInfoToText: migrating =====================================
+-- change_column(:services, :info, :text)
+   -> 0.0006s
+== 24 ConvertServiceInfoToText: migrated (0.0009s) ============================
+
+== 25 AddUserAdmin: migrating =================================================
+-- add_column(:users, :admin, :boolean, {:default=>true})
+   -> 0.0032s
+-- create_table(:project_members, {:id=>false})
+   -> 0.0011s
+== 25 AddUserAdmin: migrated (0.0048s) ========================================
+
+== 26 AddCredsTable: migrating ================================================
+-- create_table(:creds)
+   -> 0.0029s
+== 26 AddCredsTable: migrated (0.0030s) =======================================
+
+== 20100819123300 MigrateCredData: migrating ==================================
+-- Migrating 0 credentials.
+-- Migrating 0 notes.
+-- Deleting migrated auth notes.
+== 20100819123300 MigrateCredData: migrated (0.0031s) =========================
+
+== 20100824151500 AddExploitedTable: migrating ================================
+-- create_table(:exploited_hosts)
+   -> 0.0023s
+== 20100824151500 AddExploitedTable: migrated (0.0024s) =======================
+
+== 20100908001428 AddOwnerToWorkspaces: migrating =============================
+-- add_column(:workspaces, :owner_id, :integer)
+   -> 0.0006s
+== 20100908001428 AddOwnerToWorkspaces: migrated (0.0009s) ====================
+
+== 20100911122000 AddReportTemplates: migrating ===============================
+-- create_table(:report_templates)
+   -> 0.0024s
+== 20100911122000 AddReportTemplates: migrated (0.0025s) ======================
+
+== 20100916151530 RequireAdminFlag: migrating =================================
+-- change_column(:users, :admin, :boolean, {:null=>false, :default=>true})
+   -> 0.0038s
+== 20100916151530 RequireAdminFlag: migrated (0.0084s) ========================
+
+== 20100916175000 AddCampaignsAndTemplates: migrating =========================
+-- create_table(:campaigns)
+   -> 0.0026s
+-- create_table(:email_templates)
+   -> 0.0019s
+-- create_table(:attachments)
+   -> 0.0025s
+-- create_table(:attachments_email_templates, {:id=>false})
+   -> 0.0008s
+-- create_table(:email_addresses)
+   -> 0.0023s
+-- create_table(:web_templates)
+   -> 0.0019s
+== 20100916175000 AddCampaignsAndTemplates: migrated (0.0125s) ================
+
+== 20100920012100 AddGenerateExeColumn: migrating =============================
+-- add_column(:email_templates, :generate_exe, :boolean, {:null=>false, :default=>false})
+   -> 0.0026s
+== 20100920012100 AddGenerateExeColumn: migrated (0.0027s) ====================
+
+== 20100926214000 AddTemplatePrefs: migrating =================================
+-- remove_column(:email_templates, :generate_exe)
+   -> 0.0005s
+-- add_column(:email_templates, :prefs, :text)
+   -> 0.0006s
+-- add_column(:web_templates, :prefs, :text)
+   -> 0.0005s
+== 20100926214000 AddTemplatePrefs: migrated (0.0024s) ========================
+
+== 20101001000000 AddWebTables: migrating =====================================
+-- create_table(:web_sites)
+   -> 0.0021s
+-- create_table(:web_pages)
+   -> 0.0023s
+-- create_table(:web_forms)
+   -> 0.0019s
+-- create_table(:web_vulns)
+   -> 0.0022s
+== 20101001000000 AddWebTables: migrated (0.0087s) ============================
+
+== 20101002000000 AddQuery: migrating =========================================
+-- add_column(:web_forms, :query, :text)
+   -> 0.0007s
+-- add_column(:web_vulns, :query, :text)
+   -> 0.0005s
+== 20101002000000 AddQuery: migrated (0.0013s) ================================
+
+== 20101007000000 AddVulnInfo: migrating ======================================
+-- add_column(:web_vulns, :category, :text)
+   -> 0.0007s
+-- add_column(:web_vulns, :confidence, :text)
+   -> 0.0005s
+-- add_column(:web_vulns, :description, :text)
+   -> 0.0006s
+-- add_column(:web_vulns, :blame, :text)
+   -> 0.0004s
+== 20101007000000 AddVulnInfo: migrated (0.0025s) =============================
+
+== 20101008111800 AddClientsToCampaigns: migrating ============================
+-- add_column(:clients, :campaign_id, :integer)
+   -> 0.0006s
+== 20101008111800 AddClientsToCampaigns: migrated (0.0007s) ===================
+
+== 20101009023300 AddCampaignAttachments: migrating ===========================
+-- add_column(:attachments, :campaign_id, :integer)
+   -> 0.0006s
+== 20101009023300 AddCampaignAttachments: migrated (0.0007s) ==================
+
+== 20101104135100 AddImportedCreds: migrating =================================
+-- create_table(:imported_creds)
+   -> 0.0029s
+== 20101104135100 AddImportedCreds: migrated (0.0030s) ========================
+
+== 20101203000000 FixWebTables: migrating =====================================
+-- change_column(:web_pages, :path, :text)
+   -> 0.0007s
+-- change_column(:web_pages, :query, :text)
+   -> 0.0004s
+-- change_column(:web_pages, :cookie, :text)
+   -> 0.0006s
+-- change_column(:web_pages, :auth, :text)
+   -> 0.0017s
+-- change_column(:web_pages, :ctype, :text)
+   -> 0.0008s
+-- change_column(:web_pages, :location, :text)
+   -> 0.0006s
+-- change_column(:web_pages, :path, :text)
+   -> 0.0007s
+-- change_column(:web_vulns, :path, :text)
+   -> 0.0006s
+-- change_column(:web_vulns, :pname, :text)
+   -> 0.0007s
+-- add_column(:web_pages, :request, :text)
+   -> 0.0013s
+-- add_column(:web_vulns, :request, :text)
+   -> 0.0005s
+== 20101203000000 FixWebTables: migrated (0.0094s) ============================
+
+== 20101203000001 ExpandHostComment: migrating ================================
+-- change_column(:hosts, :comments, :text)
+   -> 0.0007s
+== 20101203000001 ExpandHostComment: migrated (0.0014s) =======================
+
+== 20101206212033 AddLimitToNetworkToWorkspaces: migrating ====================
+-- add_column(:workspaces, :limit_to_network, :boolean, {:null=>false, :default=>false})
+   -> 0.0026s
+== 20101206212033 AddLimitToNetworkToWorkspaces: migrated (0.0027s) ===========
+
+== 20110112154300 AddModuleUuidToTasks: migrating =============================
+-- add_column(:tasks, :module_uuid, :string, {:limit=>8})
+   -> 0.0007s
+== 20110112154300 AddModuleUuidToTasks: migrated (0.0008s) ====================
+
+== 20110204112800 AddHostTags: migrating ======================================
+-- create_table(:tags)
+   -> 0.0029s
+-- create_table(:hosts_tags, {:id=>false})
+   -> 0.0015s
+== 20110204112800 AddHostTags: migrated (0.0046s) =============================
+
+== 20110317144932 AddSessionTable: migrating ==================================
+-- create_table(:sessions)
+   -> 0.0028s
+-- create_table(:session_events)
+   -> 0.0018s
+== 20110317144932 AddSessionTable: migrated (0.0097s) =========================
+
+== 20110414180600 AddLocalIdToSessionTable: migrating =========================
+-- add_column(:sessions, :local_id, :integer)
+   -> 0.0009s
+== 20110414180600 AddLocalIdToSessionTable: migrated (0.0009s) ================
+
+== 20110415175705 AddRoutesTable: migrating ===================================
+-- create_table(:routes)
+   -> 0.0021s
+-- remove_column(:sessions, :routes)
+   -> 0.0005s
+== 20110415175705 AddRoutesTable: migrated (0.0028s) ==========================
+
+== 20110422000000 ConvertBinary: migrating ====================================
+-- rename_column(:web_pages, :body, :body_text)
+   -> 0.0015s
+-- rename_column(:web_pages, :request, :request_text)
+   -> 0.0011s
+-- rename_column(:web_vulns, :request, :request_text)
+   -> 0.0019s
+-- rename_column(:web_vulns, :proof, :proof_text)
+   -> 0.0012s
+-- add_column(:web_pages, :body, :binary)
+   -> 0.0006s
+-- add_column(:web_pages, :request, :binary)
+   -> 0.0004s
+-- add_column(:web_vulns, :request, :binary)
+   -> 0.0005s
+-- add_column(:web_vulns, :proof, :binary)
+   -> 0.0004s
+-- remove_column(:web_pages, :body_text)
+   -> 0.0004s
+-- remove_column(:web_pages, :request_text)
+   -> 0.0004s
+-- remove_column(:web_vulns, :request_text)
+   -> 0.0006s
+-- remove_column(:web_vulns, :proof_text)
+   -> 0.0011s
+== 20110422000000 ConvertBinary: migrated (0.0209s) ===========================
+
+== 20110425095900 AddLastSeenToSessions: migrating ============================
+-- add_column(:sessions, :last_seen, :timestamp)
+   -> 0.0008s
+== 20110425095900 AddLastSeenToSessions: migrated (0.0009s) ===================
+
+== 20110513143900 TrackSuccessfulExploits: migrating ==========================
+-- add_column(:vulns, :exploited_at, :timestamp)
+   -> 0.0008s
+== 20110513143900 TrackSuccessfulExploits: migrated (0.0034s) =================
+
+== 20110517160800 RenameAndPruneNessusVulns: migrating ========================
+== 20110517160800 RenameAndPruneNessusVulns: migrated (0.0023s) ===============
+
+== 20110527000000 AddTaskIdToReportsTable: migrating ==========================
+-- add_column(:reports, :task_id, :integer)
+   -> 0.0010s
+== 20110527000000 AddTaskIdToReportsTable: migrated (0.0011s) =================
+
+== 20110527000001 AddApiKeysTable: migrating ==================================
+-- create_table(:api_keys)
+   -> 0.0019s
+== 20110527000001 AddApiKeysTable: migrated (0.0020s) =========================
+
+== 20110606000001 AddMacrosTable: migrating ===================================
+-- create_table(:macros)
+   -> 0.0021s
+== 20110606000001 AddMacrosTable: migrated (0.0022s) ==========================
+
+== 20110622000000 AddSettingsToTasksTable: migrating ==========================
+-- add_column(:tasks, :settings, :binary)
+   -> 0.0008s
+== 20110622000000 AddSettingsToTasksTable: migrated (0.0008s) =================
+
+== 20110624000001 AddListenersTable: migrating ================================
+-- create_table(:listeners)
+   -> 0.0032s
+== 20110624000001 AddListenersTable: migrated (0.0033s) =======================
+
+== 20110625000001 AddMacroToListenersTable: migrating =========================
+-- add_column(:listeners, :macro, :text)
+   -> 0.0007s
+== 20110625000001 AddMacroToListenersTable: migrated (0.0008s) ================
+
+== 20110630000001 AddNexposeConsolesTable: migrating ==========================
+-- create_table(:nexpose_consoles)
+   -> 0.0036s
+== 20110630000001 AddNexposeConsolesTable: migrated (0.0037s) =================
+
+== 20110630000002 AddNameToNexposeConsolesTable: migrating ====================
+-- add_column(:nexpose_consoles, :name, :text)
+   -> 0.0008s
+== 20110630000002 AddNameToNexposeConsolesTable: migrated (0.0009s) ===========
+
+== 20110717000001 AddProfilesTable: migrating =================================
+-- create_table(:profiles)
+   -> 0.0024s
+== 20110717000001 AddProfilesTable: migrated (0.0025s) ========================
+
+== 20110727163801 ExpandCredPtypeColumn: migrating ============================
+-- change_column(:creds, :ptype, :string, {:limit=>256})
+   -> 0.0015s
+== 20110727163801 ExpandCredPtypeColumn: migrated (0.0016s) ===================
+
+== 20110730000001 AddInitialIndexes: migrating ================================
+-- add_index(:hosts, :address)
+   -> 0.0024s
+-- add_index(:hosts, :address6)
+   -> 0.0018s
+-- add_index(:hosts, :name)
+   -> 0.0026s
+-- add_index(:hosts, :state)
+   -> 0.0021s
+-- add_index(:hosts, :os_name)
+   -> 0.0019s
+-- add_index(:hosts, :os_flavor)
+   -> 0.0024s
+-- add_index(:hosts, :purpose)
+   -> 0.0019s
+-- add_index(:services, :port)
+   -> 0.0027s
+-- add_index(:services, :proto)
+   -> 0.0021s
+-- add_index(:services, :state)
+   -> 0.0020s
+-- add_index(:services, :name)
+   -> 0.0030s
+-- add_index(:notes, :ntype)
+   -> 0.0019s
+-- add_index(:vulns, :name)
+   -> 0.0029s
+-- add_index(:refs, :name)
+   -> 0.0020s
+-- add_index(:web_sites, :vhost)
+   -> 0.0021s
+-- add_index(:web_sites, :comments)
+   -> 0.0021s
+-- add_index(:web_sites, :options)
+   -> 0.0019s
+-- add_index(:web_pages, :path)
+   -> 0.0021s
+-- add_index(:web_pages, :query)
+   -> 0.0020s
+-- add_index(:web_forms, :path)
+   -> 0.0030s
+-- add_index(:web_vulns, :path)
+   -> 0.0022s
+-- add_index(:web_vulns, :method)
+   -> 0.0021s
+-- add_index(:web_vulns, :name)
+   -> 0.0028s
+== 20110730000001 AddInitialIndexes: migrated (0.0552s) =======================
+
+== 20110812000001 PruneIndexes: migrating =====================================
+-- indexes(:hosts)
+   -> 0.0046s
+-- indexes(:services)
+   -> 0.0033s
+-- indexes(:vulns)
+   -> 0.0014s
+== 20110812000001 PruneIndexes: migrated (0.0096s) ============================
+
+== 20110922000000 ExpandNotes: migrating ======================================
+-- change_column(:notes, :data, :text)
+   -> 0.0007s
+== 20110922000000 ExpandNotes: migrated (0.0008s) =============================
+
+== 20110928101300 AddModRefTable: migrating ===================================
+-- create_table(:mod_refs)
+   -> 0.0022s
+== 20110928101300 AddModRefTable: migrated (0.0023s) ==========================
+
+== 20111011110000 AddDisplayNameToReportsTable: migrating =====================
+-- add_column(:reports, :name, :string, {:limit=>63})
+   -> 0.0015s
+== 20111011110000 AddDisplayNameToReportsTable: migrated (0.0045s) ============
+
+== 20111203000000 InetColumns: migrating ======================================
+-- change_column(:hosts, :address, "INET using address::INET")
+   -> 0.0043s
+-- remove_column(:hosts, :address6)
+   -> 0.0005s
+== 20111203000000 InetColumns: migrated (0.0050s) =============================
+
+== 20111204000000 MoreInetColumns: migrating ==================================
+-- change_column(:wmap_requests, :address, "INET using address::INET")
+   -> 0.0022s
+-- remove_column(:wmap_requests, :address6)
+   -> 0.0004s
+-- change_column(:wmap_targets, :address, "INET using address::INET")
+   -> 0.0027s
+-- remove_column(:wmap_targets, :address6)
+   -> 0.0006s
+== 20111204000000 MoreInetColumns: migrated (0.0063s) =========================
+
+== 20111210000000 AddScopeToHosts: migrating ==================================
+-- add_column(:hosts, :scope, :text)
+   -> 0.0008s
+== 20111210000000 AddScopeToHosts: migrated (0.0008s) =========================
+
+== 20120126110000 AddVirtualHostToHosts: migrating ============================
+-- add_column(:hosts, :virtual_host, :text)
+   -> 0.0007s
+== 20120126110000 AddVirtualHostToHosts: migrated (0.0016s) ===================
+
+== 20120411173220 RenameWorkspaceMembers: migrating ===========================
+-- rename_table(:project_members, :workspace_members)
+   -> 0.0041s
+== 20120411173220 RenameWorkspaceMembers: migrated (0.0041s) ==================
+
+== 20120601152442 AddCounterCachesToHosts: migrating ==========================
+-- add_column(:hosts, :note_count, :integer, {:default=>0})
+   -> 0.0035s
+-- add_column(:hosts, :vuln_count, :integer, {:default=>0})
+   -> 0.0029s
+-- add_column(:hosts, :service_count, :integer, {:default=>0})
+   -> 0.0039s
+== 20120601152442 AddCounterCachesToHosts: migrated (0.0145s) =================
+
+== 20120625000000 AddVulnDetails: migrating ===================================
+-- create_table(:vuln_details)
+   -> 0.0032s
+== 20120625000000 AddVulnDetails: migrated (0.0033s) ==========================
+
+== 20120625000001 AddHostDetails: migrating ===================================
+-- create_table(:host_details)
+   -> 0.0017s
+== 20120625000001 AddHostDetails: migrated (0.0018s) ==========================
+
+== 20120625000002 ExpandDetails: migrating ====================================
+-- add_column(:vuln_details, :nx_vuln_status, :text)
+   -> 0.0006s
+-- add_column(:vuln_details, :nx_proof_key, :text)
+   -> 0.0006s
+-- add_column(:vuln_details, :src, :string)
+   -> 0.0005s
+-- add_column(:host_details, :src, :string)
+   -> 0.0010s
+== 20120625000002 ExpandDetails: migrated (0.0033s) ===========================
+
+== 20120625000003 ExpandDetails2: migrating ===================================
+-- add_column(:host_details, :nx_site_name, :string)
+   -> 0.0007s
+-- add_column(:host_details, :nx_site_importance, :string)
+   -> 0.0005s
+-- add_column(:host_details, :nx_scan_template, :string)
+   -> 0.0004s
+-- add_column(:host_details, :nx_risk_score, :float)
+   -> 0.0007s
+-- add_column(:vuln_details, :nx_scan_id, :integer)
+   -> 0.0006s
+-- add_column(:vuln_details, :nx_vulnerable_since, :timestamp)
+   -> 0.0004s
+-- add_column(:vuln_details, :nx_pci_compliance_status, :string)
+   -> 0.0004s
+== 20120625000003 ExpandDetails2: migrated (0.0049s) ==========================
+
+== 20120625000004 AddVulnAttempts: migrating ==================================
+-- create_table(:vuln_attempts)
+   -> 0.0020s
+== 20120625000004 AddVulnAttempts: migrated (0.0021s) =========================
+
+== 20120625000005 AddVulnAndHostCounterCaches: migrating ======================
+-- add_column(:hosts, :host_detail_count, :integer, {:default=>0})
+   -> 0.0137s
+-- add_column(:vulns, :vuln_detail_count, :integer, {:default=>0})
+   -> 0.0026s
+-- add_column(:vulns, :vuln_attempt_count, :integer, {:default=>0})
+   -> 0.0023s
+== 20120625000005 AddVulnAndHostCounterCaches: migrated (0.0189s) =============
+
+== 20120625000006 AddModuleDetails: migrating =================================
+-- create_table(:module_details)
+   -> 0.0022s
+-- add_index(:module_details, :refname)
+   -> 0.0020s
+-- add_index(:module_details, :name)
+   -> 0.0019s
+-- add_index(:module_details, :description)
+   -> 0.0021s
+-- add_index(:module_details, :mtype)
+   -> 0.0018s
+-- create_table(:module_authors)
+   -> 0.0021s
+-- add_index(:module_authors, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_mixins)
+   -> 0.0019s
+-- add_index(:module_mixins, :module_detail_id)
+   -> 0.0018s
+-- create_table(:module_targets)
+   -> 0.0019s
+-- add_index(:module_targets, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_actions)
+   -> 0.0018s
+-- add_index(:module_actions, :module_detail_id)
+   -> 0.0019s
+-- create_table(:module_refs)
+   -> 0.0018s
+-- add_index(:module_refs, :module_detail_id)
+   -> 0.0018s
+-- add_index(:module_refs, :name)
+   -> 0.0020s
+-- create_table(:module_archs)
+   -> 0.0019s
+-- add_index(:module_archs, :module_detail_id)
+   -> 0.0020s
+-- create_table(:module_platforms)
+   -> 0.0019s
+-- add_index(:module_platforms, :module_detail_id)
+   -> 0.0019s
+== 20120625000006 AddModuleDetails: migrated (0.0400s) ========================
+
+== 20120625000007 AddExploitAttempts: migrating ===============================
+-- create_table(:exploit_attempts)
+   -> 0.0022s
+-- add_column(:hosts, :exploit_attempt_count, :integer, {:default=>0})
+   -> 0.0037s
+== 20120625000007 AddExploitAttempts: migrated (0.0061s) ======================
+
+== 20120625000008 AddFailMessage: migrating ===================================
+-- add_column(:vuln_attempts, :fail_detail, :text)
+   -> 0.0008s
+-- add_column(:exploit_attempts, :fail_detail, :text)
+   -> 0.0005s
+== 20120625000008 AddFailMessage: migrated (0.0014s) ==========================
+
+== 20120718202805 AddOwnerAndPayloadToWebVulns: migrating =====================
+-- add_column(:web_vulns, :owner, :string)
+   -> 0.0007s
+-- add_column(:web_vulns, :payload, :text)
+   -> 0.0005s
+== 20120718202805 AddOwnerAndPayloadToWebVulns: migrated (0.0014s) ============
+
+== 20130228214900 ChangeRequiredColumnsToNullFalseInWebVulns: migrating =======
+-- change_column_null(:web_vulns, :category, false)
+   -> 0.0006s
+-- change_column_null(:web_vulns, :confidence, false)
+   -> 0.0006s
+-- change_column_null(:web_vulns, :method, false)
+   -> 0.0004s
+-- change_column_null(:web_vulns, :name, false)
+   -> 0.0003s
+-- change_column_null(:web_vulns, :params, false)
+   -> 0.0007s
+-- change_column_null(:web_vulns, :path, false)
+   -> 0.0006s
+-- change_column_null(:web_vulns, :pname, false)
+   -> 0.0006s
+-- change_column_null(:web_vulns, :proof, false)
+   -> 0.0004s
+-- change_column_null(:web_vulns, :risk, false)
+   -> 0.0005s
+== 20130228214900 ChangeRequiredColumnsToNullFalseInWebVulns: migrated (0.0056s) 
+
+== 20130412154159 ChangeForeignKeyInModuleActions: migrating ==================
+-- rename_column(:module_actions, :module_detail_id, :detail_id)
+   -> 0.0022s
+== 20130412154159 ChangeForeignKeyInModuleActions: migrated (0.0025s) =========
+
+== 20130412171844 ChangeForeignKeyInModuleArchs: migrating ====================
+-- rename_column(:module_archs, :module_detail_id, :detail_id)
+   -> 0.0022s
+== 20130412171844 ChangeForeignKeyInModuleArchs: migrated (0.0022s) ===========
+
+== 20130412173121 ChangeForeignKeyInModuleAuthors: migrating ==================
+-- rename_column(:module_authors, :module_detail_id, :detail_id)
+   -> 0.0021s
+== 20130412173121 ChangeForeignKeyInModuleAuthors: migrated (0.0022s) =========
+
+== 20130412173640 ChangeForeignKeyInModuleMixins: migrating ===================
+-- rename_column(:module_mixins, :module_detail_id, :detail_id)
+   -> 0.0022s
+== 20130412173640 ChangeForeignKeyInModuleMixins: migrated (0.0023s) ==========
+
+== 20130412174254 ChangeForeignKeyInModulePlatforms: migrating ================
+-- rename_column(:module_platforms, :module_detail_id, :detail_id)
+   -> 0.0019s
+== 20130412174254 ChangeForeignKeyInModulePlatforms: migrated (0.0020s) =======
+
+== 20130412174719 ChangeForeignKeyInModuleRefs: migrating =====================
+-- rename_column(:module_refs, :module_detail_id, :detail_id)
+   -> 0.0025s
+== 20130412174719 ChangeForeignKeyInModuleRefs: migrated (0.0025s) ============
+
+== 20130412175040 ChangeForeignKeyInModuleTargets: migrating ==================
+-- rename_column(:module_targets, :module_detail_id, :detail_id)
+   -> 0.0021s
+== 20130412175040 ChangeForeignKeyInModuleTargets: migrated (0.0021s) =========
+
+== 20130423211152 AddCredsCounterCache: migrating =============================
+-- add_column(:hosts, :cred_count, :integer, {:default=>0})
+   -> 0.0037s
+== 20130423211152 AddCredsCounterCache: migrated (0.0061s) ====================
+
+== 20130430151353 ChangeRequiredColumnsToNullFalseInHosts: migrating ==========
+-- change_column_null(:hosts, :address, false)
+   -> 0.0005s
+-- change_column_null(:hosts, :workspace_id, false)
+   -> 0.0005s
+== 20130430151353 ChangeRequiredColumnsToNullFalseInHosts: migrated (0.0012s) =
+
+== 20130430162145 EnforceAddressUniquenessInWorkspaceInHosts: migrating =======
+-- change_table(:hosts)
+   -> 0.0036s
+== 20130430162145 EnforceAddressUniquenessInWorkspaceInHosts: migrated (0.0046s) 
+
+== 20130510021637 RemoveCampaigns: migrating ==================================
+-- drop_table(:attachments)
+   -> 0.0012s
+-- drop_table(:attachments_email_templates)
+   -> 0.0004s
+-- drop_table(:email_addresses)
+   -> 0.0010s
+-- drop_table(:email_templates)
+   -> 0.0009s
+-- drop_table(:web_templates)
+   -> 0.0010s
+-- drop_table(:campaigns)
+   -> 0.0010s
+== 20130510021637 RemoveCampaigns: migrated (0.0060s) =========================
+
+== 20130515164311 ChangeWebVulnsConfidenceToInteger: migrating ================
+-- execute("ALTER TABLE web_vulns ALTER COLUMN confidence TYPE integer USING confidence::integer")
+   -> 0.0027s
+== 20130515164311 ChangeWebVulnsConfidenceToInteger: migrated (0.0027s) =======
+
+== 20130515172727 ValidMdmWebVulnParams: migrating ============================
+== 20130515172727 ValidMdmWebVulnParams: migrated (0.0041s) ===================
+
+== 20130516204810 MakingVulnsRefsARealArModel: migrating ======================
+-- add_column(:vulns_refs, :id, :primary_key)
+   -> 0.0021s
+== 20130516204810 MakingVulnsRefsARealArModel: migrated (0.0021s) =============
+
+== 20130522001343 CreateTaskCreds: migrating ==================================
+-- create_table(:task_creds)
+   -> 0.0019s
+== 20130522001343 CreateTaskCreds: migrated (0.0019s) =========================
+
+== 20130522032517 CreateTaskHosts: migrating ==================================
+-- create_table(:task_hosts)
+   -> 0.0018s
+== 20130522032517 CreateTaskHosts: migrated (0.0019s) =========================
+
+== 20130522041110 CreateTaskServices: migrating ===============================
+-- create_table(:task_services)
+   -> 0.0017s
+== 20130522041110 CreateTaskServices: migrated (0.0018s) ======================
+
+== 20130525015035 RemoveCampaignIdFromClients: migrating ======================
+-- remove_column(:clients, :campaign_id)
+   -> 0.0005s
+== 20130525015035 RemoveCampaignIdFromClients: migrated (0.0006s) =============
+
+== 20130525212420 DropTableImportedCreds: migrating ===========================
+-- drop_table(:imported_creds)
+   -> 0.0012s
+== 20130525212420 DropTableImportedCreds: migrated (0.0012s) ==================
+
+== 20130531144949 MakingHostTagsARealArModel: migrating =======================
+-- add_column(:hosts_tags, :id, :primary_key)
+   -> 0.0021s
+== 20130531144949 MakingHostTagsARealArModel: migrated (0.0022s) ==============
+
+== 20130604145732 CreateTaskSessions: migrating ===============================
+-- create_table(:task_sessions)
+   -> 0.0016s
+== 20130604145732 CreateTaskSessions: migrated (0.0017s) ======================
+
+== 20130717150737 RemovePnameValidation: migrating ============================
+-- change_column(:web_vulns, :pname, :text, {:null=>true})
+   -> 0.0009s
+== 20130717150737 RemovePnameValidation: migrated (0.0011s) ===================
+
+== 20131002004641 CreateAutomaticExploitationMatches: migrating ===============
+-- create_table(:automatic_exploitation_matches)
+   -> 0.0021s
+-- add_index(:automatic_exploitation_matches, :ref_id)
+   -> 0.0019s
+== 20131002004641 CreateAutomaticExploitationMatches: migrated (0.0042s) ======
+
+== 20131002164449 CreateAutomaticExploitationMatchSets: migrating =============
+-- create_table(:automatic_exploitation_match_sets)
+   -> 0.0016s
+-- add_index(:automatic_exploitation_match_sets, :user_id)
+   -> 0.0021s
+-- add_index(:automatic_exploitation_match_sets, :workspace_id)
+   -> 0.0018s
+== 20131002164449 CreateAutomaticExploitationMatchSets: migrated (0.0057s) ====
+
+== 20131008213344 CreateAutomaticExploitationRuns: migrating ==================
+-- create_table(:automatic_exploitation_runs)
+   -> 0.0015s
+== 20131008213344 CreateAutomaticExploitationRuns: migrated (0.0016s) =========
+
+== 20131011184338 ModuleDetailOnAutomaticExploitationMatch: migrating =========
+-- rename_column(:automatic_exploitation_matches, :ref_id, :module_detail_id)
+   -> 0.0020s
+-- add_column(:automatic_exploitation_matches, :match_set_id, :integer)
+   -> 0.0007s
+== 20131011184338 ModuleDetailOnAutomaticExploitationMatch: migrated (0.0030s) 
+
+== 20131017150735 CreateAutomaticExploitationMatchResults: migrating ==========
+-- create_table(:automatic_exploitation_match_results)
+   -> 0.0022s
+== 20131017150735 CreateAutomaticExploitationMatchResults: migrated (0.0023s) =
+
+== 20131021185657 MakeMatchPolymorphic: migrating =============================
+-- add_column(:automatic_exploitation_matches, :matchable_type, :string)
+   -> 0.0006s
+-- add_column(:automatic_exploitation_matches, :matchable_id, :integer)
+   -> 0.0007s
+== 20131021185657 MakeMatchPolymorphic: migrated (0.0015s) ====================
+
+== 20140331173835 CreateMetasploitCredentialPublics: migrating ================
+-- create_table(:metasploit_credential_publics)
+   -> 0.0020s
+-- change_table(:metasploit_credential_publics)
+   -> 0.0020s
+== 20140331173835 CreateMetasploitCredentialPublics: migrated (0.0041s) =======
+
+== 20140407212345 CreateMetasploitCredentialPrivates: migrating ===============
+-- create_table(:metasploit_credential_privates)
+   -> 0.0020s
+-- change_table(:metasploit_credential_privates)
+   -> 0.0020s
+== 20140407212345 CreateMetasploitCredentialPrivates: migrated (0.0042s) ======
+
+== 20140410132401 CreateMetasploitCredentialRealms: migrating =================
+-- create_table(:metasploit_credential_realms)
+   -> 0.0022s
+== 20140410132401 CreateMetasploitCredentialRealms: migrated (0.0022s) ========
+
+== 20140410161611 UniqueMetasploitCredentialRealms: migrating =================
+-- change_table(:metasploit_credential_realms)
+   -> 0.0021s
+== 20140410161611 UniqueMetasploitCredentialRealms: migrated (0.0022s) ========
+
+== 20140410191213 CreateMetasploitCredentialOriginManuals: migrating ==========
+-- create_table(:metasploit_credential_origin_manuals)
+   -> 0.0017s
+-- add_index(:metasploit_credential_origin_manuals, :user_id)
+   -> 0.0021s
+== 20140410191213 CreateMetasploitCredentialOriginManuals: migrated (0.0039s) =
+
+== 20140410205410 CreateMetasploitCredentialOriginImports: migrating ==========
+-- create_table(:metasploit_credential_origin_imports)
+   -> 0.0020s
+-- add_index(:metasploit_credential_origin_imports, :task_id)
+   -> 0.0020s
+== 20140410205410 CreateMetasploitCredentialOriginImports: migrated (0.0042s) =
+
+== 20140411142102 CreateMetasploitCredentialOriginSessions: migrating =========
+-- create_table(:metasploit_credential_origin_sessions)
+   -> 0.0020s
+-- add_index(:metasploit_credential_origin_sessions, [:session_id, :post_reference_name], {:name=>:unique_metasploit_credential_origin_sessions, :unique=>true})
+   -> 0.0021s
+== 20140411142102 CreateMetasploitCredentialOriginSessions: migrated (0.0043s) 
+
+== 20140411205325 CreateMetasploitCredentialOriginServices: migrating =========
+-- create_table(:metasploit_credential_origin_services)
+   -> 0.0020s
+-- add_index(:metasploit_credential_origin_services, [:service_id, :module_full_name], {:name=>:unique_metasploit_credential_origin_services, :unique=>true})
+   -> 0.0020s
+== 20140411205325 CreateMetasploitCredentialOriginServices: migrated (0.0041s) 
+
+== 20140414192550 CreateMetasploitCredentialCores: migrating ==================
+-- create_table(:metasploit_credential_cores)
+   -> 0.0020s
+-- change_table(:metasploit_credential_cores)
+   -> 0.0091s
+== 20140414192550 CreateMetasploitCredentialCores: migrated (0.0112s) =========
+
+== 20140417140933 CreateMetasploitCredentialLogins: migrating =================
+-- create_table(:metasploit_credential_logins)
+   -> 0.0022s
+-- change_table(:metasploit_credential_logins)
+   -> 0.0036s
+== 20140417140933 CreateMetasploitCredentialLogins: migrated (0.0059s) ========
+
+== 20140520140817 AddLoginsCounterCacheToCores: migrating =====================
+-- add_column(:metasploit_credential_cores, :logins_count, :integer, {:default=>0})
+   -> 0.0031s
+== 20140520140817 AddLoginsCounterCacheToCores: migrated (0.0054s) ============
+
+== 20140603163708 AddJtrFormatToMetasploitCredentialPrivates: migrating =======
+-- add_column(:metasploit_credential_privates, :jtr_format, :string)
+   -> 0.0006s
+== 20140603163708 AddJtrFormatToMetasploitCredentialPrivates: migrated (0.0007s) 
+
+== 20140605173747 CreateMetasploitCredentialOriginCrackedPasswords: migrating =
+-- create_table(:metasploit_credential_origin_cracked_passwords)
+   -> 0.0017s
+-- add_index(:metasploit_credential_origin_cracked_passwords, :metasploit_credential_core_id, {:name=>:originating_credential_cores})
+   -> 0.0019s
+== 20140605173747 CreateMetasploitCredentialOriginCrackedPasswords: migrated (0.0038s) 
+
+== 20140702184622 CreateCredentialCoresTasksJoinTable: migrating ==============
+-- create_table(:credential_cores_tasks, {:force=>true, :id=>false})
+   -> 0.0013s
+== 20140702184622 CreateCredentialCoresTasksJoinTable: migrated (0.0014s) =====
+
+== 20140703144541 CreateCredentialLoginsTasksJoinTable: migrating =============
+-- create_table(:credential_logins_tasks, {:force=>true, :id=>false})
+   -> 0.0012s
+== 20140703144541 CreateCredentialLoginsTasksJoinTable: migrated (0.0013s) ====
+
+== 20140722174919 OldCredsToNewCreds: migrating ===============================
+== 20140722174919 OldCredsToNewCreds: migrated (0.0080s) ======================
+
+== 20140728191933 UniqueMetasploitCredentialCores: migrating ==================
+-- execute("CREATE UNIQUE INDEX unique_complete_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id, public_id) WHERE private_id IS NOT NULL AND public_id IS NOT NULL")
+   -> 0.0009s
+-- execute("CREATE UNIQUE INDEX unique_private_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id) WHERE private_id IS NOT NULL AND public_id IS NULL")
+   -> 0.0006s
+-- execute("CREATE UNIQUE INDEX unique_public_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id) WHERE private_id IS NULL AND public_id IS NOT NULL")
+   -> 0.0007s
+== 20140728191933 UniqueMetasploitCredentialCores: migrated (0.0027s) =========
+
+== 20140801150537 UniqueMetasploitCredentialCoresWithRealmId: migrating =======
+-- execute("DROP INDEX unique_complete_metasploit_credential_cores")
+   -> 0.0004s
+-- execute("DROP INDEX unique_private_metasploit_credential_cores")
+   -> 0.0004s
+-- execute("DROP INDEX unique_public_metasploit_credential_cores")
+   -> 0.0004s
+-- execute("CREATE UNIQUE INDEX unique_private_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, private_id) WHERE realm_id IS NULL AND public_id IS NULL AND private_id IS NOT NULL")
+   -> 0.0008s
+-- execute("CREATE UNIQUE INDEX unique_public_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id) WHERE realm_id IS NULL AND public_id IS NOT NULL AND private_id IS NULL")
+   -> 0.0006s
+-- execute("CREATE UNIQUE INDEX unique_realmless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, public_id, private_id) WHERE realm_id IS NULL AND public_id IS NOT NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+-- execute("CREATE UNIQUE INDEX unique_publicless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, private_id) WHERE realm_id IS NOT NULL AND public_id IS NULL AND private_id IS NOT NULL")
+   -> 0.0008s
+-- execute("CREATE UNIQUE INDEX unique_privateless_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, public_id) WHERE realm_id IS NOT NULL AND public_id IS NOT NULL AND private_id IS NULL")
+   -> 0.0008s
+-- execute("CREATE UNIQUE INDEX unique_complete_metasploit_credential_cores ON metasploit_credential_cores (workspace_id, realm_id, public_id, private_id) WHERE realm_id IS NOT NULL AND public_id IS NOT NULL AND private_id IS NOT NULL")
+   -> 0.0007s
+== 20140801150537 UniqueMetasploitCredentialCoresWithRealmId: migrated (0.0067s) 
+
+== 20140905031549 AddDetectedArchToHost: migrating ============================
+-- add_column(:hosts, :detected_arch, :string, {:null=>true})
+   -> 0.0007s
+== 20140905031549 AddDetectedArchToHost: migrated (0.0007s) ===================
+
+== 20140922170030 AddTypetoPublic: migrating ==================================
+-- change_table(:metasploit_credential_publics)
+-- execute("UPDATE metasploit_credential_publics SET type = 'Metasploit::Credential::Username'")
+   -> 0.0005s
+-- change_column(:metasploit_credential_publics, :type, :string, {:null=>false})
+   -> 0.0008s
+   -> 0.0021s
+== 20140922170030 AddTypetoPublic: migrated (0.0021s) =========================
+
+== 20150106201450 OldCredsToNewCreds2: migrating ==============================
+== 20150106201450 OldCredsToNewCreds2: migrated (0.0008s) =====================
+
+== 20150112203945 RemoveDuplicateServices: migrating ==========================
+-- add_index(:services, [:host_id, :port, :proto], {:unique=>true})
+   -> 0.0022s
+== 20150112203945 RemoveDuplicateServices: migrated (0.0045s) =================
+
+== 20150205192745 DropServiceUniquenessIndex: migrating =======================
+-- remove_index(:services, :host_id_and_port_and_proto)
+   -> 0.0020s
+== 20150205192745 DropServiceUniquenessIndex: migrated (0.0021s) ==============
+
+== 20150209195939 AddVulnIdToNote: migrating ==================================
+-- add_column(:notes, :vuln_id, :integer)
+   -> 0.0006s
+-- add_index(:notes, :vuln_id)
+   -> 0.0020s
+== 20150209195939 AddVulnIdToNote: migrated (0.0028s) =========================
+
+== 20150212214222 RemoveDuplicateServices2: migrating =========================
+-- add_index(:services, [:host_id, :port, :proto], {:unique=>true})
+   -> 0.0019s
+== 20150212214222 RemoveDuplicateServices2: migrated (0.0029s) ================
+
+== 20150219173821 CreateModuleRuns: migrating =================================
+-- create_table(:module_runs)
+   -> 0.0024s
+-- add_index(:module_runs, :session_id)
+   -> 0.0019s
+-- add_index(:module_runs, :user_id)
+   -> 0.0018s
+== 20150219173821 CreateModuleRuns: migrated (0.0064s) ========================
+
+== 20150219215039 AddModuleRunToSession: migrating ============================
+-- change_table(:sessions)
+   -> 0.0007s
+-- add_index(:sessions, :module_run_id)
+   -> 0.0021s
+== 20150219215039 AddModuleRunToSession: migrated (0.0031s) ===================
+
+== 20150226151459 AddModuleRunFkToLoot: migrating =============================
+-- change_table(:loots)
+   -> 0.0024s
+== 20150226151459 AddModuleRunFkToLoot: migrated (0.0025s) ====================
+
+== 20150312155312 AddModuleFullNameToMatch: migrating =========================
+-- add_column(:automatic_exploitation_matches, :module_fullname, :text)
+   -> 0.0006s
+-- add_index(:automatic_exploitation_matches, :module_fullname)
+   -> 0.0020s
+== 20150312155312 AddModuleFullNameToMatch: migrated (0.0028s) ================
+
+== 20150317145455 RenameModuleIndices: migrating ==============================
+== 20150317145455 RenameModuleIndices: migrated (0.0011s) =====================
+
+== 20150326183742 AddMissingAeIndices: migrating ==============================
+-- add_index(:automatic_exploitation_match_results, :match_id)
+   -> 0.0020s
+-- add_index(:automatic_exploitation_match_results, :run_id)
+   -> 0.0020s
+-- add_index(:automatic_exploitation_runs, :match_set_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_runs, :user_id)
+   -> 0.0019s
+-- add_index(:automatic_exploitation_runs, :workspace_id)
+   -> 0.0020s
+== 20150326183742 AddMissingAeIndices: migrated (0.0101s) =====================
+
+== 20150421211719 RenameAutomaticExploitationIndex: migrating =================
+-- index_name_exists?(:automatic_exploitation_matches, :index_automatic_exploitation_matches_on_ref_id, false)
+   -> 0.0010s
+== 20150421211719 RenameAutomaticExploitationIndex: migrated (0.0011s) ========
+
+== 20150514182921 AddOriginToMdmVuln: migrating ===============================
+-- add_column(:vulns, :origin_id, :integer)
+   -> 0.0006s
+-- add_column(:vulns, :origin_type, :string)
+   -> 0.0006s
+-- add_index(:vulns, :origin_id)
+   -> 0.0019s
+== 20150514182921 AddOriginToMdmVuln: migrated (0.0033s) ======================
+
+== 20160415153312 RemoveNotNullFromWebVulnPArams: migrating ===================
+-- change_column_null(:web_vulns, :params, true)
+   -> 0.0006s
+== 20160415153312 RemoveNotNullFromWebVulnPArams: migrated (0.0007s) ==========
+
+== 20161004165612 AddFingerprintedToWorkspace: migrating ======================
+-- add_column(:workspaces, :import_fingerprint, :boolean, {:default=>false})
+   -> 0.0026s
+== 20161004165612 AddFingerprintedToWorkspace: migrated (0.0027s) =============
+
+== 20161107153145 RecreateIndexOnPrivateDataAndType: migrating ================
+-- remove_index(:metasploit_credential_privates, [:type, :data])
+   -> 0.0014s
+-- change_table(:metasploit_credential_privates)
+   -> 0.0022s
+== 20161107153145 RecreateIndexOnPrivateDataAndType: migrated (0.0037s) =======
+
+== 20161107203710 CreateIndexOnPrivateDataAndTypeForSshKey: migrating =========
+-- execute("CREATE UNIQUE INDEX \"index_metasploit_credential_privates_on_type_and_data_sshkey\" ON\n\"metasploit_credential_privates\" (\"type\", decode(md5(data), 'hex'))\nWHERE type in ('Metasploit::Credential::SSHKey')\n")
+   -> 0.0008s
+== 20161107203710 CreateIndexOnPrivateDataAndTypeForSshKey: migrated (0.0009s) 
+
+== 20161227212223 AddOsFamilyToHosts: migrating ===============================
+-- add_column(:hosts, :os_family, :string)
+   -> 0.0007s
+== 20161227212223 AddOsFamilyToHosts: migrated (0.0008s) ======================
+
+
+travis_time:end:35ef4ed0:start=1496803316788368788,finish=1496803322157641762,duration=5369272974travis_fold:end:before_script.4travis_fold:start:before_script.5travis_time:start:05a55b40$ git diff --exit-code db/schema.rb
+
+travis_time:end:05a55b40:start=1496803322163356555,finish=1496803322194796275,duration=31439720travis_fold:end:before_script.5travis_time:start:12fc0878$ echo "${CMD}"
+bundle exec rake spec SPEC_OPTS="--tag ~content"
+
+travis_time:end:12fc0878:start=1496803322200427280,finish=1496803322204536687,duration=4109407
+The command "echo "${CMD}"" exited with 0.
+travis_time:start:151df451$ bash -c "${CMD}"
+YARD not defined, so yard tasks cannot be setup.
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.4.0/gems/rspec-core-3.6.0/lib:/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.4.0/gems/rspec-support-3.6.0/lib /home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.4.0/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+Run options:
+  include {:focus=>true}
+  exclude {:content=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Randomized with seed 35861
+Msf::ServiceState ....
+Rex::Proto::Kerberos::Model::KdcRequest ................
+Metasploit::Framework::LoginScanner::AdvantechWebAccess ..........................................
+Msf::Exploit::Remote::SMB::Server::Share ..
+Metasploit::Framework::LoginScanner::MySQL ....................................................
+Rex::Proto::Rmi::Model::Ping ...
+Rex::Proto::Rmi::Model::OutputHeader ......
+Msf::HostState ...
+Msf::Auxiliary::Cisco .................................
+Rex::Proto::Kerberos::Pac::ClientInfo .
+Msf::Exploit::Remote::SMB::Server::Share ..
+Msf::DatabaseEvent .......
+Rex::Proto::Kerberos::Model::KdcResponse ......
+Rex::Proto::Kerberos::CredentialCache::Principal .
+Metasploit::Framework::LoginScanner::WordpressRPC ..................................................
+Metasploit::Framework::JtR::InvalidWordlist ...
+Msf::Exploit::Remote::HTTP::JBoss::Base ..............
+Msf::DBImportError .
+Rex::Proto::Mms::Client ...
+Metasploit::Framework::LoginScanner::IPBoard .........................................................
+Rex::Proto::Mms::Model::Smtp .......
+Rex::Proto::Kerberos::Pac::PrivSvrChecksum .
+Msf::Exploit::Remote::Kerberos::Client::TgsResponse ...
+Msf::Sessions::MainframeShell .
+Msf::Exploit::Remote::SMB::Client::RemotePaths ....
+Rex::Proto::Kerberos::Model::Checksum .
+Rex::Proto::Http::Packet::Header ........
+Msf::Exploit::Remote::BrowserProfileManager ...
+Rex::Proto::Kerberos::Model::PreAuthEncTimeStamp ......
+Metasploit::Framework::LoginScanner::Glassfish ..............................................................
+Msf::Ui::Console::CommandDispatcher::Db ..................................................*.........
+Msf::Exploit::Remote::Kerberos::Client::CacheCredential ....................
+Metasploit::Framework::LoginScanner::Zabbix ..................................................
+Rex::Proto::Kerberos::CredentialCache::Credential .
+Rex::Proto::Kerberos::Model::PreAuthPacRequest ...
+Msf::Exploit::Remote::HTTP::JBoss::BeanShellScripts ............
+Msf::Exploit::Remote::Kerberos::Client::TgsRequest .........................
+Msf::Module::Failure .............
+Msf::OptRaw .....
+Metasploit::Framework::LoginScanner::Telnet ...............................................................
+Msf::Module::SiteReference .
+Rex::Proto::Rmi::Model::PingAck ...
+Msf::Exploit::Remote::HTTP::Wordpress::Login .......
+Metasploit::Framework::LoginScanner::Caidao .......................................................
+Msf::Exploit::Remote::BrowserExploitServer .............................
+Rex::Oui ......................
+Metasploit::Framework::LoginScanner::SMB ..........................................................
+Net::DNS::RR::Types ......*
+Rex::Proto::Kerberos::Model::PrincipalName ........
+Rex::Proto::Kademlia .*
+Rex::Proto::Kademlia::BootstrapResponse ...
+Rex::Proto::Kademlia::Ping ..
+Msf::Module::Reference .
+Rex::Proto::Rmi::Model::Continuation .....
+Metasploit::Framework::LoginScanner::SSH ...........................................................
+Rex::Proto::Sms::Model::Smtp .......
+Msf::OptInt ...............
+Rex::Proto::Kerberos::Model::EncKdcResponse ............
+Msf::Exploit::Remote::SMB::Server::Share ........................
+JavaDeserializer ......
+Metasploit::Framework::LoginScanner::Redis ........
+Msf::Ui::Console::CommandDispatcher::Creds ......................................*........
+Rex::Proto::Rmi::Model::ProtocolAck ......
+Msf::Exploit::Remote::HttpServer ........
+Msf::Exploit::Remote::SMB::Server::Share ......
+Msf::Exploit::Remote::Java::Rmi::Client::Registry::Parser ......
+Rex::Proto::Http::Response ..................
+MetasploitPayloads .
+Rex::Proto::Kerberos::Model::EncryptedData ........
+Rex::Proto::Kademlia::Message .........
+Metasploit::Framework::LoginScanner::ManageEngineDesktopCentral ....................................................
+Rex::Proto::ACPP::Message ..........
+Metasploit::Framework::LoginScanner::Tomcat ..................................................
+Rex::Proto::Rmi::Model::CallData ..........
+Rex::Proto::Quake .........
+Msf::Exploit::Remote::SMB::Server::Share ....
+Rex::Proto::Mms::Model::Message .......
+Rex::Proto::Kerberos::Model::KrbError ...............
+Metasploit::Framework::LoginScanner::VNC ...........................................................
+Msf::Exe::SegmentAppender ...............
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Connection ...
+Rex::Proto::Kerberos::Model::ApReq .
+Msf::Util::DocumentGenerator::PullRequestFinder .............
+Msf::Exploit::Remote::BrowserAutopwn2 *......................*.................
+Msf::ModuleSet ......
+Msf::OptAddress ..............
+Msf::RPC::RPC_Core ..
+Metasploit::Framework::LoginScanner::Smh .............................................
+Rex::Post::Meterpreter::Extensions::Stdapi::UI ....
+Msf::Exploit::Remote::Kerberos::Client::AsRequest ..........
+Msf::OptRegexp ......
+Rex::Parser::NmapXMLStreamParser ....
+Rex::Proto::Kerberos::Model::Ticket ......
+Metasploit::Framework::LoginScanner::CiscoFirepower ..........................................
+Rex::Proto::Kerberos::Model::Authenticator .
+Rex::Proto::Sms::Model::Message .....
+Rex::Proto::Kerberos::Pac::ServerChecksum .
+Msf::OptEnum .....
+Msf::Exploit::Remote::SMB::Server::Share ..
+Msf::Ui::Console::CommandDispatcher::Modules ......
+Msf::Modules::Loader::Base ............................................................................................
+Rex::Proto::Http::Packet ....
+Msf::Exploit::AutoTarget .......................
+Msf::Auxiliary::DRDoS .....
+Msf::Module::Platform .
+Rex::Proto::Http::ClientRequest ................................
+Metasploit::Framework::LoginScanner::WordpressMulticall .............................................
+Metasploit::Framework::LoginScanner::Buffalo ..................................................
+Msf::Exploit::Remote::Java::Rmi::Client .......
+Msf::Exploit::Remote::Java::Rmi::Client::Registry .....
+Msf::Exploit::CmdStager ........................................
+Rex::Proto::Kerberos::Pac::LogonInfo .
+Rex::Post::Meterpreter::PacketParser ..
+Msf::OptPort ..........
+Metasploit::Framework::LoginScanner::OctopusDeploy ..................................................
+Msf::Sessions::Meterpreter .......
+Msf::DBManager ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Msf::Exploit::Remote::HTTP::Joomla::Version ...
+Metasploit::Framework::LoginScanner::FTP .............................................................
+Msf::Exploit::Remote::Kerberos::Client::Base ............
+Msf::Exploit::Remote::SMB::Client::LocalPaths ....
+Metasploit::Framework::LoginScanner::POP3 ........................................................
+Msf::OptAddressLocal ...............
+Msf::Exploit::Remote::FirefoxAddonGenerator ..
+Msf::EncodedPayload ...........
+Msf::ModuleManager ...............................................
+Rex::Post::Meterpreter::ClientCore .....
+Rex::Proto::Kerberos::Pac::Type .
+Metasploit::Framework::LoginScanner::Axis2 ...................................................
+Msf::Exploit::Remote::SMB::Server::Share ......
+Msf::Exploit::Remote::SMB::Server::Share ................
+Rex::Proto::Kerberos::Model::KdcRequestBody ........................
+Metasploit::Framework::LoginScanner::BavisionCameras ................................................
+Rex::Proto::Sms::Client ...
+Msf::Post::Windows::Runas ......................
+Metasploit::Framework::JtR::Cracker ................................
+Egghunter 
+.
+.
+.....
+Rex::Parser::Unattend ....
+Msf::Exploit::Remote::SMB::Server::Share ......
+Metasploit::Framework::LoginScanner::DB2 ......................................................
+Rex::Post::Meterpreter::Packet ....................
+Rex::Proto::Kerberos::Client .....
+Msf::Simple::Framework .....
+Msf::Exploit::Remote::FirefoxPrivilegeEscalation .....
+Metasploit::Framework::LoginScanner ........................
+Msf::Exploit::Remote::Kerberos::Client::AsResponse ........
+Msf::Exploit::Remote::HTTP::Typo3 .........
+Msf::Exploit::Remote::HttpClient .............................
+Msf::Modules::Loader::Directory .........
+Rex::Proto::Kademlia::Pong .....
+VirusTotalUtility ................
+Net::DNS::RR::Classes .*.....
+Metasploit::Framework::LoginScanner::WinRM ....................................................
+Mdm::Workspace ..............*.
+Msf::Exploit::Remote::HTTP::Wordpress::Base .....
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Connection::Builder .........................
+Rex::ExtTime ....
+Msf::Exe::SegmentInjector ................
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Server::Parser .....
+Rex::Post::Meterpreter::Extensions::Priv::Priv ......
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Server::Builder .......
+Rex::Proto::Kerberos::Model::PreAuthData ........
+Metasploit::Framework::Aws::Client ..........
+Metasploit::Framework::LoginScanner::ChefWebUI ..................................................
+Jsobfu ..
+.
+.
+.
+Rex::Parser::WinSCP ............
+Rex::Proto::Kademlia::BootstrapRequest ..
+Metasploit::Framework::LoginScanner::Nessus ................................................
+Rex::Proto::Rmi::Model::UniqueIdentifier .....
+Msf::Module ...................................................................................................................................................................................................................****........****.....................................................................................................
+Msf::Exploit::Remote::Java::Rmi::Util .............
+Metasploit::Framework::Credential .......................
+Metasploit::Framework::LoginScanner::Base ............
+Md5LookupUtility .........................
+Rex::Proto::Rmi::Model::ReturnValue .........
+Msf::OptBool ............
+Msf::Post::Android::Priv ..
+Metasploit::Framework::LoginScanner::Invalid ...
+Msf::DataStore ................
+Msf::OptAddressRange ............................
+Rex::Proto::Rmi::Model::Call ....
+Rex::ImageSource::Disk ...................
+ActiveRecord::ConnectionAdapters::ConnectionPool ............
+Rex::Proto::Steam .....
+Metasploit::Framework::LoginScanner::VMAUTHD ......................................................
+Rex::Parser::BITLOCKER .
+Msf::OptionContainer .
+Rex::Proto::Rmi::Model::DgcAck ....
+Metasploit::Framework::LoginScanner::MyBookLive ..................................................
+Msf::Post::Windows::Priv ....
+Rex::Post::Meterpreter::GroupTlv ....................................***...
+Metasploit::Framework::LoginScanner::HTTP ...................................................
+Msf::Util::DocumentGenerator::DocumentNormalizer ......................
+Msf::Author ........................
+Rex::Proto::Kerberos::CredentialCache::Cache .
+Msf::Exploit::Capture ..****......
+Metasploit::Framework::LoginScanner::GitLab ..................................................
+Metasploit::Framework::CredentialCollection ................
+Rex::Proto::Kerberos::Model::AuthorizationData ..
+CPassword ..
+Msf::Exploit::Remote::Kerberos::Client::Pac ...............
+Metasploit::Framework::LoginScanner::MSSQL .........................................................................................
+Rex::Proto::SIP::Response parsing ......
+Msf::Exploit::Remote::HTTP::Wordpress::Version ........................................
+Rex::Parser::GPP .Unable to decode: "blah" Exception: wrong final block length
+....Unable to decode: "demo" Exception: wrong final block length
+....
+Msfupdate ..........................................
+Msf::DBManager::Export ........................
+Msf::Post::Linux::BusyBox ..........
+Msftidy ....
+Msf::OptPath ..........
+Msf::Modules::Error .........
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Server .
+Msf::Post::Windows::MSSQL .......................................
+Rex::Proto::Rmi::Model::ReturnData ....
+Metasploit::Framework::LoginScanner::Result .......
+Msf::Exploit::Remote::HTTP::JBoss::BeanShell ..........
+Msf::Exploit::Remote::SMB::Server::Share ......
+Rex::Proto::NATPMP ...
+Metasploit::Framework::Database ............................
+Metasploit::Framework::LoginScanner::Jenkins ..................................................
+Rex::Parser::Ini ..
+Msf::Ui::Console::CommandDispatcher::Core .......
+Metasploit::Framework::JtR::Wordlist ........................
+Rex::ImageSource::Memory ..............................
+Rex::Payloads::Meterpreter::UriChecksum ......................................................................................................................................
+Msf::Exploit::Remote::HTTP::JBoss::DeploymentFileRepository ........
+Msf::Framework ...*
+Msf::Opt ............................
+Metasploit::Framework::LoginScanner::SymantecWebGateway ................................................
+Msf::Handler::ReverseHttp .............
+Msf::Exploit::Remote::HTTP::Joomla::Base .
+Msf::Module::Target .
+Rex::Proto::Http::Client ...**.*...*.*.*..**......
+Metasploit::Framework::LoginScanner::AFP ........................................................
+Msf::Exploit::Remote::HTTP::JBoss::DeploymentFileRepositoryScripts .....
+Rex::Post::Meterpreter::Extensions::Stdapi::Sys::Registry ......
+Msf::Exploit::Remote::SMB::Server::Share ................................
+Msf::PayloadGenerator ..........................................*...............................
+Rex::Proto::PJL::Client ......................
+Msf::Post::Android::System .
+Net::DNS::Names .........
+Rex::Proto::Kerberos::CredentialCache::Time .
+Metasploit::Credential::Core ...
+Msf::Exploit::Powershell ...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Rex::Proto::NTP mode message handling ......
+Msf::Exploit::Remote::Java::Rmi::Client::Registry::Builder ......
+Metasploit::Framework::LoginScanner::Postgres ............................................
+Msf::Exploit::Remote::Java::Rmi::Builder ............
+Rex::Post::Meterpreter::Tlv ......................
+
+Top 10 slowest examples (23.14 seconds, 36.9% of total time):
+  Rex::Parser::BITLOCKER Extract and decrypt recovery key from recovery password
+    8.54 seconds ./spec/lib/rex/parser/fs/bitlocker_spec.rb:88
+  Msf::Simple::Framework it should behave like Msf::Simple::Framework::ModulePaths #init_module_paths should refresh module cache from database
+    6.99 seconds ./spec/support/shared/examples/msf/simple/framework/module_paths.rb:31
+  Msf::Post::Linux::BusyBox#busy_box_writable_dir when a writable directory doesn't exist returns nil
+    2.41 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:90
+  Msf::Post::Linux::BusyBox#busy_box_write_file when prepend is true when there is a writable dir when the target file is writable returns true
+    1.81 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:165
+  Msf::Post::Linux::BusyBox#busy_box_write_file when the file is writable returns true
+    0.90333 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:143
+  Msf::Post::Linux::BusyBox#busy_box_writable_dir when a writable directory exists returns the writable dir path
+    0.60345 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:106
+  Msf::Post::Linux::BusyBox#busy_box_is_writable_dir? when dir is writable returns true
+    0.60336 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:57
+  Msf::Post::Linux::BusyBox#busy_box_is_writable_dir? when dir isn't writable returns false
+    0.60273 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:69
+  Rex::Payloads::Meterpreter::UriChecksum#generate_uri_checksum generates a 5 byte string that checksums back to the original value (0) with prefix /boom
+    0.39073 seconds ./spec/lib/rex/payloads/meterpreter/uri_checksum_spec.rb:77
+  Msf::Post::Linux::BusyBox#busy_box_write_file when the file isn't writable returns false
+    0.30422 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:127
+
+Top 10 slowest example groups:
+  Rex::Parser::BITLOCKER
+    8.54 seconds average (8.54 seconds / 1 example) ./spec/lib/rex/parser/fs/bitlocker_spec.rb:82
+  Msf::Simple::Framework
+    1.4 seconds average (7 seconds / 5 examples) ./spec/lib/msf/base/simple/framework_spec.rb:3
+  Msf::Post::Linux::BusyBox
+    0.72379 seconds average (7.24 seconds / 10 examples) ./spec/lib/msf/core/post/linux/busy_box_spec.rb:6
+  Msf::Exploit::Remote::BrowserAutopwn2
+    0.08075 seconds average (3.31 seconds / 41 examples) ./spec/lib/msf/core/exploit/browser_autopwn2_spec.rb:4
+  Msf::Exe::SegmentInjector
+    0.05703 seconds average (0.91255 seconds / 16 examples) ./spec/lib/msf/core/exe/segment_injector_spec.rb:4
+  Msf::Exe::SegmentAppender
+    0.05682 seconds average (0.85224 seconds / 15 examples) ./spec/lib/msf/core/exe/segment_appender_spec.rb:4
+  Metasploit::Credential::Core
+    0.05199 seconds average (0.15597 seconds / 3 examples) ./spec/models/metasploit/credential/core_spec.rb:3
+  Msf::Ui::Console::CommandDispatcher::Creds
+    0.03791 seconds average (1.78 seconds / 47 examples) ./spec/lib/msf/ui/console/command_dispatcher/creds_spec.rb:7
+  Metasploit::Framework::LoginScanner::Invalid
+    0.03714 seconds average (0.11142 seconds / 3 examples) ./spec/lib/metasploit/framework/login_scanner/invalid_spec.rb:4
+  Msf::DBManager::Export
+    0.03252 seconds average (0.78048 seconds / 24 examples) ./spec/lib/msf/db_manager/export_spec.rb:5
+
+Finished in 1 minute 2.72 seconds (files took 7.59 seconds to load)
+5735 examples, 0 failures, 33 pending
+
+Randomized with seed 35861
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.4.0/gems/rspec-core-3.6.0/lib:/home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.4.0/gems/rspec-support-3.6.0/lib /home/travis/build/rapid7/metasploit-framework/vendor/bundle/ruby/2.4.0/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+Run options:
+  include {:focus=>true}
+  exclude {:content=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Randomized with seed 58811
+Msf::OptPort ..........
+Msf::Exploit::Remote::Java::Rmi::Client::Registry::Parser ......
+Msf::Exploit::Remote::BrowserProfileManager ...
+Msf::Exploit::Remote::HTTP::Wordpress::Version ........................................
+Rex::ImageSource::Disk ...................
+Metasploit::Framework::LoginScanner::Tomcat ..................................................
+Msf::Exploit::Remote::HTTP::JBoss::DeploymentFileRepository ........
+Msf::Util::DocumentGenerator::DocumentNormalizer ......................
+Rex::Post::Meterpreter::Extensions::Priv::Priv ......
+Rex::Proto::Kerberos::Pac::ServerChecksum .
+Metasploit::Framework::LoginScanner::AdvantechWebAccess ..........................................
+Rex::Proto::Steam .....
+Rex::Parser::Ini ..
+Metasploit::Framework::LoginScanner::HTTP ...................................................
+Rex::Proto::Kerberos::Model::KdcRequestBody ........................
+Rex::Proto::Rmi::Model::CallData ..........
+Msf::Exploit::Remote::HTTP::JBoss::BeanShellScripts ............
+Msf::OptRegexp ......
+Metasploit::Framework::LoginScanner::IPBoard .........................................................
+Metasploit::Framework::LoginScanner::AFP ........................................................
+Metasploit::Framework::LoginScanner::Zabbix ..................................................
+Rex::Proto::Kademlia::BootstrapRequest ..
+Msf::Exploit::Powershell ...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Msf::Post::Windows::Runas ......................
+Metasploit::Framework::LoginScanner::Axis2 ...................................................
+Rex::Post::Meterpreter::PacketParser ..
+Msf::OptAddressLocal ...............
+Msf::Exploit::Remote::SMB::Client::RemotePaths ....
+Rex::Proto::SIP::Response parsing ......
+Msf::Exploit::Remote::Kerberos::Client::TgsRequest .........................
+Msf::Exploit::Remote::HTTP::JBoss::Base ..............
+Rex::Proto::Kerberos::CredentialCache::Cache .
+Rex::Proto::Kademlia .*
+Msf::Post::Windows::MSSQL .......................................
+Msf::Exploit::Remote::Java::Rmi::Client::Registry .....
+Rex::Proto::Kerberos::Model::KrbError ...............
+Metasploit::Framework::LoginScanner::Jenkins ..................................................
+Rex::Proto::Kerberos::Client .....
+Metasploit::Framework::LoginScanner::DB2 ......................................................
+Msf::OptBool ............
+Msf::Module::Target .
+Msf::Exploit::Remote::HTTP::JBoss::BeanShell ..........
+Rex::Post::Meterpreter::Packet ....................
+Msf::Exploit::Remote::BrowserExploitServer .............................
+Rex::Proto::Kerberos::Model::EncKdcResponse ............
+Rex::ExtTime ....
+Msf::Author ........................
+Metasploit::Framework::LoginScanner::Base ............
+Rex::Proto::Http::Client .***.***.......*..*......
+Rex::Proto::Kerberos::CredentialCache::Time .
+Msf::Modules::Loader::Directory .........
+Rex::Post::Meterpreter::GroupTlv ....................***...................
+Msf::Exploit::Remote::SMB::Server::Share ......
+Msf::Exploit::Remote::SMB::Server::Share ..
+Rex::Parser::WinSCP ............
+Rex::Oui ......................
+Metasploit::Framework::LoginScanner::Nessus ................................................
+Rex::Proto::Sms::Model::Smtp .......
+Msf::Exploit::Remote::SMB::Server::Share ......
+Metasploit::Framework::LoginScanner::Telnet ...............................................................
+Msf::Module::Failure .............
+Metasploit::Framework::LoginScanner::GitLab ..................................................
+Msf::Opt ............................
+Rex::Proto::Rmi::Model::UniqueIdentifier .....
+Msf::Simple::Framework .....
+Rex::Proto::Kademlia::Ping ..
+Msf::Exploit::Remote::Java::Rmi::Util .............
+Rex::Proto::Rmi::Model::DgcAck ....
+Rex::Parser::Unattend ....
+Metasploit::Framework::LoginScanner::WinRM ....................................................
+Msf::DataStore ................
+Msf::ModuleManager ...............................................
+Metasploit::Framework::JtR::InvalidWordlist ...
+Rex::Proto::Kerberos::Model::ApReq .
+Msf::Exploit::Remote::SMB::Client::LocalPaths ....
+Msf::ModuleSet ......
+Msf::Auxiliary::Cisco .................................
+Msf::Modules::Loader::Base ............................................................................................
+Metasploit::Framework::LoginScanner::BavisionCameras ................................................
+Rex::Proto::NTP mode message handling ......
+Msf::Exploit::Remote::SMB::Server::Share ......
+Rex::Payloads::Meterpreter::UriChecksum ......................................................................................................................................
+Metasploit::Framework::JtR::Wordlist ........................
+Egghunter 
+.
+.
+.....
+Rex::Proto::Http::Packet ....
+Msf::Module::Reference .
+Msf::Exe::SegmentInjector ................
+Rex::Proto::Kerberos::CredentialCache::Credential .
+Msf::Module::SiteReference .
+Rex::Proto::Http::ClientRequest ................................
+Msf::DBImportError .
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Connection::Builder .........................
+Metasploit::Framework::Database ............................
+Mdm::Workspace ..............*.
+Rex::Proto::Sms::Client ...
+Rex::Proto::PJL::Client ......................
+Metasploit::Framework::LoginScanner::WordpressRPC ..................................................
+Rex::Proto::Kerberos::Pac::LogonInfo .
+Msf::Exploit::AutoTarget .......................
+MetasploitPayloads .
+ActiveRecord::ConnectionAdapters::ConnectionPool ............
+Msf::Exploit::Remote::Kerberos::Client::AsRequest ..........
+Net::DNS::RR::Types .*.....
+Msf::ServiceState ....
+Rex::Proto::Rmi::Model::ProtocolAck ......
+Net::DNS::Names .........
+Rex::Proto::Kerberos::Model::PreAuthPacRequest ...
+Rex::Proto::Kerberos::Model::KdcResponse ......
+Metasploit::Framework::LoginScanner::MSSQL .........................................................................................
+Msfupdate ..........................................
+Msf::OptInt ...............
+Metasploit::Framework::JtR::Cracker ................................
+Msf::Post::Android::System .
+Rex::Proto::Rmi::Model::Continuation .....
+Msf::Exploit::Remote::Kerberos::Client::Base ............
+Msf::OptRaw .....
+Rex::Proto::Rmi::Model::PingAck ...
+Msf::Handler::ReverseHttp .............
+Msf::Exploit::Remote::FirefoxPrivilegeEscalation .....
+Msf::Exploit::Remote::HttpServer ........
+Rex::Proto::Kerberos::CredentialCache::Principal .
+Msf::DatabaseEvent .......
+Metasploit::Framework::LoginScanner::Redis ........
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Connection ...
+Metasploit::Framework::LoginScanner::Result .......
+Rex::Proto::Mms::Model::Smtp .......
+Msf::Exploit::Remote::FirefoxAddonGenerator ..
+Msf::Module::Platform .
+Rex::Proto::Rmi::Model::OutputHeader ......
+Rex::Proto::Kerberos::Model::PreAuthEncTimeStamp ......
+Msf::Exploit::Remote::Java::Rmi::Client .......
+Rex::Proto::Kademlia::BootstrapResponse ...
+Msf::PayloadGenerator ...........................................................*..............
+Metasploit::Framework::CredentialCollection ................
+Jsobfu 
+.
+.
+...
+Msf::Exploit::Remote::HTTP::Wordpress::Base .....
+Msf::Exploit::Remote::HTTP::Typo3 .........
+Msf::Exploit::Remote::SMB::Server::Share ....
+JavaDeserializer ......
+Metasploit::Framework::LoginScanner::ManageEngineDesktopCentral ....................................................
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Server .
+Rex::Proto::Kerberos::Model::KdcRequest ................
+Rex::Proto::Mms::Model::Message .......
+Msf::HostState ...
+Metasploit::Framework::LoginScanner ........................
+Msf::Post::Windows::Priv ....
+CPassword ..
+Rex::Proto::Kademlia::Pong .....
+Rex::Proto::Kerberos::Model::PreAuthData ........
+Rex::Proto::ACPP::Message ..........
+Metasploit::Framework::LoginScanner::SMB ..........................................................
+Md5LookupUtility .........................
+Metasploit::Framework::LoginScanner::WordpressMulticall .............................................
+Msf::Exploit::Remote::BrowserAutopwn2 *...........................*............
+Msf::Exploit::Remote::SMB::Server::Share ..
+Msf::Exploit::Remote::SMB::Server::Share ................................
+Msf::Exploit::Remote::SMB::Server::Share ........................
+Rex::Post::Meterpreter::Extensions::Stdapi::Sys::Registry ......
+Metasploit::Framework::LoginScanner::VMAUTHD ......................................................
+Metasploit::Framework::LoginScanner::MyBookLive ..................................................
+Msf::Post::Android::Priv ..
+Rex::Proto::Http::Packet::Header ........
+Msf::Modules::Error .........
+Msf::DBManager::Export ........................
+Metasploit::Framework::LoginScanner::Smh .............................................
+Rex::Proto::Http::Response ..................
+Msf::Exploit::CmdStager ........................................
+Msf::Auxiliary::DRDoS .....
+Rex::Proto::Kerberos::Model::EncryptedData ........
+Rex::Proto::Rmi::Model::Ping ...
+Msf::Exploit::Remote::HTTP::JBoss::DeploymentFileRepositoryScripts .....
+Msf::Exploit::Remote::Java::Rmi::Builder ............
+Msf::Exploit::Remote::HTTP::Joomla::Base .
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Server::Builder .......
+Metasploit::Framework::LoginScanner::CiscoFirepower ..........................................
+Rex::Proto::Rmi::Model::Call ....
+Msf::OptAddress ..............
+Rex::Parser::BITLOCKER .
+Msf::Exploit::Remote::Kerberos::Client::TgsResponse ...
+Rex::Proto::NATPMP ...
+Rex::ImageSource::Memory ..............................
+Msf::OptEnum .....
+Msf::Exploit::Remote::Java::Rmi::Client::Registry::Builder ......
+Rex::Proto::Kerberos::Model::Ticket ......
+Msf::Exploit::Remote::Java::Rmi::Client::Jmx::Server::Parser .....
+Msf::Module ...........................................................................................................................................................................................................................****...........................................................****..........................................
+Msf::Exploit::Remote::Kerberos::Client::AsResponse ........
+Metasploit::Framework::LoginScanner::Caidao .......................................................
+Metasploit::Framework::LoginScanner::VNC ...........................................................
+Msf::Exploit::Remote::HttpClient .............................
+Msf::Exe::SegmentAppender ...............
+Msf::Sessions::Meterpreter .......
+Rex::Post::Meterpreter::Tlv ......................
+Msf::Sessions::MainframeShell .
+Metasploit::Framework::Credential .......................
+Metasploit::Framework::LoginScanner::SymantecWebGateway ................................................
+Msf::Ui::Console::CommandDispatcher::Db ..................................................*.........
+Msf::Exploit::Capture ..****......
+Net::DNS::RR::Classes .....*.
+Msf::Ui::Console::CommandDispatcher::Creds .....................................*.........
+Msf::OptAddressRange ............................
+Msf::Exploit::Remote::SMB::Server::Share ..
+Rex::Proto::Kerberos::Pac::PrivSvrChecksum .
+Msf::OptionContainer .
+Msf::Framework ...*
+Rex::Post::Meterpreter::Extensions::Stdapi::UI ....
+VirusTotalUtility ................
+Msf::Ui::Console::CommandDispatcher::Core .......
+Rex::Proto::Rmi::Model::ReturnValue .........
+Metasploit::Framework::LoginScanner::OctopusDeploy ..................................................
+Msf::EncodedPayload ...........
+Msf::Exploit::Remote::Kerberos::Client::CacheCredential ....................
+Rex::Proto::Kerberos::Model::Authenticator .
+Metasploit::Credential::Core ...
+Metasploit::Framework::Aws::Client ..........
+Msf::Exploit::Remote::SMB::Server::Share ......
+Rex::Proto::Rmi::Model::ReturnData ....
+Msf::OptPath ..........
+Rex::Proto::Mms::Client ...
+Rex::Proto::Kerberos::Model::AuthorizationData ..
+Msf::Exploit::Remote::SMB::Server::Share ................
+Rex::Parser::GPP ..Unable to decode: "blah" Exception: wrong final block length
+.Unable to decode: "demo" Exception: wrong final block length
+......
+Msf::Exploit::Remote::Kerberos::Client::Pac ...............
+Msf::RPC::RPC_Core ..
+Metasploit::Framework::LoginScanner::Postgres ............................................
+Msf::Post::Linux::BusyBox ..........
+Rex::Post::Meterpreter::ClientCore .....
+Rex::Parser::NmapXMLStreamParser ....
+Rex::Proto::Kerberos::Pac::Type .
+Msf::Exploit::Remote::HTTP::Joomla::Version ...
+Metasploit::Framework::LoginScanner::POP3 ........................................................
+Msftidy ....
+Metasploit::Framework::LoginScanner::Glassfish ..............................................................
+Rex::Proto::Sms::Model::Message .....
+Rex::Proto::Kerberos::Pac::ClientInfo .
+Msf::Ui::Console::CommandDispatcher::Modules ......
+Rex::Proto::Kerberos::Model::PrincipalName ........
+Rex::Proto::Quake .........
+Msf::Util::DocumentGenerator::PullRequestFinder .............
+Metasploit::Framework::LoginScanner::FTP .............................................................
+Msf::Exploit::Remote::HTTP::Wordpress::Login .......
+Metasploit::Framework::LoginScanner::SSH ...........................................................
+Rex::Proto::Kerberos::Model::Checksum .
+Metasploit::Framework::LoginScanner::Buffalo ..................................................
+Metasploit::Framework::LoginScanner::ChefWebUI ..................................................
+Rex::Proto::Kademlia::Message .........
+Metasploit::Framework::LoginScanner::Invalid ...
+Msf::DBManager ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Metasploit::Framework::LoginScanner::MySQL ....................................................
+
+Top 10 slowest examples (22.42 seconds, 35.9% of total time):
+  Rex::Parser::BITLOCKER Extract and decrypt recovery key from recovery password
+    8.43 seconds ./spec/lib/rex/parser/fs/bitlocker_spec.rb:88
+  Msf::Simple::Framework it should behave like Msf::Simple::Framework::ModulePaths #init_module_paths should refresh module cache from database
+    6.57 seconds ./spec/support/shared/examples/msf/simple/framework/module_paths.rb:31
+  Msf::Post::Linux::BusyBox#busy_box_writable_dir when a writable directory doesn't exist returns nil
+    2.41 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:90
+  Msf::Post::Linux::BusyBox#busy_box_write_file when prepend is true when there is a writable dir when the target file is writable returns true
+    1.8 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:165
+  Msf::Post::Linux::BusyBox#busy_box_write_file when the file is writable returns true
+    0.90364 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:143
+  Msf::Post::Linux::BusyBox#busy_box_writable_dir when a writable directory exists returns the writable dir path
+    0.60381 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:106
+  Msf::Post::Linux::BusyBox#busy_box_is_writable_dir? when dir is writable returns true
+    0.60325 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:57
+  Msf::Post::Linux::BusyBox#busy_box_is_writable_dir? when dir isn't writable returns false
+    0.60297 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:69
+  Msf::Post::Linux::BusyBox#busy_box_write_file when the file isn't writable returns false
+    0.30276 seconds ./spec/lib/msf/core/post/linux/busy_box_spec.rb:127
+  Metasploit::Framework::LoginScanner::SSH#attempt_login with a key calls Net::SSH with the correct arguments
+    0.18966 seconds ./spec/lib/metasploit/framework/login_scanner/ssh_spec.rb:161
+
+Top 10 slowest example groups:
+  Rex::Parser::BITLOCKER
+    8.43 seconds average (8.43 seconds / 1 example) ./spec/lib/rex/parser/fs/bitlocker_spec.rb:82
+  Msf::Simple::Framework
+    1.32 seconds average (6.59 seconds / 5 examples) ./spec/lib/msf/base/simple/framework_spec.rb:3
+  Msf::Post::Linux::BusyBox
+    0.72361 seconds average (7.24 seconds / 10 examples) ./spec/lib/msf/core/post/linux/busy_box_spec.rb:6
+  Msf::Exploit::Remote::BrowserAutopwn2
+    0.08993 seconds average (3.69 seconds / 41 examples) ./spec/lib/msf/core/exploit/browser_autopwn2_spec.rb:4
+  Msf::Exe::SegmentAppender
+    0.03991 seconds average (0.59861 seconds / 15 examples) ./spec/lib/msf/core/exe/segment_appender_spec.rb:4
+  Msf::Ui::Console::CommandDispatcher::Creds
+    0.0377 seconds average (1.77 seconds / 47 examples) ./spec/lib/msf/ui/console/command_dispatcher/creds_spec.rb:7
+  Msf::Exe::SegmentInjector
+    0.03618 seconds average (0.57885 seconds / 16 examples) ./spec/lib/msf/core/exe/segment_injector_spec.rb:4
+  Metasploit::Credential::Core
+    0.03325 seconds average (0.09975 seconds / 3 examples) ./spec/models/metasploit/credential/core_spec.rb:3
+  Msf::DBManager::Export
+    0.03262 seconds average (0.78293 seconds / 24 examples) ./spec/lib/msf/db_manager/export_spec.rb:5
+  Metasploit::Framework::LoginScanner::Invalid
+    0.02802 seconds average (0.08407 seconds / 3 examples) ./spec/lib/metasploit/framework/login_scanner/invalid_spec.rb:4
+
+Finished in 1 minute 2.38 seconds (files took 7.51 seconds to load)
+5735 examples, 0 failures, 33 pending
+
+Randomized with seed 58811
+
+travis_time:end:151df451:start=1496803322209925400,finish=1496803467446844755,duration=145236919355
+The command "bash -c "${CMD}"" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:02cf4444
+travis_time:end:02cf4444:start=1496803467897959663,finish=1496803467902611400,duration=4651737travis_time:start:001458a8nothing changed, not updating cache
+
+travis_time:end:001458a8:start=1496803467907883086,finish=1496803469269420316,duration=1361537230travis_fold:end:cache.2
+Done. Your build exited with 0.

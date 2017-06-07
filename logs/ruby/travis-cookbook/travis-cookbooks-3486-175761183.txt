@@ -1,0 +1,157 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-07db0a7-production-2-worker-org-ec2.travisci.net:be707956-2f82-4fe2-8ff1-59c6ea457f57
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: f3a7dd7:travis:default
+startup: 800.368802ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: generic
+Build group: stable
+Build dist: trusty
+Build id: 240048751
+Job id: 240048755
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:2fb22c49$ git clone --depth=50 --branch=meat-pyenv-python-cleanups https://github.com/travis-ci/travis-cookbooks.git travis-ci/travis-cookbooks
+Cloning into 'travis-ci/travis-cookbooks'...
+remote: Counting objects: 3459, done.[K
+remote: Compressing objects:   0% (1/1789)   [Kremote: Compressing objects:   1% (18/1789)   [Kremote: Compressing objects:   2% (36/1789)   [Kremote: Compressing objects:   3% (54/1789)   [Kremote: Compressing objects:   4% (72/1789)   [Kremote: Compressing objects:   5% (90/1789)   [Kremote: Compressing objects:   6% (108/1789)   [Kremote: Compressing objects:   7% (126/1789)   [Kremote: Compressing objects:   8% (144/1789)   [Kremote: Compressing objects:   9% (162/1789)   [Kremote: Compressing objects:  10% (179/1789)   [Kremote: Compressing objects:  11% (197/1789)   [Kremote: Compressing objects:  12% (215/1789)   [Kremote: Compressing objects:  13% (233/1789)   [Kremote: Compressing objects:  14% (251/1789)   [Kremote: Compressing objects:  15% (269/1789)   [Kremote: Compressing objects:  16% (287/1789)   [Kremote: Compressing objects:  17% (305/1789)   [Kremote: Compressing objects:  18% (323/1789)   [Kremote: Compressing objects:  19% (340/1789)   [Kremote: Compressing objects:  20% (358/1789)   [Kremote: Compressing objects:  21% (376/1789)   [Kremote: Compressing objects:  22% (394/1789)   [Kremote: Compressing objects:  23% (412/1789)   [Kremote: Compressing objects:  24% (430/1789)   [Kremote: Compressing objects:  25% (448/1789)   [Kremote: Compressing objects:  26% (466/1789)   [Kremote: Compressing objects:  27% (484/1789)   [Kremote: Compressing objects:  28% (501/1789)   [Kremote: Compressing objects:  29% (519/1789)   [Kremote: Compressing objects:  30% (537/1789)   [Kremote: Compressing objects:  31% (555/1789)   [Kremote: Compressing objects:  32% (573/1789)   [Kremote: Compressing objects:  33% (591/1789)   [Kremote: Compressing objects:  34% (609/1789)   [Kremote: Compressing objects:  35% (627/1789)   [Kremote: Compressing objects:  36% (645/1789)   [Kremote: Compressing objects:  37% (662/1789)   [Kremote: Compressing objects:  38% (680/1789)   [Kremote: Compressing objects:  39% (698/1789)   [Kremote: Compressing objects:  40% (716/1789)   [Kremote: Compressing objects:  41% (734/1789)   [Kremote: Compressing objects:  42% (752/1789)   [Kremote: Compressing objects:  43% (770/1789)   [Kremote: Compressing objects:  44% (788/1789)   [Kremote: Compressing objects:  45% (806/1789)   [Kremote: Compressing objects:  46% (823/1789)   [Kremote: Compressing objects:  47% (841/1789)   [Kremote: Compressing objects:  48% (859/1789)   [Kremote: Compressing objects:  49% (877/1789)   [Kremote: Compressing objects:  50% (895/1789)   [Kremote: Compressing objects:  51% (913/1789)   [Kremote: Compressing objects:  52% (931/1789)   [Kremote: Compressing objects:  53% (949/1789)   [Kremote: Compressing objects:  54% (967/1789)   [Kremote: Compressing objects:  55% (984/1789)   [Kremote: Compressing objects:  56% (1002/1789)   [Kremote: Compressing objects:  57% (1020/1789)   [Kremote: Compressing objects:  58% (1038/1789)   [Kremote: Compressing objects:  59% (1056/1789)   [Kremote: Compressing objects:  60% (1074/1789)   [Kremote: Compressing objects:  61% (1092/1789)   [Kremote: Compressing objects:  62% (1110/1789)   [Kremote: Compressing objects:  63% (1128/1789)   [Kremote: Compressing objects:  64% (1145/1789)   [Kremote: Compressing objects:  65% (1163/1789)   [Kremote: Compressing objects:  66% (1181/1789)   [Kremote: Compressing objects:  67% (1199/1789)   [Kremote: Compressing objects:  68% (1217/1789)   [Kremote: Compressing objects:  69% (1235/1789)   [Kremote: Compressing objects:  70% (1253/1789)   [Kremote: Compressing objects:  71% (1271/1789)   [Kremote: Compressing objects:  72% (1289/1789)   [Kremote: Compressing objects:  73% (1306/1789)   [Kremote: Compressing objects:  74% (1324/1789)   [Kremote: Compressing objects:  75% (1342/1789)   [Kremote: Compressing objects:  76% (1360/1789)   [Kremote: Compressing objects:  77% (1378/1789)   [Kremote: Compressing objects:  78% (1396/1789)   [Kremote: Compressing objects:  79% (1414/1789)   [Kremote: Compressing objects:  80% (1432/1789)   [Kremote: Compressing objects:  81% (1450/1789)   [Kremote: Compressing objects:  82% (1467/1789)   [Kremote: Compressing objects:  83% (1485/1789)   [Kremote: Compressing objects:  84% (1503/1789)   [Kremote: Compressing objects:  85% (1521/1789)   [Kremote: Compressing objects:  86% (1539/1789)   [Kremote: Compressing objects:  87% (1557/1789)   [Kremote: Compressing objects:  88% (1575/1789)   [Kremote: Compressing objects:  89% (1593/1789)   [Kremote: Compressing objects:  90% (1611/1789)   [Kremote: Compressing objects:  91% (1628/1789)   [Kremote: Compressing objects:  92% (1646/1789)   [Kremote: Compressing objects:  93% (1664/1789)   [Kremote: Compressing objects:  94% (1682/1789)   [Kremote: Compressing objects:  95% (1700/1789)   [Kremote: Compressing objects:  96% (1718/1789)   [Kremote: Compressing objects:  97% (1736/1789)   [Kremote: Compressing objects:  98% (1754/1789)   [Kremote: Compressing objects:  99% (1772/1789)   [Kremote: Compressing objects: 100% (1789/1789)   [Kremote: Compressing objects: 100% (1789/1789), done.[K
+Receiving objects:   0% (1/3459)   Receiving objects:   1% (35/3459)   Receiving objects:   2% (70/3459)   Receiving objects:   3% (104/3459)   Receiving objects:   4% (139/3459)   Receiving objects:   5% (173/3459)   Receiving objects:   6% (208/3459)   Receiving objects:   7% (243/3459)   Receiving objects:   8% (277/3459)   Receiving objects:   9% (312/3459)   Receiving objects:  10% (346/3459)   Receiving objects:  11% (381/3459)   Receiving objects:  12% (416/3459)   Receiving objects:  13% (450/3459)   Receiving objects:  14% (485/3459)   Receiving objects:  15% (519/3459)   Receiving objects:  16% (554/3459)   Receiving objects:  17% (589/3459)   Receiving objects:  18% (623/3459)   Receiving objects:  19% (658/3459)   Receiving objects:  20% (692/3459)   Receiving objects:  21% (727/3459)   Receiving objects:  22% (761/3459)   Receiving objects:  23% (796/3459)   Receiving objects:  24% (831/3459)   Receiving objects:  25% (865/3459)   Receiving objects:  26% (900/3459)   Receiving objects:  27% (934/3459)   Receiving objects:  28% (969/3459)   Receiving objects:  29% (1004/3459)   Receiving objects:  30% (1038/3459)   Receiving objects:  31% (1073/3459)   Receiving objects:  32% (1107/3459)   Receiving objects:  33% (1142/3459)   Receiving objects:  34% (1177/3459)   Receiving objects:  35% (1211/3459)   Receiving objects:  36% (1246/3459)   Receiving objects:  37% (1280/3459)   Receiving objects:  38% (1315/3459)   Receiving objects:  39% (1350/3459)   Receiving objects:  40% (1384/3459)   Receiving objects:  41% (1419/3459)   Receiving objects:  42% (1453/3459)   Receiving objects:  43% (1488/3459)   Receiving objects:  44% (1522/3459)   Receiving objects:  45% (1557/3459)   Receiving objects:  46% (1592/3459)   Receiving objects:  47% (1626/3459)   Receiving objects:  48% (1661/3459)   Receiving objects:  49% (1695/3459)   Receiving objects:  50% (1730/3459)   Receiving objects:  51% (1765/3459)   Receiving objects:  52% (1799/3459)   Receiving objects:  53% (1834/3459)   Receiving objects:  54% (1868/3459)   Receiving objects:  55% (1903/3459)   Receiving objects:  56% (1938/3459)   Receiving objects:  57% (1972/3459)   Receiving objects:  58% (2007/3459)   Receiving objects:  59% (2041/3459)   Receiving objects:  60% (2076/3459)   Receiving objects:  61% (2110/3459)   Receiving objects:  62% (2145/3459)   Receiving objects:  63% (2180/3459)   Receiving objects:  64% (2214/3459)   Receiving objects:  65% (2249/3459)   Receiving objects:  66% (2283/3459)   Receiving objects:  67% (2318/3459)   Receiving objects:  68% (2353/3459)   Receiving objects:  69% (2387/3459)   Receiving objects:  70% (2422/3459)   Receiving objects:  71% (2456/3459)   Receiving objects:  72% (2491/3459)   Receiving objects:  73% (2526/3459)   Receiving objects:  74% (2560/3459)   Receiving objects:  75% (2595/3459)   Receiving objects:  76% (2629/3459)   Receiving objects:  77% (2664/3459)   Receiving objects:  78% (2699/3459)   Receiving objects:  79% (2733/3459)   Receiving objects:  80% (2768/3459)   Receiving objects:  81% (2802/3459)   Receiving objects:  82% (2837/3459)   Receiving objects:  83% (2871/3459)   Receiving objects:  84% (2906/3459)   Receiving objects:  85% (2941/3459)   Receiving objects:  86% (2975/3459)   Receiving objects:  87% (3010/3459)   Receiving objects:  88% (3044/3459)   Receiving objects:  89% (3079/3459)   Receiving objects:  90% (3114/3459)   Receiving objects:  91% (3148/3459)   Receiving objects:  92% (3183/3459)   Receiving objects:  93% (3217/3459)   Receiving objects:  94% (3252/3459)   Receiving objects:  95% (3287/3459)   Receiving objects:  96% (3321/3459)   Receiving objects:  97% (3356/3459)   Receiving objects:  98% (3390/3459)   remote: Total 3459 (delta 1417), reused 2991 (delta 1193), pack-reused 0[K
+Receiving objects:  99% (3425/3459)   Receiving objects: 100% (3459/3459)   Receiving objects: 100% (3459/3459), 3.07 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/1417)   Resolving deltas:   9% (141/1417)   Resolving deltas:  10% (143/1417)   Resolving deltas:  11% (156/1417)   Resolving deltas:  12% (172/1417)   Resolving deltas:  13% (191/1417)   Resolving deltas:  14% (206/1417)   Resolving deltas:  15% (213/1417)   Resolving deltas:  16% (231/1417)   Resolving deltas:  17% (244/1417)   Resolving deltas:  18% (256/1417)   Resolving deltas:  19% (271/1417)   Resolving deltas:  20% (284/1417)   Resolving deltas:  21% (301/1417)   Resolving deltas:  22% (312/1417)   Resolving deltas:  23% (326/1417)   Resolving deltas:  24% (341/1417)   Resolving deltas:  25% (356/1417)   Resolving deltas:  26% (369/1417)   Resolving deltas:  27% (396/1417)   Resolving deltas:  28% (397/1417)   Resolving deltas:  29% (411/1417)   Resolving deltas:  30% (428/1417)   Resolving deltas:  31% (440/1417)   Resolving deltas:  32% (456/1417)   Resolving deltas:  41% (591/1417)   Resolving deltas:  42% (600/1417)   Resolving deltas:  43% (622/1417)   Resolving deltas:  46% (657/1417)   Resolving deltas:  47% (669/1417)   Resolving deltas:  50% (718/1417)   Resolving deltas:  51% (734/1417)   Resolving deltas:  52% (743/1417)   Resolving deltas:  53% (758/1417)   Resolving deltas:  54% (774/1417)   Resolving deltas:  56% (795/1417)   Resolving deltas:  57% (808/1417)   Resolving deltas:  58% (822/1417)   Resolving deltas:  59% (837/1417)   Resolving deltas:  60% (851/1417)   Resolving deltas:  61% (866/1417)   Resolving deltas:  62% (880/1417)   Resolving deltas:  63% (893/1417)   Resolving deltas:  64% (907/1417)   Resolving deltas:  65% (922/1417)   Resolving deltas:  66% (937/1417)   Resolving deltas:  67% (950/1417)   Resolving deltas:  68% (965/1417)   Resolving deltas:  69% (984/1417)   Resolving deltas:  70% (993/1417)   Resolving deltas:  71% (1009/1417)   Resolving deltas:  73% (1044/1417)   Resolving deltas:  74% (1053/1417)   Resolving deltas:  76% (1081/1417)   Resolving deltas:  77% (1095/1417)   Resolving deltas:  78% (1111/1417)   Resolving deltas:  79% (1124/1417)   Resolving deltas:  80% (1134/1417)   Resolving deltas:  81% (1149/1417)   Resolving deltas:  83% (1183/1417)   Resolving deltas:  84% (1193/1417)   Resolving deltas:  85% (1208/1417)   Resolving deltas:  88% (1256/1417)   Resolving deltas:  89% (1263/1417)   Resolving deltas:  90% (1276/1417)   Resolving deltas:  95% (1349/1417)   Resolving deltas:  97% (1377/1417)   Resolving deltas:  98% (1389/1417)   Resolving deltas:  99% (1403/1417)   Resolving deltas: 100% (1417/1417)   Resolving deltas: 100% (1417/1417), done.
+Checking connectivity... done.
+
+travis_time:end:2fb22c49:start=1496768339006893372,finish=1496768340546917552,duration=1540024180$ cd travis-ci/travis-cookbooks
+$ git checkout -qf 68fae651ce8719a3eb2f8a59e2fe422d1532632d
+travis_fold:end:git.checkouttravis_fold:start:aptAdding APT Sources (BETA)
+$ export DEBIAN_FRONTEND=noninteractive
+travis_time:start:32964b04$ curl -sSL "https://downloads.chef.io/packages-chef-io-public.key" | sudo -E apt-key add -
+OK
+
+travis_time:end:32964b04:start=1496768340738630277,finish=1496768341078794260,duration=340163983travis_time:start:10ab96c9$ echo "deb https://packages.chef.io/stable-apt trusty main" | sudo tee -a /etc/apt/sources.list > /dev/null
+
+travis_time:end:10ab96c9:start=1496768341110905778,finish=1496768341171769502,duration=60863724Installing APT Packages (BETA)
+$ export DEBIAN_FRONTEND=noninteractive
+travis_time:start:13dc7e22$ sudo -E apt-get -yq update &>> ~/apt-get-update.log
+
+travis_time:end:13dc7e22:start=1496768341198745084,finish=1496768353034922269,duration=11836177185travis_time:start:09e040a2$ sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install chefdk
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  chefdk
+0 upgraded, 1 newly installed, 0 to remove and 199 not upgraded.
+Need to get 104 MB of archives.
+After this operation, 430 MB of additional disk space will be used.
+Fetched 104 MB in 5s (17.4 MB/s)
+Selecting previously unselected package chefdk.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 69904 files and directories currently installed.)
+Preparing to unpack .../chefdk_1.4.3-1_amd64.deb ...
+Unpacking chefdk (1.4.3-1) ...
+Setting up chefdk (1.4.3-1) ...
+Thank you for installing Chef Development Kit!
+
+travis_time:end:09e040a2:start=1496768353050887999,finish=1496768393474610079,duration=40423722080travis_fold:end:apt
+Setting environment variables from .travis.yml
+$ export PATH="/opt/chefdk/bin:/opt/chef/bin:/opt/chef/embedded/bin:/opt/chefdk/embedded/bin:$PATH"
+$ export COOKBOOK_PATH="community-cookbooks"
+
+$ bash -c 'echo $BASH_VERSION'
+4.3.11(1)-release
+travis_time:start:0e303e02$ ./runtests
+Testing with foodcritic 10.2.2
+---> 7-zip: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/7-zip
+Checking 3 files
+...
+---> 7-zip ✔︎
+---> chef_gem: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/chef_gem
+Checking 3 files
+...
+---> chef_gem ✔︎
+---> iptables: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/iptables
+Checking 7 files
+.......
+---> iptables ✔︎
+---> java: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/java
+Checking 28 files
+............................
+---> java ✔︎
+---> openssh: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/openssh
+Checking 8 files
+........
+---> openssh ✔︎
+---> papertrail: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/papertrail
+Checking 6 files
+......
+---> papertrail ✔︎
+---> runit: foodcritic --epic-fail any  --tags ~FC001 --tags ~FC002 --tags ~FC003 --tags ~FC004 --tags ~FC005 --tags ~FC007 --tags ~FC009 --tags ~FC010 --tags ~FC015 --tags ~FC016 --tags ~FC017 --tags ~FC019 --tags ~FC022 --tags ~FC023 --tags ~FC024 --tags ~FC031 --tags ~FC041 --tags ~FC043 --tags ~FC045 --tags ~FC047 --tags ~FC048 --tags ~FC052 --tags ~FC053 --tags ~FC055 --tags ~FC056 --tags ~FC059 --tags ~FC062 --tags ~FC064 --tags ~FC065 --tags ~FC066 --tags ~FC067 --tags ~FC068 --tags ~readme community-cookbooks/runit
+Checking 11 files
+...........
+---> runit ✔︎
+
+travis_time:end:0e303e02:start=1496768401816123618,finish=1496768411591164941,duration=9775041323
+The command "./runtests" exited with 0.
+
+Done. Your build exited with 0.

@@ -1,0 +1,319 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-08f95e0-production-2-worker-org-ec2.travisci.net:ec1ce9d7-2d82-46f5-993e-59bb4ca08e1a
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: e4ecff7:travis:ruby
+startup: 725.817816ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240236043
+Job id: 240236046
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:0516cfe4$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193)   Receiving objects:  70% (8536/12193)   Receiving objects:  71% (8658/12193)   Receiving objects:  72% (8779/12193)   Receiving objects:  73% (8901/12193)   Receiving objects:  74% (9023/12193)   Receiving objects:  75% (9145/12193)   Receiving objects:  76% (9267/12193)   Receiving objects:  77% (9389/12193)   Receiving objects:  78% (9511/12193)   Receiving objects:  79% (9633/12193)   Receiving objects:  80% (9755/12193)   Receiving objects:  81% (9877/12193)   Receiving objects:  82% (9999/12193)   Receiving objects:  83% (10121/12193)   Receiving objects:  84% (10243/12193)   Receiving objects:  85% (10365/12193)   Receiving objects:  86% (10486/12193)   Receiving objects:  87% (10608/12193)   Receiving objects:  88% (10730/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  89% (10852/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  90% (10974/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  91% (11096/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  92% (11218/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  93% (11340/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  94% (11462/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  95% (11584/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  96% (11706/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  97% (11828/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  98% (11950/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects:  99% (12072/12193), 4.61 MiB | 9.18 MiB/s   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193), 4.61 MiB | 9.18 MiB/s   Receiving objects: 100% (12193/12193), 5.43 MiB | 9.18 MiB/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (74/7339)   Resolving deltas:   2% (200/7339)   Resolving deltas:   3% (272/7339)   Resolving deltas:   4% (300/7339)   Resolving deltas:   5% (370/7339)   Resolving deltas:   6% (490/7339)   Resolving deltas:   7% (526/7339)   Resolving deltas:   8% (588/7339)   Resolving deltas:   9% (663/7339)   Resolving deltas:  14% (1077/7339)   Resolving deltas:  16% (1230/7339)   Resolving deltas:  17% (1248/7339)   Resolving deltas:  18% (1327/7339)   Resolving deltas:  19% (1396/7339)   Resolving deltas:  20% (1496/7339)   Resolving deltas:  21% (1542/7339)   Resolving deltas:  22% (1618/7339)   Resolving deltas:  23% (1689/7339)   Resolving deltas:  24% (1791/7339)   Resolving deltas:  25% (1852/7339)   Resolving deltas:  26% (1930/7339)   Resolving deltas:  27% (2017/7339)   Resolving deltas:  28% (2058/7339)   Resolving deltas:  29% (2130/7339)   Resolving deltas:  30% (2203/7339)   Resolving deltas:  31% (2285/7339)   Resolving deltas:  32% (2362/7339)   Resolving deltas:  33% (2426/7339)   Resolving deltas:  34% (2510/7339)   Resolving deltas:  35% (2573/7339)   Resolving deltas:  36% (2667/7339)   Resolving deltas:  37% (2717/7339)   Resolving deltas:  38% (2795/7339)   Resolving deltas:  39% (2866/7339)   Resolving deltas:  40% (2949/7339)   Resolving deltas:  41% (3018/7339)   Resolving deltas:  42% (3092/7339)   Resolving deltas:  43% (3202/7339)   Resolving deltas:  44% (3232/7339)   Resolving deltas:  45% (3310/7339)   Resolving deltas:  46% (3448/7339)   Resolving deltas:  47% (3461/7339)   Resolving deltas:  48% (3523/7339)   Resolving deltas:  49% (3600/7339)   Resolving deltas:  50% (3677/7339)   Resolving deltas:  51% (3788/7339)   Resolving deltas:  52% (3819/7339)   Resolving deltas:  53% (3893/7339)   Resolving deltas:  54% (3974/7339)   Resolving deltas:  55% (4041/7339)   Resolving deltas:  56% (4115/7339)   Resolving deltas:  57% (4192/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4335/7339)   Resolving deltas:  60% (4405/7339)   Resolving deltas:  61% (4486/7339)   Resolving deltas:  62% (4554/7339)   Resolving deltas:  63% (4624/7339)   Resolving deltas:  64% (4703/7339)   Resolving deltas:  65% (4774/7339)   Resolving deltas:  66% (4844/7339)   Resolving deltas:  67% (4918/7339)   Resolving deltas:  68% (4994/7339)   Resolving deltas:  69% (5066/7339)   Resolving deltas:  70% (5141/7339)   Resolving deltas:  71% (5214/7339)   Resolving deltas:  72% (5286/7339)   Resolving deltas:  73% (5358/7339)   Resolving deltas:  74% (5433/7339)   Resolving deltas:  75% (5507/7339)   Resolving deltas:  76% (5578/7339)   Resolving deltas:  77% (5653/7339)   Resolving deltas:  78% (5726/7339)   Resolving deltas:  79% (5800/7339)   Resolving deltas:  80% (5878/7339)   Resolving deltas:  81% (5946/7339)   Resolving deltas:  82% (6019/7339)   Resolving deltas:  83% (6094/7339)   Resolving deltas:  84% (6166/7339)   Resolving deltas:  85% (6241/7339)   Resolving deltas:  86% (6315/7339)   Resolving deltas:  87% (6385/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6680/7339)   Resolving deltas:  92% (6752/7339)   Resolving deltas:  93% (6827/7339)   Resolving deltas:  94% (6900/7339)   Resolving deltas:  95% (6973/7339)   Resolving deltas:  96% (7050/7339)   Resolving deltas:  97% (7119/7339)   Resolving deltas:  98% (7193/7339)   Resolving deltas:  99% (7270/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+Checking connectivity... done.
+
+travis_time:end:0516cfe4:start=1496815084456204258,finish=1496815087040034922,duration=2583830664$ cd chef/chef
+travis_time:start:222f84d8$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  11% (1/9)   [Kremote: Compressing objects:  22% (2/9)   [Kremote: Compressing objects:  33% (3/9)   [Kremote: Compressing objects:  44% (4/9)   [Kremote: Compressing objects:  55% (5/9)   [Kremote: Compressing objects:  66% (6/9)   [Kremote: Compressing objects:  77% (7/9)   [Kremote: Compressing objects:  88% (8/9)   [Kremote: Compressing objects: 100% (9/9)   [Kremote: Compressing objects: 100% (9/9), done.[K
+remote: Total 23 (delta 17), reused 19 (delta 14), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:222f84d8:start=1496815087060160532,finish=1496815087616586234,duration=556425702$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export CHEFSTYLE=1
+
+travis_fold:start:rvmtravis_time:start:00ee5aa6$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 14.3M  100 14.3M    0     0  68.3M      0 --:--:-- --:--:-- --:--:-- 68.3M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:00ee5aa6:start=1496815091556323204,finish=1496815105289621727,duration=13733298523travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:20bedbb3$ Installing caching utilities
+
+travis_time:end:20bedbb3:start=1496815105794471058,finish=1496815105829640659,duration=35169601travis_time:start:08302faa
+travis_time:end:08302faa:start=1496815105843909194,finish=1496815105850299638,duration=6390444travis_time:start:18a82d70attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-539c5a82aec3a5b5324ff36805d6f1f5126753a2ad03f8b7a878251d164fe891--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:18a82d70:start=1496815105857469749,finish=1496815107774939318,duration=1917469569travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:1573790f
+travis_time:end:1573790f:start=1496815107782727000,finish=1496815107789067993,duration=6340993travis_time:start:187d4d70adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:187d4d70:start=1496815107796224877,finish=1496815110012296373,duration=2216071496travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:11f1cabc$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 97%)Fetching: rubygems-update-2.6.11.gem ( 99%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:11f1cabc:start=1496815110493502963,finish=1496815113005319406,duration=2511816443travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:08bdeed0$ gem --version
+2.6.11
+
+travis_time:end:08bdeed0:start=1496815113012069386,finish=1496815113160470238,duration=148400852travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:10863930$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:10863930:start=1496815113166886129,finish=1496815113911523382,duration=744637253travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:0d3c44cc$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:0d3c44cc:start=1496815113920673858,finish=1496815114374712445,duration=454038587travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:03a7d09d$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:03a7d09d:start=1496815114382936592,finish=1496815114571380214,duration=188443622travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:053ca7dd$ rm -f .bundle/config
+
+travis_time:end:053ca7dd:start=1496815114577704655,finish=1496815114585626091,duration=7921436travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:0b3ee1c0$ bundle install --without ci docgen guard integration maintenance omnibus_package --frozen --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching gem metadata from https://rubygems.org/......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Using rake 12.0.0
+Using addressable 2.4.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using diff-lcs 1.3
+Using erubis 2.7.0
+Using highline 1.7.8
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using mixlib-cli 1.7.0
+Using net-ssh 4.1.0
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using plist 3.3.0
+Using systemu 2.6.5
+Using wmi-lite 1.0.0
+Using proxifier 1.0.3
+Using rspec-support 3.6.0
+Using multi_json 1.12.1
+Using net-telnet 0.1.1
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using multipart-post 2.0.0
+Using net-http-persistent 2.9.4
+Using net-http-pipeline 1.0.1
+Using json 2.1.0
+Using method_source 0.8.2
+Using slop 3.6.0
+Using websocket 1.2.4
+Using ruby-prof 0.16.2
+Using ruby-shadow 2.5.0
+Using simplecov-html 0.10.1
+Using rainbow 2.2.2
+Using launchy 2.4.3
+Using parser 2.4.0.0
+Using binding_of_caller 0.7.2
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using mixlib-archive 0.4.1
+Using mixlib-authentication 1.4.1
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using ethon 0.10.1
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using faraday 0.12.1
+Using pry 0.10.4
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using rubocop 0.47.1
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using typhoeus 0.8.0
+Using rspec_junit_formatter 0.2.3
+Using rspec-its 1.2.0
+Using rspec 3.6.0
+Using faraday_middleware 0.11.0.1
+Using gh 0.15.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using cheffish 13.0.0
+Using serverspec 2.38.1
+Using travis 1.8.8
+Using chef 13.2.7 from source at `.`
+Bundle complete! 24 Gemfile dependencies, 89 gems now installed.
+Gems in the groups ci, docgen, guard, integration, maintenance and omnibus_package were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:0b3ee1c0:start=1496815114592387806,finish=1496815119124542016,duration=4532154210travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:1984b503$ echo --color > .rspec
+
+travis_time:end:1984b503:start=1496815119129607138,finish=1496815119133622867,duration=4015729travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:38087155$ echo -fp >> .rspec
+
+travis_time:end:38087155:start=1496815119138641655,finish=1496815119142482237,duration=3840582travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:0420c519$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+This job is running on container-based infrastructure, which does not allow use of 'sudo', setuid, and setgid executables.
+If you require sudo, add 'sudo: required' to your .travis.yml
+
+
+travis_time:end:0420c519:start=1496815119147664515,finish=1496815119160322567,duration=12658052travis_fold:end:before_script.3travis_time:start:019355c8$ bundle exec rake style
+
+*** TomlRb not available.
+
+
+*** TomlRb not available.
+
+github_changelog_generator is not available. gem install github_changelog_generator to generate changelogs
+yard is not available. (sudo) gem install yard to generate yard documentation.
+Running RuboCop...
+Inspecting 1599 files
+...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+1599 files inspected, no offenses detected
+
+travis_time:end:019355c8:start=1496815119165342331,finish=1496815219404160430,duration=100238818099
+The command "bundle exec rake style" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:188f7ef6
+travis_time:end:188f7ef6:start=1496815219847701683,finish=1496815219852186890,duration=4485207travis_time:start:005896fcchange detected (content changed, file is created, or file is deleted):
+/home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0/bundler/gems/bundler-audit-6eb5a81e9b18/.git/index
+/home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0/bundler/gems/chefstyle-b2bf89dd1127/.git/index
+
+
+changes detected, packing new archive
+uploading archive
+
+travis_time:end:005896fc:start=1496815219857560200,finish=1496815225058331963,duration=5200771763travis_fold:end:cache.2
+Done. Your build exited with 0.

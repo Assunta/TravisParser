@@ -1,0 +1,1523 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-087d65d-precise-production-2-worker-org-docker.travisci.net:eb84552c-5d81-4274-af09-71304cc49c49
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 258c701:travis:ruby
+startup: 689.569232ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 239621600
+Job id: 239621601
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (34.1 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 45%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 70%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             60% [2 libssl1.0.0 1,083 B/1,054 kB 0%]                                       100% [Working]              Fetched 2,634 kB in 0s (18.2 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0$ jdk_switcher use oraclejdk8
+Switching to Oracle JDK8 (java-8-oracle), JAVA_HOME will be set to /usr/lib/jvm/java-8-oracle
+travis_fold:start:git.checkouttravis_time:start:1d0649ab$ git clone --depth=50 --branch=v3.0.0 https://github.com/psu-stewardship/scholarsphere.git psu-stewardship/scholarsphere
+Cloning into 'psu-stewardship/scholarsphere'...
+remote: Counting objects: 1895, done.[K
+remote: Compressing objects:   0% (1/1091)   [Kremote: Compressing objects:   1% (11/1091)   [Kremote: Compressing objects:   2% (22/1091)   [Kremote: Compressing objects:   3% (33/1091)   [Kremote: Compressing objects:   4% (44/1091)   [Kremote: Compressing objects:   5% (55/1091)   [Kremote: Compressing objects:   6% (66/1091)   [Kremote: Compressing objects:   7% (77/1091)   [Kremote: Compressing objects:   8% (88/1091)   [Kremote: Compressing objects:   9% (99/1091)   [Kremote: Compressing objects:  10% (110/1091)   [Kremote: Compressing objects:  11% (121/1091)   [Kremote: Compressing objects:  12% (131/1091)   [Kremote: Compressing objects:  13% (142/1091)   [Kremote: Compressing objects:  14% (153/1091)   [Kremote: Compressing objects:  15% (164/1091)   [Kremote: Compressing objects:  16% (175/1091)   [Kremote: Compressing objects:  17% (186/1091)   [Kremote: Compressing objects:  18% (197/1091)   [Kremote: Compressing objects:  19% (208/1091)   [Kremote: Compressing objects:  20% (219/1091)   [Kremote: Compressing objects:  21% (230/1091)   [Kremote: Compressing objects:  22% (241/1091)   [Kremote: Compressing objects:  23% (251/1091)   [Kremote: Compressing objects:  24% (262/1091)   [Kremote: Compressing objects:  25% (273/1091)   [Kremote: Compressing objects:  26% (284/1091)   [Kremote: Compressing objects:  27% (295/1091)   [Kremote: Compressing objects:  28% (306/1091)   [Kremote: Compressing objects:  29% (317/1091)   [Kremote: Compressing objects:  30% (328/1091)   [Kremote: Compressing objects:  31% (339/1091)   [Kremote: Compressing objects:  32% (350/1091)   [Kremote: Compressing objects:  33% (361/1091)   [Kremote: Compressing objects:  34% (371/1091)   [Kremote: Compressing objects:  35% (382/1091)   [Kremote: Compressing objects:  36% (393/1091)   [Kremote: Compressing objects:  37% (404/1091)   [Kremote: Compressing objects:  38% (415/1091)   [Kremote: Compressing objects:  39% (426/1091)   [Kremote: Compressing objects:  40% (437/1091)   [Kremote: Compressing objects:  41% (448/1091)   [Kremote: Compressing objects:  42% (459/1091)   [Kremote: Compressing objects:  43% (470/1091)   [Kremote: Compressing objects:  44% (481/1091)   [Kremote: Compressing objects:  45% (491/1091)   [Kremote: Compressing objects:  46% (502/1091)   [Kremote: Compressing objects:  47% (513/1091)   [Kremote: Compressing objects:  48% (524/1091)   [Kremote: Compressing objects:  49% (535/1091)   [Kremote: Compressing objects:  50% (546/1091)   [Kremote: Compressing objects:  51% (557/1091)   [Kremote: Compressing objects:  52% (568/1091)   [Kremote: Compressing objects:  53% (579/1091)   [Kremote: Compressing objects:  54% (590/1091)   [Kremote: Compressing objects:  55% (601/1091)   [Kremote: Compressing objects:  56% (611/1091)   [Kremote: Compressing objects:  57% (622/1091)   [Kremote: Compressing objects:  58% (633/1091)   [Kremote: Compressing objects:  59% (644/1091)   [Kremote: Compressing objects:  60% (655/1091)   [Kremote: Compressing objects:  61% (666/1091)   [Kremote: Compressing objects:  62% (677/1091)   [Kremote: Compressing objects:  63% (688/1091)   [Kremote: Compressing objects:  64% (699/1091)   [Kremote: Compressing objects:  65% (710/1091)   [Kremote: Compressing objects:  66% (721/1091)   [Kremote: Compressing objects:  67% (731/1091)   [Kremote: Compressing objects:  68% (742/1091)   [Kremote: Compressing objects:  69% (753/1091)   [Kremote: Compressing objects:  70% (764/1091)   [Kremote: Compressing objects:  71% (775/1091)   [Kremote: Compressing objects:  72% (786/1091)   [Kremote: Compressing objects:  73% (797/1091)   [Kremote: Compressing objects:  74% (808/1091)   [Kremote: Compressing objects:  75% (819/1091)   [Kremote: Compressing objects:  76% (830/1091)   [Kremote: Compressing objects:  77% (841/1091)   [Kremote: Compressing objects:  78% (851/1091)   [Kremote: Compressing objects:  79% (862/1091)   [Kremote: Compressing objects:  80% (873/1091)   [Kremote: Compressing objects:  81% (884/1091)   [Kremote: Compressing objects:  82% (895/1091)   [Kremote: Compressing objects:  83% (906/1091)   [Kremote: Compressing objects:  84% (917/1091)   [Kremote: Compressing objects:  85% (928/1091)   [Kremote: Compressing objects:  86% (939/1091)   [Kremote: Compressing objects:  87% (950/1091)   [Kremote: Compressing objects:  88% (961/1091)   [Kremote: Compressing objects:  89% (971/1091)   [Kremote: Compressing objects:  90% (982/1091)   [Kremote: Compressing objects:  91% (993/1091)   [Kremote: Compressing objects:  92% (1004/1091)   [Kremote: Compressing objects:  93% (1015/1091)   [Kremote: Compressing objects:  94% (1026/1091)   [Kremote: Compressing objects:  95% (1037/1091)   [Kremote: Compressing objects:  96% (1048/1091)   [Kremote: Compressing objects:  97% (1059/1091)   [Kremote: Compressing objects:  98% (1070/1091)   [Kremote: Compressing objects:  99% (1081/1091)   [Kremote: Compressing objects: 100% (1091/1091)   [Kremote: Compressing objects: 100% (1091/1091), done.[K
+Receiving objects:   0% (1/1895)   Receiving objects:   1% (19/1895)   Receiving objects:   2% (38/1895)   Receiving objects:   3% (57/1895)   Receiving objects:   4% (76/1895)   Receiving objects:   5% (95/1895)   Receiving objects:   6% (114/1895)   Receiving objects:   7% (133/1895)   Receiving objects:   8% (152/1895)   Receiving objects:   9% (171/1895)   Receiving objects:  10% (190/1895)   Receiving objects:  11% (209/1895)   Receiving objects:  12% (228/1895)   Receiving objects:  13% (247/1895)   Receiving objects:  14% (266/1895)   Receiving objects:  15% (285/1895)   Receiving objects:  16% (304/1895)   Receiving objects:  17% (323/1895)   Receiving objects:  18% (342/1895)   Receiving objects:  19% (361/1895)   Receiving objects:  20% (379/1895)   Receiving objects:  21% (398/1895)   Receiving objects:  22% (417/1895)   Receiving objects:  23% (436/1895)   Receiving objects:  24% (455/1895)   Receiving objects:  25% (474/1895)   Receiving objects:  26% (493/1895)   Receiving objects:  27% (512/1895)   Receiving objects:  28% (531/1895)   Receiving objects:  29% (550/1895)   Receiving objects:  30% (569/1895)   Receiving objects:  31% (588/1895)   Receiving objects:  32% (607/1895)   Receiving objects:  33% (626/1895)   Receiving objects:  34% (645/1895)   Receiving objects:  35% (664/1895)   Receiving objects:  36% (683/1895)   Receiving objects:  37% (702/1895)   Receiving objects:  38% (721/1895)   Receiving objects:  39% (740/1895)   Receiving objects:  40% (758/1895)   Receiving objects:  41% (777/1895)   Receiving objects:  42% (796/1895)   Receiving objects:  43% (815/1895)   Receiving objects:  44% (834/1895)   Receiving objects:  45% (853/1895)   Receiving objects:  46% (872/1895)   Receiving objects:  47% (891/1895)   Receiving objects:  48% (910/1895)   Receiving objects:  49% (929/1895)   Receiving objects:  50% (948/1895)   Receiving objects:  51% (967/1895)   Receiving objects:  52% (986/1895)   Receiving objects:  53% (1005/1895)   Receiving objects:  54% (1024/1895)   Receiving objects:  55% (1043/1895)   Receiving objects:  56% (1062/1895)   Receiving objects:  57% (1081/1895)   Receiving objects:  58% (1100/1895)   Receiving objects:  59% (1119/1895)   Receiving objects:  60% (1137/1895)   Receiving objects:  61% (1156/1895)   Receiving objects:  61% (1159/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  62% (1175/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  62% (1181/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  63% (1194/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  64% (1213/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  65% (1232/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  66% (1251/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  67% (1270/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  68% (1289/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  69% (1308/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  70% (1327/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  71% (1346/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  72% (1365/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  73% (1384/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  74% (1403/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  75% (1422/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  76% (1441/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  77% (1460/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  78% (1479/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  79% (1498/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  80% (1516/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  81% (1535/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  82% (1554/1895), 796.00 KiB | 458.00 KiB/s   Receiving objects:  83% (1573/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  84% (1592/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  85% (1611/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  86% (1630/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  87% (1649/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  88% (1668/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  89% (1687/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  90% (1706/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  91% (1725/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  92% (1744/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  93% (1763/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  94% (1782/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  95% (1801/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  96% (1820/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  97% (1839/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects:  98% (1858/1895), 11.00 MiB | 4.94 MiB/s   remote: Total 1895 (delta 813), reused 1504 (delta 739), pack-reused 0[K
+Receiving objects:  99% (1877/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects: 100% (1895/1895), 11.00 MiB | 4.94 MiB/s   Receiving objects: 100% (1895/1895), 20.69 MiB | 4.94 MiB/s, done.
+Resolving deltas:   0% (0/813)   Resolving deltas:   1% (14/813)   Resolving deltas:   2% (17/813)   Resolving deltas:   3% (29/813)   Resolving deltas:   5% (47/813)   Resolving deltas:   7% (61/813)   Resolving deltas:   8% (73/813)   Resolving deltas:   9% (81/813)   Resolving deltas:  10% (87/813)   Resolving deltas:  12% (105/813)   Resolving deltas:  13% (112/813)   Resolving deltas:  14% (119/813)   Resolving deltas:  15% (129/813)   Resolving deltas:  16% (138/813)   Resolving deltas:  17% (143/813)   Resolving deltas:  18% (149/813)   Resolving deltas:  19% (155/813)   Resolving deltas:  20% (164/813)   Resolving deltas:  21% (173/813)   Resolving deltas:  22% (179/813)   Resolving deltas:  33% (274/813)   Resolving deltas:  34% (281/813)   Resolving deltas:  35% (286/813)   Resolving deltas:  42% (348/813)   Resolving deltas:  43% (352/813)   Resolving deltas:  45% (371/813)   Resolving deltas:  47% (390/813)   Resolving deltas:  48% (392/813)   Resolving deltas:  49% (399/813)   Resolving deltas:  50% (411/813)   Resolving deltas:  51% (420/813)   Resolving deltas:  53% (434/813)   Resolving deltas:  56% (457/813)   Resolving deltas:  57% (464/813)   Resolving deltas:  58% (473/813)   Resolving deltas:  59% (481/813)   Resolving deltas:  60% (489/813)   Resolving deltas:  61% (497/813)   Resolving deltas:  62% (508/813)   Resolving deltas:  63% (515/813)   Resolving deltas:  64% (521/813)   Resolving deltas:  65% (530/813)   Resolving deltas:  66% (537/813)   Resolving deltas:  67% (546/813)   Resolving deltas:  68% (554/813)   Resolving deltas:  69% (561/813)   Resolving deltas:  70% (571/813)   Resolving deltas:  71% (578/813)   Resolving deltas:  72% (586/813)   Resolving deltas:  73% (595/813)   Resolving deltas:  74% (603/813)   Resolving deltas:  75% (610/813)   Resolving deltas:  76% (622/813)   Resolving deltas:  77% (627/813)   Resolving deltas:  78% (635/813)   Resolving deltas:  79% (644/813)   Resolving deltas:  80% (656/813)   Resolving deltas:  81% (660/813)   Resolving deltas:  82% (668/813)   Resolving deltas:  83% (675/813)   Resolving deltas:  84% (683/813)   Resolving deltas:  85% (692/813)   Resolving deltas:  86% (700/813)   Resolving deltas:  87% (709/813)   Resolving deltas:  88% (716/813)   Resolving deltas:  89% (724/813)   Resolving deltas:  90% (732/813)   Resolving deltas:  91% (740/813)   Resolving deltas:  92% (748/813)   Resolving deltas:  93% (758/813)   Resolving deltas:  94% (768/813)   Resolving deltas:  95% (778/813)   Resolving deltas:  96% (781/813)   Resolving deltas:  97% (789/813)   Resolving deltas:  98% (797/813)   Resolving deltas:  99% (806/813)   Resolving deltas: 100% (813/813)   Resolving deltas: 100% (813/813), done.
+Checking connectivity... done.
+Note: checking out 'ba0858e1dea26117ef56cf4de07a0fe5f58c921d'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+
+travis_time:end:1d0649ab:start=1496676638910661374,finish=1496676642266168109,duration=3355506735$ cd psu-stewardship/scholarsphere
+$ git checkout -qf ba0858e1dea26117ef56cf4de07a0fe5f58c921d
+travis_fold:end:git.checkouttravis_fold:start:git.submoduletravis_time:start:106045e2$ git submodule update --init --recursive
+Submodule 'fits' (git://github.com/harvard-lts/fits.git) registered for path 'fits'
+Cloning into 'fits'...
+remote: Counting objects: 8231, done.[K
+Receiving objects:   0% (1/8231)   Receiving objects:   1% (83/8231)   Receiving objects:   2% (165/8231)   Receiving objects:   3% (247/8231)   Receiving objects:   4% (330/8231)   Receiving objects:   5% (412/8231)   Receiving objects:   6% (494/8231)   Receiving objects:   7% (577/8231)   Receiving objects:   8% (659/8231)   Receiving objects:   9% (741/8231)   Receiving objects:   9% (820/8231), 59.05 MiB | 58.93 MiB/s   Receiving objects:  10% (824/8231), 59.05 MiB | 58.93 MiB/s   Receiving objects:  11% (906/8231), 87.57 MiB | 58.26 MiB/s   Receiving objects:  12% (988/8231), 87.57 MiB | 58.26 MiB/s   Receiving objects:  13% (1071/8231), 87.57 MiB | 58.26 MiB/s   Receiving objects:  13% (1131/8231), 114.93 MiB | 57.35 MiB/s   Receiving objects:  14% (1153/8231), 140.13 MiB | 55.94 MiB/s   Receiving objects:  14% (1185/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  15% (1235/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  16% (1317/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  17% (1400/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  18% (1482/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  19% (1564/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  20% (1647/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  21% (1729/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  22% (1811/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  23% (1894/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  24% (1976/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  25% (2058/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  26% (2141/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  27% (2223/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  28% (2305/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  29% (2387/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  30% (2470/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  31% (2552/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  32% (2634/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  33% (2717/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  34% (2799/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  35% (2881/8231), 174.61 MiB | 58.09 MiB/s   Receiving objects:  36% (2964/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  37% (3046/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  38% (3128/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  39% (3211/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  40% (3293/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  41% (3375/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  42% (3458/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  43% (3540/8231), 196.19 MiB | 55.94 MiB/s   Receiving objects:  43% (3597/8231), 222.19 MiB | 55.44 MiB/s   Receiving objects:  44% (3622/8231), 222.19 MiB | 55.44 MiB/s   Receiving objects:  45% (3704/8231), 222.19 MiB | 55.44 MiB/s   Receiving objects:  46% (3787/8231), 251.78 MiB | 55.84 MiB/s   Receiving objects:  47% (3869/8231), 251.78 MiB | 55.84 MiB/s   Receiving objects:  48% (3951/8231), 251.78 MiB | 55.84 MiB/s   Receiving objects:  49% (4034/8231), 251.78 MiB | 55.84 MiB/s   Receiving objects:  49% (4039/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  50% (4116/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  51% (4198/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  52% (4281/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  53% (4363/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  54% (4445/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  55% (4528/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  56% (4610/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  57% (4692/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  58% (4774/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  59% (4857/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  60% (4939/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  61% (5021/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  62% (5104/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  63% (5186/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  64% (5268/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  65% (5351/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  66% (5433/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  67% (5515/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  68% (5598/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  69% (5680/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  70% (5762/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  71% (5845/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  72% (5927/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  73% (6009/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  74% (6091/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  75% (6174/8231), 280.32 MiB | 55.72 MiB/s   Receiving objects:  76% (6256/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  77% (6338/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  78% (6421/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  79% (6503/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  80% (6585/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  81% (6668/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  82% (6750/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  83% (6832/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  84% (6915/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  85% (6997/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  86% (7079/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  87% (7161/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  88% (7244/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  89% (7326/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  90% (7408/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  91% (7491/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  92% (7573/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  93% (7655/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  94% (7738/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  95% (7820/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  96% (7902/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  97% (7985/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  98% (8067/8231), 308.99 MiB | 55.43 MiB/s   Receiving objects:  98% (8093/8231), 334.00 MiB | 54.66 MiB/s   Receiving objects:  99% (8149/8231), 383.63 MiB | 59.59 MiB/s   remote: Total 8231 (delta 2), reused 2 (delta 2), pack-reused 8228[K
+Receiving objects: 100% (8231/8231), 383.63 MiB | 59.59 MiB/s   Receiving objects: 100% (8231/8231), 403.56 MiB | 60.75 MiB/s, done.
+Resolving deltas:   0% (0/3971)   Resolving deltas:   1% (76/3971)   Resolving deltas:   2% (85/3971)   Resolving deltas:   4% (171/3971)   Resolving deltas:   5% (223/3971)   Resolving deltas:   6% (239/3971)   Resolving deltas:   7% (278/3971)   Resolving deltas:   8% (325/3971)   Resolving deltas:   9% (364/3971)   Resolving deltas:  10% (402/3971)   Resolving deltas:  11% (446/3971)   Resolving deltas:  12% (478/3971)   Resolving deltas:  13% (520/3971)   Resolving deltas:  14% (565/3971)   Resolving deltas:  15% (598/3971)   Resolving deltas:  17% (701/3971)   Resolving deltas:  18% (747/3971)   Resolving deltas:  19% (758/3971)   Resolving deltas:  20% (818/3971)   Resolving deltas:  23% (916/3971)   Resolving deltas:  24% (961/3971)   Resolving deltas:  25% (1018/3971)   Resolving deltas:  26% (1063/3971)   Resolving deltas:  27% (1089/3971)   Resolving deltas:  28% (1136/3971)   Resolving deltas:  29% (1172/3971)   Resolving deltas:  30% (1201/3971)   Resolving deltas:  31% (1249/3971)   Resolving deltas:  32% (1280/3971)   Resolving deltas:  33% (1314/3971)   Resolving deltas:  34% (1357/3971)   Resolving deltas:  35% (1397/3971)   Resolving deltas:  36% (1430/3971)   Resolving deltas:  37% (1470/3971)   Resolving deltas:  38% (1509/3971)   Resolving deltas:  39% (1549/3971)   Resolving deltas:  40% (1591/3971)   Resolving deltas:  41% (1629/3971)   Resolving deltas:  42% (1669/3971)   Resolving deltas:  43% (1709/3971)   Resolving deltas:  44% (1749/3971)   Resolving deltas:  45% (1787/3971)   Resolving deltas:  46% (1828/3971)   Resolving deltas:  47% (1867/3971)   Resolving deltas:  48% (1907/3971)   Resolving deltas:  49% (1946/3971)   Resolving deltas:  50% (1986/3971)   Resolving deltas:  51% (2046/3971)   Resolving deltas:  52% (2066/3971)   Resolving deltas:  53% (2109/3971)   Resolving deltas:  54% (2149/3971)   Resolving deltas:  55% (2185/3971)   Resolving deltas:  56% (2236/3971)   Resolving deltas:  57% (2268/3971)   Resolving deltas:  58% (2309/3971)   Resolving deltas:  59% (2346/3971)   Resolving deltas:  60% (2411/3971)   Resolving deltas:  61% (2445/3971)   Resolving deltas:  62% (2471/3971)   Resolving deltas:  63% (2505/3971)   Resolving deltas:  64% (2542/3971)   Resolving deltas:  65% (2582/3971)   Resolving deltas:  66% (2658/3971)   Resolving deltas:  67% (2665/3971)   Resolving deltas:  68% (2703/3971)   Resolving deltas:  69% (2741/3971)   Resolving deltas:  70% (2801/3971)   Resolving deltas:  71% (2821/3971)   Resolving deltas:  72% (2862/3971)   Resolving deltas:  73% (2920/3971)   Resolving deltas:  75% (3017/3971)   Resolving deltas:  76% (3019/3971)   Resolving deltas:  77% (3076/3971)   Resolving deltas:  79% (3139/3971)   Resolving deltas:  84% (3345/3971)   Resolving deltas:  86% (3419/3971)   Resolving deltas:  87% (3455/3971)   Resolving deltas:  88% (3512/3971)   Resolving deltas:  89% (3538/3971)   Resolving deltas:  90% (3579/3971)   Resolving deltas:  91% (3621/3971)   Resolving deltas:  92% (3662/3971)   Resolving deltas:  93% (3706/3971)   Resolving deltas:  95% (3810/3971)   Resolving deltas:  96% (3818/3971)   Resolving deltas:  97% (3861/3971)   Resolving deltas:  98% (3895/3971)   Resolving deltas:  99% (3932/3971)   Resolving deltas: 100% (3971/3971)   Resolving deltas: 100% (3971/3971), done.
+Checking connectivity... done.
+Submodule path 'fits': checked out '207c812ab273352056dde44c609fa0344b6414fe'
+
+travis_time:end:106045e2:start=1496676642609264657,finish=1496676651385665147,duration=8776400490travis_fold:end:git.submoduletravis_fold:start:servicestravis_time:start:0a558eb2$ sudo service redis-server start
+redis-server start/running, process 1400
+
+travis_time:end:0a558eb2:start=1496676651392122124,finish=1496676651423426152,duration=31304028travis_fold:end:services
+Setting environment variables from .travis.yml
+$ export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+$ export JS=true
+$ export TEST_SUITE=feature
+
+travis_fold:start:rvmtravis_time:start:0ac4e61a$ rvm use 2.3.3 --install --binary --fuzzy
+ruby-2.3.3 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.3.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.3 - #configure
+ruby-2.3.3 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23.2M  100 23.2M    0     0  73.2M      0 --:--:-- --:--:-- --:--:-- 73.9M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.3 - #validate archive
+ruby-2.3.3 - #extract
+ruby-2.3.3 - #validate binary
+ruby-2.3.3 - #setup
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3@global
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.3 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.3 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.3 - #gemset created /home/travis/.rvm/gems/ruby-2.3.3
+ruby-2.3.3 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.3 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.3
+
+travis_time:end:0ac4e61a:start=1496676658923491366,finish=1496676679941298652,duration=21017807286travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:32f5e99d$ Installing caching utilities
+
+travis_time:end:32f5e99d:start=1496676680158128669,finish=1496676680224434485,duration=66305816travis_time:start:0824cfcd
+travis_time:end:0824cfcd:start=1496676680230529664,finish=1496676680234834064,duration=4304400travis_time:start:176392a4attempting to download cache archive
+fetching v3.0.0/cache-linux-precise-49b83395bb924794ea51931db530838832957daf5fefaf6fd6545bf5eac61c60--jdk-oraclejdk8--rvm-2.3.3--gemfile-Gemfile.tgz
+fetching v3.0.0/cache--jdk-oraclejdk8--rvm-2.3.3--gemfile-Gemfile.tgz
+fetching develop/cache-linux-precise-49b83395bb924794ea51931db530838832957daf5fefaf6fd6545bf5eac61c60--jdk-oraclejdk8--rvm-2.3.3--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:176392a4:start=1496676680239799374,finish=1496676687981361061,duration=7741561687travis_time:start:268076fb
+travis_time:end:268076fb:start=1496676687986671677,finish=1496676687991916695,duration=5245018travis_time:start:02d0e542adding /home/travis/build/psu-stewardship/scholarsphere/dep_cache to cache
+creating directory /home/travis/build/psu-stewardship/scholarsphere/dep_cache
+adding /home/travis/build/psu-stewardship/scholarsphere/travis_phantomjs to cache
+creating directory /home/travis/build/psu-stewardship/scholarsphere/travis_phantomjs
+
+travis_time:end:02d0e542:start=1496676687998169530,finish=1496676694149650206,duration=6151480676travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:07ff1c5b
+travis_time:end:07ff1c5b:start=1496676694155236954,finish=1496676694159595457,duration=4358503travis_time:start:0109314dadding /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle to cache
+creating directory /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/sparql-client-1.99.1/README: No such file or directory
+
+travis_time:end:0109314d:start=1496676694164770090,finish=1496676703679059650,duration=9514289560travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.8
+travis_fold:start:before_install.1travis_time:start:379804f8$ export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH
+
+travis_time:end:379804f8:start=1496676704275378647,finish=1496676704280125576,duration=4746929travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:3e2e2f55$ which phantomjs
+/home/travis/build/psu-stewardship/scholarsphere/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs
+
+travis_time:end:3e2e2f55:start=1496676704285341023,finish=1496676704290299988,duration=4958965travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:04f8c4f2$ phantomjs --version
+2.1.1
+
+travis_time:end:04f8c4f2:start=1496676704295756820,finish=1496676704390663385,duration=94906565travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:0e9abbbc$ if [ $(phantomjs --version) != '2.1.1' ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi
+
+travis_time:end:0e9abbbc:start=1496676704395628674,finish=1496676704452423531,duration=56794857travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:0986d840$ if [ $(phantomjs --version) != '2.1.1' ]; then wget https://assets.membergetmember.co/software/phantomjs-2.1.1-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2; fi
+
+travis_time:end:0986d840:start=1496676704458321351,finish=1496676704512393524,duration=54072173travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:2979b814$ if [ $(phantomjs --version) != '2.1.1' ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi
+
+travis_time:end:2979b814:start=1496676704518975176,finish=1496676704589490968,duration=70515792travis_fold:end:before_install.6travis_fold:start:before_install.7travis_time:start:0022b6a7$ phantomjs --version
+2.1.1
+
+travis_time:end:0022b6a7:start=1496676704594862864,finish=1496676704647786969,duration=52924105travis_fold:end:before_install.7travis_fold:start:before_install.8travis_time:start:091ba37c$ export PATH="$PATH:$(pwd)/fits"
+
+travis_time:end:091ba37c:start=1496676704652957334,finish=1496676704657610718,duration=4653384travis_fold:end:before_install.8travis_fold:start:before_install.9travis_time:start:00975356$ mkdir -p dep_cache
+
+travis_time:end:00975356:start=1496676704662573239,finish=1496676704778862259,duration=116289020travis_fold:end:before_install.9travis_fold:start:before_install.10travis_time:start:012a3b1f$ pwd
+/home/travis/build/psu-stewardship/scholarsphere
+
+travis_time:end:012a3b1f:start=1496676704784291718,finish=1496676704788404030,duration=4112312travis_fold:end:before_install.10travis_fold:start:before_install.11travis_time:start:06ba6baf$ ls -l dep_cache
+total 200648
+-rw-r--r-- 1 travis travis  48653841 May 15 14:16 fcrepo-webapp-4.7.1-jetty-console.jar
+-rw-r--r-- 1 travis travis        71 May 15 14:16 fcrepo-webapp-4.7.1-jetty-console.jar.md5
+-rw-r--r-- 1 travis travis 156796538 May 15 14:16 solr-6.4.2.zip
+-rw-r--r-- 1 travis travis        49 May 15 14:16 solr-6.4.2.zip.md5
+
+travis_time:end:06ba6baf:start=1496676704793716054,finish=1496676704799930041,duration=6213987travis_fold:end:before_install.11travis_fold:start:before_install.12travis_time:start:11c9a878$ cp config/travis/solr_wrapper_test.yml config/solr_wrapper_test.yml
+
+travis_time:end:11c9a878:start=1496676704805034540,finish=1496676704810344458,duration=5309918travis_fold:end:before_install.12travis_fold:start:before_install.13travis_time:start:14075c10$ cp config/travis/fcrepo_wrapper_test.yml config/fcrepo_wrapper_test.yml
+
+travis_time:end:14075c10:start=1496676704816425737,finish=1496676704824325611,duration=7899874travis_fold:end:before_install.13travis_fold:start:install.bundlertravis_time:start:16b78282$ bundle install --without development debug --path=${BUNDLE_PATH:-vendor/bundle}
+The git source `git://github.com/projecthydra/sufia.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/projecthydra/curation_concerns.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/projecthydra/hydra-works.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/projecthydra/browse-everything.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+Fetching gem metadata from https://rubygems.org/.......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Using rake 12.0.0
+Using i18n 0.8.1
+Using json 1.8.6
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.5
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using thor 0.19.4
+Using concurrent-ruby 1.0.5
+Using bundler 1.15.1
+Using multi_json 1.12.1
+Using link_header 0.0.8
+Using htmlentities 4.3.4
+Using tilt 2.0.7
+Using sxp 0.1.5
+Using public_suffix 2.0.5
+Using net-http-persistent 2.9.4
+Using tins 1.6.0
+Using multipart-post 2.0.0
+Using http_logger 0.5.1
+Using slop 4.4.1
+Using daemons 1.2.4
+Using stomp 1.4.3
+Using xml-simple 1.1.5
+Using execjs 2.7.0
+Using sass 3.4.23
+Using aws-sigv4 1.0.0
+Using jmespath 1.3.1
+Using jwt 1.5.6
+Using little-plugger 1.1.4
+Using memoist 0.15.0
+Using os 0.9.6
+Using httpclient 2.8.3
+Using hurley 0.2
+Using declarative 0.0.9
+Using declarative-option 0.1.0
+Using uber 0.1.0
+Using retriable 3.0.1
+Using multi_xml 0.6.0
+Using mimemagic 0.3.2
+Using noid 0.9.0
+Using blankslate 3.1.3
+Using breadcrumbs_on_rails 3.0.1
+Using clipboard-rails 1.5.16
+Using cancancan 1.15.0
+Using babel-source 5.8.35
+Using mini_magick 4.6.1
+Using redis 3.3.2
+Using hiredis 0.6.1
+Using oauth 0.5.1
+Using posix-spawn 0.3.12
+Using coffee-script-source 1.10.0
+Using bcrypt 3.1.11
+Using orm_adapter 0.5.0
+Using net-ldap 0.13.0
+Using namae 0.9.3
+Using newrelic_rpm 3.17.1.326
+Using rainbow 2.1.0
+Using mono_logger 1.1.0
+Using sitemap 0.3.3
+Using libv8 3.16.14.17 (x86_64-linux)
+Using ref 2.0.0
+Using turbolinks-source 5.0.0
+Using chronic 0.10.2
+Using ruby-progressbar 1.8.1
+Using rspec-support 3.5.0
+Using diff-lcs 1.2.5
+Using ast 2.3.0
+Using powerpack 0.1.1
+Using unicode-display_width 1.1.1
+Using rubyzip 1.2.1
+Using sqlite3 1.3.12
+Using database_cleaner 1.5.3
+Using cliver 0.3.2
+Using websocket-extensions 0.1.2
+Using vcr 3.0.3
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.0
+Using bcp47 0.3.3
+Using dropbox-sdk 1.6.5
+Using tzinfo 1.2.3
+Using rsolr 1.1.2
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using warden 1.2.6
+Using rack-maintenance 2.0.1
+Using rack-protection 1.5.3
+Using vegas 0.1.11
+Using mime-types 3.1
+Using select2-rails 3.5.10
+Using figaro 1.1.1
+Using sprockets 3.7.1
+Using legato 0.7.0
+Using rdf 1.99.1
+Using haml 4.0.7
+Using addressable 2.5.0
+Using faraday 0.11.0
+Using autoprefixer-rails 6.7.7.1
+Using uglifier 3.0.3
+Using aws-sdk-core 2.8.10
+Using logging 2.2.0
+Using representable 3.0.3
+Using httparty 0.14.0
+Using parslet 1.7.1
+Using babel-transpiler 0.7.0
+Using redlock 0.1.8
+Using redis-namespace 1.5.2
+Using redic 1.5.0
+Using coffee-script 2.4.1
+Using therubyracer 0.12.2
+Using turbolinks 5.0.1
+Using whenever 0.9.7
+Using fcrepo_wrapper 0.6.0
+Using rspec-core 3.5.4
+Using rspec-expectations 3.5.0
+Using rspec-mocks 3.5.0
+Using parser 2.3.2.0
+Using websocket-driver 0.6.4
+Using crack 0.4.3
+Using activesupport 4.2.7.1
+Using loofah 2.0.3
+Using equivalent-xml 0.6.0
+Using xpath 2.0.0
+Using sinatra 1.4.7
+Using mail 2.6.6.rc1
+Using json-ld 1.99.2
+Using rdf-aggregate-repo 1.99.0
+Using rdf-isomorphic 1.99.0
+Using rdf-json 1.99.0
+Using rdf-xsd 1.99.0
+Using rdf-n3 1.99.0
+Using ebnf 1.0.0
+Using rdf-vocab 0.8.8
+Using rdf-trix 1.99.0
+Using sparql-client 1.99.1
+Using json-schema 2.7.0
+Using signet 0.7.3
+Using oauth2 1.3.1
+Using solr_wrapper 0.19.0
+Using bootstrap-sass 3.3.7
+Using aws-sdk-resources 2.8.10
+Using httmultiparty 0.3.16
+Using sprockets-es6 0.9.2
+Using nest 2.1.0
+Using rspec-its 1.2.0
+Using rspec 3.5.0
+Using rubocop 0.39.0
+Using webmock 2.1.0
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.7.1
+Using deprecation 1.0.0
+Using nom-xml 0.6.0
+Using solrizer 3.4.1
+Using hydra-file_characterization 0.3.3
+Using flipflop 2.2.1 from https://github.com/jcoyne/flipflop.git (at hydra@0eecdda)
+Using jbuilder 2.6.0
+Using share_notify 0.2.0
+Using factory_girl 4.7.0
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.10.1
+Using resque 1.26.0
+Using rdf-microdata 2.0.2
+Using rdf-rdfa 1.99.1
+Using rdf-turtle 1.99.0
+Using rdf-tabular 0.3.0
+Using sparql 1.99.1
+Using googleauth 0.5.1
+Using ruby-box 1.15.0
+Using aws-sdk 2.8.10
+Using skydrive 1.2.0
+Using rubocop-rspec 1.4.1
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.7.1
+Using activerecord 4.2.7.1
+Using carrierwave 0.11.2
+Using active_attr 0.9.0
+Using rspec-activemodel-mocks 1.0.3
+Using om 3.1.1
+Using poltergeist 1.11.0
+Using resque-pool 0.6.0
+Using rdf-rdfxml 1.99.0
+Using rdf-reasoner 0.3.0
+Using rdf-trig 1.99.0.1
+Using google-api-client 0.10.1
+Using actionview 4.2.7.1
+Using awesome_nested_set 3.1.1
+Using activerecord-import 0.17.2
+Using linkeddata 1.99.0
+Using google_drive 2.1.2
+Using actionpack 4.2.7.1
+Using active-triples 0.7.6
+Using ldp 0.5.0
+Using actionmailer 4.2.7.1
+Using railties 4.2.7.1
+Using sprockets-rails 3.2.0
+Using kaminari 0.17.0
+Using simple_form 3.3.1
+Using active-fedora 10.3.0
+Using jquery-rails 4.2.1
+Using font-awesome-rails 4.7.0.1
+Using jquery-ui-rails 5.0.5
+Using tinymce-rails 4.5.1
+Using coffee-rails 4.2.1
+Using responders 2.3.0
+Using rspec-rails 3.5.2
+Using factory_girl_rails 4.7.0
+Using rails 4.2.7.1
+Using sass-rails 5.0.6
+Using kaminari_route_prefix 0.0.1
+Using hydra-derivatives 3.2.1
+Using hydra-pcdm 0.9.0
+Using twitter-typeahead-rails 0.11.1.pre.corejavascript
+Using flot-rails 0.0.7
+Using tinymce-rails-imageupload 4.0.17.beta
+Using devise 4.2.0
+Using almond-rails 0.0.3
+Using openseadragon 0.3.2
+Using active_fedora-noid 2.0.1
+Using qa 0.11.1
+Using rails_autolink 1.1.6
+Using mailboxer 0.14.0
+Using yaml_db 0.4.2
+Using hydra-ldap 0.1.0
+Using browse-everything 0.12.0 from git://github.com/projecthydra/browse-everything.git (at 0e33595@0e33595)
+Using jquery-datatables-rails 3.4.0
+Using hydra-works 0.15.0 from git://github.com/projecthydra/hydra-works.git (at f948eb0@f948eb0)
+Using blacklight 6.7.2
+Using hydra-editor 3.1.2
+Using ldap_disambiguate 0.0.3
+Using blacklight-gallery 0.6.1
+Using blacklight_advanced_search 6.2.1
+Using blacklight-access_controls 0.6.1
+Using hydra-access-controls 10.3.4
+Using hydra-core 10.3.4
+Using hydra-head 10.3.4
+Using curation_concerns 1.6.3 from git://github.com/projecthydra/curation_concerns.git (at b073550@b073550)
+Using hydra-batch-edit 2.1.0
+Using sufia 7.2.0 from git://github.com/projecthydra/sufia.git (at 7.2-migration@603e8fc)
+Bundle complete! 62 Gemfile dependencies, 243 gems now installed.
+Gems in the groups development and debug were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:16b78282:start=1496676704830837794,finish=1496676712940523133,duration=8109685339travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:000c2c81$ cp config/sample/database.yml config/database.yml
+
+travis_time:end:000c2c81:start=1496676712946632940,finish=1496676712952156886,duration=5523946travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:012a7638$ cp config/sample/hydra-ldap.yml config/hydra-ldap.yml
+
+travis_time:end:012a7638:start=1496676712958140543,finish=1496676712964271616,duration=6131073travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:12ce78dc$ cp config/sample/share_notify.yml config/share_notify.yml
+
+travis_time:end:12ce78dc:start=1496676712970902326,finish=1496676712977682279,duration=6779953travis_fold:end:before_script.3travis_fold:start:before_script.4travis_time:start:0d799e40$ cp config/sample/initializers/qa.rb config/initializers/qa.rb
+
+travis_time:end:0d799e40:start=1496676712983997738,finish=1496676712990716641,duration=6718903travis_fold:end:before_script.4travis_fold:start:before_script.5travis_time:start:2cfea1c9$ redis-cli info
+# Server
+redis_version:2.8.19
+redis_git_sha1:00000000
+redis_git_dirty:0
+redis_build_id:a6068c90658b1a96
+redis_mode:standalone
+os:Linux 4.8.12-040812-generic x86_64
+arch_bits:64
+multiplexing_api:epoll
+gcc_version:4.6.3
+process_id:1400
+run_id:c314b6841276aa0ac4d142abc46374dbd5958c4e
+tcp_port:6379
+uptime_in_seconds:61
+uptime_in_days:0
+hz:10
+lru_clock:3504488
+config_file:/etc/redis/redis.conf
+
+# Clients
+connected_clients:1
+client_longest_output_list:0
+client_biggest_input_buf:0
+blocked_clients:0
+
+# Memory
+used_memory:810816
+used_memory_human:791.81K
+used_memory_rss:3629056
+used_memory_peak:810816
+used_memory_peak_human:791.81K
+used_memory_lua:35840
+mem_fragmentation_ratio:4.48
+mem_allocator:jemalloc-3.6.0
+
+# Persistence
+loading:0
+rdb_changes_since_last_save:0
+rdb_bgsave_in_progress:0
+rdb_last_save_time:1496676651
+rdb_last_bgsave_status:ok
+rdb_last_bgsave_time_sec:-1
+rdb_current_bgsave_time_sec:-1
+aof_enabled:0
+aof_rewrite_in_progress:0
+aof_rewrite_scheduled:0
+aof_last_rewrite_time_sec:-1
+aof_current_rewrite_time_sec:-1
+aof_last_bgrewrite_status:ok
+aof_last_write_status:ok
+
+# Stats
+total_connections_received:1
+total_commands_processed:0
+instantaneous_ops_per_sec:0
+total_net_input_bytes:14
+total_net_output_bytes:0
+instantaneous_input_kbps:0.00
+instantaneous_output_kbps:0.00
+rejected_connections:0
+sync_full:0
+sync_partial_ok:0
+sync_partial_err:0
+expired_keys:0
+evicted_keys:0
+keyspace_hits:0
+keyspace_misses:0
+pubsub_channels:0
+pubsub_patterns:0
+latest_fork_usec:0
+
+# Replication
+role:master
+connected_slaves:0
+master_repl_offset:0
+repl_backlog_active:0
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:0
+repl_backlog_histlen:0
+
+# CPU
+used_cpu_sys:0.02
+used_cpu_user:0.02
+used_cpu_sys_children:0.00
+used_cpu_user_children:0.00
+
+# Keyspace
+
+travis_time:end:2cfea1c9:start=1496676712997640240,finish=1496676713006785158,duration=9144918travis_fold:end:before_script.5travis_time:start:3b335c68$ bundle exec rake scholarsphere:travis:$TEST_SUITE
+WARNING: Use strings for Figaro configuration. false was converted to "false".
+== 20111213223125 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20111213223125_devise_create_users.rb:27)
+   -> 0.0355s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0012s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0013s
+== 20111213223125 DeviseCreateUsers: migrated (0.0383s) =======================
+
+== 20111213223132 CreateSearches: migrating ===================================
+-- create_table(:searches)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20111213223132_create_searches.rb:8)
+   -> 0.0016s
+-- add_index(:searches, :user_id)
+   -> 0.0011s
+== 20111213223132 CreateSearches: migrated (0.0028s) ==========================
+
+== 20111213223133 CreateBookmarks: migrating ==================================
+-- create_table(:bookmarks)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20111213223133_create_bookmarks.rb:10)
+   -> 0.0012s
+== 20111213223133 CreateBookmarks: migrated (0.0013s) =========================
+
+== 20111213223134 RemoveEditableFieldsFromBookmarks: migrating ================
+-- remove_column(:bookmarks, :notes)
+   -> 0.0079s
+-- remove_column(:bookmarks, :url)
+   -> 0.0072s
+== 20111213223134 RemoveEditableFieldsFromBookmarks: migrated (0.0152s) =======
+
+== 20111213223135 AddUserTypesToBookmarksSearches: migrating ==================
+-- add_column(:searches, :user_type, :string)
+   -> 0.0009s
+-- add_column(:bookmarks, :user_type, :string)
+   -> 0.0004s
+== 20111213223135 AddUserTypesToBookmarksSearches: migrated (0.0186s) =========
+
+== 20111213223340 CreateSuperusers: migrating =================================
+-- create_table(:superusers)
+   -> 0.0009s
+== 20111213223340 CreateSuperusers: migrated (0.0010s) ========================
+
+== 20120124160735 CreateChecksumAuditLogs: migrating ==========================
+-- create_table(:checksum_audit_logs)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120124160735_create_checksum_audit_logs.rb:10)
+   -> 0.0016s
+== 20120124160735 CreateChecksumAuditLogs: migrated (0.0017s) =================
+
+== 20120125025814 CreateDelayedJobs: migrating ================================
+-- create_table(:delayed_jobs, {:force=>true})
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120125025814_create_delayed_jobs.rb:13)
+   -> 0.0015s
+-- add_index(:delayed_jobs, [:priority, :run_at], {:name=>"delayed_jobs_priority"})
+   -> 0.0008s
+== 20120125025814 CreateDelayedJobs: migrated (0.0025s) =======================
+
+== 20120125174734 IndexChecksumLogs: migrating ================================
+-- add_index(:checksum_audit_logs, [:pid, :dsid], {:name=>"by_pid_and_dsid", :order=>{:created_at=>"DESC"}})
+   -> 0.0012s
+== 20120125174734 IndexChecksumLogs: migrated (0.0013s) =======================
+
+== 20120205155925 CreateCollections: migrating ================================
+-- create_table(:collections)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120205155925_create_collections.rb:6)
+   -> 0.0012s
+== 20120205155925 CreateCollections: migrated (0.0013s) =======================
+
+== 20120210181445 RemoveCollections: migrating ================================
+-- drop_table(:collections)
+   -> 0.0004s
+== 20120210181445 RemoveCollections: migrated (0.0005s) =======================
+
+== 20120402215635 CreateLocalAuthorities: migrating ===========================
+-- create_table(:local_authority_entries, {:force=>true})
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120402215635_create_local_authorities.rb:7)
+   -> 0.0014s
+-- create_table(:local_authorities, {:force=>true})
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120402215635_create_local_authorities.rb:12)
+   -> 0.0009s
+-- create_table(:domain_terms, {:force=>true})
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120402215635_create_local_authorities.rb:18)
+   -> 0.0010s
+-- create_table(:domain_terms_local_authorities, {:id=>false})
+   -> 0.0004s
+-- add_index(:local_authority_entries, [:local_authority_id, :label], {:name=>"entries_by_term_and_label"})
+   -> 0.0008s
+-- add_index(:local_authority_entries, [:local_authority_id, :uri], {:name=>"entries_by_term_and_uri"})
+   -> 0.0013s
+-- add_index(:domain_terms, [:model, :term], {:name=>"terms_by_model_and_term"})
+   -> 0.0010s
+== 20120402215635 CreateLocalAuthorities: migrated (0.0074s) ==================
+
+== 20120411162405 AddMissingIndexes: migrating ================================
+-- add_index(:domain_terms_local_authorities, [:local_authority_id, :domain_term_id], {:name=>"dtla_by_ids1"})
+   -> 0.0013s
+-- add_index(:domain_terms_local_authorities, [:domain_term_id, :local_authority_id], {:name=>"dtla_by_ids2"})
+   -> 0.0019s
+== 20120411162405 AddMissingIndexes: migrated (0.0033s) =======================
+
+== 20120501155658 AddLoginToUser: migrating ===================================
+-- add_column(:users, :login, :string, {:null=>false, :default=>""})
+   -> 0.0008s
+-- change_column(:users, :email, :string, {:null=>true})
+   -> 0.0194s
+-- change_column(:users, :encrypted_password, :string, {:null=>true})
+   -> 0.0156s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.0020s
+== 20120501155658 AddLoginToUser: migrated (0.0383s) ==========================
+
+== 20120501200443 DropIndexUsersEmail: migrating ==============================
+-- remove_index(:users, :email)
+   -> 0.0022s
+== 20120501200443 DropIndexUsersEmail: migrated (0.0023s) =====================
+
+== 20120521121725 CreateMailboxer: migrating ==================================
+-- create_table(:conversations)
+   -> 0.0011s
+-- create_table(:receipts)
+   -> 0.0010s
+-- create_table(:notifications)
+   -> 0.0010s
+-- add_index("receipts", "notification_id")
+   -> 0.0010s
+-- add_index("notifications", "conversation_id")
+   -> 0.0010s
+-- add_foreign_key("receipts", "notifications", {:name=>"receipts_on_notification_id_test"})
+   -> 0.0000s
+-- add_foreign_key("notifications", "conversations", {:name=>"notifications_on_conversation_id_test"})
+   -> 0.0000s
+== 20120521121725 CreateMailboxer: migrated (0.0056s) =========================
+
+== 20120521121726 AddNotifiedObject: migrating ================================
+-- change_table(:notifications)
+   -> 0.0010s
+-- remove_columns(:notifications, :object_id, :object_type)
+   -> 0.0229s
+== 20120521121726 AddNotifiedObject: migrated (0.0241s) =======================
+
+== 20120521121727 AddNotificationCode: migrating ==============================
+-- change_table(:notifications)
+   -> 0.0007s
+== 20120521121727 AddNotificationCode: migrated (0.0008s) =====================
+
+== 20120521121728 AddAttachments: migrating ===================================
+-- add_column(:notifications, :attachment, :string)
+   -> 0.0008s
+== 20120521121728 AddAttachments: migrated (0.0010s) ==========================
+
+== 20120604162405 ChangeAuditColumnType: migrating ============================
+-- change_column(:checksum_audit_logs, :pass, :integer)
+   -> 0.0122s
+== 20120604162405 ChangeAuditColumnType: migrated (0.0123s) ===================
+
+== 20120614215634 RemoveTimestampsFromAuthorities: migrating ==================
+-- remove_column(:local_authority_entries, :created_at)
+   -> 0.0152s
+-- remove_column(:local_authority_entries, :updated_at)
+   -> 0.0141s
+-- remove_column(:local_authorities, :created_at)
+   -> 0.0055s
+-- remove_column(:local_authorities, :updated_at)
+   -> 0.0054s
+-- remove_column(:domain_terms, :created_at)
+   -> 0.0087s
+-- remove_column(:domain_terms, :updated_at)
+   -> 0.0077s
+== 20120614215634 RemoveTimestampsFromAuthorities: migrated (0.0571s) =========
+
+== 20120625101450 CreateVersionCommitters: migrating ==========================
+-- create_table(:version_committers)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120625101450_create_version_committers.rb:8)
+   -> 0.0017s
+== 20120625101450 CreateVersionCommitters: migrated (0.0018s) =================
+
+== 20120723130323 DropDelayedJobs: migrating ==================================
+-- drop_table(:delayed_jobs)
+   -> 0.0006s
+== 20120723130323 DropDelayedJobs: migrated (0.0007s) =========================
+
+== 20120728224930 AddLdapAttrsToUser: migrating ===============================
+-- add_column(:users, :display_name, :string)
+   -> 0.0008s
+-- add_column(:users, :address, :string)
+   -> 0.0004s
+-- add_column(:users, :admin_area, :string)
+   -> 0.0005s
+-- add_column(:users, :department, :string)
+   -> 0.0004s
+-- add_column(:users, :title, :string)
+   -> 0.0006s
+-- add_column(:users, :office, :string)
+   -> 0.0004s
+-- add_column(:users, :chat_id, :string)
+   -> 0.0004s
+-- add_column(:users, :website, :string)
+   -> 0.0004s
+-- add_column(:users, :affiliation, :string)
+   -> 0.0006s
+-- add_column(:users, :telephone, :string)
+   -> 0.0004s
+== 20120728224930 AddLdapAttrsToUser: migrated (0.0060s) ======================
+
+== 20120729030746 ActsAsFollowerMigration: migrating ==========================
+-- create_table(:follows, {:force=>true})
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120729030746_acts_as_follower_migration.rb:7)
+   -> 0.0013s
+-- add_index(:follows, ["follower_id", "follower_type"], {:name=>"fk_follows"})
+   -> 0.0012s
+-- add_index(:follows, ["followable_id", "followable_type"], {:name=>"fk_followables"})
+   -> 0.0015s
+== 20120729030746 ActsAsFollowerMigration: migrated (0.0044s) =================
+
+== 20120806160501 AddAvatarsToUsers: migrating ================================
+-- add_column(:users, "avatar_file_name", :string)
+   -> 0.0005s
+-- add_column(:users, "avatar_content_type", :string)
+   -> 0.0005s
+-- add_column(:users, "avatar_file_size", :integer)
+   -> 0.0007s
+-- add_column(:users, "avatar_updated_at", :datetime)
+   -> 0.0004s
+== 20120806160501 AddAvatarsToUsers: migrated (0.0025s) =======================
+
+== 20120820184002 CreateSubjectLocalAuthorityEntries: migrating ===============
+-- create_table(:subject_local_authority_entries, {:force=>true})
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20120820184002_create_subject_local_authority_entries.rb:22)
+   -> 0.0014s
+-- add_index(:subject_local_authority_entries, [:lowerLabel], {:name=>"entries_by_lower_label"})
+   -> 0.0008s
+-- add_index(:domain_terms_local_authorities, [:domain_term_id, :local_authority_id], {:unique=>true, :name=>"domain_terms_by_domain_term_id_and_local_authority"})
+   -> 0.0021s
+== 20120820184002 CreateSubjectLocalAuthorityEntries: migrated (0.0053s) ======
+
+== 20120823162405 ChangeUrlToUri: migrating ===================================
+-- rename_column(:subject_local_authority_entries, :url, :uri)
+   -> 0.0098s
+== 20120823162405 ChangeUrlToUri: migrated (0.0099s) ==========================
+
+== 20120830160501 AddGroupsToUsers: migrating =================================
+-- add_column(:users, :group_list, :string)
+   -> 0.0008s
+-- add_column(:users, :groups_last_update, :datetime)
+   -> 0.0007s
+-- add_column(:users, :ldap_available, :boolean)
+   -> 0.0005s
+-- add_column(:users, :ldap_last_update, :datetime)
+   -> 0.0008s
+== 20120830160501 AddGroupsToUsers: migrated (0.0031s) ========================
+
+== 20120911160501 ChangeGroupListToTextInUsers: migrating =====================
+-- change_column(:users, :group_list, :text)
+   -> 0.0263s
+== 20120911160501 ChangeGroupListToTextInUsers: migrated (0.0264s) ============
+
+== 20120912135151 RenameReceiptsRead: migrating ===============================
+-- rename_column(:receipts, :read, :is_read)
+   -> 0.0173s
+== 20120912135151 RenameReceiptsRead: migrated (0.0174s) ======================
+
+== 20121023135525 CreateSingleUseLinks: migrating =============================
+-- create_table(:single_use_links)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20121023135525_create_single_use_links.rb:9)
+   -> 0.0011s
+== 20121023135525 CreateSingleUseLinks: migrated (0.0012s) ====================
+
+== 20121112160501 AddSocialToUsers: migrating =================================
+-- add_column(:users, :facebook_handle, :string)
+   -> 0.0006s
+-- add_column(:users, :twitter_handle, :string)
+   -> 0.0005s
+-- add_column(:users, :googleplus_handle, :string)
+   -> 0.0005s
+== 20121112160501 AddSocialToUsers: migrated (0.0025s) ========================
+
+== 20121113155631 CreateTrophies: migrating ===================================
+-- create_table(:trophies)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20121113155631_create_trophies.rb:7)
+   -> 0.0010s
+== 20121113155631 CreateTrophies: migrated (0.0011s) ==========================
+
+== 20130118174224 AddLinkedinToUser: migrating ================================
+-- add_column(:users, :linkedin_handle, :string)
+   -> 0.0008s
+== 20130118174224 AddLinkedinToUser: migrated (0.0009s) =======================
+
+== 20130422192437 CreateProxyDepositRequests: migrating =======================
+-- create_table(:proxy_deposit_requests)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20130422192437_create_proxy_deposit_requests.rb:11)
+   -> 0.0011s
+-- add_index(:proxy_deposit_requests, :receiving_user_id)
+   -> 0.0016s
+-- add_index(:proxy_deposit_requests, :sending_user_id)
+   -> 0.0014s
+== 20130422192437 CreateProxyDepositRequests: migrated (0.0043s) ==============
+
+== 20130611161958 CreateProxyDepositRights: migrating =========================
+-- create_table(:proxy_deposit_rights)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20130611161958_create_proxy_deposit_rights.rb:6)
+   -> 0.0013s
+-- add_index(:proxy_deposit_rights, :grantor_id)
+   -> 0.0008s
+-- add_index(:proxy_deposit_rights, :grantee_id)
+   -> 0.0016s
+== 20130611161958 CreateProxyDepositRights: migrated (0.0039s) ================
+
+== 20140408161959 AddDefaultCreateDate: migrating =============================
+-- change_column_default(:subject_local_authority_entries, :created_at, 2017-06-05 15:32:04 +0000)
+   -> 0.0121s
+-- change_column_default(:subject_local_authority_entries, :updated_at, 2017-06-05 15:32:04 +0000)
+   -> 0.0111s
+== 20140408161959 AddDefaultCreateDate: migrated (0.0234s) ====================
+
+== 20140417065300 CreateContentBlocks: migrating ==============================
+-- create_table(:content_blocks)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20140417065300_create_content_blocks.rb:6)
+   -> 0.0016s
+-- add_index(:content_blocks, :name, {:unique=>true})
+   -> 0.0011s
+== 20140417065300 CreateContentBlocks: migrated (0.0029s) =====================
+
+== 20140417065301 CreateFeaturedWorks: migrating ==============================
+-- create_table(:featured_works)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20140417065301_create_featured_works.rb:7)
+   -> 0.0011s
+-- add_index(:featured_works, :generic_file_id)
+   -> 0.0011s
+-- add_index(:featured_works, :order)
+   -> 0.0014s
+== 20140417065301 CreateFeaturedWorks: migrated (0.0038s) =====================
+
+== 20140417065302 CreateTinymceAssets: migrating ==============================
+-- create_table(:tinymce_assets)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20140417065302_create_tinymce_assets.rb:5)
+   -> 0.0010s
+== 20140417065302 CreateTinymceAssets: migrated (0.0011s) =====================
+
+== 20140417142837 MailboxerNamespacingCompatibility: migrating ================
+-- remove_foreign_key("receipts", {:name=>"receipts_on_notification_id_test"})
+   -> 0.0000s
+-- remove_foreign_key("notifications", {:name=>"notifications_on_conversation_id_test"})
+   -> 0.0000s
+-- rename_table(:conversations, :mailboxer_conversations)
+   -> 0.0007s
+-- rename_table(:notifications, :mailboxer_notifications)
+   -> 0.0053s
+-- rename_table(:receipts, :mailboxer_receipts)
+   -> 0.0052s
+-- add_foreign_key("mailboxer_receipts", "mailboxer_notifications", {:name=>"mailboxer_receipts_on_notification_id_test", :column=>:notification_id})
+   -> 0.0000s
+-- add_foreign_key("mailboxer_notifications", "mailboxer_conversations", {:name=>"notifications_on_conversation_id_test", :column=>"conversation_id"})
+   -> 0.0000s
+== 20140417142837 MailboxerNamespacingCompatibility: migrated (0.0118s) =======
+
+== 20140428172016 AddConversationOptout: migrating ============================
+-- create_table(:mailboxer_conversation_opt_outs)
+   -> 0.0008s
+-- add_foreign_key("mailboxer_conversation_opt_outs", "mailboxer_conversations", {:name=>"mb_opt_outs_on_conversations_id", :column=>"conversation_id"})
+   -> 0.0000s
+== 20140428172016 AddConversationOptout: migrated (0.0010s) ===================
+
+== 20140428172017 CreateFileViewStats: migrating ==============================
+-- create_table(:file_view_stats)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20140428172017_create_file_view_stats.rb:8)
+   -> 0.0011s
+-- add_index(:file_view_stats, :file_id)
+   -> 0.0008s
+== 20140428172017 CreateFileViewStats: migrated (0.0020s) =====================
+
+== 20140428172018 CreateFileDownloadStats: migrating ==========================
+-- create_table(:file_download_stats)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20140428172018_create_file_download_stats.rb:8)
+   -> 0.0010s
+-- add_index(:file_download_stats, :file_id)
+   -> 0.0010s
+== 20140428172018 CreateFileDownloadStats: migrated (0.0022s) =================
+
+== 20140428172019 CreateUserStats: migrating ==================================
+-- create_table(:user_stats)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20140428172019_create_user_stats.rb:9)
+   -> 0.0011s
+-- add_column(:file_view_stats, :user_id, :integer)
+   -> 0.0005s
+-- add_column(:file_download_stats, :user_id, :integer)
+   -> 0.0004s
+-- add_index(:user_stats, :user_id)
+   -> 0.0010s
+-- add_index(:file_view_stats, :user_id)
+   -> 0.0015s
+-- add_index(:file_download_stats, :user_id)
+   -> 0.0013s
+== 20140428172019 CreateUserStats: migrated (0.0061s) =========================
+
+== 20140428172020 AddOrcidToUsers: migrating ==================================
+-- add_column(:users, :orcid, :string)
+   -> 0.0007s
+== 20140428172020 AddOrcidToUsers: migrated (0.0008s) =========================
+
+== 20141205164301 AddSystemCreatedAndLoggedInToUsers: migrating ===============
+-- add_column(:users, :system_created, :boolean, {:default=>false})
+   -> 0.0006s
+-- add_column(:users, :logged_in, :boolean, {:default=>true})
+   -> 0.0005s
+== 20141205164301 AddSystemCreatedAndLoggedInToUsers: migrated (0.0012s) ======
+
+== 20141205164302 AddExternalKeyToContentBlocks: migrating ====================
+-- add_column(:content_blocks, :external_key, :string)
+   -> 0.0005s
+-- remove_index(:content_blocks, :name)
+   -> 0.0012s
+== 20141205164302 AddExternalKeyToContentBlocks: migrated (0.0019s) ===========
+
+== 20150205141342 CreateMigrateAudits: migrating ==============================
+-- create_table(:migrate_audits)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/travis/build/psu-stewardship/scholarsphere/db/migrate/20150205141342_create_migrate_audits.rb:9)
+   -> 0.0012s
+== 20150205141342 CreateMigrateAudits: migrated (0.0013s) =====================
+
+== 20150220191721 AddStatusToMigrateAudits: migrating =========================
+-- add_column(:migrate_audits, :status, :string)
+   -> 0.0006s
+== 20150220191721 AddStatusToMigrateAudits: migrated (0.0006s) ================
+
+== 20150220191722 ChangeAuditLogPidToGenericFileId: migrating =================
+-- rename_column(:checksum_audit_logs, :pid, :generic_file_id)
+   -> 0.0171s
+== 20150220191722 ChangeAuditLogPidToGenericFileId: migrated (0.0172s) ========
+
+== 20150220191723 ChangeProxyDepositRequestPidToGenericFileId: migrating ======
+-- rename_column(:proxy_deposit_requests, :pid, :generic_file_id)
+   -> 0.0663s
+== 20150220191723 ChangeProxyDepositRequestPidToGenericFileId: migrated (0.0664s) 
+
+== 20150220191724 AddArkivoToUsers: migrating =================================
+-- add_column(:users, :arkivo_token, :string)
+   -> 0.0118s
+-- add_column(:users, :arkivo_subscription, :string)
+   -> 0.0016s
+-- add_column(:users, :zotero_token, :binary)
+   -> 0.0009s
+-- add_column(:users, :zotero_userid, :string)
+   -> 0.0016s
+== 20150220191724 AddArkivoToUsers: migrated (0.0162s) ========================
+
+== 20150220191725 ChangeTrophyGenericFileIdToGenericWorkId: migrating =========
+-- rename_column(:trophies, :generic_file_id, :generic_work_id)
+   -> 0.0330s
+== 20150220191725 ChangeTrophyGenericFileIdToGenericWorkId: migrated (0.0331s) 
+
+== 20150220191726 ChangeProxyDepositGenericFileIdToGenericWorkId: migrating ===
+-- rename_column(:proxy_deposit_requests, :generic_file_id, :generic_work_id)
+   -> 0.0161s
+== 20150220191726 ChangeProxyDepositGenericFileIdToGenericWorkId: migrated (0.0162s) 
+
+== 20150220191727 ChangeAuditLogGenericFileIdToFileSetId: migrating ===========
+-- rename_column(:checksum_audit_logs, :generic_file_id, :file_set_id)
+   -> 0.0112s
+== 20150220191727 ChangeAuditLogGenericFileIdToFileSetId: migrated (0.0169s) ==
+
+== 20150220191728 ChangeProxyDepositRequestGenericFileIdToGenericWorkId: migrating 
+== 20150220191728 ChangeProxyDepositRequestGenericFileIdToGenericWorkId: migrated (0.0136s) 
+
+== 20150220191741 CreateUploadedFiles: migrating ==============================
+-- create_table(:uploaded_files)
+   -> 0.0051s
+== 20150220191741 CreateUploadedFiles: migrated (0.0052s) =====================
+
+== 20150220191746 ChangeFeaturedWorkGenericFileIdToGenericWorkId: migrating ===
+-- rename_column(:featured_works, :generic_file_id, :generic_work_id)
+   -> 0.0202s
+== 20150220191746 ChangeFeaturedWorkGenericFileIdToGenericWorkId: migrated (0.0203s) 
+
+== 20150260191746 ChangeFeaturedWorkGenericWorkIdToWorkId: migrating ==========
+-- rename_column(:featured_works, :generic_work_id, :work_id)
+   -> 0.0195s
+== 20150260191746 ChangeFeaturedWorkGenericWorkIdToWorkId: migrated (0.0196s) =
+
+== 20150526191725 ChangeTrophyGenericWorkIdToWorkId: migrating ================
+-- rename_column(:trophies, :generic_work_id, :work_id)
+   -> 0.0058s
+== 20150526191725 ChangeTrophyGenericWorkIdToWorkId: migrated (0.0059s) =======
+
+== 20150526191728 ChangeProxyDepositRequestGenericWorkIdToWorkId: migrating ===
+-- rename_column(:proxy_deposit_requests, :generic_work_id, :work_id)
+   -> 0.0170s
+== 20150526191728 ChangeProxyDepositRequestGenericWorkIdToWorkId: migrated (0.0171s) 
+
+== 20160502182455 AddPolymorphicTypeToBookmarks: migrating ====================
+-- add_column(:bookmarks, :document_type, :string)
+   -> 0.0009s
+-- add_index(:bookmarks, :user_id)
+   -> 0.0010s
+== 20160502182455 AddPolymorphicTypeToBookmarks: migrated (0.0021s) ===========
+
+== 20160527141909 CreateOperations: migrating =================================
+-- create_table(:curation_concerns_operations)
+   -> 0.0132s
+== 20160527141909 CreateOperations: migrated (0.0134s) ========================
+
+== 20160601182455 AddFileIdToChecksumAuditLogs: migrating =====================
+-- rename_column(:checksum_audit_logs, :dsid, :file_id)
+   -> 0.0107s
+== 20160601182455 AddFileIdToChecksumAuditLogs: migrated (0.0108s) ============
+
+== 20160712144235 CreateWorkViewStats: migrating ==============================
+-- create_table(:work_view_stats)
+   -> 0.0008s
+-- add_index(:work_view_stats, :work_id)
+   -> 0.0010s
+== 20160712144235 CreateWorkViewStats: migrated (0.0019s) =====================
+
+== 20160712144236 AddWorksToUserStats: migrating ==============================
+-- add_column(:user_stats, :work_views, :integer)
+   -> 0.0007s
+-- add_column(:work_view_stats, :user_id, :integer)
+   -> 0.0005s
+-- add_index(:work_view_stats, :user_id)
+   -> 0.0014s
+== 20160712144236 AddWorksToUserStats: migrated (0.0029s) =====================
+
+== 20160913151675 CreateFeatures: migrating ===================================
+-- create_table(:sufia_features)
+   -> 0.0008s
+== 20160913151675 CreateFeatures: migrated (0.0009s) ==========================
+
+== 20161010203345 CreateQaLocalAuthorities: migrating =========================
+-- create_table(:qa_local_authorities)
+   -> 0.0012s
+-- add_index(:qa_local_authorities, :name, {:unique=>true})
+   -> 0.0016s
+== 20161010203345 CreateQaLocalAuthorities: migrated (0.0031s) ================
+
+== 20161010203400 CreateQaLocalAuthorityEntries: migrating ====================
+-- create_table(:qa_local_authority_entries)
+   -> 0.0020s
+-- add_index(:qa_local_authority_entries, :uri, {:unique=>true})
+   -> 0.0018s
+-- add_foreign_key(:qa_local_authority_entries, :qa_local_authorities, {:column=>:local_authority_id})
+   -> 0.0000s
+-- add_index(:qa_local_authority_entries, [:lower_label, :local_authority_id], {:name=>"index_qa_local_authority_entries_on_lower_label_and_authority"})
+   -> 0.0022s
+== 20161010203400 CreateQaLocalAuthorityEntries: migrated (0.0064s) ===========
+
+== 20161011161613 DropLocalAuthorities: migrating =============================
+-- drop_table(:local_authority_entries)
+   -> 0.0007s
+-- drop_table(:local_authorities)
+   -> 0.0008s
+-- drop_table(:domain_terms)
+   -> 0.0006s
+-- drop_table(:domain_terms_local_authorities)
+   -> 0.0007s
+== 20161011161613 DropLocalAuthorities: migrated (0.0030s) ====================
+
+== 20161011161638 DropSubjectLocalAuthorityEntries: migrating =================
+-- drop_table(:subject_local_authority_entries)
+   -> 0.0007s
+== 20161011161638 DropSubjectLocalAuthorityEntries: migrated (0.0007s) ========
+
+== 20161103162601 CreateQueuedFiles: migrating ================================
+-- create_table(:queued_files)
+   -> 0.0009s
+== 20161103162601 CreateQueuedFiles: migrated (0.0010s) =======================
+
+== 20170110142322 CreateMinterStates: migrating ===============================
+-- create_table(:minter_states)
+   -> 0.0018s
+-- add_index(:minter_states, :namespace, {:unique=>true})
+   -> 0.0015s
+== 20170110142322 CreateMinterStates: migrated (0.0036s) ======================
+
+== 20170110142323 RenameMinterStateRandomToRand: migrating ====================
+-- rename_column(:minter_states, :random, :rand)
+   -> 0.0115s
+== 20170110142323 RenameMinterStateRandomToRand: migrated (0.0116s) ===========
+
+copying fits config files
+[main] INFO org.eclipse.jetty.util.log - Logging initialized @1706ms
+[main] INFO org.simplericity.jettyconsole.DefaultJettyManager - Added web application on path / from war /tmp/fcrepo-webapp-4.7.1-jetty-console/fcrepo-webapp-4.7.1-jetty-console.jar
+[main] INFO org.simplericity.jettyconsole.DefaultJettyManager - Starting web application on port 8986
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.2.3.v20140905
+[main] INFO org.eclipse.jetty.webapp.StandardDescriptorProcessor - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/tmp/fcrepo-webapp-4.7.1-jetty-console.jar_8986/webapp/WEB-INF/lib/logback-classic-1.1.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/tmp/fcrepo-webapp-4.7.1-jetty-console.jar_8986/condi/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+[main] INFO / - 1 Spring WebApplicationInitializers detected on classpath
+[main] INFO / - Initializing Spring root WebApplicationContext
+INFO 15:32:38.371 (RdfWriterHelper) Loading JENA 3.1.1 Patched RDF Output Writers
+[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.s.j.JettyConsoleWebappContext@6a5fc7f7{/,file:/tmp/fcrepo-webapp-4.7.1-jetty-console.jar_8986/webapp/,AVAILABLE}{/tmp/fcrepo-webapp-4.7.1-jetty-console/fcrepo-webapp-4.7.1-jetty-console.jar}
+[main] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@2633d09c{HTTP/1.1}{0.0.0.0:8986}
+[main] INFO org.eclipse.jetty.server.Server - Started @16726ms
+/home/travis/.rvm/rubies/ruby-2.3.3/bin/ruby -I/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib:/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/exe/rspec spec/features/authentication_spec.rb spec/features/batch_edit_spec.rb spec/features/catalog_search_spec.rb spec/features/collection/create_spec.rb spec/features/collection/delete_spec.rb spec/features/collection/edit_spec.rb spec/features/collection/view_and_search_spec.rb spec/features/contact_form_spec.rb spec/features/dashboard/dashboard_collections_spec.rb spec/features/dashboard/dashboard_highlights_spec.rb spec/features/dashboard/dashboard_shares_spec.rb spec/features/dashboard/dashboard_spec.rb spec/features/dashboard/dashboard_works_spec.rb spec/features/facet_spec.rb spec/features/featured_work_spec.rb spec/features/file_set/analytics_spec.rb spec/features/file_set/thumbnail_spec.rb spec/features/file_set/versioning_spec.rb spec/features/generic_work/edit_permissions_spec.rb spec/features/generic_work/featured_work_spec.rb spec/features/generic_work/thumbnail_spec.rb spec/features/generic_work/upload_and_delete_spec.rb spec/features/generic_work/view_and_download_spec.rb spec/features/generic_work/work_with_many_files_spec.rb spec/features/home_page_spec.rb spec/features/read_only_spec.rb spec/features/static_pages_spec.rb spec/features/unified_search_spec.rb spec/features/user_stats_spec.rb spec/features/users_spec.rb --color --backtrace
+WARNING: Use strings for Figaro configuration. false was converted to "false".
+..*DEPRECATION WARNING: Blacklight::Document#initialize expects a hash-like object, received SolrDocument. (called from new at /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/sufia-603e8fc8bd4f/app/views/my/_document_list.html.erb:3)
+.....................................................DEPRECATION WARNING: Calling FileSet.file_format is deprecated. Use the value in its solr_document instead. (called from block in generate_solr_document at /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:7)
+DEPRECATION WARNING: Calling FileSet.file_format is deprecated. Use the value in its solr_document instead. (called from block in generate_solr_document at /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:8)
+*..Unused parameters passed to Capybara::Queries::SelectorQuery : ["4-20-small.png"]
+Unused parameters passed to Capybara::Queries::SelectorQuery : ["world.png"]
+.......Unused parameters passed to Capybara::Queries::SelectorQuery : ["Markdown Test"]
+.Unused parameters passed to Capybara::Queries::SelectorQuery : ["little_file.txt_title"]
+............................
+
+==== DEPRECATION WARNINGS ====
+DEPRECATION WARNING: Blacklight::Document#initialize expects a hash-like object, received SolrDocument. (called from new at /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/sufia-603e8fc8bd4f/app/views/my/_document_list.html.erb:3) (258 times); e.g.: 
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/sufia-603e8fc8bd4f/app/views/my/_document_list.html.erb:3:in `new'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/sufia-603e8fc8bd4f/app/views/my/_document_list.html.erb:3:in `block in _vendor_bundle_ruby_______bundler_gems_sufia____e_fc_bd_f_app_views_my__document_list_html_erb___3880298981428142481_148430320'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/sufia-603e8fc8bd4f/app/views/my/_document_list.html.erb:3:in `map'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/sufia-603e8fc8bd4f/app/views/my/_document_list.html.erb:3:in `_vendor_bundle_ruby_______bundler_gems_sufia____e_fc_bd_f_app_views_my__document_list_html_erb___3880298981428142481_148430320'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/actionview-4.2.7.1/lib/action_view/template.rb:145:in `block in render'
+
+DEPRECATION WARNING: Calling FileSet.file_format is deprecated. Use the value in its solr_document instead. (called from block in generate_solr_document at /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:7) (11 times); e.g.: 
+    /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:7:in `block in generate_solr_document'
+    /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:4:in `tap'
+    /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:4:in `generate_solr_document'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/active-fedora-10.3.0/lib/active_fedora/indexing.rb:34:in `to_solr'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/curation_concerns-b073550c40a1/app/models/concerns/curation_concerns/human_readable_type.rb:11:in `to_solr'
+
+DEPRECATION WARNING: Calling FileSet.file_format is deprecated. Use the value in its solr_document instead. (called from block in generate_solr_document at /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:8) (11 times); e.g.: 
+    /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:8:in `block in generate_solr_document'
+    /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:4:in `tap'
+    /home/travis/build/psu-stewardship/scholarsphere/app/indexers/work_indexer.rb:4:in `generate_solr_document'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/active-fedora-10.3.0/lib/active_fedora/indexing.rb:34:in `to_solr'
+    /home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/curation_concerns-b073550c40a1/app/models/concerns/curation_concerns/human_readable_type.rb:11:in `to_solr'
+
+      If you need more of the backtrace for any of these deprecations to identify
+      where to make the necessary changes, you can configure 
+      `Deprecation.default_deprecation_behavior = :raise`, and it will turn the deprecation
+      warnings into errors, giving you the full backtrace.
+
+
+========
+
+
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) Site authentication When I am not signed in And I try to upload a file It should take me back to the upload page after I have logged in
+     # Need to apply configuration changes to login_url
+     Failure/Error: expect(unescape(current_url)).to eq(centralized_login_url.gsub(/dashboard/, "concern/generic_works/new"))
+     
+       expected: "https://webaccess.psu.edu/?cosign-localhost&https://localhost/concern/generic_works/new"
+            got: "https://webaccess.psu.edu/?cosign-localhost&http://www.example.com/concern/generic_works/new"
+     
+       (compared using ==)
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib/rspec/support.rb:87:in `block in <module:Support>'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib/rspec/support.rb:96:in `notify_failure'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/fail_with.rb:27:in `fail_with'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:38:in `handle_failure'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:50:in `block in handle_matcher'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+     # ./spec/features/authentication_spec.rb:23:in `block (4 levels) in <top (required)>'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `instance_exec'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `block in run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-rails-3.5.2/lib/rspec/rails/adapters.rb:127:in `block (2 levels) in <module:MinitestLifecycleAdapter>'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `block in run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `map'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `block in run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `map'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:590:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+     # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+
+  2) FileSet Thumbnail Creation: renders without error
+     # Passes when run individually, but raises:
+      Routing Error uninitialized constant Sufia::SingularSubresourceController::DenyAccessOverrideBehavior
+      when run in the suite. See #379
+     Got 2 failures:
+
+     2.1) Failure/Error: expect(page).to have_text("30 views and 12 downloads since #{four_days_ago.strftime('%B %-d, %Y')}")
+            expected to find text "30 views and 12 downloads since June 1, 2017" in "Routing Error uninitialized constant Sufia::SingularSubresourceController::DenyAccessOverrideBehavior Rails.root: /home/travis/build/psu-stewardship/scholarsphere Application Trace | Framework Trace | Full Trace Routes Routes match in priority from top to bottom Helper HTTP Verb Path Controller#Action Path / Url landing_page_new_path GET /landing_page/new(.:format) redirect(301, /contact) managedata_path GET /managedata(.:format) redirect(301, /contact) catalog_recent_path GET /catalog/recent(.:format) catalog#recent browse_everything_engine_path /browse BrowseEverything::Engine blacklight_path / Blacklight::Engine hydra_editor_path / HydraEditor::Engine curation_concerns_path / CurationConcerns::Engine qa_path /authorities Qa::Engine GET /collections/:id/page/:page(.:format) collections#index dashboard_facet_collection_path GET /collections/:id/facet/:id(.:format) collections#facet PUT /collections(.:format) collections#update remove_member_collections_path PUT /collections/remove_member(.:format) collections#remove_member collections_path GET /collections(.:format) collections#index POST /collections(.:format) collections#create new_collection_path GET /collections/new(.:format) collections#new edit_collection_path GET /collections/:id/edit(.:format) collections#edit collection_path GET /collections/:id(.:format) collections#show PATCH /collections/:id(.:format) collections#update PUT /collections/:id(.:format) collections#update DELETE /collections/:id(.:format) collections#destroy download_path GET /downloads/:id(.:format) downloads#show edit_upload_set_path GET /upload_sets/:id/edit(.:format) upload_sets#edit upload_set_path PATCH /upload_sets/:id(.:format) upload_sets#update PUT /upload_sets/:id(.:format) upload_sets#update curation_concerns_generic_works_path POST /concern/generic_works(.:format) curation_concerns/generic_works#create new_curation_concerns_generic_work_path GET /concern/generic_works/new(.:format) curation_concerns/generic_works#new edit_curation_concerns_generic_work_path GET /concern/generic_works/:id/edit(.:format) curation_concerns/generic_works#edit curation_concerns_generic_work_path GET /concern/generic_works/:id(.:format) curation_concerns/generic_works#show PATCH /concern/generic_works/:id(.:format) curation_concerns/generic_works#update PUT /concern/generic_works/:id(.:format) curation_concerns/generic_works#update DELETE /concern/generic_works/:id(.:format) curation_concerns/generic_works#destroy file_manager_curation_concerns_generic_work_path GET /concern/generic_works/:id/file_manager(.:format) curation_concerns/generic_works#file_manager curation_concerns_parent_generic_works_path POST /concern/parent/:parent_id/generic_works(.:format) curation_concerns/generic_works#create new_curation_concerns_parent_generic_work_path GET /concern/parent/:parent_id/generic_works/new(.:format) curation_concerns/generic_works#new edit_curation_concerns_parent_generic_work_path GET /concern/parent/:parent_id/generic_works/:id/edit(.:format) curation_concerns/generic_works#edit curation_concerns_parent_generic_work_path GET /concern/parent/:parent_id/generic_works/:id(.:format) curation_concerns/generic_works#show PATCH /concern/parent/:parent_id/generic_works/:id(.:format) curation_concerns/generic_works#update PUT /concern/parent/:parent_id/generic_works/:id(.:format) curation_concerns/generic_works#update DELETE /concern/parent/:parent_id/generic_works/:id(.:format) curation_concerns/generic_works#destroy curation_concerns_parent_file_set_path GET /concern/parent/:parent_id/file_sets/:id(.:format) curation_concerns/file_sets#show confirm_curation_concerns_permission_path GET /concern/permissions/:id/confirm(.:format) curation_concerns/permissions#confirm copy_curation_concerns_permission_path POST /concern/permissions/:id/copy(.:format) curation_concerns/permissions#copy curation_concerns_file_sets_path POST /concern/container/:parent_id/file_sets(.:format) curation_concerns/file_sets#create new_curation_concerns_file_set_path GET /concern/container/:parent_id/file_sets/new(.:format) curation_concerns/file_sets#new versions_curation_concerns_file_set_path GET /concern/file_sets/:id/versions(.:format) curation_concerns/file_sets#versions rollback_curation_concerns_file_set_path PUT /concern/file_sets/:id/rollback(.:format) curation_concerns/file_sets#rollback edit_curation_concerns_file_set_path GET /concern/file_sets/:id/edit(.:format) curation_concerns/file_sets#edit curation_concerns_file_set_path GET /concern/file_sets/:id(.:format) curation_concerns/file_sets#show PATCH /concern/file_sets/:id(.:format) curation_concerns/file_sets#update PUT /concern/file_sets/:id(.:format) curation_concerns/file_sets#update DELETE /concern/file_sets/:id(.:format) curation_concerns/file_sets#destroy embargoes_path PATCH /embargoes(.:format) embargoes#update GET /embargoes(.:format) embargoes#index edit_embargo_path GET /embargoes/:id/edit(.:format) embargoes#edit embargo_path DELETE /embargoes/:id(.:format) embargoes#destroy leases_path PATCH /leases(.:format) leases#update GET /leases(.:format) leases#index edit_lease_path GET /leases/:id/edit(.:format) leases#edit lease_path DELETE /leases/:id(.:format) leases#destroy batch_edit_path DELETE /batch_edits/:id(.:format) batch_edits#destroy batch_edits_path GET /batch_edits(.:format) batch_edits#index edit_batch_edits_path GET /batch_edits/edit(.:format) batch_edits#edit PUT /batch_edits(.:format) batch_edits#update clear_batch_edits_path DELETE /batch_edits/clear(.:format) batch_edits#clear state_batch_edits_path PUT /batch_edits/state(.:format) batch_edits#state all_batch_edits_path PUT /batch_edits/all(.:format) batch_edits#all GET /batch_edits(.:format) batch_edits#index PUT /batch_edits/:id(.:format) batch_edits#add DELETE /batch_edits(.:format) batch_edits#destroy_collection search_catalog_path GET|POST /catalog(.:format) catalog#index track_catalog_path POST /catalog/:id/track(.:format) catalog#track opensearch_catalog_path GET /catalog/opensearch(.:format) catalog#opensearch facet_catalog_path GET /catalog/facet/:id(.:format) catalog#facet email_solr_document_path GET|POST /catalog/:id/email(.:format) catalog#email sms_solr_document_path GET|POST /catalog/:id/sms(.:format) catalog#sms citation_solr_document_path GET /catalog/:id/citation(.:format) catalog#citation email_solr_documents_path GET|POST /catalog/email(.:format) catalog#email sms_solr_documents_path GET|POST /catalog/sms(.:format) catalog#sms citation_solr_documents_path GET /catalog/citation(.:format) catalog#citation solr_document_path GET /catalog/:id(.:format) catalog#show email_bookmark_path GET|POST /bookmarks/:id/email(.:format) bookmarks#email sms_bookmark_path GET|POST /bookmarks/:id/sms(.:format) bookmarks#sms citation_bookmark_path GET /bookmarks/:id/citation(.:format) bookmarks#citation email_bookmarks_path GET|POST /bookmarks/email(.:format) bookmarks#email sms_bookmarks_path GET|POST /bookmarks/sms(.:format) bookmarks#sms citation_bookmarks_path GET /bookmarks/citation(.:format) bookmarks#citation clear_bookmarks_path DELETE /bookmarks/clear(.:format) bookmarks#clear bookmarks_path GET /bookmarks(.:format) bookmarks#index POST /bookmarks(.:format) bookmarks#create new_bookmark_path GET /bookmarks/new(.:format) bookmarks#new edit_bookmark_path GET /bookmarks/:id/edit(.:format) bookmarks#edit bookmark_path GET /bookmarks/:id(.:format) bookmarks#show PATCH /bookmarks/:id(.:format) bookmarks#update PUT /bookmarks/:id(.:format) bookmarks#update DELETE /bookmarks/:id(.:format) bookmarks#destroy destroy_user_session_path GET /logout(.:format) sessions#destroy new_user_session_old_path GET /login(.:format) sessions#new new_user_session_path GET /login_session(.:format) sessions#new GET /directory/user/:uid(.:format) directory#user GET /directory/user/:uid/:attribute(.:format) directory#user_attribute GET /directory/group/:cn(.:format) directory#group {:cn=>/.*/} admin_resque_server_path /admin/queues Resque::Server why_use_scholarsphere_path GET /why-use-scholarsphere(.:format) redirect(301, /scholarsphere_student_flyer.pdf) admin_stats_export_path GET /admin/stats/export(.:format) admin/stats#export root_path GET / sufia/homepage#index static_path GET /:action(.:format) static#(?-mix:error_help) licenses_path GET /licenses(.:format) static#licenses about_path GET /about(.:format) static#about {:id=>\"about_page\"} sufia_path / Sufia::Engine Routes for BrowseEverything::Engine connector_response_path GET /connect(.:format) browse_everything#auth resolver_path GET|POST /resolve(.:format) browse_everything#resolve contents_path GET|POST /:provider(/*path)(.:format) browse_everything#show root_path GET / browse_everything#index Routes for Blacklight::Engine search_history_path GET /search_history(.:format) search_history#index clear_search_history_path DELETE /search_history/clear(.:format) search_history#clear clear_saved_searches_path DELETE /saved_searches/clear(.:format) saved_searches#clear saved_searches_path GET /saved_searches(.:format) saved_searches#index save_search_path PUT /saved_searches/save/:id(.:format) saved_searches#save forget_search_path DELETE /saved_searches/forget/:id(.:format) saved_searches#forget POST /saved_searches/forget/:id(.:format) saved_searches#forget track_search_context_path POST /catalog/:id/track(.:format) catalog#track suggest_index_path GET /suggest(.:format) suggest#index {:format=>\"json\"} Routes for HydraEditor::Engine records_path POST /records(.:format) records#create new_record_path GET /records/new(.:format) records#new edit_record_path GET /records/:id/edit(.:format) records#edit {:id=>/[a-zA-Z0-9_.:\\-\\/%]+/} record_path PATCH /records/:id(.:format) records#update {:id=>/[a-zA-Z0-9_.:\\-\\/%]+/} PUT /records/:id(.:format) records#update {:id=>/[a-zA-Z0-9_.:\\-\\/%]+/} Routes for CurationConcerns::Engine show_single_use_link_path GET /single_use_link/show/:id(.:format) curation_concerns/single_use_links_viewer#show download_single_use_link_path GET /single_use_link/download/:id(.:format) curation_concerns/single_use_links_viewer#download generate_download_single_use_link_path POST /single_use_link/generate_download/:id(.:format) curation_concerns/single_use_links#create_download generate_show_single_use_link_path POST /single_use_link/generate_show/:id(.:format) curation_concerns/single_use_links#create_show generated_single_use_links_path GET /single_use_link/generated/:id(.:format) curation_concerns/single_use_links#index delete_single_use_link_path DELETE /single_use_link/:id/delete/:link_id(.:format) curation_concerns/single_use_links#destroy classify_concerns_path POST /classify_concerns(.:format) curation_concerns/classify_concerns#create new_classify_concern_path GET /classify_concerns/new(.:format) curation_concerns/classify_concerns#new user_operations_path GET /users/:user_id/operations(.:format) curation_concerns/operations#index user_operation_path GET /users/:user_id/operations/:id(.:format) curation_concerns/operations#show Routes for Qa::Engine GET /terms/:vocab(/:subauthority)(.:format) qa/terms#index GET /search/:vocab(/:subauthority)(.:format) qa/terms#search GET /show/:vocab/:id(.:format) qa/terms#show GET /show/:vocab/:subauthority/:id(.:format) qa/terms#show Routes for Sufia::Engine homepage_index_path GET /homepage(.:format) homepage#index root_path GET / sufia/homepage#index GET /files/:id(.:format) redirect(301, /concern/generic_works/%{id}) source_description_path GET /.well-known/resourcesync(.:format) sufia/resource_sync#source_description capability_list_path GET /capabilitylist(.:format) sufia/resource_sync#capability_list resource_list_path GET /resourcelist(.:format) sufia/resource_sync#resource_list sufia_uploaded_file_path DELETE /uploads/:id(.:format) sufia/uploads#destroy uploads_path POST /uploads(.:format) sufia/uploads#create PATCH /uploads(.:format) sufia/uploads#create batch_edits_clear_path GET|POST /batch_edits/clear(.:format) batch_edits#clear user_notify_path GET /users/notifications_number(.:format) users#notifications_number batch_uploads_path POST /batch_uploads(.:format) sufia/batch_uploads#create new_batch_upload_path GET /batch_uploads/new(.:format) sufia/batch_uploads#new curation_concerns_file_set_audit_path POST /concern/file_sets/:file_set_id/audit(.:format) curation_concerns/audits#create stats_curation_concerns_file_set_path GET /concern/file_sets/:id/stats(.:format) curation_concerns/file_sets#stats citations_file_path GET /files/:id/citation(.:format) citations#file stats_file_path GET /files/:id/stats(.:format) stats#file work_transfers_path POST /works/:id/transfers(.:format) transfers#create new_work_transfer_path GET /works/:id/transfers/new(.:format) transfers#new featured_work_path POST /works/:id/featured_work(.:format) featured_works#create DELETE /works/:id/featured_work(.:format) featured_works#destroy citations_work_path GET /works/:id/citation(.:format) citations#work stats_work_path GET /works/:id/stats(.:format) stats#work trophy_work_path POST /works/:id/trophy(.:format) sufia/trophies#toggle_trophy user_depositors_path POST /users/:user_id/depositors(.:format) depositors#create user_depositor_path DELETE /users/:user_id/depositors/:id(.:format) depositors#destroy featured_work_lists_path POST /featured_works(.:format) featured_work_lists#create delete_all_notifications_path DELETE /notifications/delete_all(.:format) mailbox#delete_all notifications_path GET /notifications(.:format) mailbox#index notification_path DELETE /notifications/:id(.:format) mailbox#destroy profiles_path GET /users(.:format) users#index edit_profile_path GET /users/:id/edit(.:format) users#edit profile_path GET /users/:id(.:format) users#show PATCH /users/:id(.:format) users#update PUT /users/:id(.:format) users#update user_operations_path GET /users/:user_id/operations(.:format) sufia/operations#index user_operation_path GET /users/:user_id/operations/:id(.:format) sufia/operations#show dashboard_activity_dashboard_index_path GET /dashboard/activity(.:format) dashboard#activity accept_transfer_path PUT /dashboard/transfers/:id/accept(.:format) transfers#accept reject_transfer_path PUT /dashboard/transfers/:id/reject(.:format) transfers#reject transfers_path GET /dashboard/transfers(.:format) transfers#index transfer_path DELETE /dashboard/transfers/:id(.:format) transfers#destroy dashboard_index_path GET /dashboard(.:format) dashboard#index dashboard_works_path GET /dashboard/works(.:format) my/works#index GET /dashboard/works/page/:page(.:format) my/works#index dashboard_works_facet_path GET /dashboard/works/facet/:id(.:format) my/works#facet dashboard_collections_path GET /dashboard/collections(.:format) my/collections#index GET /dashboard/collections/page/:page(.:format) my/collections#index dashboard_collections_facet_path GET /dashboard/collections/facet/:id(.:format) my/collections#facet dashboard_highlights_path GET /dashboard/highlights(.:format) my/highlights#index GET /dashboard/highlights/page/:page(.:format) my/highlights#index dashboard_highlights_facet_path GET /dashboard/highlights/facet/:id(.:format) my/highlights#facet dashboard_shares_path GET /dashboard/shares(.:format) my/shares#index GET /dashboard/shares/page/:page(.:format) my/shares#index dashboard_shares_facet_path GET /dashboard/shares/facet/:id(.:format) my/shares#facet contact_form_index_path POST /contact(.:format) contact_form#create contact_path GET /contact(.:format) contact_form#new confirm_curation_concerns_permission_path GET /concern/permissions/:id/confirm(.:format) curation_concerns/permissions#confirm copy_curation_concerns_permission_path POST /concern/permissions/:id/copy(.:format) curation_concerns/permissions#copy confirm_access_curation_concerns_permission_path GET /concern/permissions/:id/confirm_access(.:format) curation_concerns/permissions#confirm_access copy_access_curation_concerns_permission_path POST /concern/permissions/:id/copy_access(.:format) curation_concerns/permissions#copy_access api_items_path POST /api/items(.:format) api/items#create {:format=>:json} api_item_path GET /api/items/:id(.:format) api/items#show {:format=>:json} PATCH /api/items/:id(.:format) api/items#update {:format=>:json} PUT /api/items/:id(.:format) api/items#update {:format=>:json} DELETE /api/items/:id(.:format) api/items#destroy {:format=>:json} api_zotero_initiate_path GET /api/zotero(.:format) api/zotero#initiate api_zotero_callback_path GET /api/zotero/callback(.:format) api/zotero#callback admin_sets_path GET /admin_sets(.:format) sufia/admin_sets#index POST /admin_sets(.:format) sufia/admin_sets#create new_admin_set_path GET /admin_sets/new(.:format) sufia/admin_sets#new edit_admin_set_path GET /admin_sets/:id/edit(.:format) sufia/admin_sets#edit admin_set_path GET /admin_sets/:id(.:format) sufia/admin_sets#show PATCH /admin_sets/:id(.:format) sufia/admin_sets#update PUT /admin_sets/:id(.:format) sufia/admin_sets#update DELETE /admin_sets/:id(.:format) sufia/admin_sets#destroy admin_path GET /admin(.:format) sufia/admin#show admin_admin_sets_path GET /admin/admin_sets(.:format) sufia/admin/admin_sets#index POST /admin/admin_sets(.:format) sufia/admin/admin_sets#create new_admin_admin_set_path GET /admin/admin_sets/new(.:format) sufia/admin/admin_sets#new edit_admin_admin_set_path GET /admin/admin_sets/:id/edit(.:format) sufia/admin/admin_sets#edit admin_admin_set_path GET /admin/admin_sets/:id(.:format) sufia/admin/admin_sets#show PATCH /admin/admin_sets/:id(.:format) sufia/admin/admin_sets#update PUT /admin/admin_sets/:id(.:format) sufia/admin/admin_sets#update DELETE /admin/admin_sets/:id(.:format) sufia/admin/admin_sets#destroy admin_stats_path GET /admin/stats(.:format) sufia/admin/stats#show admin_feature_strategy_path PATCH /admin/features/:feature_id/strategies/:id(.:format) sufia/admin/strategies#update PUT /admin/features/:feature_id/strategies/:id(.:format) sufia/admin/strategies#update DELETE /admin/features/:feature_id/strategies/:id(.:format) sufia/admin/strategies#destroy admin_features_path GET /admin/features(.:format) sufia/admin/features#index content_blocks_path POST /content_blocks(.:format) content_blocks#create content_block_path PATCH /content_blocks/:id(.:format) content_blocks#update PUT /content_blocks/:id(.:format) content_blocks#update featured_researchers_path GET /featured_researchers(.:format) content_blocks#index tinymce_assets_path POST /tinymce_assets(.:format) tinymce_assets#create about_path GET /about(.:format) pages#show {:id=>\"about_page\"} help_path GET /help(.:format) static#help terms_path GET /terms(.:format) static#terms zotero_path GET /zotero(.:format) static#zotero mendeley_path GET /mendeley(.:format) static#mendeley agreement_path GET /agreement(.:format) static#agreement versions_path GET /versions(.:format) static#versions Request Parameters: {\"id\"=>\"3tx31qg24n\"} Toggle session dump Toggle env dump Response Headers: None"
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib/rspec/support.rb:87:in `block in <module:Support>'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib/rspec/support.rb:96:in `notify_failure'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/fail_with.rb:27:in `fail_with'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:40:in `handle_failure'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:50:in `block in handle_matcher'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+          # ./spec/features/file_set/analytics_spec.rb:60:in `block (2 levels) in <top (required)>'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `instance_exec'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:254:in `block in run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-rails-3.5.2/lib/rspec/rails/adapters.rb:127:in `block (2 levels) in <module:MinitestLifecycleAdapter>'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+
+     2.2) Failure/Error: expect(FileDownloadStat).to receive(:ga_statistics).and_return(sample_download_statistics)
+          
+            (FileDownloadStat(id: integer, date: datetime, downloads: integer, file_id: string, created_at: datetime, updated_at: datetime, user_id: integer) (class)).ga_statistics(*(any args))
+                expected: 1 time with any arguments
+                received: 0 times with any arguments
+          # ./spec/features/file_set/analytics_spec.rb:49:in `block (2 levels) in <top (required)>'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/error_generator.rb:310:in `__raise'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/error_generator.rb:82:in `raise_expectation_error'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/message_expectation.rb:488:in `generate_error'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/message_expectation.rb:446:in `verify_messages_received'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/method_double.rb:113:in `block in verify'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/method_double.rb:113:in `each'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/method_double.rb:113:in `verify'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/proxy.rb:138:in `block in verify'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/proxy.rb:138:in `each_value'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/proxy.rb:138:in `verify'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/space.rb:74:in `block in verify_all'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/space.rb:74:in `each'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks/space.rb:74:in `verify_all'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-mocks-3.5.0/lib/rspec/mocks.rb:45:in `verify'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/mocking_adapters/rspec.rb:23:in `verify_mocks_for_rspec'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:510:in `verify_mocks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:504:in `run_after_example'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:269:in `block in run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `block in with_around_and_singleton_context_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `block in with_around_example_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `block in run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:604:in `block in run_around_example_hooks_for'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-rails-3.5.2/lib/rspec/rails/adapters.rb:127:in `block (2 levels) in <module:MinitestLifecycleAdapter>'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:443:in `instance_exec'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:375:in `execute_with'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:606:in `block (2 levels) in run_around_example_hooks_for'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:338:in `call'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:607:in `run_around_example_hooks_for'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/hooks.rb:464:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:453:in `with_around_example_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:496:in `with_around_and_singleton_context_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example.rb:251:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:627:in `block in run_examples'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `map'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:623:in `run_examples'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/example_group.rb:589:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `map'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/configuration.rb:1835:in `with_suite_hooks'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:112:in `block in run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/reporter.rb:77:in `report'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:111:in `run_specs'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:87:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:71:in `run'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib/rspec/core/runner.rb:45:in `invoke'
+          # ./vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/exe/rspec:4:in `<main>'
+
+Deprecation Warnings:
+
+Using `stub` from rspec-mocks' old `:should` syntax without explicitly enabling the syntax is deprecated. Use the new `:expect` syntax or explicitly enable `:should` instead. Called from /home/travis/build/psu-stewardship/scholarsphere/spec/factories/file_sets.rb:46:in `block (4 levels) in <top (required)>'.
+
+
+If you need more of the backtrace for any of these deprecations to
+identify where to make the necessary changes, you can configure
+`config.raise_errors_for_deprecations!`, and it will turn the
+deprecation warnings into errors, giving you the full backtrace.
+
+1 deprecation warning total
+
+Top 10 slowest examples (227.98 seconds, 48.6% of total time):
+  Site authentication When I am not signed in And I click Login from the home page I should be redirected to the appropriate central login page
+    103.5 seconds ./spec/features/authentication_spec.rb:7
+  Generic File uploading and deletion: when logged in as a PSU user cloud providers I can click on cloud providers
+    22.7 seconds ./spec/features/generic_work/upload_and_delete_spec.rb:107
+  Batch management of works when editing and viewing multiple works edits a field and displays the changes
+    18.87 seconds ./spec/features/batch_edit_spec.rb:20
+  Dashboard Works Many works (more than max_batch, which is currently set to 80) allows pagination and sorting to be toggeled
+    15.58 seconds ./spec/features/dashboard/dashboard_works_spec.rb:233
+  FileSet versioning: sets the file set title and label to new and reverted file versions
+    14.62 seconds ./spec/features/file_set/versioning_spec.rb:15
+  GenericWork when viewing a work with many files displays the work page with all the files
+    13.04 seconds ./spec/features/generic_work/work_with_many_files_spec.rb:44
+  Dashboard Works with more than 10 works: Facets: Displays the correct totals for facet
+    12.4 seconds ./spec/features/dashboard/dashboard_works_spec.rb:176
+  Generic File uploading and deletion: when logged in as a PSU user user does not need help with a single file uploading, deleting and notifications
+    12.19 seconds ./spec/features/generic_work/upload_and_delete_spec.rb:156
+  Dashboard Works with more than 10 works: Sorting: Items are sorted correctly
+    7.95 seconds ./spec/features/dashboard/dashboard_works_spec.rb:200
+  Editing permissions on a work when removing permissions from a work with files copies the permissions to the file set
+    7.12 seconds ./spec/features/generic_work/edit_permissions_spec.rb:22
+
+Top 10 slowest example groups:
+  Site authentication
+    35.15 seconds average (105.46 seconds / 3 examples) ./spec/features/authentication_spec.rb:4
+  FileSet versioning:
+    14.62 seconds average (14.62 seconds / 1 example) ./spec/features/file_set/versioning_spec.rb:4
+  GenericWork
+    13.04 seconds average (13.04 seconds / 1 example) ./spec/features/generic_work/work_with_many_files_spec.rb:4
+  Batch management of works
+    9.05 seconds average (27.14 seconds / 3 examples) ./spec/features/batch_edit_spec.rb:4
+  Generic File uploading and deletion:
+    8.6 seconds average (43.02 seconds / 5 examples) ./spec/features/generic_work/upload_and_delete_spec.rb:6
+  Dashboard Works
+    7.7 seconds average (61.62 seconds / 8 examples) ./spec/features/dashboard/dashboard_works_spec.rb:6
+  Editing permissions on a work
+    7.13 seconds average (7.13 seconds / 1 example) ./spec/features/generic_work/edit_permissions_spec.rb:4
+  FileSet Thumbnail Creation:
+    6.46 seconds average (6.46 seconds / 1 example) ./spec/features/file_set/analytics_spec.rb:6
+  Showing the Generic File
+    5 seconds average (5 seconds / 1 example) ./spec/features/generic_work/featured_work_spec.rb:4
+  Collection
+    4.92 seconds average (24.58 seconds / 5 examples) ./spec/features/collection/view_and_search_spec.rb:7
+
+Finished in 7 minutes 49 seconds (files took 8.09 seconds to load)
+95 examples, 0 failures, 2 pending
+
+[Thread-0] INFO org.simplericity.jettyconsole.DefaultJettyManager - Shutting down Fedora Repository Deployable Web Application 4.7.1..
+[Thread-0] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@2633d09c{HTTP/1.1}{0.0.0.0:8986}
+[Thread-0] INFO / - Closing Spring root WebApplicationContext
+[Thread-0] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.s.j.JettyConsoleWebappContext@6a5fc7f7{/,file:/tmp/fcrepo-webapp-4.7.1-jetty-console.jar_8986/webapp/,UNAVAILABLE}{/tmp/fcrepo-webapp-4.7.1-jetty-console/fcrepo-webapp-4.7.1-jetty-console.jar}
+[Thread-0] INFO org.simplericity.jettyconsole.DefaultJettyManager - Shutdown of Fedora Repository Deployable Web Application 4.7.1 complete.
+
+travis_time:end:3b335c68:start=1496676713012971537,finish=1496677243067163343,duration=530054191806
+The command "bundle exec rake scholarsphere:travis:$TEST_SUITE" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+The git source `git://github.com/projecthydra/sufia.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/projecthydra/curation_concerns.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/projecthydra/hydra-works.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+The git source `git://github.com/projecthydra/browse-everything.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+travis_time:start:0a681440
+travis_time:end:0a681440:start=1496677243734321897,finish=1496677243739277117,duration=4955220travis_time:start:23a6608a/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/gems/sparql-client-1.99.1/README: No such file or directory
+change detected (content changed, file is created, or file is deleted):
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/browse-everything-0e335958be2c/browse-everything.gemspec
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/browse-everything-0e335958be2c/.git/index
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/curation_concerns-b073550c40a1/curation_concerns.gemspec
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/curation_concerns-b073550c40a1/.git/index
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/flipflop-0eecddade989/flipflop.gemspec
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/flipflop-0eecddade989/.git/index
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems/hydra-works-f948eb0fa592/.git/index
+/home/travis/build/psu-stewardship/scholarsphere/vendor/bundle/ruby/2.3.0/bundler/gems
+
+...
+
+changes detected, packing new archive
+.
+.
+.
+.
+.
+uploading archive
+
+travis_time:end:23a6608a:start=1496677243745022948,finish=1496677289725604088,duration=45980581140travis_fold:end:cache.2
+Done. Your build exited with 0.

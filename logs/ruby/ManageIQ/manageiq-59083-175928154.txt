@@ -1,0 +1,832 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-061d18e-precise-production-2-worker-org-docker.travisci.net:9820bfbe-428d-4e39-b487-83cd95ef4cf1
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 6c36657:travis:ruby
+startup: 573.260948ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 240274753
+Job id: 240274755
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (32.3 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 41%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 77%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             62% [2 libssl1.0.0 57.7 kB/1,054 kB 5%]                                       100% [Working]              Fetched 2,634 kB in 0s (17.6 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:09a54656$ git clone --depth=50 https://github.com/ManageIQ/manageiq.git ManageIQ/manageiq
+Cloning into 'ManageIQ/manageiq'...
+remote: Counting objects: 100754, done.[K
+remote: Compressing objects:   0% (1/33843)   [Kremote: Compressing objects:   1% (339/33843)   [Kremote: Compressing objects:   2% (677/33843)   [Kremote: Compressing objects:   2% (972/33843)   [Kremote: Compressing objects:   3% (1016/33843)   [Kremote: Compressing objects:   4% (1354/33843)   [Kremote: Compressing objects:   4% (1692/33843)   [Kremote: Compressing objects:   5% (1693/33843)   [Kremote: Compressing objects:   6% (2031/33843)   [Kremote: Compressing objects:   7% (2370/33843)   [Kremote: Compressing objects:   8% (2708/33843)   [Kremote: Compressing objects:   9% (3046/33843)   [Kremote: Compressing objects:  10% (3385/33843)   [Kremote: Compressing objects:  11% (3723/33843)   [Kremote: Compressing objects:  12% (4062/33843)   [Kremote: Compressing objects:  13% (4400/33843)   [Kremote: Compressing objects:  14% (4739/33843)   [Kremote: Compressing objects:  15% (5077/33843)   [Kremote: Compressing objects:  16% (5415/33843)   [Kremote: Compressing objects:  17% (5754/33843)   [Kremote: Compressing objects:  18% (6092/33843)   [Kremote: Compressing objects:  19% (6431/33843)   [Kremote: Compressing objects:  20% (6769/33843)   [Kremote: Compressing objects:  21% (7108/33843)   [Kremote: Compressing objects:  22% (7446/33843)   [Kremote: Compressing objects:  23% (7784/33843)   [Kremote: Compressing objects:  24% (8123/33843)   [Kremote: Compressing objects:  24% (8148/33843)   [Kremote: Compressing objects:  25% (8461/33843)   [Kremote: Compressing objects:  26% (8800/33843)   [Kremote: Compressing objects:  27% (9138/33843)   [Kremote: Compressing objects:  28% (9477/33843)   [Kremote: Compressing objects:  29% (9815/33843)   [Kremote: Compressing objects:  30% (10153/33843)   [Kremote: Compressing objects:  31% (10492/33843)   [Kremote: Compressing objects:  32% (10830/33843)   [Kremote: Compressing objects:  33% (11169/33843)   [Kremote: Compressing objects:  34% (11507/33843)   [Kremote: Compressing objects:  35% (11846/33843)   [Kremote: Compressing objects:  36% (12184/33843)   [Kremote: Compressing objects:  37% (12522/33843)   [Kremote: Compressing objects:  38% (12861/33843)   [Kremote: Compressing objects:  39% (13199/33843)   [Kremote: Compressing objects:  40% (13538/33843)   [Kremote: Compressing objects:  41% (13876/33843)   [Kremote: Compressing objects:  42% (14215/33843)   [Kremote: Compressing objects:  43% (14553/33843)   [Kremote: Compressing objects:  44% (14891/33843)   [Kremote: Compressing objects:  45% (15230/33843)   [Kremote: Compressing objects:  46% (15568/33843)   [Kremote: Compressing objects:  47% (15907/33843)   [Kremote: Compressing objects:  48% (16245/33843)   [Kremote: Compressing objects:  49% (16584/33843)   [Kremote: Compressing objects:  50% (16922/33843)   [Kremote: Compressing objects:  51% (17260/33843)   [Kremote: Compressing objects:  52% (17599/33843)   [Kremote: Compressing objects:  53% (17937/33843)   [Kremote: Compressing objects:  54% (18276/33843)   [Kremote: Compressing objects:  55% (18614/33843)   [Kremote: Compressing objects:  56% (18953/33843)   [Kremote: Compressing objects:  57% (19291/33843)   [Kremote: Compressing objects:  58% (19629/33843)   [Kremote: Compressing objects:  59% (19968/33843)   [Kremote: Compressing objects:  60% (20306/33843)   [Kremote: Compressing objects:  61% (20645/33843)   [Kremote: Compressing objects:  62% (20983/33843)   [Kremote: Compressing objects:  62% (21187/33843)   [Kremote: Compressing objects:  63% (21322/33843)   [Kremote: Compressing objects:  64% (21660/33843)   [Kremote: Compressing objects:  65% (21998/33843)   [Kremote: Compressing objects:  66% (22337/33843)   [Kremote: Compressing objects:  67% (22675/33843)   [Kremote: Compressing objects:  68% (23014/33843)   [Kremote: Compressing objects:  69% (23352/33843)   [Kremote: Compressing objects:  70% (23691/33843)   [Kremote: Compressing objects:  71% (24029/33843)   [Kremote: Compressing objects:  72% (24367/33843)   [Kremote: Compressing objects:  73% (24706/33843)   [Kremote: Compressing objects:  74% (25044/33843)   [Kremote: Compressing objects:  75% (25383/33843)   [Kremote: Compressing objects:  76% (25721/33843)   [Kremote: Compressing objects:  77% (26060/33843)   [Kremote: Compressing objects:  78% (26398/33843)   [Kremote: Compressing objects:  79% (26736/33843)   [Kremote: Compressing objects:  80% (27075/33843)   [Kremote: Compressing objects:  81% (27413/33843)   [Kremote: Compressing objects:  82% (27752/33843)   [Kremote: Compressing objects:  83% (28090/33843)   [Kremote: Compressing objects:  84% (28429/33843)   [Kremote: Compressing objects:  85% (28767/33843)   [Kremote: Compressing objects:  86% (29105/33843)   [Kremote: Compressing objects:  87% (29444/33843)   [Kremote: Compressing objects:  88% (29782/33843)   [Kremote: Compressing objects:  89% (30121/33843)   [Kremote: Compressing objects:  90% (30459/33843)   [Kremote: Compressing objects:  91% (30798/33843)   [Kremote: Compressing objects:  92% (31136/33843)   [Kremote: Compressing objects:  93% (31474/33843)   [Kremote: Compressing objects:  94% (31813/33843)   [Kremote: Compressing objects:  95% (32151/33843)   [Kremote: Compressing objects:  96% (32490/33843)   [Kremote: Compressing objects:  97% (32828/33843)   [Kremote: Compressing objects:  98% (33167/33843)   [Kremote: Compressing objects:  99% (33505/33843)   [Kremote: Compressing objects: 100% (33843/33843)   [Kremote: Compressing objects: 100% (33843/33843), done.[K
+Receiving objects:   0% (1/100754)   Receiving objects:   1% (1008/100754)   Receiving objects:   2% (2016/100754)   Receiving objects:   3% (3023/100754)   Receiving objects:   4% (4031/100754)   Receiving objects:   5% (5038/100754)   Receiving objects:   6% (6046/100754)   Receiving objects:   7% (7053/100754)   Receiving objects:   8% (8061/100754)   Receiving objects:   9% (9068/100754)   Receiving objects:  10% (10076/100754)   Receiving objects:  11% (11083/100754)   Receiving objects:  12% (12091/100754)   Receiving objects:  13% (13099/100754)   Receiving objects:  14% (14106/100754)   Receiving objects:  15% (15114/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  16% (16121/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  17% (17129/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  18% (18136/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  19% (19144/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  20% (20151/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  21% (21159/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  22% (22166/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  23% (23174/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  24% (24181/100754), 5.90 MiB | 11.77 MiB/s   Receiving objects:  24% (25146/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  25% (25189/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  26% (26197/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  27% (27204/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  28% (28212/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  29% (29219/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  30% (30227/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  31% (31234/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  32% (32242/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  33% (33249/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  34% (34257/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  35% (35264/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  36% (36272/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  37% (37279/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  38% (38287/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  39% (39295/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  40% (40302/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  41% (41310/100754), 13.60 MiB | 13.57 MiB/s   Receiving objects:  42% (42317/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  43% (43325/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  44% (44332/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  45% (45340/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  46% (46347/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  47% (47355/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  48% (48362/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  49% (49370/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  50% (50377/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  51% (51385/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  52% (52393/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  53% (53400/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  54% (54408/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  55% (55415/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  56% (56423/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  56% (57223/100754), 21.42 MiB | 14.25 MiB/s   Receiving objects:  57% (57430/100754), 30.02 MiB | 14.98 MiB/s   Receiving objects:  57% (57795/100754), 46.79 MiB | 15.56 MiB/s   Receiving objects:  58% (58438/100754), 55.32 MiB | 15.77 MiB/s   Receiving objects:  58% (58743/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  59% (59445/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  60% (60453/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  61% (61460/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  62% (62468/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  63% (63476/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  64% (64483/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  65% (65491/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  66% (66498/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  67% (67506/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  68% (68513/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  69% (69521/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  70% (70528/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  71% (71536/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  72% (72543/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  73% (73551/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  74% (74558/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  75% (75566/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  76% (76574/100754), 64.12 MiB | 16.00 MiB/s   Receiving objects:  77% (77581/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  78% (78589/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  79% (79596/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  80% (80604/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  81% (81611/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  82% (82619/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  83% (83626/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  84% (84634/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  85% (85641/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  86% (86649/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  87% (87656/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  88% (88664/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  89% (89672/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  90% (90679/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  91% (91687/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  92% (92694/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  93% (93702/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  94% (94709/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  95% (95717/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  96% (96724/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  97% (97732/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  98% (98739/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects:  99% (99747/100754), 71.66 MiB | 15.89 MiB/s   remote: Total 100754 (delta 69234), reused 90046 (delta 62324), pack-reused 0[K
+Receiving objects: 100% (100754/100754), 71.66 MiB | 15.89 MiB/s   Receiving objects: 100% (100754/100754), 78.09 MiB | 16.41 MiB/s, done.
+Resolving deltas:   0% (0/69234)   Resolving deltas:   1% (708/69234)   Resolving deltas:   2% (1390/69234)   Resolving deltas:   3% (2083/69234)   Resolving deltas:   4% (2772/69234)   Resolving deltas:   5% (3464/69234)   Resolving deltas:   6% (4156/69234)   Resolving deltas:   7% (4860/69234)   Resolving deltas:   8% (5553/69234)   Resolving deltas:   9% (6232/69234)   Resolving deltas:  10% (6988/69234)   Resolving deltas:  11% (7628/69234)   Resolving deltas:  12% (8315/69234)   Resolving deltas:  13% (9008/69234)   Resolving deltas:  14% (9695/69234)   Resolving deltas:  15% (10402/69234)   Resolving deltas:  16% (11081/69234)   Resolving deltas:  17% (11773/69234)   Resolving deltas:  18% (12463/69234)   Resolving deltas:  19% (13166/69234)   Resolving deltas:  20% (13872/69234)   Resolving deltas:  21% (14571/69234)   Resolving deltas:  22% (15234/69234)   Resolving deltas:  24% (16822/69234)   Resolving deltas:  25% (17327/69234)   Resolving deltas:  26% (18002/69234)   Resolving deltas:  27% (18700/69234)   Resolving deltas:  28% (19400/69234)   Resolving deltas:  29% (20080/69234)   Resolving deltas:  30% (20836/69234)   Resolving deltas:  31% (21469/69234)   Resolving deltas:  32% (22714/69234)   Resolving deltas:  33% (22946/69234)   Resolving deltas:  34% (23608/69234)   Resolving deltas:  35% (24380/69234)   Resolving deltas:  36% (24933/69234)   Resolving deltas:  36% (25282/69234)   Resolving deltas:  37% (25718/69234)   Resolving deltas:  38% (26331/69234)   Resolving deltas:  39% (27017/69234)   Resolving deltas:  40% (27699/69234)   Resolving deltas:  41% (28386/69234)   Resolving deltas:  42% (29202/69234)   Resolving deltas:  43% (29788/69234)   Resolving deltas:  44% (30593/69234)   Resolving deltas:  45% (31337/69234)   Resolving deltas:  46% (31867/69234)   Resolving deltas:  47% (32642/69234)   Resolving deltas:  48% (33237/69234)   Resolving deltas:  49% (34256/69234)   Resolving deltas:  50% (34619/69234)   Resolving deltas:  51% (35319/69234)   Resolving deltas:  52% (36052/69234)   Resolving deltas:  53% (36701/69234)   Resolving deltas:  54% (37402/69234)   Resolving deltas:  55% (38085/69234)   Resolving deltas:  56% (38999/69234)   Resolving deltas:  57% (39676/69234)   Resolving deltas:  58% (40156/69234)   Resolving deltas:  58% (40409/69234)   Resolving deltas:  59% (40854/69234)   Resolving deltas:  60% (41543/69234)   Resolving deltas:  61% (42236/69234)   Resolving deltas:  62% (42931/69234)   Resolving deltas:  63% (43619/69234)   Resolving deltas:  64% (44311/69234)   Resolving deltas:  65% (45008/69234)   Resolving deltas:  66% (45698/69234)   Resolving deltas:  67% (46407/69234)   Resolving deltas:  68% (47245/69234)   Resolving deltas:  69% (47792/69234)   Resolving deltas:  70% (48488/69234)   Resolving deltas:  71% (49220/69234)   Resolving deltas:  72% (49850/69234)   Resolving deltas:  73% (50546/69234)   Resolving deltas:  74% (51234/69234)   Resolving deltas:  75% (51928/69234)   Resolving deltas:  76% (52629/69234)   Resolving deltas:  77% (53314/69234)   Resolving deltas:  78% (54076/69234)   Resolving deltas:  79% (54744/69234)   Resolving deltas:  80% (55485/69234)   Resolving deltas:  81% (56124/69234)   Resolving deltas:  82% (56775/69234)   Resolving deltas:  83% (57476/69234)   Resolving deltas:  84% (58164/69234)   Resolving deltas:  85% (58950/69234)   Resolving deltas:  86% (59552/69234)   Resolving deltas:  87% (60300/69234)   Resolving deltas:  88% (60927/69234)   Resolving deltas:  88% (61149/69234)   Resolving deltas:  89% (61620/69234)   Resolving deltas:  90% (62311/69234)   Resolving deltas:  91% (63004/69234)   Resolving deltas:  92% (63696/69234)   Resolving deltas:  93% (64389/69234)   Resolving deltas:  94% (65081/69234)   Resolving deltas:  95% (65779/69234)   Resolving deltas:  96% (66534/69234)   Resolving deltas:  97% (67161/69234)   Resolving deltas:  98% (67850/69234)   Resolving deltas:  99% (68542/69234)   Resolving deltas: 100% (69234/69234)   Resolving deltas: 100% (69234/69234), done.
+Checking connectivity... done.
+
+travis_time:end:09a54656:start=1496824517377567292,finish=1496824533504994558,duration=16127427266$ cd ManageIQ/manageiq
+travis_time:start:1cdd6bb0$ git fetch origin +refs/pull/15329/merge:
+remote: Counting objects: 6, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 6 (delta 4), reused 5 (delta 4), pack-reused 0[K
+Unpacking objects:  16% (1/6)   Unpacking objects:  33% (2/6)   Unpacking objects:  50% (3/6)   Unpacking objects:  66% (4/6)   Unpacking objects:  83% (5/6)   Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+From https://github.com/ManageIQ/manageiq
+ * branch            refs/pull/15329/merge -> FETCH_HEAD
+
+travis_time:end:1cdd6bb0:start=1496824533511572422,finish=1496824534118984433,duration=607412011$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:postgresqlStarting PostgreSQL v9.4
+travis_time:start:2530d79f$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.1 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:2530d79f:start=1496824534323995808,finish=1496824535713578185,duration=1389582377travis_time:start:0e4ee938$ sudo service postgresql start 9.4
+ * Starting PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:0e4ee938:start=1496824535718741355,finish=1496824538006491966,duration=2287750611travis_time:start:03fc533d$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:03fc533d:start=1496824538011955287,finish=1496824538084140829,duration=72185542travis_time:start:167d1cbe$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:167d1cbe:start=1496824538092588722,finish=1496824538373847219,duration=281258497travis_time:start:2fd4f30e$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:2fd4f30e:start=1496824538387357258,finish=1496824538438391905,duration=51034647travis_time:start:21bd55c2$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:21bd55c2:start=1496824538444550070,finish=1496824538493298915,duration=48748845travis_fold:end:postgresql
+Encrypted environment variables have been removed for security reasons.
+See https://docs.travis-ci.com/user/pull-requests/#Pull-Requests-and-Security-Restrictions
+
+Setting environment variables from .travis.yml
+$ export RUBY_GC_HEAP_GROWTH_MAX_SLOTS=300000
+$ export RUBY_GC_HEAP_INIT_SLOTS=600000
+$ export RUBY_GC_HEAP_GROWTH_FACTOR=1.25
+$ export PARALLEL_TEST_PROCESSORS=2
+$ export TEST_SUITE=migrations
+
+travis_fold:start:rvmtravis_time:start:033593b6$ rvm use 2.3.1 --install --binary --fuzzy
+ruby-2.3.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.1 - #configure
+ruby-2.3.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23.0M  100 23.0M    0     0  73.0M      0 --:--:-- --:--:-- --:--:-- 74.9M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.1 - #validate archive
+ruby-2.3.1 - #extract
+ruby-2.3.1 - #validate binary
+ruby-2.3.1 - #setup
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1@global
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.1
+
+travis_time:end:033593b6:start=1496824546584433267,finish=1496824570905148316,duration=24320715049travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:046f405c$ Installing caching utilities
+
+travis_time:end:046f405c:start=1496824571441492855,finish=1496824571473787956,duration=32295101travis_time:start:148e4040
+travis_time:end:148e4040:start=1496824571480616407,finish=1496824571486902969,duration=6286562travis_time:start:05cb18a0attempting to download cache archive
+fetching PR.15329/cache-linux-precise-d93f6b8e34123bcaad3399fa3a03f32b702d5cb640d24695462a48e3c2ac3b6b--rvm-2.3.1--gemfile-Gemfile.tgz
+fetching PR.15329/cache--rvm-2.3.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-precise-d93f6b8e34123bcaad3399fa3a03f32b702d5cb640d24695462a48e3c2ac3b6b--rvm-2.3.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:05cb18a0:start=1496824571493533867,finish=1496824578778937990,duration=7285404123travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:1610cba1
+travis_time:end:1610cba1:start=1496824578786177647,finish=1496824578791944110,duration=5766463travis_time:start:03b0cd00adding /home/travis/build/ManageIQ/manageiq/vendor/bundle to cache
+creating directory /home/travis/build/ManageIQ/manageiq/vendor/bundle
+
+travis_time:end:03b0cd00:start=1496824578797897324,finish=1496824590628561240,duration=11830663916travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.5.1
+travis_fold:start:before_installtravis_time:start:20610f2b$ source ${TRAVIS_BUILD_DIR}/tools/ci/before_install.sh
+
+source $TRAVIS_BUILD_DIR/tools/ci/setup_vmdb_configs.sh
+./tools/ci/setup_vmdb_configs.rb
+Copying /home/travis/build/ManageIQ/manageiq/certs/v2_key from template...
+Copying /home/travis/build/ManageIQ/manageiq/config/cable.yml from template...
+Copying /home/travis/build/ManageIQ/manageiq/config/database.yml from template...
+CREATE ROLE
+source $TRAVIS_BUILD_DIR/tools/ci/setup_ruby_env.sh
+./tools/ci/setup_ruby_environment.rb
+export BUNDLE_WITHOUT=development
+export BUNDLE_GEMFILE=${PWD}/Gemfile
+
+set +v
+
+travis_time:end:20610f2b:start=1496824591179858422,finish=1496824591634289305,duration=454430883travis_fold:end:before_installtravis_fold:start:install.bundlertravis_time:start:24d3ba3e$ bundle install --jobs=3 --retry=3 --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching https://github.com/ManageIQ/manageiq-gems-pending.git
+error: refs/heads/revert-100-armrest_version does not point to a valid object!
+error: refs/heads/revert-100-armrest_version does not point to a valid object!
+error: refs/heads/revert-100-armrest_version does not point to a valid object!
+Fetching https://github.com/ManageIQ/handsoap.git
+Fetching https://github.com/ManageIQ/manageiq-automation_engine
+Fetching https://github.com/ManageIQ/manageiq-content
+Fetching https://github.com/ManageIQ/manageiq-providers-amazon
+Fetching https://github.com/ManageIQ/manageiq-providers-ansible_tower
+Fetching https://github.com/ManageIQ/manageiq-providers-azure
+Fetching https://github.com/ManageIQ/manageiq-providers-foreman
+Fetching https://github.com/ManageIQ/manageiq-providers-hawkular
+Fetching https://github.com/ManageIQ/manageiq-providers-google
+Fetching https://github.com/ManageIQ/manageiq-providers-kubernetes
+Fetching https://github.com/ManageIQ/manageiq-providers-lenovo
+Fetching https://github.com/ManageIQ/manageiq-providers-scvmm
+Fetching https://github.com/ManageIQ/manageiq-providers-openshift
+Fetching https://github.com/ManageIQ/manageiq-providers-openstack
+Fetching https://github.com/ManageIQ/manageiq-providers-ovirt
+Fetching https://github.com/ManageIQ/manageiq-providers-vmware
+Fetching https://github.com/ManageIQ/manageiq-ui-classic
+Fetching https://github.com/ManageIQ/amazon_ssa_support.git
+Fetching https://github.com/ManageIQ/foreman_api_client.git
+Fetching https://github.com/ManageIQ/ruport.git
+Fetching https://github.com/ManageIQ/font-fabulous.git
+Fetching https://github.com/ManageIQ/jquery-rjs.git
+Checking out files:  16% (8/50)   Checking out files:  18% (9/50)   Checking out files:  20% (10/50)   Checking out files:  22% (11/50)   Checking out files:  24% (12/50)   Checking out files:  26% (13/50)   Checking out files:  28% (14/50)   Checking out files:  30% (15/50)   Checking out files:  32% (16/50)   Checking out files:  34% (17/50)   Checking out files:  36% (18/50)   Checking out files:  38% (19/50)   Checking out files:  40% (20/50)   Checking out files:  42% (21/50)   Checking out files:  44% (22/50)   Checking out files:  46% (23/50)   Checking out files:  48% (24/50)   Checking out files:  50% (25/50)   Checking out files:  52% (26/50)   Checking out files:  54% (27/50)   Checking out files:  56% (28/50)   Checking out files:  58% (29/50)   Checking out files:  60% (30/50)   Checking out files:  62% (31/50)   Checking out files:  64% (32/50)   Checking out files:  66% (33/50)   Checking out files:  68% (34/50)   Checking out files:  70% (35/50)   Checking out files:  72% (36/50)   Checking out files:  74% (37/50)   Checking out files:  76% (38/50)   Checking out files:  78% (39/50)   Checking out files:  80% (40/50)   Checking out files:  82% (41/50)   Checking out files:  84% (42/50)   Checking out files:  86% (43/50)   Checking out files:  88% (44/50)   Checking out files:  90% (45/50)   Checking out files:  92% (46/50)   Checking out files:  94% (47/50)   Checking out files:  96% (48/50)   Checking out files:  98% (49/50)   Checking out files: 100% (50/50)   Checking out files: 100% (50/50), done.
+Fetching gem metadata from https://rubygems.org/........
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies..........
+Using rake 11.3.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.4
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 2.0.3
+Using arel 7.1.4
+Using addressable 2.4.0
+Using awesome_spawn 1.4.1
+Using binary_struct 2.1.0
+Using bundler 1.15.1
+Using highline 1.6.21
+Using inifile 3.0.0
+Using net-ssh 3.2.0
+Using ffi 1.9.18
+Using log4r 1.1.8
+Using memoist 0.15.0
+Using pg 0.18.4
+Using pg-dsn_parser 0.1.0
+Using psych 2.0.17
+Using rubyzip 1.2.1
+Using sys-proctable 1.1.4 (universal-linux)
+Using trollop 2.1.2
+Using uuidtools 2.1.5
+Using httpclient 2.7.2
+Using little-plugger 1.1.4
+Using multi_json 1.12.1
+Using nori 2.6.0
+Using rubyntlm 0.6.2
+Using socksify 1.7.1
+Using aws-sigv4 1.0.0
+Using bcrypt 3.1.11
+Using jmespath 1.3.1
+Using json 2.0.4
+Using manageiq-providers-ansible_tower 0.1.0 from https://github.com/ManageIQ/manageiq-providers-ansible_tower (at master@d832980)
+Using parallel 1.9.0
+Using unf_ext 0.0.7.4
+Using mime-types 2.6.2
+Using netrc 0.11.0
+Using manageiq-providers-foreman 0.1.0 from https://github.com/ManageIQ/manageiq-providers-foreman (at master@1a92575)
+Using event_emitter 0.2.5
+Using websocket 1.2.4
+Using excon 0.56.0
+Using formatador 0.2.5
+Using extlib 0.9.16
+Using multipart-post 2.0.0
+Using jwt 1.5.6
+Using os 0.9.6
+Using retriable 1.4.1
+Using recursive-open-struct 1.0.0
+Using http-form_data 1.0.3
+Using http_parser.rb 0.6.0
+Using systemu 2.6.5
+Using manageiq-providers-scvmm 0.1.0 from https://github.com/ManageIQ/manageiq-providers-scvmm (at master@7acce03)
+Using amq-protocol 2.2.0
+Using ipaddress 0.8.3
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using high_voltage 3.0.0
+Using sass 3.4.24
+Using nio4r 2.1.0
+Using websocket-extensions 0.1.2
+Using tilt 2.0.7
+Using color 1.8
+Using deep_merge 1.1.1
+Using dalli 2.7.6
+Using elif 0.1.0
+Using fast_gettext 1.2.0
+Using locale 2.1.2
+Using text 1.3.1
+Using temple 0.7.7
+Using hashie 3.4.6
+Using net-ping 1.7.8
+Using iniparse 1.4.3
+Using linux_block_device 0.2.1
+Using memory_buffer 0.1.0
+Using rufus-lru 1.0.7
+Using nakayoshi_fork 0.0.3
+Using net-ldap 0.14.0
+Using multi_xml 0.6.0
+Using open4 1.3.4
+Using puma 3.3.0
+Using htauth 2.0.0
+Using sexp_processor 4.4.5
+Using ruby-dbus 0.13.0
+Using ruby-progressbar 1.7.5
+Using rufus-scheduler 3.1.10
+Using rugged 0.25.0b10
+Using useragent 0.16.8
+Using simple-rss 1.3.1
+Using snmp 1.2.0
+Using sshkey 1.8.0
+Using daemons 1.2.4
+Using eventmachine 1.2.3
+Using oauth 0.5.3
+Using transaction-simple 1.4.0.2
+Using american_date 1.1.1
+Using font-fabulous 0.0.1 from https://github.com/ManageIQ/font-fabulous.git (at master@01b2704)
+Using brakeman 3.6.2
+Using docile 1.1.5
+Using simplecov-html 0.10.1
+Using tins 1.14.0
+Using sqlite3 1.3.13
+Using timecop 0.7.4
+Using vcr 3.0.3
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.4
+Using rspec-support 3.6.0
+Using diff-lcs 1.3
+Using tzinfo 1.2.3
+Using gyoku 1.3.1
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using azure-signature 0.2.3
+Using launchy 2.4.3
+Using net-scp 1.2.1
+Using net-sftp 2.1.2
+Using openscap 0.4.7
+Using sys-uname 1.0.3
+Using gssapi 1.2.0
+Using ffi-vix_disk_lib 1.0.3
+Using logging 2.2.2
+Using manageiq-automation_engine 0.1.0 from https://github.com/ManageIQ/manageiq-automation_engine (at master@0f8c8a4)
+Using httpi 2.4.2
+Fetching aws-sdk-core 2.9.32
+Using po_to_json 1.0.1
+Using ovirt-engine-sdk 4.1.7
+Using parallel_tests 2.14.1
+Using unf 0.1.4
+Using mail 2.6.5
+Using websocket-client-simple 0.3.0
+Using fog-core 1.44.3
+Using autoparse 0.3.3
+Using faraday 0.9.2
+Using macaddr 1.7.1
+Using bunny 2.1.0
+Using coffee-script 2.4.1
+Using autoprefixer-rails 7.1.1
+Using uglifier 3.0.4
+Using font-awesome-sass 4.6.2
+Using websocket-driver 0.6.5
+Using gettext_i18n_rails 1.7.2
+Using gettext 3.2.2
+Using hamlit 2.7.5
+Using omniauth 1.3.2
+Using ripper_ruby_parser 1.0.0
+Using secure_headers 3.0.3
+Using thin 1.7.0
+Using pdf-writer 1.1.8
+Using simplecov 0.14.1
+Using term-ansicolor 1.6.0
+Using crack 0.4.3
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using activesupport 5.0.3
+Using loofah 2.0.3
+Using handsoap 0.2.5 from https://github.com/ManageIQ/handsoap.git (at v0.2.5-5@b1247a7)
+Using akami 1.3.1
+Using rbvmomi 1.9.5
+Using xpath 2.1.0
+Using winrm 2.2.3
+Using wasabi 3.5.0
+Using domain_name 0.5.20170404
+Using fog-json 1.0.2
+Using fog-xml 0.1.3
+Using signet 0.7.3
+Using faraday_middleware 0.10.1
+Using oauth2 1.3.1
+Using uuid 2.3.8
+Using bootstrap-sass 3.3.7
+Using ruport 1.7.0 from https://github.com/ManageIQ/ruport.git (at v1.7.0-3@3727775)
+Using coveralls 0.8.21
+Using webmock 2.3.2
+Using rails-dom-testing 2.0.3
+Using activemodel 5.0.3
+Using more_core_extensions 3.2.0
+Using globalid 0.4.0
+Using config 1.3.0
+Using jbuilder 2.5.0
+Using factory_girl 4.5.0
+Using rails-html-sanitizer 1.0.3
+Using vmware_web_service 0.1.1
+Using capybara 2.5.0
+Using winrm-fs 1.0.1
+Using savon 2.11.1
+Using http-cookie 1.0.3
+Using fog-openstack 0.1.20
+Using fog-google 0.5.3
+Using fog-vcloud-director 0.1.8
+Using googleauth 0.5.1
+Using omniauth-oauth2 1.3.1
+Using xclarity_client 0.4.1
+Using patternfly-sass 3.23.2
+Using activerecord 5.0.3
+Using linux_admin 0.20.1
+Using ansible_tower_client 0.12.2
+Using query_relation 0.1.1
+Using activejob 5.0.3
+Using actionview 5.0.3
+Using manageiq-smartstate 0.1.2
+Using winrm-elevated 1.0.1
+Using manageiq-content 0.1.0 from https://github.com/ManageIQ/manageiq-content (at master@706f32c)
+Using rest-client 2.0.2
+Using http 0.9.8
+Using manageiq-providers-openstack 0.1.0 from https://github.com/ManageIQ/manageiq-providers-openstack (at master@69fed34)
+Using manageiq-providers-vmware 0.1.0 from https://github.com/ManageIQ/manageiq-providers-vmware (at master@1af8348)
+Using google-api-client 0.8.6
+Using omniauth-google-oauth2 0.2.10
+Using manageiq-providers-lenovo 0.2.0 from https://github.com/ManageIQ/manageiq-providers-lenovo (at master@95540b5)
+Using activerecord-id_regions 0.1.0
+Using acts_as_tree 2.1.0
+Using ancestry 2.2.2
+Using default_value_for 3.0.2
+Using ovirt_metrics 1.4.1
+Using pg-pglogical 1.1.0
+Using manageiq-api-client 0.1.1
+Using actionpack 5.0.3
+Using azure-armrest 0.7.3
+Using hawkular-client 3.0.2
+Using image-inspector-client 1.0.3
+Using ovirt 0.17.0
+Using apipie-bindings 0.0.15
+Using kubeclient 2.4.0
+Using manageiq-providers-google 0.1.0 from https://github.com/ManageIQ/manageiq-providers-google (at master@78f85fc)
+Using manageiq-gems-pending 0.1.0 from https://github.com/ManageIQ/manageiq-gems-pending.git (at master@4a639b9)
+Using railties 5.0.3
+Using actioncable 5.0.3
+Using actionmailer 5.0.3
+Using sprockets-rails 3.2.0
+Using rails-controller-testing 1.0.2
+Using manageiq-providers-azure 0.1.0 from https://github.com/ManageIQ/manageiq-providers-azure (at master@7bfc70f)
+Using manageiq-providers-hawkular 0.1.0 from https://github.com/ManageIQ/manageiq-providers-hawkular (at master@a8e7814)
+Using manageiq-providers-ovirt 0.1.0 from https://github.com/ManageIQ/manageiq-providers-ovirt (at master@7ca4aed)
+Using manageiq-network_discovery 0.1.1
+Using foreman_api_client 0.1.0 from https://github.com/ManageIQ/foreman_api_client.git (at master@1cdf102)
+Using manageiq-providers-kubernetes 0.1.0 from https://github.com/ManageIQ/manageiq-providers-kubernetes (at master@923986d)
+Using coffee-rails 4.2.2
+Using jquery-hotkeys-rails 0.7.9.1
+Using lodash-rails 3.10.1
+Using novnc-rails 0.2
+Using activerecord-session_store 1.0.0
+Using rails-i18n 5.0.4
+Using responders 2.4.0
+Using jquery-rails 4.3.1
+Using good_migrations 0.0.2
+Using rspec-rails 3.6.0
+Using rails 5.0.3
+Using sass-rails 5.0.6
+Using manageiq-providers-openshift 0.1.0 from https://github.com/ManageIQ/manageiq-providers-openshift (at master@fbbc9ec)
+Using gettext_i18n_rails_js 1.1.0
+Using jquery-rjs 0.1.1 from https://github.com/ManageIQ/jquery-rjs.git (at v0.1.1-1@ded3d28)
+Using manageiq-ui-classic 0.1.0 from https://github.com/ManageIQ/manageiq-ui-classic (at master@c81ed09)
+Installing aws-sdk-core 2.9.32
+Fetching aws-sdk-resources 2.9.32
+Installing aws-sdk-resources 2.9.32
+Fetching aws-sdk 2.9.32
+Installing aws-sdk 2.9.32
+Using manageiq-providers-amazon 0.1.0 from https://github.com/ManageIQ/manageiq-providers-amazon (at master@087f2bb)
+Using amazon_ssa_support 0.1.0 from https://github.com/ManageIQ/amazon_ssa_support.git (at master@b7cf88e)
+Bundle complete! 93 Gemfile dependencies, 263 gems now installed.
+Gems in the group development were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:24d3ba3e:start=1496824591639747184,finish=1496824607760184904,duration=16120437720travis_fold:end:install.bundlertravis_fold:start:before_scripttravis_time:start:16bdb4e9$ bundle exec rake test:$TEST_SUITE:setup
+** Preparing database
+Dropped database 'vmdb_test'
+Created database 'vmdb_test'
+.
+travis_time:end:16bdb4e9:start=1496824607768702831,finish=1496824630842889694,duration=23074186863travis_fold:end:before_scripttravis_time:start:06b4acb6$ bundle exec rake test:$TEST_SUITE
+[Coveralls] Set up the SimpleCov formatter.
+[Coveralls] Using SimpleCov's 'rails' settings.
+Run options: include {:migrations=>"down"}
+
+Randomized with seed 54938
+..............................................................................................................................................................................................................................................
+
+Top 25 slowest examples (5.94 seconds, 3.3% of total time):
+  AddCreatedOnForContainerEntities#down renames ems_created_on back to creation_timestamp and it has same value as ems_created_on
+    0.46881 seconds ./spec/migrations/20160119125950_add_created_on_for_container_entities_spec.rb:29
+  ConfirmAllClassRenames#down migrates column type of ExtManagementSystem
+    0.3736 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  ConfirmAllClassRenames#down with empty tables
+    0.3554 seconds ./spec/support/migration_helper.rb:16
+  SeparateGoogleNetworkManagerFromGoogleCloudManager#down migrates a series of representative row
+    0.34578 seconds ./spec/migrations/20160627074242_separate_google_network_manager_from_google_cloud_manager_spec.rb:145
+  SeparateAzureNetworkManagerFromAzureCloudManager#down migrates a series of representative row
+    0.3371 seconds ./spec/migrations/20160406072945_separate_azure_network_manager_from_azure_cloud_manager_spec.rb:145
+  SeparateOpenstackNetworkManagerFromOpenstackCloudManager#down migrates a series of representative row
+    0.32867 seconds ./spec/migrations/20160226092911_separate_openstack_network_manager_from_openstack_cloud_manager_spec.rb:148
+  SeparateAmazonNetworkManagerFromAmazonCloudManager#down migrates a series of representative row
+    0.30109 seconds ./spec/migrations/20160324085532_separate_amazon_network_manager_from_amazon_cloud_manager_spec.rb:145
+  MigrateAnsibleTowerConfigurationManagerStiTypeToAutomationManager#down migrates Ansible Tower AutomationManager to ConfigurationManager type
+    0.23203 seconds ./spec/migrations/20170131160216_migrate_ansible_tower_configuration_manager_sti_type_to_automation_manager_spec.rb:53
+  ChangeCapacityToHashFromPersistentVolume#down changes capacity to string from empty hash
+    0.22453 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:51
+  NamespaceEmsOpenstack#down migrates column type of ExtManagementSystem
+    0.21828 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  ChangeCapacityToHashFromPersistentVolume#down changes capacity to string
+    0.20847 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:33
+  ChangeCapacityToHashFromPersistentVolume#down changes capacity to string from multi value hash
+    0.20486 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:39
+  ChangeCapacityToHashFromPersistentVolume#down changes capacity to string from nil value
+    0.20399 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:45
+  FixEventClassForEvmAlertEvent#down converts VmOrTemplate alert events from MiqEvent to EmsEvent
+    0.19515 seconds ./spec/migrations/20160307205816_fix_event_class_for_evm_alert_event_spec.rb:128
+  CreateTaskForEachJobAndTransferAttributes#down delete all tasks associated with jobs
+    0.19306 seconds ./spec/migrations/20170120164058_create_task_for_each_job_and_transfer_attributes_spec.rb:21
+  ChangeDialogFieldDynamicListsToDialogFieldDropDownListWithDynamicFlag#down migrates existing drop down lists with dynamic flag to dynamic lists
+    0.19132 seconds ./spec/migrations/20150331104323_change_dialog_field_dynamic_lists_to_dialog_field_drop_down_list_with_dynamic_flag_spec.rb:19
+  SetReportTypeFromChargebackToChargebackVmOnMiqReports#down sets with db = ChargeBackVm to Chargeback for column db and db_option[:rpt_type]
+    0.19039 seconds ./spec/migrations/20160425151234_set_report_type_from_chargeback_to_chargeback_vm_on_miq_reports_spec.rb:26
+  SetCorrectStiTypeOnOpenstackInfraMiqTemplate#down migrates a series of representative row
+    0.18593 seconds ./spec/migrations/20151125081618_set_correct_sti_type_on_openstack_infra_miq_template_spec.rb:67
+  SetCorrectStiTypeAndEmsIdOnAzureCloudSubnet#down migrates a series of representative row
+    0.18392 seconds ./spec/migrations/20160406073037_set_correct_sti_type_and_ems_id_on_azure_cloud_subnet_spec.rb:144
+  MigrateUrlFromProviderToEndpoints#down migrates Endpoint URL to Provider attributes
+    0.17758 seconds ./spec/migrations/20160120151642_migrate_url_from_provider_to_endpoints_spec.rb:42
+  NamespaceEmsAzure#down migrates column type of ExtManagementSystem
+    0.17007 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  NamespaceEmsForeman#down migrates column type of ExtManagementSystem
+    0.16366 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  NamespaceEmsMicrosoft#down migrates column type of ExtManagementSystem
+    0.16346 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  RemoveHostIdFromSwitch#down Move host-to-switch relationship back to switches.host_id
+    0.16153 seconds ./spec/migrations/20160322205357_remove_host_id_from_switch_spec.rb:14
+  MoveNetworkPortCloudSubnetIdToNetworkPortsCloudSubnets#down migrates a series of representative row
+    0.15964 seconds ./spec/migrations/20160308165211_move_network_port_cloud_subnet_id_to_network_ports_cloud_subnets_spec.rb:139
+
+Top 25 slowest example groups:
+  MigrateTowerJobStiTypeToAutomationManager
+    2.56 seconds average (5.11 seconds / 2 examples) ./spec/migrations/20170217163547_migrate_tower_job_sti_type_to_automation_manager_spec.rb:3
+  CopyServerIdFromJobsToMiqTasks
+    2.44 seconds average (4.88 seconds / 2 examples) ./spec/migrations/20170410130134_copy_server_id_from_jobs_to_miq_tasks_spec.rb:3
+  MoveRepoDataFromDatabaseToSettings
+    2.36 seconds average (4.72 seconds / 2 examples) ./spec/migrations/20160913195129_move_repo_data_from_database_to_settings_spec.rb:3
+  AddUpdateRepoNameToMiqDatabase
+    2.12 seconds average (4.25 seconds / 2 examples) ./spec/migrations/20140201040548_add_update_repo_name_to_miq_database_spec.rb:3
+  UpgradeHostStorageFromReserved
+    1.74 seconds average (3.48 seconds / 2 examples) ./spec/migrations/20160713141244_upgrade_host_storage_from_reserved_spec.rb:3
+  AddServiceAncestry
+    1.72 seconds average (3.45 seconds / 2 examples) ./spec/migrations/20160310170333_add_service_ancestry_spec.rb:3
+  MigrateConfigurationScriptToBase
+    1.7 seconds average (3.4 seconds / 2 examples) ./spec/migrations/20170307203433_migrate_configuration_script_to_base_spec.rb:3
+  SeparateOpenstackNetworkManagerFromOpenstackCloudManager
+    1.69 seconds average (3.38 seconds / 2 examples) ./spec/migrations/20160226092911_separate_openstack_network_manager_from_openstack_cloud_manager_spec.rb:3
+  AddGroupAndUserColumnsToMiqWidgetContents
+    1.66 seconds average (3.33 seconds / 2 examples) ./spec/migrations/20140218232357_add_group_and_user_columns_to_miq_widget_contents_spec.rb:3
+  AddCreatedOnForContainerEntities
+    1.62 seconds average (3.25 seconds / 2 examples) ./spec/migrations/20160119125950_add_created_on_for_container_entities_spec.rb:3
+  SetGenericSubtypeOnServiceTemplate
+    1.56 seconds average (4.69 seconds / 3 examples) ./spec/migrations/20160802145938_set_generic_subtype_on_service_template_spec.rb:3
+  MigrateProvisioningManagerToEms
+    1.56 seconds average (3.12 seconds / 2 examples) ./spec/migrations/20150224192816_migrate_provisioning_manager_to_ems_spec.rb:3
+  SetServiceDisplayAndRetiredToFalse
+    1.53 seconds average (4.6 seconds / 3 examples) ./spec/migrations/20170207173837_set_service_display_and_retired_to_false_spec.rb:3
+  RemoveSystemAddSourceToMiqAeNamespace
+    1.52 seconds average (3.03 seconds / 2 examples) ./spec/migrations/20160729182517_remove_system_add_source_to_miq_ae_namespace_spec.rb:3
+  AddKerberosToExtManagementSystem
+    1.51 seconds average (3.01 seconds / 2 examples) ./spec/migrations/20150407144345_add_kerberos_to_ext_management_system_spec.rb:3
+  NamespaceEmsAzure
+    1.48 seconds average (2.96 seconds / 2 examples) ./spec/migrations/20150909023532_namespace_ems_azure_spec.rb:3
+  AddContainerEntitiesType
+    1.42 seconds average (2.84 seconds / 2 examples) ./spec/migrations/20150522161336_add_container_entities_type_spec.rb:3
+  UpdateLogCollectionPathInConfigurationsSettings
+    1.39 seconds average (4.16 seconds / 3 examples) ./spec/migrations/20131210202928_update_log_collection_path_in_configurations_settings_spec.rb:3
+  MigrateAnsibleTowerConfigurationManagerSettingsToAutomationManager
+    1.38 seconds average (4.14 seconds / 3 examples) ./spec/migrations/20170202195228_migrate_ansible_tower_configuration_manager_settings_to_automation_manager_spec.rb:3
+  FixRedhatNamespace
+    1.38 seconds average (2.75 seconds / 2 examples) ./spec/migrations/20150716021334_fix_redhat_namespace_spec.rb:3
+  NamespaceEmsRedhat
+    1.35 seconds average (2.7 seconds / 2 examples) ./spec/migrations/20150714053019_namespace_ems_redhat_spec.rb:3
+  LeverageAuthenticationsForRegistrationHttpProxyCredentials
+    1.34 seconds average (2.69 seconds / 2 examples) ./spec/migrations/20140301034340_leverage_authentications_for_registration_http_proxy_credentials_spec.rb:3
+  MigrateConfigurationManagerToEms
+    1.32 seconds average (2.64 seconds / 2 examples) ./spec/migrations/20150224192716_migrate_configuration_manager_to_ems_spec.rb:3
+  FixForemanProviderType
+    1.29 seconds average (2.59 seconds / 2 examples) ./spec/migrations/20150815052719_fix_foreman_provider_type_spec.rb:3
+  AddFileDepotIdToMiqSchedule
+    1.27 seconds average (2.55 seconds / 2 examples) ./spec/migrations/20150330214408_add_file_depot_id_to_miq_schedule_spec.rb:3
+
+Finished in 3 minutes 0 seconds (files took 11.11 seconds to load)
+219 examples, 0 failures
+
+Randomized with seed 54938
+
+[Coveralls] Submitting to https://coveralls.io/api/v1
+[Coveralls] Job #59083.2
+[Coveralls] https://coveralls.io/jobs/26510381
+Coverage is at 4.87%.
+Coverage report sent to Coveralls.
+** Migrating all the way down
+[Coveralls] Set up the SimpleCov formatter.
+[Coveralls] Using SimpleCov's 'rails' settings.
+Run options: include {:migrations=>"up"}
+
+Randomized with seed 11680
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Top 25 slowest examples (7.72 seconds, 1.7% of total time):
+  RemoveOpenshiftEnterpriseProvider#up Updates Atomic Provider to Openshift and Atomic Enterprise to Openshift Enterprise
+    0.57769 seconds ./spec/migrations/20170222105117_remove_openshift_enterprise_provider_spec.rb:10
+  AssignTenantToMiqRequest#up updates existing records
+    0.51149 seconds ./spec/migrations/20150915001329_assign_tenant_to_miq_request_spec.rb:53
+  RemoveAtomicContainerProviders#up Updates Atomic Provider to Openshift and Atomic Enterprise to Openshift Enterprise
+    0.42332 seconds ./spec/migrations/20160829134746_remove_atomic_container_providers_spec.rb:10
+  AddCreatedOnForContainerEntities#up populates new column created_on and ems_created_on with value from creation_timestamp
+    0.41291 seconds ./spec/migrations/20160119125950_add_created_on_for_container_entities_spec.rb:12
+  SeparateOpenstackNetworkManagerFromOpenstackCloudManager#up migrates a series of representative row
+    0.37672 seconds ./spec/migrations/20160226092911_separate_openstack_network_manager_from_openstack_cloud_manager_spec.rb:126
+  ConfirmAllClassRenames#up with empty tables
+    0.35741 seconds ./spec/support/migration_helper.rb:16
+  ConfirmAllClassRenames#up migrates column type of ExtManagementSystem
+    0.35733 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  InlineEmsId#up it sets the value of container.ems_id to the value of container.container_group.ems_id
+    0.35145 seconds ./spec/migrations/20160214115800_inline_ems_id_spec.rb:10
+  SeparateAzureNetworkManagerFromAzureCloudManager#up migrates a series of representative row
+    0.34798 seconds ./spec/migrations/20160406072945_separate_azure_network_manager_from_azure_cloud_manager_spec.rb:123
+  SeparateGoogleNetworkManagerFromGoogleCloudManager#up migrates a series of representative row
+    0.34083 seconds ./spec/migrations/20160627074242_separate_google_network_manager_from_google_cloud_manager_spec.rb:123
+  MigrateAnsibleTowerConfigurationManagerStiTypeToAutomationManager#up migrate_configuration_managers migrates Ansible Tower ConfigurationManager and others to be of AutomationManager type
+    0.29555 seconds ./spec/migrations/20170131160216_migrate_ansible_tower_configuration_manager_sti_type_to_automation_manager_spec.rb:12
+  SeparateAmazonNetworkManagerFromAmazonCloudManager#up migrates a series of representative row
+    0.29435 seconds ./spec/migrations/20160324085532_separate_amazon_network_manager_from_amazon_cloud_manager_spec.rb:123
+  AssignTenant#up updates existing records
+    0.28985 seconds ./spec/migrations/20150903162623_assign_tenant_spec.rb:44
+  NamespaceEmsOpenstack#up migrates column type of ExtManagementSystem
+    0.26348 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  NamespaceEmsAmazon#up migrates column type of ExtManagementSystem
+    0.25696 seconds ./spec/support/examples_group/shared_examples_for_column_migration.rb:9
+  ChangeCapacityToHashFromPersistentVolume#up changes capacity to hash with multiple values
+    0.24647 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:13
+  ChangeCapacityToHashFromPersistentVolume#up changes capacity to hash with nil value
+    0.23673 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:19
+  AddIdPrimaryKeyToJoinTables#up on a replication target removes rows from remote regions
+    0.23485 seconds ./spec/migrations/20160406195810_add_id_primary_key_to_join_tables_spec.rb:19
+  ExtractFieldDataFromRateDetail#up creates one field for each detail in default rate
+    0.23301 seconds ./spec/migrations/20170109142011_extract_field_data_from_rate_detail_spec.rb:28
+  ChangeCapacityToHashFromPersistentVolume#up changes capacity to hash
+    0.22445 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:7
+  SetCorrectStiTypeOnOpenstackInfraMiqTemplate#up migrates a series of representative row
+    0.22232 seconds ./spec/migrations/20151125081618_set_correct_sti_type_on_openstack_infra_miq_template_spec.rb:45
+  SetCorrectStiTypeAndEmsIdOnOpenstackCloudSubnet#up migrates a series of representative row
+    0.22205 seconds ./spec/migrations/20160323072209_set_correct_sti_type_and_ems_id_on_openstack_cloud_subnet_spec.rb:109
+  RemoveAtomicContainerProviders#up with empty tables
+    0.21745 seconds ./spec/support/migration_helper.rb:16
+  ChangeCapacityToHashFromPersistentVolume#up changes capacity to hash with bad value
+    0.21388 seconds ./spec/migrations/20160414094300_change_capacity_to_hash_from_persistent_volume_spec.rb:25
+  NamespaceEmsOpenstack#up with empty tables
+    0.21105 seconds ./spec/support/migration_helper.rb:16
+
+Top 25 slowest example groups:
+  SeparateGoogleNetworkManagerFromGoogleCloudManager
+    5.76 seconds average (11.52 seconds / 2 examples) ./spec/migrations/20160627074242_separate_google_network_manager_from_google_cloud_manager_spec.rb:3
+  MoveRepoDataFromDatabaseToSettings
+    5.75 seconds average (11.49 seconds / 2 examples) ./spec/migrations/20160913195129_move_repo_data_from_database_to_settings_spec.rb:3
+  RemoveSystemAddSourceToMiqAeNamespace
+    5.31 seconds average (10.62 seconds / 2 examples) ./spec/migrations/20160729182517_remove_system_add_source_to_miq_ae_namespace_spec.rb:3
+  CopyAgentIdToMiqServerIdInJobsTable
+    5.24 seconds average (10.47 seconds / 2 examples) ./spec/migrations/20170317153953_copy_agent_id_to_miq_server_id_in_jobs_table_spec.rb:3
+  UpdatePolicySeed
+    5.12 seconds average (10.25 seconds / 2 examples) ./spec/migrations/20170420124055_update_policy_seed_spec.rb:3
+  RemoveRemoteApiSettings
+    5.07 seconds average (10.14 seconds / 2 examples) ./spec/migrations/20161213140739_remove_remote_api_settings_spec.rb:3
+  ExtractFieldDataFromRateDetail
+    4.87 seconds average (9.74 seconds / 2 examples) ./spec/migrations/20170109142011_extract_field_data_from_rate_detail_spec.rb:3
+  AddEmbeddedMethodsToMiqAeMethod
+    4.86 seconds average (9.72 seconds / 2 examples) ./spec/migrations/20170421193150_add_embedded_methods_to_miq_ae_method_spec.rb:3
+  AddValueSerializedToCustomAttribute
+    4.85 seconds average (9.69 seconds / 2 examples) ./spec/migrations/20160911130449_add_value_serialized_to_custom_attribute_spec.rb:2
+  MoveFiltersToEntitlements
+    4.49 seconds average (8.98 seconds / 2 examples) ./spec/migrations/20160428215825_move_filters_to_entitlements_spec.rb:3
+  RemoveContainerGroupFailedSyncEvent
+    4.05 seconds average (8.1 seconds / 2 examples) ./spec/migrations/20170511120047_remove_container_group_failed_sync_event_spec.rb:3
+  FixExpressionInTenantQuotaReport
+    3.81 seconds average (7.62 seconds / 2 examples) ./spec/migrations/20170328110106_fix_expression_in_tenant_quota_report_spec.rb:3
+  MigrateAnsibleTowerConfigurationManagerInventoryRootGroupStiType
+    3.21 seconds average (9.64 seconds / 3 examples) ./spec/migrations/20170209192130_migrate_ansible_tower_configuration_manager_inventory_root_group_sti_type_spec.rb:3
+  RemoveCentralAdminRegionAuthRecords
+    3.21 seconds average (6.42 seconds / 2 examples) ./spec/migrations/20170217220618_remove_central_admin_region_auth_records_spec.rb:3
+  RemoveOidIntegerArgsFromMiqQueue
+    3.2 seconds average (6.4 seconds / 2 examples) ./spec/migrations/20170320195659_remove_oid_integer_args_from_miq_queue_spec.rb:3
+  SetGenericSubtypeOnServiceTemplate
+    2.74 seconds average (8.22 seconds / 3 examples) ./spec/migrations/20160802145938_set_generic_subtype_on_service_template_spec.rb:3
+  MigratePortsToPortRangesInLoadBalancerListener
+    2.64 seconds average (13.22 seconds / 5 examples) ./spec/migrations/20160830233558_migrate_ports_to_port_ranges_in_load_balancer_listener_spec.rb:3
+  DefaultProviderVerifySsl
+    2.42 seconds average (4.83 seconds / 2 examples) ./spec/migrations/20150501193927_default_provider_verify_ssl_spec.rb:3
+  RemoveReplicationExcludesFromSettings
+    2.28 seconds average (4.57 seconds / 2 examples) ./spec/migrations/20160923000000_remove_replication_excludes_from_settings_spec.rb:3
+  NamespaceEmsClasses
+    2.28 seconds average (4.56 seconds / 2 examples) ./spec/migrations/20150109142457_namespace_ems_classes_spec.rb:3
+  NamespaceEmsForeman
+    2.2 seconds average (4.41 seconds / 2 examples) ./spec/migrations/20150724030353_namespace_ems_foreman_spec.rb:3
+  FixPortZeroOnEnpoints
+    2.19 seconds average (4.38 seconds / 2 examples) ./spec/migrations/20160825152940_fix_port_zero_on_enpoints_spec.rb:3
+  ChangeUtcTimeProfileTypeToGlobal
+    2.17 seconds average (4.35 seconds / 2 examples) ./spec/migrations/20140402134329_change_utc_time_profile_type_to_global_spec.rb:3
+  RemoveReplicationWorkerSettings
+    2.17 seconds average (4.33 seconds / 2 examples) ./spec/migrations/20160708182331_remove_replication_worker_settings_spec.rb:3
+  AddUpdateRepoNameToMiqDatabase
+    2.11 seconds average (4.21 seconds / 2 examples) ./spec/migrations/20140201040548_add_update_repo_name_to_miq_database_spec.rb:3
+
+Finished in 7 minutes 34 seconds (files took 9.31 seconds to load)
+426 examples, 0 failures
+
+Randomized with seed 11680
+
+[Coveralls] Submitting to https://coveralls.io/api/v1
+[Coveralls] Job #59083.2
+[Coveralls] https://coveralls.io/jobs/26510636
+Coverage is at 4.32%.
+Coverage report sent to Coveralls.
+** Migrating all the way up
+.
+travis_time:end:06b4acb6:start=1496824630849288467,finish=1496825347832618823,duration=716983330356
+The command "bundle exec rake test:$TEST_SUITE" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+Removing aws-sdk-core (2.9.31)
+Removing aws-sdk-resources (2.9.31)
+Removing aws-sdk (2.9.31)
+Removing manageiq-ui-classic (03ea79cb18dd)
+travis_time:start:004c11f6
+travis_time:end:004c11f6:start=1496825348882941691,finish=1496825348888432467,duration=5490776travis_time:start:0fe8a55bchange detected (content changed, file is created, or file is deleted):
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/amazon_ssa_support-b7cf88e54885/amazon_ssa_support.gemspec
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/amazon_ssa_support-b7cf88e54885/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/font-fabulous-01b2704e79e2/font-fabulous.gemspec
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/font-fabulous-01b2704e79e2/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/foreman_api_client-1cdf102c9331/foreman_api_client.gemspec
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/foreman_api_client-1cdf102c9331/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/handsoap-b1247a733ca3/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/jquery-rjs-ded3d28d0049/.git/index
+/home/travis/build/ManageIQ/manageiq/vendo
+
+...
+
+changes detected, packing new archive
+.
+.
+.
+.
+.
+uploading archive
+
+travis_time:end:0fe8a55b:start=1496825348895043285,finish=1496825389691093437,duration=40796050152travis_fold:end:cache.2
+Done. Your build exited with 0.

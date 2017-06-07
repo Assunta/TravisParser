@@ -1,0 +1,792 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-03a6854-precise-production-2-worker-org-docker.travisci.net:647d8b98-0f16-48a2-a061-5f3d0aba1d72
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 51d1b1d:travis:ruby
+startup: 397.872827ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 235867409
+Job id: 235867413
+travis-build version: 6b85b561c
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (33.0 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 51%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             61% [2 libssl1.0.0 38.3 kB/1,054 kB 4%]                                       100% [Working]              Fetched 2,634 kB in 0s (18.1 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:0f0a3070$ git clone --depth=50 https://github.com/diaspora/diaspora.git diaspora/diaspora
+Cloning into 'diaspora/diaspora'...
+remote: Counting objects: 8873, done.[K
+remote: Compressing objects:   0% (1/5008)   [Kremote: Compressing objects:   1% (51/5008)   [Kremote: Compressing objects:   2% (101/5008)   [Kremote: Compressing objects:   3% (151/5008)   [Kremote: Compressing objects:   4% (201/5008)   [Kremote: Compressing objects:   5% (251/5008)   [Kremote: Compressing objects:   6% (301/5008)   [Kremote: Compressing objects:   7% (351/5008)   [Kremote: Compressing objects:   8% (401/5008)   [Kremote: Compressing objects:   9% (451/5008)   [Kremote: Compressing objects:  10% (501/5008)   [Kremote: Compressing objects:  11% (551/5008)   [Kremote: Compressing objects:  12% (601/5008)   [Kremote: Compressing objects:  13% (652/5008)   [Kremote: Compressing objects:  14% (702/5008)   [Kremote: Compressing objects:  15% (752/5008)   [Kremote: Compressing objects:  16% (802/5008)   [Kremote: Compressing objects:  17% (852/5008)   [Kremote: Compressing objects:  18% (902/5008)   [Kremote: Compressing objects:  19% (952/5008)   [Kremote: Compressing objects:  20% (1002/5008)   [Kremote: Compressing objects:  21% (1052/5008)   [Kremote: Compressing objects:  22% (1102/5008)   [Kremote: Compressing objects:  23% (1152/5008)   [Kremote: Compressing objects:  24% (1202/5008)   [Kremote: Compressing objects:  25% (1252/5008)   [Kremote: Compressing objects:  26% (1303/5008)   [Kremote: Compressing objects:  27% (1353/5008)   [Kremote: Compressing objects:  28% (1403/5008)   [Kremote: Compressing objects:  29% (1453/5008)   [Kremote: Compressing objects:  30% (1503/5008)   [Kremote: Compressing objects:  31% (1553/5008)   [Kremote: Compressing objects:  32% (1603/5008)   [Kremote: Compressing objects:  33% (1653/5008)   [Kremote: Compressing objects:  34% (1703/5008)   [Kremote: Compressing objects:  35% (1753/5008)   [Kremote: Compressing objects:  36% (1803/5008)   [Kremote: Compressing objects:  37% (1853/5008)   [Kremote: Compressing objects:  38% (1904/5008)   [Kremote: Compressing objects:  39% (1954/5008)   [Kremote: Compressing objects:  40% (2004/5008)   [Kremote: Compressing objects:  41% (2054/5008)   [Kremote: Compressing objects:  42% (2104/5008)   [Kremote: Compressing objects:  43% (2154/5008)   [Kremote: Compressing objects:  44% (2204/5008)   [Kremote: Compressing objects:  45% (2254/5008)   [Kremote: Compressing objects:  46% (2304/5008)   [Kremote: Compressing objects:  47% (2354/5008)   [Kremote: Compressing objects:  48% (2404/5008)   [Kremote: Compressing objects:  49% (2454/5008)   [Kremote: Compressing objects:  50% (2504/5008)   [Kremote: Compressing objects:  51% (2555/5008)   [Kremote: Compressing objects:  52% (2605/5008)   [Kremote: Compressing objects:  53% (2655/5008)   [Kremote: Compressing objects:  54% (2705/5008)   [Kremote: Compressing objects:  55% (2755/5008)   [Kremote: Compressing objects:  56% (2805/5008)   [Kremote: Compressing objects:  57% (2855/5008)   [Kremote: Compressing objects:  58% (2905/5008)   [Kremote: Compressing objects:  59% (2955/5008)   [Kremote: Compressing objects:  60% (3005/5008)   [Kremote: Compressing objects:  61% (3055/5008)   [Kremote: Compressing objects:  62% (3105/5008)   [Kremote: Compressing objects:  63% (3156/5008)   [Kremote: Compressing objects:  64% (3206/5008)   [Kremote: Compressing objects:  65% (3256/5008)   [Kremote: Compressing objects:  66% (3306/5008)   [Kremote: Compressing objects:  67% (3356/5008)   [Kremote: Compressing objects:  68% (3406/5008)   [Kremote: Compressing objects:  69% (3456/5008)   [Kremote: Compressing objects:  70% (3506/5008)   [Kremote: Compressing objects:  71% (3556/5008)   [Kremote: Compressing objects:  72% (3606/5008)   [Kremote: Compressing objects:  73% (3656/5008)   [Kremote: Compressing objects:  74% (3706/5008)   [Kremote: Compressing objects:  75% (3756/5008)   [Kremote: Compressing objects:  76% (3807/5008)   [Kremote: Compressing objects:  77% (3857/5008)   [Kremote: Compressing objects:  78% (3907/5008)   [Kremote: Compressing objects:  79% (3957/5008)   [Kremote: Compressing objects:  80% (4007/5008)   [Kremote: Compressing objects:  81% (4057/5008)   [Kremote: Compressing objects:  82% (4107/5008)   [Kremote: Compressing objects:  83% (4157/5008)   [Kremote: Compressing objects:  84% (4207/5008)   [Kremote: Compressing objects:  85% (4257/5008)   [Kremote: Compressing objects:  86% (4307/5008)   [Kremote: Compressing objects:  87% (4357/5008)   [Kremote: Compressing objects:  88% (4408/5008)   [Kremote: Compressing objects:  89% (4458/5008)   [Kremote: Compressing objects:  90% (4508/5008)   [Kremote: Compressing objects:  91% (4558/5008)   [Kremote: Compressing objects:  92% (4608/5008)   [Kremote: Compressing objects:  93% (4658/5008)   [Kremote: Compressing objects:  94% (4708/5008)   [Kremote: Compressing objects:  95% (4758/5008)   [Kremote: Compressing objects:  96% (4808/5008)   [Kremote: Compressing objects:  97% (4858/5008)   [Kremote: Compressing objects:  98% (4908/5008)   [Kremote: Compressing objects:  99% (4958/5008)   [Kremote: Compressing objects: 100% (5008/5008)   [Kremote: Compressing objects: 100% (5008/5008), done.[K
+Receiving objects:   0% (1/8873)   Receiving objects:   1% (89/8873)   Receiving objects:   2% (178/8873)   Receiving objects:   3% (267/8873)   Receiving objects:   4% (355/8873)   Receiving objects:   5% (444/8873)   Receiving objects:   6% (533/8873)   Receiving objects:   7% (622/8873)   Receiving objects:   8% (710/8873)   Receiving objects:   9% (799/8873)   Receiving objects:  10% (888/8873)   Receiving objects:  11% (977/8873)   Receiving objects:  12% (1065/8873)   Receiving objects:  13% (1154/8873)   Receiving objects:  14% (1243/8873)   Receiving objects:  15% (1331/8873)   Receiving objects:  16% (1420/8873)   Receiving objects:  17% (1509/8873)   Receiving objects:  18% (1598/8873)   Receiving objects:  19% (1686/8873)   Receiving objects:  20% (1775/8873)   Receiving objects:  21% (1864/8873)   Receiving objects:  22% (1953/8873)   Receiving objects:  23% (2041/8873)   Receiving objects:  24% (2130/8873)   Receiving objects:  25% (2219/8873)   Receiving objects:  26% (2307/8873)   Receiving objects:  27% (2396/8873)   Receiving objects:  28% (2485/8873)   Receiving objects:  29% (2574/8873)   Receiving objects:  30% (2662/8873)   Receiving objects:  31% (2751/8873)   Receiving objects:  32% (2840/8873)   Receiving objects:  33% (2929/8873)   Receiving objects:  34% (3017/8873)   Receiving objects:  35% (3106/8873)   Receiving objects:  36% (3195/8873)   Receiving objects:  37% (3284/8873)   Receiving objects:  38% (3372/8873)   Receiving objects:  39% (3461/8873)   Receiving objects:  40% (3550/8873)   Receiving objects:  41% (3638/8873)   Receiving objects:  42% (3727/8873)   Receiving objects:  43% (3816/8873)   Receiving objects:  44% (3905/8873)   Receiving objects:  45% (3993/8873)   Receiving objects:  46% (4082/8873)   Receiving objects:  47% (4171/8873)   Receiving objects:  48% (4260/8873)   Receiving objects:  49% (4348/8873)   Receiving objects:  50% (4437/8873)   Receiving objects:  51% (4526/8873)   Receiving objects:  52% (4614/8873)   Receiving objects:  53% (4703/8873)   Receiving objects:  54% (4792/8873)   Receiving objects:  55% (4881/8873)   Receiving objects:  56% (4969/8873)   Receiving objects:  57% (5058/8873)   Receiving objects:  58% (5147/8873)   Receiving objects:  59% (5236/8873)   Receiving objects:  60% (5324/8873)   Receiving objects:  61% (5413/8873)   Receiving objects:  62% (5502/8873)   Receiving objects:  63% (5590/8873)   Receiving objects:  64% (5679/8873)   Receiving objects:  65% (5768/8873)   Receiving objects:  66% (5857/8873)   Receiving objects:  67% (5945/8873)   Receiving objects:  68% (6034/8873)   Receiving objects:  69% (6123/8873)   Receiving objects:  70% (6212/8873)   Receiving objects:  71% (6300/8873)   Receiving objects:  72% (6389/8873)   Receiving objects:  73% (6478/8873)   Receiving objects:  74% (6567/8873)   Receiving objects:  75% (6655/8873)   Receiving objects:  76% (6744/8873)   Receiving objects:  77% (6833/8873)   Receiving objects:  78% (6921/8873)   Receiving objects:  79% (7010/8873)   Receiving objects:  80% (7099/8873)   Receiving objects:  81% (7188/8873)   Receiving objects:  82% (7276/8873)   Receiving objects:  83% (7365/8873)   Receiving objects:  84% (7454/8873)   Receiving objects:  85% (7543/8873)   Receiving objects:  86% (7631/8873)   Receiving objects:  87% (7720/8873)   Receiving objects:  88% (7809/8873)   Receiving objects:  89% (7897/8873)   Receiving objects:  90% (7986/8873)   Receiving objects:  91% (8075/8873)   Receiving objects:  92% (8164/8873)   Receiving objects:  93% (8252/8873)   Receiving objects:  94% (8341/8873)   Receiving objects:  95% (8430/8873)   Receiving objects:  96% (8519/8873)   Receiving objects:  97% (8607/8873)   Receiving objects:  98% (8696/8873)   Receiving objects:  99% (8785/8873)   remote: Total 8873 (delta 5307), reused 6084 (delta 3745), pack-reused 0[K
+Receiving objects: 100% (8873/8873)   Receiving objects: 100% (8873/8873), 5.37 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/5307)   Resolving deltas:   1% (92/5307)   Resolving deltas:   2% (107/5307)   Resolving deltas:   3% (160/5307)   Resolving deltas:   4% (235/5307)   Resolving deltas:   5% (270/5307)   Resolving deltas:   6% (325/5307)   Resolving deltas:   7% (375/5307)   Resolving deltas:   8% (431/5307)   Resolving deltas:   9% (495/5307)   Resolving deltas:  10% (539/5307)   Resolving deltas:  11% (586/5307)   Resolving deltas:  12% (640/5307)   Resolving deltas:  13% (693/5307)   Resolving deltas:  14% (755/5307)   Resolving deltas:  15% (801/5307)   Resolving deltas:  16% (875/5307)   Resolving deltas:  17% (906/5307)   Resolving deltas:  18% (961/5307)   Resolving deltas:  19% (1013/5307)   Resolving deltas:  20% (1102/5307)   Resolving deltas:  21% (1121/5307)   Resolving deltas:  22% (1168/5307)   Resolving deltas:  23% (1266/5307)   Resolving deltas:  24% (1294/5307)   Resolving deltas:  25% (1332/5307)   Resolving deltas:  26% (1382/5307)   Resolving deltas:  27% (1441/5307)   Resolving deltas:  28% (1507/5307)   Resolving deltas:  29% (1541/5307)   Resolving deltas:  30% (1600/5307)   Resolving deltas:  31% (1654/5307)   Resolving deltas:  32% (1700/5307)   Resolving deltas:  33% (1752/5307)   Resolving deltas:  34% (1811/5307)   Resolving deltas:  35% (1861/5307)   Resolving deltas:  36% (1911/5307)   Resolving deltas:  37% (1966/5307)   Resolving deltas:  38% (2017/5307)   Resolving deltas:  39% (2073/5307)   Resolving deltas:  40% (2126/5307)   Resolving deltas:  41% (2178/5307)   Resolving deltas:  42% (2231/5307)   Resolving deltas:  43% (2285/5307)   Resolving deltas:  44% (2339/5307)   Resolving deltas:  45% (2391/5307)   Resolving deltas:  46% (2448/5307)   Resolving deltas:  47% (2495/5307)   Resolving deltas:  48% (2551/5307)   Resolving deltas:  49% (2602/5307)   Resolving deltas:  50% (2659/5307)   Resolving deltas:  51% (2710/5307)   Resolving deltas:  52% (2761/5307)   Resolving deltas:  53% (2818/5307)   Resolving deltas:  54% (2866/5307)   Resolving deltas:  55% (2926/5307)   Resolving deltas:  56% (2972/5307)   Resolving deltas:  57% (3028/5307)   Resolving deltas:  58% (3079/5307)   Resolving deltas:  59% (3132/5307)   Resolving deltas:  60% (3185/5307)   Resolving deltas:  61% (3240/5307)   Resolving deltas:  62% (3293/5307)   Resolving deltas:  63% (3345/5307)   Resolving deltas:  64% (3401/5307)   Resolving deltas:  65% (3453/5307)   Resolving deltas:  66% (3522/5307)   Resolving deltas:  67% (3559/5307)   Resolving deltas:  68% (3611/5307)   Resolving deltas:  69% (3667/5307)   Resolving deltas:  70% (3725/5307)   Resolving deltas:  71% (3772/5307)   Resolving deltas:  72% (3831/5307)   Resolving deltas:  73% (3878/5307)   Resolving deltas:  74% (3933/5307)   Resolving deltas:  75% (3985/5307)   Resolving deltas:  76% (4037/5307)   Resolving deltas:  77% (4091/5307)   Resolving deltas:  78% (4155/5307)   Resolving deltas:  79% (4194/5307)   Resolving deltas:  80% (4247/5307)   Resolving deltas:  81% (4300/5307)   Resolving deltas:  82% (4352/5307)   Resolving deltas:  83% (4407/5307)   Resolving deltas:  84% (4458/5307)   Resolving deltas:  85% (4513/5307)   Resolving deltas:  86% (4567/5307)   Resolving deltas:  87% (4618/5307)   Resolving deltas:  88% (4671/5307)   Resolving deltas:  89% (4724/5307)   Resolving deltas:  90% (4777/5307)   Resolving deltas:  91% (4831/5307)   Resolving deltas:  92% (4883/5307)   Resolving deltas:  93% (4936/5307)   Resolving deltas:  94% (4999/5307)   Resolving deltas:  95% (5043/5307)   Resolving deltas:  96% (5096/5307)   Resolving deltas:  97% (5156/5307)   Resolving deltas:  98% (5201/5307)   Resolving deltas:  99% (5262/5307)   Resolving deltas: 100% (5307/5307)   Resolving deltas: 100% (5307/5307), done.
+Checking connectivity... done.
+
+travis_time:end:0f0a3070:start=1495673862148639960,finish=1495673864016306967,duration=1867667007$ cd diaspora/diaspora
+travis_time:start:0472cfa0$ git fetch origin +refs/pull/7466/merge:
+remote: Counting objects: 3, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 3 (delta 1), reused 2 (delta 1), pack-reused 0[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From https://github.com/diaspora/diaspora
+ * branch            refs/pull/7466/merge -> FETCH_HEAD
+
+travis_time:end:0472cfa0:start=1495673864021942341,finish=1495673864367201095,duration=345258754$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export DB=mysql
+$ export BUILD_TYPE=other
+
+travis_fold:start:rvmtravis_time:start:169e6b58$ rvm use 2.3.1 --install --binary --fuzzy
+ruby-2.3.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.1 - #configure
+ruby-2.3.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23.0M  100 23.0M    0     0  91.6M      0 --:--:-- --:--:-- --:--:-- 92.7M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.1 - #validate archive
+ruby-2.3.1 - #extract
+ruby-2.3.1 - #validate binary
+ruby-2.3.1 - #setup
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1@global
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.1
+
+travis_time:end:169e6b58:start=1495673868740479624,finish=1495673888920349996,duration=20179870372travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:0f9d3b28$ Installing caching utilities
+
+travis_time:end:0f9d3b28:start=1495673889120364665,finish=1495673889152213158,duration=31848493travis_time:start:0754f3e7
+travis_time:end:0754f3e7:start=1495673889158510515,finish=1495673889162683938,duration=4173423travis_time:start:13010441attempting to download cache archive
+fetching PR.7466/cache-linux-precise-b198dbc1fa127a7d910f654401d64fcb437aaf5e723cdfb395609633318bbb73--rvm-2.3.1--gemfile-Gemfile.tgz
+fetching PR.7466/cache--rvm-2.3.1--gemfile-Gemfile.tgz
+fetching develop/cache-linux-precise-b198dbc1fa127a7d910f654401d64fcb437aaf5e723cdfb395609633318bbb73--rvm-2.3.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:13010441:start=1495673889167697687,finish=1495673891401384982,duration=2233687295travis_time:start:0cac47fa
+travis_time:end:0cac47fa:start=1495673891406663646,finish=1495673891411495411,duration=4831765travis_time:start:1be23a22adding /home/travis/build/diaspora/diaspora/app/assets/images to cache
+
+travis_time:end:1be23a22:start=1495673891416953790,finish=1495673893909896922,duration=2492943132travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:193f49b0
+travis_time:end:193f49b0:start=1495673893915426987,finish=1495673893919872762,duration=4445775travis_time:start:13acdc4aadding /home/travis/build/diaspora/diaspora/vendor/bundle to cache
+creating directory /home/travis/build/diaspora/diaspora/vendor/bundle
+
+travis_time:end:13acdc4a:start=1495673893925140357,finish=1495673898716075561,duration=4790935204travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.0
+$ gem --version
+2.5.1
+travis_fold:start:before_install.1travis_time:start:2498ceec$ gem install bundler
+Fetching: bundler-1.15.0.gemFetching: bundler-1.15.0.gem (  1%)Fetching: bundler-1.15.0.gem (  2%)Fetching: bundler-1.15.0.gem (  3%)Fetching: bundler-1.15.0.gem (  4%)Fetching: bundler-1.15.0.gem (  5%)Fetching: bundler-1.15.0.gem (  6%)Fetching: bundler-1.15.0.gem (  7%)Fetching: bundler-1.15.0.gem (  8%)Fetching: bundler-1.15.0.gem (  9%)Fetching: bundler-1.15.0.gem ( 10%)Fetching: bundler-1.15.0.gem ( 15%)Fetching: bundler-1.15.0.gem ( 20%)Fetching: bundler-1.15.0.gem ( 24%)Fetching: bundler-1.15.0.gem ( 29%)Fetching: bundler-1.15.0.gem ( 34%)Fetching: bundler-1.15.0.gem ( 39%)Fetching: bundler-1.15.0.gem ( 44%)Fetching: bundler-1.15.0.gem ( 49%)Fetching: bundler-1.15.0.gem ( 53%)Fetching: bundler-1.15.0.gem ( 58%)Fetching: bundler-1.15.0.gem ( 63%)Fetching: bundler-1.15.0.gem ( 68%)Fetching: bundler-1.15.0.gem ( 73%)Fetching: bundler-1.15.0.gem ( 78%)Fetching: bundler-1.15.0.gem ( 83%)Fetching: bundler-1.15.0.gem ( 87%)Fetching: bundler-1.15.0.gem ( 92%)Fetching: bundler-1.15.0.gem ( 97%)Fetching: bundler-1.15.0.gem (100%)Fetching: bundler-1.15.0.gem (100%)
+Successfully installed bundler-1.15.0
+1 gem installed
+
+travis_time:end:2498ceec:start=1495673899179152471,finish=1495673899621402107,duration=442249636travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:0db33924$ mkdir travis-phantomjs
+
+travis_time:end:0db33924:start=1495673899626987029,finish=1495673899632179321,duration=5192292travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:1648c920$ wget http://cifiles.diasporafoundation.org/phantomjs-2.1.1-linux-x86_64.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
+--2017-05-25 00:58:19--  http://cifiles.diasporafoundation.org/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Resolving cifiles.diasporafoundation.org (cifiles.diasporafoundation.org)... 5.9.7.84, 2a01:4f8:160:72d0::2
+Connecting to cifiles.diasporafoundation.org (cifiles.diasporafoundation.org)|5.9.7.84|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 23415665 (22M) [application/octet-stream]
+Saving to: `/home/travis/build/diaspora/diaspora/travis-phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2'
+
+ 0% [                                       ] 0           --.-K/s               0% [                                       ] 102,808      357K/s               2% [                                       ] 554,584     1.10M/s              11% [===>                                   ] 2,644,048   3.70M/s              36% [=============>                         ] 8,567,816   9.26M/s              66% [=========================>             ] 15,675,312  13.8M/s              91% [==================================>    ] 21,426,272  15.3M/s              100%[======================================>] 23,415,665  16.4M/s   in 1.4s    
+
+2017-05-25 00:58:21 (16.4 MB/s) - `/home/travis/build/diaspora/diaspora/travis-phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2' saved [23415665/23415665]
+
+
+travis_time:end:1648c920:start=1495673899637679975,finish=1495673901576480549,duration=1938800574travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:210380e2$ tar -xvf $PWD/travis-phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2 -C $PWD/travis-phantomjs
+phantomjs-2.1.1-linux-x86_64/
+phantomjs-2.1.1-linux-x86_64/examples/
+phantomjs-2.1.1-linux-x86_64/examples/colorwheel.js
+phantomjs-2.1.1-linux-x86_64/examples/scandir.js
+phantomjs-2.1.1-linux-x86_64/examples/page_events.js
+phantomjs-2.1.1-linux-x86_64/examples/loadspeed.js
+phantomjs-2.1.1-linux-x86_64/examples/injectme.js
+phantomjs-2.1.1-linux-x86_64/examples/render_multi_url.js
+phantomjs-2.1.1-linux-x86_64/examples/server.js
+phantomjs-2.1.1-linux-x86_64/examples/netlog.js
+phantomjs-2.1.1-linux-x86_64/examples/pagecallback.js
+phantomjs-2.1.1-linux-x86_64/examples/module.js
+phantomjs-2.1.1-linux-x86_64/examples/arguments.js
+phantomjs-2.1.1-linux-x86_64/examples/universe.js
+phantomjs-2.1.1-linux-x86_64/examples/openurlwithproxy.js
+phantomjs-2.1.1-linux-x86_64/examples/sleepsort.js
+phantomjs-2.1.1-linux-x86_64/examples/modernizr.js
+phantomjs-2.1.1-linux-x86_64/examples/unrandomize.js
+phantomjs-2.1.1-linux-x86_64/examples/hello.js
+phantomjs-2.1.1-linux-x86_64/examples/stdin-stdout-stderr.js
+phantomjs-2.1.1-linux-x86_64/examples/fibo.js
+phantomjs-2.1.1-linux-x86_64/examples/phantomwebintro.js
+phantomjs-2.1.1-linux-x86_64/examples/echoToFile.js
+phantomjs-2.1.1-linux-x86_64/examples/post.js
+phantomjs-2.1.1-linux-x86_64/examples/loadurlwithoutcss.js
+phantomjs-2.1.1-linux-x86_64/examples/child_process-examples.js
+phantomjs-2.1.1-linux-x86_64/examples/printenv.js
+phantomjs-2.1.1-linux-x86_64/examples/useragent.js
+phantomjs-2.1.1-linux-x86_64/examples/rasterize.js
+phantomjs-2.1.1-linux-x86_64/examples/outputEncoding.js
+phantomjs-2.1.1-linux-x86_64/examples/waitfor.js
+phantomjs-2.1.1-linux-x86_64/examples/serverkeepalive.js
+phantomjs-2.1.1-linux-x86_64/examples/postserver.js
+phantomjs-2.1.1-linux-x86_64/examples/printmargins.js
+phantomjs-2.1.1-linux-x86_64/examples/version.js
+phantomjs-2.1.1-linux-x86_64/examples/run-qunit.js
+phantomjs-2.1.1-linux-x86_64/examples/features.js
+phantomjs-2.1.1-linux-x86_64/examples/netsniff.js
+phantomjs-2.1.1-linux-x86_64/examples/walk_through_frames.js
+phantomjs-2.1.1-linux-x86_64/examples/printheaderfooter.js
+phantomjs-2.1.1-linux-x86_64/examples/responsive-screenshot.js
+phantomjs-2.1.1-linux-x86_64/examples/countdown.js
+phantomjs-2.1.1-linux-x86_64/examples/detectsniff.js
+phantomjs-2.1.1-linux-x86_64/examples/simpleserver.js
+phantomjs-2.1.1-linux-x86_64/examples/postjson.js
+phantomjs-2.1.1-linux-x86_64/examples/run-jasmine2.js
+phantomjs-2.1.1-linux-x86_64/examples/run-jasmine.js
+phantomjs-2.1.1-linux-x86_64/README.md
+phantomjs-2.1.1-linux-x86_64/LICENSE.BSD
+phantomjs-2.1.1-linux-x86_64/bin/
+phantomjs-2.1.1-linux-x86_64/bin/phantomjs
+phantomjs-2.1.1-linux-x86_64/third-party.txt
+phantomjs-2.1.1-linux-x86_64/ChangeLog
+
+travis_time:end:210380e2:start=1495673901582583688,finish=1495673904731060096,duration=3148476408travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:065f4be5$ export PATH=$PWD/travis-phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH
+
+travis_time:end:065f4be5:start=1495673904739129303,finish=1495673904743791481,duration=4662178travis_fold:end:before_install.5travis_fold:start:install.bundlertravis_time:start:260d814b$ bundle install --deployment --without development production --with mysql postgresql --jobs 3 --retry 3
+Fetching gem metadata from https://rails-assets.org/....
+Fetching gem metadata from https://rubygems.org/.......
+Fetching version metadata from https://rails-assets.org/..
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rails-assets.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Fetching gem metadata from https://rails-assets.org/....
+Fetching version metadata from https://rails-assets.org/..
+Fetching dependency metadata from https://rails-assets.org/..
+Using rake 12.0.0
+Using i18n 0.8.1
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.5
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using thor 0.19.1
+Using hike 1.2.3
+Using multi_json 1.12.1
+Using tilt 1.4.1
+Using bundler 1.15.0
+Using kgio 2.11.0
+Using raindrops 0.17.0
+Using get_process_mem 0.2.1
+Using multipart-post 2.0.0
+Using ffi 1.9.18
+Using valid 1.2.0
+Using json 1.8.6
+Using public_suffix 2.0.5
+Using bcrypt 3.1.11
+Using orm_adapter 0.5.0
+Using concurrent-ruby 1.0.5
+Using connection_pool 2.2.1
+Using redis 3.3.3
+Using execjs 2.7.0
+Using configurate 0.3.1
+Using rack-cors 0.4.1
+Using sass 3.4.23
+Using bootstrap-switch-rails 3.3.3
+Using chunky_png 1.3.8
+Using rb-fsevent 0.9.8
+Using mysql2 0.4.5
+Using pg 0.19.0
+Using excon 0.55.0
+Using formatador 0.2.5
+Using ipaddress 0.8.3
+Using mimemagic 0.3.2
+Using mini_magick 4.6.1
+Using systemu 2.6.5
+Using rails-assets-jquery 3.1.1
+Using rails-assets-highlightjs 9.9.0
+Using rails-assets-markdown-it 8.3.0
+Using rails-assets-markdown-it-hashtag 0.4.0
+Using rails-assets-markdown-it-diaspora-mention 1.2.0
+Using rails-assets-markdown-it-sanitizer 0.4.3
+Using rails-assets-markdown-it--markdown-it-for-inline 0.1.1
+Using rails-assets-markdown-it-sub 1.0.0
+Using rails-assets-markdown-it-sup 1.0.0
+Using rails-assets-underscore 1.8.3
+Using rails-assets-fine-uploader 5.13.0
+Using rails-assets-autosize 3.0.20
+Using rails-assets-blueimp-gallery 2.25.0
+Using rails-assets-perfect-scrollbar 0.6.16
+Using http_accept_language 2.1.0
+Using markerb 1.1.0
+Using leaflet-rails 0.7.7
+Using redcarpet 3.4.0
+Using ruby-oembed 0.10.1
+Using unf_ext 0.0.7.2
+Using yard 0.9.8
+Using useragent 0.16.8
+Using hashie 3.5.5
+Using jwt 1.5.6
+Using multi_xml 0.6.0
+Using oauth 0.5.1
+Using buftok 0.2.0
+Using equalizer 0.0.11
+Using http-form_data 1.0.1
+Using http_parser.rb 0.6.0
+Using naught 1.1.0
+Using simple_oauth 0.3.1
+Using attr_required 1.0.1
+Using bindata 2.3.5
+Using securecompare 1.0.0
+Using url_safe_base64 0.2.2
+Using httpclient 2.8.3
+Using diaspora-prosody-config 0.0.7
+Using rails-assets-emojione 2.0.1
+Using rails-assets-favico.js 0.3.10
+Using rails-assets-jquery-fullscreen-plugin 0.5.0
+Using rails-assets-jquery.slimscroll 1.3.8
+Using request_store 1.3.2
+Using temple 0.8.0
+Using will_paginate 3.1.5
+Using little-plugger 1.1.4
+Using rubyzip 1.2.1
+Using rspec-support 3.5.0
+Using ruby-progressbar 1.8.1
+Using database_cleaner 1.5.3
+Using cliver 0.3.2
+Using websocket-extensions 0.1.2
+Using gherkin 4.0.0
+Using cucumber-wire 0.0.1
+Using diff-lcs 1.3
+Using multi_test 0.1.2
+Using timecop 0.8.1
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.2
+Using docile 1.1.5
+Using simplecov-html 0.10.0
+Using tins 1.13.2
+Using jasmine-core 2.5.2
+Using phantomjs 2.1.1.0
+Using jasmine-jquery-rails 2.0.3
+Using rails-assets-jasmine 2.5.2
+Using i18n-inflector 2.6.7
+Using tzinfo 1.2.3
+Using memoizable 0.4.2
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using warden 1.2.7
+Using rack-protection 1.5.3
+Using rack-mobile-detect 0.4.0
+Using mime-types 3.1
+Using jsonpath 0.5.8
+Using sprockets 2.12.4
+Using unicorn 5.2.0
+Using faraday 0.11.0
+Using ethon 0.10.1
+Using rb-inotify 0.9.8
+Using addressable 2.5.0
+Using redis-namespace 1.5.3
+Using uglifier 3.1.2
+Using autoprefixer-rails 6.7.6
+Using compass-core 1.0.3
+Using compass-import-once 1.0.5
+Using fog-core 1.43.0
+Using macaddr 1.7.1
+Using rails-assets-bootstrap 3.3.7
+Using rails-assets-corejs-typeahead 1.1.1
+Using rails-assets-jquery-placeholder 2.3.1
+Using rails-assets-jquery-textchange 0.2.3
+Using rails-assets-jquery-colorbox 1.6.4
+Using rails-assets-jquery.ui 1.11.4
+Using rails-assets-backbone 1.3.3
+Using unf 0.1.4
+Using string-direction 1.2.0
+Using secure_headers 3.6.1
+Using omniauth 1.4.2
+Using hamlit 2.8.0
+Using logging 2.1.0
+Using rspec-core 3.5.4
+Using websocket-driver 0.6.5
+Using cucumber-core 1.5.0
+Using rspec-expectations 3.5.0
+Using rspec-mocks 3.5.0
+Using crack 0.4.3
+Using simplecov 0.12.0
+Using term-ansicolor 1.4.0
+Using jasmine 2.5.2
+Using rails-assets-jasmine-ajax 3.3.1
+Using activesupport 4.2.8
+Using rufus-scheduler 3.3.4
+Using loofah 2.0.3
+Using xpath 2.0.0
+Using sidekiq 4.2.9
+Using mail 2.6.4
+Using handlebars_assets 0.23.1
+Using unicorn-worker-killer 0.4.4
+Using faraday_middleware 0.11.0.1
+Using open_graph_reader 0.6.2
+Using oauth2 1.3.1
+Using typhoeus 1.1.2
+Using json-schema 2.8.0
+Using bootstrap-sass 3.3.7
+Using compass 1.0.3
+Using fog-json 1.0.2
+Using uuid 2.3.8
+Using fog-xml 0.1.2
+Using rails-assets-bootstrap-markdown 2.10.0
+Using rails-assets-diaspora_jsxc 0.1.5.develop.7
+Using twitter-text 1.14.5
+Using domain_name 0.5.20170223
+Using omniauth-oauth 1.1.0
+Using logging-rails 0.5.0
+Using fuubar 2.2.0
+Using cucumber 2.4.0
+Using rspec 3.5.0
+Using webmock 2.3.2
+Using coveralls 0.8.19
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.8
+Using json-jwt 1.7.1
+Using rack-oauth2 1.5.1
+Using swd 1.0.1
+Using webfinger 1.0.2
+Using factory_girl 4.8.0
+Using shoulda-matchers 3.1.1
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.12.1
+Using sidekiq-cron 0.4.5
+Using omniauth-oauth2 1.4.0
+Using diaspora_federation 0.1.9
+Using fog-aws 1.2.1
+Using http-cookie 1.0.3
+Using omniauth-tumblr 1.2
+Using omniauth-twitter 1.4.0
+Using cucumber-api-steps 0.13
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.8
+Using activerecord 4.2.8
+Using acts_as_api 1.0.0
+Using carrierwave 0.11.2
+Using validate_email 0.1.6
+Using validate_url 1.0.2
+Using active_model_serializers 0.9.5
+Using poltergeist 1.13.0
+Using omniauth-facebook 4.0.0
+Using omniauth-wordpress 0.2.2
+Using diaspora_federation-test 0.1.9
+Using http 2.2.1
+Using faraday-cookie_jar 0.0.6
+Using actionview 4.2.8
+Using activerecord-import 0.17.1
+Using acts-as-taggable-on 3.5.0
+Using fixture_builder 0.4.1
+Using test_after_commit 1.1.0
+Using openid_connect 0.12.0
+Using twitter 6.1.0
+Using actionpack 4.2.8
+Using actionmailer 4.2.8
+Using railties 4.2.8
+Using sprockets-rails 2.3.3
+Using gon 6.1.0
+Using rails-timeago 2.16.0
+Using responders 2.3.0
+Using entypo-rails 3.0.0
+Using jquery-rails 4.2.2
+Using jquery-ui-rails 5.0.5
+Using i18n-inflector-rails 1.0.7
+Using rails-i18n 4.0.8
+Using versionist 1.5.0
+Using factory_girl_rails 4.8.0
+Using rspec-rails 3.5.2
+Using cucumber-rails 1.4.5
+Using sinon-rails 1.15.0
+Using quiet_assets 1.1.0
+Using rails 4.2.8
+Using sass-rails 5.0.6
+Using js-routes 1.3.3
+Using devise 4.2.0
+Using diaspora_federation-rails 0.1.9
+Using simple_captcha2 0.4.3
+Using js_image_paths 0.1.0
+Using mobile-fu 1.3.1
+Using compass-rails 2.0.5
+Using devise_lastseenable 0.0.6
+Bundle complete! 136 Gemfile dependencies, 252 gems now installed.
+Gems in the groups development and production were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:260d814b:start=1495673904750521312,finish=1495673932526897591,duration=27776376279travis_fold:end:install.bundlertravis_time:start:0cf405bc$ ./script/ci/build.sh
+Setting up database.yml for mysql
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+** Invoke ci:travis:other (first_time)
+** Invoke ci:travis:prepare (first_time)
+** Invoke ci:travis:prepare_db (first_time)
+** Invoke db:create (first_time)
+** Invoke db:load_config (first_time)
+** Execute db:load_config
+** Execute db:create
+** Invoke db:test:load (first_time)
+** Invoke db:test:purge (first_time)
+** Invoke environment (first_time)
+** Execute environment
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+** Invoke db:load_config 
+** Execute db:test:purge
+** Execute db:test:load
+** Invoke db:test:load_schema (first_time)
+** Invoke db:test:purge 
+** Execute db:test:load_schema
+** Execute ci:travis:prepare_db
+** Invoke assets:generate_error_pages (first_time)
+** Invoke assets:environment (first_time)
+** Execute assets:environment
+** Invoke environment 
+** Execute assets:generate_error_pages
+** Execute ci:travis:prepare
+** Invoke tests:generate_fixtures (first_time)
+** Invoke spec:prepare (first_time)
+** Execute spec:prepare
+** Invoke test:prepare (first_time)
+** Execute test:prepare
+** Execute tests:generate_fixtures
+/home/travis/.rvm/rubies/ruby-2.3.1/bin/ruby -I/home/travis/build/diaspora/diaspora/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib:/home/travis/build/diaspora/diaspora/vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib /home/travis/build/diaspora/diaspora/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb --tag fixture
+[Coveralls] Set up the SimpleCov formatter.
+[Coveralls] Using SimpleCov's 'rails' settings.
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+=> Building fixtures
+=> Built aspect_memberships.yml, aspects.yml, contacts.yml, people.yml, pods.yml, profiles.yml, taggings.yml, tags.yml, and users.yml
+                                                                                Run options:
+  include {:fixture=>true}
+  exclude {:performance=>true}
+
+Randomized with seed 59972
+                                                                                 0/27 |>                                                       |  ETA: ??:??:??  1/27 |=>                                                      |  ETA: 00:18:34  3/27 |= 11 =>                                                 |  ETA: 00:05:36  10/27 |======= 37 ========>                                   |  ETA: 00:01:16  12/27 |========= 44 ==========>                               |  ETA: 00:00:57  14/27 |=========== 51 ============>                           |  ETA: 00:00:52  17/27 |============== 62 ===============>                     |  ETA: 00:00:34  20/27 |================= 74 ==================>               |  ETA: 00:00:21  26/27 |======================= 96 ========================>   |  ETA: 00:00:03  27/27 |======================== 100 =========================>| Time: 00:00:59 
+
+Top 10 slowest examples (55.88 seconds, 93.8% of total time):
+  UsersController#getting_started generates a jasmine fixture with no query
+    38.39 seconds ./spec/controllers/jasmine_fixtures/users_spec.rb:12
+  StreamsController#aspects jasmine fixtures generates a mobile jasmine fixture with an NSFW post
+    10.03 seconds ./spec/controllers/jasmine_fixtures/aspects_spec.rb:73
+  StreamsController#multi generates the stream_json fixture
+    3.13 seconds ./spec/controllers/jasmine_fixtures/streams_spec.rb:11
+  AdminsController#dashboard jasmine fixtures generates a jasmine fixture
+    0.96647 seconds ./spec/controllers/jasmine_fixtures/admins_spec.rb:10
+  NotificationsController#index generates a jasmine fixture
+    0.80381 seconds ./spec/controllers/jasmine_fixtures/notifications_spec.rb:12
+  StreamsController#aspects jasmine fixtures generates a jasmine fixture with posts
+    0.59969 seconds ./spec/controllers/jasmine_fixtures/aspects_spec.rb:36
+  StreamsController#aspects jasmine fixtures generates a jasmine fixture with a post containing a video
+    0.5982 seconds ./spec/controllers/jasmine_fixtures/aspects_spec.rb:87
+  StreamsController#aspects jasmine fixtures generates a jasmine fixture with a post with comments
+    0.48303 seconds ./spec/controllers/jasmine_fixtures/aspects_spec.rb:52
+  StreamsController#aspects jasmine fixtures generates a jasmine fixture with only posts
+    0.44706 seconds ./spec/controllers/jasmine_fixtures/aspects_spec.rb:44
+  ConversationsController#index generates a jasmine fixture
+    0.42919 seconds ./spec/controllers/jasmine_fixtures/conversations_spec.rb:24
+
+Top 10 slowest example groups:
+  UsersController
+    38.4 seconds average (38.4 seconds / 1 example) ./spec/controllers/jasmine_fixtures/users_spec.rb:1
+  StreamsController
+    3.13 seconds average (3.13 seconds / 1 example) ./spec/controllers/jasmine_fixtures/streams_spec.rb:5
+  StreamsController
+    1.22 seconds average (14.64 seconds / 12 examples) ./spec/controllers/jasmine_fixtures/aspects_spec.rb:5
+  AdminsController
+    0.96876 seconds average (0.96876 seconds / 1 example) ./spec/controllers/jasmine_fixtures/admins_spec.rb:1
+  NotificationsController
+    0.80663 seconds average (0.80663 seconds / 1 example) ./spec/controllers/jasmine_fixtures/notifications_spec.rb:1
+  ConversationsController
+    0.26941 seconds average (0.53882 seconds / 2 examples) ./spec/controllers/jasmine_fixtures/conversations_spec.rb:1
+  StatusMessagesController
+    0.18275 seconds average (0.3655 seconds / 2 examples) ./spec/controllers/jasmine_fixtures/status_messages_spec.rb:5
+  ContactsController
+    0.11801 seconds average (0.35402 seconds / 3 examples) ./spec/controllers/jasmine_fixtures/contacts_spec.rb:5
+  PhotosController
+    0.11013 seconds average (0.11013 seconds / 1 example) ./spec/controllers/jasmine_fixtures/photos_spec.rb:5
+  PeopleController
+    0.09025 seconds average (0.18049 seconds / 2 examples) ./spec/controllers/jasmine_fixtures/people_spec.rb:5
+
+Finished in 59.57 seconds (files took 11.57 seconds to load)
+27 examples, 0 failures
+
+Randomized with seed 59972
+[Coveralls] Submitting to https://coveralls.io/api/v1
+[Coveralls] Job #11248.4
+[Coveralls] https://coveralls.io/jobs/26099080
+Coverage is at 48.87%.
+Coverage report sent to Coveralls.
+** Invoke spec (first_time)
+** Invoke spec:prepare 
+** Execute spec
+/home/travis/.rvm/rubies/ruby-2.3.1/bin/ruby -I/home/travis/build/diaspora/diaspora/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/lib:/home/travis/build/diaspora/diaspora/vendor/bundle/ruby/2.3.0/gems/rspec-support-3.5.0/lib /home/travis/build/diaspora/diaspora/vendor/bundle/ruby/2.3.0/gems/rspec-core-3.5.4/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+[Coveralls] Set up the SimpleCov formatter.
+[Coveralls] Using SimpleCov's 'rails' settings.
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+WARNING: Configuration file /home/travis/build/diaspora/diaspora/config/diaspora.yml not found, ensure it's present
+=> Building fixtures
+=> Built aspect_memberships.yml, aspects.yml, contacts.yml, people.yml, pods.yml, profiles.yml, taggings.yml, tags.yml, and users.yml
+                                                                                Run options: exclude {:performance=>true}
+
+Randomized with seed 63748
+                                                                                 0/3284 |>                                                     |  ETA: ??:??:??  10/3284 |>                                                    |  ETA: 00:06:13  16/3284 |>                                                    |  ETA: 00:07:58  33/3284 |>                                                    |  ETA: 00:05:41  41/3284 |>                                                    |  ETA: 00:05:56  47/3284 |>                                                    |  ETA: 00:06:41  49/3284 |>                                                    |  ETA: 00:07:35  52/3284 |>                                                    |  ETA: 00:08:22  56/3284 |>                                                    |  ETA: 00:09:21  60/3284 |>                                                    |  ETA: 00:10:11  74/3284 |=>                                                   |  ETA: 00:09:01  84/3284 |=>                                                   |  ETA: 00:08:33  97/3284 |=>                                                   |  ETA: 00:07:58  100/3284 |=>                                                  |  ETA: 00:08:17  121/3284 |=>                                                  |  ETA: 00:07:15  146/3284 |==>                                                 |  ETA: 00:06:19  189/3284 |==>                                                 |  ETA: 00:05:05  205/3284 |===>                                                |  ETA: 00:04:57  220/3284 |===>                                                |  ETA: 00:04:49  243/3284 |===>                                                |  ETA: 00:04:33  261/3284 |===>                                                |  ETA: 00:04:25  275/3284 |====>                                               |  ETA: 00:04:21  296/3284 |====>                                               |  ETA: 00:04:11  324/3284 |====>                                               |  ETA: 00:03:57  362/3284 | 11 =>                                              |  ETA: 00:03:37  371/3284 | 11 =>                                              |  ETA: 00:03:40  390/3284 | 11 =>                                              |  ETA: 00:03:36  402/3284 |= 12 =>                                             |  ETA: 00:03:36  410/3284 |= 12 =>                                             |  ETA: 00:03:39  417/3284 |= 12 =>                                             |  ETA: 00:03:42  427/3284 |= 13 =>                                             |  ETA: 00:03:43  442/3284 |= 13 =>                                             |  ETA: 00:03:41  453/3284 |= 13 =>                                             |  ETA: 00:03:41  465/3284 |= 14 ==>                                            |  ETA: 00:03:42  488/3284 |= 14 ==>                                            |  ETA: 00:03:38  499/3284 |= 15 ==>                                            |  ETA: 00:03:38  513/3284 |= 15 ==>                                            |  ETA: 00:03:37  530/3284 |== 16 ==>                                           |  ETA: 00:03:34  536/3284 |== 16 ==>                                           |  ETA: 00:03:38  540/3284 |== 16 ==>                                           |  ETA: 00:03:45  543/3284 |== 16 ==>                                           |  ETA: 00:03:49  546/3284 |== 16 ==>                                           |  ETA: 00:03:58  549/3284 |== 16 ==>                                           |  ETA: 00:04:01  577/3284 |== 17 ==>                                           |  ETA: 00:03:52  591/3284 |== 17 ==>                                           |  ETA: 00:03:51  593/3284 |== 18 ===>                                          |  ETA: 00:03:54  596/3284 |== 18 ===>                                          |  ETA: 00:03:58  605/3284 |== 18 ===>                                          |  ETA: 00:03:59  623/3284 |== 18 ===>                                          |  ETA: 00:03:54  640/3284 |== 19 ===>                                          |  ETA: 00:03:51  650/3284 |== 19 ===>                                          |  ETA: 00:03:51  667/3284 |=== 20 ===>                                         |  ETA: 00:03:48  693/3284 |=== 21 ===>                                         |  ETA: 00:03:41  696/3284 |=== 21 ===>                                         |  ETA: 00:03:44  702/3284 |=== 21 ===>                                         |  ETA: 00:04:03  713/3284 |=== 21 ===>                                         |  ETA: 00:04:03  728/3284 |=== 22 ====>                                        |  ETA: 00:04:00  737/3284 |=== 22 ====>                                        |  ETA: 00:04:00  744/3284 |=== 22 ====>                                        |  ETA: 00:04:00  754/3284 |=== 22 ====>                                        |  ETA: 00:04:00  761/3284 |=== 23 ====>                                        |  ETA: 00:04:02  769/3284 |=== 23 ====>                                        |  ETA: 00:04:03  774/3284 |=== 23 ====>                                        |  ETA: 00:04:05  786/3284 |=== 23 ====>                                        |  ETA: 00:04:03  790/3284 |==== 24 ====>                                       |  ETA: 00:04:05  798/3284 |==== 24 ====>                                       |  ETA: 00:04:05  802/3284 |==== 24 ====>                                       |  ETA: 00:04:07  807/3284 |==== 24 ====>                                       |  ETA: 00:04:08  810/3284 |==== 24 ====>                                       |  ETA: 00:04:13  815/3284 |==== 24 ====>                                       |  ETA: 00:04:15  818/3284 |==== 24 ====>                                       |  ETA: 00:04:17  824/3284 |==== 25 ====>                                       |  ETA: 00:04:18  854/3284 |==== 26 =====>                                      |  ETA: 00:04:09  867/3284 |==== 26 =====>                                      |  ETA: 00:04:07  912/3284 |==== 27 =====>                                      |  ETA: 00:03:53  938/3284 |===== 28 =====>                                     |  ETA: 00:03:46  953/3284 |===== 29 =====>                                     |  ETA: 00:03:44  976/3284 |===== 29 =====>                                     |  ETA: 00:03:39  989/3284 |===== 30 ======>                                    |  ETA: 00:03:38  999/3284 |===== 30 ======>                                    |  ETA: 00:03:37  1012/3284 |===== 30 ======>                                   |  ETA: 00:03:35  1023/3284 |===== 31 ======>                                   |  ETA: 00:03:34  1032/3284 |===== 31 ======>                                   |  ETA: 00:03:34  1036/3284 |===== 31 ======>                                   |  ETA: 00:03:35  1041/3284 |===== 31 ======>                                   |  ETA: 00:03:35  1045/3284 |===== 31 ======>                                   |  ETA: 00:04:26  1059/3284 |====== 32 ======>                                  |  ETA: 00:04:23  1069/3284 |====== 32 ======>                                  |  ETA: 00:04:22  1073/3284 |====== 32 ======>                                  |  ETA: 00:04:23  1075/3284 |====== 32 ======>                                  |  ETA: 00:04:25  1077/3284 |====== 32 ======>                                  |  ETA: 00:04:29  1079/3284 |====== 32 ======>                                  |  ETA: 00:04:31  1081/3284 |====== 32 ======>                                  |  ETA: 00:04:34  1082/3284 |====== 32 ======>                                  |  ETA: 00:04:36  1083/3284 |====== 32 ======>                                  |  ETA: 00:04:38  1085/3284 |====== 33 ======>                                  |  ETA: 00:04:40  1087/3284 |====== 33 ======>                                  |  ETA: 00:04:43  1089/3284 |====== 33 ======>                                  |  ETA: 00:04:45  1103/3284 |====== 33 ======>                                  |  ETA: 00:04:42  1115/3284 |====== 33 ======>                                  |  ETA: 00:04:39  1124/3284 |====== 34 =======>                                 |  ETA: 00:04:38  1140/3284 |====== 34 =======>                                 |  ETA: 00:04:34  1155/3284 |====== 35 =======>                                 |  ETA: 00:04:30  1164/3284 |====== 35 =======>                                 |  ETA: 00:04:29  1203/3284 |======= 36 =======>                                |  ETA: 00:04:17  1287/3284 |======= 39 ========>                               |  ETA: 00:03:52  1324/3284 |======== 40 ========>                              |  ETA: 00:03:43  1354/3284 |======== 41 ========>                              |  ETA: 00:03:36  1390/3284 |======== 42 =========>                             |  ETA: 00:03:28  1424/3284 |======== 43 =========>                             |  ETA: 00:03:21  1462/3284 |========= 44 =========>                            |  ETA: 00:03:13  1560/3284 |========= 47 ==========>                           |  ETA: 00:02:52  1622/3284 |========== 49 ==========>                          |  ETA: 00:02:41  1643/3284 |========== 50 ===========>                         |  ETA: 00:02:38  1652/3284 |========== 50 ===========>                         |  ETA: 00:02:37  1661/3284 |========== 50 ===========>                         |  ETA: 00:02:36  1676/3284 |========== 51 ===========>                         |  ETA: 00:02:35  1693/3284 |========== 51 ===========>                         |  ETA: 00:02:32  1707/3284 |========== 51 ===========>                         |  ETA: 00:02:33  1723/3284 |=========== 52 ===========>                        |  ETA: 00:02:31  1729/3284 |=========== 52 ===========>                        |  ETA: 00:02:31  1735/3284 |=========== 52 ===========>                        |  ETA: 00:02:31  1738/3284 |=========== 52 ===========>                        |  ETA: 00:02:32  1741/3284 |=========== 53 ===========>                        |  ETA: 00:02:32  1747/3284 |=========== 53 ===========>                        |  ETA: 00:02:32  1769/3284 |=========== 53 ===========>                        |  ETA: 00:02:29  1798/3284 |=========== 54 ============>                       |  ETA: 00:02:25  1828/3284 |=========== 55 ============>                       |  ETA: 00:02:22  1846/3284 |============ 56 ============>                      |  ETA: 00:02:19  1862/3284 |============ 56 ============>                      |  ETA: 00:02:17  1878/3284 |============ 57 ============>                      |  ETA: 00:02:16  1897/3284 |============ 57 ============>                      |  ETA: 00:02:13  1913/3284 |============ 58 =============>                     |  ETA: 00:02:11  1929/3284 |============ 58 =============>                     |  ETA: 00:02:09  1938/3284 |============ 59 =============>                     |  ETA: 00:02:09  1945/3284 |============ 59 =============>                     |  ETA: 00:02:08  1976/3284 |============= 60 =============>                    |  ETA: 00:02:04  1986/3284 |============= 60 =============>                    |  ETA: 00:02:03  1997/3284 |============= 60 =============>                    |  ETA: 00:02:02  2006/3284 |============= 61 =============>                    |  ETA: 00:02:01  2020/3284 |============= 61 =============>                    |  ETA: 00:02:00  2043/3284 |============= 62 ==============>                   |  ETA: 00:01:57  2050/3284 |============= 62 ==============>                   |  ETA: 00:01:57  2058/3284 |============= 62 ==============>                   |  ETA: 00:01:56  2064/3284 |============= 62 ==============>                   |  ETA: 00:01:56  2078/3284 |============= 63 ==============>                   |  ETA: 00:01:54  2093/3284 |============= 63 ==============>                   |  ETA: 00:01:53  2107/3284 |============== 64 ==============>                  |  ETA: 00:01:51  2123/3284 |============== 64 ==============>                  |  ETA: 00:01:49  2140/3284 |============== 65 ==============>                  |  ETA: 00:01:48  2154/3284 |============== 65 ==============>                  |  ETA: 00:01:46  2173/3284 |============== 66 ===============>                 |  ETA: 00:01:44  2201/3284 |============== 67 ===============>                 |  ETA: 00:01:41  2210/3284 |============== 67 ===============>                 |  ETA: 00:01:40  2240/3284 |=============== 68 ===============>                |  ETA: 00:01:36  2247/3284 |=============== 68 ===============>                |  ETA: 00:01:36  2252/3284 |=============== 68 ===============>                |  ETA: 00:01:36  2256/3284 |=============== 68 ===============>                |  ETA: 00:01:36  2300/3284 |=============== 70 ================>               |  ETA: 00:01:30  2315/3284 |=============== 70 ================>               |  ETA: 00:01:29  2327/3284 |=============== 70 ================>               |  ETA: 00:01:28  2340/3284 |=============== 71 ================>               |  ETA: 00:01:26  2349/3284 |=============== 71 ================>               |  ETA: 00:01:26  2360/3284 |=============== 71 ================>               |  ETA: 00:01:25  2368/3284 |================ 72 ================>              |  ETA: 00:01:24  2383/3284 |================ 72 ================>              |  ETA: 00:01:23  2407/3284 |================ 73 ================>              |  ETA: 00:01:20  2416/3284 |================ 73 ================>              |  ETA: 00:01:20  2425/3284 |================ 73 ================>              |  ETA: 00:01:19  2432/3284 |================ 74 =================>             |  ETA: 00:01:18  2440/3284 |================ 74 =================>             |  ETA: 00:01:18  2444/3284 |================ 74 =================>             |  ETA: 00:01:18  2448/3284 |================ 74 =================>             |  ETA: 00:01:18  2451/3284 |================ 74 =================>             |  ETA: 00:01:18  2454/3284 |================ 74 =================>             |  ETA: 00:01:18  2458/3284 |================ 74 =================>             |  ETA: 00:01:17  2469/3284 |================ 75 =================>             |  ETA: 00:01:17  2476/3284 |================ 75 =================>             |  ETA: 00:01:16  2481/3284 |================ 75 =================>             |  ETA: 00:01:16  2495/3284 |================ 75 =================>             |  ETA: 00:01:14  2506/3284 |================= 76 =================>            |  ETA: 00:01:13  2514/3284 |================= 76 =================>            |  ETA: 00:01:13  2525/3284 |================= 76 =================>            |  ETA: 00:01:12  2540/3284 |================= 77 =================>            |  ETA: 00:01:10  2549/3284 |================= 77 =================>            |  ETA: 00:01:09  2555/3284 |================= 77 =================>            |  ETA: 00:01:09  2561/3284 |================= 77 =================>            |  ETA: 00:01:09  2568/3284 |================= 78 ==================>           |  ETA: 00:01:08  2572/3284 |================= 78 ==================>           |  ETA: 00:01:08  2577/3284 |================= 78 ==================>           |  ETA: 00:01:08  2582/3284 |================= 78 ==================>           |  ETA: 00:01:07  2588/3284 |================= 78 ==================>           |  ETA: 00:01:07  2594/3284 |================= 78 ==================>           |  ETA: 00:01:06  2600/3284 |================= 79 ==================>           |  ETA: 00:01:06  2606/3284 |================= 79 ==================>           |  ETA: 00:01:05  2611/3284 |================= 79 ==================>           |  ETA: 00:01:05  2618/3284 |================= 79 ==================>           |  ETA: 00:01:05  2624/3284 |================= 79 ==================>           |  ETA: 00:01:04  2630/3284 |================== 80 ==================>          |  ETA: 00:01:04  2634/3284 |================== 80 ==================>          |  ETA: 00:01:03  2639/3284 |================== 80 ==================>          |  ETA: 00:01:03  2646/3284 |================== 80 ==================>          |  ETA: 00:01:03  2650/3284 |================== 80 ==================>          |  ETA: 00:01:02  2655/3284 |================== 80 ==================>          |  ETA: 00:01:02  2661/3284 |================== 81 ==================>          |  ETA: 00:01:02  2668/3284 |================== 81 ==================>          |  ETA: 00:01:01  2673/3284 |================== 81 ==================>          |  ETA: 00:01:01  2678/3284 |================== 81 ==================>          |  ETA: 00:01:00  2684/3284 |================== 81 ==================>          |  ETA: 00:01:00  2689/3284 |================== 81 ==================>          |  ETA: 00:00:59  2695/3284 |================== 82 ===================>         |  ETA: 00:00:59  2707/3284 |================== 82 ===================>         |  ETA: 00:00:58  2738/3284 |================== 83 ===================>         |  ETA: 00:00:54  2756/3284 |================== 83 ===================>         |  ETA: 00:00:52  2771/3284 |=================== 84 ===================>        |  ETA: 00:00:51  2790/3284 |=================== 84 ===================>        |  ETA: 00:00:49  2797/3284 |=================== 85 ===================>        |  ETA: 00:00:48  2804/3284 |=================== 85 ===================>        |  ETA: 00:00:47  2815/3284 |=================== 85 ===================>        |  ETA: 00:00:46  2844/3284 |=================== 86 ====================>       |  ETA: 00:00:43  2872/3284 |=================== 87 ====================>       |  ETA: 00:00:40  2886/3284 |=================== 87 ====================>       |  ETA: 00:00:39  2898/3284 |==================== 88 ====================>      |  ETA: 00:00:38  2915/3284 |==================== 88 ====================>      |  ETA: 00:00:36  2935/3284 |==================== 89 ====================>      |  ETA: 00:00:34  2942/3284 |==================== 89 ====================>      |  ETA: 00:00:33  2948/3284 |==================== 89 ====================>      |  ETA: 00:00:33  2974/3284 |==================== 90 =====================>     |  ETA: 00:00:30  2988/3284 |==================== 90 =====================>     |  ETA: 00:00:29  3018/3284 |==================== 91 =====================>     |  ETA: 00:00:26  3032/3284 |===================== 92 =====================>    |  ETA: 00:00:24 the :locals option to #assert_template is only supported in a ActionView::TestCase
+ 3044/3284 |===================== 92 =====================>    |  ETA: 00:00:23  3054/3284 |===================== 92 =====================>    |  ETA: 00:00:22  3064/3284 |===================== 93 =====================>    |  ETA: 00:00:21  3074/3284 |===================== 93 =====================>    |  ETA: 00:00:20  3087/3284 |===================== 94 ======================>   |  ETA: 00:00:19  3095/3284 |===================== 94 ======================>   |  ETA: 00:00:18  3114/3284 |===================== 94 ======================>   |  ETA: 00:00:16  3136/3284 |===================== 95 ======================>   |  ETA: 00:00:14  3140/3284 |===================== 95 ======================>   |  ETA: 00:00:14  3145/3284 |===================== 95 ======================>   |  ETA: 00:00:13  3147/3284 |===================== 95 ======================>   |  ETA: 00:00:13  3150/3284 |===================== 95 ======================>   |  ETA: 00:00:13  3154/3284 |====================== 96 ======================>  |  ETA: 00:00:13  3157/3284 |====================== 96 ======================>  |  ETA: 00:00:12  3161/3284 |====================== 96 ======================>  |  ETA: 00:00:12  3173/3284 |====================== 96 ======================>  |  ETA: 00:00:11  3207/3284 |====================== 97 ======================>  |  ETA: 00:00:07  3222/3284 |====================== 98 =======================> |  ETA: 00:00:06  3234/3284 |====================== 98 =======================> |  ETA: 00:00:05  3284/3284 |====================== 100 =======================>| Time: 00:05:12 
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) locale files javascript/javascript.es-CO.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  2) locale files devise/devise.ur-PK.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  3) locale files javascript/javascript.pa.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  4) locale files javascript/javascript.ur-PK.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  5) locale files devise/devise.de-CH.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  6) locale files devise/devise.gd.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  7) locale files javascript/javascript.mk.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+  8) locale files devise/devise.es-CO.yml has no syntax errors if it exists
+     # Not yet available
+     # ./spec/locale_spec.rb:38
+
+
+Top 10 slowest examples (41 seconds, 13.1% of total time):
+  UsersController#update color_theme allow the user to change his color theme
+    23.75 seconds ./spec/controllers/users_controller_spec.rb:160
+  User::Querying#visible_shareables with many posts works
+    4.97 seconds ./spec/models/user/querying_spec.rb:119
+  StreamsController#multi generates the stream_json fixture
+    2.71 seconds ./spec/controllers/jasmine_fixtures/streams_spec.rb:11
+  Stream::Person returns the most recent posts
+    1.83 seconds ./spec/lib/stream/person_spec.rb:20
+  NotificationsController#index paginates the notifications
+    1.7 seconds ./spec/controllers/notifications_controller_spec.rb:97
+  Person.search only contacts returns results for Diaspora handles
+    1.27 seconds ./spec/models/person_spec.rb:556
+  PeopleController#show displays the correct number of photos
+    1.21 seconds ./spec/controllers/people_controller_spec.rb:230
+  PhotosController#index displays the correct number of photos
+    1.2 seconds ./spec/controllers/photos_controller_spec.rb:105
+  PhotosController#index with no user signed in displays the correct number of photos
+    1.19 seconds ./spec/controllers/photos_controller_spec.rb:156
+  PeopleController#contacts displays the correct number of photos
+    1.16 seconds ./spec/controllers/people_controller_spec.rb:597
+
+Top 10 slowest example groups:
+  StreamsController
+    2.71 seconds average (2.71 seconds / 1 example) ./spec/controllers/jasmine_fixtures/streams_spec.rb:5
+  Api::OpenidConnect::IdToken
+    0.85346 seconds average (0.85346 seconds / 1 example) ./spec/models/api/openid_connect/id_token_spec.rb:1
+  deleteing your account
+    0.7314 seconds average (15.36 seconds / 21 examples) ./spec/integration/account_deletion_spec.rb:1
+  UsersController
+    0.52201 seconds average (30.28 seconds / 58 examples) ./spec/controllers/users_controller_spec.rb:5
+  StreamsController
+    0.4696 seconds average (5.64 seconds / 12 examples) ./spec/controllers/jasmine_fixtures/aspects_spec.rb:5
+  NotificationsController
+    0.44726 seconds average (0.44726 seconds / 1 example) ./spec/controllers/jasmine_fixtures/notifications_spec.rb:1
+  StreamsController
+    0.33696 seconds average (2.36 seconds / 7 examples) ./spec/controllers/streams_controller_spec.rb:5
+  NotificationsController
+    0.32111 seconds average (7.71 seconds / 24 examples) ./spec/controllers/notifications_controller_spec.rb:5
+  mentioning
+    0.31833 seconds average (8.59 seconds / 27 examples) ./spec/integration/mentioning_spec.rb:105
+  Report
+    0.31224 seconds average (1.87 seconds / 6 examples) ./spec/mailers/report_spec.rb:5
+
+Finished in 5 minutes 13 seconds (files took 11.63 seconds to load)
+3284 examples, 0 failures, 8 pending
+
+Randomized with seed 63748
+[Coveralls] Submitting to https://coveralls.io/api/v1
+[Coveralls] Job #11248.4
+[Coveralls] https://coveralls.io/jobs/26099173
+Coverage is at 92.62%.
+Coverage report sent to Coveralls.
+** Invoke jasmine:ci (first_time)
+** Invoke jasmine:require_json (first_time)
+** Execute jasmine:require_json
+** Invoke jasmine:require (first_time)
+** Invoke environment 
+** Execute jasmine:require
+** Invoke jasmine:configure (first_time)
+** Execute jasmine:configure
+** Invoke jasmine:configure_plugins (first_time)
+** Execute jasmine:configure_plugins
+** Execute jasmine:ci
+Waiting for jasmine server on 40119...[2017-05-25 01:05:57] INFO  WEBrick 1.3.1
+[2017-05-25 01:05:57] INFO  ruby 2.3.1 (2016-04-26) [x86_64-linux]
+
+[2017-05-25 01:05:57] INFO  WEBrick::HTTPServer#start: pid=4669 port=40119
+jasmine server started
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+905 specs, 0 failures
+** Execute ci:travis:other
+[2017-05-25 01:06:15] INFO  going to shutdown ...
+[2017-05-25 01:06:15] INFO  WEBrick::HTTPServer#start done.
+
+travis_time:end:0cf405bc:start=1495673932532924817,finish=1495674375143413546,duration=442610488729
+The command "./script/ci/build.sh" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:0cc987fa
+travis_time:end:0cc987fa:start=1495674375641145494,finish=1495674375645778932,duration=4633438travis_time:start:16ea7a08nothing changed, not updating cache
+
+travis_time:end:16ea7a08:start=1495674375651489856,finish=1495674377586988851,duration=1935498995travis_fold:end:cache.2
+Done. Your build exited with 0.

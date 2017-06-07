@@ -1,0 +1,683 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-061d18e-precise-production-2-worker-org-docker.travisci.net:af7329d1-44b9-4381-9b30-18e9bdcf40f1
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: d361838:travis:ruby
+startup: 486.284357ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 240286166
+Job id: 240286169
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (35.3 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 48%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             61% [2 libssl1.0.0 28.7 kB/1,054 kB 3%]                                       100% [Working]              Fetched 2,634 kB in 0s (19.1 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:0a61eaaa$ git clone --depth=50 https://github.com/ManageIQ/manageiq.git ManageIQ/manageiq
+Cloning into 'ManageIQ/manageiq'...
+remote: Counting objects: 100754, done.[K
+remote: Compressing objects:   0% (1/33843)   [Kremote: Compressing objects:   1% (339/33843)   [Kremote: Compressing objects:   2% (677/33843)   [Kremote: Compressing objects:   2% (974/33843)   [Kremote: Compressing objects:   3% (1016/33843)   [Kremote: Compressing objects:   4% (1354/33843)   [Kremote: Compressing objects:   5% (1693/33843)   [Kremote: Compressing objects:   5% (1694/33843)   [Kremote: Compressing objects:   6% (2031/33843)   [Kremote: Compressing objects:   7% (2370/33843)   [Kremote: Compressing objects:   8% (2708/33843)   [Kremote: Compressing objects:   9% (3046/33843)   [Kremote: Compressing objects:  10% (3385/33843)   [Kremote: Compressing objects:  11% (3723/33843)   [Kremote: Compressing objects:  12% (4062/33843)   [Kremote: Compressing objects:  13% (4400/33843)   [Kremote: Compressing objects:  14% (4739/33843)   [Kremote: Compressing objects:  15% (5077/33843)   [Kremote: Compressing objects:  16% (5415/33843)   [Kremote: Compressing objects:  17% (5754/33843)   [Kremote: Compressing objects:  18% (6092/33843)   [Kremote: Compressing objects:  19% (6431/33843)   [Kremote: Compressing objects:  20% (6769/33843)   [Kremote: Compressing objects:  21% (7108/33843)   [Kremote: Compressing objects:  22% (7446/33843)   [Kremote: Compressing objects:  23% (7784/33843)   [Kremote: Compressing objects:  24% (8123/33843)   [Kremote: Compressing objects:  25% (8461/33843)   [Kremote: Compressing objects:  25% (8738/33843)   [Kremote: Compressing objects:  26% (8800/33843)   [Kremote: Compressing objects:  27% (9138/33843)   [Kremote: Compressing objects:  28% (9477/33843)   [Kremote: Compressing objects:  29% (9815/33843)   [Kremote: Compressing objects:  30% (10153/33843)   [Kremote: Compressing objects:  31% (10492/33843)   [Kremote: Compressing objects:  32% (10830/33843)   [Kremote: Compressing objects:  33% (11169/33843)   [Kremote: Compressing objects:  34% (11507/33843)   [Kremote: Compressing objects:  35% (11846/33843)   [Kremote: Compressing objects:  36% (12184/33843)   [Kremote: Compressing objects:  37% (12522/33843)   [Kremote: Compressing objects:  38% (12861/33843)   [Kremote: Compressing objects:  39% (13199/33843)   [Kremote: Compressing objects:  40% (13538/33843)   [Kremote: Compressing objects:  41% (13876/33843)   [Kremote: Compressing objects:  42% (14215/33843)   [Kremote: Compressing objects:  43% (14553/33843)   [Kremote: Compressing objects:  44% (14891/33843)   [Kremote: Compressing objects:  45% (15230/33843)   [Kremote: Compressing objects:  46% (15568/33843)   [Kremote: Compressing objects:  47% (15907/33843)   [Kremote: Compressing objects:  48% (16245/33843)   [Kremote: Compressing objects:  49% (16584/33843)   [Kremote: Compressing objects:  50% (16922/33843)   [Kremote: Compressing objects:  51% (17260/33843)   [Kremote: Compressing objects:  52% (17599/33843)   [Kremote: Compressing objects:  53% (17937/33843)   [Kremote: Compressing objects:  54% (18276/33843)   [Kremote: Compressing objects:  55% (18614/33843)   [Kremote: Compressing objects:  56% (18953/33843)   [Kremote: Compressing objects:  57% (19291/33843)   [Kremote: Compressing objects:  58% (19629/33843)   [Kremote: Compressing objects:  59% (19968/33843)   [Kremote: Compressing objects:  60% (20306/33843)   [Kremote: Compressing objects:  61% (20645/33843)   [Kremote: Compressing objects:  62% (20983/33843)   [Kremote: Compressing objects:  63% (21322/33843)   [Kremote: Compressing objects:  64% (21660/33843)   [Kremote: Compressing objects:  65% (21998/33843)   [Kremote: Compressing objects:  66% (22337/33843)   [Kremote: Compressing objects:  67% (22675/33843)   [Kremote: Compressing objects:  68% (23014/33843)   [Kremote: Compressing objects:  69% (23352/33843)   [Kremote: Compressing objects:  70% (23691/33843)   [Kremote: Compressing objects:  71% (24029/33843)   [Kremote: Compressing objects:  72% (24367/33843)   [Kremote: Compressing objects:  73% (24706/33843)   [Kremote: Compressing objects:  74% (25044/33843)   [Kremote: Compressing objects:  75% (25383/33843)   [Kremote: Compressing objects:  76% (25721/33843)   [Kremote: Compressing objects:  77% (26060/33843)   [Kremote: Compressing objects:  78% (26398/33843)   [Kremote: Compressing objects:  79% (26736/33843)   [Kremote: Compressing objects:  80% (27075/33843)   [Kremote: Compressing objects:  81% (27413/33843)   [Kremote: Compressing objects:  82% (27752/33843)   [Kremote: Compressing objects:  83% (28090/33843)   [Kremote: Compressing objects:  84% (28429/33843)   [Kremote: Compressing objects:  85% (28767/33843)   [Kremote: Compressing objects:  86% (29105/33843)   [Kremote: Compressing objects:  87% (29444/33843)   [Kremote: Compressing objects:  88% (29782/33843)   [Kremote: Compressing objects:  89% (30121/33843)   [Kremote: Compressing objects:  90% (30459/33843)   [Kremote: Compressing objects:  91% (30798/33843)   [Kremote: Compressing objects:  92% (31136/33843)   [Kremote: Compressing objects:  93% (31474/33843)   [Kremote: Compressing objects:  94% (31813/33843)   [Kremote: Compressing objects:  95% (32151/33843)   [Kremote: Compressing objects:  96% (32490/33843)   [Kremote: Compressing objects:  97% (32828/33843)   [Kremote: Compressing objects:  98% (33167/33843)   [Kremote: Compressing objects:  99% (33505/33843)   [Kremote: Compressing objects: 100% (33843/33843)   [Kremote: Compressing objects: 100% (33843/33843), done.[K
+Receiving objects:   0% (1/100754)   Receiving objects:   1% (1008/100754)   Receiving objects:   2% (2016/100754)   Receiving objects:   3% (3023/100754)   Receiving objects:   4% (4031/100754)   Receiving objects:   5% (5038/100754)   Receiving objects:   6% (6046/100754)   Receiving objects:   7% (7053/100754)   Receiving objects:   8% (8061/100754)   Receiving objects:   9% (9068/100754)   Receiving objects:  10% (10076/100754)   Receiving objects:  11% (11083/100754)   Receiving objects:  12% (12091/100754)   Receiving objects:  13% (13099/100754)   Receiving objects:  14% (14106/100754)   Receiving objects:  15% (15114/100754)   Receiving objects:  16% (16121/100754)   Receiving objects:  17% (17129/100754)   Receiving objects:  18% (18136/100754)   Receiving objects:  19% (19144/100754)   Receiving objects:  20% (20151/100754)   Receiving objects:  21% (21159/100754)   Receiving objects:  22% (22166/100754)   Receiving objects:  23% (23174/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  24% (24181/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  25% (25189/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  26% (26197/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  27% (27204/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  28% (28212/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  29% (29219/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  30% (30227/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  31% (31234/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  32% (32242/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  33% (33249/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  34% (34257/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  35% (35264/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  36% (36272/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  37% (37279/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  38% (38287/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  39% (39295/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  40% (40302/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  41% (41310/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  42% (42317/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  42% (42425/100754), 10.29 MiB | 20.54 MiB/s   Receiving objects:  43% (43325/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  44% (44332/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  45% (45340/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  46% (46347/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  47% (47355/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  48% (48362/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  49% (49370/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  50% (50377/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  51% (51385/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  52% (52393/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  53% (53400/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  54% (54408/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  55% (55415/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  56% (56423/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  57% (57430/100754), 21.60 MiB | 21.55 MiB/s   Receiving objects:  57% (57789/100754), 43.17 MiB | 21.54 MiB/s   Receiving objects:  58% (58438/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  59% (59445/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  60% (60453/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  61% (61460/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  62% (62468/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  63% (63476/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  64% (64483/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  65% (65491/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  66% (66498/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  66% (67132/100754), 54.96 MiB | 21.94 MiB/s   Receiving objects:  67% (67506/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  68% (68513/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  69% (69521/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  70% (70528/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  71% (71536/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  72% (72543/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  73% (73551/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  74% (74558/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  75% (75566/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  76% (76574/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  77% (77581/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  78% (78589/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  79% (79596/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  80% (80604/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  81% (81611/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  82% (82619/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  83% (83626/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  84% (84634/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  85% (85641/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  86% (86649/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  87% (87656/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  88% (88664/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  89% (89672/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  90% (90679/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  91% (91687/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  92% (92694/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  93% (93702/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  94% (94709/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  95% (95717/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  96% (96724/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  97% (97732/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  98% (98739/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects:  99% (99747/100754), 67.38 MiB | 22.42 MiB/s   remote: Total 100754 (delta 69234), reused 90046 (delta 62324), pack-reused 0[K
+Receiving objects: 100% (100754/100754), 67.38 MiB | 22.42 MiB/s   Receiving objects: 100% (100754/100754), 78.09 MiB | 22.42 MiB/s, done.
+Resolving deltas:   0% (0/69234)   Resolving deltas:   1% (695/69234)   Resolving deltas:   2% (1392/69234)   Resolving deltas:   3% (2095/69234)   Resolving deltas:   4% (2771/69234)   Resolving deltas:   5% (3466/69234)   Resolving deltas:   6% (4155/69234)   Resolving deltas:   7% (4856/69234)   Resolving deltas:   8% (5629/69234)   Resolving deltas:   9% (6238/69234)   Resolving deltas:  10% (6955/69234)   Resolving deltas:  11% (7623/69234)   Resolving deltas:  12% (8313/69234)   Resolving deltas:  13% (9002/69234)   Resolving deltas:  14% (9696/69234)   Resolving deltas:  15% (10386/69234)   Resolving deltas:  16% (11078/69234)   Resolving deltas:  17% (11784/69234)   Resolving deltas:  18% (12465/69234)   Resolving deltas:  19% (13165/69234)   Resolving deltas:  20% (13869/69234)   Resolving deltas:  21% (14598/69234)   Resolving deltas:  22% (15248/69234)   Resolving deltas:  23% (16236/69234)   Resolving deltas:  24% (16629/69234)   Resolving deltas:  25% (17311/69234)   Resolving deltas:  26% (18231/69234)   Resolving deltas:  27% (18709/69234)   Resolving deltas:  28% (19722/69234)   Resolving deltas:  29% (20408/69234)   Resolving deltas:  30% (20819/69234)   Resolving deltas:  31% (21478/69234)   Resolving deltas:  32% (22159/69234)   Resolving deltas:  33% (22886/69234)   Resolving deltas:  34% (23546/69234)   Resolving deltas:  35% (24301/69234)   Resolving deltas:  36% (24927/69234)   Resolving deltas:  37% (25618/69234)   Resolving deltas:  38% (26331/69234)   Resolving deltas:  39% (27015/69234)   Resolving deltas:  40% (27714/69234)   Resolving deltas:  41% (28400/69234)   Resolving deltas:  42% (29093/69234)   Resolving deltas:  43% (29771/69234)   Resolving deltas:  44% (30472/69234)   Resolving deltas:  45% (31328/69234)   Resolving deltas:  45% (31708/69234)   Resolving deltas:  47% (32903/69234)   Resolving deltas:  48% (33243/69234)   Resolving deltas:  49% (33929/69234)   Resolving deltas:  50% (34620/69234)   Resolving deltas:  51% (35314/69234)   Resolving deltas:  52% (36013/69234)   Resolving deltas:  53% (36696/69234)   Resolving deltas:  54% (37413/69234)   Resolving deltas:  55% (38079/69234)   Resolving deltas:  56% (38832/69234)   Resolving deltas:  57% (39469/69234)   Resolving deltas:  58% (40170/69234)   Resolving deltas:  59% (40854/69234)   Resolving deltas:  60% (41546/69234)   Resolving deltas:  61% (42238/69234)   Resolving deltas:  62% (42939/69234)   Resolving deltas:  63% (43627/69234)   Resolving deltas:  64% (44310/69234)   Resolving deltas:  65% (45003/69234)   Resolving deltas:  66% (45902/69234)   Resolving deltas:  67% (46404/69234)   Resolving deltas:  68% (47085/69234)   Resolving deltas:  69% (47780/69234)   Resolving deltas:  70% (48617/69234)   Resolving deltas:  71% (49172/69234)   Resolving deltas:  72% (49851/69234)   Resolving deltas:  73% (50541/69234)   Resolving deltas:  74% (51315/69234)   Resolving deltas:  75% (51993/69234)   Resolving deltas:  76% (52621/69234)   Resolving deltas:  77% (53314/69234)   Resolving deltas:  78% (54076/69234)   Resolving deltas:  79% (54742/69234)   Resolving deltas:  80% (55389/69234)   Resolving deltas:  81% (56080/69234)   Resolving deltas:  82% (56788/69234)   Resolving deltas:  83% (57473/69234)   Resolving deltas:  84% (58163/69234)   Resolving deltas:  85% (58864/69234)   Resolving deltas:  86% (59574/69234)   Resolving deltas:  87% (60312/69234)   Resolving deltas:  88% (60928/69234)   Resolving deltas:  89% (61625/69234)   Resolving deltas:  90% (62311/69234)   Resolving deltas:  91% (63018/69234)   Resolving deltas:  92% (63696/69234)   Resolving deltas:  93% (64394/69234)   Resolving deltas:  94% (65088/69234)   Resolving deltas:  95% (65778/69234)   Resolving deltas:  96% (66529/69234)   Resolving deltas:  97% (67179/69234)   Resolving deltas:  98% (67851/69234)   Resolving deltas:  99% (68542/69234)   Resolving deltas: 100% (69234/69234)   Resolving deltas: 100% (69234/69234), done.
+Checking connectivity... done.
+
+travis_time:end:0a61eaaa:start=1496826654079573943,finish=1496826667076994905,duration=12997420962$ cd ManageIQ/manageiq
+travis_time:start:067d3a5d$ git fetch origin +refs/pull/15329/merge:
+remote: Counting objects: 7, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 7 (delta 5), reused 6 (delta 5), pack-reused 0[K
+Unpacking objects:  14% (1/7)   Unpacking objects:  28% (2/7)   Unpacking objects:  42% (3/7)   Unpacking objects:  57% (4/7)   Unpacking objects:  71% (5/7)   Unpacking objects:  85% (6/7)   Unpacking objects: 100% (7/7)   Unpacking objects: 100% (7/7), done.
+From https://github.com/ManageIQ/manageiq
+ * branch            refs/pull/15329/merge -> FETCH_HEAD
+
+travis_time:end:067d3a5d:start=1496826667082678603,finish=1496826667676488450,duration=593809847$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:postgresqlStarting PostgreSQL v9.4
+travis_time:start:0da0d648$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.1 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:0da0d648:start=1496826667751450516,finish=1496826669043367977,duration=1291917461travis_time:start:0a45f5ea$ sudo service postgresql start 9.4
+ * Starting PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:0a45f5ea:start=1496826669047820217,finish=1496826671253871082,duration=2206050865travis_time:start:085f4bc0$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:085f4bc0:start=1496826671258398186,finish=1496826671855760165,duration=597361979travis_time:start:0dc656c4$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:0dc656c4:start=1496826671860569031,finish=1496826672172687550,duration=312118519travis_time:start:0104066f$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:0104066f:start=1496826672177321153,finish=1496826672220007433,duration=42686280travis_time:start:0748d5d4$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:0748d5d4:start=1496826672225080321,finish=1496826672266026903,duration=40946582travis_fold:end:postgresql
+Encrypted environment variables have been removed for security reasons.
+See https://docs.travis-ci.com/user/pull-requests/#Pull-Requests-and-Security-Restrictions
+
+Setting environment variables from .travis.yml
+$ export RUBY_GC_HEAP_GROWTH_MAX_SLOTS=300000
+$ export RUBY_GC_HEAP_INIT_SLOTS=600000
+$ export RUBY_GC_HEAP_GROWTH_FACTOR=1.25
+$ export PARALLEL_TEST_PROCESSORS=2
+$ export TEST_SUITE=brakeman
+
+travis_fold:start:rvmtravis_time:start:30bcae40$ rvm use 2.3.1 --install --binary --fuzzy
+ruby-2.3.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.1 - #configure
+ruby-2.3.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 23.0M    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23.0M  100 23.0M    0     0  72.7M      0 --:--:-- --:--:-- --:--:-- 73.0M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.1 - #validate archive
+ruby-2.3.1 - #extract
+ruby-2.3.1 - #validate binary
+ruby-2.3.1 - #setup
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1@global
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.1
+
+travis_time:end:30bcae40:start=1496826676521247325,finish=1496826697244091540,duration=20722844215travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:23ee20a6$ Installing caching utilities
+
+travis_time:end:23ee20a6:start=1496826697620575149,finish=1496826697653700994,duration=33125845travis_time:start:2e99b6d8
+travis_time:end:2e99b6d8:start=1496826697660400281,finish=1496826697664919043,duration=4518762travis_time:start:0919b9ceattempting to download cache archive
+fetching PR.15329/cache-linux-precise-374df77ace7f14025a2dd48cca60f70a5395492ade1bcaa143fda9130dad2465--rvm-2.3.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:0919b9ce:start=1496826697670308060,finish=1496826705820280664,duration=8149972604travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:17504922
+travis_time:end:17504922:start=1496826705825658107,finish=1496826705829957431,duration=4299324travis_time:start:2c9203d4adding /home/travis/build/ManageIQ/manageiq/vendor/bundle to cache
+creating directory /home/travis/build/ManageIQ/manageiq/vendor/bundle
+
+travis_time:end:2c9203d4:start=1496826705834866877,finish=1496826718870854400,duration=13035987523travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.5.1
+travis_fold:start:before_installtravis_time:start:018ab642$ source ${TRAVIS_BUILD_DIR}/tools/ci/before_install.sh
+
+source $TRAVIS_BUILD_DIR/tools/ci/setup_vmdb_configs.sh
+./tools/ci/setup_vmdb_configs.rb
+Copying /home/travis/build/ManageIQ/manageiq/certs/v2_key from template...
+Copying /home/travis/build/ManageIQ/manageiq/config/cable.yml from template...
+Copying /home/travis/build/ManageIQ/manageiq/config/database.yml from template...
+CREATE ROLE
+source $TRAVIS_BUILD_DIR/tools/ci/setup_ruby_env.sh
+./tools/ci/setup_ruby_environment.rb
+export BUNDLE_WITHOUT=development
+export BUNDLE_GEMFILE=${PWD}/Gemfile
+
+set +v
+
+travis_time:end:018ab642:start=1496826719338840325,finish=1496826719750593773,duration=411753448travis_fold:end:before_installtravis_fold:start:install.bundlertravis_time:start:0813205b$ bundle install --jobs=3 --retry=3 --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching https://github.com/ManageIQ/manageiq-gems-pending.git
+Fetching https://github.com/ManageIQ/handsoap.git
+Fetching https://github.com/ManageIQ/manageiq-automation_engine
+Fetching https://github.com/ManageIQ/manageiq-content
+Fetching https://github.com/ManageIQ/manageiq-providers-amazon
+Fetching https://github.com/ManageIQ/manageiq-providers-ansible_tower
+Fetching https://github.com/ManageIQ/manageiq-providers-azure
+Fetching https://github.com/ManageIQ/manageiq-providers-foreman
+Fetching https://github.com/ManageIQ/manageiq-providers-hawkular
+Fetching https://github.com/ManageIQ/manageiq-providers-google
+Fetching https://github.com/ManageIQ/manageiq-providers-kubernetes
+Fetching https://github.com/ManageIQ/manageiq-providers-lenovo
+Fetching https://github.com/ManageIQ/manageiq-providers-scvmm
+Fetching https://github.com/ManageIQ/manageiq-providers-openshift
+Fetching https://github.com/ManageIQ/manageiq-providers-openstack
+Fetching https://github.com/ManageIQ/manageiq-providers-ovirt
+Fetching https://github.com/ManageIQ/manageiq-providers-vmware
+Fetching https://github.com/ManageIQ/manageiq-ui-classic
+Fetching https://github.com/ManageIQ/amazon_ssa_support.git
+Fetching https://github.com/ManageIQ/foreman_api_client.git
+Fetching https://github.com/ManageIQ/ruport.git
+Fetching https://github.com/ManageIQ/font-fabulous.git
+Fetching https://github.com/ManageIQ/jquery-rjs.git
+Fetching gem metadata from https://rubygems.org/......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies......
+Using rake 11.3.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.4
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 2.0.3
+Using arel 7.1.4
+Using addressable 2.4.0
+Using awesome_spawn 1.4.1
+Using bcrypt 3.1.11
+Using binary_struct 2.1.0
+Using bundler 1.15.1
+Using highline 1.6.21
+Using inifile 3.0.0
+Using net-ssh 3.2.0
+Using ffi 1.9.18
+Using log4r 1.1.8
+Using memoist 0.15.0
+Using pg 0.18.4
+Using pg-dsn_parser 0.1.0
+Using psych 2.0.17
+Using rubyzip 1.2.1
+Using sys-proctable 1.1.4 (universal-linux)
+Using trollop 2.1.2
+Using uuidtools 2.1.5
+Using httpclient 2.7.2
+Using little-plugger 1.1.4
+Using multi_json 1.12.1
+Using nori 2.6.0
+Using rubyntlm 0.6.2
+Using socksify 1.7.1
+Using aws-sigv4 1.0.0
+Using jmespath 1.3.1
+Using manageiq-providers-ansible_tower 0.1.0 from https://github.com/ManageIQ/manageiq-providers-ansible_tower (at master@d832980)
+Using json 2.0.4
+Using parallel 1.9.0
+Using unf_ext 0.0.7.4
+Using mime-types 2.6.2
+Using netrc 0.11.0
+Using manageiq-providers-foreman 0.1.0 from https://github.com/ManageIQ/manageiq-providers-foreman (at master@1a92575)
+Using event_emitter 0.2.5
+Using websocket 1.2.4
+Using excon 0.56.0
+Using formatador 0.2.5
+Using extlib 0.9.16
+Using multipart-post 2.0.0
+Using jwt 1.5.6
+Using os 0.9.6
+Using retriable 1.4.1
+Using recursive-open-struct 1.0.0
+Using http-form_data 1.0.3
+Using http_parser.rb 0.6.0
+Using systemu 2.6.5
+Using manageiq-providers-scvmm 0.1.0 from https://github.com/ManageIQ/manageiq-providers-scvmm (at master@7acce03)
+Using amq-protocol 2.2.0
+Using ipaddress 0.8.3
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using high_voltage 3.0.0
+Using sass 3.4.24
+Using nio4r 2.1.0
+Using websocket-extensions 0.1.2
+Using tilt 2.0.7
+Using color 1.8
+Using deep_merge 1.1.1
+Using dalli 2.7.6
+Using elif 0.1.0
+Using fast_gettext 1.2.0
+Using locale 2.1.2
+Using text 1.3.1
+Using temple 0.7.7
+Using hashie 3.4.6
+Using htauth 2.0.0
+Using net-ping 1.7.8
+Using iniparse 1.4.3
+Using linux_block_device 0.2.1
+Using memory_buffer 0.1.0
+Using rufus-lru 1.0.7
+Using nakayoshi_fork 0.0.3
+Using net-ldap 0.14.0
+Using multi_xml 0.6.0
+Using open4 1.3.4
+Using puma 3.3.0
+Using sexp_processor 4.4.5
+Using ruby-dbus 0.13.0
+Using ruby-progressbar 1.7.5
+Using rufus-scheduler 3.1.10
+Using rugged 0.25.0b10
+Using useragent 0.16.8
+Using simple-rss 1.3.1
+Using snmp 1.2.0
+Using sshkey 1.8.0
+Using daemons 1.2.4
+Using eventmachine 1.2.3
+Using oauth 0.5.3
+Using transaction-simple 1.4.0.2
+Using american_date 1.1.1
+Using font-fabulous 0.0.1 from https://github.com/ManageIQ/font-fabulous.git (at master@01b2704)
+Using brakeman 3.6.2
+Using docile 1.1.5
+Using simplecov-html 0.10.1
+Using tins 1.14.0
+Using sqlite3 1.3.13
+Using timecop 0.7.4
+Using vcr 3.0.3
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.4
+Using rspec-support 3.6.0
+Using diff-lcs 1.3
+Using tzinfo 1.2.3
+Using gyoku 1.3.1
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using azure-signature 0.2.3
+Using launchy 2.4.3
+Using net-scp 1.2.1
+Using net-sftp 2.1.2
+Using openscap 0.4.7
+Using sys-uname 1.0.3
+Using gssapi 1.2.0
+Using ffi-vix_disk_lib 1.0.3
+Using manageiq-automation_engine 0.1.0 from https://github.com/ManageIQ/manageiq-automation_engine (at master@0f8c8a4)
+Using logging 2.2.2
+Using httpi 2.4.2
+Using aws-sdk-core 2.9.32
+Using po_to_json 1.0.1
+Using ovirt-engine-sdk 4.1.7
+Using parallel_tests 2.14.1
+Using unf 0.1.4
+Using mail 2.6.5
+Using websocket-client-simple 0.3.0
+Using fog-core 1.44.3
+Using autoparse 0.3.3
+Using faraday 0.9.2
+Using macaddr 1.7.1
+Using bunny 2.1.0
+Using coffee-script 2.4.1
+Using autoprefixer-rails 7.1.1
+Using uglifier 3.0.4
+Using font-awesome-sass 4.6.2
+Using websocket-driver 0.6.5
+Using gettext_i18n_rails 1.7.2
+Using gettext 3.2.2
+Using hamlit 2.7.5
+Using omniauth 1.3.2
+Using ripper_ruby_parser 1.0.0
+Using secure_headers 3.0.3
+Using thin 1.7.0
+Using pdf-writer 1.1.8
+Using simplecov 0.14.1
+Using term-ansicolor 1.6.0
+Using crack 0.4.3
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using activesupport 5.0.3
+Using loofah 2.0.3
+Using handsoap 0.2.5 from https://github.com/ManageIQ/handsoap.git (at v0.2.5-5@b1247a7)
+Using rbvmomi 1.9.5
+Using xpath 2.1.0
+Using winrm 2.2.3
+Using wasabi 3.5.0
+Using aws-sdk-resources 2.9.32
+Using domain_name 0.5.20170404
+Using fog-json 1.0.2
+Using fog-xml 0.1.3
+Using signet 0.7.3
+Using faraday_middleware 0.10.1
+Using oauth2 1.3.1
+Using uuid 2.3.8
+Using bootstrap-sass 3.3.7
+Using ruport 1.7.0 from https://github.com/ManageIQ/ruport.git (at v1.7.0-3@3727775)
+Using coveralls 0.8.21
+Using webmock 2.3.2
+Using rails-dom-testing 2.0.3
+Using activemodel 5.0.3
+Using more_core_extensions 3.2.0
+Using globalid 0.4.0
+Using config 1.3.0
+Using jbuilder 2.5.0
+Using factory_girl 4.5.0
+Using rails-html-sanitizer 1.0.3
+Using akami 1.3.1
+Using vmware_web_service 0.1.1
+Using capybara 2.5.0
+Using winrm-fs 1.0.1
+Using aws-sdk 2.9.32
+Using http-cookie 1.0.3
+Using fog-openstack 0.1.20
+Using fog-google 0.5.3
+Using fog-vcloud-director 0.1.8
+Using googleauth 0.5.1
+Using omniauth-oauth2 1.3.1
+Using xclarity_client 0.4.1
+Using patternfly-sass 3.23.2
+Using activerecord 5.0.3
+Using linux_admin 0.20.1
+Using ansible_tower_client 0.12.2
+Using query_relation 0.1.1
+Using activejob 5.0.3
+Using actionview 5.0.3
+Using savon 2.11.1
+Using manageiq-smartstate 0.1.2
+Using winrm-elevated 1.0.1
+Using manageiq-providers-amazon 0.1.0 from https://github.com/ManageIQ/manageiq-providers-amazon (at master@087f2bb)
+Using rest-client 2.0.2
+Using http 0.9.8
+Using manageiq-providers-openstack 0.1.0 from https://github.com/ManageIQ/manageiq-providers-openstack (at master@69fed34)
+Using manageiq-providers-vmware 0.1.0 from https://github.com/ManageIQ/manageiq-providers-vmware (at master@1af8348)
+Using google-api-client 0.8.6
+Using omniauth-google-oauth2 0.2.10
+Using manageiq-providers-lenovo 0.2.0 from https://github.com/ManageIQ/manageiq-providers-lenovo (at master@95540b5)
+Using activerecord-id_regions 0.1.0
+Using acts_as_tree 2.1.0
+Using ancestry 2.2.2
+Using default_value_for 3.0.2
+Using ovirt_metrics 1.4.1
+Using pg-pglogical 1.1.0
+Using manageiq-api-client 0.1.1
+Using actionpack 5.0.3
+Using manageiq-content 0.1.0 from https://github.com/ManageIQ/manageiq-content (at master@706f32c)
+Using azure-armrest 0.7.3
+Using hawkular-client 3.0.2
+Using image-inspector-client 1.0.3
+Using ovirt 0.17.0
+Using apipie-bindings 0.0.15
+Using kubeclient 2.4.0
+Using manageiq-providers-google 0.1.0 from https://github.com/ManageIQ/manageiq-providers-google (at master@78f85fc)
+Using manageiq-gems-pending 0.1.0 from https://github.com/ManageIQ/manageiq-gems-pending.git (at master@4a639b9)
+Using railties 5.0.3
+Using actioncable 5.0.3
+Using actionmailer 5.0.3
+Using sprockets-rails 3.2.0
+Using rails-controller-testing 1.0.2
+Using manageiq-providers-azure 0.1.0 from https://github.com/ManageIQ/manageiq-providers-azure (at master@7bfc70f)
+Using manageiq-providers-hawkular 0.1.0 from https://github.com/ManageIQ/manageiq-providers-hawkular (at master@a8e7814)
+Using manageiq-providers-ovirt 0.1.0 from https://github.com/ManageIQ/manageiq-providers-ovirt (at master@7ca4aed)
+Using manageiq-network_discovery 0.1.1
+Using foreman_api_client 0.1.0 from https://github.com/ManageIQ/foreman_api_client.git (at master@1cdf102)
+Using manageiq-providers-kubernetes 0.1.0 from https://github.com/ManageIQ/manageiq-providers-kubernetes (at master@923986d)
+Using amazon_ssa_support 0.1.0 from https://github.com/ManageIQ/amazon_ssa_support.git (at master@b7cf88e)
+Using coffee-rails 4.2.2
+Using jquery-hotkeys-rails 0.7.9.1
+Using lodash-rails 3.10.1
+Using novnc-rails 0.2
+Using activerecord-session_store 1.0.0
+Using rails-i18n 5.0.4
+Using responders 2.4.0
+Using jquery-rails 4.3.1
+Using good_migrations 0.0.2
+Using rspec-rails 3.6.0
+Using rails 5.0.3
+Using sass-rails 5.0.6
+Using manageiq-providers-openshift 0.1.0 from https://github.com/ManageIQ/manageiq-providers-openshift (at master@fbbc9ec)
+Using gettext_i18n_rails_js 1.1.0
+Using jquery-rjs 0.1.1 from https://github.com/ManageIQ/jquery-rjs.git (at v0.1.1-1@ded3d28)
+Using manageiq-ui-classic 0.1.0 from https://github.com/ManageIQ/manageiq-ui-classic (at master@c81ed09)
+Bundle complete! 93 Gemfile dependencies, 263 gems now installed.
+Gems in the group development were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:0813205b:start=1496826719756407380,finish=1496826733254086458,duration=13497679078travis_fold:end:install.bundlertravis_fold:start:before_scripttravis_time:start:0996dd0a$ bundle exec rake test:$TEST_SUITE:setup
+
+travis_time:end:0996dd0a:start=1496826733259907035,finish=1496826738016170918,duration=4756263883travis_fold:end:before_scripttravis_time:start:06ce25b5$ bundle exec rake test:$TEST_SUITE
+[Notice] Using configuration in /home/travis/build/ManageIQ/manageiq/config/brakeman.yml
+Loading scanner...
+Processing application in /home/travis/build/ManageIQ/manageiq
+Processing gems...
+[Notice] Detected Rails 5 application
+Processing configuration...
+[Notice] Escaping HTML by default
+Parsing files...
+Processing initializers...
+ 0/17 files processed 1/17 files processed 2/17 files processed 3/17 files processed 4/17 files processed 5/17 files processed 6/17 files processed 7/17 files processed 8/17 files processed 9/17 files processed 10/17 files processed 11/17 files processed 12/17 files processed 13/17 files processed 14/17 files processed 15/17 files processed 16/17 files processedProcessing libs...
+ 0/149 files processed 1/149 files processed 2/149 files processed 3/149 files processed 4/149 files processed 5/149 files processed 6/149 files processed 7/149 files processed 8/149 files processed 9/149 files processed 10/149 files processed 11/149 files processed 12/149 files processed 13/149 files processed 14/149 files processed 15/149 files processed 16/149 files processed 17/149 files processed 18/149 files processed 19/149 files processed 20/149 files processed 21/149 files processed 22/149 files processed 23/149 files processed 24/149 files processed 25/149 files processed 26/149 files processed 27/149 files processed 28/149 files processed 29/149 files processed 30/149 files processed 31/149 files processed 32/149 files processed 33/149 files processed 34/149 files processed 35/149 files processed 36/149 files processed 37/149 files processed 38/149 files processed 39/149 files processed 40/149 files processed 41/149 files processed 42/149 files processed 43/149 files processed 44/149 files processed 45/149 files processed 46/149 files processed 47/149 files processed 48/149 files processed 49/149 files processed 50/149 files processed 51/149 files processed 52/149 files processed 53/149 files processed 54/149 files processed 55/149 files processed 56/149 files processed 57/149 files processed 58/149 files processed 59/149 files processed 60/149 files processed 61/149 files processed 62/149 files processed 63/149 files processed 64/149 files processed 65/149 files processed 66/149 files processed 67/149 files processed 68/149 files processed 69/149 files processed 70/149 files processed 71/149 files processed 72/149 files processed 73/149 files processed 74/149 files processed 75/149 files processed 76/149 files processed 77/149 files processed 78/149 files processed 79/149 files processed 80/149 files processed 81/149 files processed 82/149 files processed 83/149 files processed 84/149 files processed 85/149 files processed 86/149 files processed 87/149 files processed 88/149 files processed 89/149 files processed 90/149 files processed 91/149 files processed 92/149 files processed 93/149 files processed 94/149 files processed 95/149 files processed 96/149 files processed 97/149 files processed 98/149 files processed 99/149 files processed 100/149 files processed 101/149 files processed 102/149 files processed 103/149 files processed 104/149 files processed 105/149 files processed 106/149 files processed 107/149 files processed 108/149 files processed 109/149 files processed 110/149 files processed 111/149 files processed 112/149 files processed 113/149 files processed 114/149 files processed 115/149 files processed 116/149 files processed 117/149 files processed 118/149 files processed 119/149 files processed 120/149 files processed 121/149 files processed 122/149 files processed 123/149 files processed 124/149 files processed 125/149 files processed 126/149 files processed 127/149 files processed 128/149 files processed 129/149 files processed 130/149 files processed 131/149 files processed 132/149 files processed 133/149 files processed 134/149 files processed 135/149 files processed 136/149 files processed 137/149 files processed 138/149 files processed 139/149 files processed 140/149 files processed 141/149 files processed 142/149 files processed 143/149 files processed 144/149 files processed 145/149 files processed 146/149 files processed 147/149 files processed 148/149 files processedProcessing routes...          
+Processing templates...       
+Processing data flow in templates...
+Processing models...          
+ 0/906 files processed 1/906 files processed 2/906 files processed 3/906 files processed 4/906 files processed 5/906 files processed 6/906 files processed 7/906 files processed 8/906 files processed 9/906 files processed 10/906 files processed 11/906 files processed 12/906 files processed 13/906 files processed 14/906 files processed 15/906 files processed 16/906 files processed 17/906 files processed 18/906 files processed 19/906 files processed 20/906 files processed 21/906 files processed 22/906 files processed 23/906 files processed 24/906 files processed 25/906 files processed 26/906 files processed 27/906 files processed 28/906 files processed 29/906 files processed 30/906 files processed 31/906 files processed 32/906 files processed 33/906 files processed 34/906 files processed 35/906 files processed 36/906 files processed 37/906 files processed 38/906 files processed 39/906 files processed 40/906 files processed 41/906 files processed 42/906 files processed 43/906 files processed 44/906 files processed 45/906 files processed 46/906 files processed 47/906 files processed 48/906 files processed 49/906 files processed 50/906 files processed 51/906 files processed 52/906 files processed 53/906 files processed 54/906 files processed 55/906 files processed 56/906 files processed 57/906 files processed 58/906 files processed 59/906 files processed 60/906 files processed 61/906 files processed 62/906 files processed 63/906 files processed 64/906 files processed 65/906 files processed 66/906 files processed 67/906 files processed 68/906 files processed 69/906 files processed 70/906 files processed 71/906 files processed 72/906 files processed 73/906 files processed 74/906 files processed 75/906 files processed 76/906 files processed 77/906 files processed 78/906 files processed 79/906 files processed 80/906 files processed 81/906 files processed 82/906 files processed 83/906 files processed 84/906 files processed 85/906 files processed 86/906 files processed 87/906 files processed 88/906 files processed 89/906 files processed 90/906 files processed 91/906 files processed 92/906 files processed 93/906 files processed 94/906 files processed 95/906 files processed 96/906 files processed 97/906 files processed 98/906 files processed 99/906 files processed 100/906 files processed 101/906 files processed 102/906 files processed 103/906 files processed 104/906 files processed 105/906 files processed 106/906 files processed 107/906 files processed 108/906 files processed 109/906 files processed 110/906 files processed 111/906 files processed 112/906 files processed 113/906 files processed 114/906 files processed 115/906 files processed 116/906 files processed 117/906 files processed 118/906 files processed 119/906 files processed 120/906 files processed 121/906 files processed 122/906 files processed 123/906 files processed 124/906 files processed 125/906 files processed 126/906 files processed 127/906 files processed 128/906 files processed 129/906 files processed 130/906 files processed 131/906 files processed 132/906 files processed 133/906 files processed 134/906 files processed 135/906 files processed 136/906 files processed 137/906 files processed 138/906 files processed 139/906 files processed 140/906 files processed 141/906 files processed 142/906 files processed 143/906 files processed 144/906 files processed 145/906 files processed 146/906 files processed 147/906 files processed 148/906 files processed 149/906 files processed 150/906 files processed 151/906 files processed 152/906 files processed 153/906 files processed 154/906 files processed 155/906 files processed 156/906 files processed 157/906 files processed 158/906 files processed 159/906 files processed 160/906 files processed 161/906 files processed 162/906 files processed 163/906 files processed 164/906 files processed 165/906 files processed 166/906 files processed 167/906 files processed 168/906 files processed 169/906 files processed 170/906 files processed 171/906 files processed 172/906 files processed 173/906 files processed 174/906 files processed 175/906 files processed 176/906 files processed 177/906 files processed 178/906 files processed 179/906 files processed 180/906 files processed 181/906 files processed 182/906 files processed 183/906 files processed 184/906 files processed 185/906 files processed 186/906 files processed 187/906 files processed 188/906 files processed 189/906 files processed 190/906 files processed 191/906 files processed 192/906 files processed 193/906 files processed 194/906 files processed 195/906 files processed 196/906 files processed 197/906 files processed 198/906 files processed 199/906 files processed 200/906 files processed 201/906 files processed 202/906 files processed 203/906 files processed 204/906 files processed 205/906 files processed 206/906 files processed 207/906 files processed 208/906 files processed 209/906 files processed 210/906 files processed 211/906 files processed 212/906 files processed 213/906 files processed 214/906 files processed 215/906 files processed 216/906 files processed 217/906 files processed 218/906 files processed 219/906 files processed 220/906 files processed 221/906 files processed 222/906 files processed 223/906 files processed 224/906 files processed 225/906 files processed 226/906 files processed 227/906 files processed 228/906 files processed 229/906 files processed 230/906 files processed 231/906 files processed 232/906 files processed 233/906 files processed 234/906 files processed 235/906 files processed 236/906 files processed 237/906 files processed 238/906 files processed 239/906 files processed 240/906 files processed 241/906 files processed 242/906 files processed 243/906 files processed 244/906 files processed 245/906 files processed 246/906 files processed 247/906 files processed 248/906 files processed 249/906 files processed 250/906 files processed 251/906 files processed 252/906 files processed 253/906 files processed 254/906 files processed 255/906 files processed 256/906 files processed 257/906 files processed 258/906 files processed 259/906 files processed 260/906 files processed 261/906 files processed 262/906 files processed 263/906 files processed 264/906 files processed 265/906 files processed 266/906 files processed 267/906 files processed 268/906 files processed 269/906 files processed 270/906 files processed 271/906 files processed 272/906 files processed 273/906 files processed 274/906 files processed 275/906 files processed 276/906 files processed 277/906 files processed 278/906 files processed 279/906 files processed 280/906 files processed 281/906 files processed 282/906 files processed 283/906 files processed 284/906 files processed 285/906 files processed 286/906 files processed 287/906 files processed 288/906 files processed 289/906 files processed 290/906 files processed 291/906 files processed 292/906 files processed 293/906 files processed 294/906 files processed 295/906 files processed 296/906 files processed 297/906 files processed 298/906 files processed 299/906 files processed 300/906 files processed 301/906 files processed 302/906 files processed 303/906 files processed 304/906 files processed 305/906 files processed 306/906 files processed 307/906 files processed 308/906 files processed 309/906 files processed 310/906 files processed 311/906 files processed 312/906 files processed 313/906 files processed 314/906 files processed 315/906 files processed 316/906 files processed 317/906 files processed 318/906 files processed 319/906 files processed 320/906 files processed 321/906 files processed 322/906 files processed 323/906 files processed 324/906 files processed 325/906 files processed 326/906 files processed 327/906 files processed 328/906 files processed 329/906 files processed 330/906 files processed 331/906 files processed 332/906 files processed 333/906 files processed 334/906 files processed 335/906 files processed 336/906 files processed 337/906 files processed 338/906 files processed 339/906 files processed 340/906 files processed 341/906 files processed 342/906 files processed 343/906 files processed 344/906 files processed 345/906 files processed 346/906 files processed 347/906 files processed 348/906 files processed 349/906 files processed 350/906 files processed 351/906 files processed 352/906 files processed 353/906 files processed 354/906 files processed 355/906 files processed 356/906 files processed 357/906 files processed 358/906 files processed 359/906 files processed 360/906 files processed 361/906 files processed 362/906 files processed 363/906 files processed 364/906 files processed 365/906 files processed 366/906 files processed 367/906 files processed 368/906 files processed 369/906 files processed 370/906 files processed 371/906 files processed 372/906 files processed 373/906 files processed 374/906 files processed 375/906 files processed 376/906 files processed 377/906 files processed 378/906 files processed 379/906 files processed 380/906 files processed 381/906 files processed 382/906 files processed 383/906 files processed 384/906 files processed 385/906 files processed 386/906 files processed 387/906 files processed 388/906 files processed 389/906 files processed 390/906 files processed 391/906 files processed 392/906 files processed 393/906 files processed 394/906 files processed 395/906 files processed 396/906 files processed 397/906 files processed 398/906 files processed 399/906 files processed 400/906 files processed 401/906 files processed 402/906 files processed 403/906 files processed 404/906 files processed 405/906 files processed 406/906 files processed 407/906 files processed 408/906 files processed 409/906 files processed 410/906 files processed 411/906 files processed 412/906 files processed 413/906 files processed 414/906 files processed 415/906 files processed 416/906 files processed 417/906 files processed 418/906 files processed 419/906 files processed 420/906 files processed 421/906 files processed 422/906 files processed 423/906 files processed 424/906 files processed 425/906 files processed 426/906 files processed 427/906 files processed 428/906 files processed 429/906 files processed 430/906 files processed 431/906 files processed 432/906 files processed 433/906 files processed 434/906 files processed 435/906 files processed 436/906 files processed 437/906 files processed 438/906 files processed 439/906 files processed 440/906 files processed 441/906 files processed 442/906 files processed 443/906 files processed 444/906 files processed 445/906 files processed 446/906 files processed 447/906 files processed 448/906 files processed 449/906 files processed 450/906 files processed 451/906 files processed 452/906 files processed 453/906 files processed 454/906 files processed 455/906 files processed 456/906 files processed 457/906 files processed 458/906 files processed 459/906 files processed 460/906 files processed 461/906 files processed 462/906 files processed 463/906 files processed 464/906 files processed 465/906 files processed 466/906 files processed 467/906 files processed 468/906 files processed 469/906 files processed 470/906 files processed 471/906 files processed 472/906 files processed 473/906 files processed 474/906 files processed 475/906 files processed 476/906 files processed 477/906 files processed 478/906 files processed 479/906 files processed 480/906 files processed 481/906 files processed 482/906 files processed 483/906 files processed 484/906 files processed 485/906 files processed 486/906 files processed 487/906 files processed 488/906 files processed 489/906 files processed 490/906 files processed 491/906 files processed 492/906 files processed 493/906 files processed 494/906 files processed 495/906 files processed 496/906 files processed 497/906 files processed 498/906 files processed 499/906 files processed 500/906 files processed 501/906 files processed 502/906 files processed 503/906 files processed 504/906 files processed 505/906 files processed 506/906 files processed 507/906 files processed 508/906 files processed 509/906 files processed 510/906 files processed 511/906 files processed 512/906 files processed 513/906 files processed 514/906 files processed 515/906 files processed 516/906 files processed 517/906 files processed 518/906 files processed 519/906 files processed 520/906 files processed 521/906 files processed 522/906 files processed 523/906 files processed 524/906 files processed 525/906 files processed 526/906 files processed 527/906 files processed 528/906 files processed 529/906 files processed 530/906 files processed 531/906 files processed 532/906 files processed 533/906 files processed 534/906 files processed 535/906 files processed 536/906 files processed 537/906 files processed 538/906 files processed 539/906 files processed 540/906 files processed 541/906 files processed 542/906 files processed 543/906 files processed 544/906 files processed 545/906 files processed 546/906 files processed 547/906 files processed 548/906 files processed 549/906 files processed 550/906 files processed 551/906 files processed 552/906 files processed 553/906 files processed 554/906 files processed 555/906 files processed 556/906 files processed 557/906 files processed 558/906 files processed 559/906 files processed 560/906 files processed 561/906 files processed 562/906 files processed 563/906 files processed 564/906 files processed 565/906 files processed 566/906 files processed 567/906 files processed 568/906 files processed 569/906 files processed 570/906 files processed 571/906 files processed 572/906 files processed 573/906 files processed 574/906 files processed 575/906 files processed 576/906 files processed 577/906 files processed 578/906 files processed 579/906 files processed 580/906 files processed 581/906 files processed 582/906 files processed 583/906 files processed 584/906 files processed 585/906 files processed 586/906 files processed 587/906 files processed 588/906 files processed 589/906 files processed 590/906 files processed 591/906 files processed 592/906 files processed 593/906 files processed 594/906 files processed 595/906 files processed 596/906 files processed 597/906 files processed 598/906 files processed 599/906 files processed 600/906 files processed 601/906 files processed 602/906 files processed 603/906 files processed 604/906 files processed 605/906 files processed 606/906 files processed 607/906 files processed 608/906 files processed 609/906 files processed 610/906 files processed 611/906 files processed 612/906 files processed 613/906 files processed 614/906 files processed 615/906 files processed 616/906 files processed 617/906 files processed 618/906 files processed 619/906 files processed 620/906 files processed 621/906 files processed 622/906 files processed 623/906 files processed 624/906 files processed 625/906 files processed 626/906 files processed 627/906 files processed 628/906 files processed 629/906 files processed 630/906 files processed 631/906 files processed 632/906 files processed 633/906 files processed 634/906 files processed 635/906 files processed 636/906 files processed 637/906 files processed 638/906 files processed 639/906 files processed 640/906 files processed 641/906 files processed 642/906 files processed 643/906 files processed 644/906 files processed 645/906 files processed 646/906 files processed 647/906 files processed 648/906 files processed 649/906 files processed 650/906 files processed 651/906 files processed 652/906 files processed 653/906 files processed 654/906 files processed 655/906 files processed 656/906 files processed 657/906 files processed 658/906 files processed 659/906 files processed 660/906 files processed 661/906 files processed 662/906 files processed 663/906 files processed 664/906 files processed 665/906 files processed 666/906 files processed 667/906 files processed 668/906 files processed 669/906 files processed 670/906 files processed 671/906 files processed 672/906 files processed 673/906 files processed 674/906 files processed 675/906 files processed 676/906 files processed 677/906 files processed 678/906 files processed 679/906 files processed 680/906 files processed 681/906 files processed 682/906 files processed 683/906 files processed 684/906 files processed 685/906 files processed 686/906 files processed 687/906 files processed 688/906 files processed 689/906 files processed 690/906 files processed 691/906 files processed 692/906 files processed 693/906 files processed 694/906 files processed 695/906 files processed 696/906 files processed 697/906 files processed 698/906 files processed 699/906 files processed 700/906 files processed 701/906 files processed 702/906 files processed 703/906 files processed 704/906 files processed 705/906 files processed 706/906 files processed 707/906 files processed 708/906 files processed 709/906 files processed 710/906 files processed 711/906 files processed 712/906 files processed 713/906 files processed 714/906 files processed 715/906 files processed 716/906 files processed 717/906 files processed 718/906 files processed 719/906 files processed 720/906 files processed 721/906 files processed 722/906 files processed 723/906 files processed 724/906 files processed 725/906 files processed 726/906 files processed 727/906 files processed 728/906 files processed 729/906 files processed 730/906 files processed 731/906 files processed 732/906 files processed 733/906 files processed 734/906 files processed 735/906 files processed 736/906 files processed 737/906 files processed 738/906 files processed 739/906 files processed 740/906 files processed 741/906 files processed 742/906 files processed 743/906 files processed 744/906 files processed 745/906 files processed 746/906 files processed 747/906 files processed 748/906 files processed 749/906 files processed 750/906 files processed 751/906 files processed 752/906 files processed 753/906 files processed 754/906 files processed 755/906 files processed 756/906 files processed 757/906 files processed 758/906 files processed 759/906 files processed 760/906 files processed 761/906 files processed 762/906 files processed 763/906 files processed 764/906 files processed 765/906 files processed 766/906 files processed 767/906 files processed 768/906 files processed 769/906 files processed 770/906 files processed 771/906 files processed 772/906 files processed 773/906 files processed 774/906 files processed 775/906 files processed 776/906 files processed 777/906 files processed 778/906 files processed 779/906 files processed 780/906 files processed 781/906 files processed 782/906 files processed 783/906 files processed 784/906 files processed 785/906 files processed 786/906 files processed 787/906 files processed 788/906 files processed 789/906 files processed 790/906 files processed 791/906 files processed 792/906 files processed 793/906 files processed 794/906 files processed 795/906 files processed 796/906 files processed 797/906 files processed 798/906 files processed 799/906 files processed 800/906 files processed 801/906 files processed 802/906 files processed 803/906 files processed 804/906 files processed 805/906 files processed 806/906 files processed 807/906 files processed 808/906 files processed 809/906 files processed 810/906 files processed 811/906 files processed 812/906 files processed 813/906 files processed 814/906 files processed 815/906 files processed 816/906 files processed 817/906 files processed 818/906 files processed 819/906 files processed 820/906 files processed 821/906 files processed 822/906 files processed 823/906 files processed 824/906 files processed 825/906 files processed 826/906 files processed 827/906 files processed 828/906 files processed 829/906 files processed 830/906 files processed 831/906 files processed 832/906 files processed 833/906 files processed 834/906 files processed 835/906 files processed 836/906 files processed 837/906 files processed 838/906 files processed 839/906 files processed 840/906 files processed 841/906 files processed 842/906 files processed 843/906 files processed 844/906 files processed 845/906 files processed 846/906 files processed 847/906 files processed 848/906 files processed 849/906 files processed 850/906 files processed 851/906 files processed 852/906 files processed 853/906 files processed 854/906 files processed 855/906 files processed 856/906 files processed 857/906 files processed 858/906 files processed 859/906 files processed 860/906 files processed 861/906 files processed 862/906 files processed 863/906 files processed 864/906 files processed 865/906 files processed 866/906 files processed 867/906 files processed 868/906 files processed 869/906 files processed 870/906 files processed 871/906 files processed 872/906 files processed 873/906 files processed 874/906 files processed 875/906 files processed 876/906 files processed 877/906 files processed 878/906 files processed 879/906 files processed 880/906 files processed 881/906 files processed 882/906 files processed 883/906 files processed 884/906 files processed 885/906 files processed 886/906 files processed 887/906 files processed 888/906 files processed 889/906 files processed 890/906 files processed 891/906 files processed 892/906 files processed 893/906 files processed 894/906 files processed 895/906 files processed 896/906 files processed 897/906 files processed 898/906 files processed 899/906 files processed 900/906 files processed 901/906 files processed 902/906 files processed 903/906 files processed 904/906 files processed 905/906 files processedProcessing controllers...     
+ 0/114 files processed 1/114 files processed 2/114 files processed 3/114 files processed 4/114 files processed 5/114 files processed 6/114 files processed 7/114 files processed 8/114 files processed 9/114 files processed 10/114 files processed 11/114 files processed 12/114 files processed 13/114 files processed 14/114 files processed 15/114 files processed 16/114 files processed 17/114 files processed 18/114 files processed 19/114 files processed 20/114 files processed 21/114 files processed 22/114 files processed 23/114 files processed 24/114 files processed 25/114 files processed 26/114 files processed 27/114 files processed 28/114 files processed 29/114 files processed 30/114 files processed 31/114 files processed 32/114 files processed 33/114 files processed 34/114 files processed 35/114 files processed 36/114 files processed 37/114 files processed 38/114 files processed 39/114 files processed 40/114 files processed 41/114 files processed 42/114 files processed 43/114 files processed 44/114 files processed 45/114 files processed 46/114 files processed 47/114 files processed 48/114 files processed 49/114 files processed 50/114 files processed 51/114 files processed 52/114 files processed 53/114 files processed 54/114 files processed 55/114 files processed 56/114 files processed 57/114 files processed 58/114 files processed 59/114 files processed 60/114 files processed 61/114 files processed 62/114 files processed 63/114 files processed 64/114 files processed 65/114 files processed 66/114 files processed 67/114 files processed 68/114 files processed 69/114 files processed 70/114 files processed 71/114 files processed 72/114 files processed 73/114 files processed 74/114 files processed 75/114 files processed 76/114 files processed 77/114 files processed 78/114 files processed 79/114 files processed 80/114 files processed 81/114 files processed 82/114 files processed 83/114 files processed 84/114 files processed 85/114 files processed 86/114 files processed 87/114 files processed 88/114 files processed 89/114 files processed 90/114 files processed 91/114 files processed 92/114 files processed 93/114 files processed 94/114 files processed 95/114 files processed 96/114 files processed 97/114 files processed 98/114 files processed 99/114 files processed 100/114 files processed 101/114 files processed 102/114 files processed 103/114 files processed 104/114 files processed 105/114 files processed 106/114 files processed 107/114 files processed 108/114 files processed 109/114 files processed 110/114 files processed 111/114 files processed 112/114 files processed 113/114 files processedProcessing data flow in controllers...
+ 0/71 controllers processed 1/71 controllers processed 2/71 controllers processed 3/71 controllers processed 4/71 controllers processed 5/71 controllers processed 6/71 controllers processed 7/71 controllers processed 8/71 controllers processed 9/71 controllers processed 10/71 controllers processed 11/71 controllers processed 12/71 controllers processed 13/71 controllers processed 14/71 controllers processed 15/71 controllers processed 16/71 controllers processed 17/71 controllers processed 18/71 controllers processed 19/71 controllers processed 20/71 controllers processed 21/71 controllers processed 22/71 controllers processed 23/71 controllers processed 24/71 controllers processed 25/71 controllers processed 26/71 controllers processed 27/71 controllers processed 28/71 controllers processed 29/71 controllers processed 30/71 controllers processed 31/71 controllers processed 32/71 controllers processed 33/71 controllers processed 34/71 controllers processed 35/71 controllers processed 36/71 controllers processed 37/71 controllers processed 38/71 controllers processed 39/71 controllers processed 40/71 controllers processed 41/71 controllers processed 42/71 controllers processed 43/71 controllers processed 44/71 controllers processed 45/71 controllers processed 46/71 controllers processed 47/71 controllers processed 48/71 controllers processed 49/71 controllers processed 50/71 controllers processed 51/71 controllers processed 52/71 controllers processed 53/71 controllers processed 54/71 controllers processed 55/71 controllers processed 56/71 controllers processed 57/71 controllers processed 58/71 controllers processed 59/71 controllers processed 60/71 controllers processed 61/71 controllers processed 62/71 controllers processed 63/71 controllers processed 64/71 controllers processed 65/71 controllers processed 66/71 controllers processed 67/71 controllers processed 68/71 controllers processed 69/71 controllers processed 70/71 controllers processedIndexing call sites...        
+Running checks in parallel...
+ - CheckBasicAuth
+ - CheckBasicAuthTimingAttack
+ - CheckCrossSiteScripting
+ - CheckContentTag
+ - CheckCreateWith
+ - CheckDefaultRoutes
+ - CheckDeserialize
+ - CheckDetailedExceptions
+ - CheckDigestDoS
+ - CheckDynamicFinders
+ - CheckEscapeFunction
+ - CheckEvaluation
+ - CheckExecute
+ - CheckFileAccess
+ - CheckFileDisclosure
+ - CheckFilterSkipping
+ - CheckForgerySetting
+ - CheckHeaderDoS
+ - CheckI18nXSS
+ - CheckJRubyXML
+ - CheckJSONEncoding
+ - CheckJSONParsing
+ - CheckLinkTo
+ - CheckLinkToHref
+ - CheckMailTo
+ - CheckMassAssignment
+ - CheckMimeTypeDoS
+ - CheckModelAttrAccessible
+ - CheckModelAttributes
+ - CheckModelSerialize
+ - CheckNestedAttributes
+ - CheckNestedAttributesBypass
+ - CheckNumberToCurrency
+ - CheckQuoteTableName
+ - CheckRedirect
+ - CheckRegexDoS
+ - CheckRender
+ - CheckRenderDoS
+ - CheckRenderInline
+ - CheckResponseSplitting
+ - CheckRouteDoS
+ - CheckSafeBufferManipulation
+ - CheckSanitizeMethods
+ - CheckSelectTag
+ - CheckSelectVulnerability
+ - CheckSend
+ - CheckSendFile
+ - CheckSessionManipulation
+ - CheckSessionSettings
+ - CheckSimpleFormat
+ - CheckSingleQuotes
+ - CheckSkipBeforeFilter
+ - CheckSQL
+ - CheckSQLCVEs
+ - CheckSSLVerify
+ - CheckStripTags
+ - CheckSymbolDoSCVE
+ - CheckTranslateBug
+ - CheckUnsafeReflection
+ - CheckValidationRegex
+ - CheckWithoutProtection
+ - CheckXMLDoS
+ - CheckYAMLParsing
+Checks finished, collecting results...
+Filtering warnings...
+[Notice] Using '/home/travis/build/ManageIQ/manageiq/config/brakeman.ignore' to filter warnings
+Generating report...
+
++BRAKEMAN REPORT+
+
+Application path: /home/travis/build/ManageIQ/manageiq
+Rails version: 5.0.3
+Brakeman version: 3.6.2
+Started at 2017-06-07 09:12:22 +0000
+Duration: 26.9036113 seconds
+Checks run: BasicAuth, BasicAuthTimingAttack, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing
+
+
++SUMMARY+
+
++-------------------+-------+
+| Scanned/Reported  | Total |
++-------------------+-------+
+| Controllers       | 71    |
+| Models            | 611   |
+| Templates         | 0     |
+| Errors            | 0     |
+| Security Warnings | 0 (0) |
+| Ignored Warnings  | 5     |
++-------------------+-------+
+
+
+
+
+travis_time:end:06ce25b5:start=1496826738021880900,finish=1496826769390928559,duration=31369047659
+The command "bundle exec rake test:$TEST_SUITE" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:0677213c
+travis_time:end:0677213c:start=1496826770008304617,finish=1496826770013811903,duration=5507286travis_time:start:14457dd8change detected (content changed, file is created, or file is deleted):
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/amazon_ssa_support-b7cf88e54885/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/font-fabulous-01b2704e79e2/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/foreman_api_client-1cdf102c9331/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/handsoap-b1247a733ca3/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/jquery-rjs-ded3d28d0049/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/manageiq-automation_engine-0f8c8a48f536/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/manageiq-content-706f32ca26b7/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/gems/manageiq-gems-pending-4a639b96ec73/.git/index
+/home/travis/build/ManageIQ/manageiq/vendor/bundle/ruby/2.3.0/bundler/g
+
+...
+
+changes detected, packing new archive
+.
+.
+.
+.
+.
+uploading archive
+
+travis_time:end:14457dd8:start=1496826770019418503,finish=1496826809843929796,duration=39824511293travis_fold:end:cache.2
+Done. Your build exited with 0.

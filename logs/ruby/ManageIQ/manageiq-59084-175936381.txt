@@ -1,0 +1,557 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-0e7aacd-precise-production-2-worker-org-docker.travisci.net:c73aac21-002c-44e8-a31a-d53124452e6b
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 0ebb347:travis:ruby
+startup: 2.855424915s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 240286166
+Job id: 240286168
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (33.5 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             62% [2 libssl1.0.0 49.2 kB/1,054 kB 5%]                                       100% [Working]              Fetched 2,634 kB in 0s (16.0 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:04337099$ git clone --depth=50 https://github.com/ManageIQ/manageiq.git ManageIQ/manageiq
+Cloning into 'ManageIQ/manageiq'...
+remote: Counting objects: 100754, done.[K
+remote: Compressing objects:   0% (1/33843)   [Kremote: Compressing objects:   1% (339/33843)   [Kremote: Compressing objects:   2% (677/33843)   [Kremote: Compressing objects:   2% (956/33843)   [Kremote: Compressing objects:   3% (1016/33843)   [Kremote: Compressing objects:   4% (1354/33843)   [Kremote: Compressing objects:   4% (1692/33843)   [Kremote: Compressing objects:   5% (1693/33843)   [Kremote: Compressing objects:   6% (2031/33843)   [Kremote: Compressing objects:   7% (2370/33843)   [Kremote: Compressing objects:   8% (2708/33843)   [Kremote: Compressing objects:   9% (3046/33843)   [Kremote: Compressing objects:  10% (3385/33843)   [Kremote: Compressing objects:  11% (3723/33843)   [Kremote: Compressing objects:  12% (4062/33843)   [Kremote: Compressing objects:  13% (4400/33843)   [Kremote: Compressing objects:  14% (4739/33843)   [Kremote: Compressing objects:  15% (5077/33843)   [Kremote: Compressing objects:  16% (5415/33843)   [Kremote: Compressing objects:  17% (5754/33843)   [Kremote: Compressing objects:  18% (6092/33843)   [Kremote: Compressing objects:  19% (6431/33843)   [Kremote: Compressing objects:  20% (6769/33843)   [Kremote: Compressing objects:  21% (7108/33843)   [Kremote: Compressing objects:  22% (7446/33843)   [Kremote: Compressing objects:  23% (7784/33843)   [Kremote: Compressing objects:  24% (8123/33843)   [Kremote: Compressing objects:  24% (8149/33843)   [Kremote: Compressing objects:  25% (8461/33843)   [Kremote: Compressing objects:  26% (8800/33843)   [Kremote: Compressing objects:  27% (9138/33843)   [Kremote: Compressing objects:  28% (9477/33843)   [Kremote: Compressing objects:  29% (9815/33843)   [Kremote: Compressing objects:  30% (10153/33843)   [Kremote: Compressing objects:  31% (10492/33843)   [Kremote: Compressing objects:  32% (10830/33843)   [Kremote: Compressing objects:  33% (11169/33843)   [Kremote: Compressing objects:  34% (11507/33843)   [Kremote: Compressing objects:  35% (11846/33843)   [Kremote: Compressing objects:  36% (12184/33843)   [Kremote: Compressing objects:  37% (12522/33843)   [Kremote: Compressing objects:  38% (12861/33843)   [Kremote: Compressing objects:  39% (13199/33843)   [Kremote: Compressing objects:  40% (13538/33843)   [Kremote: Compressing objects:  41% (13876/33843)   [Kremote: Compressing objects:  42% (14215/33843)   [Kremote: Compressing objects:  43% (14553/33843)   [Kremote: Compressing objects:  44% (14891/33843)   [Kremote: Compressing objects:  45% (15230/33843)   [Kremote: Compressing objects:  46% (15568/33843)   [Kremote: Compressing objects:  47% (15907/33843)   [Kremote: Compressing objects:  48% (16245/33843)   [Kremote: Compressing objects:  49% (16584/33843)   [Kremote: Compressing objects:  50% (16922/33843)   [Kremote: Compressing objects:  51% (17260/33843)   [Kremote: Compressing objects:  52% (17599/33843)   [Kremote: Compressing objects:  53% (17937/33843)   [Kremote: Compressing objects:  54% (18276/33843)   [Kremote: Compressing objects:  55% (18614/33843)   [Kremote: Compressing objects:  56% (18953/33843)   [Kremote: Compressing objects:  57% (19291/33843)   [Kremote: Compressing objects:  58% (19629/33843)   [Kremote: Compressing objects:  59% (19968/33843)   [Kremote: Compressing objects:  60% (20306/33843)   [Kremote: Compressing objects:  61% (20645/33843)   [Kremote: Compressing objects:  62% (20983/33843)   [Kremote: Compressing objects:  63% (21322/33843)   [Kremote: Compressing objects:  64% (21660/33843)   [Kremote: Compressing objects:  65% (21998/33843)   [Kremote: Compressing objects:  66% (22337/33843)   [Kremote: Compressing objects:  67% (22675/33843)   [Kremote: Compressing objects:  68% (23014/33843)   [Kremote: Compressing objects:  68% (23336/33843)   [Kremote: Compressing objects:  69% (23352/33843)   [Kremote: Compressing objects:  70% (23691/33843)   [Kremote: Compressing objects:  71% (24029/33843)   [Kremote: Compressing objects:  72% (24367/33843)   [Kremote: Compressing objects:  73% (24706/33843)   [Kremote: Compressing objects:  74% (25044/33843)   [Kremote: Compressing objects:  75% (25383/33843)   [Kremote: Compressing objects:  76% (25721/33843)   [Kremote: Compressing objects:  77% (26060/33843)   [Kremote: Compressing objects:  78% (26398/33843)   [Kremote: Compressing objects:  79% (26736/33843)   [Kremote: Compressing objects:  80% (27075/33843)   [Kremote: Compressing objects:  81% (27413/33843)   [Kremote: Compressing objects:  82% (27752/33843)   [Kremote: Compressing objects:  83% (28090/33843)   [Kremote: Compressing objects:  84% (28429/33843)   [Kremote: Compressing objects:  85% (28767/33843)   [Kremote: Compressing objects:  86% (29105/33843)   [Kremote: Compressing objects:  87% (29444/33843)   [Kremote: Compressing objects:  88% (29782/33843)   [Kremote: Compressing objects:  89% (30121/33843)   [Kremote: Compressing objects:  90% (30459/33843)   [Kremote: Compressing objects:  91% (30798/33843)   [Kremote: Compressing objects:  92% (31136/33843)   [Kremote: Compressing objects:  93% (31474/33843)   [Kremote: Compressing objects:  94% (31813/33843)   [Kremote: Compressing objects:  95% (32151/33843)   [Kremote: Compressing objects:  96% (32490/33843)   [Kremote: Compressing objects:  97% (32828/33843)   [Kremote: Compressing objects:  98% (33167/33843)   [Kremote: Compressing objects:  99% (33505/33843)   [Kremote: Compressing objects: 100% (33843/33843)   [Kremote: Compressing objects: 100% (33843/33843), done.[K
+Receiving objects:   0% (1/100754)   Receiving objects:   1% (1008/100754)   Receiving objects:   2% (2016/100754)   Receiving objects:   3% (3023/100754)   Receiving objects:   4% (4031/100754)   Receiving objects:   5% (5038/100754)   Receiving objects:   6% (6046/100754)   Receiving objects:   7% (7053/100754)   Receiving objects:   8% (8061/100754)   Receiving objects:   9% (9068/100754)   Receiving objects:  10% (10076/100754)   Receiving objects:  11% (11083/100754)   Receiving objects:  12% (12091/100754)   Receiving objects:  13% (13099/100754)   Receiving objects:  14% (14106/100754)   Receiving objects:  15% (15114/100754)   Receiving objects:  16% (16121/100754)   Receiving objects:  17% (17129/100754)   Receiving objects:  18% (18136/100754)   Receiving objects:  19% (19144/100754)   Receiving objects:  20% (20151/100754)   Receiving objects:  21% (21159/100754)   Receiving objects:  22% (22166/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  23% (23174/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  24% (24181/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  25% (25189/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  26% (26197/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  27% (27204/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  28% (28212/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  29% (29219/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  30% (30227/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  31% (31234/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  31% (31437/100754), 9.35 MiB | 18.65 MiB/s   Receiving objects:  32% (32242/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  33% (33249/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  34% (34257/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  35% (35264/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  36% (36272/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  37% (37279/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  38% (38287/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  39% (39295/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  40% (40302/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  41% (41310/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  42% (42317/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  43% (43325/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  44% (44332/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  45% (45340/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  46% (46347/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  47% (47355/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  48% (48362/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  49% (49370/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  50% (50377/100754), 17.35 MiB | 17.31 MiB/s   Receiving objects:  51% (51385/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  52% (52393/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  53% (53400/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  54% (54408/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  55% (55415/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  56% (56423/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  57% (57430/100754), 28.06 MiB | 18.67 MiB/s   Receiving objects:  57% (57638/100754), 36.16 MiB | 18.04 MiB/s   Receiving objects:  57% (57814/100754), 47.04 MiB | 18.77 MiB/s   Receiving objects:  58% (58438/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  59% (59445/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  60% (60453/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  61% (61460/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  62% (62468/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  63% (63476/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  64% (64483/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  65% (65491/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  66% (66498/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  67% (67506/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  68% (68513/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  69% (69521/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  70% (70528/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  71% (71536/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  72% (72543/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  73% (73551/100754), 58.19 MiB | 19.35 MiB/s   Receiving objects:  74% (74558/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  75% (75566/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  76% (76574/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  77% (77581/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  78% (78589/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  79% (79596/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  80% (80604/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  81% (81611/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  82% (82619/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  83% (83626/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  84% (84634/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  85% (85641/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  86% (86649/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  87% (87656/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  88% (88664/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  89% (89672/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  90% (90679/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  91% (91687/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  92% (92694/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  93% (93702/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  94% (94709/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  95% (95717/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  96% (96724/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  97% (97732/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  98% (98739/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects:  99% (99747/100754), 70.15 MiB | 20.00 MiB/s   remote: Total 100754 (delta 69234), reused 90046 (delta 62324), pack-reused 0[K
+Receiving objects: 100% (100754/100754), 70.15 MiB | 20.00 MiB/s   Receiving objects: 100% (100754/100754), 78.09 MiB | 20.00 MiB/s, done.
+Resolving deltas:   0% (0/69234)   Resolving deltas:   1% (713/69234)   Resolving deltas:   2% (1390/69234)   Resolving deltas:   3% (2080/69234)   Resolving deltas:   4% (2772/69234)   Resolving deltas:   5% (3462/69234)   Resolving deltas:   6% (4155/69234)   Resolving deltas:   7% (4856/69234)   Resolving deltas:   8% (5628/69234)   Resolving deltas:   9% (6244/69234)   Resolving deltas:  10% (6939/69234)   Resolving deltas:  11% (7686/69234)   Resolving deltas:  12% (8314/69234)   Resolving deltas:  13% (9004/69234)   Resolving deltas:  14% (9719/69234)   Resolving deltas:  15% (10390/69234)   Resolving deltas:  16% (11138/69234)   Resolving deltas:  17% (11773/69234)   Resolving deltas:  18% (12467/69234)   Resolving deltas:  19% (13157/69234)   Resolving deltas:  20% (14039/69234)   Resolving deltas:  21% (14570/69234)   Resolving deltas:  22% (15236/69234)   Resolving deltas:  23% (16136/69234)   Resolving deltas:  24% (16649/69234)   Resolving deltas:  25% (17312/69234)   Resolving deltas:  26% (18010/69234)   Resolving deltas:  27% (18697/69234)   Resolving deltas:  28% (19784/69234)   Resolving deltas:  29% (20080/69234)   Resolving deltas:  30% (20849/69234)   Resolving deltas:  31% (21468/69234)   Resolving deltas:  32% (22156/69234)   Resolving deltas:  33% (22898/69234)   Resolving deltas:  34% (23553/69234)   Resolving deltas:  35% (24409/69234)   Resolving deltas:  36% (24993/69234)   Resolving deltas:  37% (25617/69234)   Resolving deltas:  38% (26333/69234)   Resolving deltas:  38% (26463/69234)   Resolving deltas:  39% (27021/69234)   Resolving deltas:  40% (27698/69234)   Resolving deltas:  41% (28405/69234)   Resolving deltas:  42% (29081/69234)   Resolving deltas:  43% (29777/69234)   Resolving deltas:  44% (30481/69234)   Resolving deltas:  45% (31164/69234)   Resolving deltas:  46% (31853/69234)   Resolving deltas:  47% (32540/69234)   Resolving deltas:  48% (33243/69234)   Resolving deltas:  49% (33956/69234)   Resolving deltas:  50% (34622/69234)   Resolving deltas:  51% (35314/69234)   Resolving deltas:  52% (36046/69234)   Resolving deltas:  53% (36695/69234)   Resolving deltas:  54% (37392/69234)   Resolving deltas:  55% (38079/69234)   Resolving deltas:  56% (38839/69234)   Resolving deltas:  57% (39470/69234)   Resolving deltas:  58% (40169/69234)   Resolving deltas:  59% (40855/69234)   Resolving deltas:  60% (41542/69234)   Resolving deltas:  61% (42245/69234)   Resolving deltas:  62% (42980/69234)   Resolving deltas:  63% (43620/69234)   Resolving deltas:  64% (44311/69234)   Resolving deltas:  65% (45003/69234)   Resolving deltas:  66% (45695/69234)   Resolving deltas:  67% (46406/69234)   Resolving deltas:  68% (47088/69234)   Resolving deltas:  69% (47817/69234)   Resolving deltas:  70% (48625/69234)   Resolving deltas:  71% (49163/69234)   Resolving deltas:  72% (49894/69234)   Resolving deltas:  72% (50139/69234)   Resolving deltas:  73% (50859/69234)   Resolving deltas:  74% (51236/69234)   Resolving deltas:  75% (51957/69234)   Resolving deltas:  76% (52656/69234)   Resolving deltas:  77% (53373/69234)   Resolving deltas:  78% (54198/69234)   Resolving deltas:  79% (54752/69234)   Resolving deltas:  80% (55390/69234)   Resolving deltas:  81% (56174/69234)   Resolving deltas:  82% (56780/69234)   Resolving deltas:  83% (57465/69234)   Resolving deltas:  84% (58541/69234)   Resolving deltas:  85% (58866/69234)   Resolving deltas:  86% (59542/69234)   Resolving deltas:  87% (60310/69234)   Resolving deltas:  88% (60926/69234)   Resolving deltas:  89% (61631/69234)   Resolving deltas:  90% (62312/69234)   Resolving deltas:  91% (63003/69234)   Resolving deltas:  92% (63700/69234)   Resolving deltas:  93% (64396/69234)   Resolving deltas:  94% (65163/69234)   Resolving deltas:  95% (65773/69234)   Resolving deltas:  96% (66467/69234)   Resolving deltas:  97% (67164/69234)   Resolving deltas:  98% (67851/69234)   Resolving deltas:  99% (68544/69234)   Resolving deltas: 100% (69234/69234)   Resolving deltas: 100% (69234/69234), done.
+Checking connectivity... done.
+
+travis_time:end:04337099:start=1496826660086538323,finish=1496826675216519161,duration=15129980838$ cd ManageIQ/manageiq
+travis_time:start:08988dfe$ git fetch origin +refs/pull/15329/merge:
+remote: Counting objects: 7, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 7 (delta 5), reused 6 (delta 5), pack-reused 0[K
+Unpacking objects:  14% (1/7)   Unpacking objects:  28% (2/7)   Unpacking objects:  42% (3/7)   Unpacking objects:  57% (4/7)   Unpacking objects:  71% (5/7)   Unpacking objects:  85% (6/7)   Unpacking objects: 100% (7/7)   Unpacking objects: 100% (7/7), done.
+From https://github.com/ManageIQ/manageiq
+ * branch            refs/pull/15329/merge -> FETCH_HEAD
+
+travis_time:end:08988dfe:start=1496826675226858071,finish=1496826675824591603,duration=597733532$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkouttravis_fold:start:postgresqlStarting PostgreSQL v9.4
+travis_time:start:03021c02$ sudo service postgresql stop
+ * Stopping PostgreSQL 9.1 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.2 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.3 database server       G G[ OK ]
+ * Stopping PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:03021c02:start=1496826675937564653,finish=1496826677299817013,duration=1362252360travis_time:start:2183803b$ sudo service postgresql start 9.4
+ * Starting PostgreSQL 9.4 database server       G G[ OK ]
+
+travis_time:end:2183803b:start=1496826677305140619,finish=1496826679535226882,duration=2230086263travis_time:start:009ad6ac$ sudo -u postgres createuser -s -p 5432 travis &>/dev/null
+
+travis_time:end:009ad6ac:start=1496826679539799568,finish=1496826679607005463,duration=67205895travis_time:start:05e22766$ sudo -u postgres createdb -O travis -p 5432 travis &>/dev/null
+
+travis_time:end:05e22766:start=1496826679611445328,finish=1496826679877744225,duration=266298897travis_time:start:09b01c98$ sudo -u postgres createuser -s -p 5433 travis &>/dev/null
+
+travis_time:end:09b01c98:start=1496826679882111679,finish=1496826679927055487,duration=44943808travis_time:start:02128011$ sudo -u postgres createdb -O travis -p 5433 travis &>/dev/null
+
+travis_time:end:02128011:start=1496826679931692206,finish=1496826679975469156,duration=43776950travis_fold:end:postgresql
+Encrypted environment variables have been removed for security reasons.
+See https://docs.travis-ci.com/user/pull-requests/#Pull-Requests-and-Security-Restrictions
+
+Setting environment variables from .travis.yml
+$ export RUBY_GC_HEAP_GROWTH_MAX_SLOTS=300000
+$ export RUBY_GC_HEAP_INIT_SLOTS=600000
+$ export RUBY_GC_HEAP_GROWTH_FACTOR=1.25
+$ export PARALLEL_TEST_PROCESSORS=2
+$ export TEST_SUITE=migrations
+
+travis_fold:start:rvmtravis_time:start:014aaad8$ rvm use 2.3.1 --install --binary --fuzzy
+ruby-2.3.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.3.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.3.1 - #configure
+ruby-2.3.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 68 23.0M   68 15.6M    0     0  90.3M      0 --:--:-- --:--:-- --:--:-- 91.5M100 23.0M  100 23.0M    0     0  91.4M      0 --:--:-- --:--:-- --:--:-- 92.3M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.3.1 - #validate archive
+ruby-2.3.1 - #extract
+ruby-2.3.1 - #validate binary
+ruby-2.3.1 - #setup
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1@global
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.3.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.3.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.3.1 - #gemset created /home/travis/.rvm/gems/ruby-2.3.1
+ruby-2.3.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.3.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.3.1
+
+travis_time:end:014aaad8:start=1496826685799385842,finish=1496826706945842111,duration=21146456269travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:2d90dda0$ Installing caching utilities
+
+travis_time:end:2d90dda0:start=1496826707339393899,finish=1496826707383045678,duration=43651779travis_time:start:0e2a675a
+travis_time:end:0e2a675a:start=1496826707389006832,finish=1496826707393913741,duration=4906909travis_time:start:27c0c393attempting to download cache archive
+fetching PR.15329/cache-linux-precise-d93f6b8e34123bcaad3399fa3a03f32b702d5cb640d24695462a48e3c2ac3b6b--rvm-2.3.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:27c0c393:start=1496826707399400585,finish=1496826714011898402,duration=6612497817travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:15e0eb00
+travis_time:end:15e0eb00:start=1496826714017403751,finish=1496826714021574625,duration=4170874travis_time:start:1828cc4aadding /home/travis/build/ManageIQ/manageiq/vendor/bundle to cache
+creating directory /home/travis/build/ManageIQ/manageiq/vendor/bundle
+
+travis_time:end:1828cc4a:start=1496826714026430611,finish=1496826725811833544,duration=11785402933travis_fold:end:cache.bundler$ ruby --version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.5.1
+travis_fold:start:before_installtravis_time:start:0f5f1d2a$ source ${TRAVIS_BUILD_DIR}/tools/ci/before_install.sh
+
+source $TRAVIS_BUILD_DIR/tools/ci/setup_vmdb_configs.sh
+./tools/ci/setup_vmdb_configs.rb
+Copying /home/travis/build/ManageIQ/manageiq/certs/v2_key from template...
+Copying /home/travis/build/ManageIQ/manageiq/config/cable.yml from template...
+Copying /home/travis/build/ManageIQ/manageiq/config/database.yml from template...
+CREATE ROLE
+source $TRAVIS_BUILD_DIR/tools/ci/setup_ruby_env.sh
+./tools/ci/setup_ruby_environment.rb
+export BUNDLE_WITHOUT=development
+export BUNDLE_GEMFILE=${PWD}/Gemfile
+
+set +v
+
+travis_time:end:0f5f1d2a:start=1496826726323354894,finish=1496826726740007441,duration=416652547travis_fold:end:before_installtravis_fold:start:install.bundlertravis_time:start:135b4b24$ bundle install --jobs=3 --retry=3 --path=${BUNDLE_PATH:-vendor/bundle}
+Fetching https://github.com/ManageIQ/manageiq-gems-pending.git
+error: refs/heads/revert-100-armrest_version does not point to a valid object!
+error: refs/heads/revert-100-armrest_version does not point to a valid object!
+error: refs/heads/revert-100-armrest_version does not point to a valid object!
+Fetching https://github.com/ManageIQ/handsoap.git
+Fetching https://github.com/ManageIQ/manageiq-automation_engine
+Checking out files:  42% (360/841)   Checking out files:  43% (362/841)   Checking out files:  44% (371/841)   Checking out files:  45% (379/841)   Checking out files:  46% (387/841)   Checking out files:  47% (396/841)   Checking out files:  48% (404/841)   Checking out files:  49% (413/841)   Checking out files:  50% (421/841)   Checking out files:  51% (429/841)   Checking out files:  52% (438/841)   Checking out files:  53% (446/841)   Checking out files:  54% (455/841)   Checking out files:  55% (463/841)   Checking out files:  56% (471/841)   Checking out files:  57% (480/841)   Checking out files:  58% (488/841)   Checking out files:  59% (497/841)   Checking out files:  60% (505/841)   Checking out files:  61% (514/841)   Checking out files:  62% (522/841)   Checking out files:  63% (530/841)   Checking out files:  64% (539/841)   Checking out files:  65% (547/841)   Checking out files:  66% (556/841)   Checking out files:  67% (564/841)   Checking out files:  68% (572/841)   Checking out files:  69% (581/841)   Checking out files:  70% (589/841)   Checking out files:  71% (598/841)   Checking out files:  72% (606/841)   Checking out files:  73% (614/841)   Checking out files:  74% (623/841)   Checking out files:  75% (631/841)   Checking out files:  76% (640/841)   Checking out files:  77% (648/841)   Checking out files:  78% (656/841)   Checking out files:  79% (665/841)   Checking out files:  80% (673/841)   Checking out files:  81% (682/841)   Checking out files:  82% (690/841)   Checking out files:  83% (699/841)   Checking out files:  84% (707/841)   Checking out files:  85% (715/841)   Checking out files:  86% (724/841)   Checking out files:  87% (732/841)   Checking out files:  88% (741/841)   Checking out files:  89% (749/841)   Checking out files:  90% (757/841)   Checking out files:  91% (766/841)   Checking out files:  92% (774/841)   Checking out files:  93% (783/841)   Checking out files:  94% (791/841)   Checking out files:  95% (799/841)   Checking out files:  96% (808/841)   Checking out files:  97% (816/841)   Checking out files:  98% (825/841)   Checking out files:  99% (833/841)   Checking out files: 100% (841/841)   Checking out files: 100% (841/841), done.
+Fetching https://github.com/ManageIQ/manageiq-content
+Fetching https://github.com/ManageIQ/manageiq-providers-amazon
+Fetching https://github.com/ManageIQ/manageiq-providers-ansible_tower
+Fetching https://github.com/ManageIQ/manageiq-providers-azure
+Fetching https://github.com/ManageIQ/manageiq-providers-foreman
+Fetching https://github.com/ManageIQ/manageiq-providers-hawkular
+Fetching https://github.com/ManageIQ/manageiq-providers-google
+Fetching https://github.com/ManageIQ/manageiq-providers-kubernetes
+Fetching https://github.com/ManageIQ/manageiq-providers-lenovo
+Fetching https://github.com/ManageIQ/manageiq-providers-scvmm
+Fetching https://github.com/ManageIQ/manageiq-providers-openshift
+Fetching https://github.com/ManageIQ/manageiq-providers-openstack
+Fetching https://github.com/ManageIQ/manageiq-providers-ovirt
+Fetching https://github.com/ManageIQ/manageiq-providers-vmware
+Fetching https://github.com/ManageIQ/manageiq-ui-classic
+Checking out files:  31% (1241/3960)   Checking out files:  31% (1242/3960)   Checking out files:  32% (1268/3960)   Checking out files:  33% (1307/3960)   Checking out files:  34% (1347/3960)   Checking out files:  35% (1386/3960)   Checking out files:  36% (1426/3960)   Checking out files:  37% (1466/3960)   Checking out files:  38% (1505/3960)   Checking out files:  39% (1545/3960)   Checking out files:  40% (1584/3960)   Checking out files:  41% (1624/3960)   Checking out files:  42% (1664/3960)   Checking out files:  43% (1703/3960)   Checking out files:  44% (1743/3960)   Checking out files:  45% (1782/3960)   Checking out files:  46% (1822/3960)   Checking out files:  47% (1862/3960)   Checking out files:  48% (1901/3960)   Checking out files:  49% (1941/3960)   Checking out files:  50% (1980/3960)   Checking out files:  51% (2020/3960)   Checking out files:  52% (2060/3960)   Checking out files:  53% (2099/3960)   Checking out files:  54% (2139/3960)   Checking out files:  55% (2178/3960)   Checking out files:  56% (2218/3960)   Checking out files:  57% (2258/3960)   Checking out files:  58% (2297/3960)   Checking out files:  59% (2337/3960)   Checking out files:  60% (2376/3960)   Checking out files:  61% (2416/3960)   Checking out files:  62% (2456/3960)   Checking out files:  63% (2495/3960)   Checking out files:  64% (2535/3960)   Checking out files:  65% (2574/3960)   Checking out files:  66% (2614/3960)   Checking out files:  67% (2654/3960)   Checking out files:  68% (2693/3960)   Checking out files:  69% (2733/3960)   Checking out files:  70% (2772/3960)   Checking out files:  71% (2812/3960)   Checking out files:  72% (2852/3960)   Checking out files:  73% (2891/3960)   Checking out files:  74% (2931/3960)   Checking out files:  75% (2970/3960)   Checking out files:  76% (3010/3960)   Checking out files:  77% (3050/3960)   Checking out files:  78% (3089/3960)   Checking out files:  79% (3129/3960)   Checking out files:  80% (3168/3960)   Checking out files:  81% (3208/3960)   Checking out files:  82% (3248/3960)   Checking out files:  83% (3287/3960)   Checking out files:  84% (3327/3960)   Checking out files:  85% (3366/3960)   Checking out files:  86% (3406/3960)   Checking out files:  87% (3446/3960)   Checking out files:  88% (3485/3960)   Checking out files:  89% (3525/3960)   Checking out files:  90% (3564/3960)   Checking out files:  91% (3604/3960)   Checking out files:  92% (3644/3960)   Checking out files:  93% (3683/3960)   Checking out files:  94% (3723/3960)   Checking out files:  95% (3762/3960)   Checking out files:  96% (3802/3960)   Checking out files:  97% (3842/3960)   Checking out files:  98% (3881/3960)   Checking out files:  99% (3921/3960)   Checking out files: 100% (3960/3960)   Checking out files: 100% (3960/3960), done.
+Fetching https://github.com/ManageIQ/amazon_ssa_support.git
+Fetching https://github.com/ManageIQ/foreman_api_client.git
+Fetching https://github.com/ManageIQ/ruport.git
+Fetching https://github.com/ManageIQ/font-fabulous.git
+Fetching https://github.com/ManageIQ/jquery-rjs.git
+Fetching gem metadata from https://rubygems.org/......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies.........
+Using rake 11.3.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.4
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 2.0.3
+Using arel 7.1.4
+Using addressable 2.4.0
+Using awesome_spawn 1.4.1
+Using bcrypt 3.1.11
+Using binary_struct 2.1.0
+Using bundler 1.15.1
+Using highline 1.6.21
+Using inifile 3.0.0
+Using net-ssh 3.2.0
+Using ffi 1.9.18
+Using log4r 1.1.8
+Using memoist 0.15.0
+Using pg 0.18.4
+Using pg-dsn_parser 0.1.0
+Using psych 2.0.17
+Using rubyzip 1.2.1
+Using sys-proctable 1.1.4 (universal-linux)
+Using trollop 2.1.2
+Using uuidtools 2.1.5
+Using httpclient 2.7.2
+Using little-plugger 1.1.4
+Using multi_json 1.12.1
+Using nori 2.6.0
+Using rubyntlm 0.6.2
+Using socksify 1.7.1
+Using aws-sigv4 1.0.0
+Using jmespath 1.3.1
+Using manageiq-providers-ansible_tower 0.1.0 from https://github.com/ManageIQ/manageiq-providers-ansible_tower (at master@d832980)
+Using json 2.0.4
+Using parallel 1.9.0
+Using unf_ext 0.0.7.4
+Using mime-types 2.6.2
+Using netrc 0.11.0
+Using manageiq-providers-foreman 0.1.0 from https://github.com/ManageIQ/manageiq-providers-foreman (at master@1a92575)
+Using event_emitter 0.2.5
+Using websocket 1.2.4
+Using excon 0.56.0
+Using formatador 0.2.5
+Using extlib 0.9.16
+Using multipart-post 2.0.0
+Using jwt 1.5.6
+Using os 0.9.6
+Using retriable 1.4.1
+Using recursive-open-struct 1.0.0
+Using http-form_data 1.0.3
+Using http_parser.rb 0.6.0
+Using systemu 2.6.5
+Using manageiq-providers-scvmm 0.1.0 from https://github.com/ManageIQ/manageiq-providers-scvmm (at master@7acce03)
+Using amq-protocol 2.2.0
+Using ipaddress 0.8.3
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using high_voltage 3.0.0
+Using sass 3.4.24
+Using nio4r 2.1.0
+Using websocket-extensions 0.1.2
+Using tilt 2.0.7
+Using color 1.8
+Using deep_merge 1.1.1
+Using dalli 2.7.6
+Using elif 0.1.0
+Using fast_gettext 1.2.0
+Using locale 2.1.2
+Using text 1.3.1
+Using temple 0.7.7
+Using hashie 3.4.6
+Using htauth 2.0.0
+Using net-ping 1.7.8
+Using iniparse 1.4.3
+Using linux_block_device 0.2.1
+Using memory_buffer 0.1.0
+Using rufus-lru 1.0.7
+Using nakayoshi_fork 0.0.3
+Using net-ldap 0.14.0
+Using multi_xml 0.6.0
+Using open4 1.3.4
+Using puma 3.3.0
+Using sexp_processor 4.4.5
+Using ruby-dbus 0.13.0
+Using ruby-progressbar 1.7.5
+Using rufus-scheduler 3.1.10
+Using rugged 0.25.0b10
+Using useragent 0.16.8
+Using simple-rss 1.3.1
+Using snmp 1.2.0
+Using sshkey 1.8.0
+Using daemons 1.2.4
+Using eventmachine 1.2.3
+Using oauth 0.5.3
+Using transaction-simple 1.4.0.2
+Using american_date 1.1.1
+Using font-fabulous 0.0.1 from https://github.com/ManageIQ/font-fabulous.git (at master@01b2704)
+Using brakeman 3.6.2
+Using docile 1.1.5
+Using simplecov-html 0.10.1
+Using tins 1.14.0
+Using sqlite3 1.3.13
+Using timecop 0.7.4
+Using vcr 3.0.3
+Using safe_yaml 1.0.4
+Using hashdiff 0.3.4
+Using rspec-support 3.6.0
+Using diff-lcs 1.3
+Using tzinfo 1.2.3
+Using gyoku 1.3.1
+Using nokogiri 1.7.2
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using azure-signature 0.2.3
+Using launchy 2.4.3
+Using net-scp 1.2.1
+Using net-sftp 2.1.2
+Using openscap 0.4.7
+Using sys-uname 1.0.3
+Using gssapi 1.2.0
+Using ffi-vix_disk_lib 1.0.3
+Using manageiq-automation_engine 0.1.0 from https://github.com/ManageIQ/manageiq-automation_engine (at master@0f8c8a4)
+Using logging 2.2.2
+Using httpi 2.4.2
+Using aws-sdk-core 2.9.32
+Using po_to_json 1.0.1
+Using ovirt-engine-sdk 4.1.7
+Using parallel_tests 2.14.1
+Using unf 0.1.4
+Using mail 2.6.5
+Using websocket-client-simple 0.3.0
+Using fog-core 1.44.3
+Using autoparse 0.3.3
+Using faraday 0.9.2
+Using macaddr 1.7.1
+Using bunny 2.1.0
+Using coffee-script 2.4.1
+Using autoprefixer-rails 7.1.1
+Using uglifier 3.0.4
+Using font-awesome-sass 4.6.2
+Using websocket-driver 0.6.5
+Using gettext_i18n_rails 1.7.2
+Using gettext 3.2.2
+Using hamlit 2.7.5
+Using omniauth 1.3.2
+Using ripper_ruby_parser 1.0.0
+Using secure_headers 3.0.3
+Using thin 1.7.0
+Using pdf-writer 1.1.8
+Using simplecov 0.14.1
+Using term-ansicolor 1.6.0
+Using crack 0.4.3
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using activesupport 5.0.3
+Using loofah 2.0.3
+Using handsoap 0.2.5 from https://github.com/ManageIQ/handsoap.git (at v0.2.5-5@b1247a7)
+Using akami 1.3.1
+Using rbvmomi 1.9.5
+Using xpath 2.1.0
+Using winrm 2.2.3
+Using wasabi 3.5.0
+Using aws-sdk-resources 2.9.32
+Using domain_name 0.5.20170404
+Using fog-json 1.0.2
+Using fog-xml 0.1.3
+Using signet 0.7.3
+Using faraday_middleware 0.10.1
+Using oauth2 1.3.1
+Using uuid 2.3.8
+Using bootstrap-sass 3.3.7
+Using ruport 1.7.0 from https://github.com/ManageIQ/ruport.git (at v1.7.0-3@3727775)
+Using coveralls 0.8.21
+Using webmock 2.3.2
+Using rails-dom-testing 2.0.3
+Using activemodel 5.0.3
+Using more_core_extensions 3.2.0
+Using globalid 0.4.0
+Using config 1.3.0
+Using jbuilder 2.5.0
+Using factory_girl 4.5.0
+Using rails-html-sanitizer 1.0.3
+Using vmware_web_service 0.1.1
+Using capybara 2.5.0
+Using winrm-fs 1.0.1
+Using savon 2.11.1
+Using aws-sdk 2.9.32
+Using http-cookie 1.0.3
+Using fog-openstack 0.1.20
+Using fog-google 0.5.3
+Using fog-vcloud-director 0.1.8
+Using googleauth 0.5.1
+Using omniauth-oauth2 1.3.1
+Using xclarity_client 0.4.1
+Using patternfly-sass 3.23.2
+Using activerecord 5.0.3
+Using linux_admin 0.20.1
+Using ansible_tower_client 0.12.2
+Using query_relation 0.1.1
+Using activejob 5.0.3
+Using actionview 5.0.3
+Using manageiq-smartstate 0.1.2
+Using winrm-elevated 1.0.1
+Using manageiq-content 0.1.0 from https://github.com/ManageIQ/manageiq-content (at master@706f32c)
+Using manageiq-providers-amazon 0.1.0 from https://github.com/ManageIQ/manageiq-providers-amazon (at master@087f2bb)
+Using rest-client 2.0.2
+Using manageiq-providers-openstack 0.1.0 from https://github.com/ManageIQ/manageiq-providers-openstack (at master@69fed34)
+Using http 0.9.8
+Using google-api-client 0.8.6
+Using omniauth-google-oauth2 0.2.10
+Using manageiq-providers-lenovo 0.2.0 from https://github.com/ManageIQ/manageiq-providers-lenovo (at master@95540b5)
+Using activerecord-id_regions 0.1.0
+Using acts_as_tree 2.1.0
+Using ancestry 2.2.2
+Using default_value_for 3.0.2
+Using ovirt_metrics 1.4.1
+Using pg-pglogical 1.1.0
+Using manageiq-api-client 0.1.1
+Using actionpack 5.0.3
+Using azure-armrest 0.7.3
+Using hawkular-client 3.0.2
+Using image-inspector-client 1.0.3
+Using ovirt 0.17.0
+Using apipie-bindings 0.0.15
+Using manageiq-providers-vmware 0.1.0 from https://github.com/ManageIQ/manageiq-providers-vmware (at master@1af8348)
+Using kubeclient 2.4.0
+Using manageiq-providers-google 0.1.0 from https://github.com/ManageIQ/manageiq-providers-google (at master@78f85fc)
+Using manageiq-gems-pending 0.1.0 from https://github.com/ManageIQ/manageiq-gems-pending.git (at master@4a639b9)
+Using railties 5.0.3
+Using actioncable 5.0.3
+Using actionmailer 5.0.3
+Using sprockets-rails 3.2.0
+Using rails-controller-testing 1.0.2
+Using manageiq-providers-azure 0.1.0 from https://github.com/ManageIQ/manageiq-providers-azure (at master@7bfc70f)
+Using manageiq-providers-hawkular 0.1.0 from https://github.com/ManageIQ/manageiq-providers-hawkular (at master@a8e7814)
+Using manageiq-providers-ovirt 0.1.0 from https://github.com/ManageIQ/manageiq-providers-ovirt (at master@7ca4aed)
+Using manageiq-network_discovery 0.1.1
+Using foreman_api_client 0.1.0 from https://github.com/ManageIQ/foreman_api_client.git (at master@1cdf102)
+Using manageiq-providers-kubernetes 0.1.0 from https://github.com/ManageIQ/manageiq-providers-kubernetes (at master@923986d)
+Using amazon_ssa_support 0.1.0 from https://github.com/ManageIQ/amazon_ssa_support.git (at master@b7cf88e)
+Using coffee-rails 4.2.2
+Using jquery-hotkeys-rails 0.7.9.1
+Using lodash-rails 3.10.1
+Using novnc-rails 0.2
+Using activerecord-session_store 1.0.0
+Using rails-i18n 5.0.4
+Using responders 2.4.0
+Using jquery-rails 4.3.1
+Using good_migrations 0.0.2
+Using rspec-rails 3.6.0
+Using rails 5.0.3
+Using sass-rails 5.0.6
+Using manageiq-providers-openshift 0.1.0 from https://github.com/ManageIQ/manageiq-providers-openshift (at master@fbbc9ec)
+Using gettext_i18n_rails_js 1.1.0
+Using jquery-rjs 0.1.1 from https://github.com/ManageIQ/jquery-rjs.git (at v0.1.1-1@ded3d28)
+Using manageiq-ui-classic 0.1.0 from https://github.com/ManageIQ/manageiq-ui-classic (at master@c81ed09)
+Bundle complete! 93 Gemfile dependencies, 263 gems now installed.
+Gems in the group development were not installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:135b4b24:start=1496826726746407780,finish=1496826743071026589,duration=16324618809travis_fold:end:install.bundlertravis_fold:start:before_scripttravis_time:start:092a7258$ bundle exec rake test:$TEST_SUITE:setup
+** Preparing database
+Dropped database 'vmdb_test'
+Created database 'vmdb_test'
+.
+travis_time:end:092a7258:start=1496826743076821819,finish=1496826762166199926,duration=19089378107travis_fold:end:before_scripttravis_time:start:15913bd5$ bundle exec rake test:$TEST_SUITE
+[Coveralls] Set up the SimpleCov formatter.
+[Coveralls] Using SimpleCov's 'rails' settings.
+Run options: include {:migrations=>"down"}
+
+Randomized with seed 2718
+..........................................................................................................................................................................................................

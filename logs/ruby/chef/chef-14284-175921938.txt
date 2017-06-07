@@ -1,0 +1,1106 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-0dd41df-production-2-worker-org-ec2.travisci.net:0616bfab-71f6-430a-b524-99f2e2456906
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: 15ec191:travis:ruby
+startup: 905.68357ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240266470
+Job id: 240266477
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:03561d2c$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193)   Receiving objects:  67% (8170/12193)   Receiving objects:  68% (8292/12193)   Receiving objects:  69% (8414/12193)   Receiving objects:  70% (8536/12193)   Receiving objects:  71% (8658/12193)   Receiving objects:  72% (8779/12193)   Receiving objects:  73% (8901/12193)   Receiving objects:  74% (9023/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  75% (9145/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  76% (9267/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  77% (9389/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  78% (9511/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  79% (9633/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  80% (9755/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  81% (9877/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  82% (9999/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  83% (10121/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  84% (10243/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  85% (10365/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  86% (10486/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  87% (10608/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  88% (10730/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  89% (10852/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  90% (10974/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  91% (11096/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  92% (11218/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  93% (11340/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  94% (11462/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  95% (11584/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  96% (11706/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  97% (11828/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  98% (11950/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects:  99% (12072/12193), 3.56 MiB | 7.10 MiB/s   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193), 3.56 MiB | 7.10 MiB/s   Receiving objects: 100% (12193/12193), 5.43 MiB | 7.10 MiB/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (104/7339)   Resolving deltas:   2% (185/7339)   Resolving deltas:   3% (231/7339)   Resolving deltas:   6% (453/7339)   Resolving deltas:   7% (521/7339)   Resolving deltas:   8% (623/7339)   Resolving deltas:  11% (823/7339)   Resolving deltas:  12% (900/7339)   Resolving deltas:  13% (976/7339)   Resolving deltas:  14% (1028/7339)   Resolving deltas:  15% (1105/7339)   Resolving deltas:  18% (1352/7339)   Resolving deltas:  19% (1411/7339)   Resolving deltas:  20% (1530/7339)   Resolving deltas:  21% (1544/7339)   Resolving deltas:  22% (1621/7339)   Resolving deltas:  23% (1695/7339)   Resolving deltas:  24% (1785/7339)   Resolving deltas:  25% (1900/7339)   Resolving deltas:  26% (1927/7339)   Resolving deltas:  27% (1991/7339)   Resolving deltas:  28% (2122/7339)   Resolving deltas:  29% (2131/7339)   Resolving deltas:  30% (2208/7339)   Resolving deltas:  31% (2278/7339)   Resolving deltas:  32% (2362/7339)   Resolving deltas:  33% (2445/7339)   Resolving deltas:  34% (2498/7339)   Resolving deltas:  35% (2616/7339)   Resolving deltas:  36% (2649/7339)   Resolving deltas:  37% (2732/7339)   Resolving deltas:  38% (2795/7339)   Resolving deltas:  39% (2930/7339)   Resolving deltas:  40% (2937/7339)   Resolving deltas:  41% (3044/7339)   Resolving deltas:  43% (3201/7339)   Resolving deltas:  44% (3266/7339)   Resolving deltas:  45% (3363/7339)   Resolving deltas:  46% (3381/7339)   Resolving deltas:  50% (3679/7339)   Resolving deltas:  51% (3743/7339)   Resolving deltas:  52% (3823/7339)   Resolving deltas:  54% (3987/7339)   Resolving deltas:  55% (4038/7339)   Resolving deltas:  56% (4112/7339)   Resolving deltas:  57% (4187/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4334/7339)   Resolving deltas:  60% (4404/7339)   Resolving deltas:  61% (4478/7339)   Resolving deltas:  62% (4559/7339)   Resolving deltas:  63% (4628/7339)   Resolving deltas:  64% (4698/7339)   Resolving deltas:  65% (4771/7339)   Resolving deltas:  66% (4844/7339)   Resolving deltas:  67% (4918/7339)   Resolving deltas:  68% (5000/7339)   Resolving deltas:  69% (5064/7339)   Resolving deltas:  70% (5140/7339)   Resolving deltas:  71% (5213/7339)   Resolving deltas:  72% (5285/7339)   Resolving deltas:  73% (5360/7339)   Resolving deltas:  74% (5432/7339)   Resolving deltas:  75% (5523/7339)   Resolving deltas:  76% (5580/7339)   Resolving deltas:  77% (5653/7339)   Resolving deltas:  78% (5725/7339)   Resolving deltas:  79% (5799/7339)   Resolving deltas:  80% (5878/7339)   Resolving deltas:  81% (5945/7339)   Resolving deltas:  82% (6019/7339)   Resolving deltas:  83% (6092/7339)   Resolving deltas:  84% (6165/7339)   Resolving deltas:  85% (6239/7339)   Resolving deltas:  86% (6312/7339)   Resolving deltas:  87% (6385/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6679/7339)   Resolving deltas:  92% (6756/7339)   Resolving deltas:  93% (6827/7339)   Resolving deltas:  94% (6899/7339)   Resolving deltas:  95% (6976/7339)   Resolving deltas:  96% (7048/7339)   Resolving deltas:  97% (7119/7339)   Resolving deltas:  98% (7197/7339)   Resolving deltas:  99% (7267/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+Checking connectivity... done.
+
+travis_time:end:03561d2c:start=1496822964412621842,finish=1496822968460403938,duration=4047782096$ cd chef/chef
+travis_time:start:304b5e3d$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  10% (1/10)   [Kremote: Compressing objects:  20% (2/10)   [Kremote: Compressing objects:  30% (3/10)   [Kremote: Compressing objects:  40% (4/10)   [Kremote: Compressing objects:  50% (5/10)   [Kremote: Compressing objects:  60% (6/10)   [Kremote: Compressing objects:  70% (7/10)   [Kremote: Compressing objects:  80% (8/10)   [Kremote: Compressing objects:  90% (9/10)   [Kremote: Compressing objects: 100% (10/10)   [Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 23 (delta 17), reused 17 (delta 13), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:304b5e3d:start=1496822968488281978,finish=1496822969495015309,duration=1006733331$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export TEST_GEM=chef/cheffish
+
+travis_fold:start:rvmtravis_time:start:017ea8a4$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 14.3M  100 14.3M    0     0  48.5M      0 --:--:-- --:--:-- --:--:-- 48.5M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:017ea8a4:start=1496822978587594236,finish=1496823013953108595,duration=35365514359travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:2822af32$ Installing caching utilities
+
+travis_time:end:2822af32:start=1496823015033683626,finish=1496823015155870185,duration=122186559travis_time:start:1026f832
+travis_time:end:1026f832:start=1496823015219145060,finish=1496823015239661771,duration=20516711travis_time:start:0781d90cattempting to download cache archive
+fetching PR.6193/cache-linux-trusty-3146b4c8cdde6106247c3aef226199497d815a0e81c9684675c8b6edcfd72a45--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.6193/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-3146b4c8cdde6106247c3aef226199497d815a0e81c9684675c8b6edcfd72a45--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:0781d90c:start=1496823015263234016,finish=1496823027745326074,duration=12482092058travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:094bc7d4
+travis_time:end:094bc7d4:start=1496823027762083672,finish=1496823027773217431,duration=11133759travis_time:start:08084514adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:08084514:start=1496823027789286803,finish=1496823034843932940,duration=7054646137travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:0babd6c2$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 97%)Fetching: rubygems-update-2.6.11.gem ( 99%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:0babd6c2:start=1496823036034960328,finish=1496823042003449473,duration=5968489145travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:080a6b84$ gem --version
+2.6.11
+
+travis_time:end:080a6b84:start=1496823042028076683,finish=1496823042293463945,duration=265387262travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:0302059e$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:0302059e:start=1496823042311291459,finish=1496823044308270237,duration=1996978778travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:19ea4adb$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:19ea4adb:start=1496823044321338123,finish=1496823045133268855,duration=811930732travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:06c82368$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:06c82368:start=1496823045150443179,finish=1496823045423556212,duration=273113033travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:11fa61e4$ rm -f .bundle/config
+
+travis_time:end:11fa61e4:start=1496823045430014145,finish=1496823045436441563,duration=6427418travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:0781b33c$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using addressable 2.4.0
+Using mixlib-cli 1.7.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using blankslate 2.1.2.4
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using diff-lcs 1.3
+Using highline 1.7.8
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using net-ssh 4.1.0
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using plist 3.3.0
+Using systemu 2.6.5
+Using wmi-lite 1.0.0
+Using proxifier 1.0.3
+Using rspec-support 3.6.0
+Using multi_json 1.12.1
+Using net-telnet 0.1.1
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using excon 0.55.0
+Using json 2.1.0
+Using multipart-post 2.0.0
+Using net-http-persistent 2.9.4
+Using erubis 2.7.0
+Using retriable 3.0.2
+Using httpclient 2.8.3
+Using method_source 0.8.2
+Using parallel 1.11.2
+Using slop 3.6.0
+Using rubyzip 1.2.1
+Using semverse 2.0.0
+Using sslshake 1.2.0
+Using little-plugger 1.1.4
+Using net-http-pipeline 1.0.1
+Using rubyntlm 0.6.2
+Using mixlib-versioning 1.1.0
+Using netrc 0.11.0
+Using websocket 1.2.4
+Using rb-readline 0.5.4
+Using ruby-prof 0.16.2
+Using ruby-shadow 2.5.0
+Using simplecov-html 0.10.1
+Using tomlrb 1.2.4
+Using yard 0.9.9
+Using rainbow 2.2.2
+Using tzinfo 1.2.3
+Using launchy 2.4.3
+Using appbundler 0.10.0
+Using parser 2.4.0.0
+Using binding_of_caller 0.7.2
+Using parslet 1.5.0
+Using gyoku 1.3.1
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using nori 2.6.0
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using mixlib-archive 0.4.1
+Using mixlib-authentication 1.4.1
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using ethon 0.10.1
+Using gssapi 1.2.0
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using docker-api 1.33.4
+Using faraday 0.12.1
+Using pry 0.10.4
+Using logging 2.2.2
+Using mixlib-install 3.2.1
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using activesupport 5.1.1
+Using rubocop 0.47.1
+Using toml 0.1.2
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using typhoeus 0.8.0
+Using rspec_junit_formatter 0.2.3
+Using rspec-its 1.2.0
+Using rspec 3.6.0
+Using faraday-http-cache 2.0.0
+Using faraday_middleware 0.11.0.1
+Using gh 0.15.1
+Using sawyer 0.8.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using winrm 2.2.3
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using cheffish 13.0.0
+Using serverspec 2.38.1
+Using octokit 4.7.0
+Using winrm-fs 1.0.1
+Using travis 1.8.8
+Using chef 13.2.7 from source at `.`
+Using github_changelog_generator 1.14.2 from https://github.com/chef/github-changelog-generator (at master@7ab4953)
+Using train 0.23.0
+Using inspec 1.25.1
+Bundle complete! 24 Gemfile dependencies, 127 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:0781b33c:start=1496823045443465568,finish=1496823047476066316,duration=2032600748travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:040049df$ echo --color > .rspec
+
+travis_time:end:040049df:start=1496823047488018754,finish=1496823047517298014,duration=29279260travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:141c17e7$ echo -fp >> .rspec
+
+travis_time:end:141c17e7:start=1496823047531272686,finish=1496823047559051631,duration=27778945travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:0547607f$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+This job is running on container-based infrastructure, which does not allow use of 'sudo', setuid, and setgid executables.
+If you require sudo, add 'sudo: required' to your .travis.yml
+
+
+travis_time:end:0547607f:start=1496823047601348578,finish=1496823047644788382,duration=43439804travis_fold:end:before_script.3travis_time:start:18f25826$ bundle exec tasks/bin/run_external_test $TEST_GEM master rake spec
+Cloning into '/tmp/chef-external-test20170607-4590-lg45ps'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+Fetching https://github.com/tduffield/github-changelog-generator
+Fetching https://github.com/chef/chef
+Fetching https://github.com/chef/ohai
+Fetching gem metadata from https://rubygems.org/.......
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.0.0
+Installing concurrent-ruby 1.0.5
+Installing i18n 0.8.4
+Installing minitest 5.10.2
+Installing thread_safe 0.3.6
+Installing public_suffix 2.0.5
+Installing ast 2.3.0
+Installing builder 3.2.3
+Using bundler 1.14.6
+Installing fuzzyurl 0.9.0
+Installing mixlib-config 2.2.4
+Installing mixlib-shellout 2.2.7
+Installing libyajl2 1.2.0 with native extensions
+Installing hashie 3.5.5
+Installing mixlib-log 1.7.1
+Installing rack 2.0.3
+Installing uuidtools 2.1.5
+Installing diff-lcs 1.3
+Installing erubis 2.7.0
+Installing highline 1.7.8
+Installing iniparse 1.4.3
+Installing iso8601 0.9.1
+Installing mixlib-cli 1.7.0
+Installing net-ssh 4.1.0
+Installing ffi 1.9.18 with native extensions
+Installing ipaddress 0.8.3
+Installing plist 3.3.0
+Installing systemu 2.6.5
+Installing wmi-lite 1.0.0
+Installing proxifier 1.0.3
+Installing rspec-support 3.6.0
+Installing multi_json 1.12.1
+Using net-telnet 0.1.1
+Installing sfl 2.3
+Installing syslog-logger 1.6.8
+Installing powerpack 0.1.1
+Installing ruby-progressbar 1.8.1
+Installing unicode-display_width 1.2.1
+Installing multipart-post 2.0.0
+Installing retriable 3.0.2
+Installing rainbow 2.2.2 with native extensions
+Installing tzinfo 1.2.3
+Installing addressable 2.5.1
+Installing parser 2.4.0.0
+Installing ffi-yajl 2.3.0 with native extensions
+Installing mixlib-archive 0.4.1
+Installing mixlib-authentication 1.4.1
+Installing net-sftp 2.1.2
+Installing net-ssh-gateway 2.0.0
+Installing net-scp 1.2.1
+Installing rspec-core 3.6.0
+Installing rspec-expectations 3.6.0
+Installing rspec-mocks 3.6.0
+Installing faraday 0.12.1
+Installing activesupport 5.1.1
+Using chef-config 13.2.7 from https://github.com/chef/chef (at master@9ae037c)
+Installing rubocop 0.47.1
+Installing chef-zero 13.0.0
+Installing net-ssh-multi 1.2.1
+Installing specinfra 2.68.0
+Installing rspec_junit_formatter 0.2.3
+Installing rspec-its 1.2.0
+Installing rspec 3.6.0
+Installing faraday-http-cache 2.0.0
+Installing sawyer 0.8.1
+Using ohai 13.1.0 from https://github.com/chef/ohai (at master@6305675)
+Installing chefstyle 0.5.0
+Using cheffish 13.0.0 from source at `.`
+Installing serverspec 2.39.1
+Installing octokit 4.7.0
+Using chef 13.2.7 from https://github.com/chef/chef (at master@9ae037c)
+Using github_changelog_generator 1.14.2 from https://github.com/tduffield/github-changelog-generator (at adjust-tag-section-mapping@c6245b5)
+Bundle complete! 7 Gemfile dependencies, 72 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*/\*_spec.rb
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Cheffish fingerprint key formatter
+  when computing key fingperprints
+    computes the PKCS#8 SHA1 private key fingerprint correctly (PENDING: No reason given)
+    computes the PKCS#1 MD5 public key fingerprint correctly
+    computes the RFC4716 MD5 public key fingerprint correctly
+    defaults to the PKCS#1 MD5 public key fingerprint
+
+merged_config
+/tmp/chef-external-test20170607-4590-lg45ps/lib/cheffish/merged_config.rb:6: warning: toplevel constant Mash referenced by Chef::Mash
+/tmp/chef-external-test20170607-4590-lg45ps/lib/cheffish/merged_config.rb:7: warning: toplevel constant Mash referenced by Chef::Mash
+  returns value in config
+/tmp/chef-external-test20170607-4590-lg45ps/lib/cheffish/merged_config.rb:6: warning: toplevel constant Mash referenced by Chef::Mash
+/tmp/chef-external-test20170607-4590-lg45ps/lib/cheffish/merged_config.rb:7: warning: toplevel constant Mash referenced by Chef::Mash
+  raises a NoMethodError if calling an unknown method with arguments
+  has an informative string representation
+  has indifferent str/sym access
+  respects precedence between the different configs
+  merges the configs
+  handle merged value type mismatch
+  merges values when they're hashes
+
+api version
+  is pinned to 0
+
+Chef::Resource::ChefAcl
+  Rights attributes
+    When the Chef server has a node named x
+      Converging chef_acl "nodes/x" changes nothing
+      Converging chef_acl "nodes/x" with "complete true" and no rights raises an error
+      Removing all :grant rights from a node raises an error
+      Converging chef_acl "nodes/x" with "complete true" removes all ACLs except those specified in :all
+      Converging chef_acl "nodes/y" throws a 404
+      and a user "blarghle"
+        Converging chef_acl "nodes/x" with user "blarghle" adds the user
+        Converging chef_acl "nodes/x" with "complete true" removes all ACLs except those specified
+      and a client "blarghle"
+        Converging chef_acl "nodes/x" with client "blarghle" adds the client
+      and a group "blarghle"
+        Converging chef_acl "nodes/x" with group "blarghle" adds the group
+      and multiple users and groups
+        Converging chef_acls should ignore order of the values in the acls
+        Converging chef_acl "nodes/x" with multiple groups, users and clients in an acl makes the appropriate changes
+        Converging chef_acl "nodes/x" with multiple groups, users and clients across multiple "rights" groups makes the appropriate changes
+        Converging chef_acl "nodes/x" with rights [ :read, :create, :update, :delete, :grant ] modifies all rights
+        Converging chef_acl "nodes/x" with rights :all modifies all rights
+    When the Chef server has a node named x with user blarghle in its acl
+      Converging chef_acl "nodes/x" with that user changes nothing
+    When the Chef server has a node named x with users foo and bar in all its acls
+      Converging chef_acl "nodes/x" with remove_rights :all removes foo from everything
+    recursive
+      When the Chef server has a nodes container with user blarghle in its acl
+        Converging chef_acl "nodes" makes no changes
+        Converging chef_acl "nodes" with recursive :on_change makes no changes
+        Converging chef_acl "nodes" with recursive true changes nodes/x's acls
+        Converging chef_acl "" with recursive false does not change nodes/x's acls
+        Converging chef_acl "" with recursive :on_change does not change nodes/x's acls
+        Converging chef_acl "" with recursive true changes nodes/x's acls
+  ACLs on each type of thing
+    When the Chef server has an organization named foo
+      and the chef server URL points at /organizations/foo
+        relative paths
+          chef_acl 'nodes/x' changes the acls
+          chef_acl '*/*' changes the acls
+        absolute paths
+          chef_acl '/organizations/foo/clients/x' changes the acl
+          chef_acl '/organizations/foo/containers/x' changes the acl
+          chef_acl '/organizations/foo/cookbooks/x' changes the acl
+          chef_acl '/organizations/foo/data/x' changes the acl
+          chef_acl '/organizations/foo/environments/x' changes the acl
+          chef_acl '/organizations/foo/groups/x' changes the acl
+          chef_acl '/organizations/foo/nodes/x' changes the acl
+          chef_acl '/organizations/foo/roles/x' changes the acl
+          chef_acl '/organizations/foo/sandboxes/x' changes the acl
+          chef_acl '/organizations/foo/clients/x' changes the acl
+          chef_acl '/organizations/foo/containers/x' changes the acl
+          chef_acl '/organizations/foo/cookbooks/x' changes the acl
+          chef_acl '/organizations/foo/data/x' changes the acl
+          chef_acl '/organizations/foo/environments/x' changes the acl
+          chef_acl '/organizations/foo/groups/x' changes the acl
+          chef_acl '/organizations/foo/nodes/x' changes the acl
+          chef_acl '/organizations/foo/roles/x' changes the acl
+          chef_acl '/organizations/foo/sandboxes/x' changes the acl
+          chef_acl '/*/*/clients/*' changes the acl
+          chef_acl '/*/*/containers/*' changes the acl
+          chef_acl '/*/*/cookbooks/*' changes the acl
+          chef_acl '/*/*/data/*' changes the acl
+          chef_acl '/*/*/environments/*' changes the acl
+          chef_acl '/*/*/groups/*' changes the acl
+          chef_acl '/*/*/nodes/*' changes the acl
+          chef_acl '/*/*/roles/*' changes the acl
+          chef_acl '/*/*/*/x' changes the acls
+          chef_acl '/*/*/*/*' changes the acls
+          chef_acl "/organizations/foo/data_bags/x" changes the acl
+          chef_acl "/*/*/data_bags/*" changes the acl
+          chef_acl '/organizations/foo/cookbooks/x/1.0.0' raises an error
+          chef_acl '/organizations/foo/cookbooks/*/*' raises an error (PENDING: No reason given)
+          chef_acl "/organizations/foo/data/x/y" raises an error
+          chef_acl "/organizations/foo/data/*/*" raises an error (PENDING: No reason given)
+          chef_acl "/organizations/foo" changes the acl
+          chef_acl "/organizations/*" changes the acl
+          chef_acl "/users/x" changes the acl
+          chef_acl "/users/*" changes the acl
+          chef_acl "/*/x" changes the acl
+          chef_acl "/*/*" changes the acl
+      and the chef server URL points at /organizations/bar
+        chef_acl '/organizations/foo/nodes/*' changes the acl
+      and the chef server URL points at /
+        chef_acl '/organizations/foo/nodes/*' changes the acl
+    When the Chef server has a user "u" in single org mode
+      chef_acl clients/x' changes the acl
+      chef_acl containers/x' changes the acl
+      chef_acl cookbooks/x' changes the acl
+      chef_acl data/x' changes the acl
+      chef_acl environments/x' changes the acl
+      chef_acl groups/x' changes the acl
+      chef_acl nodes/x' changes the acl
+      chef_acl roles/x' changes the acl
+      chef_acl sandboxes/x' changes the acl
+      chef_acl 'clients/*' changes the acl
+      chef_acl 'containers/*' changes the acl
+      chef_acl 'cookbooks/*' changes the acl
+      chef_acl 'data/*' changes the acl
+      chef_acl 'environments/*' changes the acl
+      chef_acl 'groups/*' changes the acl
+      chef_acl 'nodes/*' changes the acl
+      chef_acl 'roles/*' changes the acl
+      chef_acl '*/x' changes the acls
+      chef_acl '*/*' changes the acls
+      chef_acl 'groups/*' changes the acl
+      chef_acl "data_bags/x" changes the acl
+      chef_acl "data_bags/*" changes the acl
+      chef_acl "" changes the organization acl
+  ACLs on each container type
+    When the Chef server has an organization named foo
+      chef_acl '/organizations/foo/clients' changes the acl
+      chef_acl '/organizations/foo/containers' changes the acl
+      chef_acl '/organizations/foo/cookbooks' changes the acl
+      chef_acl '/organizations/foo/data' changes the acl
+      chef_acl '/organizations/foo/environments' changes the acl
+      chef_acl '/organizations/foo/groups' changes the acl
+      chef_acl '/organizations/foo/nodes' changes the acl
+      chef_acl '/organizations/foo/roles' changes the acl
+      chef_acl '/organizations/foo/sandboxes' changes the acl
+      chef_acl '/*/*/clients' changes the acl
+      chef_acl '/*/*/containers' changes the acl
+      chef_acl '/*/*/cookbooks' changes the acl
+      chef_acl '/*/*/data' changes the acl
+      chef_acl '/*/*/environments' changes the acl
+      chef_acl '/*/*/groups' changes the acl
+      chef_acl '/*/*/nodes' changes the acl
+      chef_acl '/*/*/roles' changes the acl
+      chef_acl '/*/*/*' changes the acls
+      chef_acl "/organizations/foo/data_bags" changes the acl
+      chef_acl "/*/*/data_bags" changes the acl
+    When the Chef server has a user "u" in single org mode
+      chef_acl clients' changes the acl
+      chef_acl containers' changes the acl
+      chef_acl cookbooks' changes the acl
+      chef_acl data' changes the acl
+      chef_acl environments' changes the acl
+      chef_acl groups' changes the acl
+      chef_acl nodes' changes the acl
+      chef_acl roles' changes the acl
+      chef_acl sandboxes' changes the acl
+      chef_acl '*' changes the acls
+  remove_rights
+    When the Chef server has a node "x" with "u", "c" and "g" in its acl
+      chef_acl with remove_rights "u" removes the user's rights
+      chef_acl with remove_rights "c" removes the client's rights
+      chef_acl with remove_rights "g" removes the group's rights
+      chef_acl with remove_rights [ :create, :read ], "u", "c", "g" removes all three
+      chef_acl with remove_rights "u2", "c2", "g2" has no effect
+  When the Chef server has a node named data_bags
+    Converging chef_acl "nodes/data_bags" with user "blarghle" adds the user
+  When the Chef server has a node named data_bags in multi-org mode
+    Converging chef_acl "/organizations/foo/nodes/data_bags" with user "blarghle" adds the user
+  When the Chef server has a user named data_bags in multi-org mode
+    Converging chef_acl "/users/data_bags" with user "blarghle" adds the user
+
+Chef::Resource::ChefClient
+  When the Chef server is in multi-org mode
+    and is empty
+      and we have a private key with a path
+        and we run a recipe that creates client "blah"
+          the client gets created
+        and we run a recipe that creates client "blah" with output_key_path
+          the output public key gets created
+      and a private_key 'blah' resource
+        and a chef_client 'foobar' resource with source_key_path 'blah'
+          the client is accessible via the given private key
+  When the Chef server is in OSC mode
+    and is empty
+      and we have a private key with a path
+        and we run a recipe that creates client "blah"
+          the client gets created
+
+Chef::Resource::ChefContainer
+  When the Chef server is in multi-org mode
+    Converging chef_container "x" creates the container
+    and already has a container named x
+      Converging chef_container "x" changes nothing
+
+Chef::Resource::ChefDataBagItem
+  When the Chef server foo
+    when data bag "bag" exists
+      runs a recipe that creates a chef_data_bag_item "bag/item"
+
+Chef::Resource::ChefGroup
+  When the Chef server is in multi-org mode
+    and is empty
+      Converging chef_group "x" creates the group with no members
+      chef_group "x" action :delete does nothing
+      Converging chef_group "x" creates the group with the given members
+    and has a group named x
+      Converging chef_group "x" changes nothing
+      chef_group "x" action :delete deletes the group
+      Converging chef_group "x" with existing users changes nothing
+      Converging chef_group "x" adds new users
+      Converging chef_group "x" with multiple users adds new users
+      Converging chef_group "x" with multiple users in an array adds new users
+      Converging chef_group "x" with multiple users declarations adds new users
+      Converging chef_group "x" removes desired users
+      Converging chef_group "x" with multiple users removes desired users
+      Converging chef_group "x" with multiple users in an array removes desired users
+      Converging chef_group "x" with multiple remove_ declarations removes desired users
+      Converging chef_group "x" adds and removes desired users
+
+Chef::Resource::ChefMirror
+  When the Chef server is in multi-org mode
+    basic download and upload
+      when the chef repo is full of stuff
+        Download grabs defaults
+        Upload uploads everything
+        chef_mirror with concurrency 0 fails with a reasonable message
+    and the Chef server has a node and role in it
+      when the chef repo is empty
+        Download grabs the node and role
+        Upload uploads nothing
+    and the Chef server has nodes and roles named x
+      when the chef repo has nodes and roles named y
+        Download grabs the x's
+        Upload uploads the y's
+        Download with purge grabs the x's and deletes the y's
+        Upload with :purge uploads the y's and deletes the x's
+    chef_repo_path
+      when the chef repo has stuff but no chef_repo_path
+        Upload with chef_repo_path('repo') uploads everything
+        Upload with chef_repo_path(:chef_repo_path) with multiple paths uploads everything
+        Upload with chef_repo_path(:node_path, :role_path) uploads everything
+        Upload with chef_repo_path(:chef_repo_path, :role_path) uploads everything
+        Upload with chef_repo_path(:node_path, :role_path) with multiple paths uploads everything
+    cookbook upload, chef_repo_path and versioned_cookbooks
+      when the chef repo has cookbooks in non-versioned format
+        chef_mirror :upload uploads everything
+        and Chef::Config.versioned_cookbooks is false
+          chef_mirror :upload uploads everything
+        and Chef::Config.chef_repo_path is not set but versioned_cookbooks is false
+          chef_mirror :upload with chef_repo_path and versioned_cookbooks false uploads cookbooks with name including version
+      when the chef repo has cookbooks in versioned_cookbook format
+        and Chef::Config.versioned_cookbooks is true
+          chef_mirror :upload uploads everything
+        and Chef::Config.chef_repo_path set somewhere else
+          chef_mirror :upload with chef_repo_path uploads cookbooks
+        and Chef::Config.chef_repo_path is not set but versioned_cookbooks is false
+          chef_mirror :upload with chef_repo_path uploads cookbooks with name split from version
+          chef_mirror :upload with chef_repo_path and versioned_cookbooks uploads cookbooks with name split from version
+        and Chef::Config.chef_repo_path is not set but versioned_cookbooks is true
+          chef_mirror :upload with chef_repo_path uploads cookbooks with name split from version
+    cookbook download, chef_repo_path, and versioned_cookbooks
+      when the Chef server has a cookbook with multiple versions
+        when the chef repo is empty
+          chef_mirror :download downloads the latest version of the cookbook
+          chef_mirror :download with versioned_cookbooks = true downloads all versions of the cookbook
+          and Chef::Config.chef_repo_path is set elsewhere
+            chef_mirror :download with chef_repo_path downloads all versions of the cookbook
+            chef_mirror :download with chef_repo_path and versioned_cookbooks = false downloads the latest version of the cookbook
+          and Chef::Config.versioned_cookbooks is true
+            chef_mirror :download downloads all versions of the cookbook
+            chef_mirror :download with versioned_cookbooks = false downloads the latest version of the cookbook
+            and Chef::Config.chef_repo_path is set elsewhere
+              chef_mirror :download with chef_repo_path downloads all versions of the cookbook
+              chef_mirror :download with chef_repo_path and versioned_cookbooks = false downloads the latest version of the cookbook
+
+Chef::Resource::ChefNode
+  When the Chef server is in multi-org mode
+    and is empty
+      and we run a recipe that creates node "blah"
+        the node gets created
+      and another chef server is running on port 8899
+        and a recipe is run that creates node "blah" on the second chef server using with_chef_server
+          the node is created on the second chef server but not the first
+        and a recipe is run that creates node "blah" on the second chef server using chef_server
+          the node is created on the second chef server but not the first
+    and has a node named "blah"
+      chef_node "blah" does not get created or updated
+    and has a node named "blah" with tags
+      with chef_node "blah" that sets attributes
+        the tags in attributes are used
+      with chef_node "blah" that sets attributes with tags in them
+        the tags in attributes are used
+    #complete
+      when the Chef server has a node named "blah" with everything in it
+        chef_node with no attributes modifies nothing
+        chef_node with complete true removes everything except default, automatic and override
+        chef_node with complete true sets the given attributes
+        chef_node with complete true and partial attributes sets the given attributes
+    #attributes
+      with a node with normal attributes a => b and c => { d => e }
+        chef_node with attributes {} removes all normal attributes but leaves tags, automatic and environment alone
+        chef_node with attributes { c => d } replaces normal but not tags/automatic/environment
+        chef_node with attributes { c => f => g, y => z } replaces normal but not tags/automatic/environment
+        chef_node with attributes { tags => [ "x" ] } replaces normal and tags but not automatic/environment
+        chef_node with tags "x" and attributes { "tags" => [ "y" ] } sets tags to "x"
+    #attribute
+      with a node with normal attributes a => b and c => { d => e }
+        basic scenarios
+          chef_node with no attributes, leaves it alone
+          chef_node with attribute d, e adds the attribute
+          chef_node with attribute tags, [ "x" ] replaces tags
+          chef_node with attribute c, x replaces the attribute
+          chef_node with attribute c, { d => x } replaces the attribute
+          chef_node with attribute [ c, d ], x replaces the attribute
+          chef_node with attribute [ a, b ], x raises an error
+          chef_node with attribute [ a, b, c ], x raises an error
+          chef_node with attribute [ x, y ], z adds a new attribute
+          chef_node with attribute [], {} clears all attributes
+        delete
+          chef_node with attribute a, :delete deletes the attribute
+          chef_node with attribute c, :delete deletes the attribute
+          chef_node with attribute [ c, d ], :delete deletes the attribute
+          chef_node with attribute xyz, :delete does nothing
+          chef_node with attribute [ c, x ], :delete does nothing
+        types
+          chef_node with attribute a, true sets a to true
+          chef_node with attribute a, 1 sets a to 1
+          chef_node with attribute a, "1" sets a to "1"
+          chef_node with attribute a, "" sets a to ""
+          chef_node with attribute a, nil sets a to nil
+        multiple attribute definitions
+          chef_node with attribute a, x and c, y replaces both attributes
+          chef_node with attribute m, x and n, y adds both attributes
+          chef_node with attribute [x, y], z and [x, yy], zz adds both attributes
+          precedence
+            chef_node with attribute a, 1 and a, 2 sets a to 2
+            chef_node with attribute [ x, y ], 1 and [ x, y ], 2 sets [ x, y ], 2
+            chef_node with attribute [ c, e ], { a => 1 }, [ c, e ], { b => 2 } sets b only
+            chef_node with attribute [ c, e ], { a => 1 }, [ c, e, b ], 2 sets both
+            chef_node with attribute [ c, e, b ], 2, [ c, e ], { a => 1 } sets a only
+  When the Chef server is in OSC mode
+    and is empty
+      and we run a recipe that creates node "blah"
+        the node gets created
+
+Chef::Resource::ChefOrganization
+  When the Chef server is in multi-org mode
+    and chef_server_url is pointed at the top level
+      chef_organization "x" creates the organization
+    and chef_server_url is pointed at /organizations/foo
+      and is empty
+        chef_organization "x" creates the organization
+        chef_organization "x" with full_name creates the organization
+        chef_organization "x" and inviting users creates the invites
+        chef_organization "x" adds members
+      and already has an organization named x
+        chef_organization "x" changes nothing
+        chef_organization "x" with "complete true" reverts the full_name
+        chef_organization "x" with new full_name updates the organization
+        invites and membership tests
+          chef_organization "x" and inviting users creates the invites
+          chef_organization "x" adds members
+          chef_organization "x" does nothing when inviting already-invited users and members
+          chef_organization "x" does nothing when adding members who are already members
+          chef_organization "x" upgrades invites to members when asked
+          chef_organization "x" removes members and invites when asked
+          chef_organization "x" does nothing when asked to remove non-members
+          chef_organization "x" with "complete true" reverts the full_name but does not remove invites or members
+          chef_organization "x" with members [] and "complete true" removes invites and members
+          chef_organization "x" with invites [] and "complete true" removes invites but not members
+          chef_organization "x" with invites, members and "complete true" removes all non-specified invites and members
+
+Chef::Resource::ChefRole
+  When the Chef server is in multi-org mode
+    and is empty
+      and we run a recipe that creates role "blah"
+        the role gets created
+      and another chef server is running on port 8899
+        and a recipe is run that creates role "blah" on the second chef server using with_chef_server
+          the role is created on the second chef server but not the first
+        and a recipe is run that creates role "blah" on the second chef server using chef_server
+          the role is created on the second chef server but not the first
+  When the Chef server is in OSC mode
+    and is empty
+      and we run a recipe that creates role "blah"
+        the role gets created
+
+Chef::Resource::ChefUser
+  When the Chef server is empty
+    and we run a recipe that creates user "blah"
+      the user gets created
+    and we run a recipe that creates user "blah" with output_key_path
+      the output public key gets created
+  When the Chef server is in multi-org mode
+    and chef_server_url is pointed at the top level
+      and we run a recipe that creates user "blah"
+        the user gets created
+    and chef_server_url is pointed at /organizations/foo
+      and we run a recipe that creates user "blah"
+        the user gets created
+
+Chef::Resource::PrivateKey
+  with a recipe with a private_key
+    the private_key is created in pem format
+  with a private_key "blah" resource
+    the private key is created in the private_key_write_path
+    and the private key already exists somewhere not in the write path
+      the private expect(key).to not update
+  with a private key
+    a private_key that copies it from in-memory as a string succeeds
+    a private_key that copies it from in-memory as a key succeeds
+    and a private_key that copies it in der format
+      the private_key is copied in der format and is identical
+    and a public_key recipe
+      the public_key is created
+    and a public key
+      and another public_key based off the first public_key in-memory in a key, the second public_key is created
+      and public_key resource based off the public key file
+        the second public_key is created
+      and another public_key based off the first public_key in-memory in a string
+        the second public_key is created
+      and another public_key in :pem format based off the first public_key
+        the second public_key is created
+      and another public_key in :der format based off the first public_key
+        the second public_key is created
+    and a public_key resource in pem format
+      the public_key is created
+    and a public_key resource in der format
+      the public_key is created in openssh format
+  with a recipe with a private_key in der format
+    the private_key is created
+  with a private key in der format
+    and a public_key
+      the public_key is created in openssh format
+  with a recipe with a private_key with a pass_phrase
+    the private_key is created
+  with a private key with a pass phrase
+    a private_key resource that copies it from in-memory as a string succeeds
+    and a private_key that copies it in der format
+      the private_key is copied in der format and is identical
+    and a private_key resource pointing at it without a pass_phrase
+      the run fails with an exception
+    and a private_key resource with no pass phrase and regenerate_if_different
+      the private_key is regenerated
+    and a public_key
+      the public_key is created in openssh format
+    and a public_key derived from the private key in an in-memory string
+      the public_key is created in openssh format
+  with a recipe with a private_key and public_key_path
+    the private_key and public_key are created
+  with a recipe with a private_key and public_key_path and public_key_format
+    the private_key and public_key are created
+  with a recipe with a private_key with path :none
+    the private_key is created
+
+Cheffish Recipe DSL
+  when we include with_chef_local_server
+[2017-06-07T08:13:23+00:00] DEBUG: GET /organizations/chef/nodes/blah
+[2017-06-07T08:13:23+00:00] DEBUG: #<ChefZero::RestRequest:0x00000003f36b98
+ @env=
+  {"GATEWAY_INTERFACE"=>"CGI/1.1",
+   "PATH_INFO"=>"/nodes/blah",
+   "QUERY_STRING"=>"",
+   "REMOTE_ADDR"=>"127.0.0.1",
+   "REMOTE_HOST"=>"127.0.0.1",
+   "REQUEST_METHOD"=>"GET",
+   "REQUEST_URI"=>"http://127.0.0.1:8901/nodes/blah",
+   "SCRIPT_NAME"=>"",
+   "SERVER_NAME"=>"127.0.0.1",
+   "SERVER_PORT"=>"8901",
+   "SERVER_PROTOCOL"=>"HTTP/1.1",
+   "SERVER_SOFTWARE"=>"WEBrick/1.3.1 (Ruby/2.4.1/2017-03-22) OpenSSL/1.0.1f",
+   "HTTP_ACCEPT"=>"application/json",
+   "HTTP_ACCEPT_ENCODING"=>"gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+   "HTTP_X_OPS_SERVER_API_VERSION"=>"0",
+   "HTTP_X_REMOTE_REQUEST_ID"=>"13b6f382-018e-491c-96c7-680c02cdab29",
+   "HTTP_X_CHEF_VERSION"=>"13.2.7",
+   "HTTP_HOST"=>"127.0.0.1:8901",
+   "HTTP_USER_AGENT"=>
+    "Chef Knife/13.2.7 (ruby-2.4.1-p111; ohai-13.1.0; x86_64-linux; +https://chef.io)",
+   "HTTP_CONNECTION"=>"close",
+   "rack.version"=>[1, 3],
+   "rack.input"=>#<StringIO:0x00000003f37098>,
+   "rack.errors"=>#<IO:<STDERR>>,
+   "rack.multithread"=>true,
+   "rack.multiprocess"=>false,
+   "rack.run_once"=>false,
+   "rack.url_scheme"=>"http",
+   "rack.hijack?"=>true,
+   "rack.hijack"=>
+    #<Proc:0x00000003f36cd8@/home/travis/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/handler/webrick.rb:74 (lambda)>,
+   "rack.hijack_io"=>nil,
+   "HTTP_VERSION"=>"HTTP/1.1",
+   "REQUEST_PATH"=>"/nodes/blah"},
+ @rest_base_prefix=["organizations", "chef"],
+ @rest_path=["organizations", "chef", "nodes", "blah"]>
+
+[2017-06-07T08:13:23+00:00] DEBUG: #<ChefZero::RestErrorResponse: 404: Object not found: http://127.0.0.1:8901/nodes/blah>
+/home/travis/.rvm/gems/ruby-2.4.1/gems/chef-zero-13.0.0/lib/chef_zero/rest_base.rb:89:in `rescue in get_data'
+/home/travis/.rvm/gems/ruby-2.4.1/gems/chef-zero-13.0.0/lib/chef_zero/rest_base.rb:81:in `get_data'
+/home/travis/.rvm/gems/ruby-2.4.1/gems/chef-zero-13.0.0/lib/chef_zero/endpoints/rest_object_endpoint.rb:18:in `get'
+/home/travis/.rvm/gems/ruby-2.4.1/gems/chef-zero-13.0.0/lib/chef_zero/rest_base.rb:59:in `call'
+/home/travis/.rvm/gems/ruby-2.4.1/gems/chef-zero-13.0.0/lib/chef_zero/rest_router.rb:24:in `call'
+/home/travis/.rvm/gems/ruby-2.4.1/gems/chef-zero-13.0.0/lib/chef_zero/server.rb:663:in `block in app'
+/home/travis/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/handler/webrick.rb:86:in `service'
+/home/travis/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/travis/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/travis/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+[2017-06-07T08:13:23+00:00] DEBUG: 
+--- RESPONSE (404) ---
+{
+  "error": [
+    "Object not found: http://127.0.0.1:8901/nodes/blah"
+  ]
+}
+--- END RESPONSE ---
+[2017-06-07T08:13:23+00:00] DEBUG: POST /organizations/chef/nodes
+--- POST BODY ---
+{"name":"blah","json_class":"Chef::Node","chef_type":"node","chef_environment":"_default","override":{},"normal":{"tags":null},"default":{},"automatic":{},"run_list":[]}
+--- END POST BODY ---
+[2017-06-07T08:13:23+00:00] DEBUG: #<ChefZero::RestRequest:0x00000003ec8440
+ @body=
+  "{\"name\":\"blah\",\"json_class\":\"Chef::Node\",\"chef_type\":\"node\",\"chef_environment\":\"_default\",\"override\":{},\"normal\":{\"tags\":null},\"default\":{},\"automatic\":{},\"run_list\":[]}",
+ @env=
+  {"CONTENT_LENGTH"=>"169",
+   "CONTENT_TYPE"=>"application/json",
+   "GATEWAY_INTERFACE"=>"CGI/1.1",
+   "PATH_INFO"=>"/nodes",
+   "QUERY_STRING"=>"",
+   "REMOTE_ADDR"=>"127.0.0.1",
+   "REMOTE_HOST"=>"127.0.0.1",
+   "REQUEST_METHOD"=>"POST",
+   "REQUEST_URI"=>"http://127.0.0.1:8901/nodes",
+   "SCRIPT_NAME"=>"",
+   "SERVER_NAME"=>"127.0.0.1",
+   "SERVER_PORT"=>"8901",
+   "SERVER_PROTOCOL"=>"HTTP/1.1",
+   "SERVER_SOFTWARE"=>"WEBrick/1.3.1 (Ruby/2.4.1/2017-03-22) OpenSSL/1.0.1f",
+   "HTTP_ACCEPT"=>"application/json",
+   "HTTP_ACCEPT_ENCODING"=>"gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+   "HTTP_X_OPS_SERVER_API_VERSION"=>"0",
+   "HTTP_X_REMOTE_REQUEST_ID"=>"13b6f382-018e-491c-96c7-680c02cdab29",
+   "HTTP_X_CHEF_VERSION"=>"13.2.7",
+   "HTTP_HOST"=>"127.0.0.1:8901",
+   "HTTP_USER_AGENT"=>
+    "Chef Knife/13.2.7 (ruby-2.4.1-p111; ohai-13.1.0; x86_64-linux; +https://chef.io)",
+   "HTTP_CONNECTION"=>"close",
+   "rack.version"=>[1, 3],
+   "rack.input"=>#<StringIO:0x00000003ec86c0>,
+   "rack.errors"=>#<IO:<STDERR>>,
+   "rack.multithread"=>true,
+   "rack.multiprocess"=>false,
+   "rack.run_once"=>false,
+   "rack.url_scheme"=>"http",
+   "rack.hijack?"=>true,
+   "rack.hijack"=>
+    #<Proc:0x00000003ec8558@/home/travis/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/handler/webrick.rb:74 (lambda)>,
+   "rack.hijack_io"=>nil,
+   "HTTP_VERSION"=>"HTTP/1.1",
+   "REQUEST_PATH"=>"/nodes"},
+ @rest_base_prefix=["organizations", "chef"],
+ @rest_path=["organizations", "chef", "nodes"]>
+
+[2017-06-07T08:13:23+00:00] DEBUG: 
+--- RESPONSE (201) ---
+{
+  "uri": "http://127.0.0.1:8901/nodes/blah"
+}
+--- END RESPONSE ---
+    chef_nodes get put into said server
+
+Cheffish::RSpec::ChefRunSupport
+  #recipe
+    recipe { file ... } updates the file
+    recipe 'file ...' does not update the file
+    recipe 'file ...' with file and line number does not update the file
+  #converge
+    converge { file ... } updates the file
+    converge 'file ...' updates the file
+    converge 'file ...' with file and line number updates the file
+  #expect_recipe
+    expect_recipe { file ... }.to be_updated updates the file, and be_idempotent does not fail
+    expect_recipe 'file ...'.to be_updated updates the file, and be_idempotent does not fail
+    expect_recipe('file ...', file, line).to be_updated updates the file, and be_idempotent does not fail
+    expect_recipe { file ... }.to be_up_to_date fails
+    expect_recipe { }.to be_updated fails
+    expect_recipe { }.to be_up_to_date succeeds
+    expect_recipe { }.to be_idempotent succeeds
+  #expect_converge
+    expect_converge { file ... }.not_to raise_error updates the file
+    expect_converge('file ...').not_to raise_error updates the file
+    expect_converge('file ...', file, line).not_to raise_error updates the file
+    expect_converge { raise 'oh no' }.to raise_error passes
+  when there is a let variable
+    converge { let_variable } accesses it
+    converge with a file resource referencing let_variable accesses let_variable
+
+Cheffish
+  #get_private_key
+    when private_key_paths has a directory which is empty
+      behaves like returning the contents of the key file if it finds one
+        returns nil if it cannot find the private key file
+        returns the contents of the key if it doesn't have an extension
+        returns the contents of the key if it has an extension
+        returns the contents of arbitrarily named keys
+        returns the contents of the key that does not have an extension if both exist
+      when it also has a garbage file
+        does not return the da vinci virus if we find only the garbage file
+        behaves like returning the contents of the key file if it finds one
+          returns nil if it cannot find the private key file
+          returns the contents of the key if it doesn't have an extension
+          returns the contents of the key if it has an extension
+          returns the contents of arbitrarily named keys
+          returns the contents of the key that does not have an extension if both exist
+    when private_key_paths leads with a directory that does not exist and then an empty directory
+      behaves like returning the contents of the key file if it finds one
+        returns nil if it cannot find the private key file
+        returns the contents of the key if it doesn't have an extension
+        returns the contents of the key if it has an extension
+        returns the contents of arbitrarily named keys
+        returns the contents of the key that does not have an extension if both exist
+    when private_keys is empty
+      returns nil
+    when private_keys contains the path to a key
+      returns the contents of the key file
+    when private_keys contains the path to a key
+      returns the contents of the key file
+
+Cheffish::RSpec::RecipeRunWrapper
+  defines #respond_to_missing? on the client
+    calls the new super.respond_to_missing
+  does not define #respond_to_missing? on the client
+    calls the original super.respond_to_missing
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) Cheffish fingerprint key formatter when computing key fingperprints computes the PKCS#8 SHA1 private key fingerprint correctly
+     # No reason given
+     Failure/Error: raise "PKCS8 SHA1 not supported in Ruby #{RUBY_VERSION}"
+
+     RuntimeError:
+       PKCS8 SHA1 not supported in Ruby 2.4.1
+     # ./lib/cheffish/key_formatter.rb:59:in `encode'
+     # ./spec/functional/fingerprint_spec.rb:37:in `key_to_format'
+     # ./spec/functional/fingerprint_spec.rb:43:in `block (3 levels) in <top (required)>'
+
+  2) Chef::Resource::ChefAcl ACLs on each type of thing When the Chef server has an organization named foo and the chef server URL points at /organizations/foo absolute paths chef_acl '/organizations/foo/cookbooks/*/*' raises an error
+     # No reason given
+     Failure/Error:
+       expect_converge do
+         chef_acl "/organizations/foo/cookbooks/*/*" do
+           rights :read, users: %w{u}
+         end
+       end.to raise_error(/ACLs cannot be set on children of \/organizations\/foo\/cookbooks\/*/)
+
+       expected /ACLs cannot be set on children of \/organizations\/foo\/cookbooks\/*/ but nothing was raised
+     # ./spec/integration/chef_acl_spec.rb:457:in `block (6 levels) in <top (required)>'
+
+  3) Chef::Resource::ChefAcl ACLs on each type of thing When the Chef server has an organization named foo and the chef server URL points at /organizations/foo absolute paths chef_acl "/organizations/foo/data/*/*" raises an error
+     # No reason given
+     Failure/Error:
+       expect_converge do
+         chef_acl "/organizations/foo/data/*/*" do
+           rights :read, users: %w{u}
+         end
+       end.to raise_error(/ACLs cannot be set on children of \/organizations\/foo\/data\/*/)
+
+       expected /ACLs cannot be set on children of \/organizations\/foo\/data\/*/ but nothing was raised
+     # ./spec/integration/chef_acl_spec.rb:474:in `block (6 levels) in <top (required)>'
+
+Finished in 1 minute 21.99 seconds (files took 2.83 seconds to load)
+330 examples, 0 failures, 3 pending
+
+
+travis_time:end:18f25826:start=1496823047669176026,finish=1496823204833664862,duration=157164488836
+The command "bundle exec tasks/bin/run_external_test $TEST_GEM master rake spec" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:0294a581
+travis_time:end:0294a581:start=1496823206191229246,finish=1496823206199028319,duration=7799073travis_time:start:01d0695bnothing changed, not updating cache
+
+travis_time:end:01d0695b:start=1496823206218898199,finish=1496823209835136372,duration=3616238173travis_fold:end:cache.2
+Done. Your build exited with 0.

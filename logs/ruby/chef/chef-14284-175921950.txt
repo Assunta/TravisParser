@@ -1,0 +1,1238 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-017531f-production-2-worker-org-ec2.travisci.net:2086f0fe-d293-41b3-a733-cfbd01fd164a
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: 92b4b18:travis:ruby
+startup: 851.669235ms
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240266470
+Job id: 240266489
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:054fcb04$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  48% (5853/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  49% (5975/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  50% (6097/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  51% (6219/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  52% (6341/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  53% (6463/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  54% (6585/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  55% (6707/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  56% (6829/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  57% (6951/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  58% (7072/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  59% (7194/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  60% (7316/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  61% (7438/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  62% (7560/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  63% (7682/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  64% (7804/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  65% (7926/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  66% (8048/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  67% (8170/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  68% (8292/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  69% (8414/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  70% (8536/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  71% (8658/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  72% (8779/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  73% (8901/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  74% (9023/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  75% (9145/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  76% (9267/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  77% (9389/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  78% (9511/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  79% (9633/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  80% (9755/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  80% (9875/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  81% (9877/12193), 1.52 MiB | 3.03 MiB/s   Receiving objects:  82% (9999/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  83% (10121/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  84% (10243/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  85% (10365/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  86% (10486/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  87% (10608/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  88% (10730/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  89% (10852/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  90% (10974/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  91% (11096/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  92% (11218/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  93% (11340/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  94% (11462/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  95% (11584/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  96% (11706/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  97% (11828/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  98% (11950/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects:  99% (12072/12193), 4.22 MiB | 4.21 MiB/s   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193), 4.22 MiB | 4.21 MiB/s   Receiving objects: 100% (12193/12193), 5.43 MiB | 4.21 MiB/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (90/7339)   Resolving deltas:   2% (170/7339)   Resolving deltas:   3% (250/7339)   Resolving deltas:   5% (384/7339)   Resolving deltas:   6% (457/7339)   Resolving deltas:   7% (559/7339)   Resolving deltas:  10% (771/7339)   Resolving deltas:  11% (815/7339)   Resolving deltas:  12% (890/7339)   Resolving deltas:  13% (955/7339)   Resolving deltas:  14% (1037/7339)   Resolving deltas:  18% (1339/7339)   Resolving deltas:  19% (1424/7339)   Resolving deltas:  20% (1481/7339)   Resolving deltas:  21% (1565/7339)   Resolving deltas:  22% (1615/7339)   Resolving deltas:  23% (1694/7339)   Resolving deltas:  24% (1769/7339)   Resolving deltas:  26% (1913/7339)   Resolving deltas:  27% (1985/7339)   Resolving deltas:  29% (2130/7339)   Resolving deltas:  30% (2207/7339)   Resolving deltas:  31% (2288/7339)   Resolving deltas:  32% (2350/7339)   Resolving deltas:  33% (2423/7339)   Resolving deltas:  34% (2499/7339)   Resolving deltas:  36% (2711/7339)   Resolving deltas:  37% (2717/7339)   Resolving deltas:  38% (2789/7339)   Resolving deltas:  39% (2863/7339)   Resolving deltas:  41% (3065/7339)   Resolving deltas:  42% (3097/7339)   Resolving deltas:  44% (3295/7339)   Resolving deltas:  45% (3304/7339)   Resolving deltas:  48% (3563/7339)   Resolving deltas:  49% (3597/7339)   Resolving deltas:  52% (3872/7339)   Resolving deltas:  53% (3892/7339)   Resolving deltas:  54% (3967/7339)   Resolving deltas:  55% (4037/7339)   Resolving deltas:  56% (4111/7339)   Resolving deltas:  57% (4188/7339)   Resolving deltas:  58% (4257/7339)   Resolving deltas:  59% (4332/7339)   Resolving deltas:  60% (4404/7339)   Resolving deltas:  61% (4478/7339)   Resolving deltas:  62% (4559/7339)   Resolving deltas:  63% (4624/7339)   Resolving deltas:  64% (4701/7339)   Resolving deltas:  65% (4771/7339)   Resolving deltas:  66% (4844/7339)   Resolving deltas:  67% (4922/7339)   Resolving deltas:  68% (4991/7339)   Resolving deltas:  69% (5078/7339)   Resolving deltas:  70% (5139/7339)   Resolving deltas:  71% (5215/7339)   Resolving deltas:  72% (5285/7339)   Resolving deltas:  73% (5359/7339)   Resolving deltas:  74% (5432/7339)   Resolving deltas:  75% (5510/7339)   Resolving deltas:  76% (5578/7339)   Resolving deltas:  77% (5654/7339)   Resolving deltas:  78% (5726/7339)   Resolving deltas:  79% (5798/7339)   Resolving deltas:  80% (5874/7339)   Resolving deltas:  81% (5946/7339)   Resolving deltas:  82% (6018/7339)   Resolving deltas:  83% (6092/7339)   Resolving deltas:  84% (6165/7339)   Resolving deltas:  85% (6239/7339)   Resolving deltas:  86% (6312/7339)   Resolving deltas:  87% (6385/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6681/7339)   Resolving deltas:  92% (6755/7339)   Resolving deltas:  93% (6829/7339)   Resolving deltas:  94% (6899/7339)   Resolving deltas:  95% (6974/7339)   Resolving deltas:  96% (7048/7339)   Resolving deltas:  97% (7119/7339)   Resolving deltas:  98% (7202/7339)   Resolving deltas:  99% (7269/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+Checking connectivity... done.
+
+travis_time:end:054fcb04:start=1496823298343383664,finish=1496823302375309680,duration=4031926016$ cd chef/chef
+travis_time:start:176e0c80$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  10% (1/10)   [Kremote: Compressing objects:  20% (2/10)   [Kremote: Compressing objects:  30% (3/10)   [Kremote: Compressing objects:  40% (4/10)   [Kremote: Compressing objects:  50% (5/10)   [Kremote: Compressing objects:  60% (6/10)   [Kremote: Compressing objects:  70% (7/10)   [Kremote: Compressing objects:  80% (8/10)   [Kremote: Compressing objects:  90% (9/10)   [Kremote: Compressing objects: 100% (10/10)   [Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 23 (delta 17), reused 17 (delta 13), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:176e0c80:start=1496823302392066109,finish=1496823303929981811,duration=1537915702$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export TEST_GEM=chef/knife-windows
+
+travis_fold:start:rvmtravis_time:start:2e1e4ebd$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 14.3M  100 14.3M    0     0  31.0M      0 --:--:-- --:--:-- --:--:-- 31.0M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:2e1e4ebd:start=1496823313883853303,finish=1496823344675301969,duration=30791448666travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:1974faaa$ Installing caching utilities
+
+travis_time:end:1974faaa:start=1496823345800834836,finish=1496823345992757103,duration=191922267travis_time:start:06f583b0
+travis_time:end:06f583b0:start=1496823346038519153,finish=1496823346051137849,duration=12618696travis_time:start:06693b04attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-97f1aa21ca0442683b6ecbf8417d4e5f400d7fb3c6f4a69fab2c013dc2026146--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.6193/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-97f1aa21ca0442683b6ecbf8417d4e5f400d7fb3c6f4a69fab2c013dc2026146--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:06693b04:start=1496823346073037401,finish=1496823348629362152,duration=2556324751travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:0cadecf8
+travis_time:end:0cadecf8:start=1496823348644816327,finish=1496823348654849533,duration=10033206travis_time:start:12aa13b7adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:12aa13b7:start=1496823348666530573,finish=1496823355946521871,duration=7279991298travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:043da87f$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 29%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 54%)Fetching: rubygems-update-2.6.11.gem ( 56%)Fetching: rubygems-update-2.6.11.gem ( 58%)Fetching: rubygems-update-2.6.11.gem ( 61%)Fetching: rubygems-update-2.6.11.gem ( 63%)Fetching: rubygems-update-2.6.11.gem ( 65%)Fetching: rubygems-update-2.6.11.gem ( 67%)Fetching: rubygems-update-2.6.11.gem ( 69%)Fetching: rubygems-update-2.6.11.gem ( 71%)Fetching: rubygems-update-2.6.11.gem ( 74%)Fetching: rubygems-update-2.6.11.gem ( 76%)Fetching: rubygems-update-2.6.11.gem ( 78%)Fetching: rubygems-update-2.6.11.gem ( 80%)Fetching: rubygems-update-2.6.11.gem ( 82%)Fetching: rubygems-update-2.6.11.gem ( 84%)Fetching: rubygems-update-2.6.11.gem ( 86%)Fetching: rubygems-update-2.6.11.gem ( 89%)Fetching: rubygems-update-2.6.11.gem ( 91%)Fetching: rubygems-update-2.6.11.gem ( 93%)Fetching: rubygems-update-2.6.11.gem ( 95%)Fetching: rubygems-update-2.6.11.gem ( 97%)Fetching: rubygems-update-2.6.11.gem ( 99%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:043da87f:start=1496823356985177168,finish=1496823362773376015,duration=5788198847travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:20274fe0$ gem --version
+2.6.11
+
+travis_time:end:20274fe0:start=1496823362790188510,finish=1496823363095293262,duration=305104752travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:0c6b3883$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:0c6b3883:start=1496823363111261856,finish=1496823364799541650,duration=1688279794travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:06c07eac$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:06c07eac:start=1496823364812889805,finish=1496823366235635162,duration=1422745357travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:34ba9364$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:34ba9364:start=1496823366291174174,finish=1496823366715507390,duration=424333216travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:1b3a7aa8$ rm -f .bundle/config
+
+travis_time:end:1b3a7aa8:start=1496823366729700530,finish=1496823366741956477,duration=12255947travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:052fb057$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using addressable 2.4.0
+Using mixlib-cli 1.7.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using blankslate 2.1.2.4
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using diff-lcs 1.3
+Using erubis 2.7.0
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using highline 1.7.8
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using net-ssh 4.1.0
+Using systemu 2.6.5
+Using plist 3.3.0
+Using wmi-lite 1.0.0
+Using rspec-support 3.6.0
+Using multi_json 1.12.1
+Using proxifier 1.0.3
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using net-telnet 0.1.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using excon 0.55.0
+Using unicode-display_width 1.2.1
+Using multipart-post 2.0.0
+Using json 2.1.0
+Using net-http-pipeline 1.0.1
+Using net-http-persistent 2.9.4
+Using httpclient 2.8.3
+Using retriable 3.0.2
+Using parallel 1.11.2
+Using method_source 0.8.2
+Using rubyzip 1.2.1
+Using slop 3.6.0
+Using sslshake 1.2.0
+Using little-plugger 1.1.4
+Using semverse 2.0.0
+Using rubyntlm 0.6.2
+Using mixlib-versioning 1.1.0
+Using netrc 0.11.0
+Using nori 2.6.0
+Using rb-readline 0.5.4
+Using ruby-prof 0.16.2
+Using websocket 1.2.4
+Using simplecov-html 0.10.1
+Using ruby-shadow 2.5.0
+Using yard 0.9.9
+Using tomlrb 1.2.4
+Using tzinfo 1.2.3
+Using launchy 2.4.3
+Using rainbow 2.2.2
+Using parser 2.4.0.0
+Using binding_of_caller 0.7.2
+Using parslet 1.5.0
+Using gyoku 1.3.1
+Using appbundler 0.10.0
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using mixlib-archive 0.4.1
+Using mixlib-authentication 1.4.1
+Using ethon 0.10.1
+Using gssapi 1.2.0
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using faraday 0.12.1
+Using docker-api 1.33.4
+Using pry 0.10.4
+Using logging 2.2.2
+Using mixlib-install 3.2.1
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using activesupport 5.1.1
+Using rubocop 0.47.1
+Using toml 0.1.2
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using typhoeus 0.8.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using rspec_junit_formatter 0.2.3
+Using rspec-its 1.2.0
+Using rspec 3.6.0
+Using faraday-http-cache 2.0.0
+Using faraday_middleware 0.11.0.1
+Using gh 0.15.1
+Using sawyer 0.8.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using winrm 2.2.3
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using cheffish 13.0.0
+Using serverspec 2.38.1
+Using travis 1.8.8
+Using winrm-fs 1.0.1
+Using octokit 4.7.0
+Using chef 13.2.7 from source at `.`
+Using train 0.23.0
+Using github_changelog_generator 1.14.2 from https://github.com/chef/github-changelog-generator (at master@7ab4953)
+Using inspec 1.25.1
+Bundle complete! 24 Gemfile dependencies, 127 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:052fb057:start=1496823366751233427,finish=1496823368671490456,duration=1920257029travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:02389134$ echo --color > .rspec
+
+travis_time:end:02389134:start=1496823368683394004,finish=1496823368697121880,duration=13727876travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:0b307c44$ echo -fp >> .rspec
+
+travis_time:end:0b307c44:start=1496823368719481820,finish=1496823368731915720,duration=12433900travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:088b5a7e$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+This job is running on container-based infrastructure, which does not allow use of 'sudo', setuid, and setgid executables.
+If you require sudo, add 'sudo: required' to your .travis.yml
+
+
+travis_time:end:088b5a7e:start=1496823368744977761,finish=1496823369008645678,duration=263667917travis_fold:end:before_script.3travis_time:start:054482ac$ bundle exec tasks/bin/run_external_test $TEST_GEM master rake unit_spec
+Cloning into '/tmp/chef-external-test20170607-4598-1u3758a'...
+Your branch is up-to-date with 'origin/master'.
+Already on 'master'
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.0.0
+Installing public_suffix 2.0.5
+Installing builder 3.2.3
+Using bundler 1.14.6
+Installing fuzzyurl 0.9.0
+Installing mixlib-config 2.2.4
+Installing mixlib-shellout 2.2.7
+Installing libyajl2 1.2.0 with native extensions
+Installing hashie 3.5.5
+Installing mixlib-log 1.7.1
+Installing rack 2.0.3
+Installing uuidtools 2.1.5
+Installing diff-lcs 1.3
+Installing erubis 2.7.0
+Installing highline 1.7.8
+Installing iniparse 1.4.3
+Installing iso8601 0.9.1
+Installing mixlib-cli 1.7.0
+Installing net-ssh 4.1.0
+Installing ffi 1.9.18 with native extensions
+Installing ipaddress 0.8.3
+Installing plist 3.3.0
+Installing systemu 2.6.5
+Installing wmi-lite 1.0.0
+Installing proxifier 1.0.3
+Installing rspec-support 3.6.0
+Installing multi_json 1.12.1
+Using net-telnet 0.1.1
+Installing sfl 2.3
+Installing syslog-logger 1.6.8
+Installing coderay 1.1.1
+Installing httpclient 2.8.3
+Installing little-plugger 1.1.4
+Installing nori 2.6.0
+Installing rubyntlm 0.6.2
+Installing rubyzip 1.2.1
+Installing method_source 0.8.2
+Installing slop 3.6.0
+Installing rb-readline 0.5.4
+Installing ruby-wmi 0.4.0
+Installing addressable 2.5.1
+Installing gyoku 1.3.1
+Installing ffi-yajl 2.3.0 with native extensions
+Installing mixlib-archive 0.4.1
+Installing mixlib-authentication 1.4.1
+Installing net-sftp 2.1.2
+Installing net-ssh-gateway 2.0.0
+Installing net-scp 1.2.1
+Installing gssapi 1.2.0
+Installing rspec-core 3.6.0
+Installing rspec-expectations 3.6.0
+Installing rspec-mocks 3.6.0
+Installing logging 2.2.2
+Installing pry 0.10.4
+Installing chef-config 13.1.31
+Installing chef-zero 13.0.0
+Installing net-ssh-multi 1.2.1
+Installing specinfra 2.68.0
+Installing rspec_junit_formatter 0.2.3
+Installing rspec-its 1.2.0
+Installing rspec 3.6.0
+Installing winrm 2.2.3
+Installing ohai 13.1.0
+Installing serverspec 2.39.1
+Installing winrm-fs 1.0.1
+Installing chef 13.1.31
+Installing winrm-elevated 1.1.0
+Using knife-windows 1.9.0 from source at `.`
+Bundle complete! 8 Gemfile dependencies, 68 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/unit/\*\*/\*_spec.rb
+Run options:
+  include {:focus=>true}
+  exclude {:chef_lt_12_only=>true, :chef_lt_12_5_only=>true, :windows_2012_only=>true, :windows_only=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Chef::Knife::Bootstrap
+  when compared to BootstrapWindowsWinrm
+    contains the option flags (FAILED - 1)
+    uses the same long-name (FAILED - 2)
+    uses the same short-name (FAILED - 3)
+    uses the same description (FAILED - 4)
+    uses the same default value (FAILED - 5)
+  when compared to BootstrapWindowsSsh
+    contains the option flags (FAILED - 6)
+    uses the same long-name
+    uses the same short-name
+    uses the same description
+    uses the same default value
+
+Chef::Knife::BootstrapWindowsWinrm
+  specifying no_proxy with various entries
+    via --bootstrap-no-proxy
+      renders the client.rb with a single FQDN no_proxy entry
+    via --bootstrap-no-proxy multiple
+      renders the client.rb with comma-separated FQDN and wildcard IP address no_proxy entries
+  specifying --msi-url
+    with explicitly provided --msi-url
+      bootstrap batch file must fetch from provided url
+    with no provided --msi-url
+      bootstrap batch file must fetch from provided url
+  specifying knife_config[:architecture]
+    puts the target architecture into the msi_url
+
+Chef::Knife::BootstrapWindowsWinrm
+ERROR: Failed to execute command on localhost return code 500
+ERROR: Bootstrap command returned 500
+  should pass exit code from failed winrm call
+  should retry if a 401 is received from WinRM
+  should retry if something other than a 401 is received from WinRM
+  should keep retrying at 10s intervals if the timeout in minutes has not elapsed
+  should have a wait timeout of 2 minutes by default
+
+Waiting for remote response before bootstrap.  should not a wait for timeout on Errno::ECONNREFUSED
+  should stop retrying if more than 2 minutes has elapsed
+Doing old-style registration with the validation key at /etc/chef/validation.pem...
+Delete your validation key in order to use your user credentials instead
+
+Bootstrapping Chef on localhost
+  successfully bootstraps
+  knife secret-file && knife secret options are passed
+    gives preference to secret key passed under knife's secret-file option
+  cli secret-file && cli secret options are passed
+    gives preference to secret key passed under cli's secret-file option
+  knife secret-file, knife secret, cli secret-file && cli secret options are passed
+    gives preference to secret key passed under cli's secret-file option
+  knife secret-file && cli secret options are passed
+    gives preference to secret key passed under cli's secret option
+  knife secret && cli secret-file options are passed
+    gives preference to secret key passed under cli's secret-file option
+  cli secret-file option is passed
+    takes the secret key passed under cli's secret-file option
+  when the target node is 64 bit
+Doing old-style registration with the validation key at /etc/chef/validation.pem...
+Delete your validation key in order to use your user credentials instead
+
+Bootstrapping Chef on localhost
+    successfully bootstraps
+  FQDN validation -
+    should raise an error if FQDN value is not passed
+WARNING: Using `expect { }.not_to raise_error(SpecificErrorClass)` risks false positives, since literally any other error would cause the expectation to pass, including those raised by Ruby (e.g. NoMethodError, NameError and ArgumentError), meaning the code you are intending to test may not even get reached. Instead consider using `expect { }.not_to raise_error` or `expect { }.to raise_error(DifferentSpecificErrorClass)`. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /tmp/chef-external-test20170607-4598-1u3758a/spec/unit/knife/bootstrap_windows_winrm_spec.rb:263:in `block (3 levels) in <top (required)>'.
+Doing old-style registration with the validation key at /etc/chef/validation.pem...
+Delete your validation key in order to use your user credentials instead
+
+
+Waiting for remote response before bootstrap.ERROR: No response received from remote node after 0.0 minutes, giving up.
+ERROR: Exception:  is not a valid WinRM shell type. Expected either :cmd, :powershell or pluggable shell.
+    should not raise error if FQDN value is passed
+  when validation_key is not present
+    using chef 12
+      raises an exception if winrm_authentication_protocol is basic and transport is plaintext
+      raises an exception if chef_node_name is not present
+  when doing chef vault
+    builder does not respond to client
+Bootstrapping Chef on localhost
+      passes a node search query to the handler
+    builder responds to client
+Bootstrapping Chef on localhost
+      passes a node search query to the handler
+  first_boot_attributes
+    when none of the json-attributes options are passed
+      returns an empty hash
+    when only --json-attributes option is passed
+      returns the hash passed by the user in --json-attributes option
+    when only --json-attribute-file option is passed
+      returns the hash passed by the user in --json-attribute-file option
+    when both the --json-attributes option and --json-attribute-file options are passed
+      returns the hash passed by the user in --json-attributes option
+  render_template
+    sets correct values into config and returns the correct response
+
+Chef::Knife::Core::WindowsBootstrapContext
+  fips
+    when fips is set
+      sets fips mode in the client.rb
+    when fips is not set
+      sets fips mode in the client.rb
+  trusted_certs_script
+    should echo every .crt file in the trusted_certs directory
+    should echo every .pem file in the trusted_certs directory
+    should not echo files which aren't .crt or .pem files
+  validation_key
+    should return false if validation_key does not exist
+  #get_log_location
+    when config_log_location value is nil
+      sets STDOUT in client.rb as default
+    when config_log_location value is empty
+      sets STDOUT in client.rb as default
+    when config_log_location value is STDOUT
+      sets STDOUT in client.rb
+    when config_log_location value is STDERR
+      sets STDERR in client.rb
+    when config_log_location value is path to a file
+      sets file path in client.rb
+    when config_log_location value is :win_evt
+      sets :win_evt in client.rb
+    when config_log_location value is :syslog
+      raise error with message and exit
+  #config_content
+    generates the config file data
+  latest_current_windows_chef_version_query
+    returns the major version of the current version of Chef
+    does not add prerelease if the version of Chef installed is a prerelease
+    does add prerelease if the version specified to be installed is a prerelease
+    when the prerelease config option is set
+      sets prerelease to true in the returned string
+  msi_url
+    when config option is not set
+      returns a chef.io msi url with minimal url parameters
+      returns a chef.io msi url with provided url parameters substituted
+    when msi_url config option is set
+      returns the overriden url
+      doesn't introduce any unnecessary query parameters if provided by the template
+  bootstrap_install_command for bootstrap through WinRM
+    when bootstrap_install_command option is passed on CLI
+      sets the bootstrap_install_command option under Chef::Config::Knife object
+    when bootstrap_install_command option is not passed on CLI
+      does not set the bootstrap_install_command option under Chef::Config::Knife object
+  bootstrap_install_command for bootstrap through SSH
+    when bootstrap_install_command option is passed on CLI
+      sets the bootstrap_install_command option under Chef::Config::Knife object
+    when bootstrap_install_command option is not passed on CLI
+      does not set the bootstrap_install_command option under Chef::Config::Knife object
+
+Chef::Knife::WindowsCertGenerate
+  generates RSA key pair
+  generates X509 certificate
+  writes certificate to file
+  when creating certificate files
+    writes out certificates
+    prompts when certificates already exist
+    creates certificate on specified file path
+
+Chef::Knife::WindowsCertInstall
+  on Windows
+    installs certificate
+  not on Windows
+    exits with an error
+
+Chef::Knife::WindowsListenerCreate
+  on Windows
+    creates winrm listener
+    raise an error on command failure
+    creates winrm listener with cert install option
+  not on Windows
+    exits with an error
+
+Chef::Knife::WinrmSession
+  #initialize
+    when a proxy is configured
+      sets the http_proxy to the configured proxy
+      sets the ssl policy on the winrm client
+  #relay_command
+    run command and display commands output
+    exits with 401 if command execution raises a 401
+    cmd shell
+      creates shell and sends codepage
+    powershell shell
+      does not send codepage to shell
+
+Chef::Knife::Winrm
+  #resolve_target_nodes
+    when there are some hosts found but they do not have an attribute to connect with
+WARNING: No knife configuration file found
+      raises a specific error (KNIFE-222)
+    when there are nested attributes
+WARNING: No knife configuration file found
+      uses the nested attributes (KNIFE-276)
+  #configure_session
+    when configuring the WinRM user name
+      when basic auth is used
+        passes user name as given in options
+      when negotiate auth is used
+        when user is prefixed with realm
+          passes user name as given in options
+        when user realm is included via email format
+          passes user name as given in options
+        when a local user is given
+          prefixes user with the dot (local) realm
+    when configuring the WinRM password
+      passes password as given in options
+      when no password is given in the options
+        passes password prompted
+    when configuring the WinRM transport
+      kerberos option is set
+WARNING: No knife configuration file found
+        sets the transport to kerberos
+      kerberos option is set but nil
+WARNING: No knife configuration file found
+        sets the transport to plaintext
+      on windows workstations
+        defaults to negotiate when on a Windows host
+      on non-windows workstations
+WARNING: No knife configuration file found
+        defaults to the http uri scheme
+WARNING: No knife configuration file found
+        sets the operation timeout and verifes default
+WARNING: No knife configuration file found
+        sets the user specified winrm port
+WARNING: No knife configuration file found
+        sets operation timeout and verify 10 Minute timeout
+WARNING: No knife configuration file found
+        uses the https uri scheme if the ssl transport is specified
+WARNING: No knife configuration file found
+        uses the winrm port '5986' by default for ssl transport
+WARNING: No knife configuration file found
+        defaults to validating the server when the ssl transport is used
+WARNING: No knife configuration file found
+        validates the server when the ssl transport is used and the :winrm_ssl_verify_mode option is not configured to :verify_none
+WARNING: No knife configuration file found
+        validates the server when the ssl transport is used and the :ca_trust_file option is specified even if the :winrm_ssl_verify_mode option is set to :verify_none
+        when setting verify_none
+WARNING: No knife configuration file found
+WARNING: * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+SSL validation of HTTPS requests for the WinRM transport is disabled. HTTPS WinRM
+connections are still encrypted, but knife is not able to detect forged replies
+or spoofing attacks.
+
+To fix this issue add an entry like this to your knife configuration file:
+
+```
+  # Verify all WinRM HTTPS connections (default, recommended)
+  knife[:winrm_ssl_verify_mode] = :verify_peer
+```
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+          does not validate the server when the ssl transport is used and the :winrm_ssl_verify_mode option is set to :verify_none
+WARNING: No knife configuration file found
+          prints warning output when the :winrm_ssl_verify_mode set to :verify_none to disable server validation
+          when transport is plaintext
+WARNING: No knife configuration file found
+            does not print warning re ssl server validation
+  #run
+    returns with 0 if the command succeeds
+    exits with exact exit status if the command fails and returns config is set to 0
+    exits with non-zero status if the command fails and returns config is set to 0
+    exits with a zero status if the command returns an expected non-zero status
+    exits with a zero status if the command returns an expected non-zero status
+    exits with 100 and no hint if command execution raises an exception other than 401
+    exits with 100 if command execution raises a 401
+    prints a hint on failure for negotiate authentication
+    prints a hint on failure for basic authentication
+    when winrm_authentication_protocol specified
+      sets negotiate transport on windows for 'negotiate' authentication
+      sets negotiate transport on unix for 'negotiate' authentication
+      disables sspi and skips the winrm monkey patch for 'ssl' transport and 'basic' authentication
+Valid values are basic,negotiate,kerberos.
+      raises an error if value is other than [basic, negotiate, kerberos]
+
+Chef::Knife::WsmanTest
+Connected successfully to localhost at http://localhost:5985/wsman.
+  sets the ssl policy
+  when testing the WSMAN endpoint
+    and the service responds
+      successfully
+        writes a message about a successful connection
+      with an invalid body
+Connected successfully to localhost at http://localhost:5985/wsman.
+        warns for a failed connection and exit with a status of 1
+      with a non-200 code
+Connected successfully to localhost at http://localhost:5985/wsman.
+        warns for a failed connection and exits with a status of 1
+    and the service does not respond
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+ERROR: Failed to connect to 1 nodes.
+      exits with a status code of 1
+ERROR: Failed to connect to 1 nodes.
+      writes a warning message for each node it fails to connect to
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+      writes an error message if it fails to connect to any nodes
+  when not validating ssl cert
+    sets verify_mode to verify_none
+  when testing the WSMAN endpoint with verbose output
+    and the service does not respond
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+ERROR: Failed to connect to 1 nodes.
+      returns an object with an error message
+    with an invalid body
+Connected successfully to localhost at http://localhost:5985/wsman.
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+ERROR: Failed to connect to 1 nodes.
+      includes invalid body in error message
+    and the target node is Windows Server 2008 R2
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the stack of the product version as 2.0
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the protocol version as the current DMTF standard
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the vendor as the Microsoft Corporation
+    and the target node is Windows Server 2012 R2
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the stack of the product version as 3.0
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the protocol version as the current DMTF standard
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the vendor as the Microsoft Corporation
+
+Failures:
+
+  1) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm contains the option flags
+     Failure/Error: expect(filtered_keys).to match_array(bootstrap.options.keys - ref_ignore)
+
+       expected collection contained:  [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_proxy_pass, :bootstrap...et, :secret_file, :ssh_gateway_identity, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file]
+       actual collection contained:    [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_template, :bootstrap_u...ret_file, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file, :winrm_codepage, :winrm_shell]
+       the missing elements were:      [:bootstrap_proxy_pass, :bootstrap_proxy_user, :ssh_gateway_identity]
+       the extra elements were:        [:concurrency, :winrm_codepage, :winrm_shell]
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  2) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same long-name
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  3) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same short-name
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:59:in `block (3 levels) in <top (required)>'
+
+  4) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same description
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:63:in `block (3 levels) in <top (required)>'
+
+  5) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same default value
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:67:in `block (3 levels) in <top (required)>'
+
+  6) Chef::Knife::Bootstrap when compared to BootstrapWindowsSsh contains the option flags
+     Failure/Error: expect(filtered_keys).to match_array(bootstrap.options.keys - ref_ignore)
+
+       expected collection contained:  [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_proxy_pass, :bootstrap...sh_gateway_identity, :ssh_identity_file, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file]
+       actual collection contained:    [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_template, :bootstrap_u..._file, :ssh_gateway, :ssh_identity_file, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file]
+       the missing elements were:      [:bootstrap_proxy_pass, :bootstrap_proxy_user, :ssh_gateway_identity]
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:154
+     # ./spec/unit/knife/bootstrap_options_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+Finished in 2.18 seconds (files took 1.78 seconds to load)
+137 examples, 6 failures
+
+Failed examples:
+
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:1] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm contains the option flags
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:2] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same long-name
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:3] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same short-name
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:4] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same description
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:5] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same default value
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:2:1] # Chef::Knife::Bootstrap when compared to BootstrapWindowsSsh contains the option flags
+
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/unit/\*\*/\*_spec.rb failed
+bundler: failed to load command: tasks/bin/run_external_test (tasks/bin/run_external_test)
+Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of bundle exec rake unit_spec ----
+STDOUT: /home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/unit/\*\*/\*_spec.rb
+Run options:
+  include {:focus=>true}
+  exclude {:chef_lt_12_only=>true, :chef_lt_12_5_only=>true, :windows_2012_only=>true, :windows_only=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Chef::Knife::Bootstrap
+  when compared to BootstrapWindowsWinrm
+    contains the option flags (FAILED - 1)
+    uses the same long-name (FAILED - 2)
+    uses the same short-name (FAILED - 3)
+    uses the same description (FAILED - 4)
+    uses the same default value (FAILED - 5)
+  when compared to BootstrapWindowsSsh
+    contains the option flags (FAILED - 6)
+    uses the same long-name
+    uses the same short-name
+    uses the same description
+    uses the same default value
+
+Chef::Knife::BootstrapWindowsWinrm
+  specifying no_proxy with various entries
+    via --bootstrap-no-proxy
+      renders the client.rb with a single FQDN no_proxy entry
+    via --bootstrap-no-proxy multiple
+      renders the client.rb with comma-separated FQDN and wildcard IP address no_proxy entries
+  specifying --msi-url
+    with explicitly provided --msi-url
+      bootstrap batch file must fetch from provided url
+    with no provided --msi-url
+      bootstrap batch file must fetch from provided url
+  specifying knife_config[:architecture]
+    puts the target architecture into the msi_url
+
+Chef::Knife::BootstrapWindowsWinrm
+  should pass exit code from failed winrm call
+  should retry if a 401 is received from WinRM
+  should retry if something other than a 401 is received from WinRM
+  should keep retrying at 10s intervals if the timeout in minutes has not elapsed
+  should have a wait timeout of 2 minutes by default
+
+Waiting for remote response before bootstrap.  should not a wait for timeout on Errno::ECONNREFUSED
+  should stop retrying if more than 2 minutes has elapsed
+  successfully bootstraps
+  knife secret-file && knife secret options are passed
+    gives preference to secret key passed under knife's secret-file option
+  cli secret-file && cli secret options are passed
+    gives preference to secret key passed under cli's secret-file option
+  knife secret-file, knife secret, cli secret-file && cli secret options are passed
+    gives preference to secret key passed under cli's secret-file option
+  knife secret-file && cli secret options are passed
+    gives preference to secret key passed under cli's secret option
+  knife secret && cli secret-file options are passed
+    gives preference to secret key passed under cli's secret-file option
+  cli secret-file option is passed
+    takes the secret key passed under cli's secret-file option
+  when the target node is 64 bit
+    successfully bootstraps
+  FQDN validation -
+    should raise an error if FQDN value is not passed
+
+Waiting for remote response before bootstrap.    should not raise error if FQDN value is passed
+  when validation_key is not present
+    using chef 12
+      raises an exception if winrm_authentication_protocol is basic and transport is plaintext
+      raises an exception if chef_node_name is not present
+  when doing chef vault
+    builder does not respond to client
+      passes a node search query to the handler
+    builder responds to client
+      passes a node search query to the handler
+  first_boot_attributes
+    when none of the json-attributes options are passed
+      returns an empty hash
+    when only --json-attributes option is passed
+      returns the hash passed by the user in --json-attributes option
+    when only --json-attribute-file option is passed
+      returns the hash passed by the user in --json-attribute-file option
+    when both the --json-attributes option and --json-attribute-file options are passed
+      returns the hash passed by the user in --json-attributes option
+  render_template
+    sets correct values into config and returns the correct response
+
+Chef::Knife::Core::WindowsBootstrapContext
+  fips
+    when fips is set
+      sets fips mode in the client.rb
+    when fips is not set
+      sets fips mode in the client.rb
+  trusted_certs_script
+    should echo every .crt file in the trusted_certs directory
+    should echo every .pem file in the trusted_certs directory
+    should not echo files which aren't .crt or .pem files
+  validation_key
+    should return false if validation_key does not exist
+  #get_log_location
+    when config_log_location value is nil
+      sets STDOUT in client.rb as default
+    when config_log_location value is empty
+      sets STDOUT in client.rb as default
+    when config_log_location value is STDOUT
+      sets STDOUT in client.rb
+    when config_log_location value is STDERR
+      sets STDERR in client.rb
+    when config_log_location value is path to a file
+      sets file path in client.rb
+    when config_log_location value is :win_evt
+      sets :win_evt in client.rb
+    when config_log_location value is :syslog
+      raise error with message and exit
+  #config_content
+    generates the config file data
+  latest_current_windows_chef_version_query
+    returns the major version of the current version of Chef
+    does not add prerelease if the version of Chef installed is a prerelease
+    does add prerelease if the version specified to be installed is a prerelease
+    when the prerelease config option is set
+      sets prerelease to true in the returned string
+  msi_url
+    when config option is not set
+      returns a chef.io msi url with minimal url parameters
+      returns a chef.io msi url with provided url parameters substituted
+    when msi_url config option is set
+      returns the overriden url
+      doesn't introduce any unnecessary query parameters if provided by the template
+  bootstrap_install_command for bootstrap through WinRM
+    when bootstrap_install_command option is passed on CLI
+      sets the bootstrap_install_command option under Chef::Config::Knife object
+    when bootstrap_install_command option is not passed on CLI
+      does not set the bootstrap_install_command option under Chef::Config::Knife object
+  bootstrap_install_command for bootstrap through SSH
+    when bootstrap_install_command option is passed on CLI
+      sets the bootstrap_install_command option under Chef::Config::Knife object
+    when bootstrap_install_command option is not passed on CLI
+      does not set the bootstrap_install_command option under Chef::Config::Knife object
+
+Chef::Knife::WindowsCertGenerate
+  generates RSA key pair
+  generates X509 certificate
+  writes certificate to file
+  when creating certificate files
+    writes out certificates
+    prompts when certificates already exist
+    creates certificate on specified file path
+
+Chef::Knife::WindowsCertInstall
+  on Windows
+    installs certificate
+  not on Windows
+    exits with an error
+
+Chef::Knife::WindowsListenerCreate
+  on Windows
+    creates winrm listener
+    raise an error on command failure
+    creates winrm listener with cert install option
+  not on Windows
+    exits with an error
+
+Chef::Knife::WinrmSession
+  #initialize
+    when a proxy is configured
+      sets the http_proxy to the configured proxy
+      sets the ssl policy on the winrm client
+  #relay_command
+    run command and display commands output
+    exits with 401 if command execution raises a 401
+    cmd shell
+      creates shell and sends codepage
+    powershell shell
+      does not send codepage to shell
+
+Chef::Knife::Winrm
+  #resolve_target_nodes
+    when there are some hosts found but they do not have an attribute to connect with
+      raises a specific error (KNIFE-222)
+    when there are nested attributes
+      uses the nested attributes (KNIFE-276)
+  #configure_session
+    when configuring the WinRM user name
+      when basic auth is used
+        passes user name as given in options
+      when negotiate auth is used
+        when user is prefixed with realm
+          passes user name as given in options
+        when user realm is included via email format
+          passes user name as given in options
+        when a local user is given
+          prefixes user with the dot (local) realm
+    when configuring the WinRM password
+      passes password as given in options
+      when no password is given in the options
+        passes password prompted
+    when configuring the WinRM transport
+      kerberos option is set
+        sets the transport to kerberos
+      kerberos option is set but nil
+        sets the transport to plaintext
+      on windows workstations
+        defaults to negotiate when on a Windows host
+      on non-windows workstations
+        defaults to the http uri scheme
+        sets the operation timeout and verifes default
+        sets the user specified winrm port
+        sets operation timeout and verify 10 Minute timeout
+        uses the https uri scheme if the ssl transport is specified
+        uses the winrm port '5986' by default for ssl transport
+        defaults to validating the server when the ssl transport is used
+        validates the server when the ssl transport is used and the :winrm_ssl_verify_mode option is not configured to :verify_none
+        validates the server when the ssl transport is used and the :ca_trust_file option is specified even if the :winrm_ssl_verify_mode option is set to :verify_none
+        when setting verify_none
+          does not validate the server when the ssl transport is used and the :winrm_ssl_verify_mode option is set to :verify_none
+          prints warning output when the :winrm_ssl_verify_mode set to :verify_none to disable server validation
+          when transport is plaintext
+            does not print warning re ssl server validation
+  #run
+    returns with 0 if the command succeeds
+    exits with exact exit status if the command fails and returns config is set to 0
+    exits with non-zero status if the command fails and returns config is set to 0
+    exits with a zero status if the command returns an expected non-zero status
+    exits with a zero status if the command returns an expected non-zero status
+    exits with 100 and no hint if command execution raises an exception other than 401
+    exits with 100 if command execution raises a 401
+    prints a hint on failure for negotiate authentication
+    prints a hint on failure for basic authentication
+    when winrm_authentication_protocol specified
+      sets negotiate transport on windows for 'negotiate' authentication
+      sets negotiate transport on unix for 'negotiate' authentication
+      disables sspi and skips the winrm monkey patch for 'ssl' transport and 'basic' authentication
+      raises an error if value is other than [basic, negotiate, kerberos]
+
+Chef::Knife::WsmanTest
+Connected successfully to localhost at http://localhost:5985/wsman.
+  sets the ssl policy
+  when testing the WSMAN endpoint
+    and the service responds
+      successfully
+        writes a message about a successful connection
+      with an invalid body
+Connected successfully to localhost at http://localhost:5985/wsman.
+        warns for a failed connection and exit with a status of 1
+      with a non-200 code
+Connected successfully to localhost at http://localhost:5985/wsman.
+        warns for a failed connection and exits with a status of 1
+    and the service does not respond
+      exits with a status code of 1
+      writes a warning message for each node it fails to connect to
+      writes an error message if it fails to connect to any nodes
+  when not validating ssl cert
+    sets verify_mode to verify_none
+  when testing the WSMAN endpoint with verbose output
+    and the service does not respond
+      returns an object with an error message
+    with an invalid body
+Connected successfully to localhost at http://localhost:5985/wsman.
+      includes invalid body in error message
+    and the target node is Windows Server 2008 R2
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the stack of the product version as 2.0
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the protocol version as the current DMTF standard
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the vendor as the Microsoft Corporation
+    and the target node is Windows Server 2012 R2
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the stack of the product version as 3.0
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the protocol version as the current DMTF standard
+Connected successfully to localhost at http://localhost:5985/wsman.
+      identifies the vendor as the Microsoft Corporation
+
+Failures:
+
+  1) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm contains the option flags
+     Failure/Error: expect(filtered_keys).to match_array(bootstrap.options.keys - ref_ignore)
+
+       expected collection contained:  [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_proxy_pass, :bootstrap...et, :secret_file, :ssh_gateway_identity, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file]
+       actual collection contained:    [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_template, :bootstrap_u...ret_file, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file, :winrm_codepage, :winrm_shell]
+       the missing elements were:      [:bootstrap_proxy_pass, :bootstrap_proxy_user, :ssh_gateway_identity]
+       the extra elements were:        [:concurrency, :winrm_codepage, :winrm_shell]
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  2) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same long-name
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  3) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same short-name
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:59:in `block (3 levels) in <top (required)>'
+
+  4) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same description
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:63:in `block (3 levels) in <top (required)>'
+
+  5) Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same default value
+     Failure/Error: expected = bootstrap.options[win_key][sym]
+
+     NoMethodError:
+       undefined method `[]' for nil:NilClass
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:121
+     # ./spec/unit/knife/bootstrap_options_spec.rb:36:in `block in compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `each'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:33:in `compare_property'
+     # ./spec/unit/knife/bootstrap_options_spec.rb:67:in `block (3 levels) in <top (required)>'
+
+  6) Chef::Knife::Bootstrap when compared to BootstrapWindowsSsh contains the option flags
+     Failure/Error: expect(filtered_keys).to match_array(bootstrap.options.keys - ref_ignore)
+
+       expected collection contained:  [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_proxy_pass, :bootstrap...sh_gateway_identity, :ssh_identity_file, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file]
+       actual collection contained:    [:bootstrap_install_command, :bootstrap_no_proxy, :bootstrap_proxy, :bootstrap_template, :bootstrap_u..._file, :ssh_gateway, :ssh_identity_file, :ssh_password, :ssh_port, :ssh_user, :tags, :template_file]
+       the missing elements were:      [:bootstrap_proxy_pass, :bootstrap_proxy_user, :ssh_gateway_identity]
+     Shared Example Group: "compare_options" called from ./spec/unit/knife/bootstrap_options_spec.rb:154
+     # ./spec/unit/knife/bootstrap_options_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+Finished in 2.18 seconds (files took 1.78 seconds to load)
+137 examples, 6 failures
+
+Failed examples:
+
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:1] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm contains the option flags
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:2] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same long-name
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:3] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same short-name
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:4] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same description
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:1:5] # Chef::Knife::Bootstrap when compared to BootstrapWindowsWinrm uses the same default value
+rspec ./spec/unit/knife/bootstrap_options_spec.rb[1:2:1] # Chef::Knife::Bootstrap when compared to BootstrapWindowsSsh contains the option flags
+STDERR: ERROR: Failed to execute command on localhost return code 500
+ERROR: Bootstrap command returned 500
+Doing old-style registration with the validation key at /etc/chef/validation.pem...
+Delete your validation key in order to use your user credentials instead
+
+Bootstrapping Chef on localhost
+Doing old-style registration with the validation key at /etc/chef/validation.pem...
+Delete your validation key in order to use your user credentials instead
+
+Bootstrapping Chef on localhost
+WARNING: Using `expect { }.not_to raise_error(SpecificErrorClass)` risks false positives, since literally any other error would cause the expectation to pass, including those raised by Ruby (e.g. NoMethodError, NameError and ArgumentError), meaning the code you are intending to test may not even get reached. Instead consider using `expect { }.not_to raise_error` or `expect { }.to raise_error(DifferentSpecificErrorClass)`. This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives = :nothing`. Called from /tmp/chef-external-test20170607-4598-1u3758a/spec/unit/knife/bootstrap_windows_winrm_spec.rb:263:in `block (3 levels) in <top (required)>'.
+Doing old-style registration with the validation key at /etc/chef/validation.pem...
+Delete your validation key in order to use your user credentials instead
+
+ERROR: No response received from remote node after 0.0 minutes, giving up.
+ERROR: Exception:  is not a valid WinRM shell type. Expected either :cmd, :powershell or pluggable shell.
+Bootstrapping Chef on localhost
+Bootstrapping Chef on localhost
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+WARNING: * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+SSL validation of HTTPS requests for the WinRM transport is disabled. HTTPS WinRM
+connections are still encrypted, but knife is not able to detect forged replies
+or spoofing attacks.
+
+To fix this issue add an entry like this to your knife configuration file:
+
+```
+  # Verify all WinRM HTTPS connections (default, recommended)
+  knife[:winrm_ssl_verify_mode] = :verify_peer
+```
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+WARNING: No knife configuration file found
+WARNING: No knife configuration file found
+Valid values are basic,negotiate,kerberos.
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+ERROR: Failed to connect to 1 nodes.
+ERROR: Failed to connect to 1 nodes.
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+ERROR: Failed to connect to 1 nodes.
+WARNING: Failed to connect to localhost at http://localhost:5985/wsman.
+ERROR: Failed to connect to 1 nodes.
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/unit/\*\*/\*_spec.rb failed
+---- End output of bundle exec rake unit_spec ----
+Ran bundle exec rake unit_spec returned 1
+  /home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:289:in `invalid!'
+  /home/travis/build/chef/chef/vendor/bundle/ruby/2.4.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:276:in `error!'
+  /home/travis/build/chef/chef/lib/chef/mixin/shell_out.rb:120:in `shell_out!'
+  tasks/bin/run_external_test:22:in `block (3 levels) in <top (required)>'
+  /home/travis/.rvm/gems/ruby-2.4.1/gems/bundler-1.14.6/lib/bundler.rb:286:in `block in with_clean_env'
+  /home/travis/.rvm/gems/ruby-2.4.1/gems/bundler-1.14.6/lib/bundler.rb:521:in `with_env'
+  /home/travis/.rvm/gems/ruby-2.4.1/gems/bundler-1.14.6/lib/bundler.rb:286:in `with_clean_env'
+  tasks/bin/run_external_test:20:in `block (2 levels) in <top (required)>'
+  tasks/bin/run_external_test:18:in `chdir'
+  tasks/bin/run_external_test:18:in `block in <top (required)>'
+  /home/travis/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/tmpdir.rb:89:in `mktmpdir'
+  tasks/bin/run_external_test:14:in `<top (required)>'
+
+travis_time:end:054482ac:start=1496823369024203053,finish=1496823418317437519,duration=49293234466
+The command "bundle exec tasks/bin/run_external_test $TEST_GEM master rake unit_spec" exited with 1.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:302dd98c
+travis_time:end:302dd98c:start=1496823419408545729,finish=1496823419421246809,duration=12701080travis_time:start:0023fe22nothing changed, not updating cache
+
+travis_time:end:0023fe22:start=1496823419443305394,finish=1496823423091491393,duration=3648185999travis_fold:end:cache.2
+Done. Your build exited with 1.

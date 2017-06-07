@@ -1,0 +1,1410 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-08035d0-production-2-worker-org-ec2.travisci.net:8895824a-918c-4cf4-9bb6-bc7648cd0a71
+version: v2.8.2 https://github.com/travis-ci/worker/tree/8af6d454c3a7790f73c7af98ed33b0b33292478f
+instance: 80c7382:travis:ruby
+startup: 1.823485566s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: trusty
+Build id: 240266470
+Job id: 240266481
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Nov 10 03:26:46 UTC 2016
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+Linux Version
+4.4.0-45-generic
+Cookbooks Version
+58fad1f https://github.com/travis-ci/travis-cookbooks/tree/58fad1f
+git version
+git version 1.9.1
+bash version
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+gcc version
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+docker version
+Client:
+ Version:      1.12.3
+ API version:  1.24
+ Go version:   go1.6.3
+ Git commit:   6b644ec
+ Built:        Wed Oct 26 23:26:11 2016
+ OS/Arch:      linux/amd64
+clang version
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+jq version
+jq-1.5
+bats version
+Bats 0.4.0
+gimme version
+v1.0.0
+nvm version
+0.32.0
+perlbrew version
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.76
+postgresql client version
+psql (PostgreSQL) 9.6.1
+phpenv version
+rbenv 1.0.0-33-gc7dcaf1
+rvm version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+default ruby version
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+Pre-installed Ruby versions
+ruby-2.2.5
+ruby-2.3.1
+travis_fold:end:system_info
+Removing symlink /usr/lib/jvm/java-8-oracle-amd64
+$ sudo rm -f /usr/lib/jvm/java-8-oracle-amd64
+Reload jdk_switcher
+$ source $HOME/.jdk_switcher_rc
+travis_fold:start:git.checkouttravis_time:start:01d7a150$ git clone --depth=50 https://github.com/chef/chef.git chef/chef
+Cloning into 'chef/chef'...
+remote: Counting objects: 12193, done.[K
+remote: Compressing objects:   0% (1/6956)   [Kremote: Compressing objects:   1% (70/6956)   [Kremote: Compressing objects:   2% (140/6956)   [Kremote: Compressing objects:   3% (209/6956)   [Kremote: Compressing objects:   4% (279/6956)   [Kremote: Compressing objects:   5% (348/6956)   [Kremote: Compressing objects:   6% (418/6956)   [Kremote: Compressing objects:   7% (487/6956)   [Kremote: Compressing objects:   8% (557/6956)   [Kremote: Compressing objects:   9% (627/6956)   [Kremote: Compressing objects:  10% (696/6956)   [Kremote: Compressing objects:  11% (766/6956)   [Kremote: Compressing objects:  12% (835/6956)   [Kremote: Compressing objects:  13% (905/6956)   [Kremote: Compressing objects:  14% (974/6956)   [Kremote: Compressing objects:  15% (1044/6956)   [Kremote: Compressing objects:  16% (1113/6956)   [Kremote: Compressing objects:  17% (1183/6956)   [Kremote: Compressing objects:  18% (1253/6956)   [Kremote: Compressing objects:  19% (1322/6956)   [Kremote: Compressing objects:  20% (1392/6956)   [Kremote: Compressing objects:  21% (1461/6956)   [Kremote: Compressing objects:  22% (1531/6956)   [Kremote: Compressing objects:  23% (1600/6956)   [Kremote: Compressing objects:  24% (1670/6956)   [Kremote: Compressing objects:  25% (1739/6956)   [Kremote: Compressing objects:  26% (1809/6956)   [Kremote: Compressing objects:  27% (1879/6956)   [Kremote: Compressing objects:  28% (1948/6956)   [Kremote: Compressing objects:  29% (2018/6956)   [Kremote: Compressing objects:  30% (2087/6956)   [Kremote: Compressing objects:  31% (2157/6956)   [Kremote: Compressing objects:  32% (2226/6956)   [Kremote: Compressing objects:  33% (2296/6956)   [Kremote: Compressing objects:  34% (2366/6956)   [Kremote: Compressing objects:  35% (2435/6956)   [Kremote: Compressing objects:  36% (2505/6956)   [Kremote: Compressing objects:  37% (2574/6956)   [Kremote: Compressing objects:  38% (2644/6956)   [Kremote: Compressing objects:  39% (2713/6956)   [Kremote: Compressing objects:  40% (2783/6956)   [Kremote: Compressing objects:  41% (2852/6956)   [Kremote: Compressing objects:  42% (2922/6956)   [Kremote: Compressing objects:  43% (2992/6956)   [Kremote: Compressing objects:  44% (3061/6956)   [Kremote: Compressing objects:  45% (3131/6956)   [Kremote: Compressing objects:  46% (3200/6956)   [Kremote: Compressing objects:  47% (3270/6956)   [Kremote: Compressing objects:  48% (3339/6956)   [Kremote: Compressing objects:  49% (3409/6956)   [Kremote: Compressing objects:  50% (3478/6956)   [Kremote: Compressing objects:  51% (3548/6956)   [Kremote: Compressing objects:  52% (3618/6956)   [Kremote: Compressing objects:  53% (3687/6956)   [Kremote: Compressing objects:  54% (3757/6956)   [Kremote: Compressing objects:  55% (3826/6956)   [Kremote: Compressing objects:  56% (3896/6956)   [Kremote: Compressing objects:  57% (3965/6956)   [Kremote: Compressing objects:  58% (4035/6956)   [Kremote: Compressing objects:  59% (4105/6956)   [Kremote: Compressing objects:  60% (4174/6956)   [Kremote: Compressing objects:  61% (4244/6956)   [Kremote: Compressing objects:  62% (4313/6956)   [Kremote: Compressing objects:  63% (4383/6956)   [Kremote: Compressing objects:  64% (4452/6956)   [Kremote: Compressing objects:  65% (4522/6956)   [Kremote: Compressing objects:  66% (4591/6956)   [Kremote: Compressing objects:  67% (4661/6956)   [Kremote: Compressing objects:  68% (4731/6956)   [Kremote: Compressing objects:  69% (4800/6956)   [Kremote: Compressing objects:  70% (4870/6956)   [Kremote: Compressing objects:  71% (4939/6956)   [Kremote: Compressing objects:  72% (5009/6956)   [Kremote: Compressing objects:  73% (5078/6956)   [Kremote: Compressing objects:  74% (5148/6956)   [Kremote: Compressing objects:  75% (5217/6956)   [Kremote: Compressing objects:  76% (5287/6956)   [Kremote: Compressing objects:  77% (5357/6956)   [Kremote: Compressing objects:  78% (5426/6956)   [Kremote: Compressing objects:  79% (5496/6956)   [Kremote: Compressing objects:  80% (5565/6956)   [Kremote: Compressing objects:  81% (5635/6956)   [Kremote: Compressing objects:  82% (5704/6956)   [Kremote: Compressing objects:  83% (5774/6956)   [Kremote: Compressing objects:  84% (5844/6956)   [Kremote: Compressing objects:  85% (5913/6956)   [Kremote: Compressing objects:  86% (5983/6956)   [Kremote: Compressing objects:  87% (6052/6956)   [Kremote: Compressing objects:  88% (6122/6956)   [Kremote: Compressing objects:  89% (6191/6956)   [Kremote: Compressing objects:  90% (6261/6956)   [Kremote: Compressing objects:  91% (6330/6956)   [Kremote: Compressing objects:  92% (6400/6956)   [Kremote: Compressing objects:  93% (6470/6956)   [Kremote: Compressing objects:  94% (6539/6956)   [Kremote: Compressing objects:  95% (6609/6956)   [Kremote: Compressing objects:  96% (6678/6956)   [Kremote: Compressing objects:  97% (6748/6956)   [Kremote: Compressing objects:  98% (6817/6956)   [Kremote: Compressing objects:  99% (6887/6956)   [Kremote: Compressing objects: 100% (6956/6956)   [Kremote: Compressing objects: 100% (6956/6956), done.[K
+Receiving objects:   0% (1/12193)   Receiving objects:   1% (122/12193)   Receiving objects:   2% (244/12193)   Receiving objects:   3% (366/12193)   Receiving objects:   4% (488/12193)   Receiving objects:   5% (610/12193)   Receiving objects:   6% (732/12193)   Receiving objects:   7% (854/12193)   Receiving objects:   8% (976/12193)   Receiving objects:   9% (1098/12193)   Receiving objects:  10% (1220/12193)   Receiving objects:  11% (1342/12193)   Receiving objects:  12% (1464/12193)   Receiving objects:  13% (1586/12193)   Receiving objects:  14% (1708/12193)   Receiving objects:  15% (1829/12193)   Receiving objects:  16% (1951/12193)   Receiving objects:  17% (2073/12193)   Receiving objects:  18% (2195/12193)   Receiving objects:  19% (2317/12193)   Receiving objects:  20% (2439/12193)   Receiving objects:  21% (2561/12193)   Receiving objects:  22% (2683/12193)   Receiving objects:  23% (2805/12193)   Receiving objects:  24% (2927/12193)   Receiving objects:  25% (3049/12193)   Receiving objects:  26% (3171/12193)   Receiving objects:  27% (3293/12193)   Receiving objects:  28% (3415/12193)   Receiving objects:  29% (3536/12193)   Receiving objects:  30% (3658/12193)   Receiving objects:  31% (3780/12193)   Receiving objects:  32% (3902/12193)   Receiving objects:  33% (4024/12193)   Receiving objects:  34% (4146/12193)   Receiving objects:  35% (4268/12193)   Receiving objects:  36% (4390/12193)   Receiving objects:  37% (4512/12193)   Receiving objects:  38% (4634/12193)   Receiving objects:  39% (4756/12193)   Receiving objects:  40% (4878/12193)   Receiving objects:  41% (5000/12193)   Receiving objects:  42% (5122/12193)   Receiving objects:  43% (5243/12193)   Receiving objects:  44% (5365/12193)   Receiving objects:  45% (5487/12193)   Receiving objects:  46% (5609/12193)   Receiving objects:  47% (5731/12193)   Receiving objects:  48% (5853/12193)   Receiving objects:  49% (5975/12193)   Receiving objects:  50% (6097/12193)   Receiving objects:  51% (6219/12193)   Receiving objects:  52% (6341/12193)   Receiving objects:  53% (6463/12193)   Receiving objects:  54% (6585/12193)   Receiving objects:  55% (6707/12193)   Receiving objects:  56% (6829/12193)   Receiving objects:  57% (6951/12193)   Receiving objects:  58% (7072/12193)   Receiving objects:  59% (7194/12193)   Receiving objects:  60% (7316/12193)   Receiving objects:  61% (7438/12193)   Receiving objects:  62% (7560/12193)   Receiving objects:  63% (7682/12193)   Receiving objects:  64% (7804/12193)   Receiving objects:  65% (7926/12193)   Receiving objects:  66% (8048/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  67% (8170/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  68% (8292/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  69% (8414/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  70% (8536/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  71% (8658/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  72% (8779/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  73% (8901/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  74% (9023/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  75% (9145/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  76% (9267/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  77% (9389/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  78% (9511/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  79% (9633/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  80% (9755/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  81% (9877/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  82% (9999/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  83% (10121/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  84% (10243/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  85% (10365/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  86% (10486/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  87% (10608/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  88% (10730/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  89% (10852/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  90% (10974/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  91% (11096/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  92% (11218/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  93% (11340/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  94% (11462/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  95% (11584/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  96% (11706/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  97% (11828/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  98% (11950/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects:  99% (12072/12193), 3.00 MiB | 5.88 MiB/s   remote: Total 12193 (delta 7339), reused 8068 (delta 4598), pack-reused 0[K
+Receiving objects: 100% (12193/12193), 3.00 MiB | 5.88 MiB/s   Receiving objects: 100% (12193/12193), 5.43 MiB | 5.88 MiB/s, done.
+Resolving deltas:   0% (0/7339)   Resolving deltas:   1% (74/7339)   Resolving deltas:   2% (157/7339)   Resolving deltas:   4% (300/7339)   Resolving deltas:   5% (373/7339)   Resolving deltas:   7% (514/7339)   Resolving deltas:   9% (701/7339)   Resolving deltas:  14% (1036/7339)   Resolving deltas:  15% (1111/7339)   Resolving deltas:  16% (1176/7339)   Resolving deltas:  17% (1249/7339)   Resolving deltas:  18% (1328/7339)   Resolving deltas:  19% (1403/7339)   Resolving deltas:  20% (1472/7339)   Resolving deltas:  21% (1576/7339)   Resolving deltas:  22% (1616/7339)   Resolving deltas:  23% (1694/7339)   Resolving deltas:  24% (1816/7339)   Resolving deltas:  26% (1918/7339)   Resolving deltas:  27% (2011/7339)   Resolving deltas:  28% (2055/7339)   Resolving deltas:  29% (2139/7339)   Resolving deltas:  30% (2215/7339)   Resolving deltas:  31% (2342/7339)   Resolving deltas:  32% (2357/7339)   Resolving deltas:  33% (2453/7339)   Resolving deltas:  34% (2524/7339)   Resolving deltas:  35% (2569/7339)   Resolving deltas:  37% (2732/7339)   Resolving deltas:  38% (2790/7339)   Resolving deltas:  39% (2864/7339)   Resolving deltas:  40% (2942/7339)   Resolving deltas:  41% (3057/7339)   Resolving deltas:  42% (3085/7339)   Resolving deltas:  43% (3168/7339)   Resolving deltas:  44% (3293/7339)   Resolving deltas:  45% (3303/7339)   Resolving deltas:  46% (3380/7339)   Resolving deltas:  51% (3763/7339)   Resolving deltas:  52% (3819/7339)   Resolving deltas:  53% (3890/7339)   Resolving deltas:  54% (3964/7339)   Resolving deltas:  55% (4037/7339)   Resolving deltas:  56% (4116/7339)   Resolving deltas:  57% (4192/7339)   Resolving deltas:  58% (4259/7339)   Resolving deltas:  59% (4332/7339)   Resolving deltas:  60% (4405/7339)   Resolving deltas:  61% (4481/7339)   Resolving deltas:  62% (4552/7339)   Resolving deltas:  63% (4625/7339)   Resolving deltas:  64% (4702/7339)   Resolving deltas:  65% (4771/7339)   Resolving deltas:  66% (4845/7339)   Resolving deltas:  67% (4922/7339)   Resolving deltas:  68% (5002/7339)   Resolving deltas:  69% (5064/7339)   Resolving deltas:  70% (5139/7339)   Resolving deltas:  71% (5213/7339)   Resolving deltas:  72% (5288/7339)   Resolving deltas:  73% (5359/7339)   Resolving deltas:  74% (5433/7339)   Resolving deltas:  75% (5529/7339)   Resolving deltas:  76% (5585/7339)   Resolving deltas:  77% (5656/7339)   Resolving deltas:  78% (5725/7339)   Resolving deltas:  79% (5798/7339)   Resolving deltas:  80% (5877/7339)   Resolving deltas:  81% (5946/7339)   Resolving deltas:  82% (6021/7339)   Resolving deltas:  83% (6092/7339)   Resolving deltas:  84% (6165/7339)   Resolving deltas:  85% (6240/7339)   Resolving deltas:  86% (6312/7339)   Resolving deltas:  87% (6391/7339)   Resolving deltas:  88% (6459/7339)   Resolving deltas:  89% (6532/7339)   Resolving deltas:  90% (6606/7339)   Resolving deltas:  91% (6681/7339)   Resolving deltas:  92% (6752/7339)   Resolving deltas:  93% (6826/7339)   Resolving deltas:  94% (6899/7339)   Resolving deltas:  95% (6973/7339)   Resolving deltas:  96% (7049/7339)   Resolving deltas:  97% (7119/7339)   Resolving deltas:  98% (7197/7339)   Resolving deltas:  99% (7267/7339)   Resolving deltas: 100% (7339/7339)   Resolving deltas: 100% (7339/7339), done.
+Checking connectivity... done.
+
+travis_time:end:01d7a150:start=1496822969362666140,finish=1496822973532274270,duration=4169608130$ cd chef/chef
+travis_time:start:1f0761be$ git fetch origin +refs/pull/6193/merge:
+remote: Counting objects: 23, done.[K
+remote: Compressing objects:  10% (1/10)   [Kremote: Compressing objects:  20% (2/10)   [Kremote: Compressing objects:  30% (3/10)   [Kremote: Compressing objects:  40% (4/10)   [Kremote: Compressing objects:  50% (5/10)   [Kremote: Compressing objects:  60% (6/10)   [Kremote: Compressing objects:  70% (7/10)   [Kremote: Compressing objects:  80% (8/10)   [Kremote: Compressing objects:  90% (9/10)   [Kremote: Compressing objects: 100% (10/10)   [Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 23 (delta 17), reused 17 (delta 13), pack-reused 0[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From https://github.com/chef/chef
+ * branch            refs/pull/6193/merge -> FETCH_HEAD
+
+travis_time:end:1f0761be:start=1496822973551216212,finish=1496822974590323285,duration=1039107073$ git checkout -qf FETCH_HEAD
+travis_fold:end:git.checkout
+Setting environment variables from .travis.yml
+$ export FORCE_FFI_YAJL=ext
+$ export TEST_GEM=poise/poise
+
+travis_fold:start:rvmtravis_time:start:0c4e49f8$ rvm use 2.4.1 --install --binary --fuzzy
+ruby-2.4.1 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-2.4.1.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.1 - #configure
+ruby-2.4.1 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 14.3M  100 14.3M    0     0  52.3M      0 --:--:-- --:--:-- --:--:-- 52.3M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.1 - #validate archive
+ruby-2.4.1 - #extract
+ruby-2.4.1 - #validate binary
+ruby-2.4.1 - #setup
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1@global
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+ruby-2.4.1 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+ruby-2.4.1 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.1 - #gemset created /home/travis/.rvm/gems/ruby-2.4.1
+ruby-2.4.1 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/.
+ruby-2.4.1 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+Using /home/travis/.rvm/gems/ruby-2.4.1
+
+travis_time:end:0c4e49f8:start=1496822987784326559,finish=1496823022958462126,duration=35174135567travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+travis_fold:start:cache.1Setting up build cache
+$ export CASHER_DIR=$HOME/.casher
+travis_time:start:13bad65c$ Installing caching utilities
+
+travis_time:end:13bad65c:start=1496823024119807434,finish=1496823024212594536,duration=92787102travis_time:start:0e42ad37
+travis_time:end:0e42ad37:start=1496823024240898113,finish=1496823024254178477,duration=13280364travis_time:start:192047b9attempting to download cache archive
+fetching PR.6193/cache-linux-trusty-ef2a0672704b105fd78e66466c0893b905b6e9297dfecb6f3d75f2e7268d34f9--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching PR.6193/cache--rvm-2.4.1--gemfile-Gemfile.tgz
+fetching master/cache-linux-trusty-ef2a0672704b105fd78e66466c0893b905b6e9297dfecb6f3d75f2e7268d34f9--rvm-2.4.1--gemfile-Gemfile.tgz
+found cache
+
+travis_time:end:192047b9:start=1496823024300785663,finish=1496823027578405210,duration=3277619547travis_fold:end:cache.1
+travis_fold:start:cache.bundlertravis_time:start:085c0654
+travis_time:end:085c0654:start=1496823027594501701,finish=1496823027602561141,duration=8059440travis_time:start:0cd48be8adding /home/travis/build/chef/chef/vendor/bundle to cache
+creating directory /home/travis/build/chef/chef/vendor/bundle
+
+travis_time:end:0cd48be8:start=1496823027618234940,finish=1496823034026215093,duration=6407980153travis_fold:end:cache.bundler$ ruby --version
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+$ rvm --version
+rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.12
+travis_fold:start:before_install.1travis_time:start:1442b200$ gem update --system $(grep rubygems omnibus_overrides.rb | cut -d'"' -f2)
+Updating rubygems-update
+Fetching: rubygems-update-2.6.11.gemFetching: rubygems-update-2.6.11.gem (  1%)Fetching: rubygems-update-2.6.11.gem (  2%)Fetching: rubygems-update-2.6.11.gem (  3%)Fetching: rubygems-update-2.6.11.gem (  4%)Fetching: rubygems-update-2.6.11.gem (  5%)Fetching: rubygems-update-2.6.11.gem (  7%)Fetching: rubygems-update-2.6.11.gem (  9%)Fetching: rubygems-update-2.6.11.gem ( 11%)Fetching: rubygems-update-2.6.11.gem ( 13%)Fetching: rubygems-update-2.6.11.gem ( 15%)Fetching: rubygems-update-2.6.11.gem ( 18%)Fetching: rubygems-update-2.6.11.gem ( 20%)Fetching: rubygems-update-2.6.11.gem ( 22%)Fetching: rubygems-update-2.6.11.gem ( 24%)Fetching: rubygems-update-2.6.11.gem ( 26%)Fetching: rubygems-update-2.6.11.gem ( 28%)Fetching: rubygems-update-2.6.11.gem ( 30%)Fetching: rubygems-update-2.6.11.gem ( 33%)Fetching: rubygems-update-2.6.11.gem ( 35%)Fetching: rubygems-update-2.6.11.gem ( 37%)Fetching: rubygems-update-2.6.11.gem ( 39%)Fetching: rubygems-update-2.6.11.gem ( 41%)Fetching: rubygems-update-2.6.11.gem ( 43%)Fetching: rubygems-update-2.6.11.gem ( 46%)Fetching: rubygems-update-2.6.11.gem ( 48%)Fetching: rubygems-update-2.6.11.gem ( 50%)Fetching: rubygems-update-2.6.11.gem ( 52%)Fetching: rubygems-update-2.6.11.gem ( 53%)Fetching: rubygems-update-2.6.11.gem ( 55%)Fetching: rubygems-update-2.6.11.gem ( 57%)Fetching: rubygems-update-2.6.11.gem ( 60%)Fetching: rubygems-update-2.6.11.gem ( 62%)Fetching: rubygems-update-2.6.11.gem ( 64%)Fetching: rubygems-update-2.6.11.gem ( 66%)Fetching: rubygems-update-2.6.11.gem ( 68%)Fetching: rubygems-update-2.6.11.gem ( 70%)Fetching: rubygems-update-2.6.11.gem ( 73%)Fetching: rubygems-update-2.6.11.gem ( 75%)Fetching: rubygems-update-2.6.11.gem ( 77%)Fetching: rubygems-update-2.6.11.gem ( 79%)Fetching: rubygems-update-2.6.11.gem ( 81%)Fetching: rubygems-update-2.6.11.gem ( 83%)Fetching: rubygems-update-2.6.11.gem ( 85%)Fetching: rubygems-update-2.6.11.gem ( 88%)Fetching: rubygems-update-2.6.11.gem ( 90%)Fetching: rubygems-update-2.6.11.gem ( 92%)Fetching: rubygems-update-2.6.11.gem ( 94%)Fetching: rubygems-update-2.6.11.gem ( 96%)Fetching: rubygems-update-2.6.11.gem ( 98%)Fetching: rubygems-update-2.6.11.gem (100%)Fetching: rubygems-update-2.6.11.gem (100%)
+Successfully installed rubygems-update-2.6.11
+Installing RubyGems 2.6.11
+RubyGems 2.6.11 installed
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/travis/.rvm/rubies/ruby-2.4.1/bin/gem
+
+RubyGems system software updated
+
+travis_time:end:1442b200:start=1496823035360098978,finish=1496823040398377262,duration=5038278284travis_fold:end:before_install.1travis_fold:start:before_install.2travis_time:start:13737fd8$ gem --version
+2.6.11
+
+travis_time:end:13737fd8:start=1496823040410268679,finish=1496823040727088242,duration=316819563travis_fold:end:before_install.2travis_fold:start:before_install.3travis_time:start:23affb54$ rvm @global do gem uninstall bundler -a -x
+Removing bundle
+Removing bundler
+Successfully uninstalled bundler-1.15.1
+
+travis_time:end:23affb54:start=1496823040738454061,finish=1496823042422481159,duration=1684027098travis_fold:end:before_install.3travis_fold:start:before_install.4travis_time:start:0a648f4c$ gem install bundler -v $(grep bundler omnibus_overrides.rb | cut -d'"' -f2)
+Fetching: bundler-1.14.6.gemFetching: bundler-1.14.6.gem (  1%)Fetching: bundler-1.14.6.gem (  2%)Fetching: bundler-1.14.6.gem (  3%)Fetching: bundler-1.14.6.gem (  4%)Fetching: bundler-1.14.6.gem (  5%)Fetching: bundler-1.14.6.gem (  6%)Fetching: bundler-1.14.6.gem (  7%)Fetching: bundler-1.14.6.gem (  8%)Fetching: bundler-1.14.6.gem (  9%)Fetching: bundler-1.14.6.gem ( 10%)Fetching: bundler-1.14.6.gem ( 16%)Fetching: bundler-1.14.6.gem ( 21%)Fetching: bundler-1.14.6.gem ( 26%)Fetching: bundler-1.14.6.gem ( 31%)Fetching: bundler-1.14.6.gem ( 36%)Fetching: bundler-1.14.6.gem ( 41%)Fetching: bundler-1.14.6.gem ( 46%)Fetching: bundler-1.14.6.gem ( 52%)Fetching: bundler-1.14.6.gem ( 57%)Fetching: bundler-1.14.6.gem ( 62%)Fetching: bundler-1.14.6.gem ( 67%)Fetching: bundler-1.14.6.gem ( 72%)Fetching: bundler-1.14.6.gem ( 77%)Fetching: bundler-1.14.6.gem ( 82%)Fetching: bundler-1.14.6.gem ( 87%)Fetching: bundler-1.14.6.gem ( 93%)Fetching: bundler-1.14.6.gem ( 98%)Fetching: bundler-1.14.6.gem (100%)Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+1 gem installed
+
+travis_time:end:0a648f4c:start=1496823042436058389,finish=1496823043624120133,duration=1188061744travis_fold:end:before_install.4travis_fold:start:before_install.5travis_time:start:039a04f2$ bundle --version
+Bundler version 1.14.6
+
+travis_time:end:039a04f2:start=1496823043639197565,finish=1496823044038375256,duration=399177691travis_fold:end:before_install.5travis_fold:start:before_install.6travis_time:start:025f107a$ rm -f .bundle/config
+
+travis_time:end:025f107a:start=1496823044047912056,finish=1496823044070198659,duration=22286603travis_fold:end:before_install.6travis_fold:start:install.bundlertravis_time:start:0a082b4e$ bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.2
+Using thread_safe 0.3.6
+Using addressable 2.4.0
+Using ast 2.3.0
+Using backports 3.8.0
+Using debug_inspector 0.0.3
+Using blankslate 2.1.2.4
+Using builder 3.2.3
+Using bundler 1.14.6
+Using thor 0.19.4
+Using mixlib-cli 1.7.0
+Using byebug 9.0.6
+Using fuzzyurl 0.9.0
+Using mixlib-config 2.2.4
+Using mixlib-shellout 2.2.7
+Using libyajl2 1.2.0
+Using hashie 3.5.5
+Using mixlib-log 1.7.1
+Using rack 2.0.3
+Using uuidtools 2.1.5
+Using erubis 2.7.0
+Using highline 1.7.8
+Using iniparse 1.4.2
+Using iso8601 0.9.1
+Using net-ssh 4.1.0
+Using ffi 1.9.18
+Using ipaddress 0.8.3
+Using plist 3.3.0
+Using systemu 2.6.5
+Using wmi-lite 1.0.0
+Using proxifier 1.0.3
+Using rspec-support 3.6.0
+Using multi_json 1.12.1
+Using net-telnet 0.1.1
+Using sfl 2.3
+Using syslog-logger 1.6.8
+Using powerpack 0.1.1
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.2.1
+Using coderay 1.1.1
+Using docile 1.1.5
+Using diff-lcs 1.3
+Using json 2.1.0
+Using multipart-post 2.0.0
+Using net-http-persistent 2.9.4
+Using net-http-pipeline 1.0.1
+Using retriable 3.0.2
+Using httpclient 2.8.3
+Using method_source 0.8.2
+Using parallel 1.11.2
+Using slop 3.6.0
+Using rubyzip 1.2.1
+Using semverse 2.0.0
+Using sslshake 1.2.0
+Using little-plugger 1.1.4
+Using nori 2.6.0
+Using rubyntlm 0.6.2
+Using mixlib-versioning 1.1.0
+Using netrc 0.11.0
+Using websocket 1.2.4
+Using rb-readline 0.5.4
+Using ruby-prof 0.16.2
+Using ruby-shadow 2.5.0
+Using simplecov-html 0.10.1
+Using tomlrb 1.2.4
+Using yard 0.9.9
+Using rainbow 2.2.2
+Using tzinfo 1.2.3
+Using launchy 2.4.3
+Using parser 2.4.0.0
+Using binding_of_caller 0.7.2
+Using parslet 1.5.0
+Using gyoku 1.3.1
+Using bundler-audit 0.5.0 from https://github.com/rubysec/bundler-audit.git (at master@6eb5a81)
+Using excon 0.55.0
+Using appbundler 0.10.0
+Using chef-config 13.2.7 from source at `chef-config`
+Using ffi-yajl 2.3.0
+Using mixlib-archive 0.4.1
+Using mixlib-authentication 1.4.1
+Using net-sftp 2.1.2
+Using net-ssh-gateway 2.0.0
+Using net-scp 1.2.1
+Using ethon 0.10.1
+Using gssapi 1.2.0
+Using rspec-core 3.6.0
+Using rspec-mocks 3.6.0
+Using faraday 0.12.1
+Using pry 0.10.4
+Using logging 2.2.2
+Using mixlib-install 3.2.1
+Using pusher-client 0.6.2
+Using simplecov 0.14.1
+Using activesupport 5.1.1
+Using rubocop 0.47.1
+Using toml 0.1.2
+Using docker-api 1.33.4
+Using chef-zero 13.0.0
+Using ohai 13.1.0
+Using net-ssh-multi 1.2.1
+Using specinfra 2.67.10
+Using typhoeus 0.8.0
+Using rspec-expectations 3.6.0
+Using rspec_junit_formatter 0.2.3
+Using faraday-http-cache 2.0.0
+Using gh 0.15.1
+Using sawyer 0.8.1
+Using pry-byebug 3.4.2
+Using pry-remote 0.1.8
+Using pry-stack_explorer 0.4.9.2
+Using winrm 2.2.3
+Using chefstyle 0.5.0 from https://github.com/chef/chefstyle.git (at master@b2bf89d)
+Using cheffish 13.0.0
+Using rspec 3.6.0
+Using rspec-its 1.2.0
+Using faraday_middleware 0.11.0.1
+Using octokit 4.7.0
+Using winrm-fs 1.0.1
+Using travis 1.8.8
+Using serverspec 2.38.1
+Using github_changelog_generator 1.14.2 from https://github.com/chef/github-changelog-generator (at master@7ab4953)
+Using train 0.23.0
+Using chef 13.2.7 from source at `.`
+Using inspec 1.25.1
+Bundle complete! 24 Gemfile dependencies, 127 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+
+travis_time:end:0a082b4e:start=1496823044090293117,finish=1496823045376270246,duration=1285977129travis_fold:end:install.bundlertravis_fold:start:before_script.1travis_time:start:00233229$ echo --color > .rspec
+
+travis_time:end:00233229:start=1496823045383336378,finish=1496823045388429606,duration=5093228travis_fold:end:before_script.1travis_fold:start:before_script.2travis_time:start:01a725e0$ echo -fp >> .rspec
+
+travis_time:end:01a725e0:start=1496823045395283607,finish=1496823045400435459,duration=5151852travis_fold:end:before_script.2travis_fold:start:before_script.3travis_time:start:1f3aa740$ sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers || true
+This job is running on container-based infrastructure, which does not allow use of 'sudo', setuid, and setgid executables.
+If you require sudo, add 'sudo: required' to your .travis.yml
+
+
+travis_time:end:1f3aa740:start=1496823045407891020,finish=1496823045428991433,duration=21100413travis_fold:end:before_script.3travis_time:start:05bdb298$ bundle exec tasks/bin/run_external_test $TEST_GEM master rake spec
+Cloning into '/tmp/chef-external-test20170607-4595-iw6c35'...
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+Fetching gem metadata from https://rubygems.org/........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies.......
+Using rake 12.0.0
+Installing addressable 2.4.0
+Installing artifactory 2.8.1
+Installing awesome_print 1.7.0
+Installing aws-sigv4 1.0.0
+Installing jmespath 1.3.1
+Installing backports 3.8.0
+Installing blankslate 2.1.2.4
+Installing builder 3.2.3
+Using bundler 1.14.6
+Installing byebug 9.0.6 with native extensions
+Installing fuzzyurl 0.9.0
+Installing mixlib-config 2.2.4
+Installing mixlib-shellout 2.2.7
+Installing libyajl2 1.2.0 with native extensions
+Installing hashie 3.5.5
+Installing mixlib-log 1.7.1
+Installing rack 2.0.3
+Installing uuidtools 2.1.5
+Installing diff-lcs 1.3
+Installing erubis 2.7.0
+Installing highline 1.7.8
+Installing iniparse 1.4.3
+Installing iso8601 0.9.1
+Installing mixlib-cli 1.7.0
+Installing net-ssh 4.1.0
+Installing ffi 1.9.18 with native extensions
+Installing ipaddress 0.8.3
+Installing plist 3.3.0
+Installing systemu 2.6.5
+Installing wmi-lite 1.0.0
+Installing proxifier 1.0.3
+Installing rspec-support 3.6.0
+Installing multi_json 1.12.1
+Using net-telnet 0.1.1
+Installing sfl 2.3
+Installing syslog-logger 1.6.8
+Installing logify 0.2.0
+Installing mime-types-data 3.2016.0521
+Installing docile 1.1.5
+Installing json 2.1.0 with native extensions
+Installing simplecov-html 0.10.1
+Installing url 0.3.2
+Installing coderay 1.1.1
+Installing gherkin 4.1.3
+Installing excon 0.56.0
+Installing multipart-post 2.0.0
+Installing mini_portile2 2.2.0
+Installing rufus-lru 1.1.0
+Installing polyglot 0.3.5
+Installing yajl-ruby 1.3.0 with native extensions
+Installing ruby-progressbar 1.8.1
+Installing net-http-persistent 2.9.4
+Installing net-http-pipeline 1.0.1
+Installing git 1.3.0
+Installing thor 0.19.1
+Installing hirb 0.7.3
+Installing httpclient 2.8.3
+Installing method_source 0.8.2
+Installing parallel 1.11.2
+Installing slop 3.6.0
+Installing rubyzip 1.2.1
+Installing semverse 2.0.0
+Installing sslshake 1.2.0
+Installing little-plugger 1.1.4
+Installing nori 2.6.0
+Installing rubyntlm 0.6.2
+Installing mixlib-versioning 1.1.0
+Installing safe_yaml 1.0.4
+Installing retryable 2.0.4
+Installing paint 2.0.0
+Installing websocket 1.2.4
+Installing vagrant-wrapper 2.0.3
+Installing yard 0.9.9
+Installing rainbow 2.2.2 with native extensions
+Installing launchy 2.4.3
+Installing aws-sdk-core 2.9.32
+Installing parslet 1.5.0
+Installing gyoku 1.3.1
+Installing chef-config 13.1.31
+Installing ffi-yajl 2.3.0 with native extensions
+Installing mixlib-archive 0.4.1
+Installing mixlib-authentication 1.4.1
+Installing net-sftp 2.1.2
+Installing net-ssh-gateway 1.3.0
+Installing net-scp 1.2.1
+Installing fauxhai 4.1.0
+Installing ethon 0.10.1
+Installing gssapi 1.2.0
+Installing rspec-core 3.6.0
+Installing rspec-expectations 3.6.0
+Installing rspec-mocks 3.6.0
+Installing mime-types 3.1
+Installing simplecov 0.13.0
+Installing cucumber-core 2.0.0
+Installing docker-api 1.33.4
+Installing faraday 0.12.1
+Installing nokogiri 1.8.0 with native extensions
+Installing treetop 1.6.8
+Installing pry 0.10.4
+Installing logging 2.2.2
+Installing mixlib-install 2.1.12
+Installing wirb 2.1.1
+Installing pusher-client 0.6.2
+Installing yard-classmethods 1.0.0
+Installing aws-sdk-resources 2.9.32
+Installing toml 0.1.2
+Installing chef-zero 13.0.0
+Installing ohai 13.1.0
+Installing net-ssh-multi 1.2.1
+Installing specinfra 2.68.0
+Installing typhoeus 0.8.0
+Installing rspec_junit_formatter 0.2.3
+Installing fuubar 2.2.0
+Installing rspec-its 1.2.0
+Installing rspec 3.6.0
+Installing chef-api 0.7.0
+Installing codeclimate-test-reporter 1.0.8
+Installing codecov 0.1.10
+Installing faraday_middleware 0.11.0.1
+Installing gh 0.15.1
+Installing foodcritic 11.1.0
+Installing pry-byebug 3.4.2
+Installing winrm 2.2.3
+Installing test-kitchen 1.16.0
+Installing aws-sdk 2.9.32
+Installing serverspec 2.39.1
+Installing stove 5.2.0
+Installing travis 1.8.8
+Installing winrm-fs 1.0.1
+Installing kitchen-docker 2.6.0
+Installing kitchen-sync 2.2.0
+Installing kitchen-vagrant 1.1.0
+Installing kitchen-ec2 1.3.2
+Installing chef 13.1.31
+Installing train 0.24.0
+Installing chefspec 7.1.0
+Installing halite 1.7.0
+Installing inspec 1.27.0
+Using poise 2.8.2.pre from source at `/tmp/chef-external-test20170607-4595-iw6c35`
+Installing poise-profiler 1.1.0
+Installing kitchen-inspec 0.19.0
+Installing poise-boiler 1.16.0
+Bundle complete! 4 Gemfile dependencies, 143 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from yard:
+--------------------------------------------------------------------------------
+As of YARD v0.9.2:
+
+RubyGems "--document=yri,yard" hooks are now supported. You can auto-configure
+YARD to automatically build the yri index for installed gems by typing:
+
+    $ yard config --gem-install-yri
+
+See `yard config --help` for more information on RubyGems install hooks.
+
+You can also add the following to your .gemspec to have YARD document your gem
+on install:
+
+    spec.metadata["yard.run"] = "yri" # use "yard" to build full HTML docs.
+
+--------------------------------------------------------------------------------
+/home/travis/.rvm/rubies/ruby-2.4.1/bin/ruby -I/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/lib:/home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-support-3.6.0/lib /home/travis/.rvm/gems/ruby-2.4.1/gems/rspec-core-3.6.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb --color --format documentation --default-path test -I test/spec
+
+Randomized with seed 15593
+
+Poise::Utils::Win32
+  #argv_quote
+    with one word
+      should eq "foo"
+    with an empty string
+      should eq "\"\""
+    with an escaped quote
+      should eq "\"\\\"foo \\\\\\\"bar\\\\\\\"\\\"\""
+    with two words
+      should eq "\"foo bar\""
+    with a quote
+      should eq "\"foo\\\"bar\""
+  reparse_command
+    with a more complex string
+      should eq "pip install foo==1.2.3"
+    with metacharacters
+      should eq "myapp > tmp"
+    with a quoted string
+      should eq "myapp create \"a thing\""
+    with an array with metacharacters
+      should eq "^m^y^a^p^p^ ^>^ ^t^m^p"
+    with a simple string
+      should eq "foo bar baz"
+    with an array
+      should eq "myapp create \"a thing\""
+
+Poise::Resource
+  should include Poise::Helpers::LazyDefault
+  should include Poise::Helpers::ResourceName
+  should include Poise::Helpers::ChefspecMatchers
+  should include Poise::Helpers::OptionCollector
+  should include Poise::Helpers::LWRPPolyfill
+  should include Poise::Helpers::TemplateContent
+  #poise_subresource
+    with no arguments
+      should include Poise::Helpers::Subresources::Child
+      parent_type
+        should eq Chef::Resource
+      parent_optional
+        should be falsey
+    with a parent class
+      should include Poise::Helpers::Subresources::Child
+      parent_type
+        should eq Chef::Resource::RubyBlock
+      parent_optional
+        should be falsey
+    with an optional parent
+      should include Poise::Helpers::Subresources::Child
+      parent_optional
+        should be truthy
+      parent_type
+        should eq Chef::Resource::RubyBlock
+  #poise_subresource_container
+    should include Poise::Helpers::Subresources::Container
+  #poise_inversion
+    without an options resource
+      should include Poise::Resource
+      should raise Chef::Exceptions::NoSuchResourceType
+      should include Poise::Helpers::Inversion
+      inversion_options_resource_class
+        should equal nil
+      inversion_options_provider_class
+        should equal nil
+    with an options resource
+      should include Poise::Helpers::Inversion
+      should include Poise::Resource
+      inversion_options_resource_class
+        should be truthy
+      inversion_options_provider_class
+        should be truthy
+  #poise_fused
+    should include Poise::Resource
+    should include Poise::Helpers::Fused
+
+NOT_PASSED
+  should be truthy
+  inspect
+    should eq "NOT_PASSED"
+  to_s
+    should eq "NOT_PASSED"
+
+Poise::Helpers::LazyDefault
+  should  poise_test "test"
+  in a subclass
+    should  poise_sub "test"
+  with an external global
+    does not cache the value before retrieval
+    caches the value once retrieved
+  with a broken default
+    with false
+      should  poise_test "test"
+    with true
+      should  poise_test "test"
+    with no value
+      should raise RuntimeError
+  with an explicit value
+    should  poise_test "test"
+  with a mutable value
+    should  poise_test "test"
+
+Poise::Helpers::Fused
+  should  ruby_block "inner"
+  with a subclass
+    should  ruby_block "inner"
+    should  ruby_block "inner2"
+  with setting a default action
+    should  ruby_block "inner"
+    should  poise_test "test"
+  with a nested provider
+    should  file "inner"
+  with an explicit provider
+    should not  ruby_block "inner"
+    should  ruby_block "explicit"
+
+NOT_PASSED
+  should be truthy
+  inspect
+    should eq "NOT_PASSED"
+  to_s
+    should eq "NOT_PASSED"
+
+Poise::Helpers::ChefspecMatchers
+  with a subclass
+    should be a kind of Chef::Resource
+    should  poise_sub "test"
+  with an implicit name
+    should  poise_test "test"
+  with an explicit name
+    should be a kind of Chef::Resource
+    should  poise_other "test"
+
+Poise::Helpers::ResourceCloning
+  a resource using the helper
+    should not receive warn(*(any args)) 0 times
+
+Poise::Utils::ShellOut
+  .poise_shell_out!
+    should equal #<Double "Mixlib::ShellOut">
+  .poise_shell_out
+    on Windows
+      should equal #<Double "Mixlib::ShellOut">
+    with a bad user
+      should equal #<Double "Mixlib::ShellOut">
+    with an env option
+      should equal #<Double "Mixlib::ShellOut">
+    with a $HOME
+      should equal #<Double "Mixlib::ShellOut">
+    with a group
+      should equal #<Double "Mixlib::ShellOut">
+    with a user
+      should equal #<Double "Mixlib::ShellOut">
+    with a uid
+      should equal #<Double "Mixlib::ShellOut">
+    with no user
+      should equal #<Double "Mixlib::ShellOut">
+    with a $USER
+      should equal #<Double "Mixlib::ShellOut">
+
+Poise::Helpers::OptionCollector
+  parser
+    with a parser Proc
+      should  poise_test "test"
+    with a parser Symbol
+      should  poise_test "test"
+    with an invalid parser
+      should raise Poise::Error
+  forced_keys
+    with forced_keys
+      should  poise_test "test"
+    with implicit forced_keys
+      should  poise_test "test"
+      should not  poise_test "bar"
+    without forced_keys
+      should  poise_test "test"
+  with both a block and a hash
+    should  poise_test "test"
+  with a block
+    should  poise_test "test"
+  with a normal attribute too
+    should  poise_test "test"
+  with an invalid key
+    should raise NoMethodError
+  with a hash
+    should  poise_test "test"
+
+Poise::Helpers::NotifyingBlock
+  with an exception raised inside the block
+    should raise RuntimeError
+  without updated inner resources
+    does not marks the outer resource as updated
+  regression test for picking up sibling notifications outside the subcontext for resources with matching name
+    should not  ruby_block "test"
+  delayed notifications
+    [:things_copy]
+      should eq ["two"]
+    [:things]
+      should eq ["two", "one"]
+  with updated inner resources
+    does not add the inner resource to the global collection
+    marks the outer resource as updated
+
+Poise::Helpers::ResourceSubclass
+  .subclass_resource_equivalents
+    with a non-DSL subclass
+      should eq [:poise_test_subclass_sub, :poise_test_subclass]
+    with a non-poise parent
+      should eq [:poise_sub3, :non_poise_parent]
+    with two subclasses
+      should eq [:poise_sub2, :poise_sub, :poise_test_subclass]
+    with a subclass
+      should eq [:poise_sub, :poise_test_subclass]
+    with a top-level class
+      should eq [:poise_test_subclass]
+    with an unpatched subclass
+      should eq [:poise_sub2]
+  .subclass_providers!
+    should  poise_sub "test"
+    should eq ["test"]
+    with a non-DSL subclass
+      should eq ["test"]
+      should  poise_test_subclass_sub "test"
+    with multiple resource names
+      should eq ["test", "test2"]
+      should  poise_sub "test"
+      should  poise_test_subclass_other_name "test2"
+
+Poise::Utils
+  .find_cookbook_name
+    with a Halite cookbook
+      should eq "halite_cookbook"
+    with one cookbook
+      should eq "my_cookbook"
+    with no cookbooks
+      should raise Poise::Error
+    with many non-matching cookbooks
+      should raise Poise::Error
+    with a Halite cookbook on a nested prefix
+      should eq "halite_cookbook_other"
+    with a Halite cookbook on a shared prefix
+      should eq "halite_cookbook_other"
+    with many cookbooks
+      should eq "my_cookbook"
+  .ancestor_send
+    using the parent module in class
+      poise_test_val
+        should eq :test
+    using the parent module in an intermediary module
+      poise_test_val
+        should eq :child
+    with a branching ancestor tree
+      with ignorable values
+        poise_test_val
+          should eq :child1
+      poise_test_val
+        should eq :child1
+    with no value set
+      poise_test_val
+        should be nil
+  .check_block_arity!
+    with a negative arity
+      with 0 arguments
+        should raise ArgumentError with message matching /wrong number of arguments \(0 for 1\+\)/
+      with 2 arguments
+        should not raise Exception
+      with 1 argument
+        should not raise Exception
+    with a positive arity
+      with 3 arguments
+        should raise ArgumentError with message matching /wrong number of arguments \(3 for 2\)/
+      with 1 argument
+        should raise ArgumentError with message matching /wrong number of arguments \(1 for 2\)/
+      with 0 arguments
+        should raise ArgumentError with message matching /wrong number of arguments \(0 for 2\)/
+      with 2 arguments
+        should not raise Exception
+    with **
+      with 0 arguments
+        should raise ArgumentError with message matching /wrong number of arguments \(0 for 1\+\)/
+      with 1 argument
+        should not raise Exception
+  .parameterized_module
+    with a top-level module
+      should eq "PoiseUtilsSpecTopLevel"
+      something
+        should eq "top"
+    with a nested module
+      should eq "PoiseUtilsSpecNested::Inner"
+      something
+        should eq "inner"
+    with the wrong arugments
+      should raise ArgumentError
+    with an anonymous module
+      should raise Poise::Error
+
+Poise
+  has a fake name when used a function
+  with a Resource
+    should include Poise::Helpers::LazyDefault
+    should include Poise::Helpers::LWRPPolyfill::Resource
+    should include Poise::Helpers::ChefspecMatchers
+    should include Poise::Helpers::ResourceName
+    should include Poise::Helpers::LWRPPolyfill
+    should include Poise::Helpers::OptionCollector
+    should include Poise::Resource
+    should include Poise::Helpers::TemplateContent
+    as a function call
+      with fused
+        should include Poise
+        should include Poise::Resource
+        should include Poise::Helpers::Fused
+      with a container
+        should include Poise::Resource
+        should include Poise
+        should include Poise::Helpers::Subresources::Container
+      with an optional parent
+        should include Poise::Resource
+        should include Poise::Helpers::Subresources::Child
+        should include Poise
+        parent_optional
+          should be truthy
+        parent_type
+          should eq Chef::Resource::RubyBlock
+      with a container namespace as a proc
+        should include Poise
+        should include Poise::Resource
+        should include Poise::Helpers::Subresources::Container
+        container_namespace
+          should be a kind of Proc
+      with no arguments
+        should include Poise
+        should include Poise::Resource
+      with a parent class shortcut
+        should include Poise::Resource
+        should include Poise
+        should include Poise::Helpers::Subresources::Child
+        parent_type
+          should eq Chef::Resource::RubyBlock
+        parent_optional
+          should be falsey
+      with a no container namespace
+        should include Poise
+        should include Poise::Resource
+        should include Poise::Helpers::Subresources::Container
+        container_namespace
+          should eq false
+      with a container namespace as a string
+        should include Poise
+        should include Poise::Helpers::Subresources::Container
+        should include Poise::Resource
+        container_namespace
+          should eq "example"
+      with a container namespace
+        should include Poise::Helpers::Subresources::Container
+        should include Poise::Resource
+        should include Poise
+        container_namespace
+          should eq true
+      with both a parent and a container
+        should include Poise::Resource
+        should include Poise::Helpers::Subresources::Child
+        should include Poise::Helpers::Subresources::Container
+        should include Poise
+        parent_type
+          should eq Chef::Resource::RubyBlock
+        parent_optional
+          should be falsey
+      with a parent class
+        should include Poise::Resource
+        should include Poise
+        should include Poise::Helpers::Subresources::Child
+        parent_type
+          should eq Chef::Resource::RubyBlock
+        parent_optional
+          should be falsey
+  with a Provider
+    should include Poise::Helpers::LWRPPolyfill::Provider
+    should include Poise::Helpers::NotifyingBlock
+    should include Poise::Provider
+    should include Poise::Helpers::LWRPPolyfill
+    should include Poise::Helpers::IncludeRecipe
+    as a function call
+      should include Poise
+      should include Poise::Provider
+  .debug?
+    with /POISE_DEBUG
+      should equal true
+    with node["poise_debug"]
+      should equal true
+    with $POISE_DEBUG = false
+      should equal false
+    with /poise_debug
+      should equal true
+    with a run_context
+      should equal true
+    with a global node
+      should equal true
+    with $poise_debug
+      should equal true
+    with $poise_debug = false
+      should equal false
+    with node["POISE_DEBUG"]
+      should equal true
+    with no flags
+      should equal false
+    with $POISE_DEBUG
+      should equal true
+  .debug
+    with debugging enabled
+      should receive debug("msg") 1 time
+    with debugging disabled
+      should not receive debug(*(any args)) 0 times
+
+Poise::Helpers::ResourceName
+  via class.name
+    should eq :poise_test
+  via provides
+    should eq :provides_test
+  with multiple names
+    should eq :provides_test_two
+
+Poise::Helpers::DefinedIn
+  .included
+    poise_defined_in
+      should eq "/tmp/chef-external-test20170607-4595-iw6c35/test/spec/helpers/defined_in_spec.rb"
+  .poise_defined_in_cookbook
+    with a specific file
+      should eq "cookbook"
+    with the default file
+      should eq "cookbook"
+  #poise_defined_in_cookbook
+    should eq "cookbook"
+  .inherited
+    poise_defined_in
+      should end with "/lib/halite/spec_helper.rb"
+
+Poise::Helpers::TemplateContent
+  with a name prefix
+    should  poise_test "test"
+  with some template variables
+    should  poise_test "test"
+  with both source and content
+    should raise Chef::Exceptions::ValidationFailed
+  with a simple template
+    should  poise_test "test"
+    only runs the template render once
+  with a default template
+    should  poise_test "test"
+  with explicit content
+    should  poise_test "test"
+  with some template options
+    should  poise_test "test"
+  with default content
+    should  poise_test "test"
+  with required content
+    should raise Chef::Exceptions::ValidationFailed
+  with no input
+    should  poise_test "test"
+  with required content and a non-default action
+    should raise Chef::Exceptions::ValidationFailed
+    example at ./test/spec/helpers/template_content_spec.rb:179
+
+Poise::Helpers::Subresources::Container
+  with a single subresource
+    should  inner "container::inner"
+    should  poise_test "container"
+  subresources with notifications
+    immediate notification
+      should equal true
+    delayed notification
+      should equal true
+  #container_default
+    should  inner "inner"
+  subclassing a container
+    should  inner "test::one"
+    should  poise_sub "test"
+  with an explicit namespace and no inner name
+    should  inner "name"
+    should  poise_test "container"
+  with a multiple subresources
+    should  inner "container::inner3"
+    should  inner "container::inner2"
+    should  poise_test "container"
+    should  inner "container::inner"
+  with a no namespace
+    should  poise_test "container"
+    should  inner "inner"
+  with a no namespace and an empty inner name
+    should  poise_test "container"
+    should  inner "container"
+  with an explicit namespace
+    should  poise_test "container"
+    should  inner "name::inner"
+  triple nesting
+    un-nested
+      should  poise_parent "two"
+      should  poise_child "three"
+      should  poise_grandparent "one"
+    nested
+      should  poise_parent "one::two"
+      should  poise_child "one::two::three"
+      should  poise_grandparent "one"
+  with an explicit Proc namespace
+    should  inner "container_name::inner"
+    should  poise_test "container"
+  resource order
+    should  inner "container::two"
+  with a no namespace and no inner name
+    should  poise_test "container"
+    should  inner "container"
+
+Poise::Helpers::Subresources::Child
+  .parent_attribute
+    should  poise_test "test"
+  .parent_type
+    set via a mixin
+      should eq :something
+    set to true via a mixin
+      should eq true
+    set to true
+      should eq true
+    set on a parent class
+      should eq String
+    set directly and then set to true
+      should eq String
+    not set
+      should eq Chef::Resource
+    set via multiple mixins
+      should eq :something
+    set to a symbol
+      should eq :something
+    set directly
+      should eq String
+    set to an invalid value
+      should raise Poise::Error
+  .parent_optional
+    not set
+      should eq false
+    set on a parent class
+      should eq true
+    set directly
+      should eq true
+  #parent
+    with an automatic parent
+      should  poise_test "test"
+    with a parent but then unset
+      should  poise_test "test"
+    with a parent of the wrong type
+      should raise Poise::Error
+    with no automatic parent
+      should raise Poise::Error
+    with an optional parent
+      should  poise_test "test"
+    with a sibling parent
+      should  poise_test "test"
+    with an optional parent but then unset
+      should  poise_test "test"
+    when possibly setting to self via default
+      should  poise_test "two"
+      should  poise_test "one"
+    with a default parent in a nested scope
+      should be nil
+      should  poise_test "test"
+    with a string name parent
+      should  poise_test "test"
+    with an explicit string parent
+      should  poise_test "test"
+    with a hash parent
+      should  poise_test "test"
+    with no parent
+      should raise Poise::Error
+    with a parent type of true
+      should raise NoMethodError
+    with an automatic parent and an extra container
+      should  poise_test "test"
+    setting the parent to itself
+      should raise Poise::Error
+    with a resource parent and an extra container
+      should  poise_test "test"
+    with a resource parent
+      should  poise_test "test"
+    with a default
+      should  poise_test "test"
+    with no automatic parent but optional
+      should  poise_test "test"
+    with a subclassed parent type
+      with a resource parent
+        should  poise_test "test"
+      with an automatic parent
+        should  poise_test "test"
+      with a string name parent
+        should  poise_test "test"
+      with an explicit string parent
+        should  poise_test "test"
+      with a hash parent
+        should  poise_test "test"
+  ParentRef
+    without a parent
+      should include "parent nil"
+    with a parent
+      should include "parent poise_container[one]"
+      should not include "poise_container(\"one\")"
+  regression test for ordering bug
+    should  poise_test "test"
+  .parent_default
+    set on a parent class
+      should be a kind of Chef::Resource
+    not set
+      should be nil
+    set to lazy{}
+      should be a kind of Chef::DelayedEvaluator
+    set directly
+      should be a kind of Chef::Resource
+    set to nil
+      should be nil
+  .parent_auto
+    set directly
+      should eq true
+    set on a parent class
+      should eq true
+    not set
+      should eq true
+
+Poise::Provider
+  should include Poise::Helpers::NotifyingBlock
+  should include Poise::Helpers::LWRPPolyfill
+  should include Poise::Helpers::IncludeRecipe
+
+Poise::Helpers::SubcontextBlock
+  should not  ruby_block "inner"
+  #recursive_each
+    should eq ["test", "a", "d"]
+  #global_resource_collection
+    should equal <poise_test[test] @performed_actions: {:run=>{:converge_time=>true}} @before: nil @params: {} @provid...e_name: :poise_test @name: "test" @declared_type: :poise_test @cookbook_name: nil @recipe_name: nil>
+
+Poise::Helpers::IncludeRecipe
+  with an multiple arguments
+    should equal true
+  with a string
+    example at ./test/spec/helpers/include_recipe_spec.rb:34
+  via include Poise
+    should equal true
+  with a proc
+    should equal true
+  with an array
+    should equal true
+
+Poise::Subcontext::ResourceCollection
+  #recursive_each
+    should eq ["top1", "top2", "sub1", "sub2"]
+    from a deeply nested context
+      should eq ["top1", "top2", "sub1", "sub2", "inner1", "inner2"]
+  #lookup
+    with a resource in the subcontext
+      should be a kind of Chef::Resource
+    with a resource in a parent context
+      should be a kind of Chef::Resource
+    with a resource in a sibling context
+      should raise Chef::Exceptions::ResourceNotFound
+    with a resource in a nested context
+      should raise Chef::Exceptions::ResourceNotFound
+  #reverse_recursive_each
+    should eq ["sub2", "sub1", "top2", "top1"]
+    from a deeply nested context
+      should eq ["inner2", "inner1", "sub2", "sub1", "top2", "top1"]
+
+Poise::Helpers::LWRPPolyfill
+  inside LWRPBase
+    #default_action
+      should eq [:run]
+  Poise::Helpers::LWRPPolyfill::Resource
+    #default_action
+      should eq [:one]
+      should  poise_test "test"
+    #attribute
+      with a default value
+        should  poise_test "test"
+      with a string value
+        should raise Chef::Exceptions::ValidationFailed
+      with no value
+        should  poise_test "test"
+      with a true value
+        should  poise_test "test"
+      with a false value
+        should  poise_test "test"
+      with a mutable default value
+        should be frozen
+        should  poise_test "test"
+        and trying to change it
+          should raise RuntimeError
+  Poise::Helpers::LWRPPolyfill::Provider
+    load_current_resource override
+      with a direct Provider subclass
+        should be a kind of #<Class:0x00000004396058>
+        name
+          should eq "test"
+      calling super
+        name
+          should eq "other"
+      with no new_resource
+        should be a kind of Chef::Resource
+        should not be a kind of #<Class:0x00000004396058>
+      with an intermediary class
+        should eq "helper"
+    Chef::DSL::Recipe include
+      should  ruby_block "test"
+
+Poise::Helpers::Win32User
+  interaction with lazy defaults
+    with a non-lazy default
+      should  poise_test "test"
+    with a lazy default
+      should  poise_test "test"
+  user property
+    with a default
+      on Windows
+        should  poise_test "test"
+      on Linux
+        should  poise_test "test"
+    with a value
+      on Windows
+        should  poise_test "test"
+      on Linux
+        should  poise_test "test"
+  group property
+    with a default
+      on AIX
+        should  poise_test "test"
+      on Linux
+        should  poise_test "test"
+      on Windows
+        should  poise_test "test"
+    with a value
+      on Windows
+        should  poise_test "test"
+      on Linux
+        should  poise_test "test"
+  owner property
+    with a value
+      on Linux
+        should  poise_test "test"
+      on Windows
+        should  poise_test "test"
+    with a default
+      on Windows
+        should  poise_test "test"
+      on Linux
+        should  poise_test "test"
+
+Poise::Helpers::Inversion
+  Poise::Helpers::Inversion::Provider
+    .resolve_inversion_attribute
+      with fallback
+        should eq "value"
+      with attributes
+        should eq "value"
+      with non-existent attributes
+        should raise Poise::Error
+    .inversion_resource
+      with a class
+        inversion_resource
+          should eq :poise_test_inversion
+      with a symbol
+        inversion_resource
+          should eq :poise_test_inversion
+    .inversion_attribute
+      with an array
+        inversion_attribute
+          should eq ["sym1", "sym2"]
+      with a string
+        inversion_attribute
+          should eq ["string"]
+    .inversion_options
+      with global resource options
+        should eq {"key"=>"optionsval"}
+      with specific run state
+        should eq {"provider"=>"runstate", "key"=>"specficival"}
+      with specific attributes
+        should eq {"provider"=>"specific", "key"=>"specificval"}
+      with global attributes
+        should eq {"provider"=>"global", "key"=>"globalval"}
+      defaults
+        should eq {}
+      with specific resource options
+        should eq {"key"=>"optionsval"}
+      with overlapping options
+        should eq {"attrs"=>"specificval", "resource"=>"resourcespecific", "runstate"=>"runstatespecific", "provider"=>"runstate"}
+      with global run state
+        should eq {"provider"=>"runstate", "key"=>"runstateval"}
+    .resolve_inversion_provider
+      with no options
+        should eq "auto"
+      with a provider
+        should eq "invert"
+    provider resolution
+      with a symbol provider via options
+        resolve
+          should eq InversionProviderResolution::OtherProvider
+      with an incorrectly subclassed resource
+        should raise Chef::Exceptions::ProviderNotFound
+        enabled_handlers
+          should eq []
+      with an inversion resource
+        enabled_handlers
+          should contain exactly InversionProviderResolution::Provider and InversionProviderResolution::OtherProvider
+        resolve
+          should eq InversionProviderResolution::Provider
+      with a resource that has no providers
+        should raise Chef::Exceptions::ProviderNotFound
+        enabled_handlers
+          should eq []
+      with provider_no_auto
+        resolve
+          should eq InversionProviderResolution::OtherProvider
+      with a subclassed resource using subclass_providers!
+        resolve
+          should eq InversionProviderResolution::Provider
+  Poise::Helpers::Inversion::Resource
+    #provider
+      with a class provider
+        provider
+          should eq Object
+      with a symbol provider
+        provider
+          should eq #<Double "provider sentinel">
+      with a symbol that is not a provider
+        provider
+          should eq Chef::Provider::RubyBlock
+      with no provider
+        provider
+          should eq nil
+    #options
+      with single provider options
+        should eq {"key"=>"single"}
+        should be a kind of Mash
+      with all-provider options
+        should be a kind of Mash
+        should eq {"key"=>"global"}
+      with both options
+        should eq {"key"=>"single"}
+        should eq {"key"=>"global"}
+      with no options
+        should be a kind of Mash
+        should be a kind of Mash
+        should eq {}
+        should eq {}
+
+%{path}
+  should receive for_resource(nil, "mycmd /path", nil) 1 time
+
+Poise::Utils::ResourceProviderMixin
+  with a mixin
+    in a provider
+      should include ResourceProviderMixinTest::Test::Provider
+    in a resource
+      should include ResourceProviderMixinTest::Test::Resource
+  with nested usage
+    in a resource
+      should be < ResourceProviderMixinTest::Test::Resource
+      should be < ResourceProviderMixinTest::Test2::Resource
+    in a provider
+      should be < ResourceProviderMixinTest::Test::Provider
+      should be < ResourceProviderMixinTest::Test2::Provider
+  in a provider
+    should be < ResourceProviderMixinTest::Test::Provider
+  in a resource
+    should be < ResourceProviderMixinTest::Test::Resource
+
+Poise::Helpers::Inversion::OptionsResource
+  #_options
+    with simple options
+      should  poise_test_options "test"
+    with a provider
+      should  poise_test_options "test"
+    with a bad method
+      should raise NoMethodError
+    with node options
+      should  poise_test_options "test"
+    with new_resource-based options
+      should  poise_test_options "test"
+    with derived options
+      should  poise_test_options "test"
+  provider options
+    before service resource
+      should eq {"position"=>"before"}
+    before service resource for a provider
+      should eq {"position"=>"before"}
+    after service resource for a provider
+      should eq {"position"=>"after"}
+    after service resource
+      should eq {"position"=>"after"}
+    after service resource for a non-matching provider
+      should eq {}
+    mutiple options
+      should eq {"position"=>"after", "one"=>1, "two"=>2, "three"=>3}
+
+Finished in 6.77 seconds (files took 4.01 seconds to load)
+427 examples, 0 failures
+
+Randomized with seed 15593
+
+{"uploaded": true, "queued": true, "message": "Coverage reports upload successfully", "id": "8960b2c6-4e0f-42af-8231-1ffad30b2ac1", "meta": {"status": 200}, "url": "https://codecov.io/github/chef/chef/commit/fe96207312ca1cea071e48aee9fa110de95a7f4c"}
+
+travis_time:end:05bdb298:start=1496823045440287504,finish=1496823294272872263,duration=248832584759
+The command "bundle exec tasks/bin/run_external_test $TEST_GEM master rake spec" exited with 0.
+travis_fold:start:cache.2store build cache
+$ bundle clean
+travis_time:start:011be679
+travis_time:end:011be679:start=1496823295578644418,finish=1496823295602077591,duration=23433173travis_time:start:19bd9350nothing changed, not updating cache
+
+travis_time:end:19bd9350:start=1496823295618661400,finish=1496823298642720620,duration=3024059220travis_fold:end:cache.2
+Done. Your build exited with 0.

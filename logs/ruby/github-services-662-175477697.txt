@@ -1,0 +1,333 @@
+travis_fold:start:worker_infoWorker information
+hostname: i-07950c6-precise-production-2-worker-org-docker.travisci.net:89f9d985-e1a9-4076-a115-fc97e728863d
+version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
+instance: 6a590cd:travis:ruby
+startup: 2.251304752s
+travis_fold:end:worker_infotravis_fold:start:system_infoBuild system information
+Build language: ruby
+Build group: stable
+Build dist: precise
+Build id: 239666141
+Job id: 239666142
+travis-build version: 4183c5148
+Build image provisioning date and time
+Thu Feb  5 15:09:33 UTC 2015
+Operating System Details
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+Linux Version
+3.13.0-29-generic
+Cookbooks Version
+a68419e https://github.com/travis-ci/travis-cookbooks/tree/a68419e
+GCC version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+LLVM version
+clang version 3.4 (tags/RELEASE_34/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+Pre-installed Ruby versions
+ruby-1.9.3-p551
+Pre-installed Node.js versions
+v0.10.36
+Pre-installed Go versions
+1.4.1
+Redis version
+redis-server 2.8.19
+riak version
+2.0.2
+MongoDB version
+MongoDB 2.4.12
+CouchDB version
+couchdb 1.6.1
+Neo4j version
+1.9.4
+RabbitMQ Version
+3.4.3
+ElasticSearch version
+1.4.0
+Installed Sphinx versions
+2.0.10
+2.1.9
+2.2.6
+Default Sphinx version
+2.2.6
+Installed Firefox version
+firefox 31.0esr
+PhantomJS version
+1.9.8
+ant -version
+Apache Ant(TM) version 1.8.2 compiled on December 3 2011
+mvn -version
+Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
+Maven home: /usr/local/maven
+Java version: 1.7.0_76, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-oracle/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
+travis_fold:end:system_info
+travis_fold:start:fix.CVE-2015-7547$ export DEBIAN_FRONTEND=noninteractive
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libc-bin libc-dev-bin libc6-dev
+Suggested packages:
+  glibc-doc
+The following packages will be upgraded:
+  libc-bin libc-dev-bin libc6 libc6-dev
+4 upgraded, 0 newly installed, 0 to remove and 277 not upgraded.
+Need to get 8,856 kB of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
+Fetched 8,856 kB in 0s (33.2 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71420 files and directories currently installed.)
+Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6-dev ...
+Preparing to replace libc-dev-bin 2.15-0ubuntu10.10 (using .../libc-dev-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-dev-bin ...
+Preparing to replace libc-bin 2.15-0ubuntu10.10 (using .../libc-bin_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+Setting up libc-bin (2.15-0ubuntu10.18) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libc6 2.15-0ubuntu10.10 (using .../libc6_2.15-0ubuntu10.18_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.15-0ubuntu10.18) ...
+Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
+Setting up libc6-dev (2.15-0ubuntu10.18) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:fix.CVE-2015-7547travis_fold:start:update_libssl1.0.0$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 51%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 14.1 kB/1,580 kB 1%]                                     60% [Working]             Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+             62% [2 libssl1.0.0 57.7 kB/1,054 kB 5%]                                       100% [Working]              Fetched 2,634 kB in 0s (18.7 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71419 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0travis_fold:start:git.checkouttravis_time:start:112c5024$ git clone --depth=50 --branch=master https://github.com/github/github-services.git github/github-services
+Cloning into 'github/github-services'...
+remote: Counting objects: 1325, done.[K
+remote: Compressing objects:   0% (1/883)   [Kremote: Compressing objects:   1% (9/883)   [Kremote: Compressing objects:   2% (18/883)   [Kremote: Compressing objects:   3% (27/883)   [Kremote: Compressing objects:   4% (36/883)   [Kremote: Compressing objects:   5% (45/883)   [Kremote: Compressing objects:   6% (53/883)   [Kremote: Compressing objects:   7% (62/883)   [Kremote: Compressing objects:   8% (71/883)   [Kremote: Compressing objects:   9% (80/883)   [Kremote: Compressing objects:  10% (89/883)   [Kremote: Compressing objects:  11% (98/883)   [Kremote: Compressing objects:  12% (106/883)   [Kremote: Compressing objects:  13% (115/883)   [Kremote: Compressing objects:  14% (124/883)   [Kremote: Compressing objects:  15% (133/883)   [Kremote: Compressing objects:  16% (142/883)   [Kremote: Compressing objects:  17% (151/883)   [Kremote: Compressing objects:  18% (159/883)   [Kremote: Compressing objects:  19% (168/883)   [Kremote: Compressing objects:  20% (177/883)   [Kremote: Compressing objects:  21% (186/883)   [Kremote: Compressing objects:  22% (195/883)   [Kremote: Compressing objects:  23% (204/883)   [Kremote: Compressing objects:  24% (212/883)   [Kremote: Compressing objects:  25% (221/883)   [Kremote: Compressing objects:  26% (230/883)   [Kremote: Compressing objects:  27% (239/883)   [Kremote: Compressing objects:  28% (248/883)   [Kremote: Compressing objects:  29% (257/883)   [Kremote: Compressing objects:  30% (265/883)   [Kremote: Compressing objects:  31% (274/883)   [Kremote: Compressing objects:  32% (283/883)   [Kremote: Compressing objects:  33% (292/883)   [Kremote: Compressing objects:  34% (301/883)   [Kremote: Compressing objects:  35% (310/883)   [Kremote: Compressing objects:  36% (318/883)   [Kremote: Compressing objects:  37% (327/883)   [Kremote: Compressing objects:  38% (336/883)   [Kremote: Compressing objects:  39% (345/883)   [Kremote: Compressing objects:  40% (354/883)   [Kremote: Compressing objects:  41% (363/883)   [Kremote: Compressing objects:  42% (371/883)   [Kremote: Compressing objects:  43% (380/883)   [Kremote: Compressing objects:  44% (389/883)   [Kremote: Compressing objects:  45% (398/883)   [Kremote: Compressing objects:  46% (407/883)   [Kremote: Compressing objects:  47% (416/883)   [Kremote: Compressing objects:  48% (424/883)   [Kremote: Compressing objects:  49% (433/883)   [Kremote: Compressing objects:  50% (442/883)   [Kremote: Compressing objects:  51% (451/883)   [Kremote: Compressing objects:  52% (460/883)   [Kremote: Compressing objects:  53% (468/883)   [Kremote: Compressing objects:  54% (477/883)   [Kremote: Compressing objects:  55% (486/883)   [Kremote: Compressing objects:  56% (495/883)   [Kremote: Compressing objects:  57% (504/883)   [Kremote: Compressing objects:  58% (513/883)   [Kremote: Compressing objects:  59% (521/883)   [Kremote: Compressing objects:  60% (530/883)   [Kremote: Compressing objects:  61% (539/883)   [Kremote: Compressing objects:  62% (548/883)   [Kremote: Compressing objects:  63% (557/883)   [Kremote: Compressing objects:  64% (566/883)   [Kremote: Compressing objects:  65% (574/883)   [Kremote: Compressing objects:  66% (583/883)   [Kremote: Compressing objects:  67% (592/883)   [Kremote: Compressing objects:  68% (601/883)   [Kremote: Compressing objects:  69% (610/883)   [Kremote: Compressing objects:  70% (619/883)   [Kremote: Compressing objects:  71% (627/883)   [Kremote: Compressing objects:  72% (636/883)   [Kremote: Compressing objects:  73% (645/883)   [Kremote: Compressing objects:  74% (654/883)   [Kremote: Compressing objects:  75% (663/883)   [Kremote: Compressing objects:  76% (672/883)   [Kremote: Compressing objects:  77% (680/883)   [Kremote: Compressing objects:  78% (689/883)   [Kremote: Compressing objects:  79% (698/883)   [Kremote: Compressing objects:  80% (707/883)   [Kremote: Compressing objects:  81% (716/883)   [Kremote: Compressing objects:  82% (725/883)   [Kremote: Compressing objects:  83% (733/883)   [Kremote: Compressing objects:  84% (742/883)   [Kremote: Compressing objects:  85% (751/883)   [Kremote: Compressing objects:  86% (760/883)   [Kremote: Compressing objects:  87% (769/883)   [Kremote: Compressing objects:  88% (778/883)   [Kremote: Compressing objects:  89% (786/883)   [Kremote: Compressing objects:  90% (795/883)   [Kremote: Compressing objects:  91% (804/883)   [Kremote: Compressing objects:  92% (813/883)   [Kremote: Compressing objects:  93% (822/883)   [Kremote: Compressing objects:  94% (831/883)   [Kremote: Compressing objects:  95% (839/883)   [Kremote: Compressing objects:  96% (848/883)   [Kremote: Compressing objects:  97% (857/883)   [Kremote: Compressing objects:  98% (866/883)   [Kremote: Compressing objects:  99% (875/883)   [Kremote: Compressing objects: 100% (883/883)   [Kremote: Compressing objects: 100% (883/883), done.[K
+Receiving objects:   0% (1/1325)   Receiving objects:   1% (14/1325)   Receiving objects:   2% (27/1325)   Receiving objects:   3% (40/1325)   Receiving objects:   4% (53/1325)   Receiving objects:   5% (67/1325)   Receiving objects:   6% (80/1325)   Receiving objects:   7% (93/1325)   Receiving objects:   8% (106/1325)   Receiving objects:   9% (120/1325)   Receiving objects:  10% (133/1325)   Receiving objects:  11% (146/1325)   Receiving objects:  12% (159/1325)   Receiving objects:  13% (173/1325)   Receiving objects:  14% (186/1325)   Receiving objects:  15% (199/1325)   Receiving objects:  16% (212/1325)   Receiving objects:  17% (226/1325)   Receiving objects:  18% (239/1325)   Receiving objects:  19% (252/1325)   Receiving objects:  20% (265/1325)   Receiving objects:  21% (279/1325)   Receiving objects:  22% (292/1325)   Receiving objects:  23% (305/1325)   Receiving objects:  24% (318/1325)   Receiving objects:  25% (332/1325)   Receiving objects:  26% (345/1325)   Receiving objects:  27% (358/1325)   Receiving objects:  28% (371/1325)   Receiving objects:  29% (385/1325)   Receiving objects:  30% (398/1325)   Receiving objects:  31% (411/1325)   Receiving objects:  32% (424/1325)   Receiving objects:  33% (438/1325)   Receiving objects:  34% (451/1325)   Receiving objects:  35% (464/1325)   Receiving objects:  36% (477/1325)   Receiving objects:  37% (491/1325)   Receiving objects:  38% (504/1325)   Receiving objects:  39% (517/1325)   Receiving objects:  40% (530/1325)   Receiving objects:  41% (544/1325)   Receiving objects:  42% (557/1325)   Receiving objects:  43% (570/1325)   Receiving objects:  44% (583/1325)   Receiving objects:  45% (597/1325)   Receiving objects:  46% (610/1325)   Receiving objects:  47% (623/1325)   Receiving objects:  48% (636/1325)   Receiving objects:  49% (650/1325)   Receiving objects:  50% (663/1325)   Receiving objects:  51% (676/1325)   Receiving objects:  52% (689/1325)   Receiving objects:  53% (703/1325)   Receiving objects:  54% (716/1325)   Receiving objects:  55% (729/1325)   Receiving objects:  56% (742/1325)   Receiving objects:  57% (756/1325)   Receiving objects:  58% (769/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  59% (782/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  60% (795/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  61% (809/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  62% (822/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  63% (835/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  64% (848/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  65% (862/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  66% (875/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  67% (888/1325), 11.21 MiB | 22.36 MiB/s   Receiving objects:  67% (896/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  68% (901/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  69% (915/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  70% (928/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  71% (941/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  72% (954/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  73% (968/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  74% (981/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  75% (994/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  76% (1007/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  77% (1021/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  78% (1034/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  79% (1047/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  80% (1060/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  81% (1074/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  82% (1087/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  83% (1100/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  84% (1113/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  85% (1127/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  86% (1140/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  87% (1153/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  88% (1166/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  89% (1180/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  90% (1193/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  91% (1206/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  92% (1219/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  93% (1233/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  94% (1246/1325), 25.43 MiB | 25.38 MiB/s   remote: Total 1325 (delta 553), reused 821 (delta 433), pack-reused 0[K
+Receiving objects:  95% (1259/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  96% (1272/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  97% (1286/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  98% (1299/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects:  99% (1312/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects: 100% (1325/1325), 25.43 MiB | 25.38 MiB/s   Receiving objects: 100% (1325/1325), 38.07 MiB | 25.38 MiB/s, done.
+Resolving deltas:   0% (0/553)   Resolving deltas:   2% (14/553)   Resolving deltas:   3% (17/553)   Resolving deltas:   6% (35/553)   Resolving deltas:   7% (39/553)   Resolving deltas:  18% (104/553)   Resolving deltas:  19% (106/553)   Resolving deltas:  20% (112/553)   Resolving deltas:  21% (117/553)   Resolving deltas:  22% (122/553)   Resolving deltas:  23% (128/553)   Resolving deltas:  24% (138/553)   Resolving deltas:  37% (208/553)   Resolving deltas:  38% (212/553)   Resolving deltas:  41% (228/553)   Resolving deltas:  42% (234/553)   Resolving deltas:  43% (240/553)   Resolving deltas:  44% (244/553)   Resolving deltas:  45% (250/553)   Resolving deltas:  46% (256/553)   Resolving deltas:  47% (261/553)   Resolving deltas:  48% (267/553)   Resolving deltas:  49% (271/553)   Resolving deltas:  50% (279/553)   Resolving deltas:  51% (283/553)   Resolving deltas:  53% (296/553)   Resolving deltas:  54% (304/553)   Resolving deltas:  55% (307/553)   Resolving deltas:  56% (311/553)   Resolving deltas:  57% (319/553)   Resolving deltas:  58% (323/553)   Resolving deltas:  59% (329/553)   Resolving deltas:  64% (359/553)   Resolving deltas:  65% (361/553)   Resolving deltas:  66% (365/553)   Resolving deltas:  67% (371/553)   Resolving deltas:  68% (377/553)   Resolving deltas:  69% (384/553)   Resolving deltas:  70% (389/553)   Resolving deltas:  71% (395/553)   Resolving deltas:  72% (400/553)   Resolving deltas:  73% (404/553)   Resolving deltas:  75% (416/553)   Resolving deltas:  76% (422/553)   Resolving deltas:  77% (427/553)   Resolving deltas:  78% (432/553)   Resolving deltas:  79% (437/553)   Resolving deltas:  80% (447/553)   Resolving deltas:  81% (450/553)   Resolving deltas: 100% (553/553)   Resolving deltas: 100% (553/553), done.
+Checking connectivity... done.
+
+travis_time:end:112c5024:start=1496684275254468627,finish=1496684277498517979,duration=2244049352$ cd github/github-services
+$ git checkout -qf 1786eb429191f5681b37fc749a59f92ecd533489
+travis_fold:end:git.checkouttravis_fold:start:rvmtravis_time:start:0640026c$ rvm use 2.4.0 --install --binary --fuzzy
+ruby-2.4.0 is not installed - installing.
+Searching for binary rubies, this might take some time.
+Found remote file https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/12.04/x86_64/ruby-2.4.0.tar.bz2
+Checking requirements for ubuntu.
+Requirements installation successful.
+ruby-2.4.0 - #configure
+ruby-2.4.0 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 15.6M    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 15.6M  100 15.6M    0     0  48.2M      0 --:--:-- --:--:-- --:--:-- 48.4M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.0 - #validate archive
+ruby-2.4.0 - #extract
+ruby-2.4.0 - #validate binary
+ruby-2.4.0 - #setup
+ruby-2.4.0 - #gemset created /home/travis/.rvm/gems/ruby-2.4.0@global
+ruby-2.4.0 - #importing gemset /home/travis/.rvm/gemsets/global.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-.
+ruby-2.4.0 - #generating global wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/.
+ruby-2.4.0 - #uninstalling gem rubygems-bundler-1.4.4|/.
+ruby-2.4.0 - #gemset created /home/travis/.rvm/gems/ruby-2.4.0
+ruby-2.4.0 - #importing gemset /home/travis/.rvm/gemsets/default.gems|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.
+ruby-2.4.0 - #generating default wrappers|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+chown: changing ownership of `/home/travis/.rvm/user/installs': Operation not permitted
+Using /home/travis/.rvm/gems/ruby-2.4.0
+
+travis_time:end:0640026c:start=1496684294415421737,finish=1496684311426308681,duration=17010886944travis_fold:end:rvm$ export BUNDLE_GEMFILE=$PWD/Gemfile
+$ ruby --version
+ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
+$ rvm --version
+rvm 1.26.10 (latest-minor) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+$ bundle --version
+Bundler version 1.15.1
+$ gem --version
+2.6.8
+travis_fold:start:installtravis_time:start:04c0c110$ script/bootstrap
+Resolving dependencies...
+Installing rake 10.0.3
+Installing i18n 0.8.0
+Installing json 1.8.6 with native extensions
+Installing minitest 5.10.1
+Installing thread_safe 0.3.5
+Installing builder 3.2.3
+Installing public_suffix 2.0.5
+Installing mini_portile2 2.1.0
+Installing jmespath 1.3.1
+Installing multi_json 1.12.1
+Installing multipart-post 2.0.0
+Installing mime-types 1.25.1
+Installing mash 0.1.1
+Installing curb 0.9.3 with native extensions
+Installing rack 2.0.1
+Installing jwt 1.5.6
+Installing mqtt 0.0.8
+Installing oauth 0.4.4
+Installing ruby-hmac 0.4.0
+Installing unf_ext 0.0.7.2 with native extensions
+Installing netrc 0.11.0
+Installing eventmachine 1.2.2 with native extensions
+Installing hashie 2.1.2
+Installing http_parser.rb 0.5.3 with native extensions
+Installing simple_oauth 0.1.9
+Installing xml-simple 1.0.11
+Installing xmlrpc 0.2.1
+Installing xmpp4r 0.5.6
+Installing yajl-ruby 1.3.0 with native extensions
+Using bundler 1.15.1
+Installing tzinfo 1.2.2
+Installing addressable 2.5.0
+Installing nokogiri 1.7.0.1 with native extensions
+Installing aws-sdk-core 2.0.48
+Installing faraday 0.9.0
+Installing mail 2.6.4
+Installing rack-test 0.6.3
+Installing twilio-ruby 3.9.0
+Installing unf 0.1.4
+Installing twitter-stream 0.1.16
+Installing xmpp4r-simple-19 1.0.0
+Installing activesupport 4.2.7.1
+Installing aws-sdk-v1 1.66.0
+Installing signet 0.5.1
+Installing faraday_middleware 0.11.0.1
+Installing curb-fu 0.6.2
+Installing domain_name 0.5.20161129
+Installing activemodel 4.2.7.1
+Installing aws-sdk 1.66.0
+Installing tinder 1.10.0
+Installing maxcdn 0.2.1
+Installing http-cookie 1.0.3
+Installing rails-observers 0.1.2
+Installing rest-client 2.0.0
+Installing activeresource 4.0.0
+Installing softlayer_messaging 1.0.2
+Using github-services 1.0.0.1786eb4 from source at `.`
+Updating files in vendor/cache
+Bundle complete! 3 Gemfile dependencies, 57 gems now installed.
+Bundled gems are installed into ./vendor/gems.
+Using rake 10.0.3
+Using i18n 0.8.0
+Using json 1.8.6
+Using minitest 5.10.1
+Using thread_safe 0.3.5
+Using builder 3.2.3
+Using public_suffix 2.0.5
+Using mini_portile2 2.1.0
+Using jmespath 1.3.1
+Using multi_json 1.12.1
+Using multipart-post 2.0.0
+Using mime-types 1.25.1
+Using mash 0.1.1
+Using curb 0.9.3
+Using rack 2.0.1
+Using jwt 1.5.6
+Using mqtt 0.0.8
+Using oauth 0.4.4
+Using ruby-hmac 0.4.0
+Using unf_ext 0.0.7.2
+Using netrc 0.11.0
+Using eventmachine 1.2.2
+Using hashie 2.1.2
+Using http_parser.rb 0.5.3
+Using simple_oauth 0.1.9
+Using xml-simple 1.0.11
+Using xmlrpc 0.2.1
+Using xmpp4r 0.5.6
+Using yajl-ruby 1.3.0
+Using bundler 1.15.1
+Using tzinfo 1.2.2
+Using addressable 2.5.0
+Using nokogiri 1.7.0.1
+Using aws-sdk-core 2.0.48
+Using faraday 0.9.0
+Using mail 2.6.4
+Using rack-test 0.6.3
+Using twilio-ruby 3.9.0
+Using unf 0.1.4
+Using twitter-stream 0.1.16
+Using xmpp4r-simple-19 1.0.0
+Using activesupport 4.2.7.1
+Using aws-sdk-v1 1.66.0
+Using signet 0.5.1
+Using faraday_middleware 0.11.0.1
+Using curb-fu 0.6.2
+Using domain_name 0.5.20161129
+Using activemodel 4.2.7.1
+Using aws-sdk 1.66.0
+Using tinder 1.10.0
+Using maxcdn 0.2.1
+Using http-cookie 1.0.3
+Using rails-observers 0.1.2
+Using rest-client 2.0.0
+Using activeresource 4.0.0
+Using softlayer_messaging 1.0.2
+Using github-services 1.0.0.1786eb4 from source at `.`
+Updating files in vendor/cache
+Bundle complete! 3 Gemfile dependencies, 57 gems now installed.
+Bundled gems are installed into ./vendor/gems.
+Updating files in vendor/cache
+
+travis_time:end:04c0c110:start=1496684311884150815,finish=1496684419715053353,duration=107830902538travis_fold:end:installtravis_time:start:1fb5ef14$ bundle exec rake test
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -I"lib:lib:test" -I"/home/travis/build/github/github-services/vendor/gems/ruby/2.4.0/gems/rake-10.0.3/lib" "/home/travis/build/github/github-services/vendor/gems/ruby/2.4.0/gems/rake-10.0.3/lib/rake/rake_test_loader.rb" "test/**/*_test.rb" 
+/home/travis/build/github/github-services/vendor/gems/ruby/2.4.0/gems/curb-fu-0.6.2/lib/curb-fu/core_ext.rb:60: warning: constant ::Fixnum is deprecated
+/home/travis/build/github/github-services/test/gemnasium_test.rb:47: warning: circular argument reference - payload
+Run options: --seed 28942
+
+# Running:
+
+........................................S..........Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/hip_chat_test.rb:14:in `block in test_push'. This will fail in MT6.
+...................................................................................................................................................................................................................................................Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/service_test.rb:34:in `test_missing_method'. This will fail in MT6.
+.................................................................................................................................................................................................Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/aws_code_deploy_test.rb:35:in `test_environmental_application_name_sent'. This will fail in MT6.
+....Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/aws_code_deploy_test.rb:28:in `test_application_name_sent'. This will fail in MT6.
+.Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/aws_code_deploy_test.rb:13:in `test_deployment_group_sent'. This will fail in MT6.
+...Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/aws_code_deploy_test.rb:21:in `test_environmental_deployment_group_sent'. This will fail in MT6.
+.Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/aws_code_deploy_test.rb:88:in `test_github_deployment_status_callbacks'. This will fail in MT6.
+..................................................................S...S................{"repository":{"name":"grit","url":"http://github.com/mojombo/grit","owner":{"login":"mojombo"}},"sender":{"login":"defunkt"},"action":"opened","pull_request":{"number":5,"commits":1,"state":"open","title":"booya","body":"boom town","user":{"login":"foo"},"head":{"label":"foo:feature"},"base":{"label":"mojombo:master"},"html_url":"https://github.com/mojombo/magik/pulls/5"}}
+........................................................................................................Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/twilio_test.rb:96:in `test_push_master_only_on_non_master'. This will fail in MT6.
+..Use assert_nil if expecting nil from /home/travis/build/github/github-services/test/deploy_hq_test.rb:21:in `block in test_push'. This will fail in MT6.
+.................................................
+
+Finished in 1.366886s, 539.9133 runs/s, 1523.1702 assertions/s.
+
+738 runs, 2082 assertions, 0 failures, 0 errors, 3 skips
+
+You have skipped tests. Run with --verbose for details.
+
+travis_time:end:1fb5ef14:start=1496684419722095207,finish=1496684422465135489,duration=2743040282
+The command "bundle exec rake test" exited with 0.
+
+Done. Your build exited with 0.
