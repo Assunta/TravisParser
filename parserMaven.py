@@ -1,6 +1,6 @@
 import re
 
-from snapshot import Snapshot
+from domain import Snapshot
 
 listaMavenWarning=list()
 listaTask=list()
@@ -8,7 +8,7 @@ listaMessErrore=list()
 listaDipendenze=list()
 listaSnapshot=list()
 #se invece si usa maven
-def maven_parser(f):
+def maven_parser(f, mavenLog):
     # Leggo tutto il log
     for line in f:
         # Task gradle. i task sono rappresentati nella forma \r\r\rnomeTask\r\r\r:
@@ -25,7 +25,11 @@ def maven_parser(f):
             # in teoria questo controllo non dovrebbe servire perche' non si dovrebbe poter realizzare una situazione del genere in cui si eseguono goal senza aver dichiarato snapshot
             # if len(listaSnapshot)==0:
             #     listaSnapshot.append(Snapshot("no SNAPSHOT"))
-            listaSnapshot[-1].addGoal(line.split("---")[1])
+            goal=(line.split("---")[1]).split("@")[0]
+            #remove num version
+            goal=re.sub(":((\d)*\.)*(\d)*:" , ":", goal).strip()
+            #faccio un altro split per eliminare la descrizione del tipo (default-test)
+            listaSnapshot[-1].addGoal(goal.split("(")[0].strip())
         #espressione regolare per matchare il running di un test es # Running test ExampleTest
         elif re.match("\ARunning (.)*Test(.*)", line):
             # print line
@@ -56,14 +60,18 @@ def maven_parser(f):
     # nei log le snapshot appaiono duplicate, non ho capito perche'..
     # quindi sono duplicate anche qui, pero' nella seconda replica fa anche i test, nella prima no
 
-    print("\n\n SNAPSHOT:")
-    for s in listaSnapshot:
-        print s
-
-    print("\n\n DIPENDENZE:")
-    for s in listaDipendenze:
-        print s
-
-    print("\n\n ERROR:")
-    for s in listaMessErrore:
-        print s
+    mavenLog.addListaErrori(listaMessErrore)
+    mavenLog.addListaSnapshot(listaSnapshot)
+    mavenLog.addListaWarning(listaMavenWarning)
+    # print("\n\n SNAPSHOT:")
+    # for s in listaSnapshot:
+    #     print s
+    #
+    # print("\n\n DIPENDENZE:")
+    # for s in listaDipendenze:
+    #     print s
+    #
+    # print("\n\n ERROR:")
+    # for s in listaMessErrore:
+    #     print s
+    return mavenLog

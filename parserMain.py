@@ -1,3 +1,4 @@
+from domain.MavenLog import MavenLog
 from parserGeneral import *
 from parserGradle import *
 from parserMaven import maven_parser
@@ -7,17 +8,24 @@ from parserRake import parserRake
 #maven
 # reponame="springside/springside4"
 # f = open('logs\\springside4-442-153294230.txt', 'r')
-
 # reponame="pulse00/Twig-Eclipse-Plugin"
 # f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
 # reponame="Assunta/example2"
 # f = open('logs\\example2-6-173560799.txt', 'r')
+# reponame="simpligility/android-maven-plugin"
+# f = open('logs\\maven\\android-maven-plugin\\android-maven-plugin-1233-156907093.txt', 'r')
+# reponame="opf/openproject"
+# f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
+reponame="jhy/jsoup"
+f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
 #
 #gradle
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
 # reponame="codecov/example-android"
-# f = open('logs\\example-android-48-67063849.txt', 'r')
+# f = open('logs\\gradle\\picasso\\picasso-1351-174648005.txt', 'r')
+# reponame="Assunta/example"
+# f = open('logs\\old\\example.txt', 'r')
 
 #ruby
 # reponame="zendesk/samson"
@@ -29,8 +37,8 @@ from parserRake import parserRake
 # f = open('logs\\ruby\\metasploit-framework\\metasploit-framework-20590-175876290.txt', 'r')
 # reponame="richpeck/exception_handler"
 # f = open('logs\\ruby\\exception_handler\\exception_handler-1264-168008434.txt', 'r')
-reponame="travis-ci/travis-cookbooks"
-f = open('logs\\ruby\\travis-cookbook\\travis-cookbooks-3486-175761182.txt', 'r')
+# reponame="travis-ci/travis-cookbooks"
+# f = open('logs\\ruby\\travis-cookbook\\travis-cookbooks-3486-175761182.txt', 'r')
 
 
 
@@ -52,13 +60,16 @@ def getBuildId(f):
 
 linguaggio=common_parse(reponame, getBuildId(f))
 print "\nLOG"
+#TODO c'e' il caso di language: generic   -.-'
 if linguaggio== "ruby":
     #supponiamo che si usa solo rake e che non usano maven
     parserRake(f)
 else:
     tool=checkGradleMaven(f)
     if(tool=="maven"):
-        maven_parser(f)
+        #TODO prendere anche lo in mavenLog status....
+        mavenLog=maven_parser(f, MavenLog(reponame))
+        print mavenLog
     elif(tool=="gradle"):
         gradle_parser(f)
 print ("PARSE END")

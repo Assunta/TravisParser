@@ -29,9 +29,6 @@ def parserRake(f):
             #se non c'e' la code coverage
         elif re.match("\ACode coverage not enabled", line):
             print line
-            # per vedere se si usa Bullet (The Bullet gem is designed to help you increase your application's performance by reducing the number of queries it makes. )
-        elif re.match("\ABullet not enabled",line):
-            print line
     #espressione per matchare tutti i comandi $ bundle exec
             #TODO sistemare, perche' potrebbe matchare anche altro
         elif re.match("([^export])*bundle exec(.)*", line):
@@ -52,9 +49,9 @@ def parserRake(f):
         else:
             checkOtherTools(line)
 
-    # print "Dipendenze "
-    # for dip in listaDipendenze:
-    #     print dip
+    print "Dipendenze "
+    for dip in listaDipendenze:
+        print dip
 
 def checkOtherTools(line):
     # messaggi di Coveralls (code coverage tool)
@@ -69,9 +66,13 @@ def checkOtherTools(line):
     # | Controllers       | 71    |
     elif re.match("\|(.)*\|(.)*\|",line):
         print "BRAKEMAN "+line
+    # per vedere se si usa Bullet (The Bullet gem is designed to help you increase your application's performance by reducing the number of queries it makes. )
+    elif re.match("\ABullet not enabled", line):
+        print line
     # check uso RuboCop (is a Ruby static code analyzer)
     #TODO da testare
     elif re.match("\ATesting with RuboCop(.)*", line):
         print "Uso RuboCop "
     elif re.match("\A(.)*files inspected,(.)*", line):
         print "Result rubocop"
+
