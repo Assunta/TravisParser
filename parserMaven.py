@@ -1,6 +1,6 @@
 import re
 
-from domain import Snapshot
+from domain.snapshot import Snapshot
 
 listaMavenWarning=list()
 listaTask=list()
@@ -21,6 +21,10 @@ def maven_parser(f, mavenLog):
         if re.match("\A\[INFO\] Building([^//])*SNAPSHOT", line):
             # print line
             listaSnapshot.append(Snapshot((line.split("[INFO] Building",1)[1]).strip()))
+            #potrebbe non esserci snapshot
+        elif re.match("\A\[INFO\] Building ([^jar:])([^//])*", line):
+            # print line
+            listaSnapshot.append(Snapshot((line.split("[INFO] Building",1)[1]).strip()))
         elif re.match("\A\[INFO\] --- ",line):
             # in teoria questo controllo non dovrebbe servire perche' non si dovrebbe poter realizzare una situazione del genere in cui si eseguono goal senza aver dichiarato snapshot
             # if len(listaSnapshot)==0:
@@ -29,11 +33,17 @@ def maven_parser(f, mavenLog):
             #remove num version
             goal=re.sub(":((\d)*\.)*(\d)*:" , ":", goal).strip()
             #faccio un altro split per eliminare la descrizione del tipo (default-test)
-            listaSnapshot[-1].addGoal(goal.split("(")[0].strip())
+            try:
+                listaSnapshot[-1].addGoal(goal.split("(")[0].strip())
+            except IndexError:
+                listaSnapshot.append(Snapshot("EMPTY_SNAPSHOT"))
         #espressione regolare per matchare il running di un test es # Running test ExampleTest
         elif re.match("\ARunning (.)*Test(.*)", line):
             # print line
-            listaSnapshot[-1].addTest(line)
+            try:
+                listaSnapshot[-1].addTest(line)
+            except IndexError:
+                listaSnapshot.append(Snapshot("EMPTY_SNAPSHOT"))
             #espressione per matchare il risultato di un test
         elif re.match("\ATests run:", line):
             # print line
@@ -63,15 +73,15 @@ def maven_parser(f, mavenLog):
     mavenLog.addListaErrori(listaMessErrore)
     mavenLog.addListaSnapshot(listaSnapshot)
     mavenLog.addListaWarning(listaMavenWarning)
-    # print("\n\n SNAPSHOT:")
-    # for s in listaSnapshot:
-    #     print s
-    #
-    # print("\n\n DIPENDENZE:")
-    # for s in listaDipendenze:
-    #     print s
-    #
-    # print("\n\n ERROR:")
-    # for s in listaMessErrore:
-    #     print s
+    print("\n\n SNAPSHOT:")
+    for s in listaSnapshot:
+        print s
+
+    print("\n\n DIPENDENZE:")
+    for s in listaDipendenze:
+        print s
+
+    print("\n\n ERROR:")
+    for s in listaMessErrore:
+        print s
     return mavenLog

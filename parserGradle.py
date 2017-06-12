@@ -23,7 +23,11 @@ def gradle_parser(f):
             # espressione regolare per matchare messaggi del tipo Note: /example/picasso/PicassoSampleAdapter.java uses or overrides a deprecated API.
             # che cmq potrebbero essere informazioni interessanti
         elif re.match("Note: ", line):
-            listNote.append(listaTask[-1]+"\t"+line)
+            try:
+                listNote.append(listaTask[-1]+"\t"+line)
+            except:
+                listaTask.append("NO_TASK")
+                listNote.append(listaTask[-1] + "\t" + line)
         #espressioni del tipo Skipping task xxxxx per questo motivo
         elif re.match("\ASkipping task", line):
             listaTaskSkippati.append(listaTask[-1]+"\t"+line)
