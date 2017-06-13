@@ -23,7 +23,7 @@ def gradle_parser(f, gradleLog):
                 t=Task(task_name)
                 t.setNomeProgetto(module_name)
             else:
-                t = Task(task)
+                t = Task(task.replace(":","").strip())
                 t.setNomeProgetto(" ")
             if re.match("(.)*UP-TO-DATE", line):
                 t.setIsUpdate()
@@ -70,6 +70,7 @@ def gradle_parser(f, gradleLog):
     gradleLog.addDipendenze(listaDipendenze)
 
     print gradleLog
+    return gradleLog
 
 
 

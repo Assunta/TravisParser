@@ -31,7 +31,7 @@ from parserRake import parserRake
 # f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
 #
 #gradle
-# reponame="jakenjarvis/Android-OrmLiteContentProvider"
+# reponame="jakenjarvis_Android-OrmLiteContentProvider/Android-OrmLiteContentProvider"
 # f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
 # reponame="codecov/example-android"
 # f = open('logs\\gradle\\square_picasso\\square_picasso-1351-174648005.txt', 'r')
