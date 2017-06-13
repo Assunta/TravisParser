@@ -1,3 +1,4 @@
+from domain.GradleLog import GradleLog
 from domain.MavenLog import MavenLog
 from parserGeneral import *
 from parserGradle import *
@@ -16,16 +17,37 @@ from parserRake import parserRake
 # f = open('logs\\maven\\android-maven-plugin\\android-maven-plugin-1233-156907093.txt', 'r')
 # reponame="opf/openproject"
 # f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
-reponame="jhy/jsoup"
-f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
+# reponame="jhy/jsoup"
+# f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
+# reponame="JodaOrg/joda-time"
+# f = open('logs\\maven\\JodaOrg_joda-time\\joda-time-415-175370840.txt', 'r')
+# reponame="bitcoinj/bitcoinj"
+# f = open('logs\\maven\\bitcoinj_bitcoinj\\bitcoinj-1844-174824456.txt', 'r')
+# reponame="languagetool-org/languagetool"
+# f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
+# reponame="google/error-prone"
+# f = open('logs\\maven\\google_error-prone\\error-prone-523-174617444.txt', 'r')
+# reponame="spotify/helios"
+# f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
 #
 #gradle
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
 # reponame="codecov/example-android"
-# f = open('logs\\gradle\\picasso\\picasso-1351-174648005.txt', 'r')
+# f = open('logs\\gradle\\square_picasso\\square_picasso-1351-174648005.txt', 'r')
 # reponame="Assunta/example"
 # f = open('logs\\old\\example.txt', 'r')
+# reponame="rockerhieu/emojicon"
+# f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
+# reponame="wasabeef/recyclerview-animators"
+# f = open('logs\\gradle\\wasabeef_recyclerview-animators\\recyclerview-animators-180-80950913.txt', 'r')
+reponame="square/picasso"
+f = open('logs\\gradle\\square_picasso\\picasso-1352-174661345.txt', 'r')
+
+
+# reponame="oblac/jodd"
+# f = open('logs\\gradle\\oblac_jodd\\jodd-738-171756800.txt', 'r')
+
 
 #ruby
 # reponame="zendesk/samson"
@@ -71,5 +93,5 @@ else:
         mavenLog=maven_parser(f, MavenLog(reponame))
         print mavenLog
     elif(tool=="gradle"):
-        gradle_parser(f)
+        gradleLog=gradle_parser(f, GradleLog(reponame))
 print ("PARSE END")

@@ -1,11 +1,13 @@
 import re
 
-def gradle_parser(f):
+from domain.Task import Task
+
+
+def gradle_parser(f, gradleLog):
     listaTask = list()
-    listaTaskUPDATE= list()
-    listaTaskFailed=list()
     listaMessErrore = list()
     listaTaskSkippati = list()
+    #TODO!!!!!!!!!!!!!! gli errori precedenti ai task per ora non sono inseriti nella lista degli errori
     listaErroriPrecedentiAiTask = list()
     listNote =list()
     listaDipendenze=list()
@@ -15,26 +17,39 @@ def gradle_parser(f):
         # espressione regolare per matchare i task di uno script gradle
         if re.match("\A:\w+", line):
             task=line.split(" ")[0]
-            listaTask.append(task)
+            if task.count(":") == 2:
+                module_name = task.split(":")[1]
+                task_name = task.split(":")[2]
+                t=Task(task_name)
+                t.setNomeProgetto(module_name)
+            else:
+                t = Task(task)
+                t.setNomeProgetto(" ")
             if re.match("(.)*UP-TO-DATE", line):
-                listaTaskUPDATE.append(line)
+                t.setIsUpdate()
             elif re.match("(.)*FAILED", line) or re.match("(.)*EXCEPTION", line):
-                listaTaskFailed.append(line)
-            # espressione regolare per matchare messaggi del tipo Note: /example/picasso/PicassoSampleAdapter.java uses or overrides a deprecated API.
+                t.setIsFailed()
+            if re.match("(.)*SKIPPED", line):
+                t.setIsSkipped()
+            listaTask.append(t)
+            # espressione regolare per matchare messaggi del tipo Note: /example/square_picasso/PicassoSampleAdapter.java uses or overrides a deprecated API.
             # che cmq potrebbero essere informazioni interessanti
         elif re.match("Note: ", line):
             try:
                 listNote.append(listaTask[-1]+"\t"+line)
             except:
-                listaTask.append("NO_TASK")
-                listNote.append(listaTask[-1] + "\t" + line)
+                listNote.append("NO_TASK" + "\t" + line)
         #espressioni del tipo Skipping task xxxxx per questo motivo
         elif re.match("\ASkipping task", line):
-            listaTaskSkippati.append(listaTask[-1]+"\t"+line)
+            #listaTaskSkippati.append(listaTask[-1]+"\t"+line)
+            t= listaTask.pop(-1).setIsSkipped()
+            listaTask.append(t)
         # espressione regolare per matchare il motivo di un failure
         elif re.match("\A( )*>", line):  # and la build sappiamo che e' fallita
-            print line
-            listaMessErrore.append(listaTask[-1]+"\t"+line)
+            try:
+                listaMessErrore.append(listaTask[-1]+"\t"+line)
+            except:
+                listaMessErrore.append("NO_TASK" + "\t" + line)
         # nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
         # sul buon esito della build. Esempio
         #:assertReleaseNeeded FAILED
@@ -44,44 +59,17 @@ def gradle_parser(f):
         #    Error: Invalid - -abiarmeabi - v7a for the selected target.
         # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
         elif re.match("\AError", line):
-            print line
             listaErroriPrecedentiAiTask.append(line)
-        elif re.match("\ADownload", line):
+        elif re.match("\ADownload ", line):
             listaDipendenze.append(line)
 
 
-           # nella lista dei task possiamo distinguere anche tra task che appartengono a progetti diversi
-            # (es in un progetto android ci potrebbe essere un modulo app, e un modulo library )
-    modules = set([])
-    for task in listaTask:
-        if task.count(":") == 2:
-            module_name = task.split(":")[1]
-            modules.add(module_name)
-        else:
-            modules.add(" ")  # nel caso in cui non sia specificato il nome del modulo
-    print "TASKS: "
+    gradleLog.addListaTasks(listaTask)
+    gradleLog.addListaErrori(listaMessErrore)
+    gradleLog.addListaNote(listNote)
+    gradleLog.addDipendenze(listaDipendenze)
 
-    for task in set(listaTask):
-        print task
-    print "TASKS UPDATE: "
-    for task in listaTaskUPDATE:
-        print task
-    print "TASKS: Failed\n"
-    for task in listaTaskFailed:
-        print task
-    print "Task with note"
-    for task in listNote:
-        print task
-    print "Task skippati\n"
-    for task in listaTaskSkippati:
-        print task
-    print "Progetti a cui appartengono i task\n"
-    for m in modules:
-        print m
-    print "Dipendenze"
-    for d in listaDipendenze:
-        print d
-
+    print gradleLog
 
 
 

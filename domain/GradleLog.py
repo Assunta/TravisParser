@@ -22,6 +22,9 @@ class GradleLog:
     def getDipendenze(self):
         return self.listaDipendenze
 
+    def addDipendenze(self, list):
+        self.listaDipendenze = list
+
     def getErrori(self):
         return self.listaErrori
 
@@ -47,4 +50,13 @@ class GradleLog:
         ret = self.nome + "\n" + self.status + "\n"
         for s in self.listaTasks:
             ret += str(s) + "\n"
+        ret+= "Dipendenze:\n"
+        for d in self.listaDipendenze:
+            ret+= str(d)+"\t"
+        ret+= "NOTE:\n"
+        for n in self.listaNote:
+            ret+= str(n)+"\n"
+        ret+= "Errori:\n"
+        for e in self.listaErrori:
+            ret+= str(e)+"\n"
         return ret

@@ -23,16 +23,17 @@ for f in listaFile:
     if len(f.split(":"))>2:
         listaGoals.append(f.split(":")[1].strip()+":"+f.split(":")[2].strip())
 
-reponame="apache/storm"
-f = open('logs\\maven\\storm\\storm-6477-176065862.txt', 'r')
+reponame="tinkerpop/gremlin"
+f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-184-170106235.txt', 'r')
 mavenLog = maven_parser(f, MavenLog(reponame))
 #controllo quali goal non sono presenti in tabella
-diff=set(mavenLog.getSnapshots()[1].getGoals())-set(listaGoals)
-if len(diff)>0:
-    # stampa
-    wb = load_workbook("goalsMancanti.xlsx")
-    ws = wb.active
-    for item in diff:
-        ws.append([item])
-        print item
-    wb.save("goalsMancanti.xlsx")
+for snap in mavenLog.getSnapshots():
+    diff=set(snap.getGoals())-set(listaGoals)
+    if len(diff)>0:
+        # stampa
+        wb = load_workbook("goalsMancanti.xlsx")
+        ws = wb.active
+        for item in diff:
+            ws.append([item])
+            print item
+        wb.save("goalsMancanti.xlsx")
