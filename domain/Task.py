@@ -5,9 +5,13 @@ class Task:
         self.isSkipped= False
         self.isUpdate= False
         self.isFailed= False
+        self.categoria="Non_classificato"
 
     def setNomeProgetto(self, p):
         self.progetto=p
+
+    def setCategoria(self, p):
+        self.categoria = p
 
     def setIsSkipped(self):
         self.isSkipped= True
@@ -20,6 +24,9 @@ class Task:
 
     def getNome(self):
         return self.nome
+
+    def getCategoria(self):
+        return self.categoria
 
     def getNomeProgetto(self):
         return self.progetto

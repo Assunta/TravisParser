@@ -1,6 +1,7 @@
 class Snapshot:
     def __init__(self,nome):
         self.nome=nome
+        #TODO gestire i goal che oltre al nome dovrebbero avere anche una classificazione
         self.listaGoal= list()
         self.test=""
 
