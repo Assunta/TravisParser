@@ -41,4 +41,4 @@ class Task:
         return self.isSkipped
 
     def __str__(self):
-        return self.progetto+":"+self.nome+"\tSkip: "+str(self.isSkipped)+"\tFailed: "+str(self.isFailed)+"\tUpdate: "+str(self.isUpdate)
+        return self.progetto+":"+self.nome+"\tSkip: "+str(self.isSkipped)+"\tFailed: "+str(self.isFailed)+"\tUpdate: "+str(self.isUpdate)+"\nCategoria "+str(self.categoria)

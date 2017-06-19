@@ -1,64 +1,58 @@
 import re
-from openpyxl import load_workbook
+import pymysql
 
 from domain.GradleLog import GradleLog
 from parserGradle import gradle_parser
 
+def readDbLogin():
+    f = open('db_login', 'r')
+    host = f.readline().strip()
+    username = f.readline().strip()
+    password = f.readline().strip()
+    return [host, username, password]
 
-def checkTipoTask(task):
-    if re.match("(.)*compile(.)*", task):
-        print task+"\tcompile"
-    elif re.match("(.)*packag(.)*", task):
-        print task+"\tpackaging"
-    else:
-        if re.match("(.)*lint(.)*|(.)*Lint(.)*", task):
-            print task+"\t Lint"
-        elif re.match("(.)*pmd(.)*|(.)*findbug(.)*|(.)*Findbug(.)*|(.)*checkstyle(.)*|(.)*Checkstyle(.)*", task):
-            print task+"\t Code analisys"
-        elif re.match("(.)*espresso(.)*", task):
-            print task+"\t Espresso"
-        elif re.match("(.)*generate(.)*", task):
-            print task+"\t Task tipo generate"
-        elif re.match("(.)*merge(.)*", task):
-            print task + "\t Task tipo merge"
-        elif re.match("(.)*prepare(.)*", task):
-            print task + "\t Task tipo prepare"
-        elif re.match("(.)*test(.)*|(.)*Test(.)*", task):
-            print task + "\t Test"
-        elif re.match("(.)*Jar(.)*|(.)*jar(.)*", task):
-            print task + "\t Packaging"
-        else:
-            print task+"\t NO CLASSIFICATION!!!!!!!"
+def getTaskDb():
+    lista= list()
+    credenziali= readDbLogin()
+    connection = pymysql.connect(host=credenziali[0],
+                                 user=credenziali[1],
+                                 password=credenziali[2],
+                                 db='travisdb',
+                                 charset='utf8mb4',
+                                 cursorclass=pymysql.cursors.DictCursor)
 
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT `*`FROM `regoletaskgradle`"
+            cursor.execute(sql)
+            for r in cursor.fetchall():
+                lista.append(r)
+    finally:
+        connection.close()
+        return lista
 
-listaTask=["compileJava","processResources","classes","compileTestJava","jar","javadoc","test","testClasses","processTestResources",
-"uploadArchives","clean","cleanTaskName","assemble","check","build","buildNeeded","buildDependents",
-"buildConfigName","uploadConfigName","war","ear","jettyRun","jettyRunWar","jettyStop","run","startScripts",
-"installDist","distZip","distTar","distZip","compileGroovy","compileTestGroovy","compileSourceSetGroovy",
-"groovydoc","compileScala","compileTestScala","compileSourceSetScala","scaladoc","generateGrammarSource",
-"generateTestGrammarSource","generateSourceSetGrammarSource","checkstyle","checkstyleMain","checkstyleTest","checkstyleSourceSet",
-"codenarcMain","codenarcTest","codenarcSourceSet","findbugsMain","findbugsTest","findbugsSourceSet","jdependMain",
-"jdependTest","jdependSourceSet","pmdMain","pmdTest","pmdSourceSet","jacocoTestReport"]
-
+def checkTask(gradleLog):
+    # leggo i task classificati dal db
+    listaDB = getTaskDb()
+    for task in gradleLog.getTask():
+        trovato = False
+        for item in listaDB:
+            if re.match(item.get("EspressioneRegolare"), task.getNome().strip()) and not trovato:
+                task.setCategoria(item.get("Categoria"))
+                trovato = True
+        if not trovato:
+            task.setCategoria("other")
 
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\gradle\\jakenjarvis_Android-OrmLiteContentProvider\\Android-OrmLiteContentProvider-161-42820687.txt', 'r')
 reponame="square/picasso"
 f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
 gradleLog = gradle_parser(f, GradleLog(reponame))
-#controllo quali goal non sono presenti in tabella
-listaTaskDaControllare=list()
-for task in gradleLog.getTask():
-    listaTaskDaControllare.append(task.getNome().strip())
-diff=set(listaTaskDaControllare)-set(listaTask)
-if len(diff)>0:
-    # stampa
-    # wb = load_workbook("taskMancanti.xlsx")
-    # ws = wb.active
-    # for item in diff:
-    #     ws.append([str(item)])
-    #     print item
-    # wb.save("taskMancanti.xlsx")
-    for item in diff:
-        checkTipoTask(item)
+checkTask(gradleLog)
+
+
+
+
+
+
 
