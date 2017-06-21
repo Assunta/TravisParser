@@ -7,8 +7,7 @@ from parserRake import parserRake
 
 
 #maven
-# reponame="springside/springside4"
-# f = open('logs\\springside4-442-153294230.txt', 'r')
+
 # reponame="pulse00/Twig-Eclipse-Plugin"
 # f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
 # reponame="Assunta/example2"
@@ -23,8 +22,8 @@ from parserRake import parserRake
 # f = open('logs\\maven\\JodaOrg_joda-time\\joda-time-415-175370840.txt', 'r')
 # reponame="bitcoinj/bitcoinj"
 # f = open('logs\\maven\\bitcoinj_bitcoinj\\bitcoinj-1844-174824456.txt', 'r')
-# reponame="languagetool-org/languagetool"
-# f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
+reponame="languagetool-org/languagetool"
+f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
 # reponame="google/error-prone"
 # f = open('logs\\maven\\google_error-prone\\error-prone-523-174617444.txt', 'r')
 # reponame="spotify/helios"
@@ -41,8 +40,8 @@ from parserRake import parserRake
 # f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
 # reponame="wasabeef/recyclerview-animators"
 # f = open('logs\\gradle\\wasabeef_recyclerview-animators\\recyclerview-animators-180-80950913.txt', 'r')
-reponame="square/picasso"
-f = open('logs\\gradle\\square_picasso\\picasso-1352-174661345.txt', 'r')
+# reponame="square/picasso"
+# f = open('logs\\gradle\\square_picasso\\picasso-1352-174661345.txt', 'r')
 
 
 # reponame="oblac/jodd"

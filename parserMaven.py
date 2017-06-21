@@ -1,5 +1,6 @@
 import re
 
+from domain.Goal import Goal
 from domain.snapshot import Snapshot
 
 listaMavenWarning=list()
@@ -34,7 +35,7 @@ def maven_parser(f, mavenLog):
             goal=re.sub(":((\d)*\.)*(\d)*:" , ":", goal).strip()
             #faccio un altro split per eliminare la descrizione del tipo (default-test)
             try:
-                listaSnapshot[-1].addGoal(goal.split("(")[0].strip())
+                listaSnapshot[-1].addGoal(Goal(goal.split("(")[0].strip()))
             except IndexError:
                 listaSnapshot.append(Snapshot("EMPTY_SNAPSHOT"))
         #espressione regolare per matchare il running di un test es # Running test ExampleTest
@@ -66,6 +67,7 @@ def maven_parser(f, mavenLog):
                # print str
                 #print "***"+line
                 listaDipendenze.append(str)
+
 
     # nei log le snapshot appaiono duplicate, non ho capito perche'..
     # quindi sono duplicate anche qui, pero' nella seconda replica fa anche i test, nella prima no

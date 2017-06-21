@@ -45,10 +45,10 @@ def checkTask(gradleLog):
 
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\gradle\\jakenjarvis_Android-OrmLiteContentProvider\\Android-OrmLiteContentProvider-161-42820687.txt', 'r')
-reponame="square/picasso"
-f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
-gradleLog = gradle_parser(f, GradleLog(reponame))
-checkTask(gradleLog)
+# reponame="square/picasso"
+# f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
+# gradleLog = gradle_parser(f, GradleLog(reponame))
+# checkTask(gradleLog)
 
 
 
