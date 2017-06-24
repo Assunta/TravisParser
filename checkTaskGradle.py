@@ -1,8 +1,6 @@
 import re
 import pymysql
 
-from domain.GradleLog import GradleLog
-from parserGradle import gradle_parser
 
 def readDbLogin():
     f = open('db_login', 'r')

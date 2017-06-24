@@ -33,11 +33,6 @@ listNote=list()
 # (instead of reading the whole file in memory):
 def checkGradleMaven(f):
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
-    # Errori prima dell'inizio dell'analisi
-    # TODO vedere bene in che punto metterle
-    #TODO per ora non funzionano
-    print re.search("\AThe command(.)*failed and exited(.)*",s)
-    print re.search("\ANo output has been received",s)
     if s.find ('[INFO] Scanning for projects') != -1:
         return "maven"
     else:

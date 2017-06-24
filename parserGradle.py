@@ -1,12 +1,12 @@
 import re
 
+from checkTaskGradle import checkTask
 from domain.Task import Task
 
 
 def gradle_parser(f, gradleLog):
     listaTask = list()
     listaMessErrore = list()
-    listaTaskSkippati = list()
     #TODO!!!!!!!!!!!!!! gli errori precedenti ai task per ora non sono inseriti nella lista degli errori
     listaErroriPrecedentiAiTask = list()
     listNote =list()
@@ -36,8 +36,8 @@ def gradle_parser(f, gradleLog):
             # che cmq potrebbero essere informazioni interessanti
         elif re.match("Note: ", line):
             try:
-                listNote.append(listaTask[-1]+"\t"+line)
-            except:
+                listNote.append(listaTask[-1].getNome()+"\t"+line)
+            except IndexError:
                 listNote.append("NO_TASK" + "\t" + line)
         #espressioni del tipo Skipping task xxxxx per questo motivo
         elif re.match("\ASkipping task", line):
@@ -47,8 +47,8 @@ def gradle_parser(f, gradleLog):
         # espressione regolare per matchare il motivo di un failure
         elif re.match("\A( )*>", line):  # and la build sappiamo che e' fallita
             try:
-                listaMessErrore.append(listaTask[-1]+"\t"+line)
-            except:
+                listaMessErrore.append(listaTask[-1].getNome()+"\t"+line)
+            except IndexError:
                 listaMessErrore.append("NO_TASK" + "\t" + line)
         # nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
         # sul buon esito della build. Esempio
@@ -58,7 +58,8 @@ def gradle_parser(f, gradleLog):
         # a volte la build fallisce ancor prima che iniziano i task con messaggi di errore del tipo
         #    Error: Invalid - -abiarmeabi - v7a for the selected target.
         # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
-        elif re.match("\AError", line):
+        elif re.match("\AError|\AThe command(.)*failed and exited(.)*|\ANo output has been received", line):
+            print line
             listaErroriPrecedentiAiTask.append(line)
         elif re.match("\ADownload ", line):
             listaDipendenze.append(line)
@@ -69,8 +70,9 @@ def gradle_parser(f, gradleLog):
 
     gradleLog.addListaTasks(listaTask)
     gradleLog.addListaErrori(listaMessErrore)
-    gradleLog.addListaNote(listNote)
+    gradleLog.addListaNote(set(listNote))
     gradleLog.addDipendenze(listaDipendenze)
+    checkTask(gradleLog)
 
     print gradleLog
     return gradleLog

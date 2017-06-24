@@ -7,10 +7,14 @@ from parserRake import parserRake
 
 
 #maven
+# controllare Vanilla
+
 
 #checkstyle project fa partire un Gradle demon all'interno di Maven... -.-''''
 
-#problemi iniziali!!!!!!!! Da gestire ancora
+#problemi iniziali!
+reponame="apache/tajo"
+f = open('logs\\maven\\apache_tajo\\tajo-5965-166162229.txt', 'r')
 # reponame="javaee-samples/javaee7-samples"
 # f = open('logs\\maven\\javaee-samples_javaee7-samples\\javaee7-samples-243-177091125.txt', 'r')
 
@@ -19,6 +23,10 @@ from parserRake import parserRake
 # f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553452.txt', 'r')
 # f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553451.txt', 'r')
 
+#errori di compilazione
+# reponame="SpoutDev/Vanilla"
+# # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-178-7018610.txt', 'r')
+# f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-179-22527723.txt', 'r')
 #errori di test
 # reponame="springside/springside4"
 # f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
@@ -59,27 +67,61 @@ from parserRake import parserRake
 # f = open('logs\\maven\\google_error-prone\\error-prone-523-174617444.txt', 'r')
 
 #errore dipendenze
-reponame="spotify/helios"
-f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
+# reponame="spotify/helios"
+# f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
 
 #gradle
-# reponame="jakenjarvis_Android-OrmLiteContentProvider/Android-OrmLiteContentProvider"
-# f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
+#passed
+# reponame="jakenjarvis/Android-OrmLiteContentProvider"
+# f = open('logs\\gradle\\jakenjarvis_Android-OrmLiteContentProvider\\Android-OrmLiteContentProvider-161-42820687.txt', 'r')
+
+#passed
 # reponame="codecov/example-android"
-# f = open('logs\\gradle\\square_picasso\\square_picasso-1351-174648005.txt', 'r')
-# reponame="Assunta/example"
-# f = open('logs\\old\\example.txt', 'r')
+# f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
+
+#errore nelle dipendeze, no such file o directory
 # reponame="rockerhieu/emojicon"
 # f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
+
+#lint error
 # reponame="wasabeef/recyclerview-animators"
 # f = open('logs\\gradle\\wasabeef_recyclerview-animators\\recyclerview-animators-180-80950913.txt', 'r')
+
+#passed
 # reponame="square/picasso"
 # f = open('logs\\gradle\\square_picasso\\picasso-1352-174661345.txt', 'r')
 
-
+#passed
 # reponame="oblac/jodd"
 # f = open('logs\\gradle\\oblac_jodd\\jodd-738-171756800.txt', 'r')
 
+#passed
+# reponame="tilal6991/HoloIRC"
+# f = open('logs\\gradle\\tilal6991_HoloIRC\\HoloIRC-261-85600415.txt', 'r')
+
+#passed
+# reponame="SimonVT/cathode"
+# f = open('logs\\gradle\\SimonVT_cathode\\cathode-276-175366192.txt', 'r')
+
+#passed
+# reponame="oblac/jodd"
+# f = open('logs\\gradle\\oblac_jodd\\jodd-739-174610217.txt', 'r')
+
+#passed
+# reponame="nohana/Laevatein"
+# f = open('logs\\gradle\\nohana_Laevatein\\Laevatein-243-161336069.txt', 'r')
+
+# passed
+# reponame="hamcrest/JavaHamcrest"
+# f = open('logs\\gradle\\hamcrest_JavaHamcrest\\JavaHamcrest-293-149530896.txt', 'r')
+
+#passed
+# reponame="AzureAD/azure-activedirectory-library-for-android"
+# f = open('logs\\gradle\\Azure\\azure-activedirectory-library-for-android-2686-180301575.txt', 'r')
+
+#passed
+# reponame="albertlatacz/java-repl"
+# f = open('logs\\gradle\\albertlatacz_java-repl\\java-repl-429-164104426.txt', 'r')
 
 #ruby
 # reponame="opf/openproject"

@@ -4,8 +4,9 @@ class GradleLog:
         self.nome = nomeBuild
         self.listaTasks = list()
         self.listaDipendenze = list()
+        #TODO potrei mettere listaErrori come Task e String
         self.listaErrori = list()
-        self.listaNote = list()
+        self.listaNote = set()
 
     def getNome(self):
         return self.nome

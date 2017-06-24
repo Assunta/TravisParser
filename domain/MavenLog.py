@@ -57,9 +57,9 @@ class MavenLog:
             if re.match("(.)* Failed to execute goal", t):
                 #print t
                 errori.add(t)
-                if re.match("(.)*Compilation failure(.)*", t):
-                    # print "Errore di compilazione"
-                    errori.add("Compilation error")
+                # if re.match("(.)*Compilation failure(.)*", t):
+                #     # print "Errore di compilazione"
+                #     errori.add("Compilation error")
             #errori in fase di test
             elif re.match("(.)*<<< FAILURE!(.)*", t):
                 # print t
