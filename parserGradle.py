@@ -64,6 +64,9 @@ def gradle_parser(f, gradleLog):
             listaDipendenze.append(line)
 
 
+
+
+
     gradleLog.addListaTasks(listaTask)
     gradleLog.addListaErrori(listaMessErrore)
     gradleLog.addListaNote(listNote)

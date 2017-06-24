@@ -8,27 +8,60 @@ from parserRake import parserRake
 
 #maven
 
+#checkstyle project fa partire un Gradle demon all'interno di Maven... -.-''''
+
+#problemi iniziali!!!!!!!! Da gestire ancora
+# reponame="javaee-samples/javaee7-samples"
+# f = open('logs\\maven\\javaee-samples_javaee7-samples\\javaee7-samples-243-177091125.txt', 'r')
+
+#test error
+# reponame="Mashape/unirest-java"
+# f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553452.txt', 'r')
+# f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553451.txt', 'r')
+
+#errori di test
+# reponame="springside/springside4"
+# f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
+
+
+#compilation error e errore di lettura file zip
+# reponame="tinkerpop/gremlin"
+# f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
+
+#errori di compilazione
 # reponame="pulse00/Twig-Eclipse-Plugin"
-# f = open('logs\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
-# reponame="Assunta/example2"
-# f = open('logs\\example2-6-173560799.txt', 'r')
+# f = open('logs\\maven\\Twig-Eclipse-Plugin\\Twig-Eclipse-Plugin-137-168865827.txt', 'r')
+
+
+#passed
 # reponame="simpligility/android-maven-plugin"
 # f = open('logs\\maven\\android-maven-plugin\\android-maven-plugin-1233-156907093.txt', 'r')
-# reponame="opf/openproject"
-# f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
+
+
+#errori di test
 # reponame="jhy/jsoup"
 # f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
+
+#passed
 # reponame="JodaOrg/joda-time"
 # f = open('logs\\maven\\JodaOrg_joda-time\\joda-time-415-175370840.txt', 'r')
+
+#passed, fa solo test
 # reponame="bitcoinj/bitcoinj"
 # f = open('logs\\maven\\bitcoinj_bitcoinj\\bitcoinj-1844-174824456.txt', 'r')
-reponame="languagetool-org/languagetool"
-f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
+
+#errori di test
+# reponame="languagetool-org/languagetool"
+# f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
+
+#status passed
 # reponame="google/error-prone"
 # f = open('logs\\maven\\google_error-prone\\error-prone-523-174617444.txt', 'r')
-# reponame="spotify/helios"
-# f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
-#
+
+#errore dipendenze
+reponame="spotify/helios"
+f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
+
 #gradle
 # reponame="jakenjarvis_Android-OrmLiteContentProvider/Android-OrmLiteContentProvider"
 # f = open('logs\\Android-OrmLiteContentProvider-153-42729444.txt', 'r')
@@ -49,6 +82,8 @@ f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-17708124
 
 
 #ruby
+# reponame="opf/openproject"
+# f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
 # reponame="zendesk/samson"
 # f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
 # reponame="ManageIQ/manageiq"
@@ -90,7 +125,7 @@ else:
     if(tool=="maven"):
         #TODO prendere anche lo in mavenLog status....
         mavenLog=maven_parser(f, MavenLog(reponame))
-        print mavenLog
+        # print mavenLog
     elif(tool=="gradle"):
         gradleLog=gradle_parser(f, GradleLog(reponame))
 print ("PARSE END")

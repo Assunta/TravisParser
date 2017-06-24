@@ -54,7 +54,12 @@ def maven_parser(f, mavenLog):
         # espressione regolare per matchare gli errori che hanno portato al fallimento
         elif re.match("\A\[ERROR\]", line):
             # print line
-            listaMessErrore.append(line)
+            #all'errore concateno il nome del goal a cui si riferisce
+            #TODO caso mai gestirlo diversamente con una mappa nella lista
+            try:
+                listaMessErrore.append((listaSnapshot[-1].getGoals())[-1].__str__()+line)
+            except IndexError:
+                listaMessErrore.append(line)
         # espressione regolare per matchere i warning di maven. potrebbero esserci informazioni utili
         elif re.match("\A\[WARNING\]", line):
            # print line
@@ -67,6 +72,7 @@ def maven_parser(f, mavenLog):
                # print str
                 #print "***"+line
                 listaDipendenze.append(str)
+
 
 
     # nei log le snapshot appaiono duplicate, non ho capito perche'..
@@ -86,4 +92,6 @@ def maven_parser(f, mavenLog):
     print("\n\n ERROR:")
     for s in listaMessErrore:
         print s
+    print("\n\nERRORI PARSATI")
+    mavenLog.getErrori()
     return mavenLog

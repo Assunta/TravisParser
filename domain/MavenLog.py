@@ -1,3 +1,4 @@
+import re
 class MavenLog:
     def __init__(self, nomeBuild):
         self.status=""
@@ -23,6 +24,7 @@ class MavenLog:
         return self.listaDipendenze
 
     def getErrori(self):
+        self.parseErrori()
         return self.listaErrori
 
     def addSnapshot(self,s):
@@ -48,3 +50,32 @@ class MavenLog:
         for s in self.listaSnapshot:
             ret+=str(s) +"\n"
         return ret
+
+    def parseErrori(self):
+        errori= set()
+        for t in self.listaErrori:
+            if re.match("(.)* Failed to execute goal", t):
+                #print t
+                errori.add(t)
+                if re.match("(.)*Compilation failure(.)*", t):
+                    # print "Errore di compilazione"
+                    errori.add("Compilation error")
+            #errori in fase di test
+            elif re.match("(.)*<<< FAILURE!(.)*", t):
+                # print t
+                errori.add(t)
+            #errori di dipendenze
+            elif re.match("(.)*The build could not read", t):
+                # print "Dependency Error: "+t.replace("[ERROR]", "").strip()
+                errori.add("Dependency Error: "+t.replace("[ERROR]", "").strip())
+            #errori di risoluzione
+            elif re.match("(.)*cannot be resolved(.)*",t):
+                # print t
+                errori.add(t)
+            #errori di lettura file
+            elif re.match("(.)*error reading(.)*", t):
+                # print t
+                errori.add(t)
+        for e in errori:
+            print e
+        return errori
