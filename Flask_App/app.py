@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, json
+from domain.Build import Build
 
 from parserGeneral import common_parse
 
@@ -15,7 +16,8 @@ def signUp():
     _name = request.form['inputName']
     # validate the received values
     if _name:
-       return str(common_parse(_name, -1))
+        return common_parse(_name, -1).toJSON()
+       #return json.dumps([(common_parse(_name, -1)).__dict__])
     else:
         return "Errore: Inserisci il nome del repository!!!"
 
