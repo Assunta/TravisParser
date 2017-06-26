@@ -1,5 +1,6 @@
 # coding=utf-8
 from travispy import TravisPy
+from domain.Build import Build
 import sys
 import re
 import mmap
@@ -47,42 +48,63 @@ def checkGradleMaven(f):
 #  Di norma avremo gia l'oggetto build su cui lavorare
 def common_parse(reponame, build_id):
     repo= t.repo(reponame)
+    b = Build(build_id)
     #TODO settare la giusta build, non la last
     if (build_id==-1):
         print "*/*/*/*/*/Build non trovata nel log uso la last build */*/*/*/*/*/*"
         build = repo.last_build
+        b = Build(repo.last_build)
     else:
          build= t.build(build_id)
+         b = Build(build_id)
     commit=build.commit
     msg=""
     msg+="Nome : "+repo.slug
     msg += "\nStato: " + build.state
+    b.setStatus(build.state)
     if repo.description is not None:
         msg +="\nDescrizione: " +repo.description
+        b.setDescription(repo.description)
     msg +="\nBuild number: " + build.number
+    b.setBuildNumber(build.number)
     msg +="\nCommit ID: " + str(build.commit_id)
+    b.setCommitId(build.commit_id)
     msg +="\nPull request?: "+str(build.pull_request)
+    b.setIsPullRequest(build.pull_request)
     if(build.pull_request):
         msg += "\nTitolo pull request: "+build.pull_request_title
+        b.setTitlePull(build.pull_request_title)
         msg += "\nNumero pull request: "+str(build.pull_request_number)
+        b.setPullId(str(build.pull_request_number))
     msg += "\nIniziato a: "+str(build.started_at)
+    b.setStart(str(build.started_at))
     msg += "\nFinito a: "+str(build.finished_at)
+    b.setFinish(str(build.finished_at))
     msg += "\nDurata: "+'%02d:%02d' % ((build.duration/60),build.duration%60) # build.duration da isecondi
+    b.setDuration(build.duration)
     msg += "\nCommit SHA: " + commit.sha
+    b.setCommitSHA(commit.sha)
     msg += "\nBranch: "+commit.branch
+    b.setBranch(commit.branch)
     msg += "\nCommit message: "+commit.message
+    b.setCommit(commit.message)
     if commit.committed_at is not None:
         msg += "\nData commit: "+ commit.committed_at
+        b.setCommitDate(commit.committed_at)
     msg += "\nAutore commit: "+ commit.author_name
+    b.setAuthor(commit.author_name)
     msg += "\nEmail Autore commit: "+ commit.author_email
+    b.setEmail(commit.author_email)
     #informazioni file travis.yml
     # potremmo estrarre qualche informazione da qui
     #msg += "\n"+build.config
     msg += "\nLanguage: "+build.config["language"]
+    b.setLanguage(build.config["language"])
     msg += "\nNumero jobs: "+str(len(build.jobs))
+    b.setNumJobs(len(build.jobs))
     msg += "\n"+build.config["language"]
     print msg
-    return msg
+    return b
 
 
 

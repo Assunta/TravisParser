@@ -42,3 +42,6 @@ class Task:
 
     def __str__(self):
         return self.progetto+":"+self.nome+"\tSkip: "+str(self.isSkipped)+"\tFailed: "+str(self.isFailed)+"\tUpdate: "+str(self.isUpdate)+"\nCategoria "+str(self.categoria)
+
+    def __eq__(self, other):
+        return self.nome==other.nome

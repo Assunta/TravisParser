@@ -1,11 +1,15 @@
 import re
 
 from checkTaskGradle import checkTask
+from domain.GradleCommand import GradleCommand
 from domain.Task import Task
 
 
 def gradle_parser(f, gradleLog):
     listaTask = list()
+    listaCommand=list()
+    #metto un comando default nel caso in cui non viene eseguito nessun comando, teoricamente non dovrebbe mai avere task
+    listaCommand.append(GradleCommand("DEFAULT"))
     listaMessErrore = list()
     #TODO!!!!!!!!!!!!!! gli errori precedenti ai task per ora non sono inseriti nella lista degli errori
     listaErroriPrecedentiAiTask = list()
@@ -14,6 +18,12 @@ def gradle_parser(f, gradleLog):
     # questo ciclo for lo dovremmo fare per tutti i logs associati ai jobs di una certa build
     # per ora leggiamo un file, ma poi dovremmo iterare su una stringa qulla che ritorna da t.log(job.log_id).body
     for line in f:
+        #espressione regolare per matchare i vari comandi per distinguere i task a quale comando fanno riferimento
+        if re.match("(.)*[$](.)*./gradlew|(.)*[$] *gradle", line):
+            #aggiungo i task al command precedente e ne creo un altro
+            listaCommand[-1].addListaTasks(listaTask)
+            listaTask= list()
+            listaCommand.append(GradleCommand(line.strip()))
         # espressione regolare per matchare i task di uno script gradle
         if re.match("\A:\w+", line):
             task=line.split(" ")[0]
@@ -25,13 +35,21 @@ def gradle_parser(f, gradleLog):
             else:
                 t = Task(task.replace(":","").strip())
                 t.setNomeProgetto(" ")
+
             if re.match("(.)*UP-TO-DATE", line):
                 t.setIsUpdate()
             elif re.match("(.)*FAILED", line) or re.match("(.)*EXCEPTION", line):
                 t.setIsFailed()
-            if re.match("(.)*SKIPPED", line):
+            elif re.match("(.)*SKIPPED", line):
                 t.setIsSkipped()
-            listaTask.append(t)
+
+            if len(listaTask)>0:
+                taskOld=listaTask.pop(-1)
+                listaTask.append(taskOld)
+                if taskOld is not None and not taskOld.__eq__(t):
+                    listaTask.append(t)
+            else:
+                listaTask.append(t)
             # espressione regolare per matchare messaggi del tipo Note: /example/square_picasso/PicassoSampleAdapter.java uses or overrides a deprecated API.
             # che cmq potrebbero essere informazioni interessanti
         elif re.match("Note: ", line):
@@ -40,12 +58,12 @@ def gradle_parser(f, gradleLog):
             except IndexError:
                 listNote.append("NO_TASK" + "\t" + line)
         #espressioni del tipo Skipping task xxxxx per questo motivo
-        elif re.match("\ASkipping task", line):
+        elif re.match("\ASkipping task(.)*", line):
             #listaTaskSkippati.append(listaTask[-1]+"\t"+line)
-            t= listaTask.pop(-1).setIsSkipped()
-            listaTask.append(t)
+            listaTask[-1].setIsSkipped()
+            #listaTask.append(t)
         # espressione regolare per matchare il motivo di un failure
-        elif re.match("\A( )*>", line):  # and la build sappiamo che e' fallita
+        elif re.match("\A( )*>|Task (.)* not found ", line):  # and la build sappiamo che e' fallita
             try:
                 listaMessErrore.append(listaTask[-1].getNome()+"\t"+line)
             except IndexError:
@@ -66,9 +84,10 @@ def gradle_parser(f, gradleLog):
 
 
 
-
-
-    gradleLog.addListaTasks(listaTask)
+    #print "**********"+str(len(listaCommand))
+    listaCommand[-1].addListaTasks(listaTask)
+    gradleLog.addCommands(listaCommand)
+    #gradleLog.addListaTasks(listaTask)
     gradleLog.addListaErrori(listaMessErrore)
     gradleLog.addListaNote(set(listNote))
     gradleLog.addDipendenze(listaDipendenze)

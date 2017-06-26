@@ -13,8 +13,8 @@ from parserRake import parserRake
 #checkstyle project fa partire un Gradle demon all'interno di Maven... -.-''''
 
 #problemi iniziali!
-reponame="apache/tajo"
-f = open('logs\\maven\\apache_tajo\\tajo-5965-166162229.txt', 'r')
+# reponame="apache/tajo"
+# f = open('logs\\maven\\apache_tajo\\tajo-5965-166162229.txt', 'r')
 # reponame="javaee-samples/javaee7-samples"
 # f = open('logs\\maven\\javaee-samples_javaee7-samples\\javaee7-samples-243-177091125.txt', 'r')
 
@@ -87,6 +87,7 @@ f = open('logs\\maven\\apache_tajo\\tajo-5965-166162229.txt', 'r')
 # reponame="wasabeef/recyclerview-animators"
 # f = open('logs\\gradle\\wasabeef_recyclerview-animators\\recyclerview-animators-180-80950913.txt', 'r')
 
+
 #passed
 # reponame="square/picasso"
 # f = open('logs\\gradle\\square_picasso\\picasso-1352-174661345.txt', 'r')
@@ -95,7 +96,7 @@ f = open('logs\\maven\\apache_tajo\\tajo-5965-166162229.txt', 'r')
 # reponame="oblac/jodd"
 # f = open('logs\\gradle\\oblac_jodd\\jodd-738-171756800.txt', 'r')
 
-#passed
+#passed ma fallito un comando non found task
 # reponame="tilal6991/HoloIRC"
 # f = open('logs\\gradle\\tilal6991_HoloIRC\\HoloIRC-261-85600415.txt', 'r')
 
@@ -110,6 +111,10 @@ f = open('logs\\maven\\apache_tajo\\tajo-5965-166162229.txt', 'r')
 #passed
 # reponame="nohana/Laevatein"
 # f = open('logs\\gradle\\nohana_Laevatein\\Laevatein-243-161336069.txt', 'r')
+
+#lint error
+reponame="JFXtras/jfxtras-labs"
+f = open('logs\\gradle\\JFXtras_jfxtras-labs\\jfxtras-labs-245-48664144.txt', 'r')
 
 # passed
 # reponame="hamcrest/JavaHamcrest"

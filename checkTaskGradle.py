@@ -32,14 +32,17 @@ def getTaskDb():
 def checkTask(gradleLog):
     # leggo i task classificati dal db
     listaDB = getTaskDb()
-    for task in gradleLog.getTask():
-        trovato = False
-        for item in listaDB:
-            if re.match(item.get("EspressioneRegolare"), task.getNome().strip()) and not trovato:
-                task.setCategoria(item.get("Categoria"))
-                trovato = True
-        if not trovato:
-            task.setCategoria("other")
+
+    for command in gradleLog.getCommand():
+        for task in command.getTasks():
+            trovato = False
+            for item in listaDB:
+                if task is not None:
+                    if re.match(item.get("EspressioneRegolare"), task.getNome().strip()) and not trovato:
+                        task.setCategoria(item.get("Categoria"))
+                        trovato = True
+                if not trovato and task is not None:
+                    task.setCategoria("other")
 
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\gradle\\jakenjarvis_Android-OrmLiteContentProvider\\Android-OrmLiteContentProvider-161-42820687.txt', 'r')
