@@ -1,3 +1,4 @@
+import json
 class Task:
     def __init__(self,nome):
         self.nome = nome
@@ -7,6 +8,9 @@ class Task:
         self.isFailed= False
         self.categoria="Non_classificato"
 
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
     def setNomeProgetto(self, p):
         self.progetto=p
 

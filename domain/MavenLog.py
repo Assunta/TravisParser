@@ -1,4 +1,5 @@
 import re
+import json
 class MavenLog:
     def __init__(self, nomeBuild):
         self.status=""
@@ -79,3 +80,7 @@ class MavenLog:
         for e in errori:
             print e
         return errori
+
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)

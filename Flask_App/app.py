@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, json
 from domain.Build import Build
+from domain.GradleLog import GradleLog
 
 from parserGeneral import common_parse
+from parserGradle import gradle_parser
 
 app = Flask(__name__)
 
@@ -16,7 +18,9 @@ def signUp():
     _name = request.form['inputName']
     # validate the received values
     if _name:
-        return common_parse(_name, -1).toJSON()
+        f=open("jfxtras-labs-245-48664144.txt", 'r')
+        gradleLog = gradle_parser(f, GradleLog(_name))
+        return common_parse(_name, -1).toJSON()+" "+ gradleLog.toJSON()
        #return json.dumps([(common_parse(_name, -1)).__dict__])
     else:
         return "Errore: Inserisci il nome del repository!!!"

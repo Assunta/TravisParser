@@ -1,5 +1,5 @@
 from domain.GradleCommand import GradleCommand
-
+import json
 
 class GradleLog:
     def __init__(self,nomeBuild):
@@ -75,3 +75,8 @@ class GradleLog:
         for c in self.listaCommand:
             ret+=str(c)+"\n"
         return ret
+
+    def toJSON(self):
+        self.listaNote=list(self.listaNote)
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)

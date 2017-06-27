@@ -1,3 +1,4 @@
+import json
 class Snapshot:
     def __init__(self,nome):
         self.nome=nome

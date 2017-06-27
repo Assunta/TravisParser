@@ -70,6 +70,30 @@ from parserRake import parserRake
 # reponame="spotify/helios"
 # f = open('logs\\maven\\spotify_helios\\helios-784-25695663.txt', 'r')
 
+#passed
+# reponame="Unicon/cas-addons"
+# f = open('logs\\maven\\Unicon_cas-addons\\cas-addons-272-52354372.txt', 'r')
+
+#errore test failed
+# reponame="SomMeri/less4j"
+# f = open('logs\\maven\\SomMeri_less4j\\less4j-919-109639390.txt', 'r')
+
+#errore
+# reponame="Nodeclipse/nodeclipse-1"
+# f = open('logs\\maven\\Nodeclipse_nodeclipse-1\\nodeclipse-1-304-75872733.txt', 'r')
+
+#passed //sempre problema di quando ci sono i test....
+# reponame="owlike/genson"
+# f = open('logs\\maven\\owlike_genson\\genson-190-178485212.txt', 'r')
+
+#passed
+# reponame="reficio/p2-maven-plugin"
+# f = open('logs\\maven\\reficio_p2-maven-plugin\\p2-maven-plugin-160-164806102.txt', 'r')
+
+#errore
+# reponame="teamed/qulice"
+# f = open('logs\\maven\\teamed_qulice\\qulice-1329-180729613.txt', 'r')
+
 #gradle
 #passed
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
@@ -113,8 +137,8 @@ from parserRake import parserRake
 # f = open('logs\\gradle\\nohana_Laevatein\\Laevatein-243-161336069.txt', 'r')
 
 #lint error
-reponame="JFXtras/jfxtras-labs"
-f = open('logs\\gradle\\JFXtras_jfxtras-labs\\jfxtras-labs-245-48664144.txt', 'r')
+# reponame="JFXtras/jfxtras-labs"
+# f = open('logs\\gradle\\JFXtras_jfxtras-labs\\jfxtras-labs-245-48664144.txt', 'r')
 
 # passed
 # reponame="hamcrest/JavaHamcrest"
@@ -127,6 +151,20 @@ f = open('logs\\gradle\\JFXtras_jfxtras-labs\\jfxtras-labs-245-48664144.txt', 'r
 #passed
 # reponame="albertlatacz/java-repl"
 # f = open('logs\\gradle\\albertlatacz_java-repl\\java-repl-429-164104426.txt', 'r')
+
+#passed  +-
+# reponame="Unidata/thredds"
+# f = open('logs\\gradle\\Unidata_thredds\\thredds-4452-180125762.txt', 'r')
+
+#passed
+reponame="kelemen/netbeans-gradle-project"
+f = open('logs\\gradle\\kelemen_netbeans-gradle-project\\netbeans-gradle-project-221-176155983.txt', 'r')
+
+#stopped problema ci riprova tre volte e quindi mi leggo per tre volte i task
+# reponame="RS485/LogisticsPipes"
+# f = open('logs\\gradle\\RS485_LogisticsPipes\\LogisticsPipes-1552-171880899.txt', 'r')
+#passed ****************************************************
+# f = open('logs\\gradle\\RS485_LogisticsPipes\\LogisticsPipes-1553-174463961.txt', 'r')
 
 #ruby
 # reponame="opf/openproject"

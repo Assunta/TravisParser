@@ -12,14 +12,10 @@ listaSnapshot=list()
 def maven_parser(f, mavenLog):
     # Leggo tutto il log
     for line in f:
-        # Task gradle. i task sono rappresentati nella forma \r\r\rnomeTask\r\r\r:
-        # e' probabilmente sucfficienete individuare solo lo \r prima e dopo il task per essere sicuri che sia un task
-        #per matchare task ant
-        # if re.match("\A\w+:$",line):
-        #     print line
-        #     listaTask.append(line)
+        #zip: /home/travis/build/Nodeclipse/nodeclipse-1/org.nodeclipse.site/target/org.nodeclipse.site-1.0.2-SNAPSHOT.zip lo becca
         # espressione regolare per matchare le snapshot
-        if re.match("\A\[INFO\] Building([^//])*SNAPSHOT", line):
+
+        if re.match("\A\[INFO\] Building ([^//])*SNAPSHOT", line):
             # print line
             listaSnapshot.append(Snapshot((line.split("[INFO] Building",1)[1]).strip()))
             #potrebbe non esserci snapshot
