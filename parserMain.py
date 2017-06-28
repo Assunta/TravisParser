@@ -172,16 +172,19 @@ from domain.RubyLog import RubyLog
 # reponame="opf/openproject"
 # f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
 
-# reponame="zendesk/samson"
-# f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
+#usa npm capire come prendere i risultati
+reponame="zendesk/samson"
+f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
 
+# #usa BRAKEMAN
 # reponame="ManageIQ/manageiq"
 # f = open('logs\\ruby\\ManageIQ\\manageiq-59083-175928155.txt', 'r')
 
+#failures example
 # reponame="rapid7/metasploit-framework"
 # f = open('logs\\ruby\\metasploit-framework\\metasploit-framework-20590-175876290.txt', 'r')
 
-#
+# passed
 # reponame="richpeck/exception_handler"
 # f = open('logs\\ruby\\exception_handler\\exception_handler-1264-168008434.txt', 'r')
 
@@ -189,27 +192,31 @@ from domain.RubyLog import RubyLog
 # reponame="travis-ci/travis-cookbooks"
 # f = open('logs\\ruby\\travis-cookbook\\travis-cookbooks-3486-175761182.txt', 'r')
 
+#example failures
 # reponame="codeforamerica/textizen"
 # f = open('logs\\ruby\\codeforamerica_textizen\\textizen-198-68670428.txt', 'r')
 
-# reponame="refinery/refinerycms"
-# f = open('logs\\ruby\\refinery_refinerycms\\refinerycms-3396-181230354.txt', 'r')
 
 #un log e' java e uno e' ruby.......
-## exit 1
+## exit 1 no rake file found
 # reponame="ActiveJpa/activejpa"
+# f = open('logs\\ruby\\ActiveJpa_activejpa\\activejpa-352-166258511.txt', 'r')
+#maven
 # f = open('logs\\ruby\\ActiveJpa_activejpa\\activejpa-353-166258664.txt', 'r')
 
 # reponame="atmos/heaven"
 # f = open('logs\\ruby\\atmos_heaven\\heaven-351-125806879.txt', 'r')
 
+#passed solo pending examples
 # reponame="bikeindex/bike_index"
 # f = open('logs\\ruby\\bikeindex_bike_index\\bike_index-2319-179224411.txt', 'r')
 
+#passed
 # reponame="diaspora/diaspora"
 # f = open('logs\\ruby\\diaspora_diaspora\\diaspora-11248-172674499.txt', 'r')
 
 #Done job cancelled ......
+#gli altri log non finiscono proprio...restano appesi sui download
 # reponame="elastic/logstash"
 # f = open('logs\\ruby\\elastic_logstash\\logstash-5037-181542610.txt', 'r')
 
@@ -218,30 +225,40 @@ from domain.RubyLog import RubyLog
 # #log maven... con ruby
 # f = open('logs\\ruby\\jruby_warbler\\warbler-429-141828088.txt', 'r')
 
+
+#errori negli example
 # reponame="loomio/loomio"
 # f = open('logs\\ruby\\loomio_loomio\\loomio-12955-181473783.txt', 'r')
-#
-# reponame="MagLev/magleva"
+
+
+#passed
+# reponame="MagLev/maglev"
 # f = open('logs\\ruby\\MagLev_maglev\\maglev-754-103350661.txt', 'r')
 
+#passed**********************
 # reponame="progit/progit"
 # f = open('logs\\ruby\\progit_progit\\progit-1328-126799418.txt', 'r')
 
 # reponame="puppetlabs/puppet"
 # f = open('logs\\ruby\\puppetlabs_puppet\\puppet-12769-181370799.txt', 'r')
+#rake aborted!
 # f = open('logs\\ruby\\puppetlabs_puppet\\puppet-12769-181370800.txt', 'r')
 
+#errored example fallito
 # reponame="refinery/refinerycms"
 # f = open('logs\\ruby\\refinery_refinerycms\\refinerycms-3396-181230356.txt', 'r')
 
+#passed solo example pending
 # reponame="psu-stewardship/scholarsphere"
 # f = open('logs\\ruby\\psu-stewardship_scholarsphere\\scholarsphere-4008-175444363.txt', 'r')
 
+#rubocop failed!
 # reponame="shoes/shoes4"
-# f = open('logs\\ruby\\shoes_shoes4\\shoes4-3258-179242390.txt', 'r')
+# f = open('logs\\ruby\\shoes_shoes4\\shoes4-3259-180295136.txt', 'r')
 
-reponame="sunlightlabs/scout"
-f = open('logs\\ruby\\sunlightlabs_scout\\scout-1110-92726320.txt', 'r')
+#errore di dipendenze gem file missing
+# reponame="sunlightlabs/scout"
+# f = open('logs\\ruby\\sunlightlabs_scout\\scout-1110-92726320.txt', 'r')
 
 
 
@@ -266,9 +283,9 @@ linguaggio= b.getLanguage()
 #TODO c'e' il caso di language: generic   -.-'
 if linguaggio== "ruby":
     #supponiamo che si usa solo rake e che non usano maven
-    parserRake(f)
+    parserRake(f,RubyLog(reponame))
 else:
-    tool=checkGradleMavenFile(f, RubyLog(reponame))
+    tool=checkGradleMavenFile(f)
     if(tool=="maven"):
         #TODO prendere anche lo in mavenLog status....
         mavenLog=maven_parser(f, MavenLog(reponame))
