@@ -4,6 +4,8 @@ from parserGeneral import *
 from parserGradle import *
 from parserMaven import maven_parser
 from parserRake import parserRake
+from domain.RubyLog import RubyLog
+
 
 
 #maven
@@ -157,8 +159,8 @@ from parserRake import parserRake
 # f = open('logs\\gradle\\Unidata_thredds\\thredds-4452-180125762.txt', 'r')
 
 #passed
-reponame="kelemen/netbeans-gradle-project"
-f = open('logs\\gradle\\kelemen_netbeans-gradle-project\\netbeans-gradle-project-221-176155983.txt', 'r')
+# reponame="kelemen/netbeans-gradle-project"
+# f = open('logs\\gradle\\kelemen_netbeans-gradle-project\\netbeans-gradle-project-221-176155983.txt', 'r')
 
 #stopped problema ci riprova tre volte e quindi mi leggo per tre volte i task
 # reponame="RS485/LogisticsPipes"
@@ -169,18 +171,77 @@ f = open('logs\\gradle\\kelemen_netbeans-gradle-project\\netbeans-gradle-project
 #ruby
 # reponame="opf/openproject"
 # f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
+
 # reponame="zendesk/samson"
 # f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
+
 # reponame="ManageIQ/manageiq"
 # f = open('logs\\ruby\\ManageIQ\\manageiq-59083-175928155.txt', 'r')
-# rapid7/metasploit-framework
+
 # reponame="rapid7/metasploit-framework"
 # f = open('logs\\ruby\\metasploit-framework\\metasploit-framework-20590-175876290.txt', 'r')
+
+#
 # reponame="richpeck/exception_handler"
 # f = open('logs\\ruby\\exception_handler\\exception_handler-1264-168008434.txt', 'r')
+
+#linguaggio generic
 # reponame="travis-ci/travis-cookbooks"
 # f = open('logs\\ruby\\travis-cookbook\\travis-cookbooks-3486-175761182.txt', 'r')
 
+# reponame="codeforamerica/textizen"
+# f = open('logs\\ruby\\codeforamerica_textizen\\textizen-198-68670428.txt', 'r')
+
+# reponame="refinery/refinerycms"
+# f = open('logs\\ruby\\refinery_refinerycms\\refinerycms-3396-181230354.txt', 'r')
+
+#un log e' java e uno e' ruby.......
+## exit 1
+# reponame="ActiveJpa/activejpa"
+# f = open('logs\\ruby\\ActiveJpa_activejpa\\activejpa-353-166258664.txt', 'r')
+
+# reponame="atmos/heaven"
+# f = open('logs\\ruby\\atmos_heaven\\heaven-351-125806879.txt', 'r')
+
+# reponame="bikeindex/bike_index"
+# f = open('logs\\ruby\\bikeindex_bike_index\\bike_index-2319-179224411.txt', 'r')
+
+# reponame="diaspora/diaspora"
+# f = open('logs\\ruby\\diaspora_diaspora\\diaspora-11248-172674499.txt', 'r')
+
+#Done job cancelled ......
+# reponame="elastic/logstash"
+# f = open('logs\\ruby\\elastic_logstash\\logstash-5037-181542610.txt', 'r')
+
+# reponame="jruby/warbler"
+# f = open('logs\\ruby\\jruby_warbler\\warbler-428-135758385.txt', 'r')
+# #log maven... con ruby
+# f = open('logs\\ruby\\jruby_warbler\\warbler-429-141828088.txt', 'r')
+
+# reponame="loomio/loomio"
+# f = open('logs\\ruby\\loomio_loomio\\loomio-12955-181473783.txt', 'r')
+#
+# reponame="MagLev/magleva"
+# f = open('logs\\ruby\\MagLev_maglev\\maglev-754-103350661.txt', 'r')
+
+# reponame="progit/progit"
+# f = open('logs\\ruby\\progit_progit\\progit-1328-126799418.txt', 'r')
+
+# reponame="puppetlabs/puppet"
+# f = open('logs\\ruby\\puppetlabs_puppet\\puppet-12769-181370799.txt', 'r')
+# f = open('logs\\ruby\\puppetlabs_puppet\\puppet-12769-181370800.txt', 'r')
+
+# reponame="refinery/refinerycms"
+# f = open('logs\\ruby\\refinery_refinerycms\\refinerycms-3396-181230356.txt', 'r')
+
+# reponame="psu-stewardship/scholarsphere"
+# f = open('logs\\ruby\\psu-stewardship_scholarsphere\\scholarsphere-4008-175444363.txt', 'r')
+
+# reponame="shoes/shoes4"
+# f = open('logs\\ruby\\shoes_shoes4\\shoes4-3258-179242390.txt', 'r')
+
+reponame="sunlightlabs/scout"
+f = open('logs\\ruby\\sunlightlabs_scout\\scout-1110-92726320.txt', 'r')
 
 
 
@@ -199,14 +260,15 @@ def getBuildId(f):
 
 
 
-linguaggio=common_parse(reponame, getBuildId(f))
+b=common_parse(reponame, getBuildId(f))
 print "\nLOG"
+linguaggio= b.getLanguage()
 #TODO c'e' il caso di language: generic   -.-'
 if linguaggio== "ruby":
     #supponiamo che si usa solo rake e che non usano maven
     parserRake(f)
 else:
-    tool=checkGradleMaven(f)
+    tool=checkGradleMavenFile(f, RubyLog(reponame))
     if(tool=="maven"):
         #TODO prendere anche lo in mavenLog status....
         mavenLog=maven_parser(f, MavenLog(reponame))

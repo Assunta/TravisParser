@@ -32,14 +32,18 @@ listNote=list()
 # you can alleviate the possible memory problems by using mmap.mmap()
 # to create a "string-like" object that uses the underlying file
 # (instead of reading the whole file in memory):
-def checkGradleMaven(f):
+def checkGradleMavenFile(f):
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
     if s.find ('[INFO] Scanning for projects') != -1:
         return "maven"
     else:
         return "gradle"
 
-
+def checkGradleMaven(f):
+    if any('[INFO] Scanning for projects' in s for s in f):
+        return "maven"
+    else:
+        return "gradle"
 
 
 # qui va la parte comune dove prendiamo

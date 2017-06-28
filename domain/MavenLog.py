@@ -8,6 +8,7 @@ class MavenLog:
         self.listaDipendenze=list()
         self.listaErrori=list()
         self.listaWarning=list()
+        self.listaErroriParsati=list()
 
     def getNome(self):
         return self.nome
@@ -77,8 +78,7 @@ class MavenLog:
             elif re.match("(.)*error reading(.)*", t):
                 # print t
                 errori.add(t)
-        for e in errori:
-            print e
+        self.listaErroriParsati= list(errori)
         return errori
 
     def toJSON(self):

@@ -23,14 +23,14 @@ def gradle_parser(f, gradleLog):
             #aggiungo i task al command precedente e ne creo un altro
             listaCommand[-1].addListaTasks(listaTask)
             listaTask= list()
-            listaCommand.append(GradleCommand(line.strip()))
+            listaCommand.append(GradleCommand(line.split("$")[1].strip()))
         # espressione regolare per matchare i task di uno script gradle
         if re.match("\A:\w+", line):
             task=line.split(" ")[0]
             if task.count(":") == 2:
                 module_name = task.split(":")[1]
                 task_name = task.split(":")[2]
-                t=Task(task_name)
+                t=Task(task_name.strip())
                 t.setNomeProgetto(module_name)
             else:
                 t = Task(task.replace(":","").strip())
@@ -77,7 +77,7 @@ def gradle_parser(f, gradleLog):
         #    Error: Invalid - -abiarmeabi - v7a for the selected target.
         # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
         elif re.match("\AError|\AThe command(.)*failed and exited(.)*|\ANo output has been received", line):
-            print line
+           # print line
             listaErroriPrecedentiAiTask.append(line)
         elif re.match("\ADownload ", line):
             listaDipendenze.append(line)
@@ -93,7 +93,7 @@ def gradle_parser(f, gradleLog):
     gradleLog.addDipendenze(listaDipendenze)
     checkTask(gradleLog)
 
-    print gradleLog
+    #print gradleLog.toJSON()
     return gradleLog
 
 
