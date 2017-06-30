@@ -12,6 +12,7 @@ listaSnapshot=list()
 def maven_parser(f, mavenLog):
     # Leggo tutto il log
     for line in f:
+        status="passed"
         #zip: /home/travis/build/Nodeclipse/nodeclipse-1/org.nodeclipse.site/target/org.nodeclipse.site-1.0.2-SNAPSHOT.zip lo becca
         # espressione regolare per matchare le snapshot
 
@@ -68,26 +69,22 @@ def maven_parser(f, mavenLog):
                # print str
                 #print "***"+line
                 listaDipendenze.append(str)
+        elif re.match("\ADone. Your build exited with 1", line):
+            status = "failed"
+        elif re.match("\ADone. Your build exited with 0", line):
+            status = "passed"
+        elif re.match("\AYour build has been stopped", line):
+            status = "errored"
 
 
 
     # nei log le snapshot appaiono duplicate, non ho capito perche'..
     # quindi sono duplicate anche qui, pero' nella seconda replica fa anche i test, nella prima no
-
+    warning=set(listaMavenWarning)
     mavenLog.addListaErrori(listaMessErrore)
     mavenLog.addListaSnapshot(listaSnapshot)
-    mavenLog.addListaWarning(listaMavenWarning)
-    print("\n\n SNAPSHOT:")
-    for s in listaSnapshot:
-        print s
-
-    print("\n\n DIPENDENZE:")
-    for s in listaDipendenze:
-        print s
-
-    print("\n\n ERROR:")
-    for s in listaMessErrore:
-        print s
-    print("\n\nERRORI PARSATI")
+    mavenLog.addListaWarning(list(warning))
     mavenLog.getErrori()
+    mavenLog.setStatus(status)
+    print mavenLog.toJSON()
     return mavenLog

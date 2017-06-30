@@ -9,13 +9,14 @@ from parserGradle import gradle_parser
 from parserMaven import maven_parser
 from parserRake import parserRake
 
-ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
-maxnumberbuilds = 2
-f = open('token.config', 'r')
-token = f.readline()
-t = TravisPy.github_auth(str(token))
+
 
 def completeAnalysis(reponame):
+    ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
+    maxnumberbuilds = 2
+    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\token.config', 'r')
+    token = f.readline()
+    t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
     builds = t.builds(slug=repo.slug)
     for count in range(0, min(maxnumberbuilds, len(builds))):
@@ -41,6 +42,7 @@ def completeAnalysis(reponame):
                 elif (tool == "gradle"):
                     gradleLog = gradle_parser(log_text, GradleLog(reponame))
                     print gradleLog.toJSON()
+    return b
 
 
 def common_parse(repo,build):
@@ -70,4 +72,4 @@ def common_parse(repo,build):
     print b.toJSON()
     return b
 
-completeAnalysis("Mashape/unirest-java")
+# completeAnalysis("Mashape/unirest-java")

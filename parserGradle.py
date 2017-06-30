@@ -6,6 +6,7 @@ from domain.Task import Task
 
 
 def gradle_parser(f, gradleLog):
+    status="passed"
     listaTask = list()
     listaCommand=list()
     #metto un comando default nel caso in cui non viene eseguito nessun comando, teoricamente non dovrebbe mai avere task
@@ -77,10 +78,20 @@ def gradle_parser(f, gradleLog):
         #    Error: Invalid - -abiarmeabi - v7a for the selected target.
         # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
         elif re.match("\AError|\AThe command(.)*failed and exited(.)*|\ANo output has been received", line):
-           # print line
-            listaErroriPrecedentiAiTask.append(line)
+            status="errored"
+            listaMessErrore.append(line)
         elif re.match("\ADownload ", line):
             listaDipendenze.append(line)
+        elif re.match("\ADone. Your build exited with 1", line):
+            status = "failed"
+        elif re.match("\ADone. Your build exited with 0", line):
+            status = "passed"
+        elif re.match("\AYour build has been stopped", line):
+            status = "errored"
+        elif re.match("\AThe build has been terminated", line):
+            status = "errored"
+            listaMessErrore.append(line)
+
 
 
 
@@ -91,9 +102,10 @@ def gradle_parser(f, gradleLog):
     gradleLog.addListaErrori(listaMessErrore)
     gradleLog.addListaNote(set(listNote))
     gradleLog.addDipendenze(listaDipendenze)
+    gradleLog.setStatus(status)
     checkTask(gradleLog)
 
-    #print gradleLog.toJSON()
+    print gradleLog.toJSON()
     return gradleLog
 
 

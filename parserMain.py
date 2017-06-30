@@ -27,7 +27,7 @@ from domain.RubyLog import RubyLog
 
 #errori di compilazione
 # reponame="SpoutDev/Vanilla"
-# # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-178-7018610.txt', 'r')
+# f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-178-7018610.txt', 'r')
 # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-179-22527723.txt', 'r')
 #errori di test
 # reponame="springside/springside4"
@@ -172,9 +172,9 @@ from domain.RubyLog import RubyLog
 # reponame="opf/openproject"
 # f = open('logs\\ruby\\openproject\\openproject-22428-176253633.txt', 'r')
 
-#usa npm capire come prendere i risultati
-reponame="zendesk/samson"
-f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
+#usa npm TODO capire come prendere i risultati
+# reponame="zendesk/samson"
+# f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
 
 # #usa BRAKEMAN
 # reponame="ManageIQ/manageiq"
@@ -235,16 +235,16 @@ f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
 # reponame="MagLev/maglev"
 # f = open('logs\\ruby\\MagLev_maglev\\maglev-754-103350661.txt', 'r')
 
-#passed**********************
+#passed
 # reponame="progit/progit"
 # f = open('logs\\ruby\\progit_progit\\progit-1328-126799418.txt', 'r')
 
 # reponame="puppetlabs/puppet"
 # f = open('logs\\ruby\\puppetlabs_puppet\\puppet-12769-181370799.txt', 'r')
-#rake aborted!
+# # rake aborted!
 # f = open('logs\\ruby\\puppetlabs_puppet\\puppet-12769-181370800.txt', 'r')
 
-#errored example fallito
+# #errored example fallito
 # reponame="refinery/refinerycms"
 # f = open('logs\\ruby\\refinery_refinerycms\\refinerycms-3396-181230356.txt', 'r')
 
@@ -260,7 +260,96 @@ f = open('logs\\ruby\\samson\\samson-7987-175874498.txt', 'r')
 # reponame="sunlightlabs/scout"
 # f = open('logs\\ruby\\sunlightlabs_scout\\scout-1110-92726320.txt', 'r')
 
+#
+# reponame="saberma/shopqi"
+# f = open('logs\\ruby\\saberma_shopqi\\shopqi-935-3044868.txt', 'r')
+#
+# reponame="pophealth/popHealth"
+# f = open('logs\\ruby\\pophealth_popHealth\\popHealth-633-55248730.txt', 'r')
+#
+#passed
+# reponame="expertiza/expertiza"
+# f = open('logs\\ruby\\expertiza_expertiza\\expertiza-4273-180323840.txt', 'r')
+#
+#passed
+# reponame="github/gemoji"
+# f = open('logs\\ruby\\github_gemoji\\gemoji-173-171951584.txt', 'r')
+#
+# #test error
+# reponame="prawnpdf/prawn"
+# f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
 
+# Gem error
+# reponame="makrio/makrio"
+# f = open('logs\\ruby\\makrio_makrio\\makrio-880-362508.txt', 'r')
+
+#passed
+# reponame="jeremyevans/sequel"
+# f = open('logs\\ruby\\jeremyevans_sequel\\sequel-795-181626601.txt', 'r')
+
+# reponame="aws/aws-sdk-ruby"
+# f = open('logs\\ruby\\aws_aws-sdk-ruby\\aws-sdk-ruby-3267-182023831.txt', 'r')
+#
+# passed
+# reponame="openfoodfoundation/openfoodnetwork"
+# f = open('logs\\ruby\\openfoodfoundation_openfoodnetwork\\openfoodnetwork-3698-182106675.txt', 'r')
+#
+#test failure
+# reponame="sparklemotion/nokogiri"
+# f = open('logs\\ruby\\sparklemotion_nokogiri\\nokogiri-1183-179374208.txt', 'r')
+#
+#errored
+# reponame="aprescott/serif"
+# f = open('logs\\ruby\\aprescott_serif\\serif-381-66444505.txt', 'r')
+# reponame="aprescott/serif"
+# f = open('logs\\ruby\\aprescott_serif\\serif-382-142280315.txt', 'r')
+
+#passed
+# reponame="railsbridge/docs"
+# f = open('logs\\ruby\\railsbridge_docs\\docs-1095-175616897.txt', 'r')
+
+# reponame="ari/jobsworth"
+# f = open('logs\\ruby\\ari_jobsworth\\jobsworth-1072-119894436.txt', 'r')
+
+# reponame="fog/fog"
+# f = open('logs\\ruby\\fog_fog\\fog-5825-169882320.txt', 'r')
+
+#rake aborted
+# reponame="projectblacklight/blacklight"
+# f = open('logs\\ruby\\projectblacklight_blacklight\\blacklight-4582-181660471.txt', 'r')
+
+# reponame="cloudfoundry/cloud_controller_ng"
+# f = open('logs\\ruby\\cloudfoundry_cloud_controller_ng\\cloud_controller_ng-7177-181964132.txt', 'r')
+
+# reponame="MarkUsProject/Markus"
+# f = open('logs\\ruby\\MarkUsProject_Markus\\Markus-3485-182033902.txt', 'r')
+
+#errored install
+# reponame="twitter/twitter-cldr-rb"
+# f = open('logs\\ruby\\twitter_twitter-cldr-rb\\twitter-cldr-rb-1166-181089150.txt', 'r')
+
+#failed
+# reponame="middleman/middleman"
+# f = open('logs\\ruby\\middleman_middleman\\middleman-2625-179389930.txt', 'r')
+
+#rubocop failed
+# reponame="sferik/twitter"
+# f = open('logs\\ruby\\sferik_twitter\\twitter-1672-181214912.txt', 'r')
+
+
+# reponame="errbit/errbit"
+# #exit with 1
+# # f = open('logs\\ruby\\errbit_errbit\\errbit-1877-177799297.txt', 'r')
+# #errored
+# f = open('logs\\ruby\\errbit_errbit\\errbit-1878-181893816.txt', 'r')
+
+# reponame="neo4jrb/neo4j-core"
+# f = open('logs\\ruby\\neo4jrb_neo4j-core\\neo4j-core-1872-182009469.txt', 'r')
+# reponame="locomotivecms/engine"
+# f = open('logs\\ruby\\locomotivecms_engine\\engine-1333-181984865.txt', 'r')
+
+reponame="ging/social_stream"
+f = open('logs\\ruby\\ging_social_stream\\social_stream-2334-150958722.txt', 'r')
 
 #per prendere l'id purtoppo non c'e' un metodo di build e quindi dobbiamo leggerlo dal log.........
 #TODO gestire il caso in cui il numero di build non c'e' nel file
