@@ -1,4 +1,11 @@
 import json
+import re
+
+import pymysql
+
+from checkTaskGradle import readDbLogin
+
+
 class Task:
     def __init__(self,nome):
         self.nome = nome
@@ -6,7 +13,7 @@ class Task:
         self.isSkipped= False
         self.isUpdate= False
         self.isFailed= False
-        self.categoria="Non_classificato"
+        self.categoria=self.checkTask()
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
@@ -49,3 +56,33 @@ class Task:
 
     def __eq__(self, other):
         return self.nome==other.nome
+
+    def getTaskDb(self):
+        lista = list()
+        credenziali = readDbLogin()
+        connection = pymysql.connect(host=credenziali[0],
+                                     user=credenziali[1],
+                                     password=credenziali[2],
+                                     db='travisdb',
+                                     charset='utf8mb4',
+                                     cursorclass=pymysql.cursors.DictCursor)
+
+        try:
+            with connection.cursor() as cursor:
+                sql = "SELECT `*`FROM `regoletaskgradle`"
+                cursor.execute(sql)
+                for r in cursor.fetchall():
+                    lista.append(r)
+        finally:
+            connection.close()
+            return lista
+
+    def checkTask(self):
+        # leggo i task classificati dal db
+        listaDB = self.getTaskDb()
+        trovato = False
+        for item in listaDB:
+            if self.nome is not None:
+                if re.match(item.get("EspressioneRegolare"), self.nome.strip()) and not trovato:
+                    return (item.get("Categoria"))
+        return("other")

@@ -39,10 +39,16 @@ def parserRake(f, log):
         elif re.match("(.)*maximum time limit(.)*has been terminated(.)*",line):
             listaErrori.append(listaComandi[-1]+"->"+line.strip())
             status="errored"
-            #print "Messaggio di errore: "+line
+        #I'm sorry but your test run exceeded 50.0 minutes.
+        elif re.match("I'm sorry but your test run exceeded",line):
+            listaErrori.append(line)
+            status="errored"
     #espressioni regolari per la code coverage
         elif re.match("\ACoverage is|Coverage report generated(.)*covered|\ACoverage =", line):
             #print line
+            listaTest.append(line.strip())
+        # altra espressione regolare per matchare la coverage 24258 / 25001 LOC (97.03%)
+        elif re.match("(.)*(\d)* / (\d)* LOC \((.)*%\)",line):
             listaTest.append(line.strip())
             #se non c'e' la code coverage
         elif re.match("\ACode coverage not enabled", line):
@@ -71,7 +77,7 @@ def parserRake(f, log):
     #match espressioni che riguardano il db (es metasploit)
         elif re.match("== ",line.strip()):
             print line
-    # match 178 examples, 2 failures, 12 pending (scenari?) oppure 164 examples, 1 failure
+    # match 178 examples, 2 failures, 12 pending (scenari?) oppure 164 examples, 1 failure dovrebbe essere RSPEC
         elif re.match("(\d)* examples, (\d)* failure", line):
             listaTest.append(line.strip())
             #print line
@@ -85,7 +91,7 @@ def parserRake(f, log):
     #match 1048 files inspected, no offenses detected  OFFENSES     es(puppet-12769-181370799)
         elif re.match("(\d)* files inspected",line):
             listaTest.append(line.strip())
-            listaTool.append("RSPEC")
+            listaTool.append("Rubocop")
     #match 258 scenarios (258 passed) e 2730 steps (2730 passed)
         elif re.match("(\d)* (scenarios|steps)",line):
             listaTest.append(line.strip())
@@ -140,7 +146,7 @@ def checkOtherTools(line, log):
     elif re.match("\ABullet not enabled", line):
         print line
     # check uso RuboCop (is a Ruby static code analyzer)
-    elif re.match("\ARunning RuboCop(.)*", line):
+    elif re.match("\ARunning RuboCop(.)*|\ATesting with RuboCop(.)*", line):
         listaTool.append("RuboCop")
     # Lo becco anche sopra
     # elif re.match("\A(.)*files inspected,(.)*", line):
@@ -152,9 +158,15 @@ def checkOtherTools(line, log):
         listaTool.append("ruby-advisory-db")
     elif re.match("\ANo vulnerabilities found",line):
         listaTest.append(line.strip())
-    #spec Behaviour Driven Development for Ruby.
-    elif re.match("(.)*(\d)* specs", line):
+    #rspec is a testing tool for Ruby created for Behaviour Driven Development
+    elif re.match("(.)*(\d)* specs|Running: spec|Starting to run rspec", line):
         listaTool.append("RSPEC")
+    #Knapsack serve per splittare i test sui nodi di CI per farli eseguire nello stesso tempo..
+    elif re.match("\AKnapsack", line):
+        listaTool.append("Knapsack")
+    #Jasmine (test your javascript without any framework dependencies, in any environment)
+    elif re.match("\Ajasmine server started",line):
+        listaTool.append("Jasmine")
 
 
 

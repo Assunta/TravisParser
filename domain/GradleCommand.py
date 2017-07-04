@@ -1,4 +1,5 @@
 import json
+
 class GradleCommand:
     #TODO si potrebbero associare i warning e le note non piu' al log intero ma al singolo command
     def __init__(self, nomeCommand):

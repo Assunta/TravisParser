@@ -1,3 +1,6 @@
+import re
+
+from domain.Error import Error
 from domain.GradleCommand import GradleCommand
 import json
 
@@ -6,11 +9,10 @@ class GradleLog:
         self.status = ""
         self.nome = nomeBuild
         self.listaCommand = list()
-        #self.listaTasks = list()
         self.listaDipendenze = list()
-        #TODO potrei mettere listaErrori come Task e String
         self.listaErrori = list()
         self.listaNote = set()
+        self.listaErroriStatus=list()
 
     def getCommand(self):
         return self.listaCommand
@@ -24,9 +26,6 @@ class GradleLog:
     def setStatus(self, s):
         self.status = s
 
-    # def getTask(self):
-    #     return self.listaTasks
-
     def getDipendenze(self):
         return self.listaDipendenze
 
@@ -36,17 +35,20 @@ class GradleLog:
     def getErrori(self):
         return self.listaErrori
 
-    # def addTask(self, t):
-    #     self.listaTasks.append(t)
-
-    # def addListaTasks(self, list):
-    #     self.listaTasks = list
-
     def addErrore(self, s):
         self.listaErrori.append(s)
 
-    def addListaErrori(self, list):
-        self.listaErrori = list
+    def addListaErrori(self, lista):
+        listaErroriParsati=list()
+        for e in lista:
+            error= Error(e.split("\t")[2].replace(">","").strip())
+            error.setCategory(e.split("\t")[1])
+            error.setTask(e.split("\t")[0])
+            #potrei aggiungere altre regole per matchare errori che non appartengono a un task classificato
+            if re.match("(.)*No such file or directory(.)*", error.getName()):
+                error.setCategory("dependencies")
+            listaErroriParsati.append(error)
+        self.listaErrori =listaErroriParsati
 
     def addNote(self, s):
         self.listaNote.append(s)
@@ -60,21 +62,11 @@ class GradleLog:
     def addCommands(self, commands):
         self.listaCommand=commands
 
-    def __str__(self):
-        ret = self.nome + "\n" + self.status + "\n"
-        ret+= "Dipendenze:\n"
-        for d in self.listaDipendenze:
-            ret+= str(d)+"\t"
-        ret+= "NOTE:\n"
-        for n in self.listaNote:
-            ret+= str(n)+"\n"
-        ret+= "Errori:\n"
-        for e in self.listaErrori:
-            ret+= str(e)+"\n"
-        ret+="Comandi:\n"
-        for c in self.listaCommand:
-            ret+=str(c)+"\n"
-        return ret
+    def setListaErroriStatus(self, lista):
+        self.listaErroriStatus=lista
+
+    def getListaErroriStatus(self):
+        return self.listaErroriStatus
 
     def toJSON(self):
         self.listaNote=list(self.listaNote)

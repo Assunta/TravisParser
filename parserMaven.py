@@ -8,6 +8,7 @@ listaTask=list()
 listaMessErrore=list()
 listaDipendenze=list()
 listaSnapshot=list()
+listaErroriStatus=list()
 #se invece si usa maven
 def maven_parser(f, mavenLog):
     # Leggo tutto il log
@@ -46,13 +47,10 @@ def maven_parser(f, mavenLog):
         elif re.match("\ATests run:", line):
             # print line
             if not re.match("(.)*Time elapsed:", line):
-                listaSnapshot[-1].addTest("Total Tests: \t")
+                listaSnapshot[-1].addTest("Total Tests: \n")
             listaSnapshot[-1].addTest(line)
         # espressione regolare per matchare gli errori che hanno portato al fallimento
         elif re.match("\A\[ERROR\]", line):
-            # print line
-            #all'errore concateno il nome del goal a cui si riferisce
-            #TODO caso mai gestirlo diversamente con una mappa nella lista
             try:
                 listaMessErrore.append((listaSnapshot[-1].getGoals())[-1].__str__()+line)
             except IndexError:
@@ -70,10 +68,13 @@ def maven_parser(f, mavenLog):
                 #print "***"+line
                 listaDipendenze.append(str)
         elif re.match("\ADone. Your build exited with 1", line):
+            listaErroriStatus.append(line.strip())
             status = "failed"
         elif re.match("\ADone. Your build exited with 0", line):
+            listaErroriStatus.append(line.strip())
             status = "passed"
         elif re.match("\AYour build has been stopped", line):
+            listaErroriStatus.append(line.strip())
             status = "errored"
 
 
@@ -86,5 +87,6 @@ def maven_parser(f, mavenLog):
     mavenLog.addListaWarning(list(warning))
     mavenLog.getErrori()
     mavenLog.setStatus(status)
+    mavenLog.setErroriStatus(listaErroriStatus)
     print mavenLog.toJSON()
     return mavenLog

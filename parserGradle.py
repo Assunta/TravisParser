@@ -1,6 +1,5 @@
 import re
 
-from checkTaskGradle import checkTask
 from domain.GradleCommand import GradleCommand
 from domain.Task import Task
 
@@ -12,8 +11,7 @@ def gradle_parser(f, gradleLog):
     #metto un comando default nel caso in cui non viene eseguito nessun comando, teoricamente non dovrebbe mai avere task
     listaCommand.append(GradleCommand("DEFAULT"))
     listaMessErrore = list()
-    #TODO!!!!!!!!!!!!!! gli errori precedenti ai task per ora non sono inseriti nella lista degli errori
-    listaErroriPrecedentiAiTask = list()
+    listaErroriStatus = list()
     listNote =list()
     listaDipendenze=list()
     # questo ciclo for lo dovremmo fare per tutti i logs associati ai jobs di una certa build
@@ -36,7 +34,6 @@ def gradle_parser(f, gradleLog):
             else:
                 t = Task(task.replace(":","").strip())
                 t.setNomeProgetto(" ")
-
             if re.match("(.)*UP-TO-DATE", line):
                 t.setIsUpdate()
             elif re.match("(.)*FAILED", line) or re.match("(.)*EXCEPTION", line):
@@ -44,10 +41,13 @@ def gradle_parser(f, gradleLog):
             elif re.match("(.)*SKIPPED", line):
                 t.setIsSkipped()
 
+            #controllo se il task c'e' gia' nella lista perche' potrebbe essere matchato due volte ad esempio in caso di fallimento
             if len(listaTask)>0:
                 taskOld=listaTask.pop(-1)
-                listaTask.append(taskOld)
                 if taskOld is not None and not taskOld.__eq__(t):
+                    listaTask.append(taskOld)
+                    listaTask.append(t)
+                else:
                     listaTask.append(t)
             else:
                 listaTask.append(t)
@@ -66,9 +66,9 @@ def gradle_parser(f, gradleLog):
         # espressione regolare per matchare il motivo di un failure
         elif re.match("\A( )*>|Task (.)* not found ", line):  # and la build sappiamo che e' fallita
             try:
-                listaMessErrore.append(listaTask[-1].getNome()+"\t"+line)
+                listaMessErrore.append(listaTask[-1].getNome()+"\t"+listaTask[-1].getCategoria()+"\t"+line)
             except IndexError:
-                listaMessErrore.append("NO_TASK" + "\t" + line)
+                listaMessErrore.append("NO_TASK" + "\tother\t"+ line)
         # nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
         # sul buon esito della build. Esempio
         #:assertReleaseNeeded FAILED
@@ -79,18 +79,21 @@ def gradle_parser(f, gradleLog):
         # le stringhe precedenti non matchano niente in questo caso qindi aggiungo:
         elif re.match("\AError|\AThe command(.)*failed and exited(.)*|\ANo output has been received", line):
             status="errored"
-            listaMessErrore.append(line)
+            listaErroriStatus.append(line.strip())
+            #listaMessErrore.append(line)
         elif re.match("\ADownload ", line):
             listaDipendenze.append(line)
         elif re.match("\ADone. Your build exited with 1", line):
+            listaErroriStatus.append(line.strip())
             status = "failed"
         elif re.match("\ADone. Your build exited with 0", line):
             status = "passed"
         elif re.match("\AYour build has been stopped", line):
+            listaErroriStatus.append(line.strip())
             status = "errored"
         elif re.match("\AThe build has been terminated", line):
+            listaErroriStatus.append(line.strip())
             status = "errored"
-            listaMessErrore.append(line)
 
 
 
@@ -103,7 +106,9 @@ def gradle_parser(f, gradleLog):
     gradleLog.addListaNote(set(listNote))
     gradleLog.addDipendenze(listaDipendenze)
     gradleLog.setStatus(status)
-    checkTask(gradleLog)
+    gradleLog.setListaErroriStatus(listaErroriStatus)
+
+
 
     print gradleLog.toJSON()
     return gradleLog

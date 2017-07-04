@@ -30,8 +30,8 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-178-7018610.txt', 'r')
 # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-179-22527723.txt', 'r')
 #errori di test
-# reponame="springside/springside4"
-# f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
+reponame="springside/springside4"
+f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
 
 
 #compilation error e errore di lettura file zip
@@ -80,7 +80,7 @@ from domain.RubyLog import RubyLog
 # reponame="SomMeri/less4j"
 # f = open('logs\\maven\\SomMeri_less4j\\less4j-919-109639390.txt', 'r')
 
-#errore
+#errore TODO vedi che ti becca anche una cosa zip snapshot
 # reponame="Nodeclipse/nodeclipse-1"
 # f = open('logs\\maven\\Nodeclipse_nodeclipse-1\\nodeclipse-1-304-75872733.txt', 'r')
 
@@ -256,6 +256,9 @@ from domain.RubyLog import RubyLog
 # reponame="shoes/shoes4"
 # f = open('logs\\ruby\\shoes_shoes4\\shoes4-3259-180295136.txt', 'r')
 
+# reponame="saberma/shopqi"
+# f = open('logs\\ruby\\saberma_shopqi\\shopqi-936-3054294.txt', 'r')
+
 #errore di dipendenze gem file missing
 # reponame="sunlightlabs/scout"
 # f = open('logs\\ruby\\sunlightlabs_scout\\scout-1110-92726320.txt', 'r')
@@ -295,8 +298,8 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\ruby\\openfoodfoundation_openfoodnetwork\\openfoodnetwork-3698-182106675.txt', 'r')
 #
 #test failure
-# reponame="sparklemotion/nokogiri"
-# f = open('logs\\ruby\\sparklemotion_nokogiri\\nokogiri-1183-179374208.txt', 'r')
+reponame="sparklemotion/nokogiri"
+f = open('logs\\ruby\\sparklemotion_nokogiri\\nokogiri-1183-179374208.txt', 'r')
 #
 #errored
 # reponame="aprescott/serif"
@@ -346,10 +349,10 @@ from domain.RubyLog import RubyLog
 # reponame="neo4jrb/neo4j-core"
 # f = open('logs\\ruby\\neo4jrb_neo4j-core\\neo4j-core-1872-182009469.txt', 'r')
 # reponame="locomotivecms/engine"
-# f = open('logs\\ruby\\locomotivecms_engine\\engine-1333-181984865.txt', 'r')
+# f = open('logs\\ruby\\locomotivecms_engine\\engine-1332-181220897.txt', 'r')
 
-reponame="ging/social_stream"
-f = open('logs\\ruby\\ging_social_stream\\social_stream-2334-150958722.txt', 'r')
+# reponame="ging/social_stream"
+# f = open('logs\\ruby\\ging_social_stream\\social_stream-2334-150958722.txt', 'r')
 
 #per prendere l'id purtoppo non c'e' un metodo di build e quindi dobbiamo leggerlo dal log.........
 #TODO gestire il caso in cui il numero di build non c'e' nel file

@@ -1,5 +1,6 @@
 import json
 import re
+from Error import Error
 
 import pymysql
 
@@ -77,12 +78,14 @@ class RubyLog:
         self.listaErrori = listaErrorParsati
 
     def check(self, e):
+        error= Error(e.split("->")[1])
+        error.setTask(e.split("->")[0])
         rules=self.getLista()
         for r in rules:
             if re.match(r.get("espressione"), e):
-                e=r.get("categoria")+"->"+e
-                return e
-        return "->"+e
+                error.setCategory(r.get("categoria"))
+                return error
+        return error
 
     def getLista(self):
         lista = list()
