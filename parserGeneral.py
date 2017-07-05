@@ -10,7 +10,7 @@ import json
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\token.config', 'r')
+f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
 token=f.readline()
 t = TravisPy.github_auth(str(token))
 

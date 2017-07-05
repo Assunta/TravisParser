@@ -4,7 +4,7 @@ import pymysql
 
 
 def readDbLogin():
-    f = open('C:\\Users\Assunta\\Desktop\\TESI\\TravisParser\\db_login', 'r')
+    f = open('C:\\Users\Assunta\\Desktop\\TESI\\TravisParser\\config\\db_login', 'r')
     host = f.readline().strip()
     username = f.readline().strip()
     password = f.readline().strip()

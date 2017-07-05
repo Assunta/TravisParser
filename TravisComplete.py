@@ -14,7 +14,7 @@ from parserRake import parserRake
 def completeAnalysis(reponame):
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
     maxnumberbuilds = 2
-    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\token.config', 'r')
+    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
     token = f.readline()
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)

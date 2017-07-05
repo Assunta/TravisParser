@@ -1,3 +1,5 @@
+from analisys.mavenParser import parserMaven
+from analisys.rubyParser import parserRuby
 from domain.GradleLog import GradleLog
 from domain.MavenLog import MavenLog
 from parserGeneral import *
@@ -30,8 +32,8 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-178-7018610.txt', 'r')
 # f = open('logs\\maven\\SpoutDev_Vanilla\\Vanilla-179-22527723.txt', 'r')
 #errori di test
-reponame="springside/springside4"
-f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
+# reponame="springside/springside4"
+# f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
 
 
 #compilation error e errore di lettura file zip
@@ -49,8 +51,8 @@ f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', '
 
 
 #errori di test
-# reponame="jhy/jsoup"
-# f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
+reponame="jhy/jsoup"
+f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
 
 #passed
 # reponame="JodaOrg/joda-time"
@@ -298,8 +300,8 @@ f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', '
 # f = open('logs\\ruby\\openfoodfoundation_openfoodnetwork\\openfoodnetwork-3698-182106675.txt', 'r')
 #
 #test failure
-reponame="sparklemotion/nokogiri"
-f = open('logs\\ruby\\sparklemotion_nokogiri\\nokogiri-1183-179374208.txt', 'r')
+# reponame="sparklemotion/nokogiri"
+# f = open('logs\\ruby\\sparklemotion_nokogiri\\nokogiri-1183-179374208.txt', 'r')
 #
 #errored
 # reponame="aprescott/serif"
@@ -375,12 +377,11 @@ linguaggio= b.getLanguage()
 #TODO c'e' il caso di language: generic   -.-'
 if linguaggio== "ruby":
     #supponiamo che si usa solo rake e che non usano maven
-    parserRake(f,RubyLog(reponame))
+    parserRuby(f,RubyLog(reponame))
 else:
     tool=checkGradleMavenFile(f)
     if(tool=="maven"):
-        #TODO prendere anche lo in mavenLog status....
-        mavenLog=maven_parser(f, MavenLog(reponame))
+        mavenLog=parserMaven(f, MavenLog(reponame))
         # print mavenLog
     elif(tool=="gradle"):
         gradleLog=gradle_parser(f, GradleLog(reponame))

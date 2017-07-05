@@ -16,11 +16,9 @@ class Snapshot:
         if re.match("Running(.)*", test):
             t=TestMaven(test.replace("Running","").strip())
             self.test.append(t)
-            print t.toJSON()
         elif re.match("Total Tests:(.)*", test):
             t=TestMaven(test.strip())
             self.test.append(t)
-            print t.toJSON()
         else:
             dati=test.split(",")
             t=self.test.pop(-1)
@@ -33,7 +31,6 @@ class Snapshot:
             except IndexError:
                 t.setTime("")
             self.test.append(t)
-            print t.toJSON()
 
 
     def getNome(self):

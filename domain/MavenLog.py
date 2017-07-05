@@ -1,6 +1,9 @@
 import re
 import json
 from Error import Error
+from utility.dbUtility import getMavenErrors
+
+
 class MavenLog:
     def __init__(self, nomeBuild):
         self.status=""
@@ -26,6 +29,9 @@ class MavenLog:
 
     def getDipendenze(self):
         return self.listaDipendenze
+
+    def setDipendenze(self, l):
+        self.listaDipendenze=l
 
     def getErrori(self):
         self.parseErrori()
@@ -62,32 +68,15 @@ class MavenLog:
         return ret
 
     def parseErrori(self):
+        errorsDB = getMavenErrors()
         errori= set()
         for t in self.listaErrori:
-            e = Error(t.split("[ERROR]")[1].strip())
-            e.setCategory(t.split("[ERROR]")[0].split("\t")[1])
-            e.setTask(t.split("[ERROR]")[0].split("\t")[0])
-            if re.match("(.)* Failed to execute goal", t):
-                errori.add(e)
-                # if re.match("(.)*Compilation failure(.)*", t):
-                #     # print "Errore di compilazione"
-                #     errori.add("Compilation error")
-            #errori in fase di test
-            elif re.match("(.)*<<< FAILURE!(.)*", t):
-                # print t
-                errori.add(e)
-            #errori di dipendenze
-            elif re.match("(.)*The build could not read", t):
-                errori.add(e)
-                #errori.add("Dependency Error: "+t.replace("[ERROR]", "").strip())
-            #errori di risoluzione
-            elif re.match("(.)*cannot be resolved(.)*",t):
-                # print t
-                errori.add(e)
-            #errori di lettura file
-            elif re.match("(.)*error reading(.)*", t):
-                # print t
-                errori.add(e)
+            for e in errorsDB:
+                if re.match(e.get("regex"), t):
+                    e = Error(t.split("[ERROR]")[1].strip())
+                    e.setCategory(t.split("[ERROR]")[0].split("\t")[1])
+                    e.setTask(t.split("[ERROR]")[0].split("\t")[0])
+                    errori.add(e)
         self.listaErroriParsati= list(errori)
         return errori
 
