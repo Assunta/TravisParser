@@ -7,7 +7,6 @@ from utility.dbUtility import getStatusMessages, getRubyTools, getRubyTestMessag
 errorList = list()
 dependenciesList = list()
 commandList = list()
-# listaComandi.append("NoCommand")
 testList = list()
 warningList=list()
 toollist=list()

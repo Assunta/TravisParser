@@ -9,7 +9,6 @@ class Goal:
     def __init__(self,nome):
         self.name = nome
         self.category=findCategory(self.name)
-    #TODO ogni volta che creo un goal faccio una nuova connessione, non mi sembra il caso, da ottimizzare
 
     def setCategory(self, p):
         self.category = p
