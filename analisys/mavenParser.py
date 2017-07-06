@@ -3,7 +3,7 @@ import re
 from domain.Goal import Goal
 from domain.snapshot import Snapshot
 from utility.configUtility import getKeyValueMaven
-from utility.dbUtility import getRubyStatusMessages
+from utility.dbUtility import getStatusMessages
 
 warningList=list()
 errorList=list()
@@ -11,7 +11,7 @@ dependenciesList=list()
 snapshotList=list()
 statusErrorList=list()
 status="passed"
-statusMessage= getRubyStatusMessages()
+statusMessage= getStatusMessages()
 values = getKeyValueMaven()
 
 def parserMaven(f, mavenLog):
@@ -19,13 +19,13 @@ def parserMaven(f, mavenLog):
         checkMainInfo(line)
         status=checkStatus(line)
     warning = set(warningList)
-    mavenLog.addListaErrori(errorList)
-    mavenLog.addListaSnapshot(snapshotList)
-    mavenLog.addListaWarning(list(warning))
-    mavenLog.getErrori()
+    mavenLog.addErrorList(errorList)
+    mavenLog.addSnapshotList(snapshotList)
+    mavenLog.addWarningList(list(warning))
+    mavenLog.getError()
     mavenLog.setStatus(status)
-    mavenLog.setErroriStatus(statusErrorList)
-    mavenLog.setDipendenze(dependenciesList)
+    mavenLog.setStatusError(statusErrorList)
+    mavenLog.setDependencies(dependenciesList)
     print mavenLog.toJSON()
     return mavenLog
 

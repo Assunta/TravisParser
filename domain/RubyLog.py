@@ -3,27 +3,27 @@ import json
 class RubyLog:
     def __init__(self,nomeBuild):
         self.status = ""
-        self.nome = nomeBuild
-        self.listaCommand = list()
-        self.listaDipendenze = list()
-        self.listaErrori = list()
-        self.listaTest=list()
-        self.listaWarning=list()
-        self.listaTool=list()
-        self.listStatusMessage=list()
+        self.name = nomeBuild
+        self.commandList = list()
+        self.dependenciesList = list()
+        self.errorList = list()
+        self.testList=list()
+        self.warningList=list()
+        self.toolList=list()
+        self.statusMessageList=list()
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)
 
     def getCommand(self):
-        return self.listaCommand
+        return self.commandList
 
     def setCommand(self,c):
-        self.listaCommand=c
+        self.commandList=c
 
-    def getNome(self):
-        return self.nome
+    def getName(self):
+        return self.name
 
     def getStatus(self):
         return self.status
@@ -31,45 +31,45 @@ class RubyLog:
     def setStatus(self, s):
         self.status = s
 
-    def getDipendenze(self):
-        return self.listaDipendenze
+    def getDependencies(self):
+        return self.dependenciesList
 
-    def setDipendenze(self,d):
-        self.listaDipendenze=d
+    def setDependencies(self, d):
+        self.dependenciesList=d
 
     def getTest(self):
-        return self.listaTest
+        return self.testList
 
     def setTest(self, d):
-        self.listaTest = d
+        self.testList = d
 
     def getWarning(self):
-        return self.listaWarning
+        return self.warningList
 
     def setWarning(self, d):
-        self.listaWarning = d
+        self.warningList = d
 
     def getTool(self):
-        return self.listaTool
+        return self.toolList
 
     def setTool(self, d):
-        self.listaTool = d
+        self.toolList = d
 
-    def addDipendenze(self, list):
-        self.listaDipendenze = list
+    def addDependencies(self, list):
+        self.dependenciesList = list
 
-    def getErrori(self):
-        return self.listaErrori
+    def getError(self):
+        return self.errorList
 
-    def addErrore(self, s):
-        self.listaErrori.append(s)
+    def addError(self, s):
+        self.errorList.append(s)
 
-    def addListaErrori(self, lista):
-        self.listaErrori = lista
+    def addErrorList(self, lista):
+        self.errorList = lista
 
     def setStatusMessages(self, l):
-        self.listStatusMessage=l
+        self.statusMessageList=l
 
     def getStatusMessages(self):
-        return self.listStatusMessage
+        return self.statusMessageList
 

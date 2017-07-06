@@ -115,8 +115,8 @@ def parserRake(f, log):
         else:
             checkOtherTools(line,log)
 
-    log.setDipendenze(listaDipendenze)
-    log.addListaErrori(listaErrori)
+    log.setDependencies(listaDipendenze)
+    log.addErrorList(listaErrori)
     log.setTest(listaTest)
     log.setCommand(listaComandi)
     log.setStatus(status)

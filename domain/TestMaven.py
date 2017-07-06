@@ -3,7 +3,7 @@ import json
 
 class TestMaven:
     def __init__(self, nome):
-        self.classe=nome
+        self.testClass=nome
         self.run=""
         self.failures=""
         self.errors=""
@@ -11,7 +11,7 @@ class TestMaven:
         self.time=""
 
     def getClasse(self):
-        return self.classe
+        return self.testClass
 
     def getRun(self):
         return self.run
@@ -29,7 +29,7 @@ class TestMaven:
         return self.time
 
     def setClasse(self,n):
-        self.classe=n
+        self.testClass=n
 
     def setRun(self,r):
         self.run=r

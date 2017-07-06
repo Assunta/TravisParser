@@ -55,7 +55,7 @@ def gradle_parser(f, gradleLog):
             # che cmq potrebbero essere informazioni interessanti
         elif re.match("Note: ", line):
             try:
-                listNote.append(listaTask[-1].getNome()+"\t"+line)
+                listNote.append(listaTask[-1].getName() + "\t" + line)
             except IndexError:
                 listNote.append("NO_TASK" + "\t" + line)
         #espressioni del tipo Skipping task xxxxx per questo motivo
@@ -66,7 +66,7 @@ def gradle_parser(f, gradleLog):
         # espressione regolare per matchare il motivo di un failure
         elif re.match("\A( )*>|Task (.)* not found ", line):  # and la build sappiamo che e' fallita
             try:
-                listaMessErrore.append(listaTask[-1].getNome()+"\t"+listaTask[-1].getCategoria()+"\t"+line)
+                listaMessErrore.append(listaTask[-1].getName() + "\t" + listaTask[-1].getCategory() + "\t" + line)
             except IndexError:
                 listaMessErrore.append("NO_TASK" + "\tother\t"+ line)
         # nella lista dei task ci potrebbero essere alcuni che sono falliti e che cmq non hanno inficiato
@@ -102,9 +102,9 @@ def gradle_parser(f, gradleLog):
     listaCommand[-1].addListaTasks(listaTask)
     gradleLog.addCommands(listaCommand)
     #gradleLog.addListaTasks(listaTask)
-    gradleLog.addListaErrori(listaMessErrore)
+    gradleLog.addErrorList(listaMessErrore)
     gradleLog.addListaNote(set(listNote))
-    gradleLog.addDipendenze(listaDipendenze)
+    gradleLog.addDependencies(listaDipendenze)
     gradleLog.setStatus(status)
     gradleLog.setListaErroriStatus(listaErroriStatus)
 

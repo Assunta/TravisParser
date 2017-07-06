@@ -7,16 +7,16 @@ from utility.dbUtility import getMavenErrors
 class MavenLog:
     def __init__(self, nomeBuild):
         self.status=""
-        self.nome = nomeBuild
-        self.listaSnapshot = list()
-        self.listaDipendenze=list()
-        self.listaErrori=list()
-        self.listaWarning=list()
-        self.listaErroriParsati=list()
-        self.listaErroriStatus=list()
+        self.name = nomeBuild
+        self.snapshotList = list()
+        self.dependenciesList=list()
+        self.errorList=list()
+        self.warningList=list()
+        self.parsedErrorsList=list()
+        self.statusErrorList=list()
 
     def getNome(self):
-        return self.nome
+        return self.name
 
     def getStatus(self):
         return self.status
@@ -25,59 +25,59 @@ class MavenLog:
         self.status=s
 
     def getSnapshots(self):
-        return self.listaSnapshot
+        return self.snapshotList
 
-    def getDipendenze(self):
-        return self.listaDipendenze
+    def getDependencies(self):
+        return self.dependenciesList
 
-    def setDipendenze(self, l):
-        self.listaDipendenze=l
+    def setDependencies(self, l):
+        self.dependenciesList=l
 
-    def getErrori(self):
-        self.parseErrori()
-        return self.listaErrori
+    def getError(self):
+        self.parseError()
+        return self.errorList
 
     def addSnapshot(self,s):
-        self.listaSnapshot.append(s)
+        self.snapshotList.append(s)
 
-    def addListaSnapshot(self, list):
-        self.listaSnapshot=list
+    def addSnapshotList(self, list):
+        self.snapshotList=list
 
-    def addErrore(self, s):
-        self.listaErrori.append(s)
+    def addError(self, s):
+        self.errorList.append(s)
 
-    def addListaErrori(self, list):
-        self.listaErrori = list
+    def addErrorList(self, list):
+        self.errorList = list
 
     def addWarning(self, s):
-        self.listaWarning.append(s)
+        self.warningList.append(s)
 
-    def addListaWarning(self, list):
-        self.listaWarning = list
+    def addWarningList(self, list):
+        self.warningList = list
 
-    def setErroriStatus(self,lista):
-        self.listaErroriStatus=lista
+    def setStatusError(self, lista):
+        self.statusErrorList=lista
 
-    def getErroriStatus(self):
-        return self.listaErroriStatus
+    def getStatusError(self):
+        return self.statusErrorList
 
     def __str__(self):
-        ret= self.nome+"\n"+self.status+"\n"
-        for s in self.listaSnapshot:
+        ret= self.name + "\n" + self.status + "\n"
+        for s in self.snapshotList:
             ret+=str(s) +"\n"
         return ret
 
-    def parseErrori(self):
+    def parseError(self):
         errorsDB = getMavenErrors()
         errori= set()
-        for t in self.listaErrori:
+        for t in self.errorList:
             for e in errorsDB:
                 if re.match(e.get("regex"), t):
                     e = Error(t.split("[ERROR]")[1].strip())
                     e.setCategory(t.split("[ERROR]")[0].split("\t")[1])
                     e.setTask(t.split("[ERROR]")[0].split("\t")[0])
                     errori.add(e)
-        self.listaErroriParsati= list(errori)
+        self.parsedErrorsList= list(errori)
         return errori
 
     def toJSON(self):

@@ -22,12 +22,12 @@ def getConnection():
 
 
 #get all the items in table rubystatusmessage
-def getRubyStatusMessages():
+def getStatusMessages():
     connection= getConnection()
     records= list()
     try:
         with connection.cursor() as cursor:
-            sql = "SELECT `*`FROM `rubystatusmessages`"
+            sql = "SELECT `*`FROM `statusmessages`"
             cursor.execute(sql)
             for r in cursor.fetchall():
                 records.append(r)
@@ -91,3 +91,31 @@ def getMavenErrors():
     finally:
         connection.close()
         return records
+
+def getGradleTaskRules():
+    connection= getConnection()
+    records= list()
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT `*`FROM `taskgradlerules`"
+            cursor.execute(sql)
+            for r in cursor.fetchall():
+                records.append(r)
+    finally:
+        connection.close()
+        return records
+
+
+def findCategory(name):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `goalmaven` WHERE `Goal`LIKE %s"
+            if cursor.execute(sql, ("%"+name+"%")) >0:
+                result = cursor.fetchone()
+                category=(result.get("Category"))
+            else:
+                category="other"
+    finally:
+        connection.close()
+        return category

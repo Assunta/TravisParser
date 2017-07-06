@@ -5,12 +5,12 @@ from TestMaven import TestMaven
 
 class Snapshot:
     def __init__(self,nome):
-        self.nome=nome
-        self.listaGoal= list()
+        self.name=nome
+        self.goalList= list()
         self.test=list()
 
     def addGoal(self, goal):
-        self.listaGoal.append(goal)
+        self.goalList.append(goal)
 
     def addTest(self, test):
         if re.match("Running(.)*", test):
@@ -33,25 +33,25 @@ class Snapshot:
             self.test.append(t)
 
 
-    def getNome(self):
-        return self.nome
+    def getName(self):
+        return self.name
 
     def getGoals(self):
-        return self.listaGoal
+        return self.goalList
 
     def getTest(self):
         return self.test
 
     def __str__(self):
         str=""
-        str+= self.nome
-        for g in self.listaGoal:
+        str+= self.name
+        for g in self.goalList:
             str+="\n" +g.__str__()
         str+="\n"+ self.test
         return str
 
     def __eq__(self, other):
-        return self.nome==other.getNome()
+        return self.name == other.getName()
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,

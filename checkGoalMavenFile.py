@@ -41,7 +41,7 @@ mavenLog = maven_parser(f, MavenLog(reponame))
 for snap in mavenLog.getSnapshots():
     snapGoal= list()
     for g in snap.getGoals():
-        snapGoal.append(g.getNome())
+        snapGoal.append(g.getName())
     diff=set(snapGoal)-set(listaGoals)
     if len(diff)>0:
         # stampa

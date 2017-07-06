@@ -2,44 +2,26 @@ import pymysql
 import json
 
 from checkTaskGradle import readDbLogin
+from utility.dbUtility import findCategory
 
 
 class Goal:
     def __init__(self,nome):
-        self.nome = nome
-        self.categoria = "Non_classificato"
-        self.findCategoria(nome)
+        self.name = nome
+        self.category=findCategory(self.name)
     #TODO ogni volta che creo un goal faccio una nuova connessione, non mi sembra il caso, da ottimizzare
-    def findCategoria(self, nome):
-        lista = list()
-        credenziali = readDbLogin()
-        connection = pymysql.connect(host=credenziali[0],
-                                     user=credenziali[1],
-                                     password=credenziali[2],
-                                     db='travisdb',
-                                     charset='utf8mb4',
-                                     cursorclass=pymysql.cursors.DictCursor)
 
-        try:
-            with connection.cursor() as cursor:
-                sql = "SELECT * FROM `goalmaven` WHERE `Goal`LIKE %s"
-                if cursor.execute(sql, ("%"+nome+"%")) >0:
-                    result = cursor.fetchone()
-                    self.setCategoria(result.get("Category"))
-        finally:
-            connection.close()
-            return lista
-    def setCategoria(self, p):
-        self.categoria = p
+    def setCategory(self, p):
+        self.category = p
 
-    def getNome(self):
-        return self.nome
+    def getName(self):
+        return self.name
 
-    def getCategoria(self):
-        return self.categoria
+    def getCategory(self):
+        return self.category
 
     def __str__(self):
-        return self.nome+"\t"+str(self.categoria)
+        return self.name + "\t" + str(self.category)
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,

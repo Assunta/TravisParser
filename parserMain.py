@@ -1,3 +1,4 @@
+from analisys.gradleParser import parserGradle
 from analisys.mavenParser import parserMaven
 from analisys.rubyParser import parserRuby
 from domain.GradleLog import GradleLog
@@ -51,8 +52,8 @@ from domain.RubyLog import RubyLog
 
 
 #errori di test
-reponame="jhy/jsoup"
-f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
+# reponame="jhy/jsoup"
+# f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
 
 #passed
 # reponame="JodaOrg/joda-time"
@@ -103,7 +104,7 @@ f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
 # reponame="jakenjarvis/Android-OrmLiteContentProvider"
 # f = open('logs\\gradle\\jakenjarvis_Android-OrmLiteContentProvider\\Android-OrmLiteContentProvider-161-42820687.txt', 'r')
 
-#passed
+# #passed
 # reponame="codecov/example-android"
 # f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
 
@@ -281,8 +282,8 @@ f = open('logs\\maven\\jsoup\\jsoup-406-176552717.txt', 'r')
 # f = open('logs\\ruby\\github_gemoji\\gemoji-173-171951584.txt', 'r')
 #
 # #test error
-# reponame="prawnpdf/prawn"
-# f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
+reponame="prawnpdf/prawn"
+f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
 
 # Gem error
 # reponame="makrio/makrio"
@@ -384,5 +385,5 @@ else:
         mavenLog=parserMaven(f, MavenLog(reponame))
         # print mavenLog
     elif(tool=="gradle"):
-        gradleLog=gradle_parser(f, GradleLog(reponame))
+        gradleLog=parserGradle(f, GradleLog(reponame))
 print ("PARSE END")

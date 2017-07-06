@@ -3,24 +3,24 @@ import json
 class GradleCommand:
     #TODO si potrebbero associare i warning e le note non piu' al log intero ma al singolo command
     def __init__(self, nomeCommand):
-        self.nome = nomeCommand
-        self.listaTasks = list()
+        self.name = nomeCommand
+        self.taskList = list()
 
     def getNome(self):
-        return self.nome
+        return self.name
 
     def getTasks(self):
-        return self.listaTasks
+        return self.taskList
 
     def addTask(self, t):
-        self.listaTasks.append(t)
+        self.taskList.append(t)
 
     def addListaTasks(self, lista):
-        self.listaTasks = lista
+        self.taskList = lista
 
     def __str__(self):
-        ret = self.nome + "\n"
-        for s in self.listaTasks:
+        ret = self.name + "\n"
+        for s in self.taskList:
             ret += str(s) + "\n"
         return ret
 

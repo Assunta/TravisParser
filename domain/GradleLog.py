@@ -7,18 +7,18 @@ import json
 class GradleLog:
     def __init__(self,nomeBuild):
         self.status = ""
-        self.nome = nomeBuild
-        self.listaCommand = list()
-        self.listaDipendenze = list()
-        self.listaErrori = list()
-        self.listaNote = set()
-        self.listaErroriStatus=list()
+        self.name = nomeBuild
+        self.commandList = list()
+        self.dependenciesList = list()
+        self.errorList = list()
+        self.noteList = set()
+        self.statusErrorList=list()
 
     def getCommand(self):
-        return self.listaCommand
+        return self.commandList
 
     def getNome(self):
-        return self.nome
+        return self.name
 
     def getStatus(self):
         return self.status
@@ -27,16 +27,16 @@ class GradleLog:
         self.status = s
 
     def getDipendenze(self):
-        return self.listaDipendenze
+        return self.dependenciesList
 
     def addDipendenze(self, list):
-        self.listaDipendenze = list
+        self.dependenciesList = list
 
     def getErrori(self):
-        return self.listaErrori
+        return self.errorList
 
     def addErrore(self, s):
-        self.listaErrori.append(s)
+        self.errorList.append(s)
 
     def addListaErrori(self, lista):
         listaErroriParsati=list()
@@ -44,31 +44,31 @@ class GradleLog:
             error= Error(e.split("\t")[2].replace(">","").strip())
             error.setCategory(e.split("\t")[1])
             error.setTask(e.split("\t")[0])
-            #potrei aggiungere altre regole per matchare errori che non appartengono a un task classificato
-            if re.match("(.)*No such file or directory(.)*", error.getName()):
-                error.setCategory("dependencies")
+            # #potrei aggiungere altre regole per matchare errori che non appartengono a un task classificato
+            # if re.match("(.)*No such file or directory(.)*", error.getName()):
+            #     error.setCategory("dependencies")
             listaErroriParsati.append(error)
-        self.listaErrori =listaErroriParsati
+        self.errorList =listaErroriParsati
 
     def addNote(self, s):
-        self.listaNote.append(s)
+        self.noteList.append(s)
 
     def addListaNote(self, list):
-        self.listaNote = list
+        self.noteList = list
 
     def setCommand(self, nome):
-        self.listaCommand.append(GradleCommand(nome))
+        self.commandList.append(GradleCommand(nome))
 
     def addCommands(self, commands):
-        self.listaCommand=commands
+        self.commandList=commands
 
     def setListaErroriStatus(self, lista):
-        self.listaErroriStatus=lista
+        self.statusErrorList=lista
 
     def getListaErroriStatus(self):
-        return self.listaErroriStatus
+        return self.statusErrorList
 
     def toJSON(self):
-        self.listaNote=list(self.listaNote)
+        self.noteList=list(self.noteList)
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)

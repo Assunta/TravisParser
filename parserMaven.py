@@ -82,11 +82,11 @@ def maven_parser(f, mavenLog):
     # nei log le snapshot appaiono duplicate, non ho capito perche'..
     # quindi sono duplicate anche qui, pero' nella seconda replica fa anche i test, nella prima no
     warning=set(listaMavenWarning)
-    mavenLog.addListaErrori(listaMessErrore)
-    mavenLog.addListaSnapshot(listaSnapshot)
-    mavenLog.addListaWarning(list(warning))
-    mavenLog.getErrori()
+    mavenLog.addErrorList(listaMessErrore)
+    mavenLog.addSnapshotList(listaSnapshot)
+    mavenLog.addWarningList(list(warning))
+    mavenLog.getError()
     mavenLog.setStatus(status)
-    mavenLog.setErroriStatus(listaErroriStatus)
+    mavenLog.setStatusError(listaErroriStatus)
     print mavenLog.toJSON()
     return mavenLog
