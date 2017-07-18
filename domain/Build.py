@@ -22,6 +22,7 @@ class Build():
         self.email = ""
         self.Language = ""
         self.NumJobs = 0
+        self.Logs=[]
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
@@ -134,3 +135,9 @@ class Build():
 
     def getNumJobs(self):
         return self.NumJobs
+
+    def addLog(self, log):
+        self.Logs.append(log)
+
+    def getLogs(self):
+        return self.Logs

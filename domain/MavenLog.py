@@ -14,6 +14,10 @@ class MavenLog:
         self.warningList=list()
         self.parsedErrorsList=list()
         self.statusErrorList=list()
+        self.typeOfError = ""
+
+    def getTypeOfError(self):
+        return self.typeOfError
 
     def getNome(self):
         return self.name
@@ -78,6 +82,11 @@ class MavenLog:
                     e.setTask(t.split("[ERROR]")[0].split("\t")[0])
                     errori.add(e)
         self.parsedErrorsList= list(errori)
+        if self.errorList.__len__()>0:
+            try:
+                self.typeOfError =self.parsedErrorsList[-1].getCategory()
+            except:
+                self.typeOfError=self.errorList[-1].split("[ERROR]")[0].split("\t")[1]
         return errori
 
     def toJSON(self):

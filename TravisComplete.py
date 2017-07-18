@@ -1,18 +1,19 @@
 from travispy import TravisPy
+
+from analisys.gradleParser import parserGradle
+from analisys.mavenParser import parserMaven
+from analisys.rubyParser import parserRuby
 from domain.Build import Build
 import re
 
 from domain.GradleLog import GradleLog
 from domain.MavenLog import MavenLog
+from domain.RubyLog import RubyLog
 from parserGeneral import checkGradleMaven
-from parserGradle import gradle_parser
-from parserMaven import maven_parser
-from parserRake import parserRake
-
 
 
 def completeAnalysis(reponame):
-    ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
+    allBuilds=[]
     maxnumberbuilds = 2
     f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
     token = f.readline()
@@ -20,30 +21,40 @@ def completeAnalysis(reponame):
     repo = t.repo(reponame)
     builds = t.builds(slug=repo.slug)
     for count in range(0, min(maxnumberbuilds, len(builds))):
-        #prendo la singola build
+        # prendo la singola build
         build = builds[count]
-        #prendo le informazioni generali
-        b=common_parse(repo,build)
+        buildAfterAnalysis=completeAnalysisBuild(t, repo, build, reponame)
+        allBuilds.append(buildAfterAnalysis)
+        print buildAfterAnalysis.toJSON();
+
+    return allBuilds
+
+
+def completeAnalysisBuild(t, repo, build, reponame):
+        ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
+        # prendo le informazioni generali
+        b = common_parse(repo, build)
         #per ogni job faccio l'analisi del log
         for job_id in build.job_ids:
-            print job_id+"*****************************"
+            # print job_id+"*****************************"
             job=t.job(job_id)
             log_text = t.log(job.log_id).body
             log_text = (ansi_escape.sub('', log_text)).split("\n")
             linguaggio= build.config["language"]
-            if linguaggio == "ruby":
-                # supponiamo che si usa solo rake e che non usano maven
-                parserRake(log_text)
-            else:
-                tool = checkGradleMaven(log_text)
-                if (tool == "maven"):
-                    # TODO prendere anche lo in mavenLog status....
-                    mavenLog = maven_parser(log_text, MavenLog(reponame))
-                    print mavenLog.toJSON()
-                elif (tool == "gradle"):
-                    gradleLog = gradle_parser(log_text, GradleLog(reponame))
-                    print gradleLog.toJSON()
-    return b
+            tool = checkGradleMaven(log_text)
+            if (tool == "maven"):
+                # TODO prendere anche lo in mavenLog status....
+                mavenLog = parserMaven(log_text, MavenLog(reponame))
+                # print mavenLog.toJSON()
+                b.addLog(mavenLog)
+            elif linguaggio == "ruby":
+                rubyLog=parserRuby(log_text,RubyLog(reponame))
+                b.addLog(rubyLog)
+            else: #(tool == "gradle"):
+                gradleLog = parserGradle(log_text, GradleLog(reponame))
+                # print gradleLog.toJSON()
+                b.addLog(gradleLog)
+        return b
 
 
 def common_parse(repo,build):
@@ -69,7 +80,7 @@ def common_parse(repo,build):
     b.setEmail(commit.author_email)
     b.setLanguage(build.config["language"])
     b.setNumJobs(len(build.job_ids))
-    print b.toJSON()
+    # print b.toJSON()
     return b
 
 completeAnalysis("Mashape/unirest-java")

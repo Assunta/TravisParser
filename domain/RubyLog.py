@@ -11,6 +11,10 @@ class RubyLog:
         self.warningList=list()
         self.toolList=list()
         self.statusMessageList=list()
+        self.typeOfError = ""
+
+    def getTypeOfError(self):
+        return self.typeOfError
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
@@ -66,7 +70,10 @@ class RubyLog:
 
     def addErrorList(self, lista):
         self.errorList = lista
-
+        try:
+            self.typeOfError=lista[-1].getCategory();
+        except:
+            self.typeOfError=""
     def setStatusMessages(self, l):
         self.statusMessageList=l
 

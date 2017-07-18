@@ -11,8 +11,13 @@ class GradleLog:
         self.commandList = list()
         self.dependenciesList = list()
         self.errorList = list()
-        self.noteList = set()
+        self.noteList = list()
         self.statusErrorList=list()
+        self.typeOfError=""
+
+    def getTypeOfError(self):
+        return self.typeOfError
+
 
     def getCommand(self):
         return self.commandList
@@ -26,19 +31,19 @@ class GradleLog:
     def setStatus(self, s):
         self.status = s
 
-    def getDipendenze(self):
+    def getDependencies(self):
         return self.dependenciesList
 
-    def addDipendenze(self, list):
+    def addDependencies(self, list):
         self.dependenciesList = list
 
-    def getErrori(self):
+    def getError(self):
         return self.errorList
 
-    def addErrore(self, s):
+    def addError(self, s):
         self.errorList.append(s)
 
-    def addListaErrori(self, lista):
+    def addErrorList(self, lista):
         listaErroriParsati=list()
         for e in lista:
             error= Error(e.split("\t")[2].replace(">","").strip())
@@ -48,6 +53,11 @@ class GradleLog:
             # if re.match("(.)*No such file or directory(.)*", error.getName()):
             #     error.setCategory("dependencies")
             listaErroriParsati.append(error)
+        if lista.__len__()>0:
+            try:
+                self.typeOfError =listaErroriParsati[-1].getCategory()
+            except:
+                self.typeOfError=lista[-1].split("\t")[1]
         self.errorList =listaErroriParsati
 
     def addNote(self, s):
@@ -69,6 +79,5 @@ class GradleLog:
         return self.statusErrorList
 
     def toJSON(self):
-        self.noteList=list(self.noteList)
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)

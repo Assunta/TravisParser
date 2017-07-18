@@ -19,10 +19,10 @@ class Task:
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)
-    def setNomeProgetto(self, p):
+    def setProjectName(self, p):
         self.project=p
 
-    def setCategoria(self, p):
+    def setCategory(self, p):
         self.category = p
 
     def setIsSkipped(self):
@@ -34,13 +34,13 @@ class Task:
     def setIsUpdate(self):
         self.isUpdate= True
 
-    def getNome(self):
+    def getName(self):
         return self.name
 
-    def getCategoria(self):
+    def getCategory(self):
         return self.category
 
-    def getNomeProgetto(self):
+    def getProjectName(self):
         return self.project
 
     def isUpdate(self):

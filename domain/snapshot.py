@@ -27,7 +27,7 @@ class Snapshot:
             t.setErrors(dati[2].replace("Errors:", "").strip())
             t.setSkipped(dati[3].replace("Skipped:", "").strip())
             try:
-                t.setTime(dati[4].replace("Time elapsed: ","").strip().split("sec")[0])
+                t.setTime(dati[4].replace("Time elapsed: ","").strip().split("s")[0])
             except IndexError:
                 t.setTime("")
             self.test.append(t)

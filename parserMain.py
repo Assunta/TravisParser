@@ -24,8 +24,8 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\maven\\javaee-samples_javaee7-samples\\javaee7-samples-243-177091125.txt', 'r')
 
 #test error
-reponame="Mashape/unirest-java"
-f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553452.txt', 'r')
+# reponame="Mashape/unirest-java"
+# f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553449.txt', 'r')
 # f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553451.txt', 'r')
 
 #errori di compilazione
@@ -63,9 +63,11 @@ f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553452.txt', 'r
 # reponame="bitcoinj/bitcoinj"
 # f = open('logs\\maven\\bitcoinj_bitcoinj\\bitcoinj-1844-174824456.txt', 'r')
 
-#errori di test
-# reponame="languagetool-org/languagetool"
+# #errori di test
+reponame="languagetool-org/languagetool"
 # f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
+f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4487-186715344.txt', 'r')
+
 
 #status passed
 # reponame="google/error-prone"
@@ -428,12 +430,14 @@ linguaggio= b.getLanguage()
 #TODO c'e' il caso di language: generic   -.-'
 if linguaggio== "ruby":
     #supponiamo che si usa solo rake e che non usano maven
-    parserRuby(f,RubyLog(reponame))
+    rubyLog=parserRuby(f,RubyLog(reponame))
+    print rubyLog.toJSON()
 else:
     tool=checkGradleMavenFile(f)
     if(tool=="maven"):
         mavenLog=parserMaven(f, MavenLog(reponame))
-        # print mavenLog
+        print mavenLog.toJSON()
     elif(tool=="gradle"):
         gradleLog=parserGradle(f, GradleLog(reponame))
+        print gradleLog.toJSON()
 print ("PARSE END")

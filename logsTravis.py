@@ -13,7 +13,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
-maxnumberbuilds=2
+maxnumberbuilds=1
 
 
 ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')

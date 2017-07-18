@@ -30,10 +30,10 @@ def gradle_parser(f, gradleLog):
                 module_name = task.split(":")[1]
                 task_name = task.split(":")[2]
                 t=Task(task_name.strip())
-                t.setNomeProgetto(module_name)
+                t.setProjectName(module_name)
             else:
                 t = Task(task.replace(":","").strip())
-                t.setNomeProgetto(" ")
+                t.setProjectName(" ")
             if re.match("(.)*UP-TO-DATE", line):
                 t.setIsUpdate()
             elif re.match("(.)*FAILED", line) or re.match("(.)*EXCEPTION", line):
