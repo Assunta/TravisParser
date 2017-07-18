@@ -69,8 +69,6 @@ def common_parse(reponame, build_id):
     if repo.description is not None:
         msg +="\nDescrizione: " +repo.description
         b.setDescription(repo.description)
-    msg +="\nBuild number: " + build.number
-    b.setBuildNumber(build.number)
     msg +="\nCommit ID: " + str(build.commit_id)
     b.setCommitId(build.commit_id)
     msg +="\nPull request?: "+str(build.pull_request)

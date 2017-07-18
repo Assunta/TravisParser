@@ -3,7 +3,6 @@ class Build():
     def __init__(self,idBuild):
         self.idBuild=idBuild
         self.status =""
-        self.buildNumber=0
         self.description=""
         self.commitId=""
         self.isPullRequest=False
@@ -28,11 +27,6 @@ class Build():
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)
 
-    def setBuildNumber(self, n):
-        self.buildNumber=n
-
-    def getBuildNumber(self):
-        return self.buildNumber
 
     def setStatus(self, status):
         self.status=status

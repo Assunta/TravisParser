@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travis CI parser</title>
+        <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
+      <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.summer.css" />
+
+
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxexpander.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var style='summer'
+            // menu definition
+             $("#jqxMenu").jqxMenu({ width: '100%', height: '30px', showTopLevelArrows: true, autoOpen: true, theme:style});
+             $("#jqxMenu").jqxMenu('minimize');
+             $("#jqxMenu").css('visibility', 'visible');
+
+            // Create jqxExpander.
+            $("#insertRepo").jqxExpander({theme:style,  toggleMode: 'none', width: '350px', showArrow: false });
+            // Create jqxInput.
+            $("#repoName").jqxInput({ width: '300px', height: '20px' });
+            // Create jqxButton.
+            $("#submitButton").jqxButton({ template: "primary" , width: '50%' });
+            // Create jqxValidator.
+            $("#form").jqxValidator({
+                rules: [
+                        { input: "#repoName", message: "repository name is required!", action: 'keyup, blur', rule: 'required' },
+                ]
+            });
+            // Validate the Form.
+            $("#submitButton").click(function () {
+            var validationResult = function (isValid) {
+                    if (isValid) {
+                        // Submit the Form.
+                        $('#form').submit();
+                    }
+                }
+                // Validate the Form.
+                $('#form').jqxValidator('validate', validationResult);
+            });
+    });
+    </script>
+</head>
+<body>
+
+
+
+
+<div style='height: 50px;'>
+            <div id='jqxMenu' style='visibility: hidden; margin-left: 3px;'>
+                 <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li>Settings
+                        <ul style='width: 250px;'>
+                            <li><a href="#settings">Settings....</a></li>
+                        </ul>
+                    </li>
+                 </ul>
+            </div>
+</div>
+
+
+    <div id="insertRepo" style="font-family: Verdana; font-size: 18px; position:absolute; top:40%; left: 33%; text-align:center;">
+        <div>
+
+        </div>
+        <div style="font-family: Verdana; font-size: 16px; text-align:center;">
+            <form id="form" action="{{url_for('results')}}" method="post" style="overflow: hidden; margin: 10px; text-align:center;">
+                 <label for="repoName" class="sr-only">Repository Name</label>
+                    <BR><BR>
+                 <input type="name" name="reponame" id="repoName" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
+                    <BR><BR>
+                 <button type="button" id="submitButton">Submit</button>
+            </form>
+        </div>
+    </div>
+<div id="output"></div>
+</body>
+</html>

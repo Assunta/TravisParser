@@ -17,7 +17,7 @@ maxnumberbuilds=2
 
 
 ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
-f = open('token.config', 'r')
+f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
 token=f.readline()
 t = TravisPy.github_auth(str(token))
 if len(sys.argv)>1:

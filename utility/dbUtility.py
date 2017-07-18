@@ -119,3 +119,20 @@ def findCategory(name):
     finally:
         connection.close()
         return category
+
+#this ethod allow to get user key
+def findUser(name):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `users` WHERE `Git_name`= %s"
+            if cursor.execute(sql, (name)) >0:
+                result = cursor.fetchone()
+                key=(result.get("key"))
+                config=(result.get("configuration"))
+            else:
+                key="no_key"
+                config="default"
+    finally:
+        connection.close()
+        return [key,config]

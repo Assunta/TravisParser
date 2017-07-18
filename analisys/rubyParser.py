@@ -10,7 +10,7 @@ commandList = list()
 testList = list()
 warningList=list()
 toollist=list()
-status = "passed"
+status = ""
 listStatusMessages=list()
 
 

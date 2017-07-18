@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Python Flask Bucket List App</title>
+    <title>Travis CI parser</title>
+    <script type="text/javascript" src="../static/js/jquery-3.2.1.js"></script>
 
-      <link rel="stylesheet" href="../static/js/codebase/webix.css" type="text/css" charset="utf-8">
-      <script src="../static/js/codebase/webix.js" type="text/javascript" charset="utf-8"></script>
-      <script type="text/javascript" src="../static/js/jquery-3.2.1.js"></script>
-
-  </head>
-
-  <body>
-
-    <div class="container">
-      <div class="header">
-
-        <h3 class="text-muted">Python Flask App</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h3>Inserisci il nome del repository da analizzare</h3>
-        <form class="form-signin">
-        <label for="inputName" class="sr-only">Name</label>
-        <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+     <link type="text/css" rel="Stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxexpander.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
 
 
-        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
-      </form>
-      </div>
-        <div id="output" >
 
-        </div>
-
-    </div>
-
-  <script>
-    $(function() {
-    $('#btnSignUp').click(function() {
-
-        $.ajax({
-            url: '/signUp',
-            data: $('form').serialize(),
-            type: 'POST',
-            success: function(response) {
-                console.log(response);
-                $('div#output').text(response);
-            },
-            error: function(error) {
-                console.log(error);
-                $('div#output').text(error);
-            }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Create jqxExpander.
+            $("#insertRepo").jqxExpander({  toggleMode: 'none', width: '350px', showArrow: false });
+            // Create jqxInput.
+            $("#repoName").jqxInput({  width: '300px', height: '20px' });
+            // Create jqxButton.
+            $("#submit").jqxButton({ theme: theme });
+            // Create jqxValidator.
+            $("#form").jqxValidator({
+                rules: [
+                        { input: "#repoName", message: "repository name is required!", action: 'keyup, blur', rule: 'required' },
+                ],  hintType: "label"
+            });
+            // Validate the Form.
+            $("#submit").click(function () {
+                $('#form').jqxValidator('validate');
+                $.ajax({
+                  url: '/signUp',
+                  data: $('#form').serialize(),
+                  type: 'POST',
+                  success: function(response) {
+                      console.log(response);
+                       <!--$("#insertRepo").jqxExpander('setContent', response);-->
+                       $('div#output').text(response);
+                  },
+                  error: function(error) {
+                      console.log(error);
+                      <!--$("#insertRepo").jqxExpander('setContent', error);-->
+                      $('div#output').text(error);
+                  }
+              });
+            });
+            // Update the jqxExpander's content if the validation is successful.
+            <!--$('#form').on('validationSuccess', function (event) {-->
+                <!--$("#insertRepo").jqxExpander('setContent', '<span style="margin: 10px;">Account created.</span>');-->
+            <!--});-->
         });
-    });
-});
-
-</script>
-  </body>
+    </script>
+</head>
+<body>
+    <div id="insertRepo" style="font-family: Verdana; font-size: 13px;">
+        <div>
+            Insert repository name
+        </div>
+        <div style="font-family: Verdana; font-size: 13px;">
+            <form id="form" style="overflow: hidden; margin: 10px;">
+                 <label for="repoName" class="sr-only">Repository Name</label>
+                 <input type="name" name="inputName" id="repoName" class="form-control" placeholder="Name" required autofocus>
+                 <button id="submit" type="button">Submit</button>
+            </form>
+        </div>
+    </div>
+<div id="output"></div>
+</body>
 </html>

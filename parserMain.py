@@ -24,8 +24,8 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\maven\\javaee-samples_javaee7-samples\\javaee7-samples-243-177091125.txt', 'r')
 
 #test error
-# reponame="Mashape/unirest-java"
-# f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553452.txt', 'r')
+reponame="Mashape/unirest-java"
+f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553452.txt', 'r')
 # f = open('logs\\maven\\Mashape_unirest-java\\unirest-java-455-173553451.txt', 'r')
 
 #errori di compilazione
@@ -219,7 +219,7 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\ruby\\diaspora_diaspora\\diaspora-11248-172674499.txt', 'r')
 
 #Done job cancelled ......
-#gli altri log non finiscono proprio...restano appesi sui download
+# #gli altri log non finiscono proprio...restano appesi sui download
 # reponame="elastic/logstash"
 # f = open('logs\\ruby\\elastic_logstash\\logstash-5037-181542610.txt', 'r')
 
@@ -266,10 +266,11 @@ from domain.RubyLog import RubyLog
 # reponame="sunlightlabs/scout"
 # f = open('logs\\ruby\\sunlightlabs_scout\\scout-1110-92726320.txt', 'r')
 
-#
+#test failure
 # reponame="saberma/shopqi"
 # f = open('logs\\ruby\\saberma_shopqi\\shopqi-935-3044868.txt', 'r')
 #
+#test failre e dependencies error
 # reponame="pophealth/popHealth"
 # f = open('logs\\ruby\\pophealth_popHealth\\popHealth-633-55248730.txt', 'r')
 #
@@ -281,9 +282,9 @@ from domain.RubyLog import RubyLog
 # reponame="github/gemoji"
 # f = open('logs\\ruby\\github_gemoji\\gemoji-173-171951584.txt', 'r')
 #
-# #test error
-reponame="prawnpdf/prawn"
-f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
+# rubocop failures
+# reponame="prawnpdf/prawn"
+# f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
 
 # Gem error
 # reponame="makrio/makrio"
@@ -314,6 +315,7 @@ f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
 # reponame="railsbridge/docs"
 # f = open('logs\\ruby\\railsbridge_docs\\docs-1095-175616897.txt', 'r')
 
+#passed
 # reponame="ari/jobsworth"
 # f = open('logs\\ruby\\ari_jobsworth\\jobsworth-1072-119894436.txt', 'r')
 
@@ -349,16 +351,64 @@ f = open('logs\\ruby\\prawnpdf_prawn\\prawn-1317-175634877.txt', 'r')
 # #errored
 # f = open('logs\\ruby\\errbit_errbit\\errbit-1878-181893816.txt', 'r')
 
+#passed
 # reponame="neo4jrb/neo4j-core"
 # f = open('logs\\ruby\\neo4jrb_neo4j-core\\neo4j-core-1872-182009469.txt', 'r')
+
 # reponame="locomotivecms/engine"
 # f = open('logs\\ruby\\locomotivecms_engine\\engine-1332-181220897.txt', 'r')
 
 # reponame="ging/social_stream"
 # f = open('logs\\ruby\\ging_social_stream\\social_stream-2334-150958722.txt', 'r')
 
-#per prendere l'id purtoppo non c'e' un metodo di build e quindi dobbiamo leggerlo dal log.........
-#TODO gestire il caso in cui il numero di build non c'e' nel file
+#test failed
+# reponame="fatfreecrm/fat_free_crm"
+# f = open('logs\\ruby\\fatfreecrm_fat_free_crm\\fat_free_crm-1874-176518429.txt', 'r')
+
+#passed no tool matched
+# reponame="browsermedia/browsercms"
+# f = open('logs\\ruby\\browsermedia_browsercms\\browsercms-244-169634664.txt', 'r')
+
+# reponame="innoq/iqvoc"
+#gem error
+# f = open('logs\\ruby\\innoq_iqvoc\\iqvoc-1215-183937349.txt', 'r')
+
+# reponame="rubygems/rubygems"
+# f = open('logs\\ruby\\rubygems_rubygems\\rubygems-3920-181365330.txt', 'r')
+
+# reponame="hacketyhack/hackety-hack.com"
+# f = open('logs\\ruby\\hacketyhack_hackety-hack.com\\hackety-hack.com-257-92540002.txt', 'r')
+
+#passed
+# reponame="grosser/parallel_tests"
+# f = open('logs\\ruby\\grosser_parallel_tests\\parallel_tests-653-181173737.txt', 'r')
+#
+#passed
+# reponame="codeforamerica/citygram"
+# f = open('logs\\ruby\\codeforamerica_citygram\\citygram-818-153766098.txt', 'r')
+
+# reponame="sferik/rails_admin"
+# f = open('logs\\ruby\\sferik_rails_admin\\rails_admin-2376-181954062.txt', 'r')
+
+# reponame="twers/re-education"
+# f = open('logs\\ruby\\twers_re-education\\re-education-162-2271090.txt', 'r')
+#
+# reponame="newrelic/rpm"
+# f = open('logs\\ruby\\newrelic_rpm\\rpm-609-181875494.txt', 'r')
+#
+# reponame="calagator/calagator"
+# f = open('logs\\ruby\\calagator_calagator\\calagator-1037-158304927.txt', 'r')
+
+# reponame="asciidoctor/asciidoctor-diagram"
+# f = open('logs\\ruby\\asciidoctor_asciidoctor-diagram\\asciidoctor-diagram-267-183778861.txt', 'r')
+
+# reponame="mitchellh/vagrant"
+# f = open('logs\\ruby\\mitchellh_vagrant\\vagrant-6965-184196955.txt', 'r')
+
+
+
+
+
 def getBuildId(f):
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
     index= s.find('Build id:')

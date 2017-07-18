@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Builds results</title>
+    <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
+	 <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.arctic.css" />
+
+    <style type="text/css">
+        .contentSection
+        {
+            padding: 5px;
+            text-align: justify;
+        }
+    </style>
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
+
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxribbon.js"></script>
+	<script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlayout.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
+
+    <script type="text/javascript">
+        var style='arctic'
+        var reponame='{{reponame}}';
+        $(document).ready(function () {
+
+        $("#jqxRibbon").jqxRibbon({ theme:style, width: "100%", position: "top", selectionMode: "click", animationType: "fade", scrollPosition: 'both'});
+
+        //first tab
+        //prepare data jqxgrid
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields: [
+                    { name: 'buildNumber', type: 'string' },
+                    { name: 'status', type: 'string' },
+                    { name: 'StartDate', type: 'string' },
+                    { name: 'Duration', type: 'string' },
+                    { name: 'email', type: 'string' }
+                ],
+                pager:function(pagenum,pagesize,oldpagenum){
+                        console.log("page changed")
+                },
+                url: '/getBuild'
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            $("#jqxgrid").jqxGrid(
+            {
+                width: "100%",
+                source: dataAdapter,
+                sortable: true,
+                filterable: true,
+                filtermode: 'excel',
+                pageable: true,
+                columnsresize: true,
+                autoshowfiltericon: false,
+                columns: [
+                  { text: 'Build', datafield: 'buildNumber', width: '15%'},
+                  { text: 'Status', datafield: 'status', width: '20%'},
+                  { text: 'Date', datafield: 'StartDate',width: '20%' },
+                  { text: 'Duration', datafield: 'Duration',width: '15%' },
+                  { text: 'Commit Author', datafield: 'email',width: '30%' }
+                ]
+            });
+
+
+
+            //second tab
+            // prepare chart data for statusStats
+            var source =
+            {
+                datatype: "json",
+                datafields: [
+                    { name: 'num', type:"number" },
+                    { name: 'status' }
+                ],
+                url: '/getStatStatus'
+            };
+             var dataAdapter2 = new $.jqx.dataAdapter(source,{
+                async:true,
+                autoBind:true,
+                loadError:function(jqXHR, status, error){console.log(error)},
+             });
+
+            // prepare jqxChart settings
+            var settings = {
+                title: "Status",
+                description: "",
+                enableAnimations: true,
+                showLegend: false,
+                showBorderLine: true,
+                legendPosition: { left: 520, top: 140, width: 100, height: 100 },
+                padding: { left: 5, top: 5, right: 5, bottom: 5 },
+                titlePadding: { left: 0, top: 0, right: 0, bottom: 10 },
+                colorScheme: 'scheme02',
+                seriesGroups:
+                    [
+                        {
+                            type: 'donut',
+                            showLabels: false,
+                            source: dataAdapter2,
+                            series:
+                                [
+                                    {
+                                        dataField: 'num',
+                                        displayText: 'status',
+                                        labelRadius: 100,
+                                        initialAngle: 15,
+                                        radius: 150,
+                                        innerRadius: 60,
+                                        centerOffset: 0,
+                                        formatSettings: { sufix: '%', decimalPlaces: 1 }
+                                    }
+                                ]
+                        }
+                    ]
+            };
+
+            // setup the chart
+            $('#chartContainer').jqxChart(settings);
+
+
+
+
+             // prepare chart data for errorstats
+            var source =
+            {
+                datatype: "json",
+                datafields: [
+                    { name: 'num', type:"number" },
+                    { name: 'error' }
+                ],
+                url: '/getStatErrors'
+            };
+
+             var dataAdapter3 = new $.jqx.dataAdapter(source,{
+                async:true,
+                autoBind:true,
+                loadError:function(jqXHR, status, error){console.log(error)},
+             });
+
+            // prepare jqxChart settings
+            var settings = {
+                title: "Type of errors",
+                description: "",
+                enableAnimations: true,
+                showLegend: false,
+                showBorderLine: true,
+                legendPosition: { left: 520, top: 140, width: 100, height: 100 },
+                padding: { left: 5, top: 5, right: 5, bottom: 5 },
+                titlePadding: { left: 0, top: 0, right: 0, bottom: 10 },
+                colorScheme: 'scheme03',
+                seriesGroups:
+                    [
+                        {
+                            type: 'donut',
+                            showLabels: false,
+                            source: dataAdapter3,
+                            series:
+                                [
+                                    {
+                                        dataField: 'num',
+                                        displayText: 'error',
+                                        labelRadius: 100,
+                                        initialAngle: 15,
+                                        radius: 150,
+                                        innerRadius: 60,
+                                        centerOffset: 0,
+                                        formatSettings: { sufix: '%', decimalPlaces: 1 }
+                                    }
+                                ]
+                        }
+                    ]
+            };
+
+            // setup the chart
+            $('#chartContainer2').jqxChart(settings);
+        });
+    </script>
+</head>
+<body>
+<div id="jqxRibbon" style='float: left;'>
+				<ul id="tab">
+                    <li>General</li>
+                    <li>Statistics</li>
+                </ul>
+    <div>
+				<div id="jqxgrid">General</div>
+                <div style="width: 100%;">
+                    <div id="chartContainer" style="width: 50%; height: 400px; float:left"></div>
+                    <div id="chartContainer2" style="width: 50%; height: 400px; float:left"></div>
+                 </div>
+
+    </div>
+</div>
+
+</body>
+</html>

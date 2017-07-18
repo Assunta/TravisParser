@@ -26,6 +26,7 @@ def completeAnalysis(reponame):
         b=common_parse(repo,build)
         #per ogni job faccio l'analisi del log
         for job_id in build.job_ids:
+            print job_id+"*****************************"
             job=t.job(job_id)
             log_text = t.log(job.log_id).body
             log_text = (ansi_escape.sub('', log_text)).split("\n")
@@ -51,7 +52,6 @@ def common_parse(repo,build):
     b.setStatus(build.state)
     if repo.description is not None:
         b.setDescription(repo.description)
-    b.setBuildNumber(build.number)
     b.setCommitId(build.commit_id)
     b.setIsPullRequest(build.pull_request)
     if(build.pull_request):
@@ -72,4 +72,4 @@ def common_parse(repo,build):
     print b.toJSON()
     return b
 
-# completeAnalysis("Mashape/unirest-java")
+completeAnalysis("Mashape/unirest-java")
