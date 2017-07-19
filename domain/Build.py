@@ -28,6 +28,8 @@ class Build():
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)
 
+    def getBuildID(self):
+        return self.idBuild
 
     def setStatus(self, status):
         self.status=status

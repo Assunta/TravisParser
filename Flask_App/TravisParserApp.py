@@ -2,9 +2,15 @@ import random
 
 from flask import Flask, render_template, request, json
 
+from analisys.advancedStats import countStatStatus
+from analisys.completeParser import completeAnalysis
 from utility import dbUtility
 
+
+
+builds = []
 app = Flask(__name__)
+
 
 @app.route("/home")
 def main():
@@ -13,7 +19,9 @@ def main():
 @app.route("/results", methods=['POST'])
 def results():
     reponame = request.form['reponame']
-    return render_template('Builds_results.html', reponame=reponame)
+    global builds
+    builds = completeAnalysis(reponame)
+    return render_template('Builds_results.html', reponame=reponame, buildNum=builds.__len__())
 
 @app.route("/validateKey", methods=['POST'])
 def validateKey():
@@ -27,72 +35,26 @@ def validateKey():
 
 @app.route("/getBuild", methods=['GET'])
 def getBuild():
-    return json.dumps([{
-    "Branch": "master",
-    "Commit": "fix 92 issue https://github.com/Mashape/unirest-java/issues/92",
-    "CommitData": "",
-    "Duration": "03:11",
-    "FinishDate": "2017-05-29",
-    "FinishHour": "06:22:17",
-    "Language": "java",
-    "NumJobs": 4,
-    "PullId": "205",
-    "Sha": "4e46ec83085547545e5f575045437ce092156e47",
-    "StartDate": "2017-05-29",
-    "StartHour": "06:21:27",
-    "TitlePull": "fix 92 issue https://github.com/Mashape/unirest-java/issues/92",
-    "author": "\u0412\u0430\u0434\u0438\u043c \u0410\u043d\u0434\u0440\u0435\u0435\u0432\u0438\u0447 \u0413\u0430\u0443\u0437\u044f\u043a",
-    "buildNumber": "455",
-    "commitData": "2017-05-25",
-    "commitHour": "06:42:52",
-    "commitId": 68694757,
-    "description": "Unirest in Java: Simplified, lightweight HTTP client library.",
-    "email": "VAGauzyak.SBT@sberbank.ru",
-    "idBuild": "455",
-    "isPullRequest": True,
-    "status": "failed"
-},
-        {
-            "Branch": "master",
-            "Commit": "fix 92 issue https://github.com/Mashape/unirest-java/issues/92",
-            "CommitData": "",
-            "Duration": "03:11",
-            "FinishDate": "2017-05-29",
-            "FinishHour": "06:22:17",
-            "Language": "java",
-            "NumJobs": 4,
-            "PullId": "205",
-            "Sha": "4e46ec83085547545e5f575045437ce092156e47",
-            "StartDate": "2017-05-29",
-            "StartHour": "06:21:27",
-            "TitlePull": "fix 92 issue https://github.com/Mashape/unirest-java/issues/92",
-            "author": "\u0412\u0430\u0434\u0438\u043c \u0410\u043d\u0434\u0440\u0435\u0435\u0432\u0438\u0447 \u0413\u0430\u0443\u0437\u044f\u043a",
-            "buildNumber": "454",
-            "commitData": "2017-05-24",
-            "commitHour": "06:42:52",
-            "commitId": 68694757,
-            "description": "Unirest in Java: Simplified, lightweight HTTP client library.",
-            "email": "xxx@sberbank.ru",
-            "idBuild": "454",
-            "isPullRequest": True,
-            "status": "failed"
-        }
-    ])
+    return json.dumps(builds,default=lambda o: o.__dict__)
+
 
 @app.route("/getStatStatus", methods=['GET'])
 def getStatStatus():
+    stats=countStatStatus(builds)
+    print(stats)
+    # stats=[55.75, 24.15, 30.00 ]
     #TODO calcolare questi valori
     return json.dumps([
         {
-            "num": 40,
+            "num": stats[0],
             "status": "passed"
         },
         {
-        "num": 35,
+        "num": stats[1],
         "status":"failed"
         },
         {
-        "num":25,
+        "num":stats[2],
         "status":"errored"
         }
     ])

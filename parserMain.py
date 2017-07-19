@@ -64,9 +64,9 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\maven\\bitcoinj_bitcoinj\\bitcoinj-1844-174824456.txt', 'r')
 
 # #errori di test
-reponame="languagetool-org/languagetool"
-# f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
-f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4487-186715344.txt', 'r')
+# reponame="languagetool-org/languagetool"
+# # f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4133-177081242.txt', 'r')
+# f = open('logs\\maven\\languagetool-org_languagetool\\languagetool-4487-186715344.txt', 'r')
 
 
 #status passed

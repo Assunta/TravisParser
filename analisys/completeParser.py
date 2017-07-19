@@ -21,7 +21,7 @@ def completeAnalysis(reponame):
 
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
-    maxnumberbuilds = 2
+    maxnumberbuilds =10
     f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
     token = f.readline()
     t = TravisPy.github_auth(str(token))
@@ -56,6 +56,7 @@ def completeAnalysis(reponame):
                 buildUnderAnalysis.addLog(gradleLog)
             fIn.close()
             os.remove(str(job_id)+'.txt')
+        #print(buildUnderAnalysis.toJSON())
         allBuilds.append(buildUnderAnalysis)
     return allBuilds
 
@@ -68,7 +69,7 @@ def generalInfo(repo,build):
     if repo.description is not None:
         b.setDescription(repo.description)
     b.setCommitId(build.commit_id)
-    b.setIsPullRequest(build.pull_request)
+    b.setIsPullRequest(str(build.pull_request))
     if(build.pull_request):
         b.setTitlePull(build.pull_request_title)
         b.setPullId(str(build.pull_request_number))
@@ -84,21 +85,12 @@ def generalInfo(repo,build):
     b.setEmail(commit.author_email)
     b.setLanguage(build.config["language"])
     b.setNumJobs(len(build.job_ids))
-    # print b.toJSON()
+    #print b.toJSON()
     return b
 
 
 
 #check gradle o maven
-# you can alleviate the possible memory problems by using mmap.mmap()
-# to create a "string-like" object that uses the underlying file
-# (instead of reading the whole file in memory):
-# def checkGradleMaven(f):
-#     if any('[INFO] Scanning for projects' in s for s in f):
-#         return "maven"
-#     else:
-#         return "gradle"
-
 def checkGradleMavenFile(f):
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
     if s.find ('[INFO] Scanning for projects') != -1:
@@ -107,6 +99,6 @@ def checkGradleMavenFile(f):
         return "gradle"
 
 
-for b in completeAnalysis("languagetool-org/languagetool"):
-    print "*******************************************"
-    print b.toJSON()
+# for b in completeAnalysis("languagetool-org/languagetool"):
+#     print "*******************************************"
+    # print b.toJSON()

@@ -69,7 +69,7 @@ def parserRuby(f, log):
     log.setWarning(list(set(warningList)))
     log.setTool(list(set(toollist)))
     log.setStatusMessages(listStatusMessages)
-    print log.toJSON()
+    #print log.toJSON()
     return log
 
 # #check the presence of a command, warnings or dependencies

@@ -40,6 +40,7 @@
     <script type="text/javascript">
         var style='arctic'
         var reponame='{{reponame}}';
+        var numBuilds='{{buildNum}}';
         $(document).ready(function () {
 
         $("#jqxRibbon").jqxRibbon({ theme:style, width: "100%", position: "top", selectionMode: "click", animationType: "fade", scrollPosition: 'both'});
@@ -51,17 +52,18 @@
                 datatype: "json",
                 type:"GET",
                 datafields: [
-                    { name: 'buildNumber', type: 'string' },
-                    { name: 'status', type: 'string' },
-                    { name: 'StartDate', type: 'string' },
-                    { name: 'Duration', type: 'string' },
-                    { name: 'email', type: 'string' }
+                    { name: 'idBuild', type: 'string', map:'idBuild'  },
+                    { name: 'status', type: 'string', map: 'status' },
+                    { name: 'StartDate', type: 'string', map: 'StartDate' },
+                    { name: 'Duration', type: 'string', map: 'Duration' },
+                    { name: 'email', type: 'string', map:'email' }
                 ],
                 pager:function(pagenum,pagesize,oldpagenum){
                         console.log("page changed")
                 },
                 url: '/getBuild'
             };
+
             var dataAdapter = new $.jqx.dataAdapter(source);
             $("#jqxgrid").jqxGrid(
             {
@@ -74,7 +76,7 @@
                 columnsresize: true,
                 autoshowfiltericon: false,
                 columns: [
-                  { text: 'Build', datafield: 'buildNumber', width: '15%'},
+                  { text: 'Build', datafield: 'idBuild', width: '15%'},
                   { text: 'Status', datafield: 'status', width: '20%'},
                   { text: 'Date', datafield: 'StartDate',width: '20%' },
                   { text: 'Duration', datafield: 'Duration',width: '15%' },
@@ -90,7 +92,7 @@
             {
                 datatype: "json",
                 datafields: [
-                    { name: 'num', type:"number" },
+                    { name: 'num', type:"float" },
                     { name: 'status' }
                 ],
                 url: '/getStatStatus'
@@ -194,10 +196,14 @@
 
             // setup the chart
             $('#chartContainer2').jqxChart(settings);
+
+            $('#loading').hide()
         });
     </script>
 </head>
 <body>
+
+
 <div id="jqxRibbon" style='float: left;'>
 				<ul id="tab">
                     <li>General</li>
