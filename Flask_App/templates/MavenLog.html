@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--styles-->
+    <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
+	 <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.arctic.css" />
+
+
+    <style type="text/css">
+        .contentSection
+        {
+            padding: 5px;
+            text-align: justify;
+        }
+    </style>
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
+
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxribbon.js"></script>
+	<script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlayout.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
+        <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+
+    <script type="text/javascript">
+        var style='arctic'
+
+
+        $(document).ready(function () {
+            // prepare the data
+            var source =
+            {
+               datatype: "json",
+                type:"GET",
+                datafields: [
+                    { name: 'name', type: 'string'}
+
+                ],
+                 url: '/getSnapshot'
+                <!--localdata: [{ "Snapshot": "S1", "Details": "Details1" },-->
+                 <!--{ "Snapshot": "S2", "Details": "Details2" },-->
+                 <!--{ "Snapshot": "S3", "Details": "Details3" },-->
+                 <!--{ "Snapshot": "S4", "Details": "Details4" }]-->
+            };
+
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+
+            $("#snapshotGrid").jqxGrid(
+            {
+                width: 500,
+                autoheight: true,
+                source: dataAdapter,
+                keyboardnavigation: true,
+                columns: [
+                    { text: 'Snapshot', datafield: 'name', width: '100%' }
+
+                ]
+            });
+
+            // Details grid
+            // prepare the data
+            dataFields=[
+                        { name: 'snapshot', type: 'string'},
+                        { name: 'name', type: 'string'},
+                        { name: 'category', type: 'string' }
+                    ];
+            var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields: dataFields,
+                 url: '/getGoalList'
+            };
+
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            dataAdapter.dataBind();
+
+            // Test grid
+            // prepare the data
+            var dataFieldsTest = [
+                        { name: 'snapshot'},
+                        { name: 'testClass'},
+                         {name: 'run' },
+                         {name: 'failures' },
+                         {name: 'skipped' },
+                         {name: 'time' }
+                    ];
+
+            var sourceTest =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields: dataFieldsTest,
+                url: '/getTestsList'
+            };
+
+            var dataAdapterTest = new $.jqx.dataAdapter(sourceTest);
+            dataAdapterTest.dataBind();
+
+
+            $("#snapshotGrid").on('rowselect', function (event) {
+                var ID = event.args.rowindex;
+                //set data Goals
+                var records = new Array();
+                var length = dataAdapter.records.length;
+                for (var i = 0; i < length; i++) {
+                    var record = dataAdapter.records[i];
+                    if (record.snapshot == ID) {
+                        records[records.length] = record;
+                    }
+                }
+                //set Data Tests
+                 var recordsTest = new Array();
+                 var length = dataAdapterTest.records.length;
+                 for (var i = 0; i < length; i++) {
+                    var recordTest = dataAdapterTest.records[i];
+                    if (recordTest.snapshot == ID) {
+                        recordsTest[recordsTest.length] = recordTest;
+                    }
+                }
+
+                var dataSource = {
+                    datafields: dataFields,
+                    localdata: records
+                }
+                var adapter = new $.jqx.dataAdapter(dataSource);
+                // update data source.
+                $("#detailsGrid").jqxGrid({ source: adapter });
+
+                var dataSourceTest = {
+                    datafields: dataFieldsTest,
+                    localdata: recordsTest
+                }
+                var adapterTest = new $.jqx.dataAdapter(dataSourceTest);
+
+                // update data source.
+                $("#testsGrid").jqxGrid({ source: adapterTest });
+            });
+
+            $("#detailsGrid").jqxGrid(
+            {
+                width: 700,
+                autoheight: true,
+                keyboardnavigation: true,
+                columns: [
+                    { text: 'Goal', datafield: 'name', width: 550 },
+                    { text: 'Category', datafield: 'category', width: 150 }
+                ]
+            });
+
+             $("#testsGrid").jqxGrid(
+            {
+                width: 700,
+                autoheight: true,
+                keyboardnavigation: true,
+                columns: [
+                    { text: 'Class', datafield: 'testClass', width: 400 },
+                    { text: 'Run', datafield: 'run', width: 50 },
+                    { text: 'Failed', datafield: 'failures', width: 75 },
+                    { text: 'Skipped', datafield: 'skipped', width: 75 },
+                    { text: 'Time', datafield: 'time', width: 100 },
+
+                ]
+            });
+
+            $("#snapshotGrid").jqxGrid('selectrow', 0);
+         });
+    </script>
+</head>
+<body>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+
+        <div id="snapshotGrid" style="float:left">
+        </div>
+        <div style="float:left">
+            <div id="detailsGrid" > </div>
+            <div id="testsGrid" style="float:bottom"> </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,6 +12,10 @@ class RubyLog:
         self.toolList=list()
         self.statusMessageList=list()
         self.typeOfError = ""
+        self.buildTool = "Rake"
+
+    def getBuildTool(self):
+        return  self.buildTool
 
     def getTypeOfError(self):
         return self.typeOfError

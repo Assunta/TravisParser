@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Builds results</title>
+
+
+    <!--styles-->
     <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
 	 <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.arctic.css" />
+
 
     <style type="text/css">
         .contentSection
@@ -36,11 +40,33 @@
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
        <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxchart.core.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
+        <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
 
     <script type="text/javascript">
         var style='arctic'
         var reponame='{{reponame}}';
         var numBuilds='{{buildNum}}';
+
+        //function to show jobsDetails
+        function setJobDetails(dataJob){
+            $('#job_details').html("");
+            var tableJob=document.createElement('table');
+            tableJob.setAttribute("style","padding:15px; width:100%; text-align: left; vertical-align:top;")
+            html="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Job id</td><td>"+dataJob.name+"</td></tr>"+
+           "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Status</td><td>"+dataJob.status+"</td></tr>"
+            if (data.Job!="passed"){
+                html=html+"<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">typeOfError</td><td>"+dataJob.typeOfError+"</td></tr>"
+            }
+             tableJob.innerHTML=html
+             console.log(dataJob)
+            $('#job_details').append(tableJob);
+
+        }
+
+
         $(document).ready(function () {
 
         $("#jqxRibbon").jqxRibbon({ theme:style, width: "100%", position: "top", selectionMode: "click", animationType: "fade", scrollPosition: 'both'});
@@ -68,6 +94,7 @@
             $("#jqxgrid").jqxGrid(
             {
                 width: "100%",
+                autoheight: true,
                 source: dataAdapter,
                 sortable: true,
                 filterable: true,
@@ -83,6 +110,98 @@
                   { text: 'Commit Author', datafield: 'email',width: '30%' }
                 ]
             });
+            $("#jqxgrid").on('rowselect', function (event) {
+                 rowindex=event.args.rowindex
+                 data= $("#jqxgrid").jqxGrid('getrowdata', rowindex)
+                 id=data.idBuild
+                 $.ajax({
+                  url: '/getBuild/'+id,
+                  type: 'GET',
+                  success: function(response) {
+                  //clean old data
+                  $('#commit_details').html("");
+                  $('#build_details').html("");
+                   //set builds details
+                        var data= JSON.parse(response);
+                        var table=document.createElement('table');
+                        table.setAttribute("style","padding:15px; width:100%; text-align: left; vertical-align:top;")
+                        table.innerHTML="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td>Build ID</td><td>"+data.idBuild+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Status</td><td>"+data.status+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Description</td><td>"+data.description+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Language</td><td>"+data.Language+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Start</td><td>"+data.StartDate+" "+data.StartHour+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Finish</td><td>"+data.FinishDate+" "+data.FinishHour+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Duration</td><td>"+data.Duration+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Number of jobs</td><td>"+data.NumJobs+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left;  vertical-align:top;\"><td style=\"width: 30%\">Jobs</td><td id=\"dropDownList\"></td></tr>";
+                        $('#build_details').append(table);
+                        var sourceJobs = []
+                        for (var i=0; i<data.NumJobs; i++){
+                            sourceJobs.push(data.Logs[i].name);
+                        }
+                        $('#dropDownList').jqxDropDownList({ source: sourceJobs, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '25'});
+                        $('#dropDownList').on('select', function (event)
+                                {
+                                    var args = event.args;
+                                    // index represents the item's index.
+                                    var index = args.index;
+                                    console.log(index)
+                                });
+
+                    //set commit details
+                    var tableCommit=document.createElement('table');
+                        tableCommit.setAttribute("style","padding:15px; width:100%; text-align: left; vertical-align:top;")
+                        tableCommit.innerHTML="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td>Branch</td><td>"+data.Branch+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Commit</td><td>"+data.Commit+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Commit date</td><td>"+data.CommitData+" "+data.commitHour+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Author</td><td>"+data.author+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 30%\">Author email</td><td>"+data.email+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left;  vertical-align:top;\"><td style=\"width: 30%\">Pull request</td><td>"+data.TitlePull+"</td></tr>";
+                        $('#commit_details').append(tableCommit);
+
+                     setJobDetails(data.Logs[0])
+
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+            });
+
+
+             //layout details
+		var layout = [{
+                type: 'layoutGroup',
+                orientation: 'horizontal',
+                items: [{
+                    type: 'layoutGroup',
+                    orientation: 'vertical',
+                    width: '40%',
+                    items: [{
+                        type: 'documentGroup',
+                        height: '100%',
+                        minHeight: '25%',
+                        items: [{
+                            type: 'documentPanel',
+                            title: 'Build Info',
+                            contentContainer: 'GeneralInfo'
+                        }]
+                    }]
+                }, {
+                    type: 'tabbedGroup',
+                    width: '60%',
+                    items: [{
+                        type: 'layoutPanel',
+                        title: 'Job details',
+                        contentContainer: 'Details'
+                    }]
+                }]
+            }];
+            $('#jqxLayout').jqxLayout({ width: '100%', height: 400, layout: layout ,theme:style});
+            $("#jqxNavigationBar").jqxNavigationBar({ width: '100%', height: '100%'});
+
+
+
 
 
 
@@ -148,7 +267,7 @@
             {
                 datatype: "json",
                 datafields: [
-                    { name: 'num', type:"number" },
+                    { name: 'num', type:"float" },
                     { name: 'error' }
                 ],
                 url: '/getStatErrors'
@@ -197,27 +316,52 @@
             // setup the chart
             $('#chartContainer2').jqxChart(settings);
 
-            $('#loading').hide()
         });
     </script>
 </head>
 <body>
 
 
+<div id="desktop" style="width: 100%;">
 <div id="jqxRibbon" style='float: left;'>
 				<ul id="tab">
                     <li>General</li>
                     <li>Statistics</li>
                 </ul>
     <div>
-				<div id="jqxgrid">General</div>
-                <div style="width: 100%;">
+
+                <div>
+                    <div id="jqxgrid"style="height: 350px;">General</div>
+
+                    <div id="jqxLayout">
+                        <div data-container="GeneralInfo">
+
+                        <div id='jqxNavigationBar'>
+                            <div>
+                                Builds details</div>
+                            <div id="build_details">
+                                <div><BR>Please select a buid to see build's details</div>
+                            </div>
+                            <div>
+                                Commit details</div>
+                            <div id="commit_details">
+
+                            </div>
+                        </div>
+                        </div>
+                        <div data-container="Details">
+                            <div id="job_details"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div style="width: 90%;">
                     <div id="chartContainer" style="width: 50%; height: 400px; float:left"></div>
                     <div id="chartContainer2" style="width: 50%; height: 400px; float:left"></div>
                  </div>
 
     </div>
 </div>
-
+</div>
 </body>
 </html>

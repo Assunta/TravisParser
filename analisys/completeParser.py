@@ -17,8 +17,31 @@ from domain.RubyLog import RubyLog
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-def completeAnalysis(reponame):
+def getBuilds(reponame):
+    #TODO da testare
+    allBuilds = []
+    ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
+    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
+    token = f.readline()
+    t = TravisPy.github_auth(str(token))
+    repo = t.repo(reponame)
+    lastBuild= repo.last_build_number
+    print(lastBuild)
+    builds=completeAnalysis(reponame, lastBuild)
+    lastBuild=int(builds[-1].getBuildID())
+    print(lastBuild)
+    while (lastBuild>25):
+        lastBuild=builds[-1].getBuildID()
+        other_builds=completeAnalysis(reponame, lastBuild)
+        for b in other_builds:
+            builds.append(b)
+    return builds
 
+
+
+
+
+def completeAnalysis(reponame, afterBuild):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
     maxnumberbuilds =10
@@ -26,8 +49,9 @@ def completeAnalysis(reponame):
     token = f.readline()
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
-    builds = t.builds(slug=repo.slug)
-    for count in range(0, min(maxnumberbuilds, len(builds))):
+    builds = t.builds(slug=repo.slug )
+    #builds = t.builds(slug=repo.slug, after_number=afterBuild)
+    for count in range(0,min(maxnumberbuilds, len(builds))):
         # catch one build
         build = builds[count]
         #obtain general information about the build

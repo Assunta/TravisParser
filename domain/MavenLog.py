@@ -15,6 +15,10 @@ class MavenLog:
         self.parsedErrorsList=list()
         self.statusErrorList=list()
         self.typeOfError = ""
+        self.buildTool="Maven"
+
+    def getBuildTool(self):
+        return  self.buildTool
 
     def getTypeOfError(self):
         return self.typeOfError

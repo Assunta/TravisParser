@@ -14,10 +14,13 @@ class GradleLog:
         self.noteList = list()
         self.statusErrorList=list()
         self.typeOfError=""
+        self.buildTool = "Gradle"
 
     def getTypeOfError(self):
         return self.typeOfError
 
+    def getBuildTool(self):
+        return  self.buildTool
 
     def getCommand(self):
         return self.commandList
