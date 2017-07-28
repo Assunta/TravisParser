@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--styles-->
+    <link type="text/css" rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.base.css" />
+	 <link type="text/css" rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.arctic.css" />
+
+
+    <style type="text/css">
+        .contentSection
+        {
+            padding: 5px;
+            text-align: justify;
+        }
+    </style>
+    <script type="text/javascript" src="../jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../jqwidget/scripts/demos.js"></script>
+
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxmenu.js"></script>
+	<script type="text/javascript" src="../jqwidget/jqwidgets/jqxlayout.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxscrollbar.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+       <script type="text/javascript" src="../jqwidget/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+        <script type="text/javascript" src="../jqwidget/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxribbon.js"></script>
+
+     <script type="text/javascript">
+        var style='arctic'
+        var reponame='{{reponame}}';
+        var numBuilds='{{buildNum}}';
+
+
+
+        $(document).ready(function () {
+//first tab
+        //prepare data jqxgrid
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields: [
+                    { name: 'idBuild', type: 'string', map:'idBuild'  },
+                    { name: 'status', type: 'string', map: 'status' },
+                    { name: 'StartDate', type: 'string', map: 'StartDate' },
+                    { name: 'Duration', type: 'string', map: 'Duration' },
+                    { name: 'email', type: 'string', map:'email' },
+                    { name: 'numJobFailed', type: 'string', map:'numJobFailed'},
+                    { name: 'typeOfFailures', type: 'string', map:'typeOfFailures'}
+                ],
+                pager:function(pagenum,pagesize,oldpagenum){
+                        console.log("page changed")
+                },
+                url: '/getBuild'
+            };
+
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            $("#jqxgrid").jqxGrid(
+            {
+                width: "100%",
+                autoheight: true,
+                source: dataAdapter,
+                sortable: true,
+                filterable: true,
+                filtermode: 'excel',
+                pageable: true,
+                pagesizeoptions: [10, 15, 25],
+                pagesize: 15,
+                columnsresize: true,
+                autoshowfiltericon: false,
+                columns: [
+                  { text: 'Build', datafield: 'idBuild', width: '15%'},
+                  { text: 'Status', datafield: 'status', width: '10%'},
+                  { text: 'Number of job failed', datafield: 'numJobFailed',width: '15%' },
+                  { text: 'Type of failures', datafield: 'typeOfFailures',width: '10%' },
+                  { text: 'Date', datafield: 'StartDate',width: '15%' },
+                  { text: 'Duration', datafield: 'Duration',width: '15%' },
+                  { text: 'Commit Author', datafield: 'email',width: '20%' }
+
+                ]
+            });
+
+
+        });
+        </script>
+
+</head>
+<body>
+                <div class="container">
+                    <div id="jqxgrid"style="height: 350px;">General</div>
+
+                </div>
+</body>
+</html>

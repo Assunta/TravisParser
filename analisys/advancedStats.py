@@ -2,8 +2,8 @@ INTERNET=False
 
 #count the status of all builds
 def countStatStatus(results):
-    #passed, failed, errored
-    stats=[0.0,0.0,0.0]
+    #passed, failed, errored, cancled
+    stats=[0.0,0.0,0.0, 0.0]
     n= results.__len__()
     for build in results:
         if INTERNET:
@@ -16,9 +16,11 @@ def countStatStatus(results):
             stats[0]= stats[0]+1
         elif status=="failed":
             stats[1]=stats[1]+1
-        else:
+        elif status=="errored":
             stats[2]=stats[2]+1
-    return [stats[0]/n*100, stats[1]/n*100,stats[2]/n*100]
+        else:
+            stats[3] = stats[3] + 1
+    return [stats[0]/n*100, stats[1]/n*100,stats[2]/n*100,stats[3]/n*100]
 
 # count the reasons of failures
 def countReason(results):
@@ -26,11 +28,11 @@ def countReason(results):
     tot=0
     for b in results:
         if INTERNET:
-            for log in b:
+            for log in b.getLogs():
                 if log.getStatus()!="passed":
                     tot = tot + 1
                     error = log.getTypeOfError()
-                    alue = reason.get(error, None)
+                    value = reason.get(error, None)
                     if value is not None:
                         reason[error] = reason.get(error) + 1.0
                     else:

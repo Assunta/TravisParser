@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--styles-->
+    <link type="text/css" rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.base.css" />
+	 <link type="text/css" rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.arctic.css" />
+
+
+    <style type="text/css">
+        .contentSection
+        {
+            padding: 5px;
+            text-align: justify;
+        }
+    </style>
+    <script type="text/javascript" src="../jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../jqwidget/scripts/demos.js"></script>
+
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxmenu.js"></script>
+	<script type="text/javascript" src="../jqwidget/jqwidgets/jqxlayout.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxscrollbar.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+       <script type="text/javascript" src="../jqwidget/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+        <script type="text/javascript" src="../jqwidget/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxribbon.js"></script>
+
+     <script type="text/javascript">
+        var style='arctic'
+        var reponame='{{reponame}}';
+        var numBuilds='{{buildNum}}';
+
+        $(document).ready(function () {
+
+         $("#panelBuild").jqxPanel({ height: 300});
+         $("#panelCommit").jqxPanel({ height: 300});
+         $("#panelJob").jqxPanel({height: 900});
+
+
+          //function to show jobsDetails
+        function setJobDetails(dataJob, rowindex){
+            $('#panelJob').jqxPanel('clearcontent');
+            var tableJob=document.createElement('table');
+            tableJob.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
+            html="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 10%\"><b>Job id:</b></td><td>"+dataJob.name+
+            "</td><td style=\"width: 10%\"><b>Status:</b></td><td>"+dataJob.status+"</td>"+
+             "</td><td style=\"width: 15%\"><b>Build tool:</b></td><td>"+dataJob.buildTool+"</td>";
+            if (dataJob.status!="passed"){
+                html=html+"<td style=\"width: 20%\"><b>Type of error:</b></td><td>"+dataJob.typeOfError+"</td></tr></table>";
+            }
+            else{html=html+"</tr></table>"}
+            tableJob.innerHTML=html
+            $('#panelJob').jqxPanel('append', tableJob);
+
+            //check buildTool and display results
+            if(dataJob.buildTool=="Maven"){
+                //maven log
+                //statusMessages
+                var tableJobMaven=document.createElement('table');
+                tableJobMaven.setAttribute("style","padding:5px; width:100%; text-align: left; vertical-align:top;")
+                htmlMaven="<tr style=\"padding:15px; text-align: left; vertical-align:top;\">"+
+                "<td style=\"width: 10%\"><b><BR>Status messages:</b></td>"+"<td style=\"width: 40%\">";
+                var statusMessages="<ul>";
+                for (var i=0; i<dataJob.statusErrorList.length; i++){
+                    statusMessages=statusMessages+"<li>"+dataJob.statusErrorList[i]+"</li>";
+                }
+                htmlMaven=htmlMaven+statusMessages+"</ul></td>";
+
+                //errorMessages
+                //check if there are errorMessages
+                if(dataJob.parsedErrorsList.length>0){
+                    htmlMaven=htmlMaven+"<td style=\"width: 10%\"><b><BR>Errors:</b></td>"+"<td>";
+                    var errorMessages="<table style=\"padding:15px;padding-left:15px; width:95%; text-align: left; vertical-align:top; border-bottom: 1px solid #ddd;\">"+
+                    "<tr style=\" border-bottom: 1px solid #ddd;\"><td style=\"width: 20%\"><i>Task</i></td style=\"width: 20%\"><td><i>Category</i></td><td style=\"width: 60%\"><i>Message</i></td></tr>";
+                    for (var i=0; i<dataJob.parsedErrorsList.length; i++){
+                        errorMessages=errorMessages+"<tr style=\" border-bottom: 1px solid #ddd;\"><td style=\"width: 20%\">"+dataJob.parsedErrorsList[i]['task']+"</td>"+
+                        "<td style=\"width: 20%\">"+dataJob.parsedErrorsList[i]['category']+"</td>"+
+                        "<td style=\"width: 60%\">"+dataJob.parsedErrorsList[i]['name']+"</td>";
+                    }
+                    htmlMaven=htmlMaven+errorMessages+"</tr></table></td>";
+                }
+
+
+                htmlMaven=htmlMaven+"</tr></table>";
+                tableJobMaven.innerHTML=htmlMaven;
+                $('#panelJob').jqxPanel('append', tableJobMaven);
+
+                 //add snapshots and goals details
+                 //create snapshot table
+                 var snapshotGrid=document.createElement('div');
+                 snapshotGrid.setAttribute("style","padding:5px; width:30%; float:left; clear:both;");
+                 snapshotGrid.setAttribute("id", "snapshotGrid");
+                 $('#panelJob').jqxPanel('append', snapshotGrid);
+
+
+                 //create goal table
+                  var goalGrid=document.createElement('div');
+                 goalGrid.setAttribute("style","float:left;");
+                 goalGrid.setAttribute("id", "goalPanel");
+
+                 $('#panelJob').jqxPanel('append', goalGrid);
+                 // prepare the data snapshot grid
+                var source =
+                {
+                    localdata: dataJob.snapshotList,
+                    datatype: "array",
+                    datafields: [
+                        { name: 'name', type: 'string'}
+
+                    ]
+                };
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#snapshotGrid").jqxGrid(
+                {
+                    width: 400,
+                    autoheight: true,
+                    source: dataAdapter,
+                    keyboardnavigation: true,
+                    columnsresize: true,
+                    columns: [
+                        { text: 'Snapshot', datafield: 'name', width: '100%' }
+
+                    ]
+                });
+                // define goal panel
+                $("#goalPanel").jqxPanel({height: 300, width: 600});
+                $("#goalPanel").wrap("<div class='container' style=\"float:left\"></div>")
+
+
+
+                $("#snapshotGrid").on('rowselect', function (event) {
+                var ID = event.args.rowindex;
+                $('#goalPanel').jqxPanel('clearcontent');
+                goals=dataJob.snapshotList[ID].goalList;
+                 var tableGoals=document.createElement('table');
+                tableGoals.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
+                html="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 70%\"><b>Goal</b></td><td><b>Category</b></td></tr>"
+                for (var i=0; i<goals.length; i++){
+                    html=html+"<tr><td>"+goals[i].name+"</td><td>"+goals[i].category+"</td></tr>";
+                 }
+                html=html+"</table>";
+                 $('#goalPanel').jqxPanel('append', html);
+
+
+                 //define test panel
+                 if (dataJob.snapshotList[ID].test.length>0){
+                     //create test table
+                  var testGrid=document.createElement('div');
+                 testGrid.setAttribute("style","float:bottom;");
+                 testGrid.setAttribute("id", "testPanel");
+                 <!--$('#panelJob').jqxPanel('append', testGrid);-->
+                 $('.container').append(testGrid)
+
+                  $("#testPanel").jqxPanel({height: 300, width: 600});
+                 $('#testPanel').jqxPanel('clearcontent');
+                tests=dataJob.snapshotList[ID].test;
+                 var tableTests=document.createElement('table');
+                tableTests.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
+                html="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 70%\"><b>Class</b></td><td><b>Run</b></td>"+
+                "<td><b>Failures<b></td><td><b>Errors</b></td><td><b>Skipped</b></td><td><b>Time</b><td></tr>"
+                for (var i=0; i<tests.length; i++){
+                    html=html+"<tr><td>"+tests[i].testClass+"</td><td>"+tests[i].run+"</td>"+
+                    "<td>"+ tests[i].failures+"</td>"+"<td>"+ tests[i].errors+"</td>"+"<td>"+ tests[i].skipped+"</td>"+"<td>"+ tests[i].time+"</td></tr>";
+                 }
+                html=html+"</table>";
+                 $('#testPanel').jqxPanel('append', html);
+
+                 }
+                 else{$('#testPanel').remove();}
+            });
+            }
+
+
+            // gradle
+            // ruby
+
+        }
+
+                //function to show build details
+        function buildDetails(id){
+             $.ajax({
+                  url: '/getBuild/'+id,
+                  type: 'GET',
+                  success: function(response) {
+                  //clean old data
+                  <!--$('#details').html("");-->
+                  $('#panelBuild').jqxPanel('clearcontent');
+                  $('#panelCommit').jqxPanel('clearcontent');
+
+                   //set builds details
+                        var data= JSON.parse(response);
+                        var table=document.createElement('table');
+                        table.setAttribute("style","padding:15px; width:100%; text-align: left; vertical-align:top;")
+                        table.innerHTML="<thead><tr><th colspan=\"2\"><center><H3>Build details</H3><center></th></tr></thead>"+
+                        "<tbody>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td><b>Build ID</b></td><td>"+data.idBuild+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Status:</b></td><td>"+data.status+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Description:</b></td><td>"+data.description+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Language:</b></td><td>"+data.Language+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Start:</b></td><td>"+data.StartDate+" "+data.StartHour+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Finish:</b></td><td>"+data.FinishDate+" "+data.FinishHour+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Duration:</b></td><td>"+data.Duration+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Number of jobs:</b></td><td>"+data.NumJobs+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left;  vertical-align:top;\"><td style=\"width: 35%\"><b>Jobs:</b></td><td id=\"dropDownList\"></td></tr>"
+                        +"</tbody></table>";
+                        $('#panelBuild').jqxPanel('append', table);
+
+                        var sourceJobs = []
+                        for (var i=0; i<data.NumJobs; i++){
+                            sourceJobs.push(data.Logs[i].name);
+                        }
+                        $('#dropDownList').jqxDropDownList({ source: sourceJobs, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '25'});
+                        $('#dropDownList').on('select', function (event)
+                                {
+                                    var args = event.args;
+                                    // index represents the item's index.
+                                    var index = args.index;
+                                    setJobDetails(data.Logs[index])
+                                });
+
+                    //set commit details
+                    var tableCommit=document.createElement('table');
+                        tableCommit.setAttribute("style","padding:15px; width:100%; text-align: left; vertical-align:top;")
+                        tableCommit.innerHTML="<thead><tr><th colspan=\"2\"><center><H3>Commit details</H3><center></th></tr></thead>"+
+                        "<tbody>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;width:35%;\"><td><b>Branch:</b></td><td>"+data.Branch+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top; width:35%;\"><td ><b>Commit:</b></td><td>"+data.Commit+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;width:35%;\"><td><b>Commit date:</b></td><td>"+data.CommitData+" "+data.commitHour+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;width:35%;\"><td><b>Author:</b></td><td>"+data.author+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left; vertical-align:top;width:35%;\"><td ><b>Author email:</b></td><td>"+data.email+"</td></tr>"+
+                        "<tr style=\"padding:15px; text-align: left;  vertical-align:top;width:35%;\"><td><b>Pull request:</b></td><td>"+data.TitlePull+"</td></tr>"
+                        +"</tbody></table>";
+
+                    $('#panelCommit').jqxPanel('append', tableCommit);
+                    setJobDetails(data.Logs[0])
+
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+        }
+
+        //prepare data jqxgrid
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields: [
+                    { name: 'idBuild', type: 'string', map:'idBuild'  },
+                    { name: 'status', type: 'string', map: 'status' },
+                ],
+                url: '/getBuild'
+            };
+
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            $("#jqxgrid").jqxGrid(
+            {
+                width: "20%",
+                height:"600px",
+                source: dataAdapter,
+                sortable: true,
+                filterable: true,
+                filtermode: 'excel',
+                pageable: false,
+                columnsresize: true,
+                autoshowfiltericon: false,
+                columns: [
+                  { text: 'Build', datafield: 'idBuild', width: '40%'},
+                  { text: 'Status', datafield: 'status', width: '60%'}
+                ]
+            });
+            $("#jqxgrid").on('rowselect', function (event) {
+                 rowindex=event.args.rowindex
+                 data= $("#jqxgrid").jqxGrid('getrowdata', rowindex)
+                 id=data.idBuild
+                 buildDetails(id)
+            });
+
+        });
+        </script>
+
+</head>
+<body>
+                <div class="container" style="width:100%;">
+                    <div id="jqxgrid" style="float:left;"></div>
+                    <div id="details" style="float:left; width:79%">
+                        <div id="panelBuild" style="float:left; width:49%"></div>
+                        <div id="panelCommit" style="float:left; width:49%"></div>
+                        <div id="panelJob" style="float:bottom; width:98%">
+
+                        </div>
+                    </div>
+                </div>
+
+</body>
+</html>

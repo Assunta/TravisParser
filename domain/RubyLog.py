@@ -77,7 +77,7 @@ class RubyLog:
         try:
             self.typeOfError=lista[-1].getCategory();
         except:
-            self.typeOfError=""
+            self.typeOfError="other"
     def setStatusMessages(self, l):
         self.statusMessageList=l
 

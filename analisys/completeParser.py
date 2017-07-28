@@ -26,15 +26,19 @@ def getBuilds(reponame):
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
     lastBuild= repo.last_build_number
-    print(lastBuild)
+    print "last build: " + str(lastBuild)
     builds=completeAnalysis(reponame, lastBuild)
     lastBuild=int(builds[-1].getBuildID())
-    print(lastBuild)
-    while (lastBuild>25):
-        lastBuild=builds[-1].getBuildID()
+    print "last build: "+str(lastBuild)
+    for b in builds:
+        print b.getBuildID()
+    while (lastBuild>1):
         other_builds=completeAnalysis(reponame, lastBuild)
         for b in other_builds:
             builds.append(b)
+            print b.getBuildID()
+        lastBuild = int(other_builds[-1].getBuildID())
+        print "last build: " + str(lastBuild)
     return builds
 
 
@@ -44,13 +48,13 @@ def getBuilds(reponame):
 def completeAnalysis(reponame, afterBuild):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
-    maxnumberbuilds =10
+    maxnumberbuilds =25
     f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
     token = f.readline()
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
-    builds = t.builds(slug=repo.slug )
-    #builds = t.builds(slug=repo.slug, after_number=afterBuild)
+    #builds = t.builds(slug=repo.slug )
+    builds = t.builds(slug=repo.slug, after_number=afterBuild)
     for count in range(0,min(maxnumberbuilds, len(builds))):
         # catch one build
         build = builds[count]
@@ -58,28 +62,33 @@ def completeAnalysis(reponame, afterBuild):
         buildUnderAnalysis= generalInfo(repo, build)
         #job analysis
         for job_id in build.job_ids:
-            job = t.job(job_id)
-            log_text = t.log(job.log_id).body
-            log_text = (ansi_escape.sub('', log_text))
-            #I have to write the log into a file because if I analyze the logstring the scripts don't work....
-            fOut = open(str(job_id)+'.txt','w+')
-            fOut.write(log_text)
-            fOut.close()
-            #TODO pensare bene qui se ci puo' essere conflitto con il nome del file
-            fIn=open(str(job_id)+'.txt','r')
-            language = build.config["language"]
-            tool = checkGradleMavenFile(fIn)
-            if (tool == "maven"):
-                mavenLog = parserMaven(fIn, MavenLog(job_id))
-                buildUnderAnalysis.addLog(mavenLog)
-            elif language == "ruby":
-                rubyLog = parserRuby(fIn, RubyLog(job_id))
-                buildUnderAnalysis.addLog(rubyLog)
-            else:  # (tool == "gradle"):
-                gradleLog = parserGradle(fIn, GradleLog(job_id))
-                buildUnderAnalysis.addLog(gradleLog)
-            fIn.close()
-            os.remove(str(job_id)+'.txt')
+            try:
+                job = t.job(job_id)
+                log_text = t.log(job.log_id).body
+                log_text = (ansi_escape.sub('', log_text))
+                #I have to write the log into a file because if I analyze the logstring the scripts don't work....
+                fOut = open(str(job_id)+'.txt','w+')
+                fOut.write(log_text)
+                fOut.close()
+                #TODO pensare bene qui se ci puo' essere conflitto con il nome del file
+                fIn=open(str(job_id)+'.txt','r')
+                language = build.config["language"]
+                tool = checkGradleMavenFile(fIn)
+                if (tool == "maven"):
+                    mavenLog = parserMaven(fIn, MavenLog(job_id))
+                    buildUnderAnalysis.addLog(mavenLog)
+                elif language == "ruby":
+                    rubyLog = parserRuby(fIn, RubyLog(job_id))
+                    buildUnderAnalysis.addLog(rubyLog)
+                else:  # (tool == "gradle"):
+                    gradleLog = parserGradle(fIn, GradleLog(job_id))
+                    buildUnderAnalysis.addLog(gradleLog)
+                fIn.close()
+                os.remove(str(job_id)+'.txt')
+            except Exception,e:
+                print "Some exception"+ str(e)
+                fIn.close()
+                os.remove(str(job_id) + '.txt')
         #print(buildUnderAnalysis.toJSON())
         allBuilds.append(buildUnderAnalysis)
     return allBuilds
@@ -99,7 +108,8 @@ def generalInfo(repo,build):
         b.setPullId(str(build.pull_request_number))
     b.setStart(str(build.started_at))
     b.setFinish(str(build.finished_at))
-    b.setDuration(build.duration)
+    if build.duration is not None:
+        b.setDuration(build.duration)
     b.setCommitSHA(commit.sha)
     b.setBranch(commit.branch)
     b.setCommit(commit.message)

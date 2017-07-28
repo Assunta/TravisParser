@@ -52,7 +52,7 @@ class GradleLog:
             error= Error(e.split("\t")[2].replace(">","").strip())
             error.setCategory(e.split("\t")[1])
             error.setTask(e.split("\t")[0])
-            # #potrei aggiungere altre regole per matchare errori che non appartengono a un task classificato
+            #check error outside tasks
             # if re.match("(.)*No such file or directory(.)*", error.getName()):
             #     error.setCategory("dependencies")
             listaErroriParsati.append(error)

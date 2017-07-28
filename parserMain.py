@@ -38,8 +38,8 @@ from domain.RubyLog import RubyLog
 
 
 #compilation error e errore di lettura file zip
-# reponame="tinkerpop/gremlin"
-# f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
+reponame="tinkerpop/gremlin"
+f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
 
 #errori di compilazione
 # reponame="pulse00/Twig-Eclipse-Plugin"

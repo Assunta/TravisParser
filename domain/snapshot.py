@@ -20,8 +20,13 @@ class Snapshot:
             t=TestMaven(test.strip())
             self.test.append(t)
         else:
-            dati=test.split(",")
-            t=self.test.pop(-1)
+            try:
+                t=self.test.pop(-1)
+                dati = test.split(",")
+            except IndexError:
+                t = TestMaven(test.split("- in")[1].strip())
+                self.test.append(t)
+                dati= test.split("- in")[0].split(",")
             t.setRun(dati[0].replace("Tests run:", "").strip())
             t.setFailures(dati[1].replace("Failures:", "").strip())
             t.setErrors(dati[2].replace("Errors:", "").strip())
@@ -31,6 +36,8 @@ class Snapshot:
             except IndexError:
                 t.setTime("")
             self.test.append(t)
+
+
 
 
     def getName(self):

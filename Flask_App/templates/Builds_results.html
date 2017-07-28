@@ -82,7 +82,9 @@
                     { name: 'status', type: 'string', map: 'status' },
                     { name: 'StartDate', type: 'string', map: 'StartDate' },
                     { name: 'Duration', type: 'string', map: 'Duration' },
-                    { name: 'email', type: 'string', map:'email' }
+                    { name: 'email', type: 'string', map:'email' },
+                    { name: 'numJobFailed', type: 'string', map:'numJobFailed'},
+                    { name: 'typeOfFailures', type: 'string', map:'typeOfFailures'}
                 ],
                 pager:function(pagenum,pagesize,oldpagenum){
                         console.log("page changed")
@@ -104,10 +106,13 @@
                 autoshowfiltericon: false,
                 columns: [
                   { text: 'Build', datafield: 'idBuild', width: '15%'},
-                  { text: 'Status', datafield: 'status', width: '20%'},
-                  { text: 'Date', datafield: 'StartDate',width: '20%' },
+                  { text: 'Status', datafield: 'status', width: '10%'},
+                  { text: 'Number of job failed', datafield: 'numJobFailed',width: '15%' },
+                  { text: 'Type of failures', datafield: 'typeOfFailures',width: '10%' },
+                  { text: 'Date', datafield: 'StartDate',width: '15%' },
                   { text: 'Duration', datafield: 'Duration',width: '15%' },
-                  { text: 'Commit Author', datafield: 'email',width: '30%' }
+                  { text: 'Commit Author', datafield: 'email',width: '20%' }
+
                 ]
             });
             $("#jqxgrid").on('rowselect', function (event) {

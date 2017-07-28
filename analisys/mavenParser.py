@@ -54,6 +54,10 @@ def parserMaven(f, mavenLog):
             if not (re.match(values["DEPENDENCIES_FILTER"], line)):
                 str = line.split(" ")[2].split('/')[-1][:-4]
                 dependenciesList.append(str)
+        elif re.match(values["DEPENDENCIES_WITHOUT_INFO"], line):
+            if not (re.match(values["DEPENDENCIES_FILTER"], line)):
+                str = line.split("Downloaded:")[1].strip().split(" ")[0].split('/')[-1][:-4]
+                dependenciesList.append(str)
 
         #status=checkStatus(line)
         for mess in statusMessage:
@@ -68,7 +72,7 @@ def parserMaven(f, mavenLog):
     mavenLog.addWarningList(list(warning))
     mavenLog.getError()
     mavenLog.setStatus(status)
-    mavenLog.setStatusError(statusErrorList)
+    mavenLog.setStatusError(list(set(statusErrorList)))
     mavenLog.setDependencies(dependenciesList)
     #print mavenLog.toJSON()
     return mavenLog

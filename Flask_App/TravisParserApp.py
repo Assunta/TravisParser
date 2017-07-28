@@ -26,13 +26,13 @@ def results():
     reponame = request.form['reponame']
     global builds
     if(INTERNET):
-        builds = completeAnalysis(reponame, 0)
         #TODO da testare ancora connessione permettendo
-        # builds=getBuilds(reponame)
-        store(builds, "backupfatfreecrm")
+        builds=getBuilds(reponame)
+        store(builds, "backupRubyJrubyWarbler")
     else:
-         builds=restore("backupspringside")
-    return render_template('Builds_results.html', reponame=reponame, buildNum=builds.__len__())
+         builds=restore("backupMaven")
+    return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
+
 
 @app.route("/validateKey", methods=['POST'])
 def validateKey():
@@ -48,7 +48,7 @@ def validateKey():
 def getBuild():
     rows=[]
     for b in builds:
-        rows.append(Row(b))
+        rows.append(Row(b, INTERNET))
     return json.dumps(rows,default=lambda o: o.__dict__)
 
 @app.route("/getBuild/<idBuild>", methods=['GET'])
@@ -75,12 +75,15 @@ def getStatStatus():
         {
             "num":stats[2],
             "status":"errored"
+        },
+        {
+            "num": stats[3],
+            "status": "canceled"
         }
     ])
 
 @app.route("/getStatErrors", methods=['GET'])
 def getStatErrors():
-    #TODO calcolare questi valori
     result=countReason(builds)
     data=[]
     for key, v in result.iteritems():
@@ -90,34 +93,40 @@ def getStatErrors():
     return json.dumps(data,default=lambda o: o.__dict__)
 
 
-@app.route("/mavenLog")
-def showMavenLog():
-    return render_template('MavenLog.html')
+# @app.route("/mavenLog")
+# def showMavenLog():
+#     return render_template('MavenLog.html')
 
-@app.route("/getSnapshot", methods=['GET'])
-def getSnapshot():
-    builds = restore("backup3")
-    logs= builds[1]["Logs"]
-    data=logs[0]["snapshotList"]
-    return json.dumps(data,default=lambda o: o.__dict__)
+# @app.route("/getSnapshot", methods=['GET'])
+# def getSnapshot():
+#     builds = restore("backup3")
+#     logs= builds[1]["Logs"]
+#     data=logs[0]["snapshotList"]
+#     return json.dumps(data,default=lambda o: o.__dict__)
 
-@app.route("/getGoalList", methods=['GET'])
-def getGoalList():
-    builds = restore("backup3")
-    logs= builds[1]["Logs"]
-    result = []
-    i=0
-    for s in logs[0]["snapshotList"]:
-        data=s["goalList"]
-        for goal in data:
-            result.append(GoalRow(goal,i))# snapshot[0]["name"]))
-        i=i+1
-    return json.dumps(result,default=lambda o: o.__dict__)
+# @app.route("/getGoalList/<idBuild>/<idJob>", methods=['GET'])
+# def getGoalList(idBuild, idJob):
+#     print idBuild
+#     print idJob
+#     if (INTERNET):
+#         index = int(builds[0].getBuildID()) - int(idBuild)
+#     else:
+#         index = int(builds[0]["idBuild"]) - int(idBuild)
+#
+#     logs= builds[index]["Logs"]
+#     result = []
+#     i=0
+#     for s in logs[0]["snapshotList"]:
+#         data=s["goalList"]
+#         for goal in data:
+#             result.append(GoalRow(goal,i, INTERNET))# snapshot[0]["name"]))
+#         i=i+1
+#     return json.dumps(result,default=lambda o: o.__dict__)
 
 @app.route("/getTestsList", methods=['GET'])
 def getTestsList():
     builds = restore("backup3")
-    logs= builds[1]["Logs"]
+    logs= builds[2]["Logs"]
     result = []
     i=0
     for s in logs[0]["snapshotList"]:
@@ -126,9 +135,14 @@ def getTestsList():
             result.append(TestRow(test,i))# snapshot[0]["name"]))
         i=i+1
     return json.dumps(result,default=lambda o: o.__dict__)
+@app.route("/getInfoLog/<idLog>", methods=['GET'])
+def getInfoLog(idLog):
+    builds = restore("backup3")
+    logs = builds[0]["Logs"]
+    return json.dumps(logs[0], default=lambda o: o.__dict__)
 
 if __name__ == "__main__":
     #debug=true mi evita di spegnere e riaccendere il server quando faccio modifiche in fase di sviluppo
     #TODO togliero per il rilascio
-    app.run(debug=True)
+    app.run(debug=True, threaded=True)
 

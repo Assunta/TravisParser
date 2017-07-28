@@ -5,8 +5,14 @@
         <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
       <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.summer.css" />
 
-
+    	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap-theme.min.css" />
     <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/jqwidget/styles/style.css" />
+
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxinput.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxtooltip.js"></script>
@@ -34,9 +40,9 @@
 
             var style='summer'
             // menu definition
-             $("#jqxMenu").jqxMenu({ width: '100%', height: '30px', showTopLevelArrows: true, autoOpen: true, theme:style});
-             $("#jqxMenu").jqxMenu('minimize');
-             $("#jqxMenu").css('visibility', 'visible');
+             <!--$("#jqxMenu").jqxMenu({ width: '100%', height: '30px', showTopLevelArrows: true, autoOpen: true, theme:style});-->
+             <!--$("#jqxMenu").jqxMenu('minimize');-->
+             <!--$("#jqxMenu").css('visibility', 'visible');-->
 
             // Create jqxExpander.
             $("#insertRepo").jqxExpander({theme:style,  toggleMode: 'none', width: '350px', showArrow: false });
@@ -92,18 +98,19 @@
     </div>
 
 
-<div style='height: 50px;'>
-            <div id='jqxMenu' style='visibility: hidden; margin-left: 3px;'>
-                 <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li>Settings
-                        <ul style='width: 250px;'>
-                            <li><a href="#settings">Settings....</a></li>
-                        </ul>
-                    </li>
-                 </ul>
+ <div class="header-wrap">
+        <div class="container">
+            <div class="row" style="padding-top:1.2em;">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <ul class="list-inline pull-right topBar">
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-right:0.3em"></span>Help</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:0.3em"></span>Settings</p></li>
+                    </ul>
+                </div>
             </div>
-</div>
+        </div>
+    </div>
 
 
     <div id="insertRepo" style="font-family: Verdana; font-size: 18px; position:absolute; top:25%; left: 33%; text-align:center;">
@@ -112,15 +119,15 @@
         </div>
         <div style="font-family: Verdana; font-size: 16px; text-align:center;">
             <form id="form" action="{{url_for('results')}}" method="post" style="overflow: hidden; margin: 10px; text-align:center;">
-                 <label for="repoName" class="sr-only">Git username</label>
+                 <label for="repoName" >Git username</label>
 
                  <input type="name" name="username" id="userName" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
                     <BR><BR>
-                 <label for="repoName" class="sr-only">Repository Name</label>
+                 <label for="repoName" >Repository Name</label>
 
                  <input type="name" name="reponame" id="repoName" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
                     <BR><BR>
-                 <label for="repoName" class="sr-only">Git key</label>
+                 <label for="repoName" >Git key</label>
 
                  <input type="name" name="gitkey" id="gitKey" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
                     <BR><BR>

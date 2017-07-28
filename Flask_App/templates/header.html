@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Travis parser</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
+    <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/jqwidget/styles/style.css" />
+    <script type="text/javascript">
+
+        $(document).ready(function ()
+        {
+
+            $('#navBar ul li').click(function (event)
+            {
+                $('#navBar').find('.active').removeClass('active');
+                $(this).addClass("active");
+
+                $('.navbar-collapse').collapse('hide');
+
+                switch (event.target.id)
+                {
+                    case "generalTab":
+                        $('.iframeContainer').height(1000);
+                        $('#iframe').attr('src', '../static/iframe/Analysis_result.html');
+                        break;
+                    case "detailsTab":
+                        $('.iframeContainer').height(1200);
+                        $('#iframe').attr('src', '../static/iframe/Build_details.html');
+                        break;
+                    case "statisticsTab":
+                        $('.iframeContainer').height(1000);
+                        $('#iframe').attr('src', '../static/iframe/Statistics.html');
+                        break;
+
+                    default:
+                        console.log("Something went wrong!");
+                }
+            });
+
+            $('.topBar li').on('click', function (e)
+            {
+                if (e.currentTarget.textContent)
+                {
+                    alert(e.currentTarget.textContent);
+                } else
+                {
+                    alert('Logging Out')
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div class="header-wrap">
+        <div class="container">
+            <div class="row" style="padding-top:1.2em;">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <ul class="list-inline pull-right topBar">
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-right:0.3em"></span>Help</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:0.3em"></span>Settings</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span></p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav" id="navDiv">
+        <div class="container">
+            <nav class="navbar navbar-default ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navBar">
+                    <ul class="nav navbar-nav">
+                        <li class="active navLi" id="generalTab" style="margin-left:0.5em;"><small><span class="glyphicon glyphicon-dashboard" style="margin-right:0.3em;"></span></small>Analysis results</li>
+                        <li class="navLi" id="detailsTab"><small><span class="glyphicon glyphicon-tasks" style="margin-right:0.3em;"></span></small>Build details</li>
+                        <li class="navLi" id="statisticsTab"><small><span class="glyphicon glyphicon-book" style="margin-right:0.3em;"></span></small>Statistics</li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+ <div class="iframeContainer" style="width: 100%;float: left;">
+       <iframe id="iframe" src="../static/iframe/Analysis_result.html"></iframe>
+    </div>
+
+
+</body>
+</html>

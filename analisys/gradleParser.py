@@ -94,7 +94,7 @@ def parserGradle(f, gradleLog):
     gradleLog.addListaNote(list(set(noteList)))
     gradleLog.addDependencies(dependenciesList)
     gradleLog.setStatus(status)
-    gradleLog.setListaErroriStatus(statusErrorList)
+    gradleLog.setListaErroriStatus(list(set(statusErrorList)))
 
     # print gradleLog.toJSON()
     return gradleLog

@@ -50,12 +50,20 @@ class Build():
         self.PullId=n
 
     def setStart(self, start):
-        self.StartDate= start.split("T")[0]
-        self.StartHour= start.split("T")[1].replace("Z","")
+        try:
+            self.StartDate= start.split("T")[0]
+            self.StartHour= start.split("T")[1].replace("Z","")
+        except IndexError:
+            self.StartDate = ""
+            self.StartHour = ""
 
     def setFinish(self, start):
-        self.FinishDate = start.split("T")[0]
-        self.FinishHour = start.split("T")[1].replace("Z","")
+        try:
+            self.FinishDate = start.split("T")[0]
+            self.FinishHour = start.split("T")[1].replace("Z","")
+        except IndexError:
+            self.FinishDate = ""
+            self.FinishHour = ""
 
     def setDuration(self, d):
         self.Duration= '%02d:%02d' % ((d/ 60), d % 60)  # build.duration da isecondi

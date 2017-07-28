@@ -15,39 +15,44 @@
             text-align: justify;
         }
     </style>
-    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
+    <script type="text/javascript" src="../jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../jqwidget/scripts/demos.js"></script>
 
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
-     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxribbon.js"></script>
-	<script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlayout.js"></script>
-     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.pager.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.sort.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.filter.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.selection.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxpanel.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
-     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
-       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxchart.core.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdraw.js"></script>
-        <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxsplitter.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
-     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxnavigationbar.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxribbon.js"></script>
+	<script type="text/javascript" src="../jqwidget/jqwidgets/jqxlayout.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxscrollbar.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+       <script type="text/javascript" src="../jqwidget/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+        <script type="text/javascript" src="../jqwidget/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdocking.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxexpander.js"></script>
+
 
     <script type="text/javascript">
         var style='arctic'
-
+        var id_job =0
 
         $(document).ready(function () {
+
             // prepare the data
             var source =
             {
@@ -58,10 +63,6 @@
 
                 ],
                  url: '/getSnapshot'
-                <!--localdata: [{ "Snapshot": "S1", "Details": "Details1" },-->
-                 <!--{ "Snapshot": "S2", "Details": "Details2" },-->
-                 <!--{ "Snapshot": "S3", "Details": "Details3" },-->
-                 <!--{ "Snapshot": "S4", "Details": "Details4" }]-->
             };
 
             var dataAdapter = new $.jqx.dataAdapter(source);
@@ -73,6 +74,7 @@
                 autoheight: true,
                 source: dataAdapter,
                 keyboardnavigation: true,
+                columnsresize: true,
                 columns: [
                     { text: 'Snapshot', datafield: 'name', width: '100%' }
 
@@ -163,6 +165,7 @@
             {
                 width: 700,
                 autoheight: true,
+                columnsresize: true,
                 keyboardnavigation: true,
                 columns: [
                     { text: 'Goal', datafield: 'name', width: 550 },
@@ -173,15 +176,14 @@
              $("#testsGrid").jqxGrid(
             {
                 width: 700,
-                autoheight: true,
                 keyboardnavigation: true,
+                columnsresize: true,
                 columns: [
                     { text: 'Class', datafield: 'testClass', width: 400 },
                     { text: 'Run', datafield: 'run', width: 50 },
                     { text: 'Failed', datafield: 'failures', width: 75 },
                     { text: 'Skipped', datafield: 'skipped', width: 75 },
                     { text: 'Time', datafield: 'time', width: 100 },
-
                 ]
             });
 
@@ -190,14 +192,18 @@
     </script>
 </head>
 <body>
-    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
 
-        <div id="snapshotGrid" style="float:left">
-        </div>
-        <div style="float:left">
-            <div id="detailsGrid" > </div>
-            <div id="testsGrid" style="float:bottom"> </div>
-        </div>
-    </div>
+    <div id='jqxWidget' style="font-size: 10px; font-family: Verdana; float: left;">
+
+
+            <div id="snapshotGrid" style="float:left; clear:both;">
+            </div>
+            <div style="float:left">
+                <div id="detailsGrid" > </div>
+                <div style="float:bottom"><H4>Test results:</H4></div>
+                <div id="testsGrid" style="float:bottom">  </div>
+            </div>
+                </div>
+
 </body>
 </html>
