@@ -28,9 +28,9 @@ def results():
     if(INTERNET):
         #TODO da testare ancora connessione permettendo
         builds=getBuilds(reponame)
-        store(builds, "backupRubyJrubyWarbler")
+        store(builds, "backupRuby")
     else:
-         builds=restore("backupMaven")
+         builds=restore("backupGradleEmoji")
     return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
 
 

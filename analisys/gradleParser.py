@@ -43,8 +43,11 @@ def parserGradle(f, gradleLog):
                 # get project name and task name
                 module_name = task.split(":")[1]
                 task_name = task.split(":")[2]
-                t = Task(task_name.strip())
-                t.setProjectName(module_name)
+                if task_name == "":
+                    t = Task(module_name)
+                else:
+                    t = Task(task_name.strip())
+                    t.setProjectName(module_name)
             else:
                 t = Task(task.replace(":", "").strip())
                 t.setProjectName(" ")
@@ -78,7 +81,7 @@ def parserGradle(f, gradleLog):
             except IndexError:
                 errorList.append("NO_TASK" + "\tother\t" + line)
         elif re.match(values["DEPENDENCIES"], line):
-            dependenciesList.append(line.replace("Download", "").strip())
+            dependenciesList.append(line.replace("Download", "").strip().split("/")[-1])
 
         #status = checkStatus(line)
         status = "passed"

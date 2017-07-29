@@ -37,9 +37,9 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\maven\\springside_springside4\\springside4-449-165962220.txt', 'r')
 
 
-#compilation error e errore di lettura file zip
-reponame="tinkerpop/gremlin"
-f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
+# #compilation error e errore di lettura file zip
+# reponame="tinkerpop/gremlin"
+# f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
 
 #errori di compilazione
 # reponame="pulse00/Twig-Eclipse-Plugin"
@@ -111,8 +111,8 @@ f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
 # f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
 
 #errore nelle dipendeze, no such file o directory
-# reponame="rockerhieu/emojicon"
-# f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
+reponame="rockerhieu/emojicon"
+f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
 
 #lint error
 # reponame="wasabeef/recyclerview-animators"
@@ -145,7 +145,7 @@ f = open('logs\\maven\\tinkerpop_gremlin\\gremlin-185-170106481.txt', 'r')
 
 #lint error
 # reponame="JFXtras/jfxtras-labs"
-# f = open('logs\\gradle\\JFXtras_jfxtras-labs\\jfxtras-labs-245-48664144.txt', 'r')
+# f = open('logs\\gradle\\JFXtras_jfxtras-labs\\jfxtras-labs-237-44686312.txt', 'r')
 
 # passed
 # reponame="hamcrest/JavaHamcrest"

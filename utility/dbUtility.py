@@ -105,6 +105,18 @@ def getGradleTaskRules():
         connection.close()
         return records
 
+def getGradleErrorsRules():
+    connection= getConnection()
+    records= list()
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT `*`FROM `gradleerrors`"
+            cursor.execute(sql)
+            for r in cursor.fetchall():
+                records.append(r)
+    finally:
+        connection.close()
+        return records
 
 def findCategory(name):
     connection=getConnection()

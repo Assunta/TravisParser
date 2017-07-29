@@ -4,6 +4,9 @@ from domain.Error import Error
 from domain.GradleCommand import GradleCommand
 import json
 
+from utility.dbUtility import getGradleErrorsRules
+
+
 class GradleLog:
     def __init__(self,nomeBuild):
         self.status = ""
@@ -48,14 +51,27 @@ class GradleLog:
 
     def addErrorList(self, lista):
         listaErroriParsati=list()
+        listErrorsDb= getGradleErrorsRules()
+
         for e in lista:
-            error= Error(e.split("\t")[2].replace(">","").strip())
-            error.setCategory(e.split("\t")[1])
-            error.setTask(e.split("\t")[0])
-            #check error outside tasks
-            # if re.match("(.)*No such file or directory(.)*", error.getName()):
-            #     error.setCategory("dependencies")
-            listaErroriParsati.append(error)
+            checkDB = False
+            # check error outside tasks
+            for eDB in listErrorsDb:
+                if re.match(eDB.get("regex"), e):
+                    error = Error(e.split("\t")[2].replace(">", "").strip())
+                    error.setCategory(eDB.get("category"))
+                    error.setTask("")
+                    listaErroriParsati.append(error)
+                    checkDB = True
+                    break;
+            if(not checkDB):
+                error= Error(e.split("\t")[2].replace(">","").strip())
+                error.setCategory(e.split("\t")[1])
+                error.setTask(e.split("\t")[0])
+                listaErroriParsati.append(error)
+
+
+
         if lista.__len__()>0:
             try:
                 self.typeOfError =listaErroriParsati[-1].getCategory()

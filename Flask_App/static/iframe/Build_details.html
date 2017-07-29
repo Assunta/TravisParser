@@ -41,7 +41,7 @@
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
      <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxribbon.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxpopover.js"></script>
 
      <script type="text/javascript">
         var style='arctic'
@@ -58,17 +58,39 @@
           //function to show jobsDetails
         function setJobDetails(dataJob, rowindex){
             $('#panelJob').jqxPanel('clearcontent');
+            if($('#popover').length){
+                $('#popover').jqxPopover('destroy');
+                }
             var tableJob=document.createElement('table');
             tableJob.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
             html="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 10%\"><b>Job id:</b></td><td>"+dataJob.name+
             "</td><td style=\"width: 10%\"><b>Status:</b></td><td>"+dataJob.status+"</td>"+
              "</td><td style=\"width: 15%\"><b>Build tool:</b></td><td>"+dataJob.buildTool+"</td>";
             if (dataJob.status!="passed"){
-                html=html+"<td style=\"width: 20%\"><b>Type of error:</b></td><td>"+dataJob.typeOfError+"</td></tr></table>";
+                html=html+"<td style=\"width: 20%\"><b>Type of error:</b></td><td>"+dataJob.typeOfError+"</td>";
             }
-            else{html=html+"</tr></table>"}
+            html=html+"</tr></table>";
             tableJob.innerHTML=html
             $('#panelJob').jqxPanel('append', tableJob);
+
+            //dependencies button
+            var tableJob=document.createElement('table');
+            tableJob.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
+            html="<tr><td style=\"width: 50%\"></td><td><div id=\"popover\"> <div id=\"dep\" style=\"height: 250px; overflow: scroll;\"></div></div>"+
+            "<button style=\"float: right; margin-right: 10px; padding: 8px 12px; border-radius: 6px;\" id=\"button\">View Dependencies</button></td></tr></table>";
+            tableJob.innerHTML=html;
+            $('#panelJob').jqxPanel('append', tableJob);
+
+            //set button dependencies
+            var dependencies =dataJob.dependenciesList;
+            for(var i=0; i<dependencies.length; i++){
+             $('#dep').append(dependencies[i]+"<BR>");
+            }
+            $('#dep').height("250px");
+
+             $("#button").jqxButton({ template: "inverse" });
+             $("#popover").jqxPopover({offset: {left: -50, top:0},height:300, arrowOffsetValue: 50, title: "Dependencies", showCloseButton: true, selector: $("#button") });
+
 
             //check buildTool and display results
             if(dataJob.buildTool=="Maven"){
@@ -141,7 +163,7 @@
                     ]
                 });
                 // define goal panel
-                $("#goalPanel").jqxPanel({height: 300, width: 600});
+                $("#goalPanel").jqxPanel({height: 300, width: 550});
                 $("#goalPanel").wrap("<div class='container' style=\"float:left\"></div>")
 
 
@@ -169,7 +191,7 @@
                  <!--$('#panelJob').jqxPanel('append', testGrid);-->
                  $('.container').append(testGrid)
 
-                  $("#testPanel").jqxPanel({height: 300, width: 600});
+                  $("#testPanel").jqxPanel({height: 300, width: 550});
                  $('#testPanel').jqxPanel('clearcontent');
                 tests=dataJob.snapshotList[ID].test;
                  var tableTests=document.createElement('table');
@@ -182,19 +204,168 @@
                  }
                 html=html+"</table>";
                  $('#testPanel').jqxPanel('append', html);
-
                  }
                  else{$('#testPanel').remove();}
             });
             }
 
+            //set Ruby Log
+            if(dataJob.buildTool=="Rake"){
+                //statusMessages
+                var tableJobRuby=document.createElement('table');
+                tableJobRuby.setAttribute("style","padding:5px; width:100%; text-align: left; vertical-align:top;")
+                htmlRuby="<tr style=\"padding:15px; text-align: left; vertical-align:top;\">"+
+                "<td style=\"width: 10%\"><b><BR>Status messages:</b></td>"+"<td style=\"width: 40%\">";
+                var statusMessages="<ul>";
+                for (var i=0; i<dataJob.statusMessageList.length; i++){
+                    statusMessages=statusMessages+"<li>"+dataJob.statusMessageList[i]+"</li>";
+                }
+                htmlRuby=htmlRuby+statusMessages+"</ul></td>";
+                 //errorMessages
+                //check if there are errorMessages
+                if(dataJob.errorList.length>0){
+                    htmlRuby=htmlRuby+"<td style=\"width: 10%\"><b><BR>Errors:</b></td>"+"<td>";
+                    var errorMessages="<table style=\"padding:15px;padding-left:15px; width:95%; text-align: left; vertical-align:top; border-bottom: 1px solid #ddd;\">"+
+                    "<tr style=\" border-bottom: 1px solid #ddd;\"><td style=\"width: 20%\"><i>Task</i></td style=\"width: 20%\"><td><i>Category</i></td><td style=\"width: 60%\"><i>Message</i></td></tr>";
+                    for (var i=0; i<dataJob.errorList.length; i++){
+                        errorMessages=errorMessages+"<tr style=\" border-bottom: 1px solid #ddd;\"><td style=\"width: 20%\">"+dataJob.errorList[i]['task']+"</td>"+
+                        "<td style=\"width: 20%\">"+dataJob.errorList[i]['category']+"</td>"+
+                        "<td style=\"width: 60%\">"+dataJob.errorList[i]['name']+"</td>";
+                    }
+                    htmlRuby=htmlRuby+errorMessages+"</tr></table></td>";
+                }
+
+                htmlRuby=htmlRuby+"</tr>";
+
+                //command list
+                if(dataJob.commandList.length>0){
+                    htmlRuby=htmlRuby+"<tr><td style=\"width: 10%\"><b>Commands</b></td><td><ul>";
+                    for(var i=1; i<dataJob.commandList.length; i++){
+                        htmlRuby=htmlRuby+"<li>"+dataJob.commandList[i]+"</li>";
+                    }
+                    htmlRuby=htmlRuby+"</ul></td></tr>";
+                }
+
+                //testList
+                if(dataJob.testList.length>0){
+                    htmlRuby=htmlRuby+"<tr><td style=\"width: 10%\"><b>Results:</b></td><td><ul>";
+                    for(var i=0; i<dataJob.testList.length; i++){
+                        htmlRuby=htmlRuby+"<li>"+dataJob.testList[i]+"</li>";
+                    }
+                    htmlRuby=htmlRuby+"</ul></td></tr>";
+                }
+
+                //toolList
+                if(dataJob.toolList.length>0){
+                    htmlRuby=htmlRuby+"<tr><td style=\"width: 10%\"><b>Tools used:</b></td><td><ul>";
+                    for(var i=0; i<dataJob.toolList.length; i++){
+                        htmlRuby=htmlRuby+"<li>"+dataJob.toolList[i]+"</li>";
+                    }
+                    htmlRuby=htmlRuby+"</ul></td></tr>";
+                }
+
+                htmlRuby=htmlRuby+"</table>";
+                tableJobRuby.innerHTML=htmlRuby;
+                $('#panelJob').jqxPanel('append', tableJobRuby);
+            }
 
             // gradle
-            // ruby
+            if(dataJob.buildTool=="Gradle"){
+                //statusMessages
+                var tableJobGradle=document.createElement('table');
+                tableJobGradle.setAttribute("style","padding:5px; width:100%; text-align: left; vertical-align:top;")
+                htmlGradle="<tr style=\"padding:15px; text-align: left; vertical-align:top;\">"+
+                "<td style=\"width: 10%\"><b><BR>Status messages:</b></td>"+"<td style=\"width: 40%\">";
+                var statusMessages="<ul>";
+                for (var i=0; i<dataJob.statusErrorList.length; i++){
+                    statusMessages=statusMessages+"<li>"+dataJob.statusErrorList[i]+"</li>";
+                }
+                htmlGradle=htmlGradle+statusMessages+"</ul></td></tr>";
+                 //errorMessages
+                //check if there are errorMessages
+                if(dataJob.errorList.length>0){
+                    htmlGradle=htmlGradle+"<tr><td style=\"width: 10%\"><b><BR>Errors:</b></td>"+"<td>";
+                    var errorMessages="<table style=\"padding:15px;padding-left:15px; width:95%; text-align: left; vertical-align:top; border: 1px solid #ddd; border-collapse:collapse;\">"+
+                    "<tr style=\" border-bottom: 1px solid #ddd; border-collapse:collapse;\"><td style=\"width: 20%;\"><i>Task</i></td style=\"width: 20%\"><td><i>Category</i></td><td style=\"width: 60%\"><i>Message</i></td></tr>";
+                    for (var i=0; i<dataJob.errorList.length && i<10; i++){
+                        errorMessages=errorMessages+"<tr style=\" border 1px solid #ddd;border-collapse:collapse;\"><td style=\"width: 20%: border: 1px solid #ddd;border-collapse:collapse;\">"+dataJob.errorList[i]['task']+"</td>"+
+                        "<td style=\"width: 20%; border: 1px solid #ddd; border-collapse:collapse;\" >"+dataJob.errorList[i]['category']+"</td>"+
+                        "<td style=\"width: 60%; border: 1px solid #ddd;border-collapse:collapse; \">"+dataJob.errorList[i]['name']+"</td>";
+                    }
+                    htmlGradle=htmlGradle+errorMessages+"</tr></table></td>";
+                }
+
+                htmlGradle=htmlGradle+"</tr>";
+
+                htmlGradle=htmlGradle+"</table>";
+                tableJobGradle.innerHTML=htmlGradle;
+                $('#panelJob').jqxPanel('append', tableJobGradle);
+
+                //create table commands
+                var tableTask=document.createElement('div');
+                tableTask.setAttribute("id", "taskGrid");
+                $('#panelJob').jqxPanel('append', tableTask);
+
+                <!--// prepare the data task grid-->
+                data=[];
+                for (var i=0; i<dataJob.commandList.length; i++){
+                    for(var j=0; j<dataJob.commandList[i].taskList.length; j++){
+                        var row=new Object();
+                        row.command=dataJob.commandList[i].name;
+                        row.task=dataJob.commandList[i].taskList[j].name;
+                        row.project=dataJob.commandList[i].taskList[j].project;
+                        row.isSkipped=dataJob.commandList[i].taskList[j].isSkipped;
+                        row.isUpdate=dataJob.commandList[i].taskList[j].isUpdate;
+                        row.isFailed=dataJob.commandList[i].taskList[j].isFailed;
+                        row.category=dataJob.commandList[i].taskList[j].category
+                        data.push(row);
+                    }
+                }
+
+                var source =
+                {
+                    localdata: data,
+                    datatype: "array",
+                    datafields: [
+                        { name: 'command', type: 'string'},
+                        { name: 'task', type: 'string'},
+                        { name: 'project', type: 'string'},
+                        { name: 'isSkipped', type: 'string'},
+                        { name: 'isUpdate', type: 'string'},
+                        { name: 'isFailed', type: 'string'},
+                        { name: 'category', type: 'string'}
+                    ]
+                };
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#taskGrid").jqxGrid(
+                {
+                    width: "100%",
+                    autoheight: true,
+                    source: dataAdapter,
+                    keyboardnavigation: true,
+                    columnsresize: true,
+                    sortable: true,
+                    filterable: true,
+                    filtermode: 'excel',
+                    pageable: true,
+                    pagesizeoptions: [5, 10, 15],
+                    pagesize: 10,
+                    autoshowfiltericon: false,
+                    columns: [
+                        { text: 'Command', datafield: 'command', width: '20%' },
+                        { text: 'Task', datafield: 'task', width: '20%' },
+                        { text: 'Project', datafield: 'project', width: '15%' },
+                        { text: 'Skipped', datafield: 'isSkipped', width: '10%' },
+                        { text: 'Update', datafield: 'isUpdate', width: '10%' },
+                        { text: 'Failed', datafield: 'isFailed', width: '10%' },
+                        { text: 'Category', datafield: 'category', width: '15%' }
+                    ]
+                });
+           }
 
         }
 
-                //function to show build details
+        //function to show build details
         function buildDetails(id){
              $.ajax({
                   url: '/getBuild/'+id,
@@ -227,7 +398,7 @@
                         for (var i=0; i<data.NumJobs; i++){
                             sourceJobs.push(data.Logs[i].name);
                         }
-                        $('#dropDownList').jqxDropDownList({ source: sourceJobs, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '25'});
+                        $('#dropDownList').jqxDropDownList({ template: "inverse", source: sourceJobs, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '25'});
                         $('#dropDownList').on('select', function (event)
                                 {
                                     var args = event.args;
@@ -274,8 +445,8 @@
             var dataAdapter = new $.jqx.dataAdapter(source);
             $("#jqxgrid").jqxGrid(
             {
-                width: "20%",
-                height:"600px",
+                width: "25%",
+                height:'600px',
                 source: dataAdapter,
                 sortable: true,
                 filterable: true,
@@ -302,7 +473,7 @@
 <body>
                 <div class="container" style="width:100%;">
                     <div id="jqxgrid" style="float:left;"></div>
-                    <div id="details" style="float:left; width:79%">
+                    <div id="details" style="float:left; width:74%">
                         <div id="panelBuild" style="float:left; width:49%"></div>
                         <div id="panelCommit" style="float:left; width:49%"></div>
                         <div id="panelJob" style="float:bottom; width:98%">
