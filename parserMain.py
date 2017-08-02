@@ -111,8 +111,8 @@ from domain.RubyLog import RubyLog
 # f = open('logs\\gradle\\square_picasso\\picasso-1351-174648005.txt', 'r')
 
 #errore nelle dipendeze, no such file o directory
-reponame="rockerhieu/emojicon"
-f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
+# reponame="rockerhieu/emojicon"
+# f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
 
 #lint error
 # reponame="wasabeef/recyclerview-animators"
@@ -209,8 +209,8 @@ f = open('logs\\gradle\\rockerhieu_emojicon\\emojicon-142-113999428.txt', 'r')
 #maven
 # f = open('logs\\ruby\\ActiveJpa_activejpa\\activejpa-353-166258664.txt', 'r')
 
-# reponame="atmos/heaven"
-# f = open('logs\\ruby\\atmos_heaven\\heaven-351-125806879.txt', 'r')
+reponame="atmos/heaven"
+f = open('logs\\ruby\\atmos_heaven\\heaven-351-125806879.txt', 'r')
 
 #passed solo pending examples
 # reponame="bikeindex/bike_index"

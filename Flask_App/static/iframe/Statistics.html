@@ -41,7 +41,10 @@
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
      <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
-
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdatetimeinput.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxtooltip.js"></script>
+<script type="text/javascript" src="../jqwidget/jqwidgets/globalization/globalize.js"></script>
     <script type="text/javascript">
         var style='arctic'
 
@@ -57,6 +60,7 @@
                 ],
                 url: '/getStatStatus'
             };
+
              var dataAdapter2 = new $.jqx.dataAdapter(source,{
                 async:false,
                 autoBind:true,
@@ -65,10 +69,10 @@
 
             // prepare jqxChart settings
             var settings = {
-                title: "Status",
+                title: "Build status",
                 description: "",
                 enableAnimations: true,
-                showLegend: false,
+                showLegend: true,
                 showBorderLine: true,
                 legendPosition: { left: 520, top: 140, width: 100, height: 100 },
                 padding: { left: 5, top: 5, right: 5, bottom: 5 },
@@ -125,7 +129,7 @@
                 title: "Type of errors",
                 description: "",
                 enableAnimations: true,
-                showLegend: false,
+                showLegend: true,
                 showBorderLine: true,
                 legendPosition: { left: 520, top: 140, width: 100, height: 100 },
                 padding: { left: 5, top: 5, right: 5, bottom: 5 },
@@ -157,22 +161,112 @@
             // setup the chart
             $('#chartContainer2').jqxChart(settings);
 
-            <!--$('#chartContainer2').focusin(function(){-->
-                <!--$('#chartContainer2').jqxChart('refresh');-->
-                <!--$('#chartContainer').jqxChart('refresh');-->
 
-            <!--});-->
+            //setup query div
+                $.ajax({
+                  url: '/getAllAuthors',
+                  type: 'GET',
+                  success: function(response) {
+                       var source= JSON.parse(response);
+                       var dataAdapter = new $.jqx.dataAdapter(source);
+
+                    // Create a jqxListBox
+                    $("#listbox").jqxListBox({width: 200, source: source, checkboxes: true, height: 350});
+                    // Check all items.
+                    for (var i=0; i< source.length; i++){
+                            $("#listbox").jqxListBox('checkIndex', i);
+                    }
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+
+          // Create the jqxDateTimeInput.
+          // restrict the navigation by setting min and max properties.
+          $.ajax({
+                  url: '/getMinData',
+                  type: 'GET',
+                  success: function(response) {
+                       var source= JSON.parse(response);
+                      $("#jqxDateTimeInputStart").jqxDateTimeInput({ min: new Date(source), max: new Date(), width: '200px', height: '25px'});
+                      $("#jqxDateTimeInputFinish").jqxDateTimeInput({ min: new Date(source), max: new Date(), width: '200px', height: '25px'});
+                      $('#jqxDateTimeInputStart').jqxDateTimeInput('setDate', new Date(source));
+                  },
+                  error: function(error) {
+                      console.log(error);
+                      $("#jqxDateTimeInputStart").jqxDateTimeInput({max: new Date(), width: '200px', height: '25px'});
+                      $("#jqxDateTimeInputFinish").jqxDateTimeInput({ max: new Date(), width: '200px', height: '25px'});
+                  }
+              });
+
+            //set button to query
+            $('#query').click(function(){
+            var dateStart= $("#jqxDateTimeInputStart").jqxDateTimeInput('getDate');
+            var dateFinish= $("#jqxDateTimeInputFinish").jqxDateTimeInput('getDate');
+            var items = $("#listbox").jqxListBox('getCheckedItems');
+            var formatStart=dateStart.getFullYear()+"-"+(dateStart.getMonth()+1)+"-"+dateStart.getDate();
+            var formatFinish=dateFinish.getFullYear()+"-"+(dateFinish.getMonth()+1)+"-"+dateFinish.getDate();
+            console.log(formatStart)
+            console.log(formatFinish)
+            if(items.length>0){
+            var authors=[]
+            for(var i=0; i<items.length; i++){
+            authors[i]=items[i].label
+            }
+            var JSONObject={"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)};
+                 $.ajax({
+                  url: '/queryStats',
+                  type: 'POST',
+                  data: {"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)},
+                  success: function(response) {
+                      //TODO set charts
+                      console.log(response);
+                      source=response;
+                      var newDataAdapter = new $.jqx.dataAdapter(source,{
+                            async:false,
+                            autoBind:true,
+                            loadError:function(jqXHR, status, error){console.log(error)},
+                         });
+                      $('#chartContainer').jqxChart({source:newDataAdapter});
+                       $('#chartContainer').jqxChart('update');
+                       <!--var chart= $('#chartContainer').jqxChart('getInstance');-->
+                       <!--chart.source=response;-->
+                       <!--chart.refresh();-->
+                       <!--chart.update();-->
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+            }
+           })
         });
 
 
     </script>
 <body>
 
- <div id="containerChart" >
+<div id="menuQuery" style="width:20%;heigth:80%;float:left;" >Query:
+    <BR> Authors:
+    <div id="listbox"></div>
+            <div style="font-size: 13px; font-family: Verdana; margin-top: 20px;" id="Events"></div>
 
-    <div id="chartContainer" style="width:50%; height:500px;float:left;">    </div>
+    <div id="dataContainer" style="float:bottom;">
+    <BR>From:<BR>
+     <div id='jqxDateTimeInputStart' style="float:left;"></div>
+    <BR><BR>To:<BR>
+     <div id='jqxDateTimeInputFinish' style="float:bottom;"></div>
+    </div>
+    <input id="query" type="button" value="query"/>
+    </div>
 
-    <div id="chartContainer2" style="width:50%; height:500px; float:left;">  </div>
+
+ <div id="containerChart" style="width:80%;float:left;">
+
+    <div id="chartContainer" style="width:40%; height:400px;float:left;">    </div>
+
+    <div id="chartContainer2" style="width:40%; height:400px; float:left;">  </div>
 
 
  </div>

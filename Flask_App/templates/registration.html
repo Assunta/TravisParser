@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Travis CI parser</title>
         <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
       <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.summer.css" />
@@ -28,9 +28,9 @@
 
 
 
-    <script type="text/javascript">
+   <script type="text/javascript">
         $(document).ready(function () {
-
+            var style='summer';
             //error notification
              $("#messageNotification").jqxNotification({
                 width: 400, position: "top-right", opacity: 0.9,
@@ -38,25 +38,22 @@
             });
 
 
-            var style='summer'
-            // menu definition
-             <!--$("#jqxMenu").jqxMenu({ width: '100%', height: '30px', showTopLevelArrows: true, autoOpen: true, theme:style});-->
-             <!--$("#jqxMenu").jqxMenu('minimize');-->
-             <!--$("#jqxMenu").css('visibility', 'visible');-->
-
             // Create jqxExpander.
-            $("#insertRepo").jqxExpander({theme:style,  toggleMode: 'none', width: '350px', showArrow: false });
+            $("#jqxExpander").jqxExpander({theme:style,  toggleMode: 'none', width: '350px', showArrow: false });
             // Create jqxInput.
-            $("#userName").jqxInput({ width: '300px', height: '20px' })
+            $("#userName").jqxInput({ width: '300px', height: '20px' });
             // Create jqxInput.
             $("#password").jqxInput({ width: '320px', height: '30px' });
+            // Create jqxInput.
+            $("#gitKey").jqxInput({ width: '300px', height: '20px' });
             // Create jqxButton.
             $("#submitButton").jqxButton({ template: "primary" , width: '50%' });
             // Create jqxValidator.
             $("#form").jqxValidator({
                 rules: [
-                         { input: "#userName", message: "user name is required!", action: 'keyup, blur', rule: 'required' },
-                         { input: "#password", message: "passwordis required!", action: 'keyup, blur', rule: 'required' },
+                        { input: "#userName", message: "user name is required!", action: 'keyup, blur', rule: 'required' },
+                        { input: "#gitKey", message: "git key is required!", action: 'keyup, blur', rule: 'required' },
+						{input: "#password", message: 'Password is required!',action: 'keyup, blur',rule: 'required'},
                 ]
             });
             // Validate the Form.
@@ -65,22 +62,26 @@
                     if (isValid) {
                     var user = $('#userName').val();
                                  $.ajax({
-                                        url: "/validateKey",
+                                        url: "/signUp",
                                         type: 'POST',
-                                        data: {userName:user},
+                                        data: $('#form').serialize(),
                                         success: function(data)
                                         {
-                                            <!--$("#gitKey").jqxInput({disabled: true });-->
                                             $('#form').submit();
                                         },
-                                        error: function()
+                                        error: function(error)
                                         {
-                                            <!--$("#gitKey").jqxInput({disabled: false });-->
-                                            <!--$("#messageNotification").jqxNotification("open");-->
+                                             console.log(error);
+                                             var msg=error.responseText
+                                             msg=msg.replace("{\"error\": \"", "");
+                                             msg=msg.replace("\"}", "");
+                                             $("#container").html(msg);
+                                             $("#messageNotification").jqxNotification("open");
 
                                         }
                                     });
                     }
+					console.log("validation")
                 }
                 // Validate the Form.
                 $('#form').jqxValidator('validate', validationResult);
@@ -89,14 +90,12 @@
     </script>
 </head>
 <body>
-
- <div id="messageNotification">
-        <div>This is your first access. You need to provide your github access token.<BR>
+<div id="messageNotification">
+        <div id="container">This is your first access. You need to provide your github access token.<BR>
         To create and delete the GitHub token, you can use the  <a href="https://github.com/settings/tokens" target="blank">GitHub web interface</a></div>
     </div>
 
-
- <div class="header-wrap">
+<div class="header-wrap">
         <div class="container">
             <div class="row" style="padding-top:1.2em;">
                 <div class="col-md-6"></div>
@@ -111,24 +110,30 @@
     </div>
 
 
-    <div id="insertRepo" style="font-family: Verdana; font-size: 18px; position:absolute; top:25%; left: 33%; text-align:center;">
-        <div>
-
-        </div>
+<div>
+ <div id="jqxExpander" style="font-family: Verdana; font-size: 18px; position:absolute; top:25%; left: 33%; text-align:center;">
+     <div></div>
         <div style="font-family: Verdana; font-size: 16px; text-align:center;">
-            <form id="form" action="{{url_for('homeUser')}}" method="post" style="overflow: hidden; margin: 10px; text-align:center;">
+            <form id="form" action="/home" method="post" style="overflow: hidden; margin: 10px; text-align:center;">
                  <label for="username" >GitHub username</label>
-
                  <input type="name" name="username" id="userName" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
-                    <BR><BR>
-                 <label for="password" >GitHub password</label>
 
-                 <input type="password" name="password" id="password" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
-                <BR><BR>
-                 <button type="button" id="submitButton">Login</button>
+                 <label for="password" >GitHub Password</label>
+
+                <input type="password" name="password" id="password" class="form-control" placeholder="password" style="text-align:center;font-size: 16px;">
+                 <label for="gitKey" >GitHub token</label>
+
+                 <input type="name" name="gitkey" id="gitKey" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
+                    <table  style="overflow: hidden; margin: 10px; text-align:center;">
+                    <tr><td><a href="https://github.com/settings/tokens" target="blank" style="font-size: 12px; text-align:left;">Get GitHub token</a>
+                    </td>
+                        </table>
+                        <button type="button" id="submitButton">Submit</button>
+
             </form>
         </div>
     </div>
-<div id="output"></div>
+</div>
+
 </body>
 </html>

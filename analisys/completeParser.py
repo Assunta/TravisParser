@@ -87,8 +87,11 @@ def completeAnalysis(reponame, afterBuild):
                 os.remove(str(job_id)+'.txt')
             except Exception,e:
                 print "Some exception"+ str(e)
-                fIn.close()
-                os.remove(str(job_id) + '.txt')
+                try:
+                    fIn.close()
+                    os.remove(str(job_id) + '.txt')
+                except Exception, e2:
+                    print str(e2)
         #print(buildUnderAnalysis.toJSON())
         allBuilds.append(buildUnderAnalysis)
     return allBuilds
@@ -96,29 +99,33 @@ def completeAnalysis(reponame, afterBuild):
 
 
 def generalInfo(repo,build):
-    commit = build.commit
-    b = Build(build.number) #metto il build number perche' l'id non lo posso prendere
-    b.setStatus(build.state)
-    if repo.description is not None:
-        b.setDescription(repo.description)
-    b.setCommitId(build.commit_id)
-    b.setIsPullRequest(str(build.pull_request))
-    if(build.pull_request):
-        b.setTitlePull(build.pull_request_title)
-        b.setPullId(str(build.pull_request_number))
-    b.setStart(str(build.started_at))
-    b.setFinish(str(build.finished_at))
-    if build.duration is not None:
-        b.setDuration(build.duration)
-    b.setCommitSHA(commit.sha)
-    b.setBranch(commit.branch)
-    b.setCommit(commit.message)
-    if commit.committed_at is not None:
-        b.setCommitDate(commit.committed_at)
-    b.setAuthor(commit.author_name)
-    b.setEmail(commit.author_email)
-    b.setLanguage(build.config["language"])
-    b.setNumJobs(len(build.job_ids))
+    try:
+        b = Build(build.number)  # metto il build number perche' l'id non lo posso prendere
+        commit = build.commit
+
+        b.setStatus(build.state)
+        if repo.description is not None:
+            b.setDescription(repo.description)
+        b.setCommitId(build.commit_id)
+        b.setIsPullRequest(str(build.pull_request))
+        if(build.pull_request):
+            b.setTitlePull(build.pull_request_title)
+            b.setPullId(str(build.pull_request_number))
+        b.setStart(str(build.started_at))
+        b.setFinish(str(build.finished_at))
+        if build.duration is not None:
+            b.setDuration(build.duration)
+        b.setCommitSHA(commit.sha)
+        b.setBranch(commit.branch)
+        b.setCommit(commit.message)
+        if commit.committed_at is not None:
+            b.setCommitDate(commit.committed_at)
+        b.setAuthor(commit.author_name)
+        b.setEmail(commit.author_email)
+        b.setLanguage(build.config["language"])
+        b.setNumJobs(len(build.job_ids))
+    except Exception, e:
+        print "Some exception" + str(e)
     #print b.toJSON()
     return b
 

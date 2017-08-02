@@ -148,3 +148,33 @@ def findUser(name):
     finally:
         connection.close()
         return [key,config]
+
+#this method allow to add new user
+def addUser(username, key):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `users` (`Git_name`,  `key`) VALUES (%s, %s)"
+            cursor.execute(sql, (username, key))
+
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+
+#this method allows to get all projects linked to one user
+def getUserProjects(name):
+    connection=getConnection()
+    projects=[]
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `user_projects` WHERE `user`= %s"
+            if cursor.execute(sql, (name)) >0:
+                for r in cursor.fetchall():
+                    project=(r.get("project")).encode('ascii','ignore')
+                    projects.append(project)
+    finally:
+        connection.close()
+        return projects
