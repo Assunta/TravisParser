@@ -83,7 +83,7 @@ def countStatStatusFilter(results, start, finish, authors):
             dateObject= datetime.strptime(build["StartDate"], '%Y-%m-%d')
             if not (dateObject<=finish and dateObject>=start):
                n=n-1
-            else:
+            elif build["author"] in authors:
                 if status=="passed":
                     stats[0]= stats[0]+1
                 elif status=="failed":
@@ -92,6 +92,40 @@ def countStatStatusFilter(results, start, finish, authors):
                     stats[2]=stats[2]+1
                 else:
                     stats[3] = stats[3] + 1
+            else:
+                 n = n - 1
     return [stats[0]/n*100, stats[1]/n*100,stats[2]/n*100,stats[3]/n*100]
 
 
+def countReasonFilter (results, start, finish, authors):
+    reason = {}
+    tot = 0
+    for b in results:
+        if INTERNET:
+            #TODO da rifare con il filtro della data
+            for log in b.getLogs():
+                if log.getStatus() != "passed":
+                    tot = tot + 1
+                    error = log.getTypeOfError()
+                    value = reason.get(error, None)
+                    if value is not None:
+                        reason[error] = reason.get(error) + 1.0
+                    else:
+                        reason[error] = 1.0
+        else:
+            dateObject = datetime.strptime(b["StartDate"], '%Y-%m-%d')
+            if  (dateObject <= finish and dateObject >= start):
+                if b["author"] in authors:
+                    for log in b["Logs"]:
+                        if log["status"] != "passed":
+                            tot = tot + 1
+                            error = log["typeOfError"]
+                            value = reason.get(error, None)
+                            if value is not None:
+                                reason[error] = reason.get(error) + 1.0
+                            else:
+                                reason[error] = 1.0
+    # obtain %
+    for key, value in reason.iteritems():
+        reason[key] = float(value / tot * 100)
+    return reason

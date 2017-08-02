@@ -6,7 +6,7 @@ from werkzeug.utils import redirect
 from Flask_App.utilityClasses.ErrorStat import ErrorStat
 from Flask_App.utilityClasses.Row import Row
 from Flask_App.utilityClasses.TestRow import TestRow
-from analisys.advancedStats import countStatStatus, countReason, getAuthors, countStatStatusFilter
+from analisys.advancedStats import countStatStatus, countReason, getAuthors, countStatStatusFilter, countReasonFilter
 from analisys.completeParser import completeAnalysis, getBuilds
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects
@@ -123,9 +123,6 @@ def queryStats():
     start = request.form['StartDate']
     finish= request.form['FinishDate']
     items= request.form['Authors']
-    print start
-    print finish
-    print items
     try:
         stats=countStatStatusFilter(builds,  datetime.strptime(start, '%Y-%m-%d'), datetime.strptime(finish, '%Y-%m-%d'), items)
         return json.dumps([
@@ -149,7 +146,7 @@ def queryStats():
     except Exception, e:
         print e
         return json.dumps({'success': False}), 401, {'ContentType': 'application/json'}
-    #TODO ricalcola i grafici
+
 
 
 
@@ -184,6 +181,28 @@ def getStatErrors():
         data.append(e)
 
     return json.dumps(data,default=lambda o: o.__dict__)
+
+@app.route("/queryStatErrors", methods=['POST'])
+def queryStatErrors():
+    start = request.form['StartDate']
+    finish = request.form['FinishDate']
+    items = request.form['Authors']
+    print start
+    print finish
+    print items
+    try:
+        result=countReasonFilter(builds,  datetime.strptime(start, '%Y-%m-%d'), datetime.strptime(finish, '%Y-%m-%d'), items)
+        data=[]
+        for key, v in result.iteritems():
+            e=ErrorStat(key, v)
+            data.append(e)
+        if data.__len__()> 0:
+            return json.dumps(data,default=lambda o: o.__dict__)
+        else:
+            return json.dumps({'success': False}), 401, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e.message
+        return json.dumps({'success': False}), 401, {'ContentType': 'application/json'}
 
 @app.route("/getAllAuthors", methods=['GET'])
 def getAllAuthors():

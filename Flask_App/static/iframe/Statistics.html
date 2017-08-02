@@ -45,11 +45,18 @@
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcalendar.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxtooltip.js"></script>
 <script type="text/javascript" src="../jqwidget/jqwidgets/globalization/globalize.js"></script>
+ <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnotification.js"></script>
     <script type="text/javascript">
         var style='arctic'
 
         $(document).ready(function ()
         {
+        //error notification
+             $("#messageNotification").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: false, autoCloseDelay: 3000, template: "error"
+            });
+
             // prepare chart data for statusStats
             var source =
             {
@@ -189,8 +196,8 @@
                   type: 'GET',
                   success: function(response) {
                        var source= JSON.parse(response);
-                      $("#jqxDateTimeInputStart").jqxDateTimeInput({ min: new Date(source), max: new Date(), width: '200px', height: '25px'});
-                      $("#jqxDateTimeInputFinish").jqxDateTimeInput({ min: new Date(source), max: new Date(), width: '200px', height: '25px'});
+                      $("#jqxDateTimeInputStart").jqxDateTimeInput({ min: new Date(source), max: new Date(), width: '150px', height: '25px'});
+                      $("#jqxDateTimeInputFinish").jqxDateTimeInput({ min: new Date(source), max: new Date(), width: '150px', height: '25px'});
                       $('#jqxDateTimeInputStart').jqxDateTimeInput('setDate', new Date(source));
                   },
                   error: function(error) {
@@ -201,44 +208,127 @@
               });
 
             //set button to query
+            $("#query").jqxButton({template: "inverse",  width: 100, height: 25 });
             $('#query').click(function(){
             var dateStart= $("#jqxDateTimeInputStart").jqxDateTimeInput('getDate');
             var dateFinish= $("#jqxDateTimeInputFinish").jqxDateTimeInput('getDate');
             var items = $("#listbox").jqxListBox('getCheckedItems');
             var formatStart=dateStart.getFullYear()+"-"+(dateStart.getMonth()+1)+"-"+dateStart.getDate();
             var formatFinish=dateFinish.getFullYear()+"-"+(dateFinish.getMonth()+1)+"-"+dateFinish.getDate();
-            console.log(formatStart)
-            console.log(formatFinish)
             if(items.length>0){
-            var authors=[]
-            for(var i=0; i<items.length; i++){
-            authors[i]=items[i].label
+                var authors=[]
+                for(var i=0; i<items.length; i++){
+                authors[i]=items[i].label
+                }
+                var JSONObject={"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)};
+                     $.ajax({
+                      url: '/queryStats',
+                      type: 'POST',
+                      data: {"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)},
+                      success: function(response) {
+                          var data= JSON.parse(response);
+                            // update jqxChart1 settings
+                            var settings = {
+                                title: "Build status",
+                                description: "from "+formatStart+" to "+formatFinish,
+                                enableAnimations: true,
+                                showLegend: true,
+                                showBorderLine: true,
+                                legendPosition: { left: 520, top: 140, width: 100, height: 100 },
+                                padding: { left: 5, top: 5, right: 5, bottom: 5 },
+                                titlePadding: { left: 0, top: 0, right: 0, bottom: 10 },
+                                colorScheme: 'scheme02',
+                                seriesGroups:
+                                    [
+                                        {
+                                            type: 'donut',
+                                            showLabels: false,
+                                            source: data,
+                                            series:
+                                                [
+                                                    {
+                                                        dataField: 'num',
+                                                        displayText: 'status',
+                                                        labelRadius: 100,
+                                                        initialAngle: 15,
+                                                        radius: 140,
+                                                        innerRadius: 50,
+                                                        centerOffset: 0,
+                                                        formatSettings: { sufix: '%', decimalPlaces: 1 }
+                                                    }
+                                                ]
+                                        }
+                                    ]
+                            };
+
+                            // setup the chart
+                            $('#chartContainer').jqxChart(settings);
+
+                      },
+                      error: function(error) {
+                          console.log(error);
+                          var msg="Data filter selected for \"Build status\" chart gives empty result";
+                          $("#container").html(msg);
+                          $("#messageNotification").jqxNotification("open");
+                      }
+                  });
+                  //update chart2
+                  $.ajax({
+                      url: '/queryStatErrors',
+                      type: 'POST',
+                      data: {"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)},
+                      success: function(response) {
+                          var data= JSON.parse(response);
+                            // update jqxChart2 settings
+                            console.log(data)
+                           var settings = {
+                                    title: "Type of errors",
+                                    description: "from "+formatStart+" to "+formatFinish,
+                                    enableAnimations: true,
+                                    showLegend: true,
+                                    showBorderLine: true,
+                                    legendPosition: { left: 520, top: 140, width: 100, height: 100 },
+                                    padding: { left: 5, top: 5, right: 5, bottom: 5 },
+                                    titlePadding: { left: 0, top: 0, right: 0, bottom: 10 },
+                                    colorScheme: 'scheme03',
+                                    seriesGroups:
+                                        [
+                                            {
+                                                type: 'donut',
+                                                showLabels: false,
+                                                source: data,
+                                                series:
+                                                    [
+                                                        {
+                                                            dataField: 'num',
+                                                            displayText: 'error',
+                                                            labelRadius: 100,
+                                                            initialAngle: 15,
+                                                            radius: 140,
+                                                            innerRadius: 50,
+                                                            centerOffset: 0,
+                                                            formatSettings: { sufix: '%', decimalPlaces: 1 }
+                                                        }
+                                                    ]
+                                            }
+                                        ]
+                                };
+
+                                // setup the chart
+                                $('#chartContainer2').jqxChart(settings);
+                      },
+                      error: function(error) {
+                          console.log(error);
+                          var msg="Data filter selected for \"Type of errors\" chart gives empty result";
+                          $("#container").html(msg);
+                          $("#messageNotification").jqxNotification("open");
+                      }
+                  });
             }
-            var JSONObject={"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)};
-                 $.ajax({
-                  url: '/queryStats',
-                  type: 'POST',
-                  data: {"StartDate":formatStart, "FinishDate": formatFinish, "Authors": JSON.stringify(authors)},
-                  success: function(response) {
-                      //TODO set charts
-                      console.log(response);
-                      source=response;
-                      var newDataAdapter = new $.jqx.dataAdapter(source,{
-                            async:false,
-                            autoBind:true,
-                            loadError:function(jqXHR, status, error){console.log(error)},
-                         });
-                      $('#chartContainer').jqxChart({source:newDataAdapter});
-                       $('#chartContainer').jqxChart('update');
-                       <!--var chart= $('#chartContainer').jqxChart('getInstance');-->
-                       <!--chart.source=response;-->
-                       <!--chart.refresh();-->
-                       <!--chart.update();-->
-                  },
-                  error: function(error) {
-                      console.log(error);
-                  }
-              });
+            else{
+                 var msg="you have to select one or more authors";
+                  $("#container").html(msg);
+                  $("#messageNotification").jqxNotification("open");
             }
            })
         });
@@ -246,27 +336,32 @@
 
     </script>
 <body>
-
-<div id="menuQuery" style="width:20%;heigth:80%;float:left;" >Query:
+<div id="messageNotification">
+        <div id="container">Data filter selected gives empty result</div>
+</div>
+<div id="menuQuery" style="width:30%;heigth:50%;float:left; font-family: Verdana; font-size: 16px; border:1px solid #ddd" >
+            <center>Filter data</center>
+    <div style="float:left;">
     <BR> Authors:
     <div id="listbox"></div>
             <div style="font-size: 13px; font-family: Verdana; margin-top: 20px;" id="Events"></div>
-
-    <div id="dataContainer" style="float:bottom;">
+    </div>
+    <div id="dataContainer" style="float:left; padding-left:15px;">
     <BR>From:<BR>
      <div id='jqxDateTimeInputStart' style="float:left;"></div>
     <BR><BR>To:<BR>
      <div id='jqxDateTimeInputFinish' style="float:bottom;"></div>
+    <BR><BR>
+    <input id="query" type="button" value="Filter data" style="float:right;"/>
     </div>
-    <input id="query" type="button" value="query"/>
-    </div>
+</div>
 
 
- <div id="containerChart" style="width:80%;float:left;">
+ <div id="containerChart" style="width:69%;float:left;">
 
-    <div id="chartContainer" style="width:40%; height:400px;float:left;">    </div>
+    <div id="chartContainer" style="width:50%; height:435px;float:left;">    </div>
 
-    <div id="chartContainer2" style="width:40%; height:400px; float:left;">  </div>
+    <div id="chartContainer2" style="width:50%; height:435px; float:left;">  </div>
 
 
  </div>
