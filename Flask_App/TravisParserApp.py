@@ -9,7 +9,9 @@ from Flask_App.utilityClasses.TestRow import TestRow
 from analisys.advancedStats import countStatStatus, countReason, getAuthors, countStatStatusFilter, countReasonFilter
 from analisys.completeParser import completeAnalysis, getBuilds
 from utility import dbUtility
-from utility.dbUtility import addUser, getUserProjects
+from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
+    getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
+    addToolRule, deleteToolRule
 from utility.storeObject import store, restore
 
 
@@ -27,6 +29,10 @@ def main():
 def registration():
     return render_template('registration.html')
 
+@app.route("/settings")
+def settings():
+    c=getCategories()
+    return render_template('customization.html', categories=json.dumps(c))
 
 @app.route("/homeUser" , methods=['POST','GET'])
 def homeUser():
@@ -219,6 +225,8 @@ def getMinData():
     #dateObject= datetime.strptime(date, '%Y-%m-%d')
     return json.dumps(date,default=lambda o: o.__dict__)
 
+
+
 @app.route("/getTestsList", methods=['GET'])
 def getTestsList():
     builds = restore("backup3")
@@ -237,6 +245,147 @@ def getInfoLog(idLog):
     logs = builds[0]["Logs"]
     return json.dumps(logs[0], default=lambda o: o.__dict__)
 
+
+#function to customization:
+@app.route("/addTask", methods=['POST'])
+def addTask():
+    task = request.form['task']
+    category = request.form['category']
+    username=session['username']
+    try:
+        addTaskRule(username,task,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception:
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/deleteTask", methods=['POST'])
+def deleteTask():
+    task = request.form['task']
+    category = request.form['category']
+    username=session['username']
+    try:
+        deleteTaskRule(username,task,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/getTask", methods=['GET'])
+def getTask():
+    username=session['username']
+    try:
+        result=getTaskUser(username)
+        print result
+        return json.dumps(result, default=lambda o: o.__dict__)
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+
+@app.route("/addGoal", methods=['POST'])
+def addGoal():
+    task = request.form['goal']
+    category = request.form['category']
+    username=session['username']
+    try:
+        addGoalRule(username,task,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception:
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/deleteGoal", methods=['POST'])
+def deleteGoal():
+    goal = request.form['goal']
+    category = request.form['category']
+    username=session['username']
+    try:
+        deleteGoalRule(username,goal,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/getGoal", methods=['GET'])
+def getGoal():
+    username=session['username']
+    try:
+        result=getGoalUser(username)
+        print result
+        return json.dumps(result, default=lambda o: o.__dict__)
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+
+
+@app.route("/addResultRuby", methods=['POST'])
+def addResultRuby():
+    result = request.form['result']
+    category = request.form['category']
+    username=session['username']
+    try:
+        addResultRubyRule(username,result,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception:
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/deleteResultRuby", methods=['POST'])
+def deleteResultRuby():
+    result = request.form['result']
+    category = request.form['category']
+    username=session['username']
+    try:
+        deleteResultRubyRule(username,result,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/getResultRuby", methods=['GET'])
+def getResultRuby():
+    username=session['username']
+    try:
+        result=getResultRubyUser(username)
+        print result
+        return json.dumps(result, default=lambda o: o.__dict__)
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+
+@app.route("/addToolRuby", methods=['POST'])
+def addToolRuby():
+    tool = request.form['tool']
+    regex = request.form['regex']
+    username=session['username']
+    try:
+        addToolRule(username,tool,regex)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception:
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/deleteToolRuby", methods=['POST'])
+def deleteToolRuby():
+    tool = request.form['tool']
+    regex = request.form['regex']
+    username=session['username']
+    try:
+        deleteToolRule(username,tool,regex)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/getToolRuby", methods=['GET'])
+def getToolRuby():
+    username=session['username']
+    try:
+        result=getToolUser(username)
+        print result
+        return json.dumps(result, default=lambda o: o.__dict__)
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 if __name__ == "__main__":
     #debug=true mi evita di spegnere e riaccendere il server quando faccio modifiche in fase di sviluppo

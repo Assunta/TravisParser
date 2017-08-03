@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize your analysis</title>
+       <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
+      <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.summer.css" />
+
+    	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/jqwidget/styles/style.css" />
+
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxexpander.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxnotification.js"></script>
+       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+
+
+     <script type="text/javascript">
+         $(document).ready(function () {
+
+             //header
+     $('.topBar li').on('click', function (e)
+            {
+                if (e.currentTarget.textContent)
+                {
+                    if(e.currentTarget.textContent=="Home"){
+                        window.location.href='/homeUser'
+                    }
+
+                } else
+                {
+                    $.ajax({
+                            url: "/logout",
+                            type: 'GET',
+                            success: function(data)
+                            {
+                                window.location.href='/home'
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                            }
+                        });
+                }
+            });
+
+
+
+
+            var c='{{categories}}'.split(',');
+            var source=[];
+            for (var i=0; i<c.length; i++){
+                source[i]=c[i].replace("[","").replace("]", "");
+                source[i]=source[i].replace(/[^a-zA-Z|^" "|^-]/g, '');
+                <!--source[i]=source[i].replace(/(&quot\;)/g, '');-->
+            }
+
+              //maven
+
+              //input
+             $("#goalMaven").jqxInput({placeHolder: "ex: org.apache.maven.plugins:maven-clean-plugin:clean", height: 25, width: '90%', minLength: 1 });
+             //dropdown category
+
+             $('#categoryGoalMaven').jqxDropDownList({source: source, selectedIndex: 0, width:'70%',dropDownHeight: 250, height: '20'});
+             //button
+              $("#addGoal").jqxButton({template: "inverse",  width: 160, height: 25 });
+
+
+               //gradle
+
+              //input
+             $("#taskGradle").jqxInput({placeHolder: "ex: compileJava", height: 25, width: '90%', minLength: 1 });
+             $('#categoryTaskGradle').jqxDropDownList({source: source, selectedIndex: 0, width:'70%',dropDownHeight: 250,height: '20'});
+             //button
+              $("#addTask").jqxButton({template: "inverse",  width: 160, height: 25 });
+
+              //ruby
+              //add tool
+              //input
+             $("#toolRuby").jqxInput({placeHolder: "ex: Rubocop", height: 25, width: '90%', minLength: 1 });
+             $("#regexToolRuby").jqxInput({placeHolder: "ex: \\ARunning RuboCop(.)*|\\ATesting with RuboCop(.)*", height: 25, width: '90%', minLength: 1 });
+             //button
+              $("#addTool").jqxButton({template: "inverse",  width: 160, height: 25 });
+
+              //add result message
+               //input
+             $("#resultMessageRuby").jqxInput({placeHolder: "ex: \\ACoverage is|Coverage report generated(.)*covered", height: 25, width: '90%', minLength: 1 });
+             $('#categoryRuby').jqxDropDownList({source: source, selectedIndex: 0, width:'70%',dropDownHeight: 250, height: '20'});
+             //button
+              $("#addResultMessage").jqxButton({template: "inverse",  width: 160, height: 25 });
+
+
+
+        //set grid Gradle
+
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields:
+                [
+                    { name: 'task', type: 'string' },
+                    { name: 'category', type: 'string' }
+                ],
+                url: '/getTask',
+                deleterow: function (rowid, commit) {
+                    // synchronize with the server - send delete command
+                    // call commit with parameter true if the synchronization with the server is successful
+                    //and with parameter false if the synchronization failed.
+                    rowdata= $('#taskGrid').jqxGrid('getrowdata', rowid);
+                    console.log(rowdata)
+                    $.ajax({
+                            url: "/deleteTask",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+                },
+                 addrow: function (rowid, rowdata, position, commit) {
+                     $.ajax({
+                            url: "/addTask",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+
+                }
+            };
+              var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // initialize jqxGrid
+            $("#taskGrid").jqxGrid(
+            {
+                width: '50%',
+                height: 150,
+                source: dataAdapter,
+                showtoolbar: true,
+                rendertoolbar: function (toolbar) {
+                    var me = this;
+                    var container = $("<div style='margin: 5px;'></div>");
+                    toolbar.append(container);
+                    container.append('<input style="margin-left: 5px;" id="deleterowbutton" type="button" value="Delete Selected Row" />');
+                     $("#deleterowbutton").jqxButton();
+
+                    // delete row.
+                    $("#deleterowbutton").on('click', function () {
+                        var selectedrowindex = $("#taskGrid").jqxGrid('getselectedrowindex');
+                        var rowscount = $("#taskGrid").jqxGrid('getdatainformation').rowscount;
+                        if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                            var id = $("#taskGrid").jqxGrid('getrowid', selectedrowindex);
+                            var commit = $("#taskGrid").jqxGrid('deleterow', id);
+                        }
+                    });
+                },
+                columns: [
+                  { text: 'Task', datafield: 'task', width: '50%' },
+                  { text: 'Category', datafield: 'category', width: '50%' }
+                ]
+            });
+
+            //add task button
+             $("#addTask").on('click', function () {
+                    var task_name=$("#taskGradle").val();
+                    var category_name= $('#categoryTaskGradle').jqxDropDownList('val');
+                        var datarow = {task:task_name, category: category_name};
+                     if (task_name.length>0){
+                        var commit = $("#taskGrid").jqxGrid('addrow', null, datarow);
+                     }
+                    });
+
+        //set grid Maven
+
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields:
+                [
+                    { name: 'goal', type: 'string' },
+                    { name: 'category', type: 'string' }
+                ],
+                url: '/getGoal',
+                deleterow: function (rowid, commit) {
+                    // synchronize with the server - send delete command
+                    // call commit with parameter true if the synchronization with the server is successful
+                    //and with parameter false if the synchronization failed.
+                    rowdata= $('#goalGrid').jqxGrid('getrowdata', rowid);
+                    console.log(rowdata)
+                    $.ajax({
+                            url: "/deleteGoal",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+                },
+                 addrow: function (rowid, rowdata, position, commit) {
+                     $.ajax({
+                            url: "/addGoal",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+
+                }
+            };
+              var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // initialize jqxGrid
+            $("#goalGrid").jqxGrid(
+            {
+                width: '50%',
+                height: 150,
+                source: dataAdapter,
+                showtoolbar: true,
+                rendertoolbar: function (toolbar) {
+                    var me = this;
+                    var container = $("<div style='margin: 5px;'></div>");
+                    toolbar.append(container);
+                    container.append('<input style="margin-left: 5px;" id="deleterowbutton" type="button" value="Delete Selected Row" />');
+                     $("#deleterowbutton").jqxButton();
+
+                    // delete row.
+                    $("#deleterowbutton").on('click', function () {
+                        var selectedrowindex = $("#goalGrid").jqxGrid('getselectedrowindex');
+                        var rowscount = $("#goalGrid").jqxGrid('getdatainformation').rowscount;
+                        if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                            var id = $("#goalGrid").jqxGrid('getrowid', selectedrowindex);
+                            var commit = $("#goalGrid").jqxGrid('deleterow', id);
+                        }
+                    });
+                },
+                columns: [
+                  { text: 'Goal', datafield: 'goal', width: '50%' },
+                  { text: 'Category', datafield: 'category', width: '50%' }
+                ]
+            });
+
+            //add task button
+             $("#addGoal").on('click', function () {
+                    var goal_name=$("#goalMaven").val();
+                    var category_name= $('#categoryGoalMaven').jqxDropDownList('val');
+                        var datarow = {goal:goal_name, category: category_name};
+                     if (goal_name.length>0){
+                        var commit = $("#goalGrid").jqxGrid('addrow', null, datarow);
+                     }
+                    });
+
+
+                //set grid Ruby result message
+
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields:
+                [
+                    { name: 'result', type: 'string' },
+                    { name: 'category', type: 'string' }
+                ],
+                url: '/getResultRuby',
+                deleterow: function (rowid, commit) {
+                    // synchronize with the server - send delete command
+                    // call commit with parameter true if the synchronization with the server is successful
+                    //and with parameter false if the synchronization failed.
+                    rowdata= $('#rubyGrid').jqxGrid('getrowdata', rowid);
+                    console.log(rowdata)
+                    $.ajax({
+                            url: "/deleteResultRuby",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+                    },
+                 addrow: function (rowid, rowdata, position, commit) {
+                     $.ajax({
+                            url: "/addResultRuby",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+
+                }
+            };
+              var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // initialize jqxGrid
+            $("#rubyGrid").jqxGrid(
+            {
+                width: '50%',
+                height: 150,
+                source: dataAdapter,
+                showtoolbar: true,
+                rendertoolbar: function (toolbar) {
+                    var me = this;
+                    var container = $("<div style='margin: 5px;'></div>");
+                    toolbar.append(container);
+                    container.append('<input style="margin-left: 5px;" id="deleterowbuttonR" type="button" value="Delete Selected Row" />');
+                     $("#deleterowbuttonR").jqxButton();
+
+                    // delete row.
+                    $("#deleterowbuttonR").on('click', function () {
+                        var selectedrowindex = $("#rubyGrid").jqxGrid('getselectedrowindex');
+                        var rowscount = $("#rubyGrid").jqxGrid('getdatainformation').rowscount;
+                        if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                            var id = $("#rubyGrid").jqxGrid('getrowid', selectedrowindex);
+                            var commit = $("#rubyGrid").jqxGrid('deleterow', id);
+                        }
+                    });
+                },
+                columns: [
+                  { text: 'Result message', datafield: 'result', width: '50%' },
+                  { text: 'Category', datafield: 'category', width: '50%' }
+                ]
+            });
+
+            //add task button
+             $("#addResultMessage").on('click', function () {
+                    var result_name=$("#resultMessageRuby").val();
+                    var category_name= $('#categoryRuby').jqxDropDownList('val');
+                        var datarow = {result:result_name, category: category_name};
+                     if (result_name.length>0){
+                        var commit = $("#rubyGrid").jqxGrid('addrow', null, datarow);
+                     }
+                    });
+
+
+       //set grid Ruby tool
+
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields:
+                [
+                    { name: 'tool', type: 'string' },
+                    { name: 'regex', type: 'string' }
+                ],
+                url: '/getToolRuby',
+                deleterow: function (rowid, commit) {
+                    rowdata= $('#toolGrid').jqxGrid('getrowdata', rowid);
+                    console.log(rowdata)
+                    $.ajax({
+                            url: "/deleteToolRuby",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+                },
+                 addrow: function (rowid, rowdata, position, commit) {
+                     $.ajax({
+                            url: "/addToolRuby",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+
+                }
+            };
+              var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // initialize jqxGrid
+            $("#toolGrid").jqxGrid(
+            {
+                width: '50%',
+                height: 150,
+                source: dataAdapter,
+                showtoolbar: true,
+                rendertoolbar: function (toolbar) {
+                    var me = this;
+                    var container = $("<div style='margin: 5px;'></div>");
+                    toolbar.append(container);
+                    container.append('<input style="margin-left: 5px;" id="deleterowbuttonTool" type="button" value="Delete Selected Row" />');
+                     $("#deleterowbuttonTool").jqxButton();
+
+                    // delete row.
+                    $("#deleterowbuttonTool").on('click', function () {
+                        var selectedrowindex = $("#toolGrid").jqxGrid('getselectedrowindex');
+                        var rowscount = $("#toolGrid").jqxGrid('getdatainformation').rowscount;
+                        if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                            var id = $("#toolGrid").jqxGrid('getrowid', selectedrowindex);
+                            var commit = $("#toolGrid").jqxGrid('deleterow', id);
+                        }
+                    });
+                },
+                columns: [
+                  { text: 'Tool', datafield: 'tool', width: '50%' },
+                  { text: 'Regular expression', datafield: 'regex', width: '50%' }
+                ]
+            });
+
+            //add task button
+             $("#addTool").on('click', function () {
+                    var tool_name=$("#toolRuby").val();
+                    var regex_name=$("#regexToolRuby").val();
+                    var datarow = {tool:tool_name, regex: regex_name};
+                     if (tool_name.length>0 && regex_name.length>0){
+                        var commit = $("#toolGrid").jqxGrid('addrow', null, datarow);
+                     }
+                    });
+
+        });
+        </script>
+</head>
+<body>
+<div class="header-wrap">
+        <div class="container">
+            <div class="row" style="padding-top:1.2em;">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <ul class="list-inline pull-right topBar">
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-right:0.3em"></span>Help</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin-right:0.3em"></span>Home</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span></p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div  style="padding:30px; width:100%; text-align: left; vertical-align:top;">
+    <div style="width:400px; margin:0 auto; "><h3>Customize your analysis...</h3></div>
+    <table style="padding:80px; width:100%; text-align: left;">
+     <tr>
+         <td><h4>Maven customization:</h4></td>
+     </tr>
+    <tr>
+     <td  colspan="3">Add new goal and its category </td>
+    </tr>
+     <tr><td> <BR> </td> </tr>
+    <tr>
+        <td style="width:15%" ></td>
+        <td><input type="text" id="goalMaven"/></td>
+        <td><div id="categoryGoalMaven"></div></td>
+        <td><button type="button" id="addGoal">ADD</button></td>
+    </tr>
+        <tr><td> <BR> </td> </tr>
+    <tr><td style="width:15%" ></td><td colspan="2" id="goalGrid"></td></tr>
+        <tr><td><BR><BR></td></tr>
+    <tr>
+         <td><h4>Gradle customization:</h4></td>
+     </tr>
+    <tr>
+     <td  colspan="3">Add new task and its category</td>
+    </tr>
+        <tr><td> <BR> </td> </tr>
+    <tr>
+        <td style="width:15%" ></td>
+        <td><input type="text" id="taskGradle"/></td>
+        <td><div id="categoryTaskGradle"></div></td>
+        <td><button type="button" id="addTask">ADD</button></td>
+    </tr>
+        <tr><td> <BR> </td> </tr>
+    <tr><td style="width:15%" ></td><td colspan="2" id="taskGrid"></td></tr>
+        <tr><td><BR><BR></td></tr>
+    <tr>
+         <td><h4>Ruby customization:</h4></td>
+     </tr>
+    <tr>
+     <td colspan="3">Add new tool and a regular expression to help us to match it during the analysis </td>
+    </tr>
+        <tr><td> <BR> </td> </tr>
+    <tr>
+        <td style="width:15%" ></td>
+        <td><input type="text" id="toolRuby"/></td>
+        <td><input type="text" id="regexToolRuby"/></td>
+        <td><button type="button" id="addTool">ADD</button></td>
+    </tr>
+         <tr><td> <BR> </td> </tr>
+    <tr><td style="width:15%" ></td><td colspan="2" id="toolGrid"></td></tr>
+        <tr><td><BR></td></tr>
+    <tr>
+     <tr>
+     <td colspan="4">Add new result message (ex: result messages of testing, static analysis, dynamic analysis, ...) and a regular expression to help us to match it during the analysis</td>
+    </tr>
+        <tr><td> <BR> </td> </tr>
+    <tr>
+        <td style="width:15%" ></td>
+        <td><input type="text" id="resultMessageRuby"/></td>
+        <td><div id="categoryRuby"></div></td>
+        <td><button type="button" id="addResultMessage">ADD</button></td>
+    </tr>
+         <tr><td> <BR> </td> </tr>
+    <tr><td style="width:15%" ></td><td colspan="2" id="rubyGrid"></td></tr>
+
+
+    </table>
+
+
+</div>
+
+</body>
+</html>

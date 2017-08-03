@@ -39,7 +39,7 @@
           var a=[];
             for(var i=0; i<source.length; i++){
             a[i]=source[i]
-            a[i]=a[i].replace("[", "").replace("]","")
+            a[i]=a[i].replace("[", "").replace("]","").replace(/[^a-zA-Z|^" "|^/]/g, '');
             }
 
           $('#selectProject').jqxDropDownList({source: a, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '20'});
@@ -77,6 +77,9 @@
                                  console.log(error);
                             }
                         });
+                }
+                else if (e.currentTarget.textContent=="Settings"){
+                     window.location.href='/settings'
                 }
             });
         });

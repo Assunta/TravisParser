@@ -178,3 +178,197 @@ def getUserProjects(name):
     finally:
         connection.close()
         return projects
+
+
+#this method allows to get all categories
+def getCategories():
+    connection=getConnection()
+    c=[]
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `category`"
+            if cursor.execute(sql) >0:
+                for r in cursor.fetchall():
+                    category=(r.get("CategoryName")).encode('ascii','ignore')
+                    c.append(category.strip())
+    finally:
+        connection.close()
+        return c
+
+#this method allow to add new task gradle rule
+def addTaskRule(username, task, category):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `taskgradlerules` (`regex`,  `category`,`configuration`) VALUES (%s, %s, %s)"
+            cursor.execute(sql, (task, category, username))
+
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+#DELETE FROM `travisdb`.`taskgradlerules` WHERE  `ID`=81;
+#this method allow to delete a customized task
+def deleteTaskRule(username, task, category):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "DELETE FROM `taskgradlerules`  WHERE `regex`=%s AND`category`=%s AND`configuration`=%s LIMIT 1"
+            cursor.execute(sql, (task, category, username))
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+#this method allows to get all task customized of user
+def getTaskUser(username):
+    connection=getConnection()
+    c=[]
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `taskgradlerules`  WHERE `configuration`=%s"
+            if cursor.execute(sql, username) >0:
+                for r in cursor.fetchall():
+                    task_name=(r.get("regex"))
+                    category_name=(r.get("category"))
+                    c.append({'task':task_name, 'category': category_name})
+    finally:
+        connection.close()
+        return c
+
+
+#this method allow to add new goal maven rule
+def addGoalRule(username, goal, category):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `goalmaven` (`Goal`,  `Category`,`configuration`) VALUES (%s, %s, %s)"
+            cursor.execute(sql, (goal, category, username))
+
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+
+#this method allow to delete a customized task
+def deleteGoalRule(username, goal, category):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "DELETE FROM `goalmaven`  WHERE `Goal`=%s AND`Category`=%s AND`configuration`=%s LIMIT 1"
+            cursor.execute(sql, (goal, category, username))
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+#this method allows to get all task customized of user
+def getGoalUser(username):
+    connection=getConnection()
+    c=[]
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `goalmaven`  WHERE `configuration`=%s"
+            if cursor.execute(sql, username) >0:
+                for r in cursor.fetchall():
+                    goal_name=(r.get("Goal"))
+                    category_name=(r.get("Category"))
+                    c.append({'goal':goal_name, 'category': category_name})
+    finally:
+        connection.close()
+        return c
+
+
+#this method allow to add new result message ruby
+def addResultRubyRule(username, result, category):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `rubytestmessages` (`regex`,  `category`,`configuration`) VALUES (%s, %s, %s)"
+            cursor.execute(sql, (result, category, username))
+
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+
+#this method allow to delete a message result customized
+def deleteResultRubyRule(username, result, category):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "DELETE FROM `rubytestmessages`  WHERE `regex`=%s AND`category`=%s AND`configuration`=%s LIMIT 1"
+            cursor.execute(sql, (result, category, username))
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+#this method allows to get all result message customized of user
+def getResultRubyUser(username):
+    connection=getConnection()
+    c=[]
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `rubytestmessages`  WHERE `configuration`=%s"
+            if cursor.execute(sql, username) >0:
+                for r in cursor.fetchall():
+                    goal_name=(r.get("regex"))
+                    category_name=(r.get("category"))
+                    c.append({'result':goal_name, 'category': category_name})
+    finally:
+        connection.close()
+        return c
+
+#this method allow to add new result message ruby
+def addToolRule(username, tool, regex):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `rubytools` (`tool`,  `regex`,`configuration`) VALUES (%s, %s, %s)"
+            cursor.execute(sql, (tool, regex, username))
+
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+
+#this method allow to delete a customized task
+def deleteToolRule(username, tool, regex):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "DELETE FROM `rubytools`  WHERE `regex`=%s AND`tool`=%s AND`configuration`=%s LIMIT 1"
+            cursor.execute(sql, (regex, tool, username))
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+#this method allows to get all task customized of user
+def getToolUser(username):
+    connection=getConnection()
+    c=[]
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `rubytools`  WHERE `configuration`=%s"
+            if cursor.execute(sql, username) >0:
+                for r in cursor.fetchall():
+                    tool_name=(r.get("tool"))
+                    regex=(r.get("regex"))
+                    c.append({'tool':tool_name, 'regex': regex})
+    finally:
+        connection.close()
+        return c
