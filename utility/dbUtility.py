@@ -372,3 +372,16 @@ def getToolUser(username):
     finally:
         connection.close()
         return c
+
+#add project to user
+def addProjectUser(project, user):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `user_projects` (`user`,  `project`) VALUES (%s, %s)"
+            cursor.execute(sql, (user, project))
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()

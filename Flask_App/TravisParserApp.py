@@ -1,8 +1,8 @@
 from github import Github
 from datetime import datetime
 from flask import Flask, render_template, request, json, session, url_for
-from werkzeug.utils import redirect
 
+from apscheduler.schedulers.background import BackgroundScheduler
 from Flask_App.utilityClasses.ErrorStat import ErrorStat
 from Flask_App.utilityClasses.Row import Row
 from Flask_App.utilityClasses.TestRow import TestRow
@@ -11,10 +11,11 @@ from analisys.completeParser import completeAnalysis, getBuilds
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
     getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
-    addToolRule, deleteToolRule
+    addToolRule, deleteToolRule, addProjectUser
 from utility.storeObject import store, restore
 
 
+# scheduler = BackgroundScheduler()
 builds = []
 INTERNET=False
 app = Flask(__name__)
@@ -37,14 +38,21 @@ def settings():
 @app.route("/homeUser" , methods=['POST','GET'])
 def homeUser():
     if request.method == 'POST':
-        #TODO check username e password
-        #session
-        session['username'] = request.form['username']
-        #find project to display
-        user = session['username']
-        projects = getUserProjects(user)
-        print(projects)
-        return render_template('homeUser.html', username=session['username'], projects=projects)
+        username= request.form['username']
+        password= request.form['password']
+        try:
+            g = Github(username, password, 'https://api.github.com')
+            print g.get_user(login=username)
+            #session
+            session['username'] = request.form['username']
+            #find project to display
+            user = session['username']
+            projects = getUserProjects(user)
+            print(projects)
+            return render_template('homeUser.html', username=session['username'], projects=projects)
+        except Exception, e:
+            print e
+            return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
     else:
         if 'username' in session:
             user = session['username']
@@ -86,17 +94,35 @@ def signUp():
 
 @app.route("/results", methods=['POST'])
 def results():
+    #TODO scegliere il file giusto
     reponame = request.form['reponame']
     reponame= reponame.replace("\'", "")
-    #TODO cercare il file da caricare
+    print reponame
     global builds
-    if(INTERNET):
-        builds=getBuilds(reponame)
-        store(builds, "backupRubyWarbler")
-    else:
-         builds=restore("backupGradleJFX2")
+    builds=restore("backupGradleJFX2")
     return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
 
+@app.route("/results/<reponame>", methods=['GET'])
+def resultsReponame(reponame):
+    global builds
+    filename=session['username'].encode('ascii','ignore')+"_"+reponame;
+    builds=restore(filename)
+    return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
+
+@app.route("/newAnalysis", methods=['POST'])
+def newAnalysis():
+    reponame = request.form['reponame']
+    reponame= reponame.replace("\'", "")
+    try:
+        global builds
+        builds=getBuilds(reponame)
+        fileName=session['username'].encode('ascii','ignore')+"_"+reponame.replace("/","_")
+        store(builds, fileName)
+        addProjectUser(reponame,session['username'])
+        return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/validateKey", methods=['POST'])
 def validateKey():
@@ -386,9 +412,16 @@ def getToolRuby():
     except Exception,e:
         print e
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+#
+# def myfunc():
+#     scheduler.print_jobs()
+
 
 if __name__ == "__main__":
     #debug=true mi evita di spegnere e riaccendere il server quando faccio modifiche in fase di sviluppo
     #TODO togliero per il rilascio
+    #il job parte due volte perche' siamo in debug
+    # scheduler.add_job(myfunc, 'interval', seconds=10,  id='job_prova')
+    # scheduler.start()
     app.run(debug=True, threaded=True)
 

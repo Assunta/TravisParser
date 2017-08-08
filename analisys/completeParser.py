@@ -26,6 +26,9 @@ def getBuilds(reponame):
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
     lastBuild= repo.last_build_number
+
+    # lastBuild=50
+
     print "last build: " + str(lastBuild)
     builds=completeAnalysis(reponame, lastBuild)
     lastBuild=int(builds[-1].getBuildID())

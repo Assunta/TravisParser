@@ -3,7 +3,7 @@
   <head>
     <title>Travis CI parser</title>
         <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
-      <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.summer.css" />
+      <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.custom_black.css" />
 
     	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -38,7 +38,7 @@
             });
 
 
-            var style='summer'
+            var style='custom_black'
             // menu definition
              <!--$("#jqxMenu").jqxMenu({ width: '100%', height: '30px', showTopLevelArrows: true, autoOpen: true, theme:style});-->
              <!--$("#jqxMenu").jqxMenu('minimize');-->
@@ -51,7 +51,7 @@
             // Create jqxInput.
             $("#password").jqxInput({ width: '320px', height: '30px' });
             // Create jqxButton.
-            $("#submitButton").jqxButton({ template: "primary" , width: '50%' });
+            $("#submitButton").jqxButton({ template: "inverse" , width: '50%' });
             // Create jqxValidator.
             $("#form").jqxValidator({
                 rules: [
@@ -64,19 +64,18 @@
             var validationResult = function (isValid) {
                     if (isValid) {
                     var user = $('#userName').val();
+                    var password=$('#password').val();
                                  $.ajax({
-                                        url: "/validateKey",
+                                        url: "/homeUser",
                                         type: 'POST',
-                                        data: {userName:user},
+                                        data: {username:user, password:password},
                                         success: function(data)
                                         {
-                                            <!--$("#gitKey").jqxInput({disabled: true });-->
                                             $('#form').submit();
                                         },
                                         error: function()
                                         {
-                                            <!--$("#gitKey").jqxInput({disabled: false });-->
-                                            <!--$("#messageNotification").jqxNotification("open");-->
+                                            $("#messageNotification").jqxNotification("open");
 
                                         }
                                     });
@@ -102,8 +101,8 @@
 <body>
 
  <div id="messageNotification">
-        <div>This is your first access. You need to provide your github access token.<BR>
-        To create and delete the GitHub token, you can use the  <a href="https://github.com/settings/tokens" target="blank">GitHub web interface</a></div>
+        <div>Username and password do not match!<BR>Plase retry<BR>
+           You have to provide Github username and password</div>
     </div>
 
 

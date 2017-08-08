@@ -430,6 +430,7 @@
               });
         }
 
+
         //prepare data jqxgrid
         var source =
             {
@@ -450,6 +451,7 @@
                 source: dataAdapter,
                 sortable: true,
                 filterable: true,
+                selectedrowindex: 0,
                 filtermode: 'excel',
                 pageable: false,
                 columnsresize: true,
@@ -465,8 +467,9 @@
                  id=data.idBuild
                  buildDetails(id)
             });
-
+            $("#jqxgrid").jqxGrid('selectrow',0);
         });
+
         </script>
 
 </head>

@@ -34,6 +34,14 @@
 
    <script type="text/javascript">
         $(document).ready(function () {
+        //set loading message
+
+             $("#loadingNotification").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: false, autoCloseDelay: 3000, template: "info", showCloseButton: false
+            });
+
+
          $("#input").jqxInput({placeHolder: "username/project", height: 25, width: 200, minLength: 1 });
           var source='{{projects}}'.split(',');
           var a=[];
@@ -51,13 +59,59 @@
             //get project name
                var item = $("#selectProject").jqxDropDownList('getSelectedItem').value;
                //submit form
-               <!--$('#formGetProject').attr("reponame", item);-->
                 $('#formGetProject').append('<input type="hidden" name="reponame" value='+item+'>');
                 $('#formGetProject').submit();
             });
 
-        $("#addProjectButton").jqxButton({template: "inverse",  width: 160, height: 25 });
+        //role not empty name
+        //error notification
+             $("#messageNotification").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 3000, template: "error"
+            });
 
+
+        $("#addProjectButton").jqxButton({template: "inverse",  width: 160, height: 25 });
+         $("#addProjectButton").on('click', function ()
+            {
+            //get project name
+               var item = $("#input").val();
+               //submit form
+               var regex = /(\w+)\/(\w+)/g;
+               if (item.length>0 && (item.match(regex)!=null)){
+               $("#loadingNotification").jqxNotification("open");
+               // This will disable everything contained in the div
+                $("#page *").prop('disabled',true);
+                                 $.ajax({
+                                        url: "/newAnalysis",
+                                        type: 'POST',
+                                        data: {reponame:item},
+                                        success: function(data)
+                                        {
+                                            var reponame=item.replace("/","_");
+                                            window.location.href='/results/'+reponame;
+                                        },
+                                        error: function()
+                                        {
+                                            $("#loadingNotification").jqxNotification("closeAll");
+                                            $('#messageContainer').html("Project not found!")
+                                            $("#messageNotification").jqxNotification("open");
+                                            $("#page").children().prop('disabled',false);
+                                        },
+                                        complete: function()
+                                        {
+                                        $("#page").children().prop('disabled',false);
+                                         $("#loadingNotification").jqxNotification("closeAll");
+                                        }
+                                    });
+                }
+                else{
+                     $('#messageContainer').html("Project name must be: Github_username/project_name<BR>"+
+                            "Please retry")
+                     $("#messageNotification").jqxNotification("open");
+                }
+
+            });
 
 
         //logout
@@ -103,7 +157,19 @@
         </div>
     </div>
 
-<div style="width:400px; margin:0 auto; ">
+
+ <div id="messageNotification">
+        <div id="messageContainer">
+        </div>
+    </div>
+
+ <div id="loadingNotification">
+         <img src="../static/jqwidget/jqwidgets/styles/images/loader.gif"  height="35" width="35" style=" display: block; margin:auto;">
+        <div id="loadingContainer" style="float=bottom;"> Please wait: the analysis could take few minuts! <BR>Thanks for your patience!
+        </div>
+    </div>
+
+<div id="page" style="width:400px; margin:0 auto; ">
     <table style="padding:5px; width:100%; text-align: left; vertical-align:top;">
         <form id="formGetProject" action="{{url_for('results')}}" method="post">
         <tr>
@@ -120,6 +186,7 @@
          <tr>
             <td><h4><BR>or..</h4></td>
         </tr>
+         <form id="formNewProject" action="{{url_for('newAnalysis')}}" method="post">
         <tr>
             <td><h3>Add new project</h3></td>
         </tr>
@@ -127,6 +194,7 @@
             <td><input type="text" id="input"/></td>
             <td><button type="button" id="addProjectButton">Analyze new project</button></td>
         </tr>
+         </form>
 
     </table>
 
