@@ -1,3 +1,5 @@
+
+import logging
 from github import Github
 from datetime import datetime
 from flask import Flask, render_template, request, json, session, url_for
@@ -7,7 +9,7 @@ from Flask_App.utilityClasses.ErrorStat import ErrorStat
 from Flask_App.utilityClasses.Row import Row
 from Flask_App.utilityClasses.TestRow import TestRow
 from analisys.advancedStats import countStatStatus, countReason, getAuthors, countStatStatusFilter, countReasonFilter
-from analisys.completeParser import completeAnalysis, getBuilds
+from analisys.completeParser import completeAnalysis, getBuilds, getRefreshBuilds
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
     getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
@@ -15,11 +17,20 @@ from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRu
 from utility.storeObject import store, restore
 
 
-# scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler()
 builds = []
 INTERNET=False
 app = Flask(__name__)
 app.secret_key = 'lodmdmncdvnjnjksdcnkwcw'      #session work only with secret key
+
+#logging
+log = logging.getLogger('apscheduler.executors.default')
+log.setLevel(logging.INFO)  # DEBUG
+fmt = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
+h = logging.StreamHandler()
+h.setFormatter(fmt)
+log.addHandler(h)
+
 
 
 @app.route("/home",  methods=['POST', 'GET'])
@@ -97,17 +108,19 @@ def results():
     #TODO scegliere il file giusto
     reponame = request.form['reponame']
     reponame= reponame.replace("\'", "")
-    print reponame
+    session['reponame'] = reponame
     global builds
-    builds=restore("backupGradleJFX2")
+    fileName = session['username'].encode('ascii', 'ignore') + "_" + reponame.replace("/", "_")
+    builds=restore(fileName)
     return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
 
 @app.route("/results/<reponame>", methods=['GET'])
 def resultsReponame(reponame):
+    print reponame
     global builds
     filename=session['username'].encode('ascii','ignore')+"_"+reponame;
     builds=restore(filename)
-    return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
+    return render_template('header.html', reponame=session['reponame'], buildNum=builds.__len__())
 
 @app.route("/newAnalysis", methods=['POST'])
 def newAnalysis():
@@ -115,11 +128,28 @@ def newAnalysis():
     reponame= reponame.replace("\'", "")
     try:
         global builds
+        session['reponame'] = reponame.replace("_","/")
         builds=getBuilds(reponame)
         fileName=session['username'].encode('ascii','ignore')+"_"+reponame.replace("/","_")
         store(builds, fileName)
         addProjectUser(reponame,session['username'])
-        return render_template('header.html', reponame=reponame, buildNum=builds.__len__())
+        builds=restore(fileName)
+        return render_template('header.html', reponame=session['reponame'], buildNum=builds.__len__())
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+#this method allow to restart the analysis
+@app.route("/force", methods=['GET'])
+def force():
+    reponame = session['reponame']
+    try:
+        global builds
+        builds=getBuilds(reponame)
+        fileName=session['username'].encode('ascii','ignore')+"_"+reponame.replace("/","_")
+        store(builds, fileName)
+        builds=restore(fileName)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
         print e
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
@@ -412,16 +442,84 @@ def getToolRuby():
     except Exception,e:
         print e
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
-#
-# def myfunc():
-#     scheduler.print_jobs()
 
+@app.route("/getOption", methods=['GET'])
+def getOption():
+    job=scheduler.get_job(session['username']+"_"+session['reponame'])
+    if (job == None):
+        ret= False
+    else:
+        ret=True
+    return json.dumps([
+        {
+            "name":session['reponame'],
+            "numBuilds": builds.__len__(),
+            "backgroundProcess": ret
+        }
+    ])
+
+def addBackgroundFunction(username, reponame):
+    filename=username + "_" +reponame.replace("/", "_")
+    builds=restore(filename)
+    result = getRefreshBuilds(reponame, builds)
+    # remove duplicate if present
+    all = result
+    if result.__len__() > 0:
+        index = result[-1].getBuildID()
+        for item in builds:
+            if int(item["idBuild"]) < int(index):
+                result.append(item)
+        store(all, filename)
+
+
+
+@app.route("/addBackgroundProcess", methods=['GET'])
+def addBackgroundProcess():
+    try:
+        username=session['username']
+        reponame=session['reponame']
+        fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame']
+        scheduler.add_job(lambda: addBackgroundFunction(username,reponame), 'interval', seconds=180,  id=fileName)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception, e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/removeBackgroundProcess", methods=['GET'])
+def removeBackgroundProcess():
+    try:
+        scheduler.remove_job(session['username']+"_"+session['reponame'])
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception, e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+#
+@app.route("/refresh", methods=['GET'])
+def refresh():
+    global builds
+    try:
+        result=getRefreshBuilds(session['reponame'], builds)
+        fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame'].replace("/", "_")
+        #remove duplicate if present
+        all=result
+        if result.__len__()==0:
+            return json.dumps({'success': True}), 201, {'ContentType': 'application/json'}
+        index=result[-1].getBuildID()
+        for item in builds:
+            if int(item["idBuild"])<int(index):
+                result.append(item)
+        store(all, fileName)
+        builds = restore(fileName)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 if __name__ == "__main__":
     #debug=true mi evita di spegnere e riaccendere il server quando faccio modifiche in fase di sviluppo
     #TODO togliero per il rilascio
     #il job parte due volte perche' siamo in debug
     # scheduler.add_job(myfunc, 'interval', seconds=10,  id='job_prova')
-    # scheduler.start()
+    scheduler.start()
     app.run(debug=True, threaded=True)
 

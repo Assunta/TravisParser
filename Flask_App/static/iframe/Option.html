@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--styles-->
+    <link type="text/css" rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.base.css" />
+	 <link type="text/css" rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.custom_black.css" />
+
+
+    <style type="text/css">
+        .contentSection
+        {
+            padding: 5px;
+            text-align: justify;
+        }
+    </style>
+    <script type="text/javascript" src="../jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../jqwidget/scripts/demos.js"></script>
+    <link rel="stylesheet" href="../jqwidget/jqwidgets/styles/jqx.ui-smoothness.css" type="text/css" />
+
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxmenu.js"></script>
+	<script type="text/javascript" src="../jqwidget/jqwidgets/jqxlayout.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxscrollbar.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+       <script type="text/javascript" src="../jqwidget/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdraw.js"></script>
+        <script type="text/javascript" src="../jqwidget/jqwidgets/jqxsplitter.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
+     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnotification.js"></script>
+
+
+     <script type="text/javascript">
+    $(document).ready(function () {
+     $("#loadingNotification").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: false, autoCloseDelay: 3000, template: "info", showCloseButton: false
+            });
+
+     $("#loadingNotificationForce").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: false, autoCloseDelay: 3000, template: "info", showCloseButton: false
+            });
+
+
+    $("#messageNotification").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 6000, template: "info"
+            });
+
+
+     $("#jqxRadioButtonFalse").jqxRadioButton({ width: 250, height: 25, animationShowDelay:400, theme:"ui-smoothness"});
+     $("#jqxRadioButtonTrue").jqxRadioButton({ width: 250, height: 25, animationShowDelay:400, theme:"ui-smoothness"});
+    //get infomration
+    $.ajax({
+                  url: '/getOption',
+                  type: 'GET',
+                  success: function(response) {
+                        result=JSON.parse(response);
+                        $("#reponame").html(result[0]["name"])
+                         $("#nBuilds").html(result[0]["numBuilds"])
+                         if(result[0]["backgroundProcess"]){
+                                $("#jqxRadioButtonTrue").jqxRadioButton({ checked:true});
+                                 $("#jqxRadioButtonFalse").jqxRadioButton({ checked:false});
+                         }else{
+                                $("#jqxRadioButtonFalse").jqxRadioButton({ checked:true});
+                                 $("#jqxRadioButtonTrue").jqxRadioButton({ checked:false});
+                         }
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+
+     $("#refresh").jqxButton({template: "inverse",  width: 160, height: 25 });
+      $("#refresh").on('click', function ()
+            {
+            $("#loadingNotification").jqxNotification("open");
+            $.ajax({
+                          url: '/refresh',
+                          type: 'GET',
+                          statusCode: {
+                                201: function() {
+                                  //Project is up to date no refresh
+                                $("#loadingNotification").jqxNotification("closeAll");
+                                var msg="The project is already updated";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                                },
+                                 200: function() {
+                                $("#loadingNotification").jqxNotification("closeAll");
+                               //find new builds: need to reload
+                                location.reload();
+                                }
+                            },
+
+                          error: function(error) {
+                           $("#loadingNotification").jqxNotification("closeAll");
+                              console.log(error);
+                          }
+                    });
+            });
+
+
+
+        $("#jqxRadioButtonTrue").on('change', function (event) {
+                var checked = event.args.checked;
+                if (checked) {
+                    $.ajax({
+                          url: '/addBackgroundProcess',
+                          type: 'GET',
+                          success: function(response) {
+                                var msg="We will check every day for new builds and we will refresh the analyisis autmatically!<BR>Now you have nothing to worry about ";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                          },
+                          error: function(error) {
+                              console.log(error);
+                          }
+                    });
+                }
+            });
+
+         $("#jqxRadioButtonFalse").on('change', function (event) {
+                var checked = event.args.checked;
+                if (checked) {
+                    //add background process
+                      $.ajax({
+                          url: '/removeBackgroundProcess',
+                          type: 'GET',
+                          success: function(response) {
+                                var msg="The automatic check for update has been removed";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                          },
+                          error: function(error) {
+                              console.log(error);
+                            }
+                 });
+                 }
+              });
+
+     $("#force").jqxButton({template: "inverse",  width: 160, height: 25 });
+     $("#force").on('click', function (){
+       $("#loadingNotificationForce").jqxNotification("open");
+            $.ajax({
+                          url: '/force',
+                          type: 'GET',
+                           success: function(response) {
+                                $("#loadingNotificationForce").jqxNotification("closeAll");
+                                var msg="All the project has been sucessfully analyzed!";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                          },
+
+                          error: function(error) {
+                          $("#loadingNotificationForce").jqxNotification("closeAll");
+                            var msg="An error occured during the analysis";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                              console.log(error);
+                          }
+                    });
+
+     });
+
+
+
+
+        });
+     </script>
+</head>
+<body>
+
+ <div id="messageNotification">
+        <div id="messageContainer">
+        </div>
+    </div>
+
+  <div id="loadingNotification">
+         <img src="../jqwidget/jqwidgets/styles/images/loader.gif"  height="35" width="35" style=" display: block; margin:auto;">
+        <div id="loadingContainer" style="float=bottom;"> Please wait: we are checking for new builds...<BR> The refresh could take few minutes
+        </div>
+    </div>
+
+   <div id="loadingNotificationForce">
+         <img src="../jqwidget/jqwidgets/styles/images/loader.gif"  height="35" width="35" style=" display: block; margin:auto;">
+        <div id="loadingContainerForce" style="float=bottom;"> Please wait: we are perform a new analysis<BR> It could take few minutes
+        </div>
+    </div>
+
+<div id="page" style="width:700px; margin:0 auto; ">
+    <table style="padding:5px; width:100%; text-align: left; vertical-align:top; line-height: 50px;font-family: Verdana; font-size: 14px;">
+        <tr><td><B>Project name:</B></td><td align="center" id="reponame"></td></tr>
+        <tr><td><b>Total builds analyzed:</b></td><td align="center" id="nBuilds">totale</td></tr>
+        <tr><td><B>Automatic check for updates</B>:</td>
+            <td align="center"> <div ><div align="center" id='jqxRadioButtonFalse'>
+            False</div>
+        <div align="center" id='jqxRadioButtonTrue'>
+            <span>True</span></div></div></td></tr>
+       <tr><td><B>Refresh analysis:</B> look for new builds to analyze</td><td><input id="refresh" type="button" value="Refresh" style="float:right;"/></td></tr>
+        <tr><td><B>Force analysis:</B> restart analysis for all builds </td><td><input id="force" type="button" value="Restart" style="float:right;"/></td></tr>
+
+    </table>
+</div>
+</body>
+</html>

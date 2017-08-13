@@ -17,17 +17,46 @@ from domain.RubyLog import RubyLog
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-def getBuilds(reponame):
-    #TODO da testare
+def getRefreshBuilds(reponame, buildOld):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
+    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
+    token = f.readline()
+    t = TravisPy.github_auth(str(token))
+    print reponame
+    repo = t.repo(reponame)
+    lastBuild= repo.last_build_number
+    if(buildOld[0]["idBuild"]==lastBuild):
+        print "The project is up to date!!"
+        return allBuilds
+    else:
+        print "last analyzed= "+buildOld[0]["idBuild"]
+        print "last build: " + str(lastBuild)
+        lastBuild = str(int(lastBuild) + 1)
+        builds=completeAnalysis(reponame, lastBuild)
+        lastBuild=int(builds[-1].getBuildID())
+        print "last build: "+str(lastBuild)
+        for b in builds:
+            print b.getBuildID()
+        while (lastBuild>int(buildOld[0]["idBuild"])):
+            other_builds=completeAnalysis(reponame, lastBuild)
+            for b in other_builds:
+                builds.append(b)
+                print b.getBuildID()
+            lastBuild = int(other_builds[-1].getBuildID())
+            print "last build: " + str(lastBuild)
+        return builds
+
+
+
+def getBuilds(reponame):
     f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
     token = f.readline()
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
     lastBuild= repo.last_build_number
 
-    # lastBuild=50
+    # lastBuild=24
 
     print "last build: " + str(lastBuild)
     builds=completeAnalysis(reponame, lastBuild)
@@ -56,7 +85,6 @@ def completeAnalysis(reponame, afterBuild):
     token = f.readline()
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
-    #builds = t.builds(slug=repo.slug )
     builds = t.builds(slug=repo.slug, after_number=afterBuild)
     for count in range(0,min(maxnumberbuilds, len(builds))):
         # catch one build

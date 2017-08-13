@@ -29,6 +29,7 @@
       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
     <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxtooltip.js"></script>
 
 
 
@@ -46,8 +47,9 @@
           var source='{{projects}}'.split(',');
           var a=[];
             for(var i=0; i<source.length; i++){
-            a[i]=source[i]
-            a[i]=a[i].replace("[", "").replace("]","").replace(/[^a-zA-Z|^" "|^/]/g, '');
+            a[i]=source[i];
+            a[i]=a[i].replace("[", "").replace("]","");
+            a[i]=a[i].replace( /&#39;/g,'').trim();
             }
 
           $('#selectProject').jqxDropDownList({source: a, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '20'});
@@ -82,6 +84,9 @@
                $("#loadingNotification").jqxNotification("open");
                // This will disable everything contained in the div
                 $("#page *").prop('disabled',true);
+                $('#selectProject').jqxDropDownList({ disabled: true });
+                $("#getProjectButton").jqxButton({disabled: true });
+                $("#addProjectButton").jqxButton({disabled: true });
                                  $.ajax({
                                         url: "/newAnalysis",
                                         type: 'POST',
@@ -97,10 +102,16 @@
                                             $('#messageContainer').html("Project not found!")
                                             $("#messageNotification").jqxNotification("open");
                                             $("#page").children().prop('disabled',false);
+                                            $('#selectProject').jqxDropDownList({ disabled: false });
+                                             $("#getProjectButton").jqxButton({disabled: false });
+                                             $("#addProjectButton").jqxButton({disabled: false });
                                         },
                                         complete: function()
                                         {
                                         $("#page").children().prop('disabled',false);
+                                        $('#selectProject').jqxDropDownList({ disabled: false });
+                                         $("#getProjectButton").jqxButton({disabled: false });
+                                             $("#addProjectButton").jqxButton({disabled: false });
                                          $("#loadingNotification").jqxNotification("closeAll");
                                         }
                                     });
@@ -136,6 +147,11 @@
                      window.location.href='/settings'
                 }
             });
+
+
+
+
+
         });
 
 
@@ -150,7 +166,7 @@
                     <ul class="list-inline pull-right topBar">
                         <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-right:0.3em"></span>Help</p></li>
                         <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:0.3em"></span>Settings</p></li>
-                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span></p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span>Logout</p></li>
                     </ul>
                 </div>
             </div>

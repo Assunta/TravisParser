@@ -383,5 +383,7 @@ def addProjectUser(project, user):
             # connection is not autocommit by default. So you must commit to save
             # your changes.
         connection.commit()
+    except Exception, e:
+        print e
     finally:
         connection.close()

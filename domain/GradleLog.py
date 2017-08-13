@@ -16,7 +16,7 @@ class GradleLog:
         self.errorList = list()
         self.noteList = list()
         self.statusErrorList=list()
-        self.typeOfError=""
+        self.typeOfError="other"
         self.buildTool = "Gradle"
 
     def getTypeOfError(self):
@@ -49,11 +49,10 @@ class GradleLog:
     def addError(self, s):
         self.errorList.append(s)
 
-    def addErrorList(self, lista):
+    def addErrorList(self, listError, listStatus):
         listaErroriParsati=list()
         listErrorsDb= getGradleErrorsRules()
-
-        for e in lista:
+        for e in listError:
             checkDB = False
             # check error outside tasks
             for eDB in listErrorsDb:
@@ -70,13 +69,23 @@ class GradleLog:
                 error.setTask(e.split("\t")[0])
                 listaErroriParsati.append(error)
 
+        for e in listStatus:
+            # check status errors
+            for eDB in listErrorsDb:
+                if re.match(eDB.get("regex"), e):
+                    error = Error(e)
+                    error.setCategory(eDB.get("category"))
+                    error.setTask("")
+                    listaErroriParsati.append(error)
 
 
-        if lista.__len__()>0:
+        if listaErroriParsati.__len__()>0:
+            self.typeOfError = listaErroriParsati[-1].getCategory()
+        else:
             try:
-                self.typeOfError =listaErroriParsati[-1].getCategory()
+                self.typeOfError = listError[-1].split("\t")[1]
             except:
-                self.typeOfError=lista[-1].split("\t")[1]
+                self.typeOfError =""
         self.errorList =listaErroriParsati
 
     def addNote(self, s):

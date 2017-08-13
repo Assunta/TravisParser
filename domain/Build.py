@@ -151,3 +151,9 @@ class Build():
 
     def getLogs(self):
         return self.Logs
+
+    def __eq__(self, other):
+        return self.idBuild == other.getBuildID()
+
+    def __hash__(self):
+        return hash((self.idBuild))

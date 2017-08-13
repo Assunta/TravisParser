@@ -152,7 +152,7 @@
                 var dataAdapter = new $.jqx.dataAdapter(source);
                 $("#snapshotGrid").jqxGrid(
                 {
-                    width: 400,
+                    width: 360,
                     autoheight: true,
                     source: dataAdapter,
                     keyboardnavigation: true,
@@ -163,7 +163,7 @@
                     ]
                 });
                 // define goal panel
-                $("#goalPanel").jqxPanel({height: 300, width: 550});
+                $("#goalPanel").jqxPanel({height: 300, width: 540});
                 $("#goalPanel").wrap("<div class='container' style=\"float:left\"></div>")
 
 
@@ -191,7 +191,7 @@
                  <!--$('#panelJob').jqxPanel('append', testGrid);-->
                  $('.container').append(testGrid)
 
-                  $("#testPanel").jqxPanel({height: 300, width: 550});
+                  $("#testPanel").jqxPanel({height: 300, width: 540});
                  $('#testPanel').jqxPanel('clearcontent');
                 tests=dataJob.snapshotList[ID].test;
                  var tableTests=document.createElement('table');
@@ -456,6 +456,10 @@
                 pageable: false,
                 columnsresize: true,
                 autoshowfiltericon: false,
+                ready: function()
+                {
+                    $("#jqxgrid").jqxGrid('selectrow',0);
+                },
                 columns: [
                   { text: 'Build', datafield: 'idBuild', width: '40%'},
                   { text: 'Status', datafield: 'status', width: '60%'}
@@ -467,7 +471,7 @@
                  id=data.idBuild
                  buildDetails(id)
             });
-            $("#jqxgrid").jqxGrid('selectrow',0);
+            <!--$("#jqxgrid").jqxGrid('selectrow',0);-->
         });
 
         </script>
