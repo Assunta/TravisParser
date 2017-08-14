@@ -17,7 +17,7 @@ from domain.RubyLog import RubyLog
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-def getRefreshBuilds(reponame, buildOld):
+def getRefreshBuilds(username,reponame, buildOld):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
     f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
@@ -33,13 +33,13 @@ def getRefreshBuilds(reponame, buildOld):
         print "last analyzed= "+buildOld[0]["idBuild"]
         print "last build: " + str(lastBuild)
         lastBuild = str(int(lastBuild) + 1)
-        builds=completeAnalysis(reponame, lastBuild)
+        builds=completeAnalysis(username,reponame, lastBuild)
         lastBuild=int(builds[-1].getBuildID())
         print "last build: "+str(lastBuild)
         for b in builds:
             print b.getBuildID()
         while (lastBuild>int(buildOld[0]["idBuild"])):
-            other_builds=completeAnalysis(reponame, lastBuild)
+            other_builds=completeAnalysis(username,reponame, lastBuild)
             for b in other_builds:
                 builds.append(b)
                 print b.getBuildID()
@@ -49,7 +49,7 @@ def getRefreshBuilds(reponame, buildOld):
 
 
 
-def getBuilds(reponame):
+def getBuilds(username,reponame):
     f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
     token = f.readline()
     t = TravisPy.github_auth(str(token))
@@ -59,13 +59,13 @@ def getBuilds(reponame):
     # lastBuild=24
 
     print "last build: " + str(lastBuild)
-    builds=completeAnalysis(reponame, lastBuild)
+    builds=completeAnalysis(username,reponame, lastBuild)
     lastBuild=int(builds[-1].getBuildID())
     print "last build: "+str(lastBuild)
     for b in builds:
         print b.getBuildID()
     while (lastBuild>1):
-        other_builds=completeAnalysis(reponame, lastBuild)
+        other_builds=completeAnalysis(username,reponame, lastBuild)
         for b in other_builds:
             builds.append(b)
             print b.getBuildID()
@@ -77,7 +77,7 @@ def getBuilds(reponame):
 
 
 
-def completeAnalysis(reponame, afterBuild):
+def completeAnalysis(username,reponame, afterBuild):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
     maxnumberbuilds =25
@@ -106,13 +106,13 @@ def completeAnalysis(reponame, afterBuild):
                 language = build.config["language"]
                 tool = checkGradleMavenFile(fIn)
                 if (tool == "maven"):
-                    mavenLog = parserMaven(fIn, MavenLog(job_id))
+                    mavenLog = parserMaven(username,fIn, MavenLog(job_id))
                     buildUnderAnalysis.addLog(mavenLog)
                 elif language == "ruby":
-                    rubyLog = parserRuby(fIn, RubyLog(job_id))
+                    rubyLog = parserRuby(username,fIn, RubyLog(job_id))
                     buildUnderAnalysis.addLog(rubyLog)
                 else:  # (tool == "gradle"):
-                    gradleLog = parserGradle(fIn, GradleLog(job_id))
+                    gradleLog = parserGradle(username,fIn, GradleLog(job_id))
                     buildUnderAnalysis.addLog(gradleLog)
                 fIn.close()
                 os.remove(str(job_id)+'.txt')

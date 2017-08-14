@@ -36,13 +36,13 @@ def getStatusMessages():
         return records
 
 #get all the items in table rubytools
-def getRubyTools():
+def getRubyTools(user):
     connection= getConnection()
     records= list()
     try:
         with connection.cursor() as cursor:
-            sql = "SELECT `*`FROM `rubytools`"
-            cursor.execute(sql)
+            sql = "SELECT `*`FROM `rubytools` where `configuration`=\"default\" or `configuration`=%s"
+            cursor.execute(sql, user)
             for r in cursor.fetchall():
                 records.append(r)
     finally:
@@ -50,13 +50,13 @@ def getRubyTools():
         return records
 
 #get all the items in table rubytestmessags
-def getRubyTestMessages():
+def getRubyTestMessages(user):
     connection= getConnection()
     records= list()
     try:
         with connection.cursor() as cursor:
-            sql = "SELECT `*`FROM `rubytestmessages`"
-            cursor.execute(sql)
+            sql = "SELECT `*`FROM `rubytestmessages` where`configuration`=\"default\" or `configuration`=%s"
+            cursor.execute(sql,user)
             for r in cursor.fetchall():
                 records.append(r)
     finally:
@@ -92,13 +92,13 @@ def getMavenErrors():
         connection.close()
         return records
 
-def getGradleTaskRules():
+def getGradleTaskRules(user):
     connection= getConnection()
     records= list()
     try:
         with connection.cursor() as cursor:
-            sql = "SELECT `*`FROM `taskgradlerules`"
-            cursor.execute(sql)
+            sql = "SELECT `*`FROM `taskgradlerules` where`configuration`=\"default\" or `configuration`=%s"
+            cursor.execute(sql,user)
             for r in cursor.fetchall():
                 records.append(r)
     finally:
@@ -118,12 +118,12 @@ def getGradleErrorsRules():
         connection.close()
         return records
 
-def findCategory(name):
+def findCategory(name,user):
     connection=getConnection()
     try:
         with connection.cursor() as cursor:
-            sql = "SELECT * FROM `goalmaven` WHERE `Goal`LIKE %s"
-            if cursor.execute(sql, ("%"+name+"%")) >0:
+            sql = "SELECT * FROM `goalmaven` WHERE `Goal`LIKE %s AND (`configuration`=\"default\" OR `configuration`=%s)"
+            if cursor.execute(sql, ("%"+name+"%"),user) >0:
                 result = cursor.fetchone()
                 category=(result.get("Category"))
             else:
@@ -201,7 +201,7 @@ def addTaskRule(username, task, category):
     try:
         with connection.cursor() as cursor:
             sql = "INSERT INTO `taskgradlerules` (`regex`,  `category`,`configuration`) VALUES (%s, %s, %s)"
-            cursor.execute(sql, (task, category, username))
+            cursor.execute(sql, (task, category.strip(), username))
 
             # connection is not autocommit by default. So you must commit to save
             # your changes.

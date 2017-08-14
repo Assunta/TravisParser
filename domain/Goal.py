@@ -6,9 +6,9 @@ from utility.dbUtility import findCategory
 
 
 class Goal:
-    def __init__(self,nome):
+    def __init__(self,username,nome):
         self.name = nome
-        self.category=findCategory(self.name)
+        self.category=findCategory(username,self.name)
 
     def setCategory(self, p):
         self.category = p

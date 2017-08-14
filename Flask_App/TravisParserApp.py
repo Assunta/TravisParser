@@ -129,7 +129,7 @@ def newAnalysis():
     try:
         global builds
         session['reponame'] = reponame.replace("_","/")
-        builds=getBuilds(reponame)
+        builds=getBuilds(session['username'],reponame)
         fileName=session['username'].encode('ascii','ignore')+"_"+reponame.replace("/","_")
         store(builds, fileName)
         addProjectUser(reponame,session['username'])
@@ -145,7 +145,7 @@ def force():
     reponame = session['reponame']
     try:
         global builds
-        builds=getBuilds(reponame)
+        builds=getBuilds(session['username'],reponame)
         fileName=session['username'].encode('ascii','ignore')+"_"+reponame.replace("/","_")
         store(builds, fileName)
         builds=restore(fileName)
@@ -461,7 +461,7 @@ def getOption():
 def addBackgroundFunction(username, reponame):
     filename=username + "_" +reponame.replace("/", "_")
     builds=restore(filename)
-    result = getRefreshBuilds(reponame, builds)
+    result = getRefreshBuilds(session["username"],reponame, builds)
     # remove duplicate if present
     all = result
     if result.__len__() > 0:
@@ -498,7 +498,7 @@ def removeBackgroundProcess():
 def refresh():
     global builds
     try:
-        result=getRefreshBuilds(session['reponame'], builds)
+        result=getRefreshBuilds(session["username"],session['reponame'], builds)
         fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame'].replace("/", "_")
         #remove duplicate if present
         all=result

@@ -18,7 +18,7 @@ values = getKeyValueGradle()
 statusMessage = getStatusMessages()
 
 
-def parserGradle(f, gradleLog):
+def parserGradle(username,f, gradleLog):
     status = "passed"
     commandList = list()
     # default command to safe execution
@@ -44,12 +44,12 @@ def parserGradle(f, gradleLog):
                 module_name = task.split(":")[1]
                 task_name = task.split(":")[2]
                 if task_name == "":
-                    t = Task(module_name)
+                    t = Task(username,module_name)
                 else:
-                    t = Task(task_name.strip())
+                    t = Task(username,task_name.strip())
                     t.setProjectName(module_name)
             else:
-                t = Task(task.replace(":", "").strip())
+                t = Task(username,task.replace(":", "").strip())
                 t.setProjectName(" ")
             if re.match(values["UP_TO_DATE"], line):
                 t.setIsUpdate()

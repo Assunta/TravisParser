@@ -7,12 +7,13 @@ from utility.dbUtility import getStatusMessages, getRubyTools, getRubyTestMessag
 
 
 #set this like a global variable so i open the connection with the db only once and store the items into the list
-statusMessage= getStatusMessages()
-tools=getRubyTools()
-testMessages=getRubyTestMessages()
-errors=getRubyErrors()
 
-def parserRuby(f, log):
+
+def parserRuby(username,f, log):
+    statusMessage = getStatusMessages()
+    tools = getRubyTools(username)
+    testMessages = getRubyTestMessages(username)
+    errors = getRubyErrors()
     errorList = list()
     dependenciesList = list()
     commandList = ["no command"]

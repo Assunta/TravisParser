@@ -14,7 +14,7 @@ status="passed"
 statusMessage= getStatusMessages()
 values = getKeyValueMaven()
 
-def parserMaven(f, mavenLog):
+def parserMaven(username,f, mavenLog):
     warningList = list()
     errorList = list()
     dependenciesList = list()
@@ -30,7 +30,7 @@ def parserMaven(f, mavenLog):
             # remove num version
             goal = re.sub(":((\d)*\.)*(\d)*:", ":", goal).strip()
             try:
-                snapshotList[-1].addGoal(Goal(goal.split("(")[0].strip()))
+                snapshotList[-1].addGoal(Goal(username,goal.split("(")[0].strip()))
             except IndexError:
                 snapshotList.append(Snapshot("EMPTY_SNAPSHOT"))
         # match expressions: # Running test ExampleTest

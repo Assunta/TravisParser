@@ -8,13 +8,13 @@ from utility.dbUtility import getGradleTaskRules
 
 
 class Task:
-    def __init__(self,nome):
+    def __init__(self,username,nome):
         self.name = nome
         self.project= ""
         self.isSkipped= False
         self.isUpdate= False
         self.isFailed= False
-        self.category=self.checkTask()
+        self.category=self.checkTask(username)
 
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__,
@@ -59,8 +59,8 @@ class Task:
         return self.name == other.name
 
     #add category to task
-    def checkTask(self):
-        listaDB =getGradleTaskRules()
+    def checkTask(self,username):
+        listaDB =getGradleTaskRules(username)
         trovato = False
         for item in listaDB:
             if self.name is not None:
