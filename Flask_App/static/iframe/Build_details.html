@@ -377,6 +377,11 @@
                   $('#panelCommit').jqxPanel('clearcontent');
 
                    //set builds details
+
+                        //clena old content
+                        $('#panelJob').jqxPanel('clearcontent');
+                        $('#panelBuild').jqxPanel('clearcontent');
+                        $('#panelCommit').jqxPanel('clearcontent');
                         var data= JSON.parse(response);
                         var table=document.createElement('table');
                         table.setAttribute("style","padding:15px; width:100%; text-align: left; vertical-align:top;")

@@ -116,6 +116,12 @@
               $("#addResultMessage").jqxButton({template: "inverse",  width: 160, height: 25 });
 
 
+              //add error message
+               //input
+             $("#errorRuby").jqxInput({placeHolder: "ex: \\ARuboCop failed!", height: 25, width: '90%', minLength: 1 });
+             $('#categoryErrorRuby').jqxDropDownList({source: source, selectedIndex: 0, width:'70%',dropDownHeight: 250, height: '20'});
+             //button
+              $("#addErrorRuby").jqxButton({template: "inverse",  width: 160, height: 25 });
 
         //set grid Gradle
 
@@ -412,7 +418,6 @@
                 url: '/getToolRuby',
                 deleterow: function (rowid, commit) {
                     rowdata= $('#toolGrid').jqxGrid('getrowdata', rowid);
-                    console.log(rowdata)
                     $.ajax({
                             url: "/deleteToolRuby",
                             type: 'POST',
@@ -487,6 +492,99 @@
                         var commit = $("#toolGrid").jqxGrid('addrow', null, datarow);
                      }
                     });
+
+                //set grid Ruby error
+
+        var source =
+            {
+                datatype: "json",
+                type:"GET",
+                datafields:
+                [
+                    { name: 'regex', type: 'string' },
+                    { name: 'category', type: 'string' }
+                ],
+                url: '/getErrorRuby',
+                deleterow: function (rowid, commit) {
+                    rowdata= $('#errorRubyGrid').jqxGrid('getrowdata', rowid);
+                    $.ajax({
+                            url: "/deleteErrorRuby",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+                },
+                 addrow: function (rowid, rowdata, position, commit) {
+                     $.ajax({
+                            url: "/addErrorRuby",
+                            type: 'POST',
+                            data: rowdata,
+                            success: function(data)
+                            {
+                                commit(true);
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                                 commit(false)
+                            }
+                        });
+
+                }
+            };
+              var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // initialize jqxGrid
+            $("#errorRubyGrid").jqxGrid(
+            {
+                width: '50%',
+                height: 150,
+                source: dataAdapter,
+                showtoolbar: true,
+                rendertoolbar: function (toolbar) {
+                    var me = this;
+                    var container = $("<div style='margin: 5px;'></div>");
+                    toolbar.append(container);
+                    container.append('<input style="margin-left: 5px;" id="deleterowbuttonErrorRuby" type="button" value="Delete Selected Row" />');
+                     $("#deleterowbuttonTool").jqxButton();
+
+                    // delete row.
+                    $("#deleterowbuttonErrorRuby").on('click', function () {
+                        var selectedrowindex = $("#errorRubyGrid").jqxGrid('getselectedrowindex');
+                        var rowscount = $("#errorRubyGrid").jqxGrid('getdatainformation').rowscount;
+                        if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                            var id = $("#errorRubyGrid").jqxGrid('getrowid', selectedrowindex);
+                            var commit = $("#errorRubyGrid").jqxGrid('deleterow', id);
+                        }
+                    });
+                },
+                columns: [
+                  { text: 'Regular expression', datafield: 'regex', width: '50%' },
+                  { text: 'Category', datafield: 'category', width: '50%' }
+                ]
+            });
+
+            //add task button
+             $("#addErrorRuby").on('click', function () {
+                    var regex_name=$("#errorRuby").val();
+                    var category_name=$("#categoryErrorRuby").jqxDropDownList('val');
+                    var datarow = {regex: regex_name, category:category_name};
+                     if (regex_name.length>0){
+                        var commit = $("#errorRubyGrid").jqxGrid('addrow', null, datarow);
+                     }
+                    });
+
+
+
+
 
         });
         </script>
@@ -575,7 +673,19 @@
     </tr>
          <tr><td> <BR> </td> </tr>
     <tr><td style="width:15%" ></td><td colspan="2" id="rubyGrid"></td></tr>
-
+        <tr><td><BR></td></tr>
+        <tr>
+     <td colspan="3">Add new error message </td>
+    </tr>
+        <tr><td> <BR> </td> </tr>
+    <tr>
+        <td style="width:15%" ></td>
+        <td><input type="text" id="errorRuby"/></td>
+        <td><div id="categoryErrorRuby"></div></td>
+        <td><button type="button" id="addErrorRuby">ADD</button></td>
+    </tr>
+         <tr><td> <BR> </td> </tr>
+    <tr><td style="width:15%" ></td><td colspan="2" id="errorRubyGrid"></td></tr>
 
     </table>
 

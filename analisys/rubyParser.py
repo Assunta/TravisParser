@@ -13,7 +13,7 @@ def parserRuby(username,f, log):
     statusMessage = getStatusMessages()
     tools = getRubyTools(username)
     testMessages = getRubyTestMessages(username)
-    errors = getRubyErrors()
+    errors = getRubyErrors(username)
     errorList = list()
     dependenciesList = list()
     commandList = ["no command"]

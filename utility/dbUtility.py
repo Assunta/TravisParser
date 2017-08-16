@@ -64,13 +64,13 @@ def getRubyTestMessages(user):
         return records
 
 #get all the items in table rubyerror
-def getRubyErrors():
+def getRubyErrors(user):
     connection= getConnection()
     records= list()
     try:
         with connection.cursor() as cursor:
-            sql = "SELECT `*`FROM `rubyerror`"
-            cursor.execute(sql)
+            sql = "SELECT `*`FROM `rubyerror` where`configuration`=\"default\" or `configuration`=%s"
+            cursor.execute(sql, user)
             for r in cursor.fetchall():
                 records.append(r)
     finally:
@@ -328,6 +328,50 @@ def getResultRubyUser(username):
     finally:
         connection.close()
         return c
+
+# this method allow to add new error message ruby
+def addErrorRubyRule(username, result, category):
+    connection = getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "INSERT INTO `rubyerror` (`regex`,  `category`,`configuration`) VALUES (%s, %s, %s)"
+            cursor.execute(sql, (result, category, username))
+
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+# this method allow to delete a message error customized
+def deleteErrorRubyRule(username, result, category):
+    connection = getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "DELETE FROM `rubyerror`  WHERE `regex`=%s AND`category`=%s AND`configuration`=%s LIMIT 1"
+            cursor.execute(sql, (result, category, username))
+            # connection is not autocommit by default. So you must commit to save
+            # your changes.
+        connection.commit()
+    finally:
+        connection.close()
+
+# this method allows to get all error messages customized of user
+def getErrorRubyUser(username):
+    connection = getConnection()
+    c = []
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `rubyerror`  WHERE `configuration`=%s"
+            if cursor.execute(sql, username) > 0:
+                for r in cursor.fetchall():
+                    goal_name = (r.get("regex"))
+                    category_name = (r.get("category"))
+                    c.append({'regex': goal_name, 'category': category_name})
+    finally:
+        connection.close()
+        return c
+
 
 #this method allow to add new result message ruby
 def addToolRule(username, tool, regex):

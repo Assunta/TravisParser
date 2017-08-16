@@ -1,5 +1,7 @@
 
 import logging
+import os
+
 from github import Github
 from datetime import datetime
 from flask import Flask, render_template, request, json, session, url_for
@@ -13,7 +15,7 @@ from analisys.completeParser import completeAnalysis, getBuilds, getRefreshBuild
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
     getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
-    addToolRule, deleteToolRule, addProjectUser
+    addToolRule, deleteToolRule, addProjectUser, addErrorRubyRule, deleteErrorRubyRule, getErrorRubyUser
 from utility.storeObject import store, restore
 
 
@@ -402,6 +404,39 @@ def getResultRuby():
     username=session['username']
     try:
         result=getResultRubyUser(username)
+        return json.dumps(result, default=lambda o: o.__dict__)
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/addErrorRuby", methods=['POST'])
+def addErrorRuby():
+    result = request.form['regex']
+    category = request.form['category']
+    username=session['username']
+    try:
+        addErrorRubyRule(username,result,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception:
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/deleteErrorRuby", methods=['POST'])
+def deleteErrorRuby():
+    result = request.form['regex']
+    category = request.form['category']
+    username=session['username']
+    try:
+        deleteErrorRubyRule(username,result,category)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception,e:
+        print e
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/getErrorRuby", methods=['GET'])
+def getErrorRuby():
+    username=session['username']
+    try:
+        result=getErrorRubyUser(username)
         print result
         return json.dumps(result, default=lambda o: o.__dict__)
     except Exception,e:

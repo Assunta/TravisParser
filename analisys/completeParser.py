@@ -57,7 +57,7 @@ def getBuilds(username,reponame):
     lastBuild= repo.last_build_number
 
     # lastBuild=24
-
+    lastBuild = str(int(lastBuild) + 1)
     print "last build: " + str(lastBuild)
     builds=completeAnalysis(username,reponame, lastBuild)
     lastBuild=int(builds[-1].getBuildID())
