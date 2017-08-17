@@ -40,7 +40,6 @@
         <script type="text/javascript" src="../jqwidget/jqwidgets/jqxsplitter.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxlistbox.js"></script>
      <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
-    <script type="text/javascript" src="../jqwidget/jqwidgets/jqxdropdownlist.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxpopover.js"></script>
 
      <script type="text/javascript">
@@ -395,7 +394,7 @@
                         "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Finish:</b></td><td>"+data.FinishDate+" "+data.FinishHour+"</td></tr>"+
                         "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Duration:</b></td><td>"+data.Duration+"</td></tr>"+
                         "<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 35%\"><b>Number of jobs:</b></td><td>"+data.NumJobs+"</td></tr>"+
-                        "<tr style=\"padding:15px; text-align: left;  vertical-align:top;\"><td style=\"width: 35%\"><b>Jobs:</b></td><td id=\"dropDownList\"></td></tr>"
+                        "<tr style=\"padding:15px; text-align: left;  vertical-align:top;\"><td style=\"width: 35%\"><b>Jobs:</b></td><td><div id=\"dropDownList\"></div></td></tr>"
                         +"</tbody></table>";
                         $('#panelBuild').jqxPanel('append', table);
 

@@ -86,6 +86,16 @@
                 // Validate the Form.
                 $('#form').jqxValidator('validate', validationResult);
             });
+
+
+            $('.topBar li').on('click', function (e)
+            {
+
+                    if(e.currentTarget.textContent=="Login"){
+                        window.location.href='/homeUser'
+                    }
+
+            });
     });
     </script>
 </head>
@@ -101,8 +111,8 @@
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
                     <ul class="list-inline pull-right topBar">
-                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-right:0.3em"></span>Help</p></li>
-                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:0.3em"></span>Settings</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-right:0.3em"></span>Login</p></li>
+
                     </ul>
                 </div>
             </div>

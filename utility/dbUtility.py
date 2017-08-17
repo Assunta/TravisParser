@@ -120,14 +120,13 @@ def getGradleErrorsRules():
 
 def findCategory(name,user):
     connection=getConnection()
+    category = "other"
     try:
         with connection.cursor() as cursor:
             sql = "SELECT * FROM `goalmaven` WHERE `Goal`LIKE %s AND (`configuration`=\"default\" OR `configuration`=%s)"
             if cursor.execute(sql, ("%"+name+"%"),user) >0:
                 result = cursor.fetchone()
                 category=(result.get("Category"))
-            else:
-                category="other"
     finally:
         connection.close()
         return category

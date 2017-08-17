@@ -1,12 +1,13 @@
 
-import logging
-import os
+import logging.handlers
 
 from github import Github
 from datetime import datetime
 from flask import Flask, render_template, request, json, session, url_for
 
 from apscheduler.schedulers.background import BackgroundScheduler
+
+from Flask_App.utilityClasses.ContextProvider import ContextualFilter
 from Flask_App.utilityClasses.ErrorStat import ErrorStat
 from Flask_App.utilityClasses.Row import Row
 from Flask_App.utilityClasses.TestRow import TestRow
@@ -21,18 +22,42 @@ from utility.storeObject import store, restore
 
 scheduler = BackgroundScheduler()
 builds = []
-INTERNET=False
 app = Flask(__name__)
 app.secret_key = 'lodmdmncdvnjnjksdcnkwcw'      #session work only with secret key
 
 #logging
-log = logging.getLogger('apscheduler.executors.default')
-log.setLevel(logging.INFO)  # DEBUG
-fmt = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
-h = logging.StreamHandler()
-h.setFormatter(fmt)
-log.addHandler(h)
+LOG_FILENAME="log.log"
+# Set up a specific logger with our desired output level
+log = logging.getLogger('MainLogger')
+log.setLevel(logging.DEBUG)
+context_provider = ContextualFilter()
+log.addFilter(context_provider)
+# Add the log message handler to the logger
+h = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", interval=1)
+h.suffix = "%Y%m%d"
+fmt = logging.Formatter('''
+    Time: %(asctime)s
+    Level: %(levelname)s
+    Method: %(method)s
+    Path: %(url)s
+    IP: %(ip)s
+    User ID: %(user_id)s
+    Message: %(message)s
+    ---------------------''')
 
+h.setFormatter(fmt)
+hConsole=logging.StreamHandler()
+hConsole.setFormatter(fmt)
+log.addHandler(h)
+log.addHandler(hConsole)
+
+#logger for APSCHEDULER
+logAps = logging.getLogger('apscheduler.executors.default')
+logAps.setLevel(logging.INFO)  # DEBUG
+hAps = logging.StreamHandler()
+fmt = logging.Formatter('%(asctime)s-%(levelname)s-%(name)s-%(message)s')
+hAps.setFormatter(fmt)
+logAps.addHandler(hAps)
 
 
 @app.route("/home",  methods=['POST', 'GET'])
@@ -61,23 +86,24 @@ def homeUser():
             #find project to display
             user = session['username']
             projects = getUserProjects(user)
-            print(projects)
+            log.debug("Show home for %s", username)
             return render_template('homeUser.html', username=session['username'], projects=projects)
         except Exception, e:
-            print e
+            log.error("Error show home for %s : %s", username, e.message)
             return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
     else:
         if 'username' in session:
             user = session['username']
             projects = getUserProjects(user)
-            print(projects)
             return render_template('homeUser.html', username=session['username'], projects=projects)
         else:
+            log.warning("Try to acces without login; Redirect to login page")
             return render_template('TravisParserHome.html')
 
 @app.route('/logout', methods=['GET'])
 def logout():
     # remove the username from the session if it is there
+    log.debug("Logout %s", session['username'])
     session.pop('username', None)
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
@@ -86,28 +112,27 @@ def signUp():
     username = request.form['username']
     password= request.form['password']
     token= request.form['gitkey']
-    print username
-    print password
     g = Github(username, password, 'https://api.github.com')
     try:
         print g.get_user(login=username)
         # gToken = Github(token)
         # print gToken.get_user(login=token)
         #TODO check correct token
+
         try:
             addUser(username, token)
         except Exception ,e:
-            print e
+            log.error("Failed to create new user: ",e.message)
             return json.dumps({'error': "Duplicate username "+username+"<BR>this user is still registered"}), 400
+        log.info("New user correct created %s", username)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
-        print e
+        log.error("Username and password not correct %s",e.message)
         return json.dumps({'error': "Username or password are not correct, please retry"}), 400
 
 
 @app.route("/results", methods=['POST'])
 def results():
-    #TODO scegliere il file giusto
     reponame = request.form['reponame']
     reponame= reponame.replace("\'", "")
     session['reponame'] = reponame
@@ -118,7 +143,6 @@ def results():
 
 @app.route("/results/<reponame>", methods=['GET'])
 def resultsReponame(reponame):
-    print reponame
     global builds
     filename=session['username'].encode('ascii','ignore')+"_"+reponame;
     builds=restore(filename)
@@ -136,9 +160,10 @@ def newAnalysis():
         store(builds, fileName)
         addProjectUser(reponame,session['username'])
         builds=restore(fileName)
+        log.info("New analysis performed for project %s", reponame)
         return render_template('header.html', reponame=session['reponame'], buildNum=builds.__len__())
     except Exception,e:
-        print e
+        log.error("Error during new analysis for project: %s: %s", reponame, e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 #this method allow to restart the analysis
@@ -151,9 +176,10 @@ def force():
         fileName=session['username'].encode('ascii','ignore')+"_"+reponame.replace("/","_")
         store(builds, fileName)
         builds=restore(fileName)
+        log.info("repeated analysis for project %s", reponame)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error during repeating the analysis for project %s: %s", reponame, e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/validateKey", methods=['POST'])
@@ -170,20 +196,19 @@ def validateKey():
 def getBuild():
     rows=[]
     for b in builds:
-        rows.append(Row(b, INTERNET))
+        rows.append(Row(b))
     return json.dumps(rows,default=lambda o: o.__dict__)
 
 @app.route("/getBuild/<idBuild>", methods=['GET'])
 def getSpecificBuild(idBuild):
-    if(INTERNET):
-        index=int(builds[0].getBuildID())-int(idBuild)
-    else:
-        index=int(builds[0]["idBuild"])-int(idBuild)
+    # if(INTERNET):
+    #     index=int(builds[0].getBuildID())-int(idBuild)
+    # else:
+    index=int(builds[0]["idBuild"])-int(idBuild)
     return json.dumps(builds[index],default=lambda o: o.__dict__)
 
 @app.route("/queryStats", methods=['POST'])
 def queryStats():
-    #TODO terminare e vedere perche' i grafici non si aggiustano
     start = request.form['StartDate']
     finish= request.form['FinishDate']
     items= request.form['Authors']
@@ -208,7 +233,7 @@ def queryStats():
             }
         ])
     except Exception, e:
-        print e
+        log.error("exception during calculating status statistics: %s", e.message)
         return json.dumps({'success': False}), 401, {'ContentType': 'application/json'}
 
 
@@ -265,7 +290,7 @@ def queryStatErrors():
         else:
             return json.dumps({'success': False}), 401, {'ContentType': 'application/json'}
     except Exception,e:
-        print e.message
+        log.error("exception during calculating type of error statistics: %s", e.message)
         return json.dumps({'success': False}), 401, {'ContentType': 'application/json'}
 
 @app.route("/getAllAuthors", methods=['GET'])
@@ -275,11 +300,10 @@ def getAllAuthors():
 
 @app.route("/getMinData", methods=['GET'])
 def getMinData():
-    if(INTERNET):
-        #TODO check format of data
-        date=builds[-1].setStart()
-    else:
-        date=builds[-1]["StartDate"]
+    # if(INTERNET):
+    #     date=builds[-1].setStart()
+    # else:
+    date=builds[-1]["StartDate"]
     #dateObject= datetime.strptime(date, '%Y-%m-%d')
     return json.dumps(date,default=lambda o: o.__dict__)
 
@@ -297,6 +321,7 @@ def getTestsList():
             result.append(TestRow(test,i))# snapshot[0]["name"]))
         i=i+1
     return json.dumps(result,default=lambda o: o.__dict__)
+
 @app.route("/getInfoLog/<idLog>", methods=['GET'])
 def getInfoLog(idLog):
     builds = restore("backup3")
@@ -313,7 +338,8 @@ def addTask():
     try:
         addTaskRule(username,task,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    except Exception:
+    except Exception, e:
+        log.error("Error adding customized Task Gradle Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/deleteTask", methods=['POST'])
@@ -325,7 +351,7 @@ def deleteTask():
         deleteTaskRule(username,task,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error deleting customized Task Gradle Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/getTask", methods=['GET'])
@@ -336,7 +362,7 @@ def getTask():
         print result
         return json.dumps(result, default=lambda o: o.__dict__)
     except Exception,e:
-        print e
+        log.error("Error during get Task Gradle Rules %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 
@@ -348,7 +374,8 @@ def addGoal():
     try:
         addGoalRule(username,task,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    except Exception:
+    except Exception,e:
+        log.error("Error adding customized Goal Maven Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/deleteGoal", methods=['POST'])
@@ -360,7 +387,7 @@ def deleteGoal():
         deleteGoalRule(username,goal,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error deleting customized Goal Maven Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/getGoal", methods=['GET'])
@@ -368,10 +395,9 @@ def getGoal():
     username=session['username']
     try:
         result=getGoalUser(username)
-        print result
         return json.dumps(result, default=lambda o: o.__dict__)
     except Exception,e:
-        print e
+        log.error("Error get customized Goal Maven Rules %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 
@@ -384,7 +410,8 @@ def addResultRuby():
     try:
         addResultRubyRule(username,result,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    except Exception:
+    except Exception, e:
+        log.error("Error adding customized Result Ruby Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/deleteResultRuby", methods=['POST'])
@@ -396,7 +423,7 @@ def deleteResultRuby():
         deleteResultRubyRule(username,result,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error deleting customized Result Ruby Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/getResultRuby", methods=['GET'])
@@ -406,7 +433,7 @@ def getResultRuby():
         result=getResultRubyUser(username)
         return json.dumps(result, default=lambda o: o.__dict__)
     except Exception,e:
-        print e
+        log.error("Error get customized Result Ruby Rules %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/addErrorRuby", methods=['POST'])
@@ -417,7 +444,8 @@ def addErrorRuby():
     try:
         addErrorRubyRule(username,result,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    except Exception:
+    except Exception,e:
+        log.error("Error adding customized Error Ruby Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/deleteErrorRuby", methods=['POST'])
@@ -429,7 +457,7 @@ def deleteErrorRuby():
         deleteErrorRubyRule(username,result,category)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error deleting customized Error Ruby Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/getErrorRuby", methods=['GET'])
@@ -437,10 +465,9 @@ def getErrorRuby():
     username=session['username']
     try:
         result=getErrorRubyUser(username)
-        print result
         return json.dumps(result, default=lambda o: o.__dict__)
     except Exception,e:
-        print e
+        log.error("Error get customized Error Ruby Rules %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 
@@ -452,7 +479,8 @@ def addToolRuby():
     try:
         addToolRule(username,tool,regex)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    except Exception:
+    except Exception,e:
+        log.error("Error adding customized Tool Ruby Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/deleteToolRuby", methods=['POST'])
@@ -464,7 +492,7 @@ def deleteToolRuby():
         deleteToolRule(username,tool,regex)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error deleting customized Tool Ruby Rule %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/getToolRuby", methods=['GET'])
@@ -475,7 +503,7 @@ def getToolRuby():
         print result
         return json.dumps(result, default=lambda o: o.__dict__)
     except Exception,e:
-        print e
+        log.error("Error get customized Tool Ruby Rules %s", e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/getOption", methods=['GET'])
@@ -496,7 +524,7 @@ def getOption():
 def addBackgroundFunction(username, reponame):
     filename=username + "_" +reponame.replace("/", "_")
     builds=restore(filename)
-    result = getRefreshBuilds(session["username"],reponame, builds)
+    result = getRefreshBuilds(username,reponame, builds)
     # remove duplicate if present
     all = result
     if result.__len__() > 0:
@@ -514,10 +542,10 @@ def addBackgroundProcess():
         username=session['username']
         reponame=session['reponame']
         fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame']
-        scheduler.add_job(lambda: addBackgroundFunction(username,reponame), 'interval', seconds=180,  id=fileName)
+        scheduler.add_job(lambda: addBackgroundFunction(username,reponame), 'interval', seconds=80,  id=fileName)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
-        print e
+        log.error("Error adding background process for project %s and username %s: %s",reponame, username, e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/removeBackgroundProcess", methods=['GET'])
@@ -526,7 +554,7 @@ def removeBackgroundProcess():
         scheduler.remove_job(session['username']+"_"+session['reponame'])
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
-        print e
+        log.error("Error deleting background process for project %s and username %s: %s", session['reponame'], session['username'], e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 #
 @app.route("/refresh", methods=['GET'])
@@ -547,14 +575,12 @@ def refresh():
         builds = restore(fileName)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        print e
+        log.error("Error during refresh %s: %s", fileName, e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 if __name__ == "__main__":
     #debug=true mi evita di spegnere e riaccendere il server quando faccio modifiche in fase di sviluppo
     #TODO togliero per il rilascio
-    #il job parte due volte perche' siamo in debug
-    # scheduler.add_job(myfunc, 'interval', seconds=10,  id='job_prova')
     scheduler.start()
     app.run(debug=True, threaded=True)
 

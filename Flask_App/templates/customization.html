@@ -21,7 +21,6 @@
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/globalization/globalize.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxexpander.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxvalidator.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
@@ -47,8 +46,9 @@
             {
                 if (e.currentTarget.textContent)
                 {
-                    if(e.currentTarget.textContent=="Home"){
-                        window.location.href='/homeUser'
+                    if(e.currentTarget.textContent=="Back"){
+                        <!--window.location.href='/homeUser'-->
+                        window.history.back();
                     }
 
                 } else
@@ -596,10 +596,19 @@
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
                      <div id="popover"><div id="helpMesage">If the analysis doesn't match some information you can customize it!<BR>
+                         You can add different types of information:<BR>
+                         1) a Maven Goal not matched during the analysis: adding its name and its lifecycle phase<BR>
+                         2) a customized Gradle Task:adding its name or regular expression and its category <BR>
+                         3) Ruby tool: if the project use a tool not matched during tha analysis (ex: testing, analysis,...)<BR>
+                         you can add its name and a regular expression to match it during the analysis <BR>
+                         4) Ruby result expression: this expression matchs the result of a test or an analysis;<BR>
+                         you can add its regular expression and the related type of result<BR>
+                         5) Ruby error message: you can customize error message not matched adding its regular expression and its category
+
                         </div></div>
                     <ul class="list-inline pull-right topBar">
                         <li style="margin-left:1.4em"><button  id="buttonHelp" style="background-color:#3E4752;border:none;"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="margin-right:0.3em"></span>Help</button></li>
-                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin-right:0.3em"></span>Home</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-backward" aria-hidden="true" style="margin-right:0.3em"></span>Back</p></li>
                         <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span></p></li>
                     </ul>
                 </div>

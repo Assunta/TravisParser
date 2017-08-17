@@ -25,7 +25,6 @@
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxvalidator.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxnotification.js"></script>
-       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
       <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
     <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
     <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
@@ -52,7 +51,7 @@
             a[i]=a[i].replace( /&#39;/g,'').trim();
             }
 
-          $('#selectProject').jqxDropDownList({source: a, selectedIndex: 0, width:"50%",autoDropDownHeight: true, height: '20'});
+          $('#selectProject').jqxDropDownList({source: a, selectedIndex: 0, width:"90%",autoDropDownHeight: true, height: 20});
 
 
          $("#getProjectButton").jqxButton({template: "inverse",  width: 160, height: 25 });
@@ -128,7 +127,7 @@
         //logout
          $('.topBar li').on('click', function (e)
             {
-                if (!e.currentTarget.textContent)
+                if(e.currentTarget.textContent=="Logout")
                 {
                     $.ajax({
                             url: "/logout",
@@ -143,7 +142,7 @@
                             }
                         });
                 }
-                else if (e.currentTarget.textContent=="Settings"){
+                else if (e.currentTarget.textContent=="Analysis Customization"){
                      window.location.href='/settings'
                 }
             });
@@ -165,7 +164,7 @@
                 <div class="col-md-6">
                     <ul class="list-inline pull-right topBar">
                         <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-right:0.3em"></span>Help</p></li>
-                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:0.3em"></span>Settings</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:0.3em"></span>Analysis Customization</p></li>
                         <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span>Logout</p></li>
                     </ul>
                 </div>
@@ -195,7 +194,7 @@
             <td><h3>Select your project</h3></td>
         </tr>
         <tr>
-            <td id="selectProject"></td>
+            <td><div id="selectProject"></div></td>
             <td><button type="button" id="getProjectButton">View project</button></td>
         </tr>
             </form>

@@ -14,7 +14,7 @@ class MavenLog:
         self.warningList=list()
         self.parsedErrorsList=list()
         self.statusErrorList=list()
-        self.typeOfError = ""
+        self.typeOfError = "other"
         self.buildTool="Maven"
 
     def getBuildTool(self):
