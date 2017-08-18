@@ -118,15 +118,16 @@ def getGradleErrorsRules():
         connection.close()
         return records
 
-def findCategory(name,user):
+def findCategory(user,name):
     connection=getConnection()
-    category = "other"
     try:
         with connection.cursor() as cursor:
             sql = "SELECT * FROM `goalmaven` WHERE `Goal`LIKE %s AND (`configuration`=\"default\" OR `configuration`=%s)"
-            if cursor.execute(sql, ("%"+name+"%"),user) >0:
+            if cursor.execute(sql, (("%"+name+"%"),user)) >0:
                 result = cursor.fetchone()
                 category=(result.get("Category"))
+            else:
+                category = "other"
     finally:
         connection.close()
         return category
@@ -140,13 +141,13 @@ def findUser(name):
             if cursor.execute(sql, (name)) >0:
                 result = cursor.fetchone()
                 key=(result.get("key"))
-                config=(result.get("configuration"))
+                # config=(result.get("configuration"))
             else:
                 key="no_key"
-                config="default"
+                # config="default"
     finally:
         connection.close()
-        return [key,config]
+        return [key]
 
 #this method allow to add new user
 def addUser(username, key):
@@ -426,7 +427,27 @@ def addProjectUser(project, user):
             # connection is not autocommit by default. So you must commit to save
             # your changes.
         connection.commit()
-    except Exception, e:
-        print e
+    finally:
+        connection.close()
+
+#this method allow to delete a user's project
+def deleteProjectUser(project,username):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "DELETE FROM `user_projects`  WHERE `user`=%s AND`project`=%s"
+            cursor.execute(sql, (username,project))
+        connection.commit()
+    finally:
+        connection.close()
+
+#this method allows to update user's token
+def updateToken(username, token):
+    connection=getConnection()
+    try:
+        with connection.cursor() as cursor:
+            sql = "UPDATE `users` SET `key`=%s WHERE `Git_name`=%s"
+            cursor.execute(sql, (token, username))
+        connection.commit()
     finally:
         connection.close()

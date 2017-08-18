@@ -16,7 +16,8 @@ from analisys.completeParser import completeAnalysis, getBuilds, getRefreshBuild
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
     getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
-    addToolRule, deleteToolRule, addProjectUser, addErrorRubyRule, deleteErrorRubyRule, getErrorRubyUser
+    addToolRule, deleteToolRule, addProjectUser, addErrorRubyRule, deleteErrorRubyRule, getErrorRubyUser, updateToken, \
+    deleteProjectUser
 from utility.storeObject import store, restore
 
 
@@ -71,7 +72,39 @@ def registration():
 @app.route("/settings")
 def settings():
     c=getCategories()
-    return render_template('customization.html', categories=json.dumps(c))
+    return render_template('customization.html', projects=json.dumps(c))
+
+@app.route("/editProfile")
+def editProfile():
+    user=session['username']
+    token = dbUtility.findUser(user)
+    projects = getUserProjects(user)
+    return render_template('editProfile.html', projects=json.dumps(projects), token=token)
+
+
+@app.route("/changeToken/<token>", methods=['GET'])
+def changeToken(token):
+    user=session['username']
+    try:
+        updateToken(user,token)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+        log.info("Successfully update github's token for user %s ",user)
+    except Exception, e:
+        log.error("Error during update github's token for user %s : %s",user, e.message)
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+@app.route("/deleteProjects", methods=['POST'])
+def deleteProjects():
+    user=session['username']
+    try:
+        project=request.form['project']
+        deleteProjectUser(project,user)
+        #TODO eliminare anche il file del progetto
+        log.info("Successfully deleted projects for user %s ", user)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    except Exception, e:
+        log.error("Error during delete projects for user %s : %s",user, e.message)
+        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/homeUser" , methods=['POST','GET'])
 def homeUser():

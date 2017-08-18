@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit profile</title>
+      <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/jqwidget/styles/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="../static/jqwidget/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/jqwidget/styles/style.css" />
+
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxexpander.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxmenu.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxnotification.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/scripts/demos.js"></script>
+    <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxdata.js"></script>
+      <script type="text/javascript" src="../static/jqwidget/jqwidgets/jqxlistbox.js"></script>
+
+
+
+   <script type="text/javascript">
+        $(document).ready(function () {
+
+                     //header
+     $('.topBar li').on('click', function (e)
+            {
+                if (e.currentTarget.textContent)
+                {
+                    if(e.currentTarget.textContent=="Back"){
+                        <!--window.location.href='/homeUser'-->
+                        window.history.back();
+                    }
+                    if(e.currentTarget.textContent=="Logout"){
+                        $.ajax({
+                            url: "/logout",
+                            type: 'GET',
+                            success: function(data)
+                            {
+                                window.location.href='/home'
+                            },
+                            error: function(error)
+                            {
+                                 console.log(error);
+                            }
+                        });
+                    }
+
+                }
+            });
+
+
+        var v='{{token}}'.replace(/&#39;/g,'').replace("[","").replace("]","").trim();
+        $("#input").attr("value",v);
+
+        $("#changeTokenButton").jqxButton({template: "inverse",  width: 160, height: 25 });
+        $("#changeTokenButton").on('click', function ()
+            {
+                var newToken=$("#input").val();
+                if(newToken==v){
+                $('#messageContainer').html("You not changed your Github token");
+                $("#messageNotification").jqxNotification("open");
+                }
+                else{
+                  $.ajax({
+                      url: '/changeToken/'+newToken,
+                      type: 'GET',
+                      success: function(response) {
+                        $('#messageContainer').html("Your Github token is succesfully update");
+                        $("#messageNotification").jqxNotification("open");
+                      },
+                      error: function(error) {
+                          $('#messageContainer').html("Error during token's update");
+                            $("#messageNotification").jqxNotification("open");
+                  }
+              });
+
+                }
+            });
+
+        $("#deleteButton").jqxButton({template: "inverse",  width: 160, height: 25 });
+         $("#deleteButton").on('click', function ()
+            {
+                 var items = $("#listbox").jqxListBox('getCheckedItems');
+                 if(items.length>0){
+                    var project=items[0].label;
+                        $.ajax({
+                              url: '/deleteProjects',
+                              type: 'POST',
+                              data:{"project":project},
+                              success: function(response) {
+                                location.reload();
+                              },
+                              error: function(error) {
+                                  $('#messageContainer').html("Error during delete projects");
+                                    $("#messageNotification").jqxNotification("open");
+                                 }
+                        });
+                 }else{
+                     $('#messageContainer').html("You selected 0 projects to be deleted!");
+                            $("#messageNotification").jqxNotification("open");
+                 }
+            });
+
+        // Create a jqxListBox
+        var source='{{projects}}'.split(',');
+         var a=[];
+            for(var i=0; i<source.length; i++){
+            a[i]=source[i];
+            a[i]=a[i].replace("[", "").replace("]","");
+            a[i]=a[i].replace( /&#34;/g,'').trim();
+            }
+        $("#listbox").jqxListBox({width: 400, source: a, checkboxes: true, height: 200});
+        $('#listbox').jqxListBox('checkIndex', 0);
+        //allow only one item checked at time
+        $('#listbox').on('checkChange', function (event) {
+          var args = event.args;
+          if (args) {
+              // index represents the item's index.
+              var index = args.index;
+              var item = args.item;
+              if (args.checked) {
+                  var label = item.label;
+                  for (var i = 0; i < a.length; i++) {
+                      if (a[i] != label) {
+                          $('#listbox').jqxListBox('uncheckIndex', i);
+                      }
+                  }
+                }
+            }
+            });
+
+
+        $("#messageNotification").jqxNotification({
+                width: 400, position: "top-right", opacity: 0.9,
+                autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 3000, template: "info"
+            });
+
+
+        });
+        </script>
+</head>
+<body>
+
+
+<div class="header-wrap">
+        <div class="container">
+            <div class="row" style="padding-top:1.2em;">
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+                    <ul class="list-inline pull-right topBar">
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-backward" aria-hidden="true" style="margin-right:0.3em"></span>Back</p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span>Logout</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+ <div id="messageNotification">
+        <div id="messageContainer">
+        </div>
+    </div>
+
+<div id="page" style="width:800px; margin:0 auto; ">
+    <table style="padding:5px; width:100%; text-align: left; vertical-align:top;">
+        <tr><td><BR><BR><BR><BR><BR></td></tr>
+        <tr>
+            <td>Change GitHub Token</td>
+            <td><input type="text" style="width:400px;" id="input"/></td>
+            <td><button type="button" id="changeTokenButton">Save changes</button></td>
+        </tr>
+        <tr>
+            <td><BR><BR><BR></td>
+        </tr>
+        <tr>
+            <td>Delete project:</td>
+            <td><div id="listbox"></div></td>
+            <td><button type="button" id="deleteButton">Delete project</button></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

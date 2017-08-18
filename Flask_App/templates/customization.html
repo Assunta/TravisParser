@@ -50,10 +50,8 @@
                         <!--window.location.href='/homeUser'-->
                         window.history.back();
                     }
-
-                } else
-                {
-                    $.ajax({
+                    if(e.currentTarget.textContent=="Logout"){
+                        $.ajax({
                             url: "/logout",
                             type: 'GET',
                             success: function(data)
@@ -65,6 +63,8 @@
                                  console.log(error);
                             }
                         });
+                    }
+
                 }
             });
             //help popover
@@ -609,7 +609,7 @@
                     <ul class="list-inline pull-right topBar">
                         <li style="margin-left:1.4em"><button  id="buttonHelp" style="background-color:#3E4752;border:none;"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="margin-right:0.3em"></span>Help</button></li>
                         <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-backward" aria-hidden="true" style="margin-right:0.3em"></span>Back</p></li>
-                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span></p></li>
+                        <li style="margin-left:1.4em"><p><span class="glyphicon glyphicon-off" aria-hidden="true" style="margin-right:0.3em"></span>Logout</p></li>
                     </ul>
                 </div>
             </div>
