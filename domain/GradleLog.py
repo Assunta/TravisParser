@@ -85,7 +85,7 @@ class GradleLog:
             try:
                 self.typeOfError = listError[-1].split("\t")[1]
             except:
-                self.typeOfError =""
+                self.typeOfError ="other"
         self.errorList =listaErroriParsati
 
     def addNote(self, s):

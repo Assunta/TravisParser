@@ -19,11 +19,14 @@ class Row:
         self.email= build["email"]
         self.StartDate= build["StartDate"]
         self.status=build["status"]
-        self.typeOfFailures=list()
+        self.typeOfFailures=""
+        self.errors=list()
         count_job_failed=0
         for l in build["Logs"]:
             if l["status"]!="passed":
                 count_job_failed+=1
-                self.typeOfFailures.append(l["typeOfError"])
-        self.typeOfFailures=list(set(self.typeOfFailures))
+                if(l["typeOfError"]!= ""):
+                    self.errors.append(l["typeOfError"])
         self.numJobFailed=count_job_failed
+        for e in list(set(self.errors)):
+            self.typeOfFailures += e + " "

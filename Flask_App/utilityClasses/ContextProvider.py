@@ -5,5 +5,6 @@ class ContextualFilter(logging.Filter):
         log_record.url = request.path
         log_record.method = request.method
         log_record.ip = request.environ.get("REMOTE_ADDR")
-        log_record.user_id = session['username']
+        if(session.get('username')):
+            log_record.user_id = session['username']
         return True
