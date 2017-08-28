@@ -164,7 +164,7 @@
 
                  //define right panel
                  var right=document.createElement('div');
-                 right.setAttribute("style","padding:5px; width:50%; float:left;");
+                 right.setAttribute("style","padding:5px; width:49%; float:left;");
                  right.setAttribute("id", "rightPanel");
                  $('#panelJob').jqxPanel('append',right);
 
@@ -201,7 +201,7 @@
                 });
 
                 // define goal panel
-                $("#goalPanel").jqxPanel({height: 300, width: 590});
+                $("#goalPanel").jqxPanel({height: 678, width: 580});
                 $("#rightPanel").jqxPanel('append', $('#goalPanel'))
                 <!--$("#goalPanel").wrap("<div class='container' style=\"float:left\";\"width=50%\"></div>")-->
 
@@ -211,41 +211,54 @@
                 var ID = event.args.rowindex;
                 $('#goalPanel').jqxPanel('clearcontent');
                 goals=dataJob.snapshotList[ID].goalList;
-                 var tableGoals=document.createElement('table');
-                tableGoals.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
-                html="<tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 70%\"><b>Goal</b></td><td><b>Category</b></td></tr>"
+                 <!--var tableGoals=document.createElement('table');-->
+                <!--tableGoals.setAttribute("style","padding:15px; float:bottom; width:95%; text-align: left; vertical-align:top;")-->
+                html="<table><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 70%\"><b>Goal</b></td><td><b>Category</b></td></tr>"
                 for (var i=0; i<goals.length; i++){
                     html=html+"<tr><td>"+goals[i].name+"</td><td>"+goals[i].category+"</td></tr>";
                  }
                 html=html+"</table>";
-                 $('#goalPanel').jqxPanel('append', html);
 
-
-                 //define test panel
-                 if (dataJob.snapshotList[ID].test.length>0){
-                     //create test table
-                  var testGrid=document.createElement('div');
-                 testGrid.setAttribute("style","float:bottom; height:300;");
-                 testGrid.setAttribute("id", "testPanel");
-                 <!--$('.container').append(testGrid)-->
-                 $('#rightPanel').append(testGrid)
-
-                  $("#testPanel").jqxPanel({height: 300, width: 590});
-                 $('#testPanel').jqxPanel('clearcontent');
-                tests=dataJob.snapshotList[ID].test;
-                 var tableTests=document.createElement('table');
-                tableTests.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")
-                html="<tr><th colspan=\"2\">Test results</th></tr><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 60%\"><b>Class</b></td><td><b>Run</b></td>"+
-                "<td><b>Failures<b></td><td><b>Errors</b></td><td><b>Skipped</b></td><td><b>Time</b><td></tr>"
+                //faccio un'unica tabella per i test e i goal per allinearli
+                 tests=dataJob.snapshotList[ID].test;
+                 html2="<BR>";
+                 if(tests.length>0){
+                html2="<table><tr><th colspan=\"2\">Test results</th></tr><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 60%\"><b>Class</b></td><td><b>Run</b></td>"+
+                "<td><b>Failures<b></td><td><b>Errors</b></td><td><b>Skipped</b></td><td><b>Time</b><td></tr>";
                 for (var i=0; i<tests.length; i++){
-                    html=html+"<tr><td>"+tests[i].testClass+"</td><td>"+tests[i].run+"</td>"+
+                    html2=html2+"<tr><td>"+tests[i].testClass+"</td><td>"+tests[i].run+"</td>"+
                     "<td>"+ tests[i].failures+"</td>"+"<td>"+ tests[i].errors+"</td>"+"<td>"+ tests[i].skipped+"</td>"+"<td>"+ tests[i].time+"</td></tr>";
                  }
-                <!--html=html+"</table>";-->
-                 $('#testPanel').jqxPanel('append', html);
-                 }
-                 else{$('#testPanel').remove();}
-            });
+                html2=html2+"</table>";
+                }
+                $('#goalPanel').jqxPanel('append', html+"<BR>"+html2);
+                });
+
+                 //define test panel
+                 <!--if (dataJob.snapshotList[ID].test.length>0){-->
+                     <!--//create test table-->
+                  <!--var testGrid=document.createElement('div');-->
+                 <!--testGrid.setAttribute("style","float:bottom; height:300;");-->
+                 <!--testGrid.setAttribute("id", "testPanel");-->
+                 <!--&lt;!&ndash;$('.container').append(testGrid)&ndash;&gt;-->
+                 <!--$('#rightPanel').append(testGrid)-->
+
+                  <!--$("#testPanel").jqxPanel({height: 300, width: 590});-->
+                 <!--$('#testPanel').jqxPanel('clearcontent');-->
+                <!--tests=dataJob.snapshotList[ID].test;-->
+                 <!--var tableTests=document.createElement('table');-->
+                <!--tableTests.setAttribute("style","padding:15px; width:95%; text-align: left; vertical-align:top;")-->
+                <!--html="<tr><th colspan=\"2\">Test results</th></tr><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 60%\"><b>Class</b></td><td><b>Run</b></td>"+-->
+                <!--"<td><b>Failures<b></td><td><b>Errors</b></td><td><b>Skipped</b></td><td><b>Time</b><td></tr>"-->
+                <!--for (var i=0; i<tests.length; i++){-->
+                    <!--html=html+"<tr><td>"+tests[i].testClass+"</td><td>"+tests[i].run+"</td>"+-->
+                    <!--"<td>"+ tests[i].failures+"</td>"+"<td>"+ tests[i].errors+"</td>"+"<td>"+ tests[i].skipped+"</td>"+"<td>"+ tests[i].time+"</td></tr>";-->
+                 <!--}-->
+                <!--&lt;!&ndash;html=html+"</table>";&ndash;&gt;-->
+                 <!--$('#testPanel').jqxPanel('append', html);-->
+                 <!--}-->
+                 <!--else{$('#testPanel').remove();}-->
+            <!--});-->
             }
 
             //set Ruby Log
@@ -400,6 +413,10 @@
                         { text: 'Category', datafield: 'category', width: '15%' }
                     ]
                 });
+                //show table only if there are results
+                if (data.length==0){
+                    $("#taskGrid").hide();
+                }
            }
 
         }

@@ -14,6 +14,16 @@
             padding: 5px;
             text-align: justify;
         }
+        .overlay {
+            background: #e9e9e9;
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.5;
+}
     </style>
     <script type="text/javascript" src="../jqwidget/scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../jqwidget/scripts/demos.js"></script>
@@ -43,6 +53,7 @@
      <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnavigationbar.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxradiobutton.js"></script>
     <script type="text/javascript" src="../jqwidget/jqwidgets/jqxnotification.js"></script>
+
 
 
      <script type="text/javascript">
@@ -91,26 +102,46 @@
       $("#refresh").on('click', function ()
             {
             $("#loadingNotification").jqxNotification("open");
+            $(".overlay").show();
             $.ajax({
                           url: '/refresh',
                           type: 'GET',
                           statusCode: {
                                 201: function() {
                                   //Project is up to date no refresh
+                                  $('#messageNotification').jqxNotification({ template: 'info' });
                                 $("#loadingNotification").jqxNotification("closeAll");
                                 var msg="The project is already updated";
                                 $("#messageContainer").html(msg);
                                 $("#messageNotification").jqxNotification("open");
+                                $(".overlay").hide();
                                 },
                                  200: function() {
+                                 $('#messageNotification').jqxNotification({ template: 'info' });
                                 $("#loadingNotification").jqxNotification("closeAll");
                                //find new builds: need to reload
                                 location.reload();
+                                 $(".overlay").hide();
+                                },
+                                403: function() {
+                                $('#messageNotification').jqxNotification({ template: 'error' });
+                                var msg="Request forbidden! Please wait few seconds and then retry <BR>If the problem persist try to change your personal GitHub token "+
+                                "editing your Profile";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                                },
+                                402: function() {
+                                 $('#messageNotification').jqxNotification({ template: 'error' });
+                                var msg="Max retries exceeded try to change your personale GitHub token"+
+                                "editing your Profile";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
                                 }
                             },
 
                           error: function(error) {
                            $("#loadingNotification").jqxNotification("closeAll");
+                            $(".overlay").hide();
                               console.log(error);
                           }
                     });
@@ -157,6 +188,7 @@
 
      $("#force").jqxButton({template: "inverse",  width: 160, height: 25 });
      $("#force").on('click', function (){
+     $(".overlay").show();
        $("#loadingNotificationForce").jqxNotification("open");
             $.ajax({
                           url: '/force',
@@ -166,6 +198,7 @@
                                 var msg="All the project has been sucessfully analyzed!";
                                 $("#messageContainer").html(msg);
                                 $("#messageNotification").jqxNotification("open");
+                                $(".overlay").hide();
                           },
 
                           error: function(error) {
@@ -173,6 +206,7 @@
                             var msg="An error occured during the analysis";
                                 $("#messageContainer").html(msg);
                                 $("#messageNotification").jqxNotification("open");
+                                $(".overlay").hide();
                               console.log(error);
                           }
                     });
@@ -203,6 +237,10 @@
         <div id="loadingContainerForce" style="float=bottom;"> Please wait: we are perform a new analysis<BR> It could take few minutes
         </div>
     </div>
+
+ <div class="overlay">
+    <div id="loading-img"></div>
+</div>
 
 <div id="page" style="width:700px; margin:0 auto; ">
     <table style="padding:5px; width:100%; text-align: left; vertical-align:top; line-height: 50px;font-family: Verdana; font-size: 14px;">

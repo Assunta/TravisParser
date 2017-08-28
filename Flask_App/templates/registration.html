@@ -3,7 +3,7 @@
 <head>
     <title>Travis CI parser</title>
         <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
-      <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.summer.css" />
+       <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.custom_black.css" />
 
     	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -30,7 +30,7 @@
 
    <script type="text/javascript">
         $(document).ready(function () {
-            var style='summer';
+            var style='custom_black';
             //error notification
              $("#messageNotification").jqxNotification({
                 width: 400, position: "top-right", opacity: 0.9,
@@ -47,7 +47,7 @@
             // Create jqxInput.
             $("#gitKey").jqxInput({ width: '300px', height: '20px' });
             // Create jqxButton.
-            $("#submitButton").jqxButton({ template: "primary" , width: '50%' });
+            $("#submitButton").jqxButton({ template: "inverse" , width: '50%' });
             // Create jqxValidator.
             $("#form").jqxValidator({
                 rules: [

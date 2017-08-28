@@ -1,4 +1,4 @@
-
+import os
 import logging.handlers
 
 from github import Github
@@ -72,7 +72,7 @@ def registration():
 @app.route("/settings")
 def settings():
     c=getCategories()
-    return render_template('customization.html', projects=json.dumps(c))
+    return render_template('customization.html', categories=json.dumps(c))
 
 @app.route("/editProfile")
 def editProfile():
@@ -97,9 +97,11 @@ def changeToken(token):
 def deleteProjects():
     user=session['username']
     try:
+        #TODO lo dovresti fare transazionale!!!!!
         project=request.form['project']
-        deleteProjectUser(project,user)
-        #TODO eliminare anche il file del progetto
+        filename=session['username'].encode('ascii', 'ignore') + "_" + project.replace("/", "_")+".json"
+        os.remove(filename)
+        deleteProjectUser(project, user)
         log.info("Successfully deleted projects for user %s ", user)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
@@ -213,7 +215,12 @@ def force():
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
         log.error("Error during repeating the analysis for project %s: %s", reponame, e.message)
-        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+        if (str(e.message).find("403")>0):
+            return json.dumps({'success': False}), 403, {'ContentType': 'application/json'}
+        else:
+            return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+
+
 
 @app.route("/validateKey", methods=['POST'])
 def validateKey():
@@ -594,8 +601,8 @@ def removeBackgroundProcess():
 def refresh():
     global builds
     try:
-        result=getRefreshBuilds(session["username"],session['reponame'], builds)
         fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame'].replace("/", "_")
+        result=getRefreshBuilds(session["username"],session['reponame'], builds)
         #remove duplicate if present
         all=result
         if result.__len__()==0:
@@ -608,8 +615,14 @@ def refresh():
         builds = restore(fileName)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
+        #TODO da testare bene perche' la condizione esatta per farlo verificare
         log.error("Error during refresh %s: %s", fileName, e.message)
-        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+        if(str(e.message).find("403")>0):
+            return json.dumps({'success': False}), 403, {'ContentType': 'application/json'}
+        elif (str(e.message).find("Max retries exceeded")>0):
+            return json.dumps({'success': False}), 402, {'ContentType': 'application/json'}
+        else:
+            return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 if __name__ == "__main__":
     #debug=true mi evita di spegnere e riaccendere il server quando faccio modifiche in fase di sviluppo
