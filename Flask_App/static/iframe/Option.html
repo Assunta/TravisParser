@@ -138,7 +138,6 @@
                                 $("#messageNotification").jqxNotification("open");
                                 }
                             },
-
                           error: function(error) {
                            $("#loadingNotification").jqxNotification("closeAll");
                             $(".overlay").hide();
@@ -193,22 +192,29 @@
             $.ajax({
                           url: '/force',
                           type: 'GET',
-                           success: function(response) {
-                                $("#loadingNotificationForce").jqxNotification("closeAll");
+                          statusCode: {
+                                 200: function() {
+                                   $("#loadingNotificationForce").jqxNotification("closeAll");
                                 var msg="All the project has been sucessfully analyzed!";
                                 $("#messageContainer").html(msg);
                                 $("#messageNotification").jqxNotification("open");
                                 $(".overlay").hide();
-                          },
-
-                          error: function(error) {
-                          $("#loadingNotificationForce").jqxNotification("closeAll");
-                            var msg="An error occured during the analysis";
+                                },
+                                403: function() {
+                                $('#messageNotification').jqxNotification({ template: 'error' });
+                                var msg="Request forbidden! Please wait few seconds and then retry <BR>If the problem persist try to change your personal GitHub token "+
+                                "editing your Profile";
                                 $("#messageContainer").html(msg);
                                 $("#messageNotification").jqxNotification("open");
-                                $(".overlay").hide();
-                              console.log(error);
-                          }
+                                },
+                                402: function() {
+                                 $('#messageNotification').jqxNotification({ template: 'error' });
+                                var msg="Max retries exceeded try to change your personale GitHub token"+
+                                "editing your Profile";
+                                $("#messageContainer").html(msg);
+                                $("#messageNotification").jqxNotification("open");
+                                }
+                            }
                     });
 
      });

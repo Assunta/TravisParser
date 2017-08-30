@@ -43,7 +43,6 @@ def completeAnalysisBuild(t, repo, build, reponame):
             linguaggio= build.config["language"]
             tool = checkGradleMaven(log_text)
             if (tool == "maven"):
-                # TODO prendere anche lo in mavenLog status....
                 mavenLog = parserMaven(log_text, MavenLog(reponame))
                 # print mavenLog.toJSON()
                 b.addLog(mavenLog)
