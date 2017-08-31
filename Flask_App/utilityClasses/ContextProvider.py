@@ -7,4 +7,6 @@ class ContextualFilter(logging.Filter):
         log_record.ip = request.environ.get("REMOTE_ADDR")
         if(session.get('username')):
             log_record.user_id = session['username']
+        else:
+            log_record.user_id = "no user"
         return True

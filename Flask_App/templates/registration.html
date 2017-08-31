@@ -52,7 +52,7 @@
             $("#form").jqxValidator({
                 rules: [
                         { input: "#userName", message: "user name is required!", action: 'keyup, blur', rule: 'required' },
-                        { input: "#gitKey", message: "git key is required!", action: 'keyup, blur', rule: 'required' },
+                        { input: "#gitKey", message: "GitHub token is required!", action: 'keyup, blur', rule: 'required' },
 						{input: "#password", message: 'Password is required!',action: 'keyup, blur',rule: 'required'},
                 ]
             });
@@ -81,7 +81,7 @@
                                         }
                                     });
                     }
-					console.log("validation")
+
                 }
                 // Validate the Form.
                 $('#form').jqxValidator('validate', validationResult);

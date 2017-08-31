@@ -111,7 +111,7 @@
 
 
             //set button dependencies
-            var dependencies =dataJob.dependenciesList;
+            var dependencies =dataJob.dependenciesList.sort();
             for(var i=0; i<dependencies.length; i++){
              $('#dep').append(dependencies[i]+"<BR>");
             }
@@ -213,9 +213,9 @@
                 goals=dataJob.snapshotList[ID].goalList;
                  <!--var tableGoals=document.createElement('table');-->
                 <!--tableGoals.setAttribute("style","padding:15px; float:bottom; width:95%; text-align: left; vertical-align:top;")-->
-                html="<table><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 70%\"><b>Goal</b></td><td><b>Category</b></td></tr>"
+                html="<table style=\"width:100%\"><tr style=\"padding:15px; ctext-align: left; vertical-align:top;\"><td style=\"border-bottom: 1px solid #ddd; width:70%;\"><b>Goal</b></td><td style=\"border-bottom: 1px solid #ddd; width:30%;\"><b>Category</b></td></tr>"
                 for (var i=0; i<goals.length; i++){
-                    html=html+"<tr><td>"+goals[i].name+"</td><td>"+goals[i].category+"</td></tr>";
+                    html=html+"<tr><td style=\"border-bottom: 1px solid #ddd;\">"+goals[i].name+"</td><td style=\"border-bottom: 1px solid #ddd;\">"+goals[i].category+"</td></tr>";
                  }
                 html=html+"</table>";
 
@@ -223,11 +223,11 @@
                  tests=dataJob.snapshotList[ID].test;
                  html2="<BR>";
                  if(tests.length>0){
-                html2="<table><tr><th colspan=\"2\">Test results</th></tr><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"width: 60%\"><b>Class</b></td><td><b>Run</b></td>"+
-                "<td><b>Failures<b></td><td><b>Errors</b></td><td><b>Skipped</b></td><td><b>Time</b><td></tr>";
+                html2="<table style=\"width:100%\"><tr><th colspan=\"2\">Test results</th></tr><tr style=\"padding:15px; text-align: left; vertical-align:top;\"><td style=\"border-bottom: 1px solid #ddd;\"><b>Class</b></td><td style=\"border-bottom: 1px solid #ddd;\"><b>Run</b></td>"+
+                "<td style=\"border-bottom: 1px solid #ddd;\"><b>Failures<b></td><td style=\"border-bottom: 1px solid #ddd;\"><b>Errors</b></td><td style=\"border-bottom: 1px solid #ddd;\"><b>Skipped</b></td><td style=\"border-bottom: 1px solid #ddd;\"><b>Time</b><td></tr>";
                 for (var i=0; i<tests.length; i++){
-                    html2=html2+"<tr><td>"+tests[i].testClass+"</td><td>"+tests[i].run+"</td>"+
-                    "<td>"+ tests[i].failures+"</td>"+"<td>"+ tests[i].errors+"</td>"+"<td>"+ tests[i].skipped+"</td>"+"<td>"+ tests[i].time+"</td></tr>";
+                    html2=html2+"<tr><td style=\"border-bottom: 1px solid #ddd;\">"+tests[i].testClass+"</td><td style=\"border-bottom: 1px solid #ddd;\">"+tests[i].run+"</td>"+
+                    "<td style=\"border-bottom: 1px solid #ddd;\">"+ tests[i].failures+"</td>"+"<td style=\"border-bottom: 1px solid #ddd;\">"+ tests[i].errors+"</td>"+"<td style=\"border-bottom: 1px solid #ddd;\">"+ tests[i].skipped+"</td>"+"<td style=\"border-bottom: 1px solid #ddd;\">"+ tests[i].time+"</td></tr>";
                  }
                 html2=html2+"</table>";
                 }

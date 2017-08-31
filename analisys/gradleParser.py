@@ -95,7 +95,7 @@ def parserGradle(username,f, gradleLog):
     gradleLog.addCommands(commandList)
     gradleLog.addErrorList(errorList, list(set(statusErrorList)))
     gradleLog.addListaNote(list(set(noteList)))
-    gradleLog.addDependencies(dependenciesList)
+    gradleLog.addDependencies(list(set(dependenciesList)))
     gradleLog.setStatus(status)
     gradleLog.setListaErroriStatus(list(set(statusErrorList)))
 

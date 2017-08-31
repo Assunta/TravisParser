@@ -13,6 +13,7 @@ from domain.Build import Build
 from domain.GradleLog import GradleLog
 from domain.MavenLog import MavenLog
 from domain.RubyLog import RubyLog
+from utility.dbUtility import getToken
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -20,8 +21,9 @@ sys.setdefaultencoding('utf-8')
 def getRefreshBuilds(username,reponame, buildOld):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
-    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
-    token = f.readline()
+    # f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
+    # token = f.readline()
+    token= getToken(username)
     t = TravisPy.github_auth(str(token))
     print reponame
     repo = t.repo(reponame)
@@ -50,8 +52,9 @@ def getRefreshBuilds(username,reponame, buildOld):
 
 
 def getBuilds(username,reponame):
-    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
-    token = f.readline()
+    # f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
+    # token = f.readline()
+    token = getToken(username)
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
     lastBuild= repo.last_build_number
@@ -81,8 +84,9 @@ def completeAnalysis(username,reponame, afterBuild):
     allBuilds = []
     ansi_escape = re.compile(r'\x1b\[[0-9]+(K)?(;[0-9])?(m)?')
     maxnumberbuilds =25
-    f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
-    token = f.readline()
+    # f = open('C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\token.config', 'r')
+    # token = f.readline()
+    token = getToken(username)
     t = TravisPy.github_auth(str(token))
     repo = t.repo(reponame)
     builds = t.builds(slug=repo.slug, after_number=afterBuild)
@@ -170,7 +174,3 @@ def checkGradleMavenFile(f):
     else:
         return "gradle"
 
-
-# for b in completeAnalysis("languagetool-org/languagetool"):
-#     print "*******************************************"
-    # print b.toJSON()

@@ -451,3 +451,18 @@ def updateToken(username, token):
         connection.commit()
     finally:
         connection.close()
+
+#this method allows to get user's token
+def getToken(username):
+    connection=getConnection()
+    token="no_key"
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `users`  WHERE `Git_name`=%s"
+            cursor.execute(sql, (username))
+            r=cursor.fetchone()
+            token = (r.get("key"))
+        connection.commit()
+    finally:
+        connection.close()
+    return token

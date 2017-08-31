@@ -73,7 +73,7 @@ def parserMaven(username,f, mavenLog):
     mavenLog.getError()
     mavenLog.setStatus(status)
     mavenLog.setStatusError(list(set(statusErrorList)))
-    mavenLog.setDependencies(dependenciesList)
+    mavenLog.setDependencies(list(set(dependenciesList)))
     #print mavenLog.toJSON()
     return mavenLog
 

@@ -214,7 +214,14 @@
                                 $("#messageContainer").html(msg);
                                 $("#messageNotification").jqxNotification("open");
                                 }
-                            }
+                            },
+                             error: function(error) {
+                               $("#loadingNotificationForce").jqxNotification("closeAll");
+                                $(".overlay").hide();
+                                  console.log(error);
+                          }
+
+
                     });
 
      });

@@ -6,6 +6,7 @@ from datetime import datetime
 from flask import Flask, render_template, request, json, session, url_for
 
 from apscheduler.schedulers.background import BackgroundScheduler
+from travispy import TravisPy
 
 from Flask_App.utilityClasses.ContextProvider import ContextualFilter
 from Flask_App.utilityClasses.ErrorStat import ErrorStat
@@ -149,21 +150,28 @@ def signUp():
     token= request.form['gitkey']
     g = Github(username, password, 'https://api.github.com')
     try:
+        #check if userame and password are correct
         print g.get_user(login=username)
+    except Exception, e:
+        log.error("Username and password not correct %s", e.message)
+        return json.dumps({'error': "Username or password are not correct, please retry"}), 400
         # gToken = Github(token)
         # print gToken.get_user(login=token)
-        #TODO check correct token
+    try:
+        # TODO da testare!
+        t = TravisPy.github_auth(str(token))
+        print(t.user())
+    except Exception ,e:
+        log.error("Failed to create new user: token is incorrect %s %s", token, e.message)
+        return json.dumps({'error': "Your token is not correct! " + username + "<BR>this user is still registered"}), 400
+    try:
+        addUser(username, token)
+    except Exception ,e:
+        log.error("Failed to create new user: %s",e.message)
+        return json.dumps({'error': "Duplicate username "+username+"<BR>this user is still registered"}), 400
+    log.info("New user correct created %s", username)
+    return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
-        try:
-            addUser(username, token)
-        except Exception ,e:
-            log.error("Failed to create new user: ",e.message)
-            return json.dumps({'error': "Duplicate username "+username+"<BR>this user is still registered"}), 400
-        log.info("New user correct created %s", username)
-        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    except Exception, e:
-        log.error("Username and password not correct %s",e.message)
-        return json.dumps({'error': "Username or password are not correct, please retry"}), 400
 
 
 @app.route("/results", methods=['POST'])
@@ -222,15 +230,15 @@ def force():
 
 
 
-@app.route("/validateKey", methods=['POST'])
-def validateKey():
-    userName = request.form['userName']
-    result=dbUtility.findUser(userName)
-    print result[0]
-    if(result[0] is "no_key"):
-        return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
-    else:
-        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+# @app.route("/validateKey", methods=['POST'])
+# def validateKey():
+#     userName = request.form['userName']
+#     result=dbUtility.findUser(userName)
+#     print result[0]
+#     if(result[0] is "no_key"):
+#         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
+#     else:
+#         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 @app.route("/getBuild", methods=['GET'])
 def getBuild():
@@ -615,7 +623,7 @@ def refresh():
         builds = restore(fileName)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception,e:
-        #TODO da testare bene perche' la condizione esatta per farlo verificare
+        #TODO da testare bene perche' non si e' capito qual e' la condizione esatta per farlo verificare
         log.error("Error during refresh %s: %s", fileName, e.message)
         if(str(e.message).find("403")>0):
             return json.dumps({'success': False}), 403, {'ContentType': 'application/json'}

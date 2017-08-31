@@ -62,7 +62,7 @@ def parserRuby(username,f, log):
                     errorList.append(error)
                     break
 
-    log.setDependencies(dependenciesList)
+    log.setDependencies(list(set(dependenciesList)))
     log.addErrorList(errorList)
     log.setTest(testList)
     log.setCommand(commandList)
