@@ -1,29 +1,22 @@
 import os
-import logging.handlers
-
-from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
-from github import Github
 from datetime import datetime
-from flask import Flask, render_template, request, json, session
 
-from apscheduler.schedulers.background import BackgroundScheduler
+from flask import Flask, render_template, request, json, session
+from github import Github
 from travispy import TravisPy
 
 from Flask_App.utilityClasses.AppConfiguration import getLogger, configureScheduler, getLoggerScheduler
-from Flask_App.utilityClasses.ContextProvider import ContextualFilter
 from Flask_App.utilityClasses.ErrorStat import ErrorStat
 from Flask_App.utilityClasses.Row import Row
 from Flask_App.utilityClasses.TestRow import TestRow
+from Flask_App.utilityClasses.storeObject import store, restore
 from analisys.advancedStats import countStatStatus, countReason, getAuthors, countStatStatusFilter, countReasonFilter
 from analisys.completeParser import getBuilds, getRefreshBuilds
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
     getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
     addToolRule, deleteToolRule, addProjectUser, addErrorRubyRule, deleteErrorRubyRule, getErrorRubyUser, updateToken, \
-    deleteProjectUser, readDbLogin
-from utility.storeObject import store, restore
-
-
+    deleteProjectUser
 
 #set logger
 log= getLogger()
@@ -74,11 +67,15 @@ def changeToken(token):
 def deleteProjects():
     user=session['username']
     try:
-        #TODO lo dovresti fare transazionale!!!!!
+        #TODO lo dovresti fare transazionale!
         project=request.form['project']
         filename=session['username'].encode('ascii', 'ignore') + "_" + project.replace("/", "_")+".json"
         os.remove(filename)
         deleteProjectUser(project, user)
+        #check if there is an associate job running
+        jobNameToCheck=session['username']+"_"+project
+        if(scheduler.get_job(jobNameToCheck) is not None):
+            scheduler.remove_job(jobNameToCheck)
         log.info("Successfully deleted projects for user %s ", user)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
@@ -301,9 +298,6 @@ def queryStatErrors():
     start = request.form['StartDate']
     finish = request.form['FinishDate']
     items = request.form['Authors']
-    print start
-    print finish
-    print items
     try:
         result=countReasonFilter(builds,  datetime.strptime(start, '%Y-%m-%d'), datetime.strptime(finish, '%Y-%m-%d'), items)
         data=[]

@@ -1,5 +1,5 @@
+from Flask_App.utilityClasses.storeObject import restore, store
 from analisys.completeParser import getRefreshBuilds
-from utility.storeObject import restore, store
 
 
 def addBackgroundFunction(username, reponame):
