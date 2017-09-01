@@ -2,6 +2,7 @@ import pymysql
 
 #read db username and password in file db_login
 def readDbLogin():
+    #TODO eliminare il path completo al file
     f = open('C:\\Users\Assunta\\Desktop\\TESI\\TravisParser\\config\\db_login', 'r')
     host = f.readline().strip()
     username = f.readline().strip()

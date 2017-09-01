@@ -1,65 +1,41 @@
 import os
 import logging.handlers
 
+from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from github import Github
 from datetime import datetime
-from flask import Flask, render_template, request, json, session, url_for
+from flask import Flask, render_template, request, json, session
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from travispy import TravisPy
 
+from Flask_App.utilityClasses.AppConfiguration import getLogger, configureScheduler, getLoggerScheduler
 from Flask_App.utilityClasses.ContextProvider import ContextualFilter
 from Flask_App.utilityClasses.ErrorStat import ErrorStat
 from Flask_App.utilityClasses.Row import Row
 from Flask_App.utilityClasses.TestRow import TestRow
 from analisys.advancedStats import countStatStatus, countReason, getAuthors, countStatStatusFilter, countReasonFilter
-from analisys.completeParser import completeAnalysis, getBuilds, getRefreshBuilds
+from analisys.completeParser import getBuilds, getRefreshBuilds
 from utility import dbUtility
 from utility.dbUtility import addUser, getUserProjects, getCategories, addTaskRule, deleteTaskRule, getTaskUser, \
     getGoalUser, addGoalRule, deleteGoalRule, getResultRubyUser, deleteResultRubyRule, addResultRubyRule, getToolUser, \
     addToolRule, deleteToolRule, addProjectUser, addErrorRubyRule, deleteErrorRubyRule, getErrorRubyUser, updateToken, \
-    deleteProjectUser
+    deleteProjectUser, readDbLogin
 from utility.storeObject import store, restore
 
 
-scheduler = BackgroundScheduler()
+
+#set logger
+log= getLogger()
+
+#set job scheduler
+scheduler=configureScheduler()
 builds = []
 app = Flask(__name__)
 app.secret_key = 'lodmdmncdvnjnjksdcnkwcw'      #session work only with secret key
 
-#logging
-LOG_FILENAME="log.log"
-# Set up a specific logger with our desired output level
-log = logging.getLogger('MainLogger')
-log.setLevel(logging.DEBUG)
-context_provider = ContextualFilter()
-log.addFilter(context_provider)
-# Add the log message handler to the logger
-h = logging.handlers.TimedRotatingFileHandler(LOG_FILENAME, when="midnight", interval=1)
-h.suffix = "%Y%m%d"
-fmt = logging.Formatter('''
-    Time: %(asctime)s
-    Level: %(levelname)s
-    Method: %(method)s
-    Path: %(url)s
-    IP: %(ip)s
-    User ID: %(user_id)s
-    Message: %(message)s
-    ---------------------''')
-
-h.setFormatter(fmt)
-hConsole=logging.StreamHandler()
-hConsole.setFormatter(fmt)
-log.addHandler(h)
-log.addHandler(hConsole)
-
-#logger for APSCHEDULER
-logAps = logging.getLogger('apscheduler.executors.default')
-logAps.setLevel(logging.INFO)  # DEBUG
-hAps = logging.StreamHandler()
-fmt = logging.Formatter('%(asctime)s-%(levelname)s-%(name)s-%(message)s')
-hAps.setFormatter(fmt)
-logAps.addHandler(hAps)
+#set logger for APSCHEDULER
+logAps=getLoggerScheduler()
 
 
 @app.route("/home",  methods=['POST', 'GET'])
@@ -160,6 +136,7 @@ def signUp():
     try:
         # TODO da testare!
         t = TravisPy.github_auth(str(token))
+        #da inserire un eventuale controllo sul token che appartiene effettivamente a quell'utente e non a qualcun altro
         print(t.user())
     except Exception ,e:
         log.error("Failed to create new user: token is incorrect %s %s", token, e.message)
@@ -569,19 +546,6 @@ def getOption():
         }
     ])
 
-def addBackgroundFunction(username, reponame):
-    filename=username + "_" +reponame.replace("/", "_")
-    builds=restore(filename)
-    result = getRefreshBuilds(username,reponame, builds)
-    # remove duplicate if present
-    all = result
-    if result.__len__() > 0:
-        index = result[-1].getBuildID()
-        for item in builds:
-            if int(item["idBuild"]) < int(index):
-                result.append(item)
-        store(all, filename)
-
 
 
 @app.route("/addBackgroundProcess", methods=['GET'])
@@ -590,19 +554,21 @@ def addBackgroundProcess():
         username=session['username']
         reponame=session['reponame']
         fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame']
-        scheduler.add_job(lambda: addBackgroundFunction(username,reponame), 'interval', seconds=80,  id=fileName)
+        scheduler.add_job('utilityClasses.Job:addBackgroundFunction', 'interval', seconds=180,args=(username,reponame),  id=fileName )
+        log.info("Add background process for project %s and username %s", session['reponame'], session['username'])
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
-        log.error("Error adding background process for project %s and username %s: %s",reponame, username, e.message)
+        # log.error("Error adding background process for project %s and username %s: %s",reponame, username, e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 
 @app.route("/removeBackgroundProcess", methods=['GET'])
 def removeBackgroundProcess():
     try:
         scheduler.remove_job(session['username']+"_"+session['reponame'])
+        log.info("Deleted background process for project %s and username %s", session['reponame'], session['username'])
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:
-        log.error("Error deleting background process for project %s and username %s: %s", session['reponame'], session['username'], e.message)
+        # log.error("Error deleting background process for project %s and username %s: %s", session['reponame'], session['username'], e.message)
         return json.dumps({'success': False}), 404, {'ContentType': 'application/json'}
 #
 @app.route("/refresh", methods=['GET'])

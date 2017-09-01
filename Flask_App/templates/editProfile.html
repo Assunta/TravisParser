@@ -61,7 +61,7 @@
             });
 
 
-        var v='{{token}}'.replace(/&#39;/g,'').replace("[","").replace("]","").trim();
+        var v='{{token}}'.replace(/u&#39;/g,'').replace(/&#39;/g,'').replace("[","").replace("]","").trim();
         $("#input").attr("value",v);
 
         $("#changeTokenButton").jqxButton({template: "inverse",  width: 160, height: 25 });
