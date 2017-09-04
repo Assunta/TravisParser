@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Travis CI parser</title>
+    <title>Home</title>
         <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.base.css" />
       <link type="text/css" rel="stylesheet" href="../static/jqwidget/jqwidgets/styles/jqx.custom_black.css" />
 
@@ -127,18 +127,21 @@
         </div>
         <div style="font-family: Verdana; font-size: 16px; text-align:center;">
             <form id="form" action="{{url_for('homeUser')}}" method="post" style="overflow: hidden; margin: 10px; text-align:center;">
+                 <BR>
                  <label for="username" >GitHub username</label>
 
                  <input type="name" name="username" id="userName" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
-                    <BR><BR>
+                    <BR><BR><BR>
                  <label for="password" >GitHub password</label>
 
                  <input type="password" name="password" id="password" class="form-control" placeholder="Name" style="text-align:center;font-size: 16px; ">
                 <BR><BR>
                  <button type="button" id="submitButton" autofocus>Login</button>
+                 <BR>
             </form>
         </div>
     </div>
-<div id="output"></div>
+
+
 </body>
 </html>
