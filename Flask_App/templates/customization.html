@@ -68,8 +68,8 @@
                 }
             });
             //help popover
-             $("#popover").jqxPopover({theme:"custom_black", offset: {left: -50, top:0},height:300, arrowOffsetValue: 50, title: "How to custumize", showCloseButton: true, selector: $("#buttonHelp") });
-
+             $("#popover").jqxPopover({ offset: {left: -50, top:0},height:700, arrowOffsetValue: 50, title: "How to improve the analysis", showCloseButton: true, selector: $("#buttonHelp") });
+             $("#popover").jqxPopover("open")
 
 
 
@@ -595,15 +595,41 @@
             <div class="row" style="padding-top:1.2em;">
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
-                     <div id="popover"><div id="helpMesage">If the analysis doesn't match some information you can customize it!<BR>
-                         You can add different types of information:<BR>
-                         1) a Maven Goal not matched during the analysis: adding its name and its lifecycle phase<BR>
-                         2) a customized Gradle Task:adding its name or regular expression and its category <BR>
-                         3) Ruby tool: if the project use a tool not matched during tha analysis (ex: testing, analysis,...)<BR>
-                         you can add its name and a regular expression to match it during the analysis <BR>
-                         4) Ruby result expression: this expression matchs the result of a test or an analysis;<BR>
-                         you can add its regular expression and the related type of result<BR>
-                         5) Ruby error message: you can customize error message not matched adding its regular expression and its category
+                     <div id="popover"><div id="helpMesage">
+                         You can extend the detail's level of the analysis adding more information:
+	<BR>1)If you use Maven as build tool you can add more goals in addition to default goals.
+	<BR>&emsp;You have to add the name of the goal and its classification choosing between a list of possible categories.
+                         <BR>&emsp;E.g.
+		<BR>&emsp;name: org.apache.maven.plugins:maven-clean-plugin:clean
+		<BR> &emsp;category: clean
+    <BR>
+	<BR>2)If you use Gradle as build tool you can add your personal tasks in addition to default tasks:
+		<BR>&emsp;You have to add the name of the task and its classification:
+		<BR>&emsp;E.g.
+		<BR>&emsp;name: compileJava
+		<BR>&emsp;category: compilation
+<BR>
+	<BR>3) If you use Ruby as language and Rake as build tool you can add other kind of information:
+		<BR><BR> a. You can help the tool to match the usage of one or more tools used during the build process.
+		   <BR>&emsp;These tools could be tool used for testing, analysis static or dynamic or for any other aim.
+		   <BR>&emsp;To add a new tool you need to provide: the name of the tool and a regular expression or sentence that will appear in a job's log.
+		  <BR>&emsp;E.g.
+		   <BR>&emsp;name: Rubocop
+		   <BR>&emsp;regular expression: \ARunning RuboCop(.)*|\ATesting with RuboCop(.)*
+		<BR> <BR>b. You can help the tool to extract more detailed information about the result of a build adding some expression that
+		  <BR>&emsp;show the result of a task executed during the build process.
+		  <BR>&emsp;To add these kind of information you have to provide a regular expression or a sentence that will appear in a job's log
+         <BR>&emsp;and the type of the expression: e.g the expression could match a unit-test result, or it could be the result of
+		   a static analysis, and so on.
+		  <BR>&emsp;E.g.
+		   <BR>&emsp;regular expression: \ACoverage is|Coverage report generated(.)*covered"
+		   <BR>&emsp;category: analysis-static
+		<BR><BR> c. At the and to improve the error detection of the tool you can add more error message and their associate type.
+		   <BR> &emsp;To do this kind of improvement you need to provide a regular expression or a sentence that will appear in a job's log
+		   <BR>&emsp;and the type of error revealed with that expression (e.g a dependecies error, a compilation error, a testing error,...)
+		   <BR>&emsp;E.g.
+		   <BR>&emsp;regular expression: \ARuboCop failed!
+		  <BR>&emsp;category: analysis-static
 
                         </div></div>
                     <ul class="list-inline pull-right topBar">
