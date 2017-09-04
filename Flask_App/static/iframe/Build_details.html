@@ -164,7 +164,7 @@
 
                  //define right panel
                  var right=document.createElement('div');
-                 right.setAttribute("style","padding:5px; width:49%; float:left;");
+                 right.setAttribute("style","padding:0px; width:48%; float:left; overflow-x: auto;overflow-y: auto;");
                  right.setAttribute("id", "rightPanel");
                  $('#panelJob').jqxPanel('append',right);
 
@@ -172,7 +172,7 @@
 
                  //create goal table
                   var goalGrid=document.createElement('div');
-                 goalGrid.setAttribute("style","float:left;");
+                 goalGrid.setAttribute("style","float:left;overflow-x: auto;overflow-y: auto;");
                  goalGrid.setAttribute("id", "goalPanel");
 
                  $('#panelJob').jqxPanel('append', goalGrid);
@@ -544,7 +544,7 @@
                     <div id="details" style="float:left; width:74%">
                         <div id="panelBuild" style="float:left; width:49%"></div>
                         <div id="panelCommit" style="float:left; width:49%"></div>
-                        <div id="panelJob" style="float:bottom; width:98%;min-height: 900px; overflow: hidden;">
+                        <div id="panelJob" style="float:bottom; width:98%;min-height:1000px; overflow: auto;">
 
                         </div>
                     </div>
