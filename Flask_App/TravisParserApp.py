@@ -137,7 +137,7 @@ def signUp():
         print(t.user())
     except Exception ,e:
         log.error("Failed to create new user: token is incorrect %s %s", token, e.message)
-        return json.dumps({'error': "Your token is not correct! " + username + "<BR>this user is still registered"}), 400
+        return json.dumps({'error': "Your token is not correct! "}), 400
     try:
         addUser(username, token)
     except Exception ,e:
@@ -226,7 +226,12 @@ def getSpecificBuild(idBuild):
     # if(INTERNET):
     #     index=int(builds[0].getBuildID())-int(idBuild)
     # else:
-    index=int(builds[0]["idBuild"])-int(idBuild)
+    i=int(builds[0]["idBuild"])
+    index=0;
+    while(builds[index]["idBuild"]!=idBuild):
+        i=i-1
+        index=index+1
+    # index=int(builds[0]["idBuild"])-int(idBuild)
     return json.dumps(builds[index],default=lambda o: o.__dict__)
 
 @app.route("/queryStats", methods=['POST'])
