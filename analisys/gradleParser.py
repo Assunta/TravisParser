@@ -67,6 +67,12 @@ def parserGradle(username,f, gradleLog):
                     taskList.append(t)
             else:
                 taskList.append(t)
+                # error messages
+        if re.match(values["ERROR"], line):
+            try:
+                errorList.append(taskList[-1].getName() + "\t" + taskList[-1].getCategory() + "\t" + line)
+            except IndexError:
+                errorList.append("NO_TASK" + "\tother\t" + line)
         elif re.match(values["NOTE"], line):
             try:
                 noteList.append(taskList[-1].getName() + "\t" + line.strip())
@@ -74,12 +80,7 @@ def parserGradle(username,f, gradleLog):
                 noteList.append("NO_TASK" + "\t" + line.strip())
         elif re.match(values["SKIPPED_TASK"], line):
             taskList[-1].setIsSkipped()
-            # error messages
-        elif re.match(values["ERROR"], line):
-            try:
-                errorList.append(taskList[-1].getName() + "\t" + taskList[-1].getCategory() + "\t" + line)
-            except IndexError:
-                errorList.append("NO_TASK" + "\tother\t" + line)
+
         elif re.match(values["DEPENDENCIES"], line):
             dependenciesList.append(line.replace("Download", "").strip().split("/")[-1])
 
