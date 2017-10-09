@@ -84,7 +84,10 @@ class GradleLog:
             if listaErroriParsati[-1].getCategory()!="other":
                 self.typeOfError = listaErroriParsati[-1].getCategory()
             else:
-                self.typeOfError = listaErroriParsati[0].getCategory()
+                try:
+                    self.typeOfError=listaErroriParsati[-2].getCategory()
+                except:
+                    self.typeOfError = listaErroriParsati[0].getCategory()
         else:
             try:
                 self.typeOfError = listError[-1].split("\t")[1]

@@ -56,11 +56,14 @@
          $("#getProjectButton").jqxButton({template: "inverse",  width: 160, height: 25 });
          $("#getProjectButton").on('click', function ()
             {
+            console.log($('#selectProject').jqxDropDownList('getItems').length)
+            if($('#selectProject').jqxDropDownList('getItems').length>1){
             //get project name
                var item = $("#selectProject").jqxDropDownList('getSelectedItem').value;
                //submit form
                 $('#formGetProject').append('<input type="hidden" name="reponame" value='+item+'>');
                 $('#formGetProject').submit();
+            }
             });
 
         //role not empty name

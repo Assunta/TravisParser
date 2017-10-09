@@ -187,7 +187,8 @@
 
      $("#force").jqxButton({template: "inverse",  width: 160, height: 25 });
      $("#force").on('click', function (){
-     $(".overlay").show();
+     if (confirm('Are you sure you want to restart the analysis?')) {
+             $(".overlay").show();
        $("#loadingNotificationForce").jqxNotification("open");
             $.ajax({
                           url: '/force',
@@ -220,9 +221,11 @@
                                 $(".overlay").hide();
                                   console.log(error);
                           }
-
-
                     });
+        } else {
+            // Do nothing!
+        }
+
 
      });
 

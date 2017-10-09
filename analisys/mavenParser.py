@@ -28,7 +28,7 @@ def parserMaven(username,f, mavenLog):
         elif re.match(values["GOAL"], line):
             goal = (line.split("---")[1]).split("@")[0].strip()
             # remove num version
-            goal = re.sub(":((\d)*\.)*(\d)*:", ":", goal).strip()
+            goal = re.sub(":((\d)*(-rc|rc|cr|-cr)*\.)*(\d)*:", ":", goal).strip()
             try:
                 snapshotList[-1].addGoal(Goal(username,goal.split("(")[0].strip()))
             except IndexError:
