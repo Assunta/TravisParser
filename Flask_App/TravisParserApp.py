@@ -553,7 +553,7 @@ def addBackgroundProcess():
         username=session['username']
         reponame=session['reponame']
         fileName = session['username'].encode('ascii', 'ignore') + "_" + session['reponame']
-        scheduler.add_job('utilityClasses.Job:addBackgroundFunction', 'interval', seconds=180,args=(username,reponame),  id=fileName )
+        scheduler.add_job('utilityClasses.Job:addBackgroundFunction', 'interval', hours=24,args=(username,reponame),  id=fileName )
         log.info("Add background process for project %s and username %s", session['reponame'], session['username'])
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     except Exception, e:

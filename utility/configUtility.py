@@ -1,7 +1,9 @@
-
+import os
 def getKeyValueRuby():
     var={}
-    with open("C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\ruby.config") as file:
+    current_file_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),os.pardir))
+    other_file_path = current_file_dir+ "\\config\\ruby.config"
+    with open(other_file_path) as file:
         for line in file:
             name, value=line.partition("=")[::2]
             var[name.strip()]=value
@@ -9,7 +11,9 @@ def getKeyValueRuby():
 
 def getKeyValueMaven():
     var={}
-    with open("C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\maven.config") as file:
+    current_file_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+    other_file_path = current_file_dir + "\\config\\maven.config"
+    with open(other_file_path) as file:
         for line in file:
             name, value=line.partition("=")[::2]
             var[name.strip()]=value
@@ -17,7 +21,9 @@ def getKeyValueMaven():
 
 def getKeyValueGradle():
     var={}
-    with open("C:\\Users\\Assunta\\Desktop\\TESI\\TravisParser\\config\\gradle.config") as file:
+    current_file_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+    other_file_path = current_file_dir + "\\config\\gradle.config"
+    with open(other_file_path) as file:
         for line in file:
             name, value=line.partition("=")[::2]
             var[name.strip()]=value
